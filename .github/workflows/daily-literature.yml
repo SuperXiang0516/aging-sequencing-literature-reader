@@ -49,6 +49,8 @@ jobs:
           LLM_API_URL: ${{ secrets.LLM_API_URL }}
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
           EASYSCHOLAR_SECRET_KEY: ${{ secrets.EASYSCHOLAR_SECRET_KEY }}
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+          NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
           DAILY_NEW_LIMIT: ${{ inputs.max_new || '5' }}
           CANDIDATE_LIMIT: ${{ inputs.candidate_limit || '40' }}
         run: |

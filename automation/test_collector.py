@@ -14,6 +14,7 @@ from automation.collector import (
     safe_key,
     run,
     parse_args,
+    search_ncbi_pmc,
 )
 
 
@@ -210,6 +211,66 @@ class CollectorTests(unittest.TestCase):
             self.assertEqual(report["last_run"]["status"], "upstream_unavailable")
             self.assertIn("503", report["last_run"]["search_error"])
             self.assertEqual(report["processed"], [])
+
+    def test_ncbi_summary_is_normalized_to_pmc_candidate(self):
+        payloads = [
+            {"esearchresult": {"idlist": ["123456"]}},
+            {"result": {
+                "uids": ["123456"],
+                "123456": {
+                    "uid": "123456",
+                    "title": "Long-read metagenomics of ageing",
+                    "fulljournalname": "Example Genomics",
+                    "pubdate": "2026 Jan",
+                    "authors": [{"name": "A. Example"}],
+                    "articleids": [
+                        {"idtype": "pmc", "value": "PMC123456"},
+                        {"idtype": "doi", "value": "10.0000/example"},
+                    ],
+                },
+            }},
+        ]
+        with patch("automation.collector.ncbi_json", side_effect=payloads):
+            records = search_ncbi_pmc("aging AND nanopore", page_size=1)
+        self.assertEqual(len(records), 1)
+        self.assertEqual(records[0]["pmcid"], "PMC123456")
+        self.assertEqual(records[0]["journal"], "Example Genomics")
+        self.assertEqual(records[0]["authors"], ["A. Example"])
+        self.assertGreaterEqual(records[0]["relevance_score"], 12)
+
+    def test_europe_outage_uses_ncbi_fallback(self):
+        candidate = {
+            "id": "pmcid:PMC123456",
+            "title": "Long-read metagenomics of ageing",
+            "authors": ["A. Example"],
+            "journal": "Example Genomics",
+            "year": "2026",
+            "doi": "10.0000/example",
+            "pmcid": "PMC123456",
+            "pmid": "",
+            "abstract": "Ageing and nanopore sequencing.",
+            "fulltext_urls": [],
+            "source": "NCBI PMC",
+            "relevance_score": 20,
+            "relevance_evidence": ["aging: ageing", "sequencing: nanopore"],
+        }
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            args = parse_args([
+                "--state", str(root / "state.json"),
+                "--output", str(root / "articles.json"),
+                "--report", str(root / "report.json"),
+                "--max-new", "1",
+            ])
+            outage = urllib.error.HTTPError("https://www.ebi.ac.uk/europepmc", 503, "Service Unavailable", {}, None)
+            with patch("automation.collector.search_europe_pmc", side_effect=outage), \
+                 patch("automation.collector.search_ncbi_pmc", return_value=[candidate]), \
+                 patch("automation.collector.make_record", return_value={**candidate, "publishable": False, "status": "discarded", "gate_reasons": ["test"], "updated_at": "2026-01-01T00:00:00Z"}):
+                summary = run(args)
+            self.assertEqual(summary["status"], "fallback_ncbi")
+            self.assertEqual(summary["candidates"], 1)
+            report = json.loads((root / "report.json").read_text(encoding="utf-8"))
+            self.assertIn("Europe PMC HTTP 503", report["last_run"]["search_error"])
 
 
 if __name__ == "__main__":

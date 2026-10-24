@@ -44,6 +44,7 @@ DEFAULT_QUERY = (
 )
 EUROPE_PMC_SEARCH = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
 EASYSCHOLAR_URL = "https://www.easyscholar.cc/open/getPublicationRank"
+NCBI_EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 TRANSIENT_HTTP_STATUS = {408, 425, 429, 500, 502, 503, 504}
 
 
@@ -205,8 +206,147 @@ def search_europe_pmc(query: str, *, page_size: int = 40, fixture: Optional[Path
     return sorted(records, key=lambda x: (x["relevance_score"], x["citation_count"], x["year"]), reverse=True)
 
 
+def _ncbi_params(params: Mapping[str, Any]) -> dict[str, Any]:
+    """Add the optional NCBI API key and identifying client information."""
+    output = dict(params)
+    api_key = clean_text(os.environ.get("NCBI_API_KEY"))
+    if api_key:
+        output["api_key"] = api_key
+    tool = clean_text(os.environ.get("NCBI_TOOL")) or "paper_plot_library"
+    email = clean_text(os.environ.get("NCBI_EMAIL"))
+    output["tool"] = tool
+    if email:
+        output["email"] = email
+    return output
+
+
+def ncbi_json(endpoint: str, params: Mapping[str, Any], *, timeout: int = 40) -> Any:
+    """Call an NCBI E-utilities JSON endpoint with bounded retry handling."""
+    query = urllib.parse.urlencode(_ncbi_params(params), doseq=True)
+    return http_json(f"{NCBI_EUTILS}/{endpoint}?{query}", timeout=timeout)
+
+
+def _ncbi_article_ids(summary: Mapping[str, Any]) -> dict[str, str]:
+    ids: dict[str, str] = {}
+    values = summary.get("articleids") or summary.get("articleidslist") or []
+    if isinstance(values, Mapping):
+        values = [values]
+    for item in values:
+        if not isinstance(item, Mapping):
+            continue
+        id_type = clean_text(item.get("idtype") or item.get("type")).lower()
+        value = clean_text(item.get("value") or item.get("id"))
+        if id_type and value:
+            ids[id_type] = value
+    return ids
+
+
+def _ncbi_summary_to_candidate(summary: Mapping[str, Any]) -> dict[str, Any]:
+    """Convert a PMC ESummary record into the project's common candidate shape."""
+    uid = clean_text(summary.get("uid"))
+    ids = _ncbi_article_ids(summary)
+    pmcid = ids.get("pmc") or ids.get("pmcid") or (f"PMC{uid}" if uid else "")
+    pmid = ids.get("pubmed") or ids.get("pmid") or ""
+    doi = ids.get("doi") or ""
+    authors = summary.get("authors") or summary.get("authorlist") or []
+    if isinstance(authors, Mapping):
+        authors = [authors]
+    author_names_list = []
+    for author in authors:
+        if isinstance(author, Mapping):
+            name = clean_text(author.get("name") or author.get("authtype"))
+        else:
+            name = clean_text(author)
+        if name:
+            author_names_list.append(name)
+    pubdate = clean_text(summary.get("pubdate") or summary.get("sortpubdate"))
+    year_match = re.search(r"(?:19|20)\d{2}", pubdate)
+    item = {
+        "title": clean_text(summary.get("title")),
+        "authorString": ", ".join(author_names_list),
+        "journalTitle": clean_text(summary.get("fulljournalname") or summary.get("source")),
+        "pubYear": year_match.group(0) if year_match else "",
+        "doi": doi,
+        "pmcid": pmcid,
+        "pmid": pmid,
+        "abstractText": clean_text(summary.get("abstracttext") or summary.get("abstract")),
+        "citedByCount": summary.get("pmcrefcount") or 0,
+    }
+    normalized = normalize_candidate(item)
+    normalized["source"] = "NCBI PMC"
+    normalized["relevance_score"], normalized["relevance_evidence"] = score_candidate(normalized)
+    return normalized
+
+
+def search_ncbi_pmc(query: str, *, page_size: int = 40) -> list[dict[str, Any]]:
+    """Search the open-access PMC collection when Europe PMC is unavailable.
+
+    ESearch returns PMC identifiers, while ESummary supplies stable metadata
+    without downloading full article XML.  Full text is fetched later by
+    ``make_record`` only for candidates that pass the normal relevance gate.
+    """
+    # The PMC database understands the same broad Boolean syntax used by the
+    # Europe PMC query.  Restricting to the OA subset is important because the
+    # publication gate requires a retrievable XML body and original figures.
+    term = f"({query}) AND open access[filter]"
+    search_payload = ncbi_json("esearch.fcgi", {
+        "db": "pmc",
+        "term": term,
+        "retmode": "json",
+        "retmax": max(1, int(page_size)),
+        "sort": "pub date",
+    })
+    result = search_payload.get("esearchresult", {}) if isinstance(search_payload, Mapping) else {}
+    ids = result.get("idlist", []) if isinstance(result, Mapping) else []
+    if isinstance(ids, str):
+        ids = [ids]
+    ids = [clean_text(value) for value in ids if clean_text(value)]
+    if not ids:
+        return []
+    summary_payload = ncbi_json("esummary.fcgi", {
+        "db": "pmc",
+        "id": ",".join(ids),
+        "retmode": "json",
+    })
+    summary_result = summary_payload.get("result", {}) if isinstance(summary_payload, Mapping) else {}
+    summaries: list[Mapping[str, Any]] = []
+    if isinstance(summary_result, Mapping):
+        ordered_ids = summary_result.get("uids", ids)
+        if isinstance(ordered_ids, str):
+            ordered_ids = [ordered_ids]
+        for uid in ordered_ids:
+            item = summary_result.get(str(uid))
+            if isinstance(item, Mapping):
+                summaries.append(item)
+    records = [_ncbi_summary_to_candidate(item) for item in summaries]
+    return sorted(records, key=lambda x: (x["relevance_score"], x["citation_count"], x["year"]), reverse=True)
+
+
 def pmc_xml_url(pmcid: str) -> str:
     return f"https://www.ebi.ac.uk/europepmc/webservices/rest/{urllib.parse.quote(pmcid)}/fullTextXML"
+
+
+def ncbi_pmc_xml_url(pmcid: str) -> str:
+    params = _ncbi_params({"db": "pmc", "id": pmcid, "retmode": "xml"})
+    return f"{NCBI_EUTILS}/efetch.fcgi?{urllib.parse.urlencode(params)}"
+
+
+def fetch_pmc_xml(pmcid: str, *, prefer_ncbi: bool = False) -> str:
+    """Fetch PMC XML using the source that is currently most likely healthy."""
+    urls = (
+        [(ncbi_pmc_xml_url(pmcid), 60), (pmc_xml_url(pmcid), 40)]
+        if prefer_ncbi
+        else [(pmc_xml_url(pmcid), 40), (ncbi_pmc_xml_url(pmcid), 60)]
+    )
+    last_error: Optional[BaseException] = None
+    for url, timeout in urls:
+        try:
+            return http_text(url, timeout=timeout)
+        except (OSError, urllib.error.URLError, ValueError) as exc:
+            last_error = exc
+    if last_error:
+        raise last_error
+    raise RuntimeError("PMC XML request ended without a response")
 
 
 def figure_url(pmcid: str, href: str) -> str:
@@ -356,7 +496,7 @@ def make_record(candidate: dict[str, Any], metrics_cache: dict[str, Any], xml_fi
         if xml_fixture:
             xml_text = xml_fixture.read_text(encoding="utf-8")
         elif record.get("pmcid"):
-            xml_text = http_text(pmc_xml_url(record["pmcid"]))
+            xml_text = fetch_pmc_xml(record["pmcid"], prefer_ncbi=record.get("source") == "NCBI PMC")
         if xml_text and record.get("pmcid"):
             fulltext, methods, results, figures, supplements = extract_fulltext(xml_text, record["pmcid"])
             record.update({"fulltext_text": fulltext, "methods_text": methods, "results_text": results or fulltext, "figures": figures, "supplements": supplements, "fulltext_ok": bool(fulltext)})
@@ -420,11 +560,19 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     try:
         candidates = search_europe_pmc(args.query, page_size=args.candidate_limit, fixture=args.fixture)
     except (OSError, urllib.error.URLError, ValueError) as exc:
-        search_status = "upstream_unavailable"
         code = getattr(exc, "code", "")
         detail = clean_text(str(exc))
-        search_error = f"HTTP {code}: {detail}" if code else (detail or type(exc).__name__)
-        candidates = []
+        search_error = f"Europe PMC HTTP {code}: {detail}" if code else (f"Europe PMC: {detail}" or type(exc).__name__)
+        try:
+            candidates = search_ncbi_pmc(args.query, page_size=args.candidate_limit)
+            search_status = "fallback_ncbi"
+        except (OSError, urllib.error.URLError, ValueError, KeyError, TypeError) as fallback_exc:
+            search_status = "upstream_unavailable"
+            fallback_code = getattr(fallback_exc, "code", "")
+            fallback_detail = clean_text(str(fallback_exc))
+            fallback_message = f"NCBI HTTP {fallback_code}: {fallback_detail}" if fallback_code else (f"NCBI: {fallback_detail}" or type(fallback_exc).__name__)
+            search_error = f"{search_error}; {fallback_message}"
+            candidates = []
     def eligible(candidate: Mapping[str, Any]) -> bool:
         if candidate["relevance_score"] < args.min_score or candidate["id"] in records:
             return False
