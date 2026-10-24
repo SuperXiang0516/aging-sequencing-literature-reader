@@ -1,130 +1,80 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-24T10:32:48Z",
+  "generated_at": "2026-10-24T12:46:59Z",
   "last_run": {
     "status": "fallback_ncbi",
-    "selected": 1,
-    "published": 1,
-    "candidates": 10,
+    "selected": 15,
+    "published": 3,
+    "candidates": 79,
     "skipped_without_pmcid": 0,
     "search_error": "Europe PMC HTTP 503: HTTP Error 503:",
-    "preserved_articles": 1,
-    "finished_at": "2026-10-24T10:32:48Z"
+    "preserved_articles": 3,
+    "finished_at": "2026-10-24T12:46:59Z"
   },
   "processed": [
     {
-      "id": "doi:10.1371/journal.pone.0359621",
-      "title": "Investigating potential molecular mechanisms linking 6PPD-quinone exposure to Intervertebral Disc Degeneration: A network toxicology, molecular docking, and molecular dynamics simulation study.",
+      "id": "doi:10.1080/19336934.2026.2749209",
+      "title": "From bench to farm: leveraging Drosophila as a model insect for agricultural pest management.",
       "authors": [
-        "Yang B",
-        "Wang X",
-        "Zhuo L",
-        "Chen Y",
-        "He Q"
+        "Cai YD",
+        "Chiu JC"
       ],
-      "journal": "PloS one",
-      "year": "2026",
-      "doi": "10.1371/journal.pone.0359621",
-      "pmcid": "PMC13690237",
-      "pmid": "42911944",
+      "journal": "Fly",
+      "year": "2027",
+      "doi": "10.1080/19336934.2026.2749209",
+      "pmcid": "PMC13690281",
+      "pmid": "42902760",
       "citation_count": 0,
       "fulltext_urls": [],
       "source": "NCBI PMC",
       "relevance_score": 12,
       "relevance_evidence": [
+        "aging: aging",
         "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
       ],
       "figures": [
         {
-          "label": "Fig 1",
-          "caption": "Two-dimensional and three-dimensional structures of 6PPD-quinone. (A) Two-dimensional chemical structure of 6PPD-quinone. (B) Three-dimensional molecular conformation of 6PPD-quinone.",
-          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g001.webp"
+          "label": "Figure 1.",
+          "caption": "Levels of conservation between pests and D. melanogaster . Orthologous genes such as resistance to dieldrin ( rdl ) represent a high level of conservation, facilitating the translation of knowledge from D. melanogaster to pest species. Homologous genes such as members of the cytochrome P450 superfamily, represent a medium level of conservation, which benefit from validation of pest gene functions. Genes encoding CYP6g1, CYP6a23A and CYP6a23B are based on D. suzukii [ 38 ]. Response to bacterial infection represents a low level of conservation, which often requires parallel studies in pest species. Survival curves of D. melanogaster and D. suzukii upon Lactococcus lactis infection were adapted from Bing et al. [ 39 ].",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690281/bin/KFLY_A_2749209_F0001_OC.webp"
         },
         {
-          "label": "Fig 2",
-          "caption": "Venn diagram of 6PPD-Q and IVDD-related targets.",
-          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g002.webp"
+          "label": "Figure 2.",
+          "caption": "Workflow of using D. melanogaster to elucidate phenotype‑to‑genotype relationships as well as genotype‑to‑phenotype relationships in pests. Green arrows indicate the workflow of phenotype‑to‑genotype relationships; brown arrows indicate the workflow of genotype‑to‑phenotype relationships.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690281/bin/KFLY_A_2749209_F0002_OC.webp"
         },
         {
-          "label": "Fig 3",
-          "caption": "Candidate targets were identified by PPI analysis. A total of 12 key targets were obtained by screening 59 cross targets by DC, BC and CC.",
-          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g003.webp"
-        },
-        {
-          "label": "Fig 4",
-          "caption": "GO enrichment analysis. Including biological processes, cellular components, and molecular functions.",
-          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g004.webp"
-        },
-        {
-          "label": "Fig 5",
-          "caption": "The top 20 KEGG enrichment analysis pathways.",
-          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g005.webp"
-        },
-        {
-          "label": "Fig 6",
-          "caption": "Target–pathway interaction network of core genes and enriched KEGG pathways.",
-          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g006.webp"
-        },
-        {
-          "label": "Fig 7",
-          "caption": "The heat map and molecular docking results of 6PPD-Q biological compounds and core targets. (A) Binding energy value of molecular docking. (B) 6PPD-Q -PTGS2 complex. (C) 6PPD-Q -MMP2 complex. (D) 6PPD-Q -SMAD3 complex. (E) 6PPD-Q -RELA complex. (F) 6PPD-Q -GSK3B complex.",
-          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g007.webp"
-        },
-        {
-          "label": "Fig 8",
-          "caption": "Molecular dynamics simulation analysis of the 6PPD-Q–RELA complex. (A) Root-mean-square deviation (RMSD) profiles of the protein, ligand, and protein–ligand complex during the 100-ns simulation. (B) Root-mean-square fluctuation (RMSF) of protein residues. (C) Solvent-accessible surface area (SASA) of the complex over the simulation trajectory. (D) Radius of gyration (Rg) and its components along the principal axes. (E) Number of hydrogen bonds formed between 6PPD-Q and RELA during the simulation. (F) Free-energy landscape of the 6PPD-Q–RELA complex constructed based on RMSD and Rg.",
-          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g008.webp"
+          "label": "Figure 3.",
+          "caption": "D. melanogaster elucidates the biology and management of D. suzukii through a comparative species framework including genomic, gene‑expression, physiological and behavioural analyses, to understand pest biology and management.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690281/bin/KFLY_A_2749209_F0003_OC.webp"
         }
       ],
-      "supplements": [
-        {
-          "label": "S1 Table",
-          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s001.xlsx",
-          "description": "PubChem information for 6PPD-Q. (XLSX)"
-        },
-        {
-          "label": "S2 Table",
-          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s002.xlsx",
-          "description": "Potential targets of 6PPD-Q retrieved from different target prediction databases. (XLSX)"
-        },
-        {
-          "label": "S3 Table",
-          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s003.xlsx",
-          "description": "IVDD-associated genes retrieved from different disease-related databases. (XLSX)"
-        },
-        {
-          "label": "S4 Table",
-          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s004.xlsx",
-          "description": "Common targets between 6PPD-Q and intervertebral disc degeneration. (XLSX)"
-        },
-        {
-          "label": "S5 Table",
-          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s005.xlsx",
-          "description": "Detailed results of GO and KEGG enrichment analyses. (XLSX)"
-        },
-        {
-          "label": "S6 Table",
-          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s006.xlsx",
-          "description": "Underlying numerical data for molecular dynamics simulation analyses of the 6PPD-Q–RELA complex. (XLSX)"
-        }
-      ],
+      "supplements": [],
       "fulltext_ok": true,
       "metrics": {
-        "impact_factor": "2.8",
-        "jcr": "SCI Q2",
+        "impact_factor": "1.4",
+        "jcr": "SCI Q4",
+        "jcr_quartile": "Q4",
+        "jcr_q1": false,
         "status": "matched",
         "source": "EasyScholar",
-        "retrieved_at": "2026-10-24T10:32:26Z"
+        "retrieved_at": "2026-10-24T12:43:24Z"
       },
-      "journal_display": "PloS one（IF 2.8；JCR SCI Q2）",
-      "updated_at": "2026-10-24T10:32:26Z",
-      "ai_status": "success",
-      "publishable": true,
-      "gate_reasons": [],
-      "status": "published"
-    }
-  ],
-  "pending_candidates": [
+      "journal_display": "Fly（IF 1.4；JCR SCI Q4）",
+      "updated_at": "2026-10-24T12:43:24Z",
+      "ai_status": "skipped_non_jcr_q1",
+      "publishable": false,
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "正文 Methods 未提取",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ],
+      "status": "discarded"
+    },
     {
       "id": "doi:10.1002/cne.70218",
       "title": "A Tale of Two States: Similarities and Differences in Neuropeptide Signaling in Larval and Adult Drosophila.",
@@ -136,14 +86,105 @@
       "doi": "10.1002/cne.70218",
       "pmcid": "PMC13690095",
       "pmid": "42911801",
-      "abstract": "",
       "citation_count": 0,
       "fulltext_urls": [],
       "source": "NCBI PMC",
       "relevance_score": 12,
       "relevance_evidence": [
         "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
-      ]
+      ],
+      "figures": [
+        {
+          "label": "FIGURE 1",
+          "caption": "Neuropeptides regulating functions specific to larval versus adult Drosophila . These eight functions or actions are broadly defined and were selected since they are clear‐cut stage‐specific. Note that the NPHs listed play roles additional to the ones given here in both stages (for details and references, see Tables 2 , 3 , 4 ). For acronyms, see the list of peptide acronyms.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690095/bin/CNE-534-e70218-g002.webp"
+        },
+        {
+          "label": "FIGURE 2",
+          "caption": "Neurosecretory cells (NSCs) in the brain of the larva and adult. (A) Overview. (B) The cerebral neuroendocrine system of larva (top; horizontal view) and adult (bottom; sagittal view). Insulin‐producing cells (IPC) of the median NSC group are used as an example. The IPCs have axon terminations (presumed release sites) in corpora allata (CA), corpora cardiaca (CC), and aorta in both stages. In adults, additional sites are found in the anterior midgut and crop. SEZ, subesophageal zone; VNC, ventral nerve cord. Note that in the larva the CC and CA are situated anteriorly in a ring‐shaped tissue called the ring gland (also containing the prothoracic gland, PTG), and in adults CC and CA are located in the anterior thorax, associated with the aorta and proventriculus (PV) of the gut. The lower scheme is redrawn from Nässel et al. ( 2013 ); the upper one is novel. (C) In the larval brain and subesophageal zone (SEZ), there are 56 peptidergic NSCs of 11 main types. In addition, there are 16 endocrine cells in the CC portion of the ring gland‐producing adipokinetic hormone (AKH; not shown). Further hormones (non‐peptidergic) are produced in the ring gland: juvenile hormone (JH) in the CA and ecdysone (Ecd) in the prothoracic gland. The brain NSCs express the following peptides: myosuppressin (DMS), insulin‐like peptide (DILP), diuretic hormone 31 (DH31), diuretic hormone 44 (DH44), ion transport peptide (ITP), corazonin (CRZ), capability (CAPA), Hugin pyrokinin (Hugin‐PK), prothoracicotropic hormone (PTTH), eclosion hormone (EH). The median NSCs (MNC) produce DILPs, DH44, and DMS. Other acronyms: LNC, lateral NSCs; VmNC, ventromedial NSCs; SNC, subesophageal NSCs. (D) In the adult brain, there are also 56 NSCs but of nine different types (see also 2F). The two EH and four PTTH‐producing NSCs are lost just after metamorphosis. There appear to be 18 DILP‐producing MNCs (IPCs) instead of the larval 14. The corpora cardiaca and its AKH‐producing cells are not shown here. (E) Some NSCs and other neurons are present in pharate adults and first days of adult life. Two sets are larval NSCs that survive metamorphosis, LNC PTTH and VmNC EH (McBrayer et al. 2007 ). The others DM EH , DI EH , and PDF‐Tri are peptidergic interneurons that produce EH and PDF and appear during metamorphosis but then undergo apoptosis in the adult (Horodyski et al. 1993 ; McNabb et al. 1997 ; Scott et al. 2020 ; Selcho et al. 2018 ). The NSC terminology and numerical data are based on (McKim et al. 2024 ). (F) Table providing details on the number of NSCs and their NPH expression. The primary peptides listed are the ones first discovered in the cells listed. The NPH colocalization shown is demonstrated in adults. This table is based on data from McKim et al. ( 2024 ).",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690095/bin/CNE-534-e70218-g010.webp"
+        },
+        {
+          "label": "FIGURE 3",
+          "caption": "In adult flies, NPHs of NSCs are produced by additional cell types and also display multiple non‐hormonal functions. (A) The NSCs of the brain. Note that each of the LNC CRZ clusters shown here includes three NSCs and four interneurons. (B) Ion transport peptide is produced in LNCs (LNC ITP ) but also in clock neurons (5th‐LNv and LNd ITP ). (C) NPHs of NSCs are expressed by multiple cell/neuron types. Two cell types (LNC ITP and IPC) express additional peptides: sNPF, TK, LK, and DSK. Nutrient sensing refers to nutrient‐sensing cells. (D) NPHs of NSCs have multiple additional roles, many of which are non‐hormonal and based on release from different cell/neuron types (the colocalized peptides as in B). For references, see Table 6 . This figure is compiled from Nässel ( 2025 ). (B is originally from Gera et al. 2025 , with permission.)",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690095/bin/CNE-534-e70218-g011.webp"
+        },
+        {
+          "label": "FIGURE 4",
+          "caption": "Classification of NSCs and efferent neurons in ventral nerve cord (VNC). (A) The major classes of NSCs and efferent neurons in thoracic (T1–T3) and abdominal (A1–A8) neuromeres, shown in the larval CNS. Note that in adults, the locations of the abdominal NSC cell bodies are not as distinct, and segmental and median‐lateral positions are hard to discern. Median NSCs (e.g., Tv and Va) have axons projecting dorsally (and medially) into perisympathetic organs (Tv) or transverse nerves (Va) in larvae and neurohaemal areas in adults. Lateral (L) NSCs (e.g., CCAP and ABLK) have axons that exit via lateral segmental nerves in larvae and fused lateral abdominal nerves in adults (note that axons of CCAP neurons exit on the contralateral side). Median posterior (MP) efferent neurons (e.g., abPDF) exit posteriorly toward the hindgut and/or reproductive tract via median abdominal nerves. Note that of these, an NSC role has only been shown for abPDF and possibly some of the ILP7 MP neurons (see text). Some of these efferents (listed in B) may directly act on the tissues that they innervate. (B) Peptidergic NSCs in an unfused abdominal ganglion of the moth Manduca sexta display a clear medial‐lateral organization. To support the division of Drosophila NSCs into lateral and median, an M. sexta abdominal ganglion is shown. These neurons are individually identifiable and have been assigned acronyms, L1–L4 for lateral and M1–M5 for median. Shown additionally are peptidergic motoneurons (MN1) and interneurons (IN‐704) as well as ventral unpaired median (VUM) neurons. Note that some of the NPHs shown here are colocalized in certain NSCs but shown here separately (e.g., in L3, L4 cells and others). The median NSCs send axons via the anterior median nerve to an anteriorly located transverse nerve perivisceral organ (PVO) and the lateral ones via nerve 2 (N2) to the posterior transverse nerve (and some additional release sites). The NPHs allatotropin and pheromone biosynthesis activating neuropeptide (PBAN) are not found in Drosophila (although PBAN is a pyrokinin‐like peptide). This figure is slightly altered from Nässel ( 1996 ), which in turn was based on data from N. T. Davis et al. ( 1993 ), Taghert and Truman ( 1982 ), and Veenstra et al. ( 1994 ). (C) Table listing the peptidergic NSCs and efferents of the VNC in Drosophila larvae and adults. There are thoracic and abdominal lateral (L) and median (M) neurons. In brackets (abdominal lateral), the neuromere distribution of cells is provided. Note that only a few of the NSC groups have been given names (Tv, Va, ABLK, abPDF, iag); the rest are listed after the primary peptide they produce (colocalized peptides were commonly discovered later). Note that in some cases, the peptide was not found (‐), in other cases not investigated (?). For peptide acronyms, see list. For literature references, see main text (see also Figure 5 ).",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690095/bin/CNE-534-e70218-g003.webp"
+        },
+        {
+          "label": "FIGURE 5",
+          "caption": "Peptidergic NSCs in the larval and adult ventral nerve cord. (A–C) Larval NSCs. In thoracic neuromeres (T1–T3), only three pairs of FMRFamide‐producing NSCs have been identified (Tv neurons) and one pair of CCAP‐producing neurons. In abdominal neuromeres (A1–A8), NSCs are located segmentally laterally and more medially. Some of the NSCs have been assigned names (shown in bold font). The peptide acronyms are: diuretic hormone 31 (DH31) and 44 (DH44), capability (CAPA), glycoprotein hormone B (GBP5), leucokinin (LK), crustacean cardioactive peptide (CCAP). Note that the Va and Tv neurons send axons to the dorsal midline where they terminate in perisympathetic organs (Tv neurons) and dorsal transverse nerves (Va neurons); see Figure 6 . The lateral NSCs send axons through segmental nerves to body wall muscle. Note that the anterior ABLKs coexpress LK and DH44 (and octopamine), and the ones in A6 and A7 additionally express DH31 (Tsukasa et al. 2026 ; Zandawala et al. 2018 ). Note that it is not clear whether the abdominal CCAP neurons in C are the same as the bursicon/CCAP neurons in B. C1 and C2: Confocal images of CCAP‐expressing neurons in the VNC of the larva displayed with ccap ‐GAL4 (C1) and CCAP‐immunolabeling (C2) in the same specimen. The asterisks indicate the CCAP neurons in T3 and A1–A4 in 4C, which display stronger immunolabeling. Note that a pair of neurons in T3 (yellow asterisk) also has axons to the periphery like the ones in A1–4 (see Karsai et al. 2013 ; Vömel and Wegener 2007 ). (D and E) Adult NSCs. The same neuropeptides are produced in adults, but the numbers of NSCs differ in some cases from the larva (ABLKs, bursicon/CCAP and Orcokinin A neurons; Chen et al. 2015 ; de Haro et al. 2010 ; Luan et al. 2006 ; Sellami et al. 2011 ; Zandawala et al. 2018 ). Also, the co‐expression of peptides differs for the ABLK neurons, and the NPH of anterior Va1 neurons has not been determined in adults. Note that in adults, the Va and Tv neurons supply axon terminations to extensive neurohemal areas in the dorsal neural sheath of the ventral nerve cord (see Figure 6 ). The remaining neurons in A1–A8 send their axons via the lateral abdominal nerves (arrows) to peripheral targets.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690095/bin/CNE-534-e70218-g005.webp"
+        },
+        {
+          "label": "FIGURE 6",
+          "caption": "Release sites of larval and adult NSCs of the ventral nerve cord (VNC) change during metamorphosis. (A and B) Larval and adult Tv and Va neurons express FMRFamide and capability (CAPA), respectively (shown in dorsal view). In the larva, Tv neurons of thoracic neuromeres T1–T3 supply axon terminations to dorsal perisympathetic organs (tPSO; also known as neurohemal organs), whereas the adult Tv neurons supply axon terminations to a dorsal neurohemal plexus covering the VNC (see panels B–D). In larvae, the Va neurons of abdominal neuromeres A2–A4 send their axons dorsally into median transverse nerves (see also panel B). (B) Side view and transverse views of the VNC showing the tPSOs, transverse nerve, and dorsal neurohemal plexus. Note that in the side view, the abdominal transverse nerves are not shown. (C) Side view of the adult VNC with Tv neurons of thoracic neuromeres T1–T3 and Va neurons of A2–A4. Both neuron types send axons into the dorsal neural sheath where they arborize and form varicosities, as depicted in D (note that only the Tv neuron plexus is shown in D). (D) Dorsal view of the VNC with the thoracic neurohemal plexus. (E) Release sites of different types of NSCs (numbered 1–7). Release sites (axon terminations) are shown crosshatched in aorta, dorsal surface of VNC, and hindgut). The examples of NSCs shown here include a set of four serotonergic (5‐HT) neurons in the SEZ that send axons to the same neurohemal area as the FMRFamide‐producing Tv neurons. The posterior neurons (5, ITP and 6, LK) exit via median (M) or lateral (L) abdominal nerves, respectively, to innervate dorsal aorta (heart) and body wall muscles (L) and hindgut (M). Further acronyms: CC, corpora cardiaca; CA, corpora allata. RT, renal tubules (shown truncated). (A) and (B), original. (C) and (D) from Lundquist and Nässel ( 1990 ), (E) from Nässel ( 1996 ), all with permission.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690095/bin/CNE-534-e70218-g008.webp"
+        },
+        {
+          "label": "FIGURE 7",
+          "caption": "Posterior abdominal efferent neurons and NSCs that produce NPHs in larvae and adults. In both stages, sets of neurons in abdominal neuromeres send axons to the hindgut (and associated structures, e.g., rectal pads in adults) and in adults also to the reproductive tract (ILP7 neurons) via the median abdominal nerve(s). Some of these may serve as NSCs where the peptides have functions as circulating hormones (only shown for PDF and maybe ILP7), but the majority of the neurons seem to act locally on targeted tissues. (A and B). Larval neurons. Acronyms: AstA, allatostatin A; ITP, ion transport peptide; PDF, pigment‐dispersing factor; CCAP, crustacean cardioactive peptide; ILP7, insulin‐like peptide 7. Note that the two Dp7 neurons in B are not efferents but ascending interneurons that target the insulin‐producing cells (IPCs) in the brain (they are included for a function related to in the text). Note that a possible co‐expression of the peptides in A is possible, similar to adults, but needs to be confirmed. RYa, RYamide. (C and D) Adult efferents and NSCs that target hindgut and/or reproductive tissues. The PDF‐producing cells seem to release hormonal PDF that acts on Malpighian tubules (Talsma et al. 2012 ). The axons of these neurons exit via the median abdominal nerves (arrows). Acronyms as in (A and B). (E and F). A sex dimorphism has been demonstrated in the adult ILP7 neurons where embryo‐ and adult‐derived neurons exist. In males (E), the adult ILP7 neurons co‐express glutamate and serotonin (5‐HT) and innervate the seminal vesicle, the embryonic ones produce only ILP7 and innervate the hindgut. In females (F), two pairs of additional adult cells (yellow) co‐express ILP7 and glutamate, and they and another set of adult neurons innervate the reproductive tract (oviduct muscle), and the embryonic ones innervate the hindgut. Note that proctolin has also been detected in six efferent neurons in the VNC of larvae and adults (Anderson et al. 1988 ; Taylor et al. 2004 ) and innervate the hindgut musculature (Anderson et al. 1988 ) but are not shown here (maybe colocalization in the PDF neurons?).",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690095/bin/CNE-534-e70218-g006.webp"
+        },
+        {
+          "label": "FIGURE 8",
+          "caption": "Peptidergic neurons that regulate ecdysis during development display other functions in adults. (A) A set of neurons in the brain, subesophageal zone (S1–3), and ventral nerve cord (T1–3 and A1–9) has been extensively investigated for its role in a cascade of events underlying the shedding of cuticle during stages of ecdysis and post‐ecdysis (shown in B). These neurons express the receptor of ecdysis‐triggering hormone (ETH), ETHR‐A, and produce EH, FMRFamide (FMRFa), crustacean cardioactive peptide (CCAP), LK myoinhibitory peptide (MIP), and bursicon (Burs). (B) ETH released from Inka cells (peritracheal cells), under ecdysone control, acts to regulate activity in the other peptidergic neurons that express ETHR‐A receptor. These neurons and their NPHs in turn influence motor activity and other functions during the ecdysis cascade to ensure timely shedding of cuticle and processes after ecdysis including glue expulsion to attach pupae and tanning of the cuticle. (C) Other functions of NPHs utilized by the same set of neurons in larvae and adults. (A and B) are originally based on Y. ‐J. Kim et al. ( 2006 ) but redrawn in Nässel and Zandawala ( 2019 ) and updated after Zitnan et al. ( 2026 ). For data and references in (C), see Tables 2 and 3 .",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690095/bin/CNE-534-e70218-g013.webp"
+        },
+        {
+          "label": "FIGURE 9",
+          "caption": "A drastic expansion of the clock circuits is seen in the numbers of clock neurons and NPHs at the larval‐to‐adult transition in Drosophila . (A) The clock neurons in the larval brain. Only four types of clock neurons have been identified. (B) Larval clock neurons identified with a timeless ( tim )‐GAL4 driver. (C) Only PDF has been clearly demonstrated in larval clock neurons, whereas CCHa1 is likely present in DN1a neurons based on knockdown experiments (Acklin et al. 2026 ; Poe et al. 2024 ). In the 5th‐LNv, the peptide remains unknown (not shown in figure). (D) Adult clock neurons. The neurons encircled in blue are found both in larvae and adults (note that not all the neurons in the DN2 and DN3 clusters are shown). The LNv ITP are also known as 5th‐LNv. (E) The adult clock neurons from the clock connectome. Note that the colors of the neurons in this panel do not always correlate with those in (D). (F) The different NPHs in adult clock neurons (further peptides have been indicated by single ‐cell transcriptomics, Reinhard et al. 2024 , but need further confirmation). See the list of acronyms for the NPHs. (A) is redrawn from Wegener et al. ( 2026 ), (B) is from Hamasaka and Nässel ( 2006 ) with permission, (D) is redrawn from Reinhard et al. ( 2024 ), and (E) is from Reinhard et al. ( 2024 ; Nature Communications 15, 10392; open access).",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690095/bin/CNE-534-e70218-g001.webp"
+        },
+        {
+          "label": "FIGURE 10",
+          "caption": "In adult flies, NPHs of clock neurons are also produced by other cell types. (A) Clock neurons in the adult Drosophila brain (from Reinhard et al. 2024 ), with permission, eLife , open access. The NPHs produced in the clock neurons are shown in red (peptide acronyms in list). (B) NPHs of clock neurons are produced by multiple other cell types. This figure is from Nässel ( 2025 ), with permission.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690095/bin/CNE-534-e70218-g004.webp"
+        },
+        {
+          "label": "FIGURE 11",
+          "caption": "Intestinal enteroendocrine cells (EECs) in larvae and adults of Drosophila . Note that the renal tubules are shown truncated in both stages. (A) The adult intestine and its complement of peptidergic EECs. Ten peptides (NPHs) have been identified (see acronyms in separate list) and are distributed in the five main regions of the midgut (1–5). One peptide, tachykinin (TK), is also found in EECs in the anterior hindgut (region 6; also shown in B). Note that the NPHs are distributed in different patterns in the different regions, and several are co‐expressed in the same EECs (not detailed here). (B) Immunolabeling with anti‐tachykinin (TK) and tk ‐GAL4 expression in the posterior midgut and anterior hindgut of adult Drosophila . (C) Larval EECs express the same NPHs but in slightly different distribution patterns, compared to adults, and one additional peptide, limostatin, was identified in the anterior midgut. The midgut is divided into anterior (AM), median (MM) and two posterior regions (PM‐A and PM‐C). The distribution of NPHs in EECs is shown schematically in the boxes where co‐expression patterns are indicated by the grouping of acronyms. One major difference is the very restricted distribution of TK in the larva, compared to the adult. No NPH has been identified in the larval hindgut. (A) is modified from Nässel and Zandawala ( 2022 ), (B) is from Liu, Luo, and Nässel ( 2016 ) with permission, (C) is redrawn from S. Jang et al. ( 2021 ).",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690095/bin/CNE-534-e70218-g015.webp"
+        },
+        {
+          "label": "FIGURE 12",
+          "caption": "Neuropeptides/peptide hormones regulating nutrient sensing and/or food seeking and feeding in larval and adult Drosophila . Larval CNS (top) and adult brain (bottom) with brain and subesophageal zone (SEZ) neurons involved in nutrient sensing and/or feeding. Guide to NPHs located in brain and SEZ neurons is given in the box to the left. The peptides listed in the box to the right are located in cells outside the brain and SEZ (except for AKH, in the intestine), or in the case of AstA, it is not clear whether they are in cells of the brain or intestine. The peptides affecting feeding/nutrient sensing in both larvae and adults are indicated in blue font in the list with color‐coded cell bodies to the left. The brain neurons are insulin‐producing cells (IPC), dorsolateral neurons (DLP; also known as LNC CRZ ), Median NSCs‐producing DH44 (MNC DH44 ), two types of NPF interneurons (NPFa and b) and a cluster of Hugin cells (note that these are a heterogeneous group, including a pair of NSCs, SNC Hugin ). In the adult brain, several additional neurons are implicated CCAP, LHLK, MNC DMS , MP1, MP3, PLP, SIFa, SELK, and SNC CAPA . For references, see Tables 3 and 4 .",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690095/bin/CNE-534-e70218-g007.webp"
+        },
+        {
+          "label": "FIGURE 13",
+          "caption": "Peptidergic pathways regulating larval and adult functions in Drosophila related to feeding, development, growth, and reproduction. The peptides shown alter their functions between larvae and adults, except their roles in the regulation of food seeking and feeding (indicated as feeding in the figure). Both in larvae and adults feeding depends on nutrient sensing in the fat body, gut endocrine cells, or some specific brain neurons. Also, growth, ovary maturation, and reproduction are nutrient‐dependent. Note that here reproduction refers to female flies. (A) In the larva, a set of peptidergic neurons form pathways that regulate developmental timing or growth, dependent on nutrient status (and nutrient sensing). These include the brain, subesophageal zone (SEZ), corpora allata, prothoracic gland, and midgut (and fat body, not shown). Feeding is regulated by neuropeptide F (NPF; Pu et al. 2018 ; Y. Wang et al. 2013 ), allatostatin A (AstA; C. Wang et al. 2012 ), and Hugin pyrokinin (Hugin; Schlegel et al. 2016 ) and furthermore by insulin‐like peptides (DILPs) released from insulin‐producing brain neurons (Colombani et al. 2005 ) to inhibit NPF neurons in fed larvae. The role of CRZ in feeding has not been determined in larvae. The same peptides regulate developmental growth and timing (including molts) via regulation of juvenile hormone (JH) and ecdysone production in corpora allata and prothoracic gland, respectively. The ecdysone production is regulated by PTTH and DILPs released from brain neurons (McBrayer et al. 2007 ). These PTTH neurons are activated by Hugin‐PK, CRZ, and AstA (Deveci et al. 2019 ; Imura et al. 2020 ; Ohhara et al. 2024 ). JH and ecdysone mutually inhibit each other's biosynthesis (S. Liu et al. 2018 ). DILPs have direct effects on nutrient‐dependent tissue growth (Colombani et al. 2005 ; Demontis and Perrimon 2010 ; Ikeya et al. 2002 ). (B) In the adult, most of the same peptides regulate feeding and reproduction (including sexual maturation). This figure shows female pathways. NPF, CRZ, and AstA and indirectly Hugin (via sugar sensing), regulate feeding (Hentze et al. 2015 ; Hergarden et al. 2012 ; Kubrak et al. 2016 ; Oh et al. 2021 ; Qin et al. 2025 ; Schwarz et al. 2021 ; Yoshinari et al. 2021 ). The CRZ neurons also affect feeding indirectly via DILPs by means of colocalized sNPF, indicated by * (Oh et al. 2019 ). NPF released from EECs of the midgut affects metabolism and aging indirectly via the DILP‐producing cells and JH (Chen et al. 2024 ) and follicle maturation in ovaries (not shown; Sadanandappa et al. 2021 ). In adults, there is no prothoracic gland, but in females, ecdysone is produced by the ovaries and regulates female reproduction by promoting biosynthesis of vitellogenin in the fat body (Swevers 2019 ; Zhu et al. 2021 ). In males, ecdysone is produced in the male accessory glands (not shown here; Hentze et al. 2013 ). DILPs regulate production of JH in corpora cardiaca (Tu et al. 2005 ), and DILPs and JH regulate female reproduction by promoting vitellogenesis in the fat body (LaFever and Drummond‐Barbosa 2005 ); and both hormones also affect aging (Chen et al. 2024 ). Note that the insulin‐producing cells that release DILPs receive multiple inputs from other neurons, mediating nutrient status and internal state (see Bisen et al. 2025 ; Nässel and Vanden Broeck 2016 ). Hugin neurons innervate the corpora allata, but their function is unknown (Mizuno et al. 2021 ). This figure is redrawn, from parts of a figure from Kay et al. ( 2025 ), with some alterations and updates.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690095/bin/CNE-534-e70218-g009.webp"
+        },
+        {
+          "label": "FIGURE 14",
+          "caption": "The metamorphosis of the mushroom bodies (MB) and its neuropeptides. The relatively simple larval MB has one major type of intrinsic neurons (γ Kenyon cells) and a few neuronal input and output compartments in the peduncle (Ped), horizontal and vertical lobes (gray boxes). The adult MB has three major types of intrinsic neurons (γ, αβ, and α‘β‘ Kenyon cells) that innervate specific compartments of the lobes (γ, β and γ lobes). This remodeling involves some pruning of larval neurons and addition of novel adult ones. The larval γ neurons regrow and form part of the adult circuitry (the adult γ cells innervate the γ1–γ5 compartments but no longer the vertical lobe). Images are redrawn and simplified from Truman et al. ( 2023 ). The bottom panels depict subsets of Kenyon cells producing short neuropeptide F (sNPF), the only known neuropeptide in the MB intrinsic neurons. In larvae, these are the majority of the γ neurons, whereas in adults, sNPF is expressed in subpopulations of γ, β, and γ Kenyon cells but not the α‘β‘ cells. These images are from Nässel et al. ( 2008 ) with permission.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690095/bin/CNE-534-e70218-g014.webp"
+        }
+      ],
+      "supplements": [],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "2.3",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T12:43:27Z"
+      },
+      "journal_display": "The Journal of comparative neurology（IF 2.3；JCR SCI Q1）",
+      "updated_at": "2026-10-24T12:43:27Z",
+      "ai_status": "success",
+      "publishable": false,
+      "gate_reasons": [
+        "正文 Methods 未提取",
+        "AI 图组解读数量少于正文原图数量"
+      ],
+      "status": "manual_review"
     },
     {
       "id": "doi:10.1099/mgen.0.001859",
@@ -166,14 +207,68 @@
       "doi": "10.1099/mgen.0.001859",
       "pmcid": "PMC13690021",
       "pmid": "42911656",
-      "abstract": "",
       "citation_count": 0,
       "fulltext_urls": [],
       "source": "NCBI PMC",
       "relevance_score": 12,
       "relevance_evidence": [
         "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
-      ]
+      ],
+      "figures": [
+        {
+          "label": "Fig. 1.",
+          "caption": "Transmission cluster assignment comparison workflow.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690021/bin/mgen-12-01859-g001.webp"
+        },
+        {
+          "label": "Fig. 2.",
+          "caption": "Summary of samples included in the global UShER-TB phylogenomics resource. (a) Global phylogeny of 129,312 samples processed with the myco pipeline and placed with usher-sampled. The phylogeny, samples and metadata can be explored interactively on Taxonium . (b) Geographical distribution of samples. Note that sample depth does not necessarily correspond to density of infections, as sequencing resources contribute heavily to data collection.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690021/bin/mgen-12-01859-g002.webp"
+        },
+        {
+          "label": "Fig. 3.",
+          "caption": "Motivation and effects of local masking. (a) Example demonstrating a placement artefact that occurs when samples have missing sequence information, where their close neighbours may have variants. On the left, Sample B has missing data (highlighted in the sequence alignment in orange) at position 6, while neighbours C and D share a >T mutation (mutations highlighted in blue) there. The placement algorithm treats this as a difference, inflating mutation distances despite alignment evidence. To avoid such false distances between closely related samples, we mask mutations like those at positions 6 and 8 (right) (see Methods). (b) To test the effect of multiple rounds of post-inference local masking, we tracked the number of mutations needing to be masked across four rounds of the procedure. (c) We tracked the number of revertant mutations present in the global tree after each round of masking to assess improvements in phylogenetic quality.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690021/bin/mgen-12-01859-g003.webp"
+        },
+        {
+          "label": "Fig. 4.",
+          "caption": "Placement consistency in different settings. (a) Summary of transmission cluster assignment results in local and global settings. (b) Proportion of samples that are correctly assigned to their original transmission group. (c) Proportion of samples that fall within two or less nodes from their original location in the tree. In both cases, different scenarios are considered. From left to right: local dataset placing 40% of samples (LP_40), global dataset placing 40% of the samples (GP_40) and global dataset placing all the sequences (GP_all).",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690021/bin/mgen-12-01859-g004.webp"
+        },
+        {
+          "label": "Fig. 5.",
+          "caption": "Location of candidate phylogenetically distinct clades. Summary of the UShER-TB global tree (with major lineages collapsed), illustrating where samples with potential novel clade designation are phylogenetically placed.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690021/bin/mgen-12-01859-g005.webp"
+        },
+        {
+          "label": "Fig. 6.",
+          "caption": "Phylogenetic neighbourhoods of ancient DNA-placed samples. All the nodes show the placed samples (in red), the neighbouring taxa codified by the country in which the samples were collected and the lineage of the samples within the node. (a) and (b) correspond to the Hungarian mummies’ sequences, (c) corresponds to the Bishop’s sequence and (d) shows the M. pinnipedii sequences.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690021/bin/mgen-12-01859-g006.webp"
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary Material 1.",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690021/bin/mgen-12-01859-s001.pdf",
+          "description": ""
+        }
+      ],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "4.5",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T12:43:49Z"
+      },
+      "journal_display": "Microbial genomics（IF 4.5；JCR SCI Q1）",
+      "updated_at": "2026-10-24T12:43:49Z",
+      "ai_status": "success",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
     },
     {
       "id": "doi:10.1002/jor.70303",
@@ -188,14 +283,74 @@
       "doi": "10.1002/jor.70303",
       "pmcid": "PMC13690011",
       "pmid": "42911637",
-      "abstract": "",
       "citation_count": 0,
       "fulltext_urls": [],
       "source": "NCBI PMC",
       "relevance_score": 12,
       "relevance_evidence": [
         "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
-      ]
+      ],
+      "figures": [
+        {
+          "label": "Figure 1",
+          "caption": "Examples of phalloidin‐labeled F‐actin fluorescence within in situ human chondrocytes. (A) represents high power magnification images (a–c) of in situ chondrocytes illustrating (a) cortical F‐actin, (b) tracing and measurement of average F‐actin fluorescence, using the Freehand selection (thin yellow broken line), and (c) intensity of F‐actin, using Freehand line tools in ImageJ. Examples of the intensity were shown in (c) as intense punctate (IP) and intense areas (IAs). Examples of cytoplasmic process/es (d) and (e), with the classification of F‐actin labeling localization (f), phalloidin‐labeling was assessed on a projected 3D image, highlighting the cortical ring associated with the cell membrane. Bar = 10 µm. Panel (B) shows the fluorescence profile along the cortical region in (a). The red line identified fluorescence levels around the cortical ring. The red circle indicated the background fluorescence level (gray value = 100 fluorescence units (FI)). The green rectangle represented a zone where the fluorescence was above this value for ≤ 2 µm (termed “intense punctate” (IP) area). The blue rectangle represented a region where the fluorescence value was ≥ 100 FI over > 2 µm of the cortical ring (termed “intense area” (IA)).",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690011/bin/JOR-44-0-g001.webp"
+        },
+        {
+          "label": "Figure 2",
+          "caption": "CMFDA and F‐actin in chondrocytes of normal or increased volume within G0 and G1 human cartilage. Panel (A) shows images at low and high magnification of CMFDA (green) and F‐actin (red) labeling of in situ chondrocytes within G0 (a–c) and G1 (d–f) cartilage. Arrows identified areas of F‐actin corresponding to intense areas (IAs; broken line) or intense punctate (IP; solid line; see Figure 1 for details). Panel (B) (a) shows a significant increase in all cells for cortical F‐actin in chondrocytes within G0 and G1 cartilage. Panel (B) (b) shows the significant increase in F‐actin for chondrocytes in the normal volume range (≤ 1000 μm 3 ), with those of increased volume (> 1000 μm 3 ) for both G0 and G1 cartilage. Data were from G0 N ( n ) = 17(165); normal = 12(104); large = 16(61), and G1 N ( n ) = 16(124); normal = 11(62); large = 12(62). Data analysis and symbols here and in subsequent figures were as described in Section 2 .",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690011/bin/JOR-44-0-g004.webp"
+        },
+        {
+          "label": "Figure 3",
+          "caption": "Intense punctates (IP) and intense areas (IA) of F‐actin in normal or large chondrocytes within G0 and G1 human cartilage. Panel (A) (a) shows the significant increase in IP labeling of all chondrocytes between G0 and G1 cartilage. Panel (A) (b) demonstrates the highly significant increase in IP labeling when the chondrocytes were separated into cells with their volume in the lower range (≤ 1000 μm 3 ) or with an increased volume (> 1000 μm 3 ). Panel (B) (a) shows the significant increase in IA labeling of all chondrocytes studied between cells in G0 and G1 cartilage. Panel (B) (b) demonstrates the highly significant increase in IA labeling between chondrocytes when separated into cells with their volume in the “normal” volume range (≤ 1000 μm 3 ) or with an increased volume (> 1000 μm 3 ). Data were from G0 – N ( n ) = 17(165); normal = 12(104); large = 16(61), and G1 – N ( n ) = 16(124); normal = 11(62); large = 12(62).",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690011/bin/JOR-44-0-g006.webp"
+        },
+        {
+          "label": "Figure 4",
+          "caption": "Comparison between F‐actin levels and its distribution between clustered chondrocytes in G0 and G1 femoral head cartilage. Panel (A) shows examples of clustered in situ chondrocytes and their F‐actin distribution in G0 and G1 cartilage with low (a, b) and (d, e) (bar = 10 μm) and high (c, f) (bar = 25 μm) power magnification images, respectively. Arrows identified examples of F‐actin localization and content. Panel (B) (a) shows the highly significant increases in average F‐actin fluorescence/cell and (b) the number of intense areas/cell between chondrocyte clusters in G0 and G1 cartilage (see Section 2 for image analysis methods). Each data point represented the averaged data from one image. Pooled data from (G0) – N ( n ) = 3(16) and (G1) – N ( n ) = 6(11); with at least three images analyzed for each femoral head.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690011/bin/JOR-44-0-g005.webp"
+        },
+        {
+          "label": "Figure 5",
+          "caption": "F‐actin within the cell body and cytoplasmic processes of chondrocytes in G0 and G1 femoral head cartilage. Low [(A) – G0 (a, b); G1 (d, e)] and high [(A) – G0 (c); G1 (f)] magnification images demonstrating the presence of F‐actin in the cortical region of the cell body, and extensive labeling within the cytoplasmic process/es identified using white arrows (A (c, f)). Panel (B) (a) shows fluorescently‐labeled F‐actin in comparison between morphologically‐normal versus morphologically‐abnormal in situ chondrocytes in both grades. Panel (B) (b) shows fluorescently‐ labeled F‐actin level compared between the cell body and cytoplasmic process/es within (paired t ‐tests) and across (unpaired t ‐tests) grades. Comparisons of fluorescently‐labeled F‐actin levels between the cell body and cytoplasmic process/es, classified according to process length (L1, L2 and L3; see Section 2), are shown for G0 and G1 cartilage (Panel B, c and d, respectively; N ( n ) = 8(75) and 9(70), respectively; ANOVA, p < 0.05).",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690011/bin/JOR-44-0-g007.webp"
+        },
+        {
+          "label": "Figure 6",
+          "caption": "F‐actin localization within the cytoplasmic process/es of in situ chondrocytes in G0 and G1 cartilage. Panel (A) shows examples of F‐actin associated with (a) a bulge, (b) a small cytoplasmic protrusion, (c) and (d) different F‐actin distributions within the cytoplasmic process associated with changing chondrocyte morphology. Panel (B) shows pooled data of the comparisons between the F‐actin content in the base, body, and tip (expressed as a percentage of the total F‐actin content in the process) within all the cytoplasmic process/es of chondrocytes between, and across, G0 and G1 cartilage (panel B (a)). Panel B (b and c) shows the separation of cytoplasmic process/es into groups according to their length as described (L1, L2, L3, see Section 2 ) for cells in (b) G0 and (c) G1 cartilage. G0 data were from N ( n ) = 8(63); G1 data from N ( n ) = 9(74).",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690011/bin/JOR-44-0-g002.webp"
+        },
+        {
+          "label": "Figure 7",
+          "caption": "Changes to chondrocyte cytoplasmic processes in response to hypo‐osmotic pressure. (A) Low magnification images with examples of single abnormal in situ chondrocytes from mildly degenerate (G1) human femoral head before (a) and after (b) hypo‐osmotic pressure, and with both merged in one image (c). Scale bar = 40 μm. Cells were stained with CMFDA (green) for all channels (a–c), however, the color was changed (see Section 2 for details). Panel (B) (a–c) High magnification images were acquired to show examples of the changes to the individual cells (broken white circles/ellipses) with white arrows identifying individual cytoplasmic process/es. Panel (B) (d–f) represents examples of changes to the width of processes identified with broken white circles/ellipses. Scale bar = 20 μm. Panel (C) represents a comparison between the chondrocyte (a) volume, (b) width, and (c) length of cytoplasmic process/es before (normal osmotic pressure 340 mOsm) and after (low osmotic pressure 170 mOsm). Data from N ( n ) = 3(3) with a total of 18 cells analyzed.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690011/bin/JOR-44-0-g003.webp"
+        }
+      ],
+      "supplements": [],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "",
+        "jcr": "",
+        "jcr_quartile": "",
+        "jcr_q1": false,
+        "status": "not_found",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T12:44:12Z"
+      },
+      "journal_display": "Journal of orthopaedic research : official publication of the Orthopaedic Research Society（指标待查）",
+      "updated_at": "2026-10-24T12:44:12Z",
+      "ai_status": "skipped_non_jcr_q1",
+      "publishable": false,
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ],
+      "status": "discarded"
     },
     {
       "id": "doi:10.1002/cpz1.70489",
@@ -216,14 +371,79 @@
       "doi": "10.1002/cpz1.70489",
       "pmcid": "PMC13690009",
       "pmid": "42911226",
-      "abstract": "",
       "citation_count": 0,
       "fulltext_urls": [],
       "source": "NCBI PMC",
       "relevance_score": 12,
       "relevance_evidence": [
         "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
-      ]
+      ],
+      "figures": [
+        {
+          "label": "Figure 1",
+          "caption": "Overview of the experimental workflow for dynamic microfluidic culture of human articular chondrocytes and induction of osteoarthritis‐like inflammation under gravity‐driven flow. Schematic representation of the integrated workflow comprising three basic protocols. Basic Protocol 1 : extracellular matrix (ECM) protein coating and equilibration of microfluidic chips. Basic Protocol 2 : harvesting, sequential seeding of human articular chondrocytes, and initiation of gravity‐driven bidirectional flow through asymmetric reservoir filling and rocker‐induced tilting, enabling dynamic culture for up to 21 days. Basic Protocol 3 : induction of OA‐like inflammation using IL‐1β (days 15–21), followed by downstream analyses at defined time points. Representative readouts include metabolic activity, secretion of ECM components, cytokines, and MMPs, and fluorescence imaging of cell viability, morphology, and ECM marker expression. Note: Some graphical elements were created using BioRender.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690009/bin/CPZ1-6-0-g004.webp"
+        },
+        {
+          "label": "Figure 2",
+          "caption": "Microfluidic platform and chip layout for dynamic chondrocyte culture under gravity‐driven flow. (A) Photograph of the microfluidic chip with reservoirs filled with culture medium, illustrating the assembled device used for experiments. (B) Schematic representation of the microfluidic chip layout showing an array of 24 culture units. Each unit comprises two culture medium reservoirs connected by four microchannels with varying width and height, subdivided into regions I–III to generate spatial gradients of fluid shear stress under gravity‐driven flow conditions.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690009/bin/CPZ1-6-0-g008.webp"
+        },
+        {
+          "label": "Figure 3",
+          "caption": "Proper pipette handling for liquid injection, loading, and extraction in microfluidic culture units. Schematic representation of recommended pipette handling techniques for introducing and removing liquids in microfluidic chips. Injection of coating solution and cell suspension: The pipette tip should gently contact the inlet aperture at the bottom of the reservoir without insertion into the channel inlet, followed by slow injection to allow smooth flow through the microchannels toward the opposite reservoir. Direct insertion of the pipette tip into the inlet should be avoided to prevent damage to the channel structure and leakage. Liquid loading (culture medium, DPBS, assay solutions): Add liquids directly to the reservoirs without contacting the inlet apertures. Direct injections into the channel inlet should be avoided to prevent flow disruption and the introduction of air bubbles. Liquid extraction: Liquids should be removed from the reservoirs without contacting the inlet apertures to ensure that the microchannels remain filled. Aspiration from the microchannels should be avoided to prevent bubble formation and loss of fluid continuity within the system. Correct handling is indicated by green check symbols, while incorrect procedures are indicated by red crosses.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690009/bin/CPZ1-6-0-g006.webp"
+        },
+        {
+          "label": "Figure 4",
+          "caption": "Workflow for experimental determination of gravity‐driven flow rate in microfluidic chips under rocker‐induced tilt. Schematic overview of the experimental procedure used to measure flow rates during the dwell period at a defined tilt angle (±25°). (1–2) Microfluidic chips are coated with extracellular matrix (ECM) proteins (fibronectin‐collagen type IV mixture) and equilibrated with culture medium under incubator conditions. (3) Collection vials are pre‐weighed using an analytical balance prior to flow measurements. (4) Reservoirs are asymmetrically filled (e.g., 100 µl vs. 50 µl) to establish a hydrostatic pressure difference driving fluid flow between reservoirs. (5) The chip is placed on a rocker platform at room temperature and operated under defined conditions (±25° tilt, 1 rpm, 300 sec dwell period). The dwell period begins at the maximum tilt position (25°) and is defined at t = 0 sec. (6) During the 300‐sec dwell period, the cumulative transferred volume to the initially lower‐volume reservoir is collected at defined time points (e.g., 60, 120, 180, and 240 sec) using pre‐weighed vials. For each time point, independent microfluidic units are used. The collected volumes are determined by gravimetric measurement. (7) Measurements are repeated across five independent culture units per sampling time point. Transferred volumes and flow rates are calculated as Δ V i = V i − V i −1 and Q i = Δ V i /Δ t , and plotted as a function of time. Note: Graphs are reproduced from da Silva et al. ( 2026 ) licensed under CC BY 3.0.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690009/bin/CPZ1-6-0-g001.webp"
+        },
+        {
+          "label": "Figure 5",
+          "caption": "Image processing workflow for z‐stack analysis and fluorescence quantification in Fiji (ImageJ). Screenshots illustrate key steps in image processing and preparation for extracellular matrix (ECM) marker quantification. Panels show representative Fiji (ImageJ) interfaces for: visualization of z‐stack images with merged fluorescence channels (collagen type II, green; aggrecan, red; DAPI, blue); generated z‐projection images with merged channels (Scale bar = 100 µm); individual z‐stacks for each fluorescence channel separately; Fiji (ImageJ) toolbar; and the Brightness & Contrast (B&C) adjustment window. Displayed z‐stack images correspond to a single optical slice (typically the first slice) within the stack. Navigation through the full z‐stack is performed using the scroll bar or arrow controls in the Fiji (ImageJ) interface. Lookup tables (LUTs) are assigned to each channel for visualization purposes only and do not modify the underlying grayscale intensity values. Brightness and contrast may be adjusted to facilitate visualization and accurate ROI selection. However, the “Apply” function should not be used, as it permanently alters pixel intensity values and compromises quantitative fluorescence analysis.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690009/bin/CPZ1-6-0-g002.webp"
+        },
+        {
+          "label": "Figure 6.",
+          "caption": "Image processing workflow for ROI selection and fluorescence quantification in Fiji (ImageJ). Screenshots illustrating key steps for ROI selection and fluorescence quantification in Fiji (ImageJ). Representative images show individual fluorescence channels (collagen type II, green; aggrecan, red) from z‐stack data. Displayed images correspond to the first slice of the z‐stack; navigation through slices is performed using the scroll bar or arrow controls in the Fiji (ImageJ) interface. The ROI Manager interface (Analyze → Tools → ROI Manager) was used to define measurement regions. Individual cells were manually selected in the first channel using the freehand selection tool and assigned as ROIs (yellow outlines, labeled 1‐6), then added to the ROI Manager. Additional background ROIs (n = 5) were defined outside the microchannels using square selections and added to the same ROI set. ROIs were subsequently overlaid onto the second channel using the “Show all” function to ensure consistent measurement across channels. Measurement parameters were defined in the Set Measurements menu (Analyze → Set Measurements), and fluorescence intensity values (gray values), integrated density, and area were obtained by selecting each channel and applying the “Measure” function in the ROI Manager.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690009/bin/CPZ1-6-0-g007.webp"
+        },
+        {
+          "label": "Figure 7",
+          "caption": "Workflow for ELISA‐based quantification of secreted inflammatory and extracellular matrix (ECM) markers. (A) Collection of culture medium (∼150 µL per unit) from microfluidic chips, followed by centrifugation (1000 × g , 4°C, 15 min), supernatant recovery, and storage at −20°C or −80°C. (B) Multiplex ELISA (Q‑PLEX) workflow for quantification of inflammatory mediators (MMPs and cytokines), including sample dilution, plate loading, chemiluminescence detection, and data analysis using calibration curves. (C) Standard ELISA workflow for quantification of collagen type II fragments, including sample dilution, absorbance measurement (450 ± 10 nm), and concentration determination by interpolation.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690009/bin/CPZ1-6-0-g003.webp"
+        },
+        {
+          "label": "Figure 8",
+          "caption": "Expected cellular responses of human articular chondrocytes under dynamic culture and IL‑1β‐induced inflammatory conditions. Representative results illustrate chondrocyte morphology, viability, extracellular matrix (ECM) expression, metabolic activity, and inflammatory responses under gravity‐driven flow conditions. (A) Representative z‐projection fluorescence images of chondrocytes cultured for 21 days in microchannels coated with a fibronectin–collagen type IV mixture. Cells form aggregates and microtissue‐like structures across regions I–III corresponding to increasing fluid shear stress levels. Cells are stained for F‐actin (red) and nuclei (DAPI, blue). (B) Representative Live/Dead fluorescence images showing time‐dependent viability and proliferation of chondrocytes cultured under dynamic conditions on days 3, 7, 14, and 21 (control), compared with IL‑1β‐stimulated cultures on day 21 (1 and 10 ng/ml, applied from day 15 to day 21). Control cultures show progressive formation of compact microtissue‐like aggregates (white arrows), whereas IL‑1β stimulation results in disrupted aggregates (yellow arrows). Green: calcein‐AM (live cells); red: ethidium homodimer‐1 (dead cells). (C) Representative z‐projection immunofluorescence images of ECM marker expression in region I after 21 days of culture, comparing control and IL‑1β‐stimulated samples. Images show merged fluorescence channels for collagen type II (green), aggrecan (red), and nuclei (DAPI, blue). (D–E) Quantification of corrected total cell fluorescence (CTCF) for collagen type II (D) and aggrecan (E) across regions I–III for control and IL‑1β‐stimulated cultures at day 21 (n = 44 cells per group). (F) Cell metabolic activity measured using a PrestoBlue assay for control and IL‑1β‐stimulated samples at day 21 ( n = 5 independent samples per group). (G–H) Quantification of inflammatory mediators in culture supernatant collected at day 21 using multiplex ELISA, including matrix metalloproteinases (MMP‐1, MMP‐2, MMP‐3, MMP‐7, MMP‐9, MMP‐13) and cytokines (IL‑1β, IL‑6, IL‑8) ( n = 3 independent samples per group). Values below the lower limit of quantification are indicated as <LLOQ. (I) Quantification of collagen type II fragments released into the culture medium at day 21, measured by ELISA ( n = 3 independent samples per group). All fluorescence images include a 100 µm scale bar, and white dashed lines indicate microchannel boundaries. Statistical analysis was performed using the Kruskal–Wallis test with Dunn's post hoc comparison (* p < 0.05, ** p < 0.01, *** p < 0.001, **** p < 0.0001; n.s., not significant). Conditions include control (no cytokine) and IL‑1β stimulation (1 and 10 ng/ml). Note: Panels are adapted from da Silva et al. ( 2026 ), licensed under CC BY 3.0.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690009/bin/CPZ1-6-0-g005.webp"
+        }
+      ],
+      "supplements": [],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "2.5",
+        "jcr": "",
+        "jcr_quartile": "",
+        "jcr_q1": false,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T12:44:15Z"
+      },
+      "journal_display": "Current protocols（IF 2.5）",
+      "updated_at": "2026-10-24T12:44:15Z",
+      "ai_status": "skipped_non_jcr_q1",
+      "publishable": false,
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ],
+      "status": "discarded"
     },
     {
       "id": "doi:10.1002/jnr.70162",
@@ -246,14 +466,105 @@
       "doi": "10.1002/jnr.70162",
       "pmcid": "PMC13688411",
       "pmid": "42910573",
-      "abstract": "",
       "citation_count": 0,
       "fulltext_urls": [],
       "source": "NCBI PMC",
       "relevance_score": 12,
       "relevance_evidence": [
         "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
-      ]
+      ],
+      "figures": [
+        {
+          "label": "FIGURE 1",
+          "caption": "Identification of hub genes by machine learning and external validation. (A) Protein–protein interaction (PPI) network of the DEGs visualized using Cytoscape, highlighting a highly interconnected module identified by the Degree algorithm. Lines represent interactions between gene products (nodes). (B–D) Identification of key genes using three machine learning algorithms on the 15 candidate hub genes. (B) Feature selection using the Least Absolute Shrinkage and Selection Operator (LASSO) regression with 10‐fold cross‐validation. (C) Feature selection using the Support Vector Machine Recursive Feature Elimination (SVM‐RFE) algorithm. (D) Feature selection using the Boruta algorithm confirming all 15 genes as important features. (E) Venn diagram showing the intersection of key genes identified by LASSO, SVM‐RFE, and Boruta algorithms. (F, G) Box plots show the expression levels of hub genes in (F) GSE97537 and (G) GSE106680 datasets. The x‐axis indicates the groups (Sham vs. middle cerebral artery occlusion [MCAO]), and the y‐axis shows the normalized gene expression values. * p < 0.05, ** p < 0.01, *** p < 0.001 vs. Sham.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688411/bin/JNR-104-e70162-g004.webp"
+        },
+        {
+          "label": "FIGURE 2",
+          "caption": "Knockdown of C‐type lectin domain family 7 member A (CLEC7A) protects against oxygen–glucose deprivation (OGD)‐induced injury and promotes M2 polarization in microglia in vitro. (A) Quantitative Real‐Time Polymerase Chain Reaction (qRT‐PCR) analysis of mRNA expression of hub genes in the OGD model. (B) qRT‐PCR validation of CLEC7A knockdown efficiency using three different siRNAs. (C) Western blot analysis of CLEC7A protein expression. (D) Cell viability assessed by the Cell Counting Kit‐8 (CCK‐8) assay. (E) Apoptosis rate analyzed by flow cytometry with Annexin V‐fluorescein isothiocyanate (FITC)/propidium iodide (PI) staining. (F) Levels of pro‐inflammatory cytokines (tumor necrosis factor‐alpha [TNF‐α], interleukin‐6 [IL‐6], interleukin‐1 beta [IL‐1β]) and reactive oxygen species (ROS) measured by Enzyme‐Linked ImmunoSorbent Assay (ELISA). (G) Flow cytometric detection of CD86 and CD206 expression. (H) Western blot analysis of pro‐inflammatory (iNOS and CD16) and anti‐inflammatory (Arg1 and IL‐10) microglial phenotypic markers. (I, J) Representative immunofluorescence images and quantification of (I) anti‐inflammatory marker (CD86) and (J) pro‐inflammatory M2 marker (CD206) expression. Nuclei were counterstained with 4′,6‐diamidino‐2‐phenylindole (DAPI) (blue). Scale bar: 100 μm, magnification: 200×. * p < 0.05, ** p < 0.01, *** p < 0.001.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688411/bin/JNR-104-e70162-g005.webp"
+        },
+        {
+          "label": "FIGURE 3",
+          "caption": "Knockdown of CLEC7A alleviates ischemic brain injury in MCAO rats. (A) Western blot analysis of CLEC7A expression in brain tissues. (B) Western blot analysis of CLEC7A expression after MCAO. (C) qRT‐PCR analysis of CLEC7A expression in brain tissues. (D) Representative images of 2,3,5‐Triphenyltetrazolium Chloride (TTC)‐stained brain sections. The infarct area appears white. (E) Quantitative analysis of cerebral infarct volume. (F) Neurological deficit scores (NDS). (G) Modified Garcia scores. (H) Brain water content (%). (I) Representative images of Hematoxylin and Eosin (H&E) staining (upper panel) and Nissl staining (lower panel) of cortical brain sections. Scale bar: 20 μm; magnification: 400×. (J) Representative immunofluorescence images showing co‐localization of CLEC7A (green) with the microglial marker Iba‐1 (red). Nuclei were stained with DAPI (blue). Scale bar: 20 μm; magnification: 400×. * p < 0.05, ** p < 0.01, *** p < 0.001.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688411/bin/JNR-104-e70162-g008.webp"
+        },
+        {
+          "label": "FIGURE 4",
+          "caption": "Knockdown of CLEC7A promotes M2 microglial polarization in MCAO rats. (A) Levels of pro‐inflammatory cytokines (TNF‐α, IL‐1β, IL‐6) in brain tissue measured by ELISA. (B) ROS levels in brain tissue measured by ELISA. (C) qRT‐PCR analysis of M1 marker (iNOS, TNF‐α) and M2 marker (TGF‐β, Arg1) mRNA expression. (D‐E) Representative immunohistochemical images and quantitative analysis of (D) CD86 (M1 marker) and (E) CD206 (M2 marker) positive cells. Scale bar: 100 μm; magnification: 200×. (F) Western blot analysis of CD86, CD206, and Iba‐1 protein expression. * p < 0.05, ** p < 0.01, *** p < 0.001.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688411/bin/JNR-104-e70162-g002.webp"
+        },
+        {
+          "label": "FIGURE 5",
+          "caption": "Identification of the Cytokine‐cytokine receptor interaction pathway as a downstream target of CLEC7A. (A) Venn diagram showing the intersection between CLEC7A‐associated genes and ischemia‐related DEGs. (B) Bubble plot of Kyoto Encyclopedia of Genes and Genomes (KEGG) pathway enrichment analysis for the intersecting genes. (C) qRT‐PCR analysis of Chemokine (C‐X‐C motif) ligand 1 (CXCL1) and C‐X‐C motif chemokine receptor 2 (CXCR2) mRNA expression in rat brain tissue. (D) Western blot analysis of CXCL1 and CXCR2 protein expression in rat brain tissue. *** p < 0.001.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688411/bin/JNR-104-e70162-g003.webp"
+        },
+        {
+          "label": "FIGURE 6",
+          "caption": "Rescue experiments confirm that CLEC7A knockdown exerts its effects via the CXCL1/CXCR2 axis in vitro. (A) qRT‐PCR analysis of CLEC7A mRNA expression with or without recombinant CXCL1 (rCXCL1) treatment. (B) Western blot analysis of CLEC7A protein expression with or without rCXCL1 treatment. (C) Cell viability assessed by the CCK‐8 assay. (D) Apoptosis rate analyzed by flow cytometry. (E) Levels of pro‐inflammatory cytokines and ROS measured by ELISA. (F, G) Representative immunofluorescence images and quantification of (F) CD86 and (G) CD206 expression. Scale bar: 100 μm, magnification: 200×. (H) Western blot analysis of CXCL1 and CXCR2 protein expression. * p < 0.05, ** p < 0.01, *** p < 0.001.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688411/bin/JNR-104-e70162-g006.webp"
+        },
+        {
+          "label": "FIGURE 7",
+          "caption": "Rescue experiments confirm that CLEC7A knockdown alleviates stroke injury via the CXCL1/CXCR2 axis in vivo. (A) Representative TTC‐stained brain sections. (B) Quantitative analysis of cerebral infarct volume. (C) NDS. (D) Modified Garcia scores. (E) Brain water content (%). (F) Representative images of H&E staining and Nissl staining of cortical brain sections. Scale bar: 20 μm; magnification: 400×. (G) Representative immunofluorescence images showing co‐localization of CLEC7A (green) with Iba1 (red). Nuclei were stained with DAPI (blue). Scale bar: 20 μm; magnification: 400×. ** p < 0.01, *** p < 0.001.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688411/bin/JNR-104-e70162-g009.webp"
+        },
+        {
+          "label": "FIGURE 8",
+          "caption": "Rescue experiments confirm that CLEC7A knockdown promotes M2 polarization via the CXCL1/CXCR2 axis in vivo. (A) Levels of pro‐inflammatory cytokines (TNF‐α, IL‐1β, IL‐6) in brain tissue measured by ELISA. (B) ROS levels in brain tissue measured by ELISA. (C) qRT‐PCR analysis of M1 marker (iNOS) and M2 marker (Arg1) mRNA expression. (D, E) Representative immunohistochemical images and quantitative analysis of (D) CD86 and (E) CD206 positive cells in the peri‐infarct cortex. Scale bar: 100 μm; magnification: 200×. (F) Western blot analysis of Iba‐1, CXCL1, and CXCR2 protein expression. * p < 0.05, ** p < 0.01, *** p < 0.001.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688411/bin/JNR-104-e70162-g007.webp"
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary file 1",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688411/bin/JNR-104-e70162-s002.docx",
+          "description": "Figure S1: Batch effect correction and data integration. (A–D) Data distribution before and after batch effect removal using the sva package. (A) Density plot before correction. (B) Box plot before correction. (C) Density plot after correction. (D) Box plot after correction. (E, F) Principal Component Analysis (PCA) validating the effectiveness of batch effect removal. (E) 2D PCA score plot. (F) 3D PCA score plot. Figure S2: Identification of differentially expressed genes and functional enrichment analysis. (A) Volcano plot showing differentially expressed genes (DEGs). The x ‐axis represents the log 2 fold change (log 2 FC), and the y ‐axis represents the −log 10 (adj. p ‐value). Red dots indicate significantly upregulated DEGs (|log 2 FC| ≥ 3 and adj. p .val < 0.001). (B) Heatmap of the 86 significant DEGs. Each row represents a gene, and each column represents a sample. Red and blue colors indicate high and low expression levels ( Z ‐score), respectively. (C) Bubble plot of the top enriched Kyoto Encyclopedia of Genes and Genomes (KEGG) pathways. The color intensity represents the p ‐value, and the bubble size corresponds to the number of involved genes. (D) Bubble plot of the top enriched Gene Ontology (GO) terms. Figure S3: Protein–protein interaction (PPI) network of the 86 differentially expressed genes (DEGs). The network was constructed using the STRING database (interaction score > 0.4) and visualized with Cytoscape. Nodes represent proteins, and edges represent predicted or known interactions."
+        },
+        {
+          "label": "Supplementary file 2",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688411/bin/JNR-104-e70162-s003.docx",
+          "description": "Table S1: Primer sequences in this study."
+        },
+        {
+          "label": "Supplementary file 3",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688411/bin/JNR-104-e70162-s005.docx",
+          "description": "Data S1: Transparent science questionnaire for authors."
+        },
+        {
+          "label": "Supplementary file 4",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688411/bin/JNR-104-e70162-s001.pdf",
+          "description": "Data S2: jnr70162‐sup‐0004‐Supinfo2.pdf."
+        },
+        {
+          "label": "Supplementary file 5",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688411/bin/JNR-104-e70162-s004.pdf",
+          "description": "Data S3: jnr70162‐sup‐0005‐Supinfo3.pdf."
+        }
+      ],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "3.1",
+        "jcr": "SCI Q3",
+        "jcr_quartile": "Q3",
+        "jcr_q1": false,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T12:44:18Z"
+      },
+      "journal_display": "Journal of neuroscience research（IF 3.1；JCR SCI Q3）",
+      "updated_at": "2026-10-24T12:44:18Z",
+      "ai_status": "skipped_non_jcr_q1",
+      "publishable": false,
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ],
+      "status": "discarded"
     },
     {
       "id": "doi:10.1002/jcsm.70409",
@@ -271,14 +582,108 @@
       "doi": "10.1002/jcsm.70409",
       "pmcid": "PMC13688428",
       "pmid": "42910566",
-      "abstract": "",
       "citation_count": 0,
       "fulltext_urls": [],
       "source": "NCBI PMC",
       "relevance_score": 12,
       "relevance_evidence": [
         "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
-      ]
+      ],
+      "figures": [
+        {
+          "label": "FIGURE 1",
+          "caption": "Identification and validation of cachexia‐associated circulating miRNAs in ESCC patients. (A, B) Hierarchical clustering of differentially expressed circulating miRNAs in healthy controls versus cachectic ESCC and cachectic versus noncachectic ESCC. (C, D) Corresponding volcano plots. (E) Intersection of miRNAs upregulated in cachectic ESCC in both comparisons, identifying hsa‐miR‐5187‐5p and hsa‐miR‐4433b‐3p. (F) qRT‐PCR expression in healthy controls, noncachectic ESCC and cachectic ESCC ( n = 42/group). Points represent participants; bars indicate mean ± SEM. * p < 0.05; *** p < 0.001; **** p < 0.0001.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-g004.webp"
+        },
+        {
+          "label": "FIGURE 2",
+          "caption": "ROC performance of circulating miRNAs for ESCC cachexia classification. ROC curves for hsa‐miR‐5187‐5p (A–C) and hsa‐miR‐4433b‐3p (D–F) comparing healthy controls (HC), noncachectic ESCC (ESCC‐NC) and cachectic ESCC (ESCC‐C). AUC, p value, cohort‐derived cut‐off, sensitivity and specificity are shown in each panel.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-g001.webp"
+        },
+        {
+          "label": "FIGURE 3",
+          "caption": "Unadjusted associations with overall survival in ESCC. Kaplan–Meier curves according to (A) cachexia status, (B) hsa‐miR‐5187‐5p, (C) hsa‐miR‐4433b‐3p, (D) IL‐6, (E) TNF‐α, (F) CRP and (G) IL‐1β. Hazard ratios were estimated using univariate Cox regression and were not adjusted for TNM stage, age, sex or other clinicopathological variables.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-g005.webp"
+        },
+        {
+          "label": "FIGURE 4",
+          "caption": "Associations of candidate miRNAs with inflammatory markers and albumin. Cross‐sectional correlations of hsa‐miR‐5187‐5p and hsa‐miR‐4433b‐3p with (A) IL‐6, (B) TNF‐α, (C) IL‐1β, (D) CRP and (E) albumin. Fitted lines and confidence bands are shown. Correlations were weak to moderate and do not establish causality.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-g002.webp"
+        },
+        {
+          "label": "FIGURE 5",
+          "caption": "Functional enrichment and pathway network analysis. (A, B) GO and KEGG enrichment for miRNAs differentially expressed between ESCC and healthy controls. (C, D) GO and KEGG enrichment for cachectic versus noncachectic ESCC, highlighting inflammatory and metabolic pathways. (E) Predicted miRNA‐target gene‐pathway network for hsa‐miR‐5187‐5p and hsa‐miR‐4433b‐3p.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-g003.webp"
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary file 1",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s001.docx",
+          "description": "Table S1: RNA quality and PCR efficiency for all samples."
+        },
+        {
+          "label": "Supplementary file 2",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s005.docx",
+          "description": "Table S2: Oligonucleotide sequences for miRNA RT‐qPCR."
+        },
+        {
+          "label": "Supplementary file 3",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s003.docx",
+          "description": "Table S3: Normalized miRNA levels were compared pairwise among healthy control (HC), non‐cachexia, and cachexia."
+        },
+        {
+          "label": "Supplementary file 4",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s008.xls",
+          "description": "Table S4: Differentially expressed miRNAs identified by sequencing between healthy controls and cachexia."
+        },
+        {
+          "label": "Supplementary file 5",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s002.xls",
+          "description": "Table S5: Differentially expressed miRNAs identified by sequencing between healthy controls and non‐cachexia."
+        },
+        {
+          "label": "Supplementary file 6",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s007.xls",
+          "description": "Table S6: Genes significantly targeted by differentially expressed miRNAs identified by sequencing between healthy controls and cachexia."
+        },
+        {
+          "label": "Supplementary file 7",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s009.xls",
+          "description": "Table S7: Genes significantly targeted by differentially expressed miRNAs identified by sequencing between healthy controls and Non‐cachexia."
+        },
+        {
+          "label": "Supplementary file 8",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s006.xlsx",
+          "description": "Table S8: miRTarBase enrichment of two genes of interest."
+        },
+        {
+          "label": "Supplementary file 9",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s010.docx",
+          "description": "Table S9: Pathway‐gene interactions included in the network."
+        },
+        {
+          "label": "Supplementary file 10",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s004.docx",
+          "description": "Figure S1: Elevated circulating inflammatory markers in ESCC patients with cachexia . Box‐and‐whisker plots showing serum concentrations of (A) IL‐6, (B) TNF‐α, (C) IL‐1β, and (D) CRP in healthy controls (n=42), ESCC patients without cachexia (non‐cachexia) (n=42), and ESCC patients with cachexia (n=42). Data are presented as median with interquartile range; whiskers indicate minimum and maximum values. Statistical significance was assessed using appropriate multiple‐group comparison tests. ****P < 0.0001."
+        }
+      ],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "9.9",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T12:44:20Z"
+      },
+      "journal_display": "Journal of cachexia, sarcopenia and muscle（IF 9.9；JCR SCI Q1）",
+      "updated_at": "2026-10-24T12:44:20Z",
+      "ai_status": "success",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
     },
     {
       "id": "doi:10.1002/kjm2.70307",
@@ -295,14 +700,69 @@
       "doi": "10.1002/kjm2.70307",
       "pmcid": "PMC13688549",
       "pmid": "42910542",
-      "abstract": "",
       "citation_count": 0,
       "fulltext_urls": [],
       "source": "NCBI PMC",
       "relevance_score": 12,
       "relevance_evidence": [
         "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
-      ]
+      ],
+      "figures": [
+        {
+          "label": "FIGURE 1",
+          "caption": "Patient selection and full‐cohort model‐development strategy. The diagram summarizes patient screening, reasons for exclusion, and inclusion in the analysis cohort. All 237 included patients contributed to model development; internal validation used 1000 full‐pipeline bootstrap resamples. Screening exclusions are aggregate counts from the institutional screening record. PFS, progression‐free survival.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688549/bin/KJM2-9999-e70307-g005.webp"
+        },
+        {
+          "label": "FIGURE 2",
+          "caption": "Time‐dependent discrimination from 3 to 15 months in the full cohort. Lines show the apparent cumulative/dynamic AUC trajectories for CAR, IMDC, COMP‐IS, and IMDC + COMP‐IS; model‐specific markers at 6, 9, and 12 months show the corresponding full‐pipeline bootstrap‐corrected AUCs. Models are color‐coded and additionally distinguished by line style and marker shape. AUC, area under the curve; CAR, C‐reactive protein‐to‐albumin ratio; COMP‐IS, composite inflammatory score; IMDC, International Metastatic Renal Cell Carcinoma Database Consortium.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688549/bin/KJM2-9999-e70307-g001.webp"
+        },
+        {
+          "label": "FIGURE 3",
+          "caption": "Apparent calibration of the IMDC+COMP‐IS absolute‐risk model at 6 months (A), 9 months (B), and 12 months (C). Points show quintile‐specific observed Kaplan–Meier PFS probabilities and vertical bars show pointwise 95% confidence intervals. The dashed line indicates ideal calibration. The internally corrected calibration slope is 0.928. COMP‐IS, composite inflammatory score; IMDC, International Metastatic Renal Cell Carcinoma Database Consortium; PFS, progression‐free survival.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688549/bin/KJM2-9999-e70307-g002.webp"
+        },
+        {
+          "label": "FIGURE 4",
+          "caption": "Exploratory decision‐curve analysis for progression or death by 12 months. Net benefit is shown across threshold probabilities of 0.10–0.60 for COMP‐IS, IMDC+COMP‐IS, treat‐all, and treat‐none strategies. Threshold probabilities refer to model‐predicted event risks, not the COMP‐IS ≥ 1.0 cutoff. Treat‐all and treat‐none represent hypothetical additional clinical actions, not administration or withholding of toripalimab plus axitinib. The curves do not establish the benefit of a specific intervention or validate a threshold for clinical implementation. COMP‐IS, composite inflammatory score; IMDC, International Metastatic Renal Cell Carcinoma Database Consortium.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688549/bin/KJM2-9999-e70307-g004.webp"
+        },
+        {
+          "label": "FIGURE 5",
+          "caption": "Kaplan–Meier estimates of progression‐free survival according to the fixed COMP‐IS threshold. COMP‐IS‐High was defined as COMP‐IS ≥ 1.0. Shaded areas indicate pointwise 95% confidence intervals. Vertical marks indicate censoring and match the corresponding curve. The threshold is not optimized against survival outcomes. COMP‐IS, composite inflammatory score.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688549/bin/KJM2-9999-e70307-g003.webp"
+        },
+        {
+          "label": "FIGURE 6",
+          "caption": "Exploratory subgroup associations of continuous COMP‐IS with progression‐free survival. Points and horizontal bars show hazard ratios and 95% confidence intervals per 1‐SD higher COMP‐IS. COMP‐IS‐by‐subgroup interaction p ‐values are displayed at the right for each subgroup factor; no multiplicity adjustment was applied. COMP‐IS, composite inflammatory score; ECOG, Eastern Cooperative Oncology Group; IMDC, International Metastatic Renal Cell Carcinoma Database Consortium; SD, standard deviation. p ‐int denotes the p ‐value for interaction.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688549/bin/KJM2-9999-e70307-g006.webp"
+        }
+      ],
+      "supplements": [],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "3.1",
+        "jcr": "SCI Q2",
+        "jcr_quartile": "Q2",
+        "jcr_q1": false,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T12:44:52Z"
+      },
+      "journal_display": "The Kaohsiung journal of medical sciences（IF 3.1；JCR SCI Q2）",
+      "updated_at": "2026-10-24T12:44:52Z",
+      "ai_status": "skipped_non_jcr_q1",
+      "publishable": false,
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ],
+      "status": "discarded"
     },
     {
       "id": "doi:10.1039/d6cs00998k",
@@ -317,14 +777,183 @@
       "doi": "10.1039/d6cs00998k",
       "pmcid": "PMC13688316",
       "pmid": "42910484",
-      "abstract": "",
       "citation_count": 0,
       "fulltext_urls": [],
       "source": "NCBI PMC",
       "relevance_score": 12,
       "relevance_evidence": [
         "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
-      ]
+      ],
+      "figures": [
+        {
+          "label": "Fig. 1",
+          "caption": "Heterogeneous catalysts are often viewed as idealised particles with well-defined, uniform structure (a), but the reality is far from this, as demonstrated here by an aberration corrected scanning transmission electron microscopy (AC-STEM) image of a typical heterogeneous catalyst (Ru on carbon; b). The overall catalyst performance is a function of the sum of single-particle events (SPE) normalised by the frequency of their occurrence ( n i , c). (d) and (e) Comparative precision of atomic-scale relocation in IL-EM versus planetary-scale navigation via GPS.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f1.webp"
+        },
+        {
+          "label": "Fig. 2",
+          "caption": "(a) Schematic illustration of a conventional catalyst sample preparation workflow, where the catalyst is assembled as bulk materials synthesis followed by deposition on a TEM finder grid. (b) Workflow for catalyst assembly directly on a TEM finder grid, where deposition of support is followed by assembly of metal particles by metal delivery, for example via magnetron sputtering, yielding a more uniform sample. (c) Schematic representation of the IL-EM workflow to probe catalyst evolution under thermally or photocatalytically driven reaction conditions, with optional follow-up characterisation by Raman spectroscopy or XPS.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f2.webp"
+        },
+        {
+          "label": "Fig. 3",
+          "caption": "Schematic overview of different approaches for establishing electrical contact between a TEM finder grid and the working electrode: (a) connection via a conductive wire or (b) tweezers, and (c) attachment to a glassy carbon rod combined with a 3D-printed Teflon cap. (d) A floating electrode configuration including a TEM finder grid. (e) Illustration of the IL-EM strategy implemented in a fuel cell system, where GDL denotes the gas diffusion layer.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f3.webp"
+        },
+        {
+          "label": "Fig. 4",
+          "caption": "(a)–(c) IL-TEM inspection before (first column) and after (second column) treating the Cu nanocubes at −1.1 V vs. RHE in a CO 2 -saturated 0.1 M KHCO 3 electrolyte for 20 min. Reproduced from ref. 25 with permission from Springer Nature, copyright 2024. (d) IL-SEM approach proving the dissolution/redeposition as the main degradation pathway of Cu nanoparticles. Reproduced from ref. 28 with permission from John Wiley and Sons, copyright 2021. (e)–(g) IL-SEM images of the Cu foam under different experimental conditions. Reproduced from ref. 30 with permission from Elsevier, copyright 2020. (h)–(i) IL-TEM measurement of the Ag nanoparticle catalysts (h) before and (i) after the CO 2 RR. Reproduced from ref. 33 with permission from Springer Nature, copyright 2024. (j)–(o) IL-TEM images of Ag nanoparticles at various reaction times (j) before, (k) 10 min, (l) 30 min, (m) 1 h, (n) 3 h and (o) 6 h of the CO 2 RR at −0.8 V vs. RHE. Reproduced from ref. 34 with permission from Elsevier, copyright 2021.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f4.webp"
+        },
+        {
+          "label": "Fig. 5",
+          "caption": "(a) IL-SEM inspection of Ag-GDE cathode surfaces before and after gas-fed CO 2 RR experiments at −1.84 V for 30 min. Adapted from ref. 35 with a figure provided by Pavel Moreno García. (b) IL-SEM inspection of as-prepared GDEs and the same GDEs after electrolysis performed with the charge consumption of 1839 C cm −2 . Reproduced from ref. 36 with permission from John Wiley and Sons, copyright 2022. IL-TEM inspection of Au aerogel before (c) and after (d) CO 2 RR at −0.5 V vs. RHE in CO 2 -saturated 0.5 M KHCO 3 . Reproduced from ref. 37 with permission from the American Chemical Society, copyright 2022. (e) IL-SEM images of morphological changes associated with the thermal annealing of the Bi/Bi x O y foam and subsequent potentiostatic CO 2 electrolysis in the CO 2 -saturated 0.5 M KHCO 3 solution at −0.6 V vs. RHE. Adapted from ref. 38 with a figure provided by Abhijit Dutta.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f5.webp"
+        },
+        {
+          "label": "Fig. 6",
+          "caption": "IL-TEM inspection acquired on the Au 3 Cu aerogels before (a) and after (b) 5 cycles of cyclic voltammetry (CV)-treatment in CO 2 -saturated 0.5 M KHCO 3 . Adapted from ref. 39 with a figure provided by Juan Herranz and Piyush Chauhan. IL-SEM images of the In 55 Cu 45 @Cu alloy catalyst (c) before and (d) after the electrolysis (30 h at −1.0 V vs. RHE in the CO 2 -saturated. 0.5 M KHCO 3 electrolyte). Adapted from ref. 40 with a figure provided by Motiar Rahaman. IL-SEM images of the Ag 15 Cu 85 micro-foam before (e) and after (f) 72 h CO 2 RR at −1.0 V vs. RHE. Reproduced from ref. 41 with permission from Elsevier, copyright 2020. IL-SEM inspection of the Pd 9 Cu 91 alloy foam: (g) as-prepared alloy foam; (h) thermally annealed alloy foam (200 °C, 12 h, in air); (i) oxide-derived alloy foam (after electrochemical pretreatment at −0.65 V vs. RHE for 45 min). Reproduced from ref. 42 with permission from the Royal Society of Chemistry, copyright 2020.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f6.webp"
+        },
+        {
+          "label": "Fig. 7",
+          "caption": "IL-TEM images of Pt/C before (a) and after (b) AST, (c) frequencies of each categorised process. Reproduced from ref. 43 with permission from John Wiley and Sons, copyright 2023. IL-high-angle annular dark-field scanning transmission electron microscopy (HAADF-STEM) (d)–(g) and IL-SE-STEM (h)–(k) images of Pt/HGS at the beginning of life (BoL) and end of life (EoL), without ionomer (I/C = 0) and with ionomer (I/C = 0.7), where I/C denotes the ionomer-to-carbon mass ratio, after ageing at 80 °C in 0.1 M HClO 4 . Adapted from ref. 44 with a figure provided by Marc Ledendecker.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f7.webp"
+        },
+        {
+          "label": "Fig. 8",
+          "caption": "IL-4D-STEM images of Pt-TiO x N y /C before (a) and after (b) electrochemical perturbation. Reproduced from ref. 45 with permission from the American Chemical Society, copyright 2024. IL-HAADF-STEM images of Fe–N–C before (c) and after (d) AST. Adapted from ref. 46 with a figure provided by Laetitia Dubau. IL-HAADF images of (e) before, (f) after AST and IL-STEM-EDS of (g) before, (h) after AST for PtNi(Mo). Adapted from ref. 47 with a figure provided by Marc Heggen. IL-TEM of HG13 before (i) and after AST (j). Adapted from ref. 48 with a figure provided by Christopher Tremblay. IL-AC-STEM images of Pt–Co nanoparticle (k) before and (l) after electrochemical activation, and corresponding atomic columns with phase detection before (m) and after (n). Reproduced from ref. 49 with permission from Elsevier, copyright 2021.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f8.webp"
+        },
+        {
+          "label": "Fig. 9",
+          "caption": "(a)–(d) IL-high-resolution transmission electron microscopy (HRTEM) of PtCu/C N under different activation potentials. Reproduced from ref. 51 with permission from Elsevier, copyright 2024. IL-STEM images of O-PtCu/HMCS (e) before, (f) after ADT. Adapted from ref. 52 with a figure provided by Zhiping Deng and Mingxing Gong. IL-STEM-EDS of 2 ML Pt/TiWC before (g) and after (h) ASTs. Reproduced from ref. 54 with permission from Springer Nature, copyright 2020. (i) IL-TEM images of core–shell PtNi before and after ORR-AST, respectively. Adapted from ref. 55 with a figure provided by Marian Chatenet and David Zitoun.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f9.webp"
+        },
+        {
+          "label": "Fig. 10",
+          "caption": "IL-STEM–HAADF image of the TiO x N y –Ir sample before (a) the addition of Ir and after (b) electrochemical treatment. Reproduced from ref. 58 with permission from the American Chemical Society, copyright 2023. IL-HRTEM images of the Ir50 Au@CNE UME at different stages: after the (c) initial 3 CV cycles, (d) 3 min, and (e) 6 min at an applied potential of 1.715 V vs. RHE. Reproduced from ref. 61 with permission from the American Chemical Society, copyright 2025. (f) High-resolution annular bright field IL-STEM of Co 3 O 4 before and after the start-up/shutdown electrochemical protocols. Reproduced from ref. 64 with permission from the American Chemical Society, copyright 2025. Identical-location STEM image, EDS mapping and line profile of the Co 3 O 4 @CNE before (g)–(i) and after (j)–(l) the AST. Scale bar is 200 nm. Reproduced from ref. 65 from Springer Nature, copyright 2021.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f10.webp"
+        },
+        {
+          "label": "Fig. 11",
+          "caption": "Identical-location SEM and EDS of a 12.7 µm UME of the (a)–(c) pristine-deposited film and (d)–(f) after OER testing. Reproduced from ref. 67 with permission from the American Chemical Society, copyright 2025. (g) IL-TEM images of a ZIF-67 particle during the OER. Adapted from ref. 68 with a figure provided by Sheng Dai.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f11.webp"
+        },
+        {
+          "label": "Fig. 12",
+          "caption": "IL-TEM and IL-EDS of single La–Co–Mn–O column before (a)–(d) and after electrochemical measurements (e)–(h). Reproduced from ref. 70 with permission from John Wiley and Sons, copyright 2024. IL-TEM of (i) Fresh Sr 2 CaIrO 6 , (j) immersed in the electrolyte, (k) after 100 OER cycles and (l) after 5000 OER cycles. The scale bar is 500 nm. Reproduced from ref. 71 with permission from Springer Nature, copyright 2022.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f12.webp"
+        },
+        {
+          "label": "Fig. 13",
+          "caption": "(a)–(i) Morphological and compositional transformation of electrochemically activated IrNi/C under acidic, neutral, and alkaline conditions. Reproduced from ref. 75 with permission from the Royal Society of Chemistry, copyright 2020. (j)–(o) Identical-location EDS elemental mapping and (p)–(r) EDS line scans of the single CoNiFeCu (1 : 1 : 1 : 0.5) particle before CVs, after 5 CVs, and after 15 CVs. Reproduced from ref. 78 with permission from John Wiley and Sons, copyright 2022.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f13.webp"
+        },
+        {
+          "label": "Fig. 14",
+          "caption": "IL-SEM characterisation of the Rh/C: (a) before and (b) after the ADP. Reproduced from ref. 79 with permission from Elsevier, copyright 2021. IL-SEM inspection of the Pd/C: (c) before and (d) after AST. Scale bars correspond to 100 nm. Reproduced from ref. 80 with permission from the American Chemical Society, copyright 2021.IL-TEM characterisation of the ionic liquid@Pt/C before (e) and after (f) 2000 CV cycles between −0.1 V and 0.0 V vs. RHE with a scan speed of 50 mV s −1 in 0.5 M H 2 SO 4 at room temperature. Reproduced from ref. 82 with permission from Elsevier, copyright 2021. IL-TEM characterisation of Pt/TAP before (g) and after (h) ADT. Reproduced from ref. 83 with permission from the American Chemical Society, copyright 2022. IL-TEM images before (i) and after (j) HER of Pt/Ni(OH) 2 . Reproduced from ref. 84 with permission from John Wiley and Sons, copyright 2025. IL-STEM characterisation of Re 0.2 Mo 0.8 S 2 before (k) and after (l) 4000 CVs. Reproduced from ref. 85 with permission from the American Chemical Society, copyright 2023.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f14.webp"
+        },
+        {
+          "label": "Fig. 15",
+          "caption": "IL-HAADF images before (a) and (c) and after (b) and (d) 1000 cycles of an extended load AST (a and b, from 0.05 to 1.0 V vs. RHE) and a combined start–stop/load AST (c and d, from 0.6 to 1.5 V vs. RHE). Scale bars are 2 nm (a) and (b) and 5 nm (c) and (d). Adapted from ref. 87 with a figure provided by Serhiy Cherevko and Nejc Hodnik. IL-TEM imaging of the Au/C sample: (e) before and (f) after AST. Reproduced from ref. 88 with permission from the American Chemical Society, copyright 2021. IL-SEM images of the NPs before (g) and after (h) exposure to the ozone-saturated electrolyte. The scale bar is 2 µm. Reproduced from ref. 89 with permission from John Wiley and Sons, copyright 2024.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f15.webp"
+        },
+        {
+          "label": "Fig. 16",
+          "caption": "(a) EDS mapping of Cu 2 O + Co 3 O 4 on a carbon nanoelectrode before (top) and after 5 CV cycles (bottom). 90 Reproduced from ref. 90 with permission from John Wiley and Sons, copyright 2023. IL-SEM analysis of the Ni foam catalyst (20 s deposition time) before (b) and after electrolysis (c) (30 min at −0.3 V vs. RHE). Reproduced from ref. 91 with permission from Elsevier, copyright 2022. (d) IL-SEM characterisation of the Cu-foam (30 s)@mesh catalyst as a function of the electrolysis time. Reproduced from ref. 92 with permission from the American Chemical Society, copyright 2023. TEM images (e)–(g), elemental Co EDS map (h)–(j), and Co/Ru overlay EDS map (k)–(m) of CNE@Co–B/Ru 12 before (first column), after the 5th (second column), and after the 10th CV cycle (third column), measured in 0.1 mol L −1 NaOH containing 0.1 mol L −1 NaNO 3 at a scan rate of 50 mV s −1 . Reproduced from ref. 93 with permission from Springer Nature, copyright 2024.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f16.webp"
+        },
+        {
+          "label": "Fig. 17",
+          "caption": "IL-TEM (a)–(d) of the Pt + 5Au/C nanocomposite: pristine (a) and (c), and the same sample exposed to 50 CVs in the FAOR potentiodynamic test (b) and (d). 94 Reproduced from ref. 94 with permission from the American Chemical Society, copyright 2022.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f17.webp"
+        },
+        {
+          "label": "Fig. 18",
+          "caption": "(a) IL-SEM images of the cathodic catalytic layer highlighting different types of catalyst changes. Scale bar is 50 nm. Reproduced from ref. 98 with permission from the American Chemical Society, copyright 2022. (b) Overlay of 3D perspectives of Pt NPs on a carbon support before and after 6000 potential cycles. Before cycling, the particles and the carbon support are represented in yellow and red, respectively, whereas after 6000 cycles, the particles and the carbon support are represented in purple and blue, respectively. Adapted from ref. 99 with a figure provided by Paulo J. Ferreira. Aberration-corrected TEM images of the Pt NPs on CNTs (c) before potential cycling and (d) after 1000 potential cycles. Adapted from ref. 102 with a figure provided by Paulo J. Ferreira.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f18.webp"
+        },
+        {
+          "label": "Fig. 19",
+          "caption": "(a) IL-TEM images on the edge to focus on the surface (representative average region on the CL), at (left) BOL, (middle) after 4000, and (right) after 10 000 SUSD cycles. Reproduced from ref. 103 with permission from the American Chemical Society, copyright 2024. (b) IL-TEM images for the fresh fuel cell and after 5000, 10 000 and 15 000 normal operation AST potential cycles. 104 with permission from the Royal Society of Chemistry, copyright 2023. (c) IL-STEM images of the Umicore Pt–Co/C sample depicting dissolution and redeposition influenced by surface energy after the ADT at 60 °C and room temperature. Reproduced from ref. 106 with permission from the American Chemical Society, copyright 2025.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f19.webp"
+        },
+        {
+          "label": "Fig. 20",
+          "caption": "IL-STEM images of Rh@Pt/C NPs before (a) and (b) and after (c) and (d) 10 000 cycles. Reproduced from ref. 107 with permission from the Royal Society of Chemistry, copyright 2023. (d) Maps depicting alloy ordering within a Pt–Cu nanoparticle after synthesis (left) and after potential cycling activation (right). White arrows denote sites with observed local amorphisation after activation. (e) EELS elemental maps for two parts of a nanoparticle after activation. (f) A schematic depiction of the proposed mechanism for the local amorphisation on the Pt–Cu nanoparticle surface. Reproduced from ref. 109 with permission from the American Chemical Society, copyright 2025.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f20.webp"
+        },
+        {
+          "label": "Fig. 21",
+          "caption": "IL-EDS mapping images and corresponding parallel line scan curves of CNE_CoNiFeCu (1 : 1 : 1 : 0.5) nano-assemblies before (a) and after (b) 8 CV cycles SOR. Reproduced from ref. 110 with permission from John Wiley and Sons, copyright 2025. (c) IL-EDS investigations of CuSn 7 Pb 15 before and after electroreductions ( j = −10 mA cm −2 , Q = 2.5 F and ω = 400 rpm). Reproduced from ref. 111 with permission from John Wiley and Sons, copyright 2023.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f21.webp"
+        },
+        {
+          "label": "Fig. 22",
+          "caption": "Atomic-scale HAADF-STEM images of WO 3 particles before and after UV irradiation. Reproduced from ref. 116 with permission from MDPI, copyright 2024.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f22.webp"
+        },
+        {
+          "label": "Fig. 23",
+          "caption": "IL-TEM observations of FeO before (a) and after (b) the experiment (H 2 /Ar = 3/1, 10 bar, 365 °C). Reproduced from ref. 117 with permission from Elsevier, copyright 2022. IL-STEM images of Ru/GNF at different stages: as-prepared (c), after 450 °C in H 2 (d), and after 450 °C in NH 3 (e) (scale bar, 2 nm). A tabulated summary of changes in the population of single atoms, dimers, trimers and nanoclusters, and the nanoclusters' average diameter, d , for each stage (f). An example of IL-STEM images for the evolution of a specific single Ru nanocluster (marked with the arrow in c–e) through different reaction stages (g)–(i). Reproduced from ref. 6 with permission from the Royal Society of Chemistry, copyright 2025.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f23.webp"
+        },
+        {
+          "label": "Fig. 24",
+          "caption": "ILIAS before (a) and (b) and after (c) and (d) heating in O 2 . Reproduced from ref. 118 with permission from the American Chemical Society, copyright 2025. IL-TEM analysis of a single CuPd nanoparticle supported on the CeO 2 cube (e). Adapted from ref. 119 with a figure provided by Langli Luo.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f24.webp"
+        },
+        {
+          "label": "Fig. 25",
+          "caption": "IL-TEM observation of O 2 + H 2 -treated Au/Vulcan before (a) and after (b) being subjected to electrochemical stress in 0.1 M KOH. Reproduced from ref. 120 with permission from Royal Society of Chemistry, copyright 2022. IL-TEM analysis of Pt/sulfur-doped carbon-1100(H 2 -treated) before (c) and after oxidation treatment (d). Reproduced from ref. 121 with permission from Elsevier, copyright 2022. Inverse FFT of InP/ZnSe/ZnS QDs before (e) and after (f) laser-exposure. 122 Reproduced from ref. 122 with permission from Springer Nature, copyright 2024.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f25.webp"
+        },
+        {
+          "label": "Fig. 26",
+          "caption": "IL-HRTEM observation of Pd NPs supported on oxygen-functionalized carbon nanotubes before (a) and after (b) a Suzuki reaction with aryl iodide (iodobenzene) for 5 min. Adapted from ref. 124 with a figure provided by Wen Shi and Bingsen Zhang.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f26.webp"
+        },
+        {
+          "label": "Fig. 27",
+          "caption": "IL-HAADF-STEM observations of magnetite nanoparticles at different reaction times (a)–(e) (scale bar 500 nm). (f) STEM-EDS mapping of the region shown in (e). Reproduced from ref. 126 with permission from Springer Nature, copyright 2020. IL-HRTEM analysis of a forsterite nanoparticle before (g) and after (h) exposure to wet supercritical CO 2 for 10 h. Adapted from ref. 128 with a figure provided by Xiaoxu Li.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f27.webp"
+        },
+        {
+          "label": "Fig. 28",
+          "caption": "IL-HAADF-STEM and IL-HRTEM observations of the ZnO–ZnS interface before (a) and (b) and after (c) and (d) thermal annealing. Reproduced from ref. 129 with permission from Elsevier, copyright 2022.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-f28.webp"
+        },
+        {
+          "label": "Figure 29",
+          "caption": "From left to right: Andrei N. Khlobystov, Yifan Chen and Jesum Alves Fernandes",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688316/bin/d6cs00998k-p1.webp"
+        }
+      ],
+      "supplements": [],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "48.3",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T12:44:54Z"
+      },
+      "journal_display": "Chemical Society reviews（IF 48.3；JCR SCI Q1）",
+      "updated_at": "2026-10-24T12:44:54Z",
+      "ai_status": "llm_error:JSONDecodeError",
+      "publishable": false,
+      "gate_reasons": [
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ],
+      "status": "manual_review"
     },
     {
       "id": "doi:10.1111/tpj.71174",
@@ -341,6 +970,1904 @@
       "doi": "10.1111/tpj.71174",
       "pmcid": "PMC13688046",
       "pmid": "42908423",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1",
+          "caption": "Separate (S‐type) versus linked (L‐type) organization of 35S and 5S rDNA units. (a) Schematic representation of the separate arrangement (S‐type), in which tandem arrays of 5S rDNA (5S rRNA gene + non‐transcribed spacer, NTS) and 35S rDNA (18S–ITS1–5.8S–ITS2–26S + intergenic spacer, IGS) occur as independent repeats (monomers). (b) Representative RepeatExplorer graph‐based reconstruction for an S‐type species ( Tragopogon dubius ), showing the main rDNA clusters: a 35S rDNA path (with annotated 18S, ITS1, 5.8S, ITS2, 26S and IGS regions) and a separate 5S rDNA cluster constituted by the 5S gene and NTS. (c) Dual‐color FISH examples consistent with the S‐type arrangement (left: Tragopogon mirus ; right: Helianthus annuus ), showing 35S and 5S rDNA signals at distinct chromosomal/nuclear sites (reprinted from Garcia et al., 2010 , with permission). (d) Schematic representation of the linked arrangement (L‐type), where 35S and 5S rDNA are physically linked within the same tandemly repeated unit (35S–IGS1–5S–IGS2), defining a single composite monomer. (e) Representative RepeatExplorer graph‐based reconstruction for an L‐type species ( Artemisia annua ), showing a single linked cluster that contains both 35S and 5S regions within the same repeat, separated by two IGS segments (IGS1 and IGS2). (f) Dual‐color FISH examples consistent with the L‐type arrangement (left: Artemisia tridentata ; right: Tagetes patula ), showing predominantly co‐localized or closely overlapping 35S and 5S signals (overlap visible as yellow‐orange). In (c, f), chromosomes/nuclei are counterstained with DAPI (blue); 35S and 5S rDNA signals are shown in green and red, respectively (overlap = orange). Scale bars as indicated. Reproduced from Garcia et al. ( 2009 ) Chromosoma 118:85–97 and from Garcia et al. ( 2010 ) BMC Plant Biology 10:176, licensed under CC BY 2.0.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688046/bin/TPJ-128-0-g001.webp"
+        },
+        {
+          "label": "Figure 2",
+          "caption": "Average number of high frequency and low frequency polymorphisms per species across 5S and 35S rDNA regions. Bars represent the mean values across species for each rDNA region. Dark green indicates high‐frequency polymorphisms, present in >10% of rDNA copies, whereas light green indicates low‐frequency polymorphisms, present in <10% of copies.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688046/bin/TPJ-128-0-g004.webp"
+        },
+        {
+          "label": "Figure 3",
+          "caption": "Boxplots of intragenomic polymorphisms in 35S (upper panel) and 5S (lower panel) rDNA regions among species showing separated arrangement (S‐type; purple) and species showing the linked arrangement (L‐type; orange). Polymorphism density is expressed as the number of polymorphisms per 100 bp. Boxplots show the median (horizontal line), interquartile range (box) and mean (cross); points indicate outliers.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688046/bin/TPJ-128-0-g003.webp"
+        },
+        {
+          "label": "Figure 4",
+          "caption": "Ancestral character state reconstruction of 35S and 5S rDNA organization (L‐type or S‐type) on the 50% majority consensus tree from the Bayesian inference analysis. Node labels display the results of character reconstruction of rDNA organization (S‐type or L‐type) and the probabilities calculated across 100 replicates. Heatmap shows square root transformed values of intragenomic polymorphisms in 35S, ITS, 5S, IGS1, and NTS regions.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688046/bin/TPJ-128-0-g002.webp"
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary file 1",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688046/bin/TPJ-128-0-s004.pdf",
+          "description": "Figure S1. Bayesian phylogenetic tree of Asteraceae based on plastome sequences. Figure S2 . Maximum‐likelihood phylogenetic tree of Asteraceae based on plastome sequences. Figure S3 . Bayesian phylogenetic tree of Asteraceae based on 35S rDNA sequences. Figure S4 . Maximum‐likelihood phylogenetic tree of Asteraceae based on 35S rDNA sequences. Figure S5 . Southern blot hybridisation of BamHI‐digested genomic DNA from selected Asteraceae species showing contrasting rDNA arrangements. Figure S6 . Scatterplots showing the relationship among intragenomic polymorphism values, copy number and genome proportion in 5S, 35S and ITS rDNA regions. Figure S7 . Boxplots of intragenomic polymorphism values in 35S and 5S rDNA regions among species showing different rDNA arrangements. Table S4 . Collection details and herbarium information of the species sequenced on this study. Table S5 . Genome size estimations of Asteraceae species sequenced."
+        },
+        {
+          "label": "Supplementary file 2",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688046/bin/TPJ-128-0-s003.xlsx",
+          "description": "Table S1. Details on the species selected for this study, basic genomic data and summary of rDNA variability."
+        },
+        {
+          "label": "Supplementary file 3",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688046/bin/TPJ-128-0-s005.xlsx",
+          "description": "Table S2. Length of the genic and intergenic rDNA regions reconstructed for each Asteraceae species."
+        },
+        {
+          "label": "Supplementary file 4",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688046/bin/TPJ-128-0-s002.xlsx",
+          "description": "Table S3. Raw variability values calculated for each rDNA region and for each Asteraceae species included in the study."
+        },
+        {
+          "label": "Supplementary file 5",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688046/bin/TPJ-128-0-s001.txt",
+          "description": "Data S1. Concatenated alignment of Asteraceae plastome sequences employed in phylogenetic analyses."
+        }
+      ],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "",
+        "jcr": "",
+        "jcr_quartile": "",
+        "jcr_q1": false,
+        "status": "not_found",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T12:45:47Z"
+      },
+      "journal_display": "The Plant journal : for cell and molecular biology（指标待查）",
+      "updated_at": "2026-10-24T12:45:47Z",
+      "ai_status": "skipped_non_jcr_q1",
+      "publishable": false,
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ],
+      "status": "discarded"
+    },
+    {
+      "id": "doi:10.1113/ep094458",
+      "title": "150th anniversary of The Physiological Society. Building on the breakthroughs of Dr Florence Buchanan: Advancing the frontiers of muscle physiology.",
+      "authors": [
+        "Bailey DM",
+        "Deane CS",
+        "Škarabot J",
+        "Højfeldt G",
+        "Ferretti G"
+      ],
+      "journal": "Experimental physiology",
+      "year": "2026",
+      "doi": "10.1113/EP094458",
+      "pmcid": "PMC13687995",
+      "pmid": "42908364",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ],
+      "figures": [
+        {
+          "label": "FIGURE 1",
+          "caption": "Dr Florence Buchanan, restored to view. Authenticated portrait from the Buchanan family memoir held by the National Library of Scotland, reproduced with permission and described by Clark et al. ( 2026 ).",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13687995/bin/EPH-9999-0-g002.webp"
+        },
+        {
+          "label": "FIGURE 2",
+          "caption": "Speakers at the special event marking the 150th anniversary of The Physiological Society, ‘Building on the breakthroughs of Dr Florence Buchanan: advancing the frontiers of muscle physiology’, held during the Federation of European Physiological Societies and Italian Society of Physiology (FEPS–SIF) Brescia 2026 European Congress of Physiology. (a) Left to right: Dr Grith S. Højfeldt, Dr Colleen S. Deane, Professor Damian M. Bailey and Dr Jakob Škarabot. (b) The opening ceremony at the Chiesa di San Giuseppe, featuring the celebrated pianist Maestro Giorgio Costa, who performed selected works by Frédéric Chopin. Photographs reproduced courtesy of D.M.B. and The Physiological Society.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13687995/bin/EPH-9999-0-g001.webp"
+        }
+      ],
+      "supplements": [],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "3.0",
+        "jcr": "SCI Q2",
+        "jcr_quartile": "Q2",
+        "jcr_q1": false,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T12:45:49Z"
+      },
+      "journal_display": "Experimental physiology（IF 3.0；JCR SCI Q2）",
+      "updated_at": "2026-10-24T12:45:49Z",
+      "ai_status": "skipped_non_jcr_q1",
+      "publishable": false,
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "正文 Methods 未提取",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ],
+      "status": "discarded"
+    },
+    {
+      "id": "doi:10.1002/brb3.71806",
+      "title": "Hearing Loss and Parkinson's Disease: Insights From Human and Animal Studies.",
+      "authors": [
+        "Yu X",
+        "Shen W",
+        "Li J",
+        "Ma Y",
+        "Cai J",
+        "Wang J",
+        "Wang H",
+        "Yin S"
+      ],
+      "journal": "Brain and behavior",
+      "year": "2026",
+      "doi": "10.1002/brb3.71806",
+      "pmcid": "PMC13687657",
+      "pmid": "42908173",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ],
+      "figures": [
+        {
+          "label": "FIGURE 1",
+          "caption": "Participant inclusion and exclusion.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13687657/bin/BRB3-16-e71806-g006.webp"
+        },
+        {
+          "label": "FIGURE 2",
+          "caption": "Auditory deprivation is associated with greater MPTP‐related motor impairment. (A) experimental timeline. Mice were acclimated and underwent baseline behavioral assessment before ossicular chain interruption. MPTP (25 mg/kg, i.p.) or saline was administered once daily for 7 consecutive days per treatment block. Each block was followed by a 48‐h drug‐free interval and behavioral assessment, and the treatment–assessment cycle was repeated three times in the present experiment (21 MPTP injections in total). (B) Auditory brainstem response (ABR) thresholds after ossicular chain interruption. (C) Representative open‐field trajectories. (D) Open‐field total distance across baseline and post‐treatment assessments. (E) Rotarod latency across baseline and post‐treatment assessments. Data are presented as mean ± SD, with individual data points shown ( n = 7 mice/group). Statistical analysis was performed using two‐way ANOVA with hearing status and MPTP treatment as factors, followed by Šidák's multiple‐comparisons test. Adjusted post hoc comparisons between the MPTP and auditory‐deprivation + MPTP groups are indicated in the figure. ** p < 0.001.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13687657/bin/BRB3-16-e71806-g002.webp"
+        },
+        {
+          "label": "FIGURE 3",
+          "caption": "Auditory deprivation is associated with a greater reduction in TH‐positive cell counts after MPTP exposure. (A) Representative immunofluorescence images of tyrosine hydroxylase (TH, green) and DAPI (blue) in the substantia nigra from the four experimental groups. (B) Quantification of TH‐positive neurons. Data are presented as mean ± SD ( n = 4 mice/group). Statistical analysis was performed using two‐way ANOVA with hearing status and MPTP treatment as factors, followed by Šidák's multiple‐comparisons test. Adjusted post hoc comparisons are indicated in the figure. ** p < 0.001; ns, not significant.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13687657/bin/BRB3-16-e71806-g001.webp"
+        },
+        {
+          "label": "FIGURE 4",
+          "caption": "Cross‐species transcriptomic identification of Adcyap1 as a candidate molecular link between auditory deprivation and PD‐related alterations. (A) Volcano plot showing differentially expressed genes (DEGs) in the striatum of auditory‐deprived mice compared with control mice in the absence of MPTP exposure. (B) Volcano plot showing DEGs in the striatum of auditory‐deprived mice compared with MPTP‐only mice under MPTP exposure. (C) Venn diagram showing the overlap of downregulated genes between the two mouse comparisons shown in panels A and B. (D) Venn diagram showing the overlap of upregulated genes between the two mouse comparisons shown in panels A and B. (E) Volcano plot of differential gene expression in the human caudate nucleus from the GSE205450 dataset comparing PD and control donors. (F) Volcano plot of differential gene expression in the human putamen nucleus from the GSE205450 dataset comparing PD and control donors. (G) Venn diagram showing the overlap between candidate auditory‐deprivation‐associated mouse genes and DEGs identified in the human caudate nucleus. (H) Venn diagram showing the overlap between candidate auditory‐deprivation‐associated mouse genes and DEGs identified in the human putamen nucleus. Adcyap1 was the only overlapping gene in the putamen analysis and was therefore prioritized for subsequent investigation. In the mouse RNA‐seq analyses, DEGs were defined as genes with |log2 fold change| > 1 and p < 0.05 using DESeq2. In the human GSE205450 analysis, differential expression was evaluated using limma with voomWithQualityWeights and Benjamini–Hochberg correction. Upregulated genes are shown in green, downregulated genes in blue, and non‐significant genes in gray.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13687657/bin/BRB3-16-e71806-g003.webp"
+        },
+        {
+          "label": "FIGURE 5",
+          "caption": "Functional network and pathway enrichment analysis of Adcyap1 implicates neuropeptide and cAMP signaling pathways. (A) Protein–protein interaction network of Adcyap1 and its predicted interacting genes generated using GeneMANIA. (B) Combined GO enrichment analyses (BP, CC, and MF) and KEGG pathway enrichment analysis of ADCYAP1‐associated genes. Dot size represents gene count and color represents adjusted p value.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13687657/bin/BRB3-16-e71806-g004.webp"
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary file 1",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13687657/bin/BRB3-16-e71806-s001.docx",
+          "description": "Supplementary Material : brb371806‐sup‐0001‐SuppMat.docx"
+        }
+      ],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "2.8",
+        "jcr": "SCI Q2",
+        "jcr_quartile": "Q2",
+        "jcr_q1": false,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T12:45:50Z"
+      },
+      "journal_display": "Brain and behavior（IF 2.8；JCR SCI Q2）",
+      "updated_at": "2026-10-24T12:45:50Z",
+      "ai_status": "skipped_non_jcr_q1",
+      "publishable": false,
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ],
+      "status": "discarded"
+    },
+    {
+      "id": "doi:10.1111/jcmm.71412",
+      "title": "Iron Homeostasis and Liver Diseases.",
+      "authors": [
+        "Yang P",
+        "Shi Z",
+        "Huang Q",
+        "Tu Z",
+        "Sun Y",
+        "Wang L",
+        "Wei Y"
+      ],
+      "journal": "Journal of cellular and molecular medicine",
+      "year": "2026",
+      "doi": "10.1111/jcmm.71412",
+      "pmcid": "PMC13687594",
+      "pmid": "42908131",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ],
+      "figures": [
+        {
+          "label": "FIGURE 1",
+          "caption": "Mobilization and utilization of cellular iron. (A) Iron release via NCOA4‐mediated ferritinophagy during iron deficiency. (B) Mitochondrial iron import for hepatocyte heme and Fe–S cluster biosynthesis. (C) Maturation and delivery of Fe–S clusters via the CIA system. ABCB7, ATP Binding Cassette Subfamily B Member 7; CIA machinery, cytosolic iron–sulphur cluster assembly machinery; CV, central vein; MtFt, mitochondrial ferritin; NCOA4, nuclear receptor coactivator 4; NFS1, NFS1 cysteine desulfurase; OXPHOS, oxidative phosphorylation; PV, portal vein.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13687594/bin/JCMM-30-e71412-g005.webp"
+        },
+        {
+          "label": "FIGURE 2",
+          "caption": "Role of iron in the mitochondrial electron transport chain. CoQ, coenzyme Q; Cu A , copper A centre; Cu B , copper B centre; Cyt C, cytochrome c ; FAD, flavin adenine dinucleotide; FADH 2 , Flavin Adenine Dinucleotide (Reduced form); Fe‐S, iron–sulphur cluster; FMN, Flavin MonoNucleotide; NAD + , nicotinamide adenine dinucleotide (oxidized form); NADH, nicotinamide adenine dinucleotide (reduced form).",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13687594/bin/JCMM-30-e71412-g001.webp"
+        },
+        {
+          "label": "FIGURE 3",
+          "caption": "Intestinal absorption and intracellular trafficking of dietary iron. DCYTB, duodenal cytochrome B; HEPH, hephaestin; HMOX1, heme oxygenase 1; LIP, labile iron pool; PCBP1, poly(rC)‐binding protein 1; PCBP2, poly(rC)‐binding protein 2; SLC11A2, divalent metal transporter 1; SLC25A28, Solute Carrier Family 25 Member 28; SLC25A37, Solute Carrier Family 25 Member 37; SLC46A1, Solute Carrier Family 46 Member 1.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13687594/bin/JCMM-30-e71412-g003.webp"
+        },
+        {
+          "label": "FIGURE 4",
+          "caption": "Hepatic iron uptake pathways. FLVCR2, Feline Leukaemia Virus Subgroup C Receptor‐Related Protein 2; SCARA5, Scavenger Receptor Class A Member 5; SLC39A14, Zrt‐ and Irt‐like Protein 14; STEAP3, six‐transmembrane epithelial antigen of prostate 3; TFRC, transferrin receptor; TIM2, T‐cell immunoglobulin and mucin domain 2.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13687594/bin/JCMM-30-e71412-g004.webp"
+        },
+        {
+          "label": "FIGURE 5",
+          "caption": "Iron export mechanisms in hepatocytes. ABCG2, ATP‐Binding Cassette Subfamily G Member 2; ALA, 5‐aminolevulinic acid; Albumin, serum albumin; COPRO‐III, coproporphyrinogen III; CP, ceruloplasmin; ECL3, extracellular loop 3; Fe 2+ , ferrous iron; Fe 3+ , ferric iron; FECH, ferrochelatase; FLVCR1a, Feline Leukaemia Virus Subgroup C Receptor 1a; FLVCR1b, Feline Leukaemia Virus Subgroup C Receptor 1b; HMB, hydroxymethylbilane; Holo‐Transferrin, transferrin bound with Fe 3+ ; Hpx, hemopexin; LIP, labile iron pool; MRP5, multidrug resistance‐associated protein 5; MVB, multivesicular body; PBG, porphobilinogen; PCBP, poly(rC)‐binding protein; PPIX, protoporphyrin IX; PROM2, prominin‐2; PROTOgen‐IX, protoporphyrinogen IX; RAB27, RAS‐related protein Rab‐27; SLC40A1, Solute Carrier Family 40 Member 1; Succinyl‐CoA, succinyl coenzyme A; URO‐III, uroporphyrinogen III.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13687594/bin/JCMM-30-e71412-g006.webp"
+        },
+        {
+          "label": "FIGURE 6",
+          "caption": "Regulation of iron homeostasis. 3′UTR, 3′ untranslated region; 5′UTR, 5′ untranslated region; BMP2, bone morphogenetic protein 2; BMP6, bone morphogenetic protein 6; BMPR, bone morphogenetic protein receptor; EPO, erythropoietin; FTH1, ferritin heavy chain 1; IL6, interleukin 6; IL6R, interleukin 6 receptor; IRE, iron responsive element; IRP1, iron regulatory protein 1; IRP2, iron regulatory protein 2; JAK1/2, Janus kinase 1/2; LSEC, liver sinusoidal endothelial cell; ORF, open reading frame; SMAD1/5/8, SMAD family member 1/5/8; SMAD4, SMAD family member 4; SMAD7, SMAD family member 7; STAT3, signal transducer and activator of transcription 3; TMPRSS6, transmembrane serine protease 6.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13687594/bin/JCMM-30-e71412-g002.webp"
+        }
+      ],
+      "supplements": [],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "4.7",
+        "jcr": "SCI Q2",
+        "jcr_quartile": "Q2",
+        "jcr_q1": false,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T12:45:53Z"
+      },
+      "journal_display": "Journal of cellular and molecular medicine（IF 4.7；JCR SCI Q2）",
+      "updated_at": "2026-10-24T12:45:53Z",
+      "ai_status": "skipped_non_jcr_q1",
+      "publishable": false,
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "正文 Methods 未提取",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ],
+      "status": "discarded"
+    },
+    {
+      "id": "doi:10.1186/s13062-026-00902-4",
+      "title": "Multiomics, multi-species profiling, and animal validation identify mitoxyperilysis as a conserved therapeutic target in metabolic dysfunction-associated steatohepatitis.",
+      "authors": [
+        "Liu H",
+        "Qi C",
+        "Lu R",
+        "An C",
+        "Wang Y",
+        "Li S",
+        "Zhu R",
+        "Feng X",
+        "Gao H"
+      ],
+      "journal": "Biology direct",
+      "year": "2026",
+      "doi": "10.1186/s13062-026-00902-4",
+      "pmcid": "PMC13688918",
+      "pmid": "42908035",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "multiomics: multiomics",
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1",
+          "caption": "",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688918/bin/13062_2026_902_Figa_HTML.webp"
+        },
+        {
+          "label": "Fig. 1",
+          "caption": "Single-cell transcriptional atlas of mouse liver in response to varied diets. 12 scRNA-seq samples from GEO database (CD: n = 6; HFHSD: n = 6). ( A ) Pre-QC (top) and post-QC (bottom) distributions. ( B ) UMAP visualization of scRNA-seq data, with each cluster colored by annotated cell type. ( C ) Dot plot of canonical marker gene expression across cell types. ( D ) Stacked bar plot comparing the proportions of major cell subsets. ( E ) UMAP visualization of scRNA-seq data, with cells colored by sample origin. ( F ) UMAP visualization of the relative differentiation order of cells (inferred using CytoTRACE2). ( G ) Box plots of developmental potential scores for each cell type (inferred using CytoTRACE2). ( H ) Lineage trajectories (inferred using Slingshot) overlaid on UMAP. Abbreviations: scRNA-seq, single-cell RNA sequencing; GEO, gene expression Omnibus; CD, control diet; HFHSD, high-fat high-sucrose diet; QC, quality control; UMAP, Uniform Manifold Approximation and Projection",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688918/bin/13062_2026_902_Fig1_HTML.webp"
+        },
+        {
+          "label": "Fig. 2",
+          "caption": "Cell-cell communication landscape in CD and HFHSD mouse liver. ( A ) Total inferred cell-cell interactions (left) and overall interaction strength (right). ( B ) Cell-cell interaction counts. Left: circle plots showing interaction counts between cell types in each group. Right: heatmap of differential interaction counts (HFHSD vs. CD; blue: decreased, red: increased). ( C ) Cell-cell interaction strength. Left: circle plots showing interaction strength between cell types in each group. Right: heatmap of differential interaction strength (HFHSD vs. CD; blue: decreased, red: increased). ( D ) Representative signaling pathway activities. Bar plots show relative interaction strength of major pathways in CD (blue) and HFHSD (pink) groups. ( E ) Overall signaling patterns in CD and HFHSD groups. ( F ) GALECTIN pathway signaling networks in CD and HFHSD groups. ( G ) Hepatocyte 2-derived ligand-receptor interactions with target cells. ( H ) Mo-Macrophage-derived ligand-receptor interactions with target cells. Abbreviations: CD, control diet; HFHSD, high-fat high-sucrose diet; Mo-Macrophage, monocyte-derived macrophage",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688918/bin/13062_2026_902_Fig2_HTML.webp"
+        },
+        {
+          "label": "Fig. 3",
+          "caption": "Landscape of mitoxyperilysis activity in mouse liver single-cell transcriptomes. ( A ) AUC score distribution for the mitoxyperilysis signature. ( B ) UMAP plot colored by continuous mitoxyperilysis AUC scores (blue = low activity, red = high activity). ( C ) UMAP plot colored by binary high/low mitoxyperilysis activity groups. ( D ) Violin plots displaying the overall mitoxyperilysis module score across major liver cell types. ( E ) Violin plots comparing module scores of mitoxyperilysis functional sub-signatures (Driver, activator, regulator, output mediator, rupture effector). ( F ) t-SNE plot of re-clustered Mo-Macrophages (5 subclusters, 0–4). ( G ) GO enrichment dot plot for Mo-Macrophage subclusters. ( H ) Mitoxyperilysis module scores across Mo-Macrophage subclusters. Abbreviations: AUC, Area Under the Curve; UMAP, Uniform Manifold Approximation and Projection; t-SNE, t-distributed stochastic neighbor embedding; GO, Gene Ontology",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688918/bin/13062_2026_902_Fig3_HTML.webp"
+        },
+        {
+          "label": "Fig. 4",
+          "caption": "Dietary modulation of liver mCCC network and immune metabolic crosstalk. ( A ) metabolic network plot showing mCCC events illustrating the interactions between distinct cell-type pairs under HFHSD and CD conditions. ( B ) Bar plot showing the number of mCCC events between different cell-type pairs under HFHSD and CD conditions. ( C ) mCCC pathways under HFHSD and CD conditions. ( D ) Violin plots of mean aggregated enzyme expression under CD and HFHSD conditions. ( E ) Violin plots of mean sensor expression under CD and HFHSD conditions. Abbreviations: mCCC, metabolite-mediated cell-cell communication; HFHSD, high-fat high-sucrose diet; CD, control diet",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688918/bin/13062_2026_902_Fig4_HTML.webp"
+        },
+        {
+          "label": "Fig. 5",
+          "caption": "Transcriptomic changes in glucose/lipid metabolism and mitoxyperilysis. ( A ) Volcano plot of glucose/lipid metabolism-related DEGs. ( B ) Volcano plot of mitoxyperilysis-related DEGs. ( C ) KEGG pathway enrichment bar plot. ( D ) GO (biological process) enrichment bar plot. ( E ) GO (cellular component) enrichment bar plot. ( F ) GO (molecular function) enrichment bar plot. ( G ) GSEA of KEGG pathways. ( H ) GSEA of GO terms. Abbreviations: DEGs, differentially expressed genes; KEGG, Kyoto Encyclopedia of Genes and Genomes; GO, Gene Ontology; GSEA, Gene Set Enrichment analysis",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688918/bin/13062_2026_902_Fig5_HTML.webp"
+        },
+        {
+          "label": "Fig. 6",
+          "caption": "Spatial transcriptomics reveals the cellular remodeling and mitoxyperilysis activation in mouse and human MASH livers. ( A ) Study design schematic. ( B ) Pre-QC (top) and post-QC (bottom) distributions. ( C ) Dot plot of canonical marker gene expression across cell types. ( D ) t-SNE visualization (left) and cell type proportion bar plot (right) of annotated liver cells. ( E ) Cell count comparison between CD and MASH groups. ( F ) Volcano plot of glucose/lipid metabolism-related DEGs. ( G ) Volcano plot of mitoxyperilysis-related DEGs. ( H ) Heatmap of mitoxyperilysis gene expression in mouse samples. ( I ) GO enrichment bar plot. ( J ) KEGG pathway enrichment bar plot. ( K ) Expression of mitoxyperilysis genes in human control and MASH livers. Abbreviations: QC, quality control; t-SNE, t-distributed stochastic neighbor embedding; DEGs, differentially expressed genes; GO, Gene Ontology; KEGG, Kyoto Encyclopedia of Genes and Genomes; CD, control diet; MASH, metabolic dysfunction-associated steatohepatitis",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688918/bin/13062_2026_902_Fig6_HTML.webp"
+        },
+        {
+          "label": "Fig. 7",
+          "caption": "Cross-species profiling of mitoxyperilysis-related gene expression in MASH models. ( A–D ) Volcano plots (left) and boxplots (right) comparing mitoxyperilysis-associated gene expression between control and model groups across five species: ( A ) Mus musculus ( GSE120977 ). ( B ) Mus musculus ( GSE200409 ). ( C ) Rattus norvegicus ( GSE134715 ). ( D ) Mesocricetus auratus ( GSE227411 ). ( E ) Papio hamadryas ( GSE139981 ). ( F ) Homo sapiens ( GSE89063 ). Volcano plots display log₂(fold change) vs. -log₁₀( p value), with colored points indicating significantly upregulated, downregulated, and non-significant genes. Boxplots show relative expression of key genes (including Actr2/3, Akt1, Bak1, Bax, Bid, Il18/1b, Mtor, Myd88, Ninj1, Rhoa, Rictor, Ticam1, Tlr2/4/7/8, Tnf, and Tnfrsf1a/1b) in control and model groups. Significance: * p < 0.05, ** p < 0.01, *** p < 0.001, **** p < 0.0001 (Student’s t-test)",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688918/bin/13062_2026_902_Fig7_HTML.webp"
+        },
+        {
+          "label": "Fig. 8",
+          "caption": "Performance evaluation of 11 ML models for diet-related liver transcriptome classification. ( A ) Macro-averaged ROC curves for diet-related liver transcriptome classification (11 models). ( B ) Performance and cross-validation comparison of 11 machine learning models. ( C ) Confusion matrices for each machine learning algorithm. Abbreviations: ML, machine learning; ROC, receiver operating characteristic",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688918/bin/13062_2026_902_Fig8_HTML.webp"
+        },
+        {
+          "label": "Fig. 9",
+          "caption": "Machine learning identifies Bax as a key mitoxyperilysis regulator in MASH. ( A ) Performance scores of 11 machine learning models. ( B ) Venn diagram showing overlap between ML-derived and mitoxyperilysis-related genes, identifying Bax. ( C ) Top 20 differentially expressed genes post-Bax KO (log₂FC). ( D ) Perturbation magnitude plots for genes following Bax KO. ( E ) GO enrichment analyses of dysregulated genes post-Bax KO. ( F ) KEGG enrichment analyses of dysregulated genes post-Bax KO. Abbreviations: CD, control diet; HFHSD, high-fat diet; MA, M-versus-A plot (also Mean-Average plot); GO, Gene Ontology; KEGG, Kyoto Encyclopedia of Genes and Genomes",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688918/bin/13062_2026_902_Fig9_HTML.webp"
+        },
+        {
+          "label": "Fig. 10",
+          "caption": "Characterization of a CDAHFD-induced MASH mouse model and validation of mitoxyperilysis activation. ( A ) Experimental design ( n = 5/group, 6-week CD vs. CDAHFD feeding). ( B ) Body weight changes over 6 weeks. ( C ) Liver weight comparison between the two groups at the endpoint. ( D ) Representative HE staining of liver tissues (scale bars: 100 μm and 50 μm). The CDAHFD group exhibits extensive hepatic steatosis (blue arrows: lipid droplets) and inflammatory infiltration (red arrow). ( E ) Serum levels of liver injury markers (ALT, AST, ALP). ( F ) Serum lipid profiles (TC, TG, LDL). ( G ) RT-qPCR analysis of mitoxyperilysis-related gene expression in liver tissues, normalized to Gapdh. ( H ) Western blot analysis of pro-apoptotic markers Bak1, Bid, and Bax in liver tissues. ( I ) RhoA ubiquitination and activation analysis. RhoA polyubiquitination (RhoA-Ub(n)) was detected by RhoA immunoprecipitation followed by anti-ubiquitin immunoblotting. Abbreviations: CD, control diet; CDAHFD, choline-deficient, L-amino acid-defined high-fat diet; MASH, metabolic dysfunction-associated steatohepatitis; B6J, C57BL/6J; HE, hematoxylin and eosin; ALT, alanine transaminase; AST, aspartate transaminase; ALP, alkaline phosphatase; TC, total cholesterol; TG, triglyceride; LDL, low-density lipoprotein; RT-qPCR, real-time quantitative polymerase chain reaction. * p < 0.05, ** p < 0.01, *** p < 0.001, **** p < 0.0001; ns, not significant",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688918/bin/13062_2026_902_Fig10_HTML.webp"
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary file 1",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688918/bin/13062_2026_902_MOESM1_ESM.docx",
+          "description": "Supplementary Material 1"
+        },
+        {
+          "label": "Supplementary file 2",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688918/bin/13062_2026_902_MOESM2_ESM.pdf",
+          "description": "Supplementary Material 2"
+        },
+        {
+          "label": "Supplementary file 3",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688918/bin/13062_2026_902_MOESM3_ESM.tif",
+          "description": "Supplementary Material 3. Fig. S1. ( A ) Pre-QC (top) and post-QC (bottom) distributions. ( B ) t-SNE visualization of scRNA-seq data, with each cluster colored by annotated cell type. ( C ) UMAP visualization of the potency score (left) and potency category (right). Abbreviations: QC, quality control; t-SNE, t-distributed stochastic neighbor embedding; scRNA-seq, single-cell RNA sequencing; UMAP, Uniform Manifold Approximation and Projection"
+        },
+        {
+          "label": "Supplementary file 4",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688918/bin/13062_2026_902_MOESM4_ESM.tif",
+          "description": "Supplementary Material 4. Fig. S2. ( A ) Bar plot showing the total number of mCCC events across all metabolite-mediated sender–receiver pairs. ( B ) Dot plot showing the number and overall score of communications between cells in HFHSD and CD groups. ( C ) Bar plot illustrating the number of mCCC events for each metabolite as a sender, broken down by distinct cell-type pairs under HFHSD and CD conditions. ( D ) Bar plot showing the number of mCCC events for each sensor as a receiver, stratified by different cell-type pairs in HFHSD and CD groups. Abbreviations: mCCC, metabolite-mediated cell-cell communication; HFHSD, high-fat high-sucrose diet; CD, control diet"
+        }
+      ],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "5.5",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T12:45:55Z"
+      },
+      "journal_display": "Biology direct（IF 5.5；JCR SCI Q1）",
+      "updated_at": "2026-10-24T12:45:55Z",
+      "ai_status": "success",
+      "publishable": false,
+      "gate_reasons": [
+        "存在缺失图注",
+        "AI 图组解读数量少于正文原图数量"
+      ],
+      "status": "manual_review"
+    },
+    {
+      "id": "doi:10.1186/s13287-026-05192-1",
+      "title": "Hydrogels modified with IL4 or SDF1 mimicking peptides serve as a supportive environment for human iPSC-derived myoblasts.",
+      "authors": [
+        "Michalska Z",
+        "Ostaszewska A",
+        "Dzierżyńska M",
+        "Grabowska I",
+        "Zimowska M",
+        "Fularczyk M",
+        "Skorupiński P",
+        "Płoska W",
+        "Romańska A",
+        "Pluta A",
+        "Bartoszewicz Z",
+        "Jańczyk-Ilach K",
+        "Rodziewicz-Motowidło S",
+        "Ciemerych MA",
+        "Brzoska E",
+        "Archacka K"
+      ],
+      "journal": "Stem cell research & therapy",
+      "year": "2026",
+      "doi": "10.1186/s13287-026-05192-1",
+      "pmcid": "PMC13689189",
+      "pmid": "42908013",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ],
+      "figures": [
+        {
+          "label": "Fig. 1",
+          "caption": "Expression and activity of selected MMPs in hiPSC-derived myoblasts cultured on different hydrogels. A . Expression of MMP2 , MMP3 , MMP7 , MMP9 , MMP13 , MMP14 in MB-DMD and MB-LMNβ1 cultured for 3 days in SKM02 on different hydrogels (R1, R1-RGD, R1-SDF1-X, R4-RGD, R4-IL4-Y). The mean RQ (2 −ΔΔCT ) values with standard deviation of at least 3 experiments are shown. The myoblasts on day 0 served as a reference sample. * p ≤ 0.05, ** p ≤ 0.01, *** p ≤ 0.001, **** p ≤ 0.0001. The grey line indicates the level of expression in control cells cultured on collagen I. B . Immunolocalization of indicated MMP proteins in MB-DMD and MB-LMNβ1 cultured on gelatin-coated cover slides. Nuclei are visualised in red, MMPs in green; Scale bar − 40 μm; C . In situ zymography showing gelatinolytic activity in in vitro cultured MB-DMD and MB-LMNβ1 on day 3. The nuclei are visualised in red, and gelatinolytic activity is visualised in green; D . Ingel zymography detecting the activity of MMP2, MMP7, and MMP9 in medium collected after 3 days of MB-DMD and MB-LMNβ1 culture on collagen I",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13689189/bin/13287_2026_5192_Fig1_HTML.webp"
+        },
+        {
+          "label": "Fig. 2",
+          "caption": "Proliferation, apoptosis, and myogenic differentiation of hiPSC-derived myoblasts cultured on different hydrogels. A . The percentage of MB-DMD that underwent two or more cellular divisions (d2+), one (d1), or none (d0) during 48 h culture on the indicated hydrogel types (R1, R1-RGD, R1-SDF1-X, R4-RGD, R4-IL4-Y), or on collagen I (COL I), i.e. in control variant. Data are shown as mean ± SD; B . The percentage of MB-LMNβ1 that underwent two or more (d2+), one (d1), or none (d0) cellular divisions during 48 h culture on indicated hydrogels or on collagen I. Data are shown as mean ± SD; * p ≤ 0.05, ** p ≤ 0.01, *** p ≤ 0.001; C . The percentage of apoptotic cells after 72 h of MB-DMD culture on indicated hydrogels or collagen I; D . The percentage of apoptotic cells after 72 h of MB-LMNβ1 culture on the indicated surfaces; E . Representative photos of myotubes formed during MB-DMD culture on indicated surfaces, stained with Giemsa-May Grünwald. Scale bar − 100 μm; F . Representative photos of myotubes formed during MB-LMNβ1 culture on the indicated surfaces, stained with Giemsa-May Grünwald. Scale bar − 100 μm; G . Fusion index of MB-DMD cultured on the indicated surfaces; D . Fusion index of MB-LMNβ1 cultured on indicated surfaces",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13689189/bin/13287_2026_5192_Fig2_HTML.webp"
+        },
+        {
+          "label": "Fig. 3",
+          "caption": "Assessment of migration and undesired differentiation of hiPSC-derived myoblasts cultured on different hydrogels. A . Representative images of the scratch wound healing assay after 18 h of MB-DMD culture on hydrogel-coated surfaces or on plastic in the control variant; B . Quantification of the scratch wound healing assay. Data are shown as a number of cells that migrated into the wound area in four independent replicates; C . Colorimetric migration assay of MB-DMD cultured on collagen I or on peptide functionalised hydrogels after 18 h of culture. The OD was measured at 560 nm. Data are shown for four independent replicates; * p ≤ 0.05, ** p ≤ 0.01; D . Representative photos of MB-DMD after 14 days of culture in adipogenesis inducing medium on peptide-functionalised hydrogels or on collagen I. Lipid droplets stained with Oil Red O. Scale bar − 100 μm; E . qRT-PCR analysis of PPARγ mRNA expression in MB-DMD after 14 day culture in adipogenesis inducing medium, on different tested hydrogels or collagen I. F . Representative photos of MB-DMD after 7 days of culture in osteogenesis inducing medium on collagen I or hydrogel coated surfaces. Calcium residues visualised with Alizarin Red S. Scale bar − 100 μm; G . qRT-PCR analysis of SP7 mRNA expression in MB-DMD after a 7 day culture in osteogenesis inducing medium, on collagen I or hydrogel-coated surfaces. H . Representative photos of MB-DMD after 21 days of culture in chondrogenesis-inducing medium on collagen I or hydrogel coated surfaces. Acidic polysaccharides in cartilage stained with Alcian Blue. Scale bar − 100 μm; I . qRT-PCR analysis of SOX9 mRNA expression in MB-DMD after a 21 day culture in chondrogenesis inducing medium, on hydrogel-coated surfaces. For E , G and I - mean RQ (2 −ΔΔCT ) values with standard deviation from at least 3 experiments are shown. Myoblasts cultured on collagen I served as a reference sample. * p ≤ 0.05, ** p ≤ 0.01, *** p ≤ 0.001",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13689189/bin/13287_2026_5192_Fig3_HTML.webp"
+        },
+        {
+          "label": "Fig. 4",
+          "caption": "Heat maps and Venn diagram of transcripts up-regulated in hiPSC-derived myoblasts cultured on different types of hydrogels. A . Heat map of transcripts up-regulated in myoblasts cultured on indicated hydrogels compared to control cells cultured on collagen I (R1 vs. COL I, R1-SDF1-X vs. COL I, R4-IL4-Y vs. COL I). The list includes transcripts that were characterized by fold-change > 3 at least in one of the indicated comparisons (R1 vs. COL I, R1-SDF1-X vs. COL I, R4-IL4-Y vs. COL I). B . Heat map of transcripts up-regulated in myoblasts cultured on indicated hydrogels compared to cells cultured on control hydrogel (R1-SDF1-X vs. R1, R4-IL4-Y vs. R1). The list includes transcripts which were characterised by fold-change > 1.5 at least in one of the indicated comparisons (R1-SDF1-X vs. R1, R4-IL4-Y vs. R1). C . Heat map of transcripts up-regulated in myoblasts cultured on R4-IL4-Y compared to cells cultured on R1-SDF1-X hydrogel. The list includes genes which were characterised by fold-change > 1.5. D . Venn diagram presents overlapped up-regulated transcripts between myoblasts cultured on different hydrogel types (R1, R1-SDF1-X, R4-IL4-Y)",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13689189/bin/13287_2026_5192_Fig4_HTML.webp"
+        },
+        {
+          "label": "Fig. 5",
+          "caption": "qRT-PCR analysis of transcripts selected on the basis of NGS analysis. mRNA expression was determined in MB-DMD after 3 days of culture on collagen I (COL I, control) or hydrogel-coated surfaces. Data are shown as fold change compared to cells cultured in collagen I. * p ≤ 0.05, ** p ≤ 0.01, *** p ≤ 0.001, **** p ≤ 0.0001. A . Transcripts found by NGS analysis to be elevated in cells cultured on R1-SDF1-X to R1. B . Transcripts found by NGS analysis to be elevated in cells cultured on R4-IL4-Y to other variants. C . Transcripts found by NGS analysis to be elevated in cells cultured on R4-IL4-Y to R1. D . Transcripts found by NGS analysis to be elevated in cells cultured on R4-IL4-Y to R1-SDF1-X",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13689189/bin/13287_2026_5192_Fig5_HTML.webp"
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary file 1",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13689189/bin/13287_2026_5192_MOESM1_ESM.docx",
+          "description": "Supplementary Material 1."
+        }
+      ],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "7.8",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T12:46:27Z"
+      },
+      "journal_display": "Stem cell research & therapy（IF 7.8；JCR SCI Q1）",
+      "updated_at": "2026-10-24T12:46:27Z",
+      "ai_status": "success",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    }
+  ],
+  "pending_candidates": [
+    {
+      "id": "doi:10.1186/s12951-026-04826-z",
+      "title": "Decoding metabolic diseases through bacterial extracellular vesicles: mechanisms, diagnostics, and therapeutics.",
+      "authors": [
+        "Song D",
+        "Mo W",
+        "Deng Q",
+        "Zeng Y",
+        "Zhang Y",
+        "Ao X",
+        "Deng L",
+        "Wang X",
+        "Fan X"
+      ],
+      "journal": "Journal of nanobiotechnology",
+      "year": "2026",
+      "doi": "10.1186/s12951-026-04826-z",
+      "pmcid": "PMC13688932",
+      "pmid": "42908011",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1186/s12951-026-04832-1",
+      "title": "Spermidine, a chondrocyte apoptotic metabolite, delays osteoarthritis by regulating macrophage M2c polarization.",
+      "authors": [
+        "Lu J",
+        "Sun H",
+        "Zhang F",
+        "Wang G",
+        "Song X",
+        "Jiang Q",
+        "Zhou Z",
+        "Ma J",
+        "Fu Q",
+        "Zhu L"
+      ],
+      "journal": "Journal of nanobiotechnology",
+      "year": "2026",
+      "doi": "10.1186/s12951-026-04832-1",
+      "pmcid": "PMC13689176",
+      "pmid": "42908004",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1186/s12951-026-04843-y",
+      "title": "Lactobacillus mucosae extracellular vesicles improve metabolic dysfunction-associated fatty liver disease by activating the AMPK pathway via the gut-liver axis.",
+      "authors": [
+        "Zhang K",
+        "Zeng Y",
+        "Liao Z",
+        "Wu J",
+        "Zhang X",
+        "Chen T",
+        "Xie Z"
+      ],
+      "journal": "Journal of nanobiotechnology",
+      "year": "2026",
+      "doi": "10.1186/s12951-026-04843-y",
+      "pmcid": "PMC13689356",
+      "pmid": "42908001",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1186/s12938-026-01608-4",
+      "title": "AI-integrated nanomaterial-based biosensors for biomedical diagnostics: engineering design, signal processing, and clinical translation.",
+      "authors": [
+        "Thalluri C",
+        "Bukke SPN",
+        "Medhi J",
+        "Vasam M",
+        "Chettupalli AK",
+        "Gupta N",
+        "Sarma KN",
+        "Dennison MS",
+        "Naik BP"
+      ],
+      "journal": "Biomedical engineering online",
+      "year": "2026",
+      "doi": "10.1186/s12938-026-01608-4",
+      "pmcid": "PMC13688831",
+      "pmid": "42907992",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1186/s13048-026-02210-x",
+      "title": "Candidate microRNA networks in cyclophosphamide-associated ovarian injury and premature ovarian insufficiency: a structured narrative review.",
+      "authors": [
+        "García-Sáenz MR",
+        "Ramírez-Rentería C",
+        "Saucedo R",
+        "Valencia-Ortega J",
+        "López-Juárez N",
+        "Ferreira-Hermosillo A"
+      ],
+      "journal": "Journal of ovarian research",
+      "year": "2026",
+      "doi": "10.1186/s13048-026-02210-x",
+      "pmcid": "PMC13689243",
+      "pmid": "42907908",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1186/s13073-026-01792-x",
+      "title": "The average individual genome: a survey of nearly 1 million whole-genome sequences.",
+      "authors": [
+        "Wright HIW",
+        "Beaumont RN",
+        "Fasham J",
+        "Leslie JS",
+        "Chundru VK",
+        "Hall TS",
+        "Cannon SJ",
+        "Pagnamenta AT",
+        "Baple EL",
+        "Wood AR",
+        "Murray A",
+        "Jackson L",
+        "Weedon MN",
+        "Patel K",
+        "Hawkes G",
+        "Wright CF"
+      ],
+      "journal": "Genome medicine",
+      "year": "2026",
+      "doi": "10.1186/s13073-026-01792-x",
+      "pmcid": "PMC13689340",
+      "pmid": "42907903",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1186/s12951-026-04833-0",
+      "title": "Identification of the miR-210-3p-EFNA3-YAP axis and its targeted modulation via biomimetic supramolecular nanoparticles to promote ischemic flap survival.",
+      "authors": [
+        "Xu J",
+        "Zhuang X",
+        "Wu Z",
+        "Yan F",
+        "Shi D",
+        "Ye F",
+        "Ding R",
+        "Gao Q",
+        "Yao Q",
+        "Liu Y",
+        "Dong X",
+        "Zhang F",
+        "Li B",
+        "Xu X",
+        "Tong H",
+        "Yao Y",
+        "Jiang W",
+        "Xiao J",
+        "Li Z",
+        "Chen W"
+      ],
+      "journal": "Journal of nanobiotechnology",
+      "year": "2026",
+      "doi": "10.1186/s12951-026-04833-0",
+      "pmcid": "PMC13689359",
+      "pmid": "42907899",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1186/s12943-026-02741-3",
+      "title": "Single-cell profiling defines cellular ecosystems and malignant cell state coupling across pan-cancer tumor microenvironments.",
+      "authors": [
+        "Yang X",
+        "Tong Y",
+        "Wang Y",
+        "Xie P",
+        "Li X",
+        "Yuan J",
+        "Yang Y"
+      ],
+      "journal": "Molecular cancer",
+      "year": "2026",
+      "doi": "10.1186/s12943-026-02741-3",
+      "pmcid": "PMC13688759",
+      "pmid": "42907887",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "sequencing: single-cell",
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1186/s13073-026-01776-x",
+      "title": "Cross-species molecular stratification enables T cell receptor diagnosis of Parkinson's disease.",
+      "authors": [
+        "Chen J",
+        "Xia X",
+        "Zhang Y",
+        "Tong X",
+        "Liang Y",
+        "Fan X",
+        "Meng Q",
+        "Wei Y",
+        "Hu G"
+      ],
+      "journal": "Genome medicine",
+      "year": "2026",
+      "doi": "10.1186/s13073-026-01776-x",
+      "pmcid": "PMC13689350",
+      "pmid": "42907884",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1186/s13045-026-01861-z",
+      "title": "Reprogramming tumor-associated macrophages in breast cancer: from myeloid plasticity and tumor-promoting programs to CAR-macrophage therapy.",
+      "authors": [
+        "Heydari F",
+        "Derakhshani M",
+        "Naghinezhad J"
+      ],
+      "journal": "Journal of hematology & oncology",
+      "year": "2026",
+      "doi": "10.1186/s13045-026-01861-z",
+      "pmcid": "PMC13688899",
+      "pmid": "42907869",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1186/s12872-026-06337-z",
+      "title": "Inflammation-based phenotyping and prognostic implications in patients with non-obstructive coronary artery disease.",
+      "authors": [
+        "Liu Y",
+        "Hu S",
+        "Wu R",
+        "Fu T",
+        "Li Z",
+        "Zhang J",
+        "Zhang M"
+      ],
+      "journal": "BMC cardiovascular disorders",
+      "year": "2026",
+      "doi": "10.1186/s12872-026-06337-z",
+      "pmcid": "PMC13688930",
+      "pmid": "42907779",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1186/s12884-026-09694-x",
+      "title": "Associations of pre-pregnancy BMI and gestational weight gain with large-for-gestational-age in women with gestational diabetes mellitus in Southwestern China.",
+      "authors": [
+        "Qian S",
+        "Yang J",
+        "Tian Y",
+        "Zhao Q",
+        "Wang R",
+        "Yang J",
+        "Shu L",
+        "Zhu X",
+        "He J"
+      ],
+      "journal": "BMC pregnancy and childbirth",
+      "year": "2026",
+      "doi": "10.1186/s12884-026-09694-x",
+      "pmcid": "PMC13688827",
+      "pmid": "42907773",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "disease_bridge: diabetes",
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1186/s12864-026-12830-8",
+      "title": "Histology images in spatial transcriptomics: a critical evaluation of their effectiveness in spatial domain detection.",
+      "authors": [
+        "Noman AA",
+        "Ajrof A",
+        "Samee MAH",
+        "Rahman MS"
+      ],
+      "journal": "BMC genomics",
+      "year": "2026",
+      "doi": "10.1186/s12864-026-12830-8",
+      "pmcid": "PMC13688954",
+      "pmid": "42907765",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "multiomics: transcriptom",
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1186/s12864-026-13210-y",
+      "title": "A large palindromic segmental duplication on mouse chromosome 12 marks an evolutionarily fragile genomic interval.",
+      "authors": [
+        "Kang YK"
+      ],
+      "journal": "BMC genomics",
+      "year": "2026",
+      "doi": "10.1186/s12864-026-13210-y",
+      "pmcid": "PMC13688818",
+      "pmid": "42907760",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1186/s12284-026-00940-6",
+      "title": "Iron Oxide Nanoparticles Alleviate Cold Stress in Rice by Reducing Oxidative Damage and Enhancing Antioxidant Defense Systems, and Transcriptional Networks.",
+      "authors": [
+        "Ullah S",
+        "Ateeq M",
+        "Xiong D",
+        "Khan A",
+        "Sui L",
+        "Khan EH",
+        "Waqas M",
+        "Yang N",
+        "Jianliang H"
+      ],
+      "journal": "Rice (New York, N.Y.)",
+      "year": "2026",
+      "doi": "10.1186/s12284-026-00940-6",
+      "pmcid": "PMC13687529",
+      "pmid": "42907618",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1038/s41467-026-77928-9",
+      "title": "Five-country analysis of geographic and dietary drivers of gut microbiome composition and genomic variation.",
+      "authors": [
+        "Khatib L",
+        "Oles R",
+        "Hernández AR",
+        "Myers T",
+        "Zhao J",
+        "Kumar M",
+        "Laroya A",
+        "Tolosa-Enguis V",
+        "Matsunami N",
+        "Suzuki D",
+        "Chiba N",
+        "Gilbert KE",
+        "Das P",
+        "Sanders JG",
+        "Patel L",
+        "Litwin N",
+        "Nowinski B",
+        "Birmingham A",
+        "Farmer S",
+        "Brennan C",
+        "Bryant M",
+        "Tribelhorn C",
+        "Sanders-Bodai K",
+        "Cowart C",
+        "Nizet O",
+        "Diaz EA",
+        "Veiga P",
+        "Shetty SA",
+        "Knol J",
+        "Lay C",
+        "Koutnikova H",
+        "Chaumont S",
+        "Tap J",
+        "Cotillard A",
+        "Derrien M",
+        "Laiola M",
+        "González A",
+        "Tovar AR",
+        "Torres N",
+        "Sanz Y",
+        "Yamada T",
+        "McDonald D",
+        "Song SJ",
+        "Bartko A",
+        "Knight R"
+      ],
+      "journal": "Nature communications",
+      "year": "2026",
+      "doi": "10.1038/s41467-026-77928-9",
+      "pmcid": "PMC13687547",
+      "pmid": "42907460",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1038/s41467-026-77827-z",
+      "title": "Unveiling structural determinants of peptide recognition by public and private SARS-CoV-2-specific T-cell receptors.",
+      "authors": [
+        "Akıl C",
+        "Peng Y",
+        "McCarthy J",
+        "Zhu Y",
+        "Hardenbrook N",
+        "Yang Y",
+        "Dong D",
+        "Antoun E",
+        "Yao X",
+        "Liu G",
+        "Chen JL",
+        "Balıkçı E",
+        "Cioaca R",
+        "Mentzer AJ",
+        "Knight JC",
+        "Fernandes RA",
+        "Dong T",
+        "Zhang P"
+      ],
+      "journal": "Nature communications",
+      "year": "2026",
+      "doi": "10.1038/s41467-026-77827-z",
+      "pmcid": "PMC13687542",
+      "pmid": "42907447",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1038/s41467-026-77940-z",
+      "title": "Host-pathogen pyrimidine metabolism drives cystic fibrosis lung disease.",
+      "authors": [
+        "Lohia GK",
+        "Chen YT",
+        "Chen S",
+        "Beg A",
+        "Theiller E",
+        "Cui A",
+        "Moustafa AM",
+        "Riquelme SA"
+      ],
+      "journal": "Nature communications",
+      "year": "2026",
+      "doi": "10.1038/s41467-026-77940-z",
+      "pmcid": "PMC13687554",
+      "pmid": "42907429",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.20945/2359-4292-2026-0125",
+      "title": "Changes of serum fibroblast growth factor 23 (FGF23) and Klotho in diabetic kidney disease and their correlation with coronary artery calcification: a retrospective study.",
+      "authors": [
+        "Hong Y",
+        "Wang J",
+        "Lu Q",
+        "Sun W",
+        "Sun J"
+      ],
+      "journal": "Archives of endocrinology and metabolism",
+      "year": "2026",
+      "doi": "10.20945/2359-4292-2026-0125",
+      "pmcid": "PMC13689497",
+      "pmid": "42905600",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "disease_bridge: kidney disease",
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.3290/j.ohpd.c_2823",
+      "title": "Multivariate Genome-Wide Analysis Delineates Shared Genetic Determinants Across Periodontal and Oral Microbial Phenotypes.",
+      "authors": [
+        "Zhang Y",
+        "Chen M",
+        "Zhang F"
+      ],
+      "journal": "Oral health & preventive dentistry",
+      "year": "2026",
+      "doi": "10.3290/j.ohpd.c_2823",
+      "pmcid": "PMC13688100",
+      "pmid": "42905044",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.3290/j.ohpd.c_2834",
+      "title": "Immune-related Plasma Proteins Associated with Recurrent Aphthous Stomatitis Identified by Mendelian Randomization and Clinical Validation.",
+      "authors": [
+        "Wang Y",
+        "Che J",
+        "Guan C",
+        "Guo H"
+      ],
+      "journal": "Oral health & preventive dentistry",
+      "year": "2026",
+      "doi": "10.3290/j.ohpd.c_2834",
+      "pmcid": "PMC13687939",
+      "pmid": "42905042",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1080/17590914.2026.2740889",
+      "title": "Employing the Role of SLC40A1-Mediated Microglia Inflammatory Response in Diabetic Retinopathy Based on Single-Cell Transcriptomics Technology.",
+      "authors": [
+        "Cao H",
+        "Gong Y"
+      ],
+      "journal": "ASN neuro",
+      "year": "2026",
+      "doi": "10.1080/17590914.2026.2740889",
+      "pmcid": "PMC13690280",
+      "pmid": "42904741",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "sequencing: single-cell",
+        "multiomics: transcriptom",
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1080/19336950.2026.2746860",
+      "title": "Potential roles for transient receptor potential vanilloid 1 in heart failure with preserved ejection fraction.",
+      "authors": [
+        "Gao Z",
+        "Bao J",
+        "He C",
+        "Pan H",
+        "Zhang H",
+        "Zhai C"
+      ],
+      "journal": "Channels (Austin, Tex.)",
+      "year": "2026",
+      "doi": "10.1080/19336950.2026.2746860",
+      "pmcid": "PMC13690278",
+      "pmid": "42902773",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1021/acs.langmuir.6c04005",
+      "title": "Scalable Membrane-Based Lithium-Ion Sieve Sorbent for Selective Lithium Extraction from Brines.",
+      "authors": [
+        "Ivanković A",
+        "Comès A",
+        "Stockhausen M",
+        "Florek J",
+        "Ragossnig H",
+        "Khalouche C",
+        "Hofmann T",
+        "Kleitz F",
+        "Pichler CM"
+      ],
+      "journal": "Langmuir : the ACS journal of surfaces and colloids",
+      "year": "2026",
+      "doi": "10.1021/acs.langmuir.6c04005",
+      "pmcid": "PMC13689906",
+      "pmid": "42899847",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1021/acsnano.6c10533",
+      "title": "Engineered MspA Nanopores for Real-Time Detection of Insulin, Its Pharmaceutical Analogues, and Degradation Products.",
+      "authors": [
+        "Straathof S",
+        "Tadema M",
+        "Zhan L",
+        "Maglia G"
+      ],
+      "journal": "ACS nano",
+      "year": "2026",
+      "doi": "10.1021/acsnano.6c10533",
+      "pmcid": "PMC13689911",
+      "pmid": "42899774",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "sequencing: nanopore",
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1021/acs.est.6c06323",
+      "title": "Aging of Urban Traffic Fine Particles Modulates Toxicity Mechanisms and Oxidative Stress Responses.",
+      "authors": [
+        "Pardo M",
+        "Kozer N",
+        "Molina C",
+        "Chen Y",
+        "Barr H",
+        "Cohen G",
+        "Pavlidis D",
+        "Kaltsonoudis C",
+        "Seitanidi K",
+        "Argyropoulou GA",
+        "Vasilakopoulou CN",
+        "Christopoulou C",
+        "Matrali A",
+        "Wei M",
+        "Prevot ASH",
+        "Bell DM",
+        "Pandis SN",
+        "Nenes A",
+        "Rudich Y"
+      ],
+      "journal": "Environmental science & technology",
+      "year": "2026",
+      "doi": "10.1021/acs.est.6c06323",
+      "pmcid": "PMC13689821",
+      "pmid": "42899670",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "aging: aging",
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.4081/ejh.2026.4534",
+      "title": "Short- and long-term effects of dronedarone on Cav3.1- and Cav3.2-T-type calcium channel current.",
+      "authors": [
+        "Jiang X",
+        "Xu J",
+        "He H",
+        "Cao Z",
+        "Liu D",
+        "Chen Z",
+        "Ding L",
+        "Zheng M"
+      ],
+      "journal": "European journal of histochemistry : EJH",
+      "year": "2026",
+      "doi": "10.4081/ejh.2026.4534",
+      "pmcid": "PMC13688010",
+      "pmid": "42898062",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.7189/jogh.16.04313",
+      "title": "Large-scale plasma proteomic profiling enhances prediction of heart failure among hypertensive individuals: prospective insights from the UK Biobank.",
+      "authors": [
+        "Li M",
+        "He X",
+        "Xiao S",
+        "Wang J",
+        "Wang L",
+        "Li X",
+        "Shu C",
+        "Zhu Z",
+        "Li J"
+      ],
+      "journal": "Journal of global health",
+      "year": "2026",
+      "doi": "10.7189/jogh.16.04313",
+      "pmcid": "PMC13688282",
+      "pmid": "42895254",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "multiomics: proteom",
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.4014/jmb.2607.07020",
+      "title": "Heat-treated Lactiplantibacillus plantarum MYO Improves Muscle Strength and Modulates Gut Microbiota in Older Adults with Reduced Muscle Strength.",
+      "authors": [
+        "Lee JJ",
+        "Song JW",
+        "Kim HJ",
+        "In JH",
+        "Park J",
+        "Park J",
+        "Lee S"
+      ],
+      "journal": "Journal of microbiology and biotechnology",
+      "year": "2026",
+      "doi": "10.4014/jmb.2607.07020",
+      "pmcid": "PMC13686804",
+      "pmid": "42894972",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1042/bcj20250110",
+      "title": "No lysine? No problem: the surprising roles of WNK kinases in physiology and disease.",
+      "authors": [
+        "Jung JU",
+        "Jaykumar AB",
+        "Taylor CA 4th",
+        "Cobb MH"
+      ],
+      "journal": "The Biochemical journal",
+      "year": "2026",
+      "doi": "10.1042/BCJ20250110",
+      "pmcid": "PMC13686953",
+      "pmid": "42894500",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.xgen.2026.101386",
+      "title": "Mitotic and meiotic midbody remnants: Divergent architectures with distinct clinical applications.",
+      "authors": [
+        "Schindler K",
+        "Skop AR"
+      ],
+      "journal": "Cell genomics",
+      "year": "2026",
+      "doi": "10.1016/j.xgen.2026.101386",
+      "pmcid": "PMC13689505",
+      "pmid": "42874568",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.xgen.2026.101396",
+      "title": "Voices from contributors to Cell Genomics.",
+      "authors": [
+        "Courtot M",
+        "Okada Y",
+        "Im HK",
+        "Rakyan V",
+        "Doench J",
+        "Hehir-Kwa J",
+        "Jones SJM",
+        "Cristofari G",
+        "Motsinger-Reif A",
+        "Fatumo S",
+        "Eichler E",
+        "Beck CR",
+        "Schatz MC"
+      ],
+      "journal": "Cell genomics",
+      "year": "2026",
+      "doi": "10.1016/j.xgen.2026.101396",
+      "pmcid": "PMC13689509",
+      "pmid": "42874565",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.xgen.2026.101393",
+      "title": "Twelve voices from China: On publishing, community, and how the field of genomics is developing.",
+      "authors": [
+        "Yang J",
+        "Zhang Y",
+        "Liu S",
+        "Zheng Y",
+        "Zhou G",
+        "Luo SJ",
+        "Ma H",
+        "Sun C",
+        "Ye K",
+        "Lo YMD",
+        "Wang X",
+        "Wang L"
+      ],
+      "journal": "Cell genomics",
+      "year": "2026",
+      "doi": "10.1016/j.xgen.2026.101393",
+      "pmcid": "PMC13689506",
+      "pmid": "42874564",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.3892/mmr.2026.14038",
+      "title": "Mechanical‑immune feedback regulation in distraction osteogenesis: From mechanotransduction to immune microenvironment remodeling (Review).",
+      "authors": [
+        "Wang X",
+        "Wang Y",
+        "He S",
+        "Ma C",
+        "He Z",
+        "Huang X"
+      ],
+      "journal": "Molecular medicine reports",
+      "year": "2026",
+      "doi": "10.3892/mmr.2026.14038",
+      "pmcid": "PMC13688611",
+      "pmid": "42852638",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1038/s41586-026-11106-1",
+      "title": "Prehistoric global migration of vanishing gut microbes with humans.",
+      "authors": [
+        "Carter MM",
+        "Liu Z",
+        "Olm MR",
+        "Martin M",
+        "Sprockett DD",
+        "Ghadermazi P",
+        "Trumble BC",
+        "Kaplan H",
+        "Stieglitz J",
+        "Rodriguez DE",
+        "Relman DA",
+        "Sonnenburg ED",
+        "Gurven M",
+        "Good BH",
+        "Sonnenburg JL"
+      ],
+      "journal": "Nature",
+      "year": "2026",
+      "doi": "10.1038/s41586-026-11106-1",
+      "pmcid": "PMC13686943",
+      "pmid": "42844483",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.ebiom.2026.106487",
+      "title": "Single-cell study of human ovarian response to phthalate exposure reveals glial cell susceptibility and disruption of adhesion and mitochondrial pathways.",
+      "authors": [
+        "Panagiotou EM",
+        "Méar L",
+        "Rooda I",
+        "Haxhiu A",
+        "Moussaud-Lamodière E",
+        "Wasilewska K",
+        "Li T",
+        "Arnelo C",
+        "Pettersson K",
+        "Papaikonomou K",
+        "Lindskog C",
+        "Damdimopoulou P"
+      ],
+      "journal": "EBioMedicine",
+      "year": "2026",
+      "doi": "10.1016/j.ebiom.2026.106487",
+      "pmcid": "PMC13688040",
+      "pmid": "42838884",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "sequencing: single-cell",
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1021/acs.analchem.6c01204",
+      "title": "From Single Injection to Dual Insights: Integrating EAD and CID Acquisition for Spectral Library Generation and EAD-CID Spectral Matching.",
+      "authors": [
+        "Panzenboeck L",
+        "Brenner C",
+        "Fitz V",
+        "Wang M",
+        "Mueller P",
+        "Rampler E",
+        "El Abiead Y",
+        "Koellensperger G"
+      ],
+      "journal": "Analytical chemistry",
+      "year": "2026",
+      "doi": "10.1021/acs.analchem.6c01204",
+      "pmcid": "PMC13689410",
+      "pmid": "42832747",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1158/2767-9764.crc-26-0343",
+      "title": "HIV and Antiretroviral Therapy Influence Tumor Microenvironment Architecture, Subclonal Evolution, and Immune Evasion Strategies in Diffuse Large B-cell Lymphoma.",
+      "authors": [
+        "Coelho J",
+        "Roush SM",
+        "Beck S",
+        "Wielgus A",
+        "Xu AM",
+        "Chirwa A",
+        "Mponda M",
+        "Kasonkanji E",
+        "Mulenga M",
+        "Tomoka T",
+        "Gopal S",
+        "Merchant A",
+        "Painschab MS",
+        "Fedoriw Y"
+      ],
+      "journal": "Cancer research communications",
+      "year": "2026",
+      "doi": "10.1158/2767-9764.CRC-26-0343",
+      "pmcid": "PMC13688170",
+      "pmid": "42831881",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1128/aem.01311-26",
+      "title": "Formulations containing co-biotic compounds mediate microbiome function and composition without increased gas production in an ex vivo gastrointestinal model.",
+      "authors": [
+        "Napier BA",
+        "Merrill BD",
+        "Krieger M",
+        "Gevers D",
+        "Reid G"
+      ],
+      "journal": "Applied and environmental microbiology",
+      "year": "2026",
+      "doi": "10.1128/aem.01311-26",
+      "pmcid": "PMC13688805",
+      "pmid": "42820741",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1159/jvr/adiag003",
+      "title": "Endothelial-Fibroblast Organoids Generated in Hydrogel Microchamber Arrays: A Translational Model of Vascular Dysfunction in Cardio-Kidney-Metabolic Disease.",
+      "authors": [
+        "Zitman-Gal T",
+        "Sobolev M",
+        "Talash A",
+        "Tartakover-Matalon S",
+        "Topaz G",
+        "Chen J",
+        "Pereg D",
+        "Rashid G",
+        "Nacasch N",
+        "Dahan A",
+        "Deutsch M",
+        "Cohen-Hagai K"
+      ],
+      "journal": "Journal of vascular research",
+      "year": "2026",
+      "doi": "10.1159/jvr/adiag003",
+      "pmcid": "PMC13690316",
+      "pmid": "42814650",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1159/jvr/adiag002",
+      "title": "Cell Regulation, Metabolic, Inflammatory, and Hormone Signaling RNA Transcriptomic Pathways are Upregulated among Patients with Coronary Microvascular Dysfunction and Ischemia with Nonobstructive Coronary Arteries.",
+      "authors": [
+        "Jerome B",
+        "Schlamp F",
+        "Hausvater A",
+        "Joa A",
+        "Serrano-Gomez C",
+        "Farid A",
+        "Barrett T",
+        "Reynolds HR",
+        "Berger JS",
+        "Smilowitz NR"
+      ],
+      "journal": "Journal of vascular research",
+      "year": "2026",
+      "doi": "10.1159/jvr/adiag002",
+      "pmcid": "PMC13688353",
+      "pmid": "42814641",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "multiomics: transcriptom",
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1128/aem.01525-26",
+      "title": "Double-edged sword of FeS oxidation in estuarine and coastal sediments: accelerating elemental cycling yet enhancing antibiotic resistance enrichment.",
+      "authors": [
+        "Qiu W",
+        "Tang X",
+        "Wu B",
+        "Huang H",
+        "Zhao X",
+        "Yuan J",
+        "Li X"
+      ],
+      "journal": "Applied and environmental microbiology",
+      "year": "2026",
+      "doi": "10.1128/aem.01525-26",
+      "pmcid": "PMC13689488",
+      "pmid": "42813796",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1002/ana.78380",
+      "title": "Reframing the Gut-Brain Axis: The Gut Wall as a Neural Immune Interface in Multiple Sclerosis and Autoimmune Neurological Diseases.",
+      "authors": [
+        "Montini F",
+        "Pittock SJ",
+        "Cacciaguerra L",
+        "Weiner HL",
+        "Schwerdtfeger LA"
+      ],
+      "journal": "Annals of neurology",
+      "year": "2026",
+      "doi": "10.1002/ana.78380",
+      "pmcid": "PMC13688067",
+      "pmid": "42799661",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.xgen.2026.101363",
+      "title": "Intraspecific sequence variation and complete genomes refine the identification of rapidly evolved regions in humans.",
+      "authors": [
+        "Luo Y",
+        "Mangan RJ",
+        "Weaver S",
+        "Zhao SA",
+        "Mosti F",
+        "Thomas MC",
+        "Karra R",
+        "Silver DL",
+        "Kellis M",
+        "Lowe CB"
+      ],
+      "journal": "Cell genomics",
+      "year": "2026",
+      "doi": "10.1016/j.xgen.2026.101363",
+      "pmcid": "PMC13689511",
+      "pmid": "42777703",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.71150/jm.2604010",
+      "title": "A retrospective metagenomic analysis of fecal microbiota transplantation donors from five countries: Safety considerations for donor screening and core microbiome profiles of qualified donors.",
+      "authors": [
+        "Li SS",
+        "Niu YH",
+        "Yu HJ"
+      ],
+      "journal": "Journal of microbiology (Seoul, Korea)",
+      "year": "2026",
+      "doi": "10.71150/jm.2604010",
+      "pmcid": "PMC13688126",
+      "pmid": "42772323",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "sequencing: metagenom",
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1007/s11010-026-05743-3",
+      "title": "Itaconate metabolism in regulated cell death.",
+      "authors": [
+        "Tang D",
+        "Kang R"
+      ],
+      "journal": "Molecular and cellular biochemistry",
+      "year": "2026",
+      "doi": "10.1007/s11010-026-05743-3",
+      "pmcid": "PMC13687181",
+      "pmid": "42766264",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1093/plcell/koag288",
+      "title": "Somatic selection shapes mutation accumulation in Citrus sinensis.",
+      "authors": [
+        "Beaulieu TR",
+        "Avila de Dios E",
+        "Seymour DK"
+      ],
+      "journal": "The Plant cell",
+      "year": "2026",
+      "doi": "10.1093/plcell/koag288",
+      "pmcid": "PMC13690466",
+      "pmid": "42758179",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1128/jb.00241-26",
+      "title": "Strain-specific outcomes of cytosine-base editing in Streptomyces.",
+      "authors": [
+        "Boneza MM",
+        "Keller T",
+        "Mostek J",
+        "Smanski MJ"
+      ],
+      "journal": "Journal of bacteriology",
+      "year": "2026",
+      "doi": "10.1128/jb.00241-26",
+      "pmcid": "PMC13689562",
+      "pmid": "42758019",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1128/mra.00619-26",
+      "title": "Complete genome sequence of Subdoligranulum sp. strain DSM 23681 isolated from the cecum of a broiler chicken.",
+      "authors": [
+        "Taillandier P",
+        "Clément K",
+        "Le Roy T"
+      ],
+      "journal": "Microbiology resource announcements",
+      "year": "2026",
+      "doi": "10.1128/mra.00619-26",
+      "pmcid": "PMC13689383",
+      "pmid": "42757843",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.71150/jm.2606011",
+      "title": "SimpleMicrobiome: An integrated web-based platform for streamlined microbiome data analysis and visualization.",
+      "authors": [
+        "Na SI",
+        "Kim J",
+        "Kim SY",
+        "Park J",
+        "Cho YJ"
+      ],
+      "journal": "Journal of microbiology (Seoul, Korea)",
+      "year": "2026",
+      "doi": "10.71150/jm.2606011",
+      "pmcid": "PMC13688125",
+      "pmid": "42754330",
       "abstract": "",
       "citation_count": 0,
       "fulltext_urls": [],
