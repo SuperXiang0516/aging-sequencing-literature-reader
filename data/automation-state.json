@@ -23,15 +23,15 @@
       "retrieved_at": "2026-10-24T07:14:59Z"
     }
   },
-  "updated_at": "2026-10-24T09:01:44Z",
+  "updated_at": "2026-10-24T09:58:05Z",
   "last_run": {
-    "status": "upstream_unavailable",
+    "status": "fallback_ncbi",
     "selected": 0,
     "published": 0,
     "candidates": 0,
     "skipped_without_pmcid": 0,
-    "search_error": "HTTP 503: HTTP Error 503:",
+    "search_error": "Europe PMC HTTP 503: HTTP Error 503:",
     "preserved_articles": 0,
-    "finished_at": "2026-10-24T09:01:44Z"
+    "finished_at": "2026-10-24T09:58:05Z"
   }
 }
