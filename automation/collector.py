@@ -340,7 +340,13 @@ def make_record(candidate: dict[str, Any], metrics_cache: dict[str, Any], xml_fi
     record["metrics"] = easy_scholar_metrics(record.get("journal", ""), metrics_cache)
     record["journal_display"] = f"{record.get('journal', '')}（{metric_label(record['metrics'])}）"
     record["updated_at"] = utc_now()
-    article, ai_status = generate_llm_article(record)
+    # Do not spend an LLM request on records that cannot provide the source
+    # material required by the publication gate.  This is especially important
+    # for Europe PMC hits that have a DOI/abstract but no PMCID.
+    if record.get("fulltext_ok") and record.get("figures"):
+        article, ai_status = generate_llm_article(record)
+    else:
+        article, ai_status = {}, "skipped_no_retrievable_fulltext"
     record["article"] = article
     record["ai_status"] = ai_status
     record["publishable"], record["gate_reasons"] = publication_gate(record, article)
@@ -385,22 +391,33 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         # A temporary LLM/API failure may be retried for a bounded number of
         # runs; a paper without retrievable full text/figures is discarded.
         return previous.get("status") == "manual_review" and int(previous.get("attempts", 0)) < 5
-    candidates = [candidate for candidate in candidates if eligible(candidate)]
-    selected = candidates[: args.max_new]
+    eligible_candidates = [candidate for candidate in candidates if eligible(candidate)]
+    # A PMCID is required for the XML/full-text path used by this project.
+    # DOI-only records are kept out of the daily processing quota so that one
+    # inaccessible paper cannot consume the whole run.
+    candidates = [candidate for candidate in eligible_candidates if clean_text(candidate.get("pmcid"))]
+    skipped_without_pmcid = len(eligible_candidates) - len(candidates)
+    attempt_limit = args.attempt_limit or max(args.max_new * 3, args.max_new)
+    selected: list[dict[str, Any]] = []
     processed: list[dict[str, Any]] = []
-    for candidate in selected:
+    published_this_run = 0
+    for candidate in candidates[:attempt_limit]:
+        if published_this_run >= args.max_new:
+            break
+        selected.append(candidate)
         record = make_record(candidate, metrics_cache, args.xml_fixture)
         processed.append(record)
         previous_attempts = int(attempted.get(record["id"], {}).get("attempts", 0)) if isinstance(attempted.get(record["id"]), Mapping) else 0
         attempted[record["id"]] = {"status": record["status"], "attempts": previous_attempts + 1, "updated_at": record["updated_at"], "gate_reasons": record["gate_reasons"]}
         if record["publishable"]:
             records[record["id"]] = public_projection(record)
+            published_this_run += 1
     published = sorted(records.values(), key=lambda r: (r.get("year", ""), r.get("updated_at", "")), reverse=True)
-    state.update({"schema_version": SCHEMA_VERSION, "updated_at": utc_now(), "records": records, "attempted": attempted, "metrics_cache": metrics_cache, "last_run": {"selected": len(selected), "published": sum(1 for r in processed if r.get("publishable")), "candidates": len(candidates), "finished_at": utc_now()}})
+    state.update({"schema_version": SCHEMA_VERSION, "updated_at": utc_now(), "records": records, "attempted": attempted, "metrics_cache": metrics_cache, "last_run": {"selected": len(selected), "published": published_this_run, "candidates": len(candidates), "skipped_without_pmcid": skipped_without_pmcid, "finished_at": utc_now()}})
     save_json(args.state, state)
     save_json(args.output, {"schema_version": SCHEMA_VERSION, "generated_at": utc_now(), "articles": [public_projection(record) for record in published]})
     report_records = [{key: value for key, value in record.items() if key not in {"abstract", "fulltext_text", "methods_text", "results_text", "article"}} for record in processed]
-    save_json(args.report, {"schema_version": SCHEMA_VERSION, "generated_at": utc_now(), "last_run": state["last_run"], "processed": report_records, "pending_candidates": candidates[args.max_new : args.max_new + 50]})
+    save_json(args.report, {"schema_version": SCHEMA_VERSION, "generated_at": utc_now(), "last_run": state["last_run"], "processed": report_records, "pending_candidates": candidates[len(selected) : len(selected) + 50]})
     return state["last_run"]
 
 
@@ -414,6 +431,7 @@ def parse_args(argv: Optional[Iterable[str]] = None) -> argparse.Namespace:
     parser.add_argument("--query", default=os.environ.get("LITERATURE_QUERY", DEFAULT_QUERY))
     parser.add_argument("--candidate-limit", type=int, default=int(os.environ.get("CANDIDATE_LIMIT", "40")))
     parser.add_argument("--max-new", type=int, default=int(os.environ.get("DAILY_NEW_LIMIT", "5")))
+    parser.add_argument("--attempt-limit", type=int, default=int(os.environ.get("ATTEMPT_LIMIT", "0")), help="Maximum candidates inspected in one run; defaults to three times max-new")
     parser.add_argument("--min-score", type=int, default=int(os.environ.get("MIN_RELEVANCE_SCORE", "12")))
     return parser.parse_args(argv)
 

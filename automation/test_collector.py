@@ -128,6 +128,52 @@ class CollectorTests(unittest.TestCase):
             output = json.loads((root / "articles.json").read_text(encoding="utf-8"))
             self.assertEqual(len(output["articles"]), 1)
 
+    def test_run_skips_doi_only_hits_and_continues_after_failed_candidate(self):
+        def candidate(identifier, pmcid):
+            return {
+                "id": identifier,
+                "title": identifier,
+                "authors": [],
+                "journal": "Example Journal",
+                "year": "2026",
+                "doi": identifier,
+                "pmcid": pmcid,
+                "pmid": "",
+                "abstract": "ageing sequencing",
+                "fulltext_urls": [],
+                "source": "fixture",
+                "relevance_score": 20,
+                "relevance_evidence": ["aging: aging"],
+            }
+
+        failed = candidate("10.0000/failed", "PMCFAIL")
+        successful = candidate("10.0000/success", "PMCSUCCESS")
+        doi_only = candidate("10.0000/doi-only", "")
+        failed_record = dict(failed, fulltext_ok=True, figures=[{"label": "Fig. 1"}],
+                             article={}, ai_status="error", publishable=False,
+                             gate_reasons=["AI 字段缺失：results"], status="manual_review",
+                             updated_at="2026-01-01T00:00:00Z")
+        successful_record = dict(successful, fulltext_ok=True, figures=[{"label": "Fig. 1"}],
+                                 article={"title_zh": "成功"}, ai_status="success",
+                                 publishable=True, gate_reasons=[], status="published",
+                                 updated_at="2026-01-01T00:00:00Z")
+
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            args = parse_args([
+                "--state", str(root / "state.json"),
+                "--output", str(root / "articles.json"),
+                "--report", str(root / "report.json"),
+                "--max-new", "1",
+            ])
+            with patch("automation.collector.search_europe_pmc", return_value=[failed, successful, doi_only]), \
+                 patch("automation.collector.make_record", side_effect=[failed_record, successful_record]) as make_record_mock:
+                summary = run(args)
+            self.assertEqual(summary["selected"], 2)
+            self.assertEqual(summary["published"], 1)
+            self.assertEqual(summary["skipped_without_pmcid"], 1)
+            self.assertEqual(make_record_mock.call_count, 2)
+
 
 if __name__ == "__main__":
     unittest.main()
