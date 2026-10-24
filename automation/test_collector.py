@@ -3,6 +3,7 @@ import json
 import os
 import tempfile
 import unittest
+import urllib.error
 from pathlib import Path
 from unittest.mock import patch
 
@@ -173,6 +174,42 @@ class CollectorTests(unittest.TestCase):
             self.assertEqual(summary["published"], 1)
             self.assertEqual(summary["skipped_without_pmcid"], 1)
             self.assertEqual(make_record_mock.call_count, 2)
+
+    def test_search_outage_preserves_existing_library_and_writes_report(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            existing = {
+                "doi:existing": {
+                    "id": "doi:existing",
+                    "title": "Existing published article",
+                    "year": "2026",
+                    "status": "published",
+                    "article": {"title_zh": "已有文章"},
+                }
+            }
+            (root / "state.json").write_text(json.dumps({
+                "schema_version": 1,
+                "records": existing,
+                "attempted": {},
+                "metrics_cache": {},
+            }), encoding="utf-8")
+            args = parse_args([
+                "--state", str(root / "state.json"),
+                "--output", str(root / "articles.json"),
+                "--report", str(root / "report.json"),
+            ])
+            outage = urllib.error.HTTPError("https://www.ebi.ac.uk/europepmc", 503, "Service Unavailable", {}, None)
+            with patch("automation.collector.search_europe_pmc", side_effect=outage):
+                summary = run(args)
+            self.assertEqual(summary["status"], "upstream_unavailable")
+            self.assertEqual(summary["published"], 0)
+            self.assertEqual(summary["preserved_articles"], 1)
+            output = json.loads((root / "articles.json").read_text(encoding="utf-8"))
+            self.assertEqual(len(output["articles"]), 1)
+            report = json.loads((root / "report.json").read_text(encoding="utf-8"))
+            self.assertEqual(report["last_run"]["status"], "upstream_unavailable")
+            self.assertIn("503", report["last_run"]["search_error"])
+            self.assertEqual(report["processed"], [])
 
 
 if __name__ == "__main__":

@@ -408,7 +408,23 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     }
     attempted: dict[str, Any] = state.get("attempted", {}) if isinstance(state.get("attempted"), Mapping) else {}
     metrics_cache: dict[str, Any] = state.get("metrics_cache", {}) if isinstance(state.get("metrics_cache"), Mapping) else {}
-    candidates = search_europe_pmc(args.query, page_size=args.candidate_limit, fixture=args.fixture)
+    # Europe PMC occasionally returns a transient 5xx/429 response even when
+    # the article library and the workflow runner are healthy.  A retry is
+    # handled in ``_http_read``; if the upstream still cannot be reached,
+    # preserve the current library and publish a diagnostic report instead of
+    # failing the whole GitHub Actions job.  This makes a missed collection
+    # day visible without deleting existing articles or replacing the output
+    # with an empty result.
+    search_error = ""
+    search_status = "success"
+    try:
+        candidates = search_europe_pmc(args.query, page_size=args.candidate_limit, fixture=args.fixture)
+    except (OSError, urllib.error.URLError, ValueError) as exc:
+        search_status = "upstream_unavailable"
+        code = getattr(exc, "code", "")
+        detail = clean_text(str(exc))
+        search_error = f"HTTP {code}: {detail}" if code else (detail or type(exc).__name__)
+        candidates = []
     def eligible(candidate: Mapping[str, Any]) -> bool:
         if candidate["relevance_score"] < args.min_score or candidate["id"] in records:
             return False
@@ -440,7 +456,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             records[record["id"]] = public_projection(record)
             published_this_run += 1
     published = sorted(records.values(), key=lambda r: (r.get("year", ""), r.get("updated_at", "")), reverse=True)
-    state.update({"schema_version": SCHEMA_VERSION, "updated_at": utc_now(), "records": records, "attempted": attempted, "metrics_cache": metrics_cache, "last_run": {"selected": len(selected), "published": published_this_run, "candidates": len(candidates), "skipped_without_pmcid": skipped_without_pmcid, "finished_at": utc_now()}})
+    state.update({"schema_version": SCHEMA_VERSION, "updated_at": utc_now(), "records": records, "attempted": attempted, "metrics_cache": metrics_cache, "last_run": {"status": search_status, "selected": len(selected), "published": published_this_run, "candidates": len(candidates), "skipped_without_pmcid": skipped_without_pmcid, "search_error": search_error, "preserved_articles": len(records), "finished_at": utc_now()}})
     save_json(args.state, state)
     save_json(args.output, {"schema_version": SCHEMA_VERSION, "generated_at": utc_now(), "articles": [public_projection(record) for record in published]})
     report_records = [{key: value for key, value in record.items() if key not in {"abstract", "fulltext_text", "methods_text", "results_text", "article"}} for record in processed]
