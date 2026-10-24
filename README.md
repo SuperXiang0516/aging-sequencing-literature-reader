@@ -1,17 +1,17 @@
-# 衰老测序文献解读库
+# 论文绘图案例库
 
 独立于「衰老测序文献雷达」的网站原型。独立页面、数据、运行状态与未来部署；不读取、修改或依赖原日报的业务数据。
 
 ## 当前已完成
 
-- `web/index.html`：可独立打开的静态页面；包含 50 篇候选论文及对应的静态阅读记录。
+- `web/index.html`：自动更新网站入口；以公众号/Word 式连续文章展示 `web/generated/articles.json` 中通过门禁的论文。
 - 「图形形式」与「分析功能」两个独立下拉选项，支持组合筛选。
 - 论文目录、图源与代码链接、输入文件结构、中文静态阅读笔记、待核问题。
 - 已移除双入口导航和衰老日报快照。
 
 当前仓库已经包含一个独立的自动化入口：`automation/collector.py`、`.github/workflows/daily-literature.yml` 和 `web/auto-library.html`。它不会执行作者代码，也不会把 PDF 页面截图当作正文图；它只在全文、正文图和图注都能追溯时发布文章。现有 `literature-demo.html` 的 3 篇示范仍然保留。
 
-自动化流程为：Europe PMC 候选检索 → 衰老/二代/三代/多组学/工具开发相关性评分 → 只选取尚未处理且分数达标的候选（默认每天最多 5 篇）→ 获取 PMC 全文 XML、正文方法、结果和 Figure 原图直链 → 查询 EasyScholar 期刊指标 → 调用 DeepSeek/OpenAI 兼容接口生成公众号式中文解读 → 质量门禁 → 写入 `web/generated/articles.json` → GitHub Pages 发布。无法获取正文或原图的候选会进入运行报告，不会显示在网站上；暂时的 AI 失败会在后续运行中有限重试。
+自动化流程为：Europe PMC 候选检索 → 衰老/二代/三代/多组学/工具开发相关性评分 → 只选取尚未处理且分数达标的候选（默认每天最多 5 篇）→ 获取 PMC 全文 XML、正文方法、结果和 Figure 原图直链 → 查询 EasyScholar 期刊指标 → 只保留 EasyScholar 确认的 SCI/JCR 1 区期刊 → 调用 DeepSeek/OpenAI 兼容接口生成公众号式中文解读 → 质量门禁 → 写入 `web/generated/articles.json` → GitHub Pages 发布。无法获取正文、正文图、图注或 Q1 指标的候选会进入运行报告，不会显示在网站上；暂时的 AI 失败会在后续运行中有限重试。
 
 ## 后续复用范围
 
@@ -42,7 +42,7 @@ GitHub Secrets 官方说明：https://docs.github.com/en/actions/how-tos/write-w
 
 ## 自动化入口与密钥
 
-网站入口是 `web/auto-library.html`。GitHub Actions 每天 01:17 UTC（北京时间 09:17）运行，也可以在 Actions 页面手动运行。页面中作者和期刊分开显示，期刊格式为 `期刊名（IF …；JCR …）`；若 EasyScholar 没有匹配结果则显示“指标待查”，不会让 AI 猜测。
+网站入口是 `web/index.html`（源模板为 `web/auto-library.html`）。GitHub Actions 每天 01:17 UTC（北京时间 09:17）运行，也可以在 Actions 页面手动运行。页面采用本地测试的公众号/Word 式详情页：文章信息 → 背景与问题 → 研究设计 → 完整方法翻译 → 结果解析 → 正文原图与逐图图注/解读 → 局限与启发。作者和期刊分开显示，期刊格式为 `期刊名（IF …；JCR …）`；未被 EasyScholar 确认 SCI/JCR 1 区的文章不会发布。
 
 需要在 GitHub 仓库的 Settings → Secrets and variables → Actions 中添加：
 
@@ -51,7 +51,7 @@ GitHub Secrets 官方说明：https://docs.github.com/en/actions/how-tos/write-w
 | `LLM_API_KEY` 或 `DEEPSEEK_API_KEY` | 生成中文方法/结果/图注解读 |
 | `LLM_API_URL` | 可选；不填时使用 DeepSeek Chat Completions 地址 |
 | `LLM_MODEL` | 可选；不填时使用 `deepseek-chat` |
-| `EASYSCHOLAR_SECRET_KEY` | 可选；查询 IF/JCR，缺失时只显示“指标待查” |
+| `EASYSCHOLAR_SECRET_KEY` | 必需；查询 IF/JCR，只有确认 SCI/JCR 1 区的期刊才会发布 |
 
 不要把密钥写进 JSON、HTML、脚本或提交记录。`NCBI_API_KEY` 不是此入口的必需项，因为候选检索默认使用 Europe PMC；后续增加 NCBI 备用源时再配置即可。
 

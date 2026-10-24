@@ -416,7 +416,7 @@ def extract_fulltext(xml_text: str, pmcid: str) -> tuple[str, str, str, list[dic
 
 def easy_scholar_metrics(journal: str, cache: dict[str, Any]) -> dict[str, str]:
     journal = clean_text(journal)
-    empty = {"impact_factor": "", "jcr": "", "status": "unavailable_no_secret", "source": "EasyScholar", "retrieved_at": ""}
+    empty = {"impact_factor": "", "jcr": "", "jcr_quartile": "", "jcr_q1": False, "status": "unavailable_no_secret", "source": "EasyScholar", "retrieved_at": ""}
     if not journal:
         empty["status"] = "missing_journal"
         return empty
@@ -434,7 +434,13 @@ def easy_scholar_metrics(journal: str, cache: dict[str, Any]) -> dict[str, str]:
         sci = clean_text(ranks.get("sci"))
         ssci = clean_text(ranks.get("ssci"))
         jcr = " / ".join(x for x in (f"SCI {sci}" if sci else "", f"SSCI {ssci}" if ssci else "") if x)
-        result = {"impact_factor": clean_text(ranks.get("sciif")), "jcr": jcr, "status": "matched" if (ranks.get("sciif") or jcr) else "not_found", "source": "EasyScholar", "retrieved_at": utc_now()}
+        sci_quartile = clean_text(sci)
+        # EasyScholar has returned values such as "Q1", "SCI Q1", "1区"
+        # and "SCI 1区" across API versions.  Normalize them for the strict
+        # publication gate while retaining the original display string.
+        quartile_text = sci_quartile.casefold().replace(" ", "")
+        is_q1 = bool(re.search(r"(?:^|(?:sci|jcr))q?1(?:$|[^0-9])", quartile_text) or re.search(r"(?:^|(?:sci|jcr))1区(?:$|[^0-9])", quartile_text))
+        result = {"impact_factor": clean_text(ranks.get("sciif")), "jcr": jcr, "jcr_quartile": sci_quartile, "jcr_q1": is_q1, "status": "matched" if (ranks.get("sciif") or jcr) else "not_found", "source": "EasyScholar", "retrieved_at": utc_now()}
     except (OSError, ValueError, KeyError, TypeError):
         result = {**empty, "status": "error", "retrieved_at": utc_now()}
     cache[cache_key] = result
@@ -448,6 +454,14 @@ def metric_label(metrics: Mapping[str, Any]) -> str:
     if clean_text(metrics.get("jcr")):
         parts.append(f"JCR {clean_text(metrics['jcr'])}")
     return "；".join(parts) or "指标待查"
+
+
+def is_jcr_q1(metrics: Mapping[str, Any]) -> bool:
+    """Return True only when EasyScholar confirms an SCI/JCR Q1 journal."""
+    if metrics.get("jcr_q1") is True:
+        return True
+    value = clean_text(metrics.get("jcr_quartile") or metrics.get("jcr")).casefold().replace(" ", "")
+    return bool(re.search(r"(?:^|(?:sci|jcr))q?1(?:$|[^0-9])", value) or re.search(r"(?:^|(?:sci|jcr))1区(?:$|[^0-9])", value))
 
 
 def llm_prompt(record: Mapping[str, Any]) -> str:
@@ -478,11 +492,18 @@ def generate_llm_article(record: dict[str, Any]) -> tuple[dict[str, Any], str]:
 
 def publication_gate(record: Mapping[str, Any], article: Mapping[str, Any]) -> tuple[bool, list[str]]:
     reasons: list[str] = []
+    figures = record.get("figures", [])
+    if not isinstance(figures, list):
+        figures = []
+    if not is_jcr_q1(record.get("metrics", {}) if isinstance(record.get("metrics"), Mapping) else {}):
+        reasons.append("期刊未确认属于 JCR/SCI 1 区")
     if not record.get("fulltext_ok"):
         reasons.append("正文全文未成功提取")
-    if len(record.get("figures", [])) == 0:
+    if len(figures) == 0:
         reasons.append("没有可追溯的正文原图")
-    if any(not clean_text(fig.get("caption")) for fig in record.get("figures", [])):
+    if any(not isinstance(fig, Mapping) or not clean_text(fig.get("image_url") or fig.get("original_url")) for fig in figures):
+        reasons.append("存在缺失正文原图直链")
+    if any(not isinstance(fig, Mapping) or not clean_text(fig.get("caption")) for fig in figures):
         reasons.append("存在缺失图注")
     if not clean_text(record.get("methods_text")):
         reasons.append("正文 Methods 未提取")
@@ -492,10 +513,10 @@ def publication_gate(record: Mapping[str, Any], article: Mapping[str, Any]) -> t
         if not article.get(field):
             reasons.append(f"AI 字段缺失：{field}")
     notes = article.get("figure_notes")
-    if isinstance(notes, list) and len(notes) < len(record.get("figures", [])):
+    if isinstance(notes, list) and len(notes) < len(figures):
         reasons.append("AI 图组解读数量少于正文原图数量")
     if isinstance(notes, list):
-        for index, note in enumerate(notes[: len(record.get("figures", []))]):
+        for index, note in enumerate(notes[: len(figures)]):
             if not isinstance(note, Mapping) or not clean_text(note.get("caption_zh")) or not clean_text(note.get("interpretation")):
                 reasons.append(f"第 {index + 1} 张图的中文图注或解读不完整")
     return not reasons, reasons
@@ -522,14 +543,18 @@ def make_record(candidate: dict[str, Any], metrics_cache: dict[str, Any], xml_fi
     # Do not spend an LLM request on records that cannot provide the source
     # material required by the publication gate.  This is especially important
     # for Europe PMC hits that have a DOI/abstract but no PMCID.
-    if record.get("fulltext_ok") and record.get("figures"):
+    if not is_jcr_q1(record["metrics"]):
+        # Do not spend a DeepSeek request on a journal that cannot be shown
+        # under the user's JCR-1-only policy.
+        article, ai_status = {}, "skipped_non_jcr_q1"
+    elif record.get("fulltext_ok") and record.get("figures"):
         article, ai_status = generate_llm_article(record)
     else:
         article, ai_status = {}, "skipped_no_retrievable_fulltext"
     record["article"] = article
     record["ai_status"] = ai_status
     record["publishable"], record["gate_reasons"] = publication_gate(record, article)
-    record["status"] = "published" if record["publishable"] else ("manual_review" if record["fulltext_ok"] and record["figures"] else "discarded")
+    record["status"] = "published" if record["publishable"] else ("manual_review" if record["fulltext_ok"] and record["figures"] and ai_status != "skipped_non_jcr_q1" else "discarded")
     return record
 
 
@@ -551,12 +576,30 @@ def public_projection(record: Mapping[str, Any]) -> dict[str, Any]:
     return {key: value for key, value in record.items() if key not in excluded}
 
 
+def is_preservable_record(record: Mapping[str, Any]) -> bool:
+    """Keep only already-published records that still satisfy the public gate.
+
+    Older state files can contain records created before the original-figure
+    and JCR-Q1 rules were added.  They must not silently reappear on the next
+    run just because the upstream search is temporarily unavailable.
+    """
+    metrics = record.get("metrics", {}) if isinstance(record.get("metrics"), Mapping) else {}
+    figures = record.get("figures", [])
+    if not is_jcr_q1(metrics) or record.get("publishable") is False:
+        return False
+    if not record.get("fulltext_ok") or not isinstance(figures, list) or not figures:
+        return False
+    if any(not isinstance(figure, Mapping) or not clean_text(figure.get("caption")) or not clean_text(figure.get("image_url") or figure.get("original_url")) for figure in figures):
+        return False
+    return True
+
+
 def run(args: argparse.Namespace) -> dict[str, Any]:
     state = load_json(args.state, {"schema_version": SCHEMA_VERSION, "records": {}, "attempted": {}, "metrics_cache": {}})
     records: dict[str, Any] = {
         key: public_projection(value)
         for key, value in (state.get("records", {}) if isinstance(state.get("records"), Mapping) else {}).items()
-        if isinstance(value, Mapping)
+        if isinstance(value, Mapping) and is_preservable_record(value)
     }
     attempted: dict[str, Any] = state.get("attempted", {}) if isinstance(state.get("attempted"), Mapping) else {}
     metrics_cache: dict[str, Any] = state.get("metrics_cache", {}) if isinstance(state.get("metrics_cache"), Mapping) else {}

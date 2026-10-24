@@ -10,6 +10,7 @@ Europe PMC 检索
   → 每次最多选择 5 篇新候选
   → 获取 PMC 全文 XML、Methods、Results 和 Figure 原图/图注
   → EasyScholar 查询 IF/JCR
+  → 仅保留 EasyScholar 确认的 SCI/JCR 1 区期刊
   → DeepSeek 生成结构化中文公众号式解读
   → 正文、图注、原图、字段完整性质量门禁
   → 追加 web/generated/articles.json 并部署 Pages
@@ -25,7 +26,11 @@ Europe PMC 检索
 4. AI 返回完整的导语、背景、研究问题、方法、结果、局限、启示和逐图解读；
 5. 通过质量门禁。
 
+其中第 5 项还包含严格的 JCR/SCI 1 区门禁：没有 EasyScholar 密钥、没有匹配到期刊指标、或返回的分区不是 Q1/1 区时，候选不会调用 DeepSeek，也不会写入公开文章库。IF 数值本身不替代分区判断。
+
 没有正文或原图的候选会写入 `web/generated/run-report.json`，状态为 `discarded`，不会污染网站。全文完整但 AI 暂时失败的候选状态为 `manual_review`，最多有限重试；已有 `published` 文章不会因为一次接口失败被清空。
+
+Europe PMC 的临时 5xx/429/超时会自动重试；若重试后仍不可用，本轮会以 `upstream_unavailable` 写入运行报告并保留原有文章，工作流不会因一次上游故障清空网站或直接失败。待接口恢复后，下一次定时运行会从未处理候选继续检索。
 
 ## 运行方式
 
@@ -54,4 +59,4 @@ python3 automation/collector.py \
 期刊：Nature Aging（IF 2024：…；JCR 2024：Q1）
 ```
 
-EasyScholar 没有匹配结果时显示“指标待查”，不由模型猜测。接口没有返回指标年份时也不伪造年份。
+EasyScholar 没有匹配结果时，候选会被丢弃并在运行报告中注明“期刊未确认属于 JCR/SCI 1 区”，不由模型猜测。接口没有返回指标年份时也不伪造年份。

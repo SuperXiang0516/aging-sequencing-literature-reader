@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>测序与衰老文献自动解读库</title>
+<style>
+:root{--ink:#273431;--muted:#68756f;--line:#ddd9d1;--paper:#fffdf9;--accent:#3d6fd0;--warm:#b65d36;--soft:#fbf7f0;--green:#365f58}*{box-sizing:border-box}body{margin:0;background:#f3f4f1;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}.shell{max-width:1120px;margin:0 auto;padding:28px 24px 72px}.mast{border-bottom:1px solid var(--line);padding:24px 0 28px}.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--warm);font-weight:800}.mast h1{font-family:Georgia,"Songti SC",serif;font-size:clamp(30px,5vw,52px);font-weight:500;line-height:1.25;margin:12px 0}.mast p{max-width:760px;color:var(--muted);line-height:1.85;margin:0}.nav{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:22px 0}.nav a{color:var(--green);text-decoration:none;font-weight:700}.status{font-size:13px;color:var(--muted)}.list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:var(--paper);border:1px solid var(--line);padding:22px;min-height:280px;display:flex;flex-direction:column;cursor:pointer}.card:hover{border-color:var(--accent);box-shadow:0 12px 28px rgba(48,63,58,.1)}.card h2{font-family:Georgia,"Songti SC",serif;font-size:25px;line-height:1.4;font-weight:500;margin:10px 0}.meta{font-size:13px;color:var(--muted);line-height:1.8}.meta b{color:var(--ink)}.summary{margin:17px 0;line-height:1.9}.tag{color:var(--warm);font-size:12px;font-weight:800}.article{display:none;background:var(--paper);padding:48px 78px 72px;margin-top:20px}.article.active{display:block}.article h1{font-family:Georgia,"Songti SC",serif;font-size:clamp(29px,4vw,44px);font-weight:500;line-height:1.35;text-align:center;margin:0 0 18px}.article .byline{text-align:center;color:var(--muted);font-size:14px;border-bottom:1px solid var(--line);padding-bottom:24px;line-height:1.9}.article .byline .journal{display:block;color:var(--green);font-weight:700}.section{margin:38px 0}.section h2{font-size:23px;color:var(--accent);border-left:4px solid var(--warm);padding-left:12px;margin:0 0 16px}.section p{font-family:Georgia,"Songti SC",serif;font-size:17px;line-height:2.05;margin:0 0 15px}.section ul{font-family:Georgia,"Songti SC",serif;font-size:17px;line-height:2}.figure{border-top:1px solid var(--line);padding-top:28px;margin:38px 0}.figure img{display:block;width:100%;height:auto;margin:0 auto}.figure .caption{font-size:14px;line-height:1.85;color:var(--muted);margin-top:10px}.figure h3{font-size:20px;color:var(--accent);margin:16px 0 9px}.figure .interpretation{font-family:Georgia,"Songti SC",serif;font-size:16px;line-height:1.95}.source{border-top:1px dashed var(--line);padding-top:15px;color:var(--muted);font-size:12px;line-height:1.7}.back{border:0;background:transparent;padding:0;color:var(--green);font-weight:750;cursor:pointer;font-size:14px}.empty{background:var(--paper);border:1px solid var(--line);padding:28px;color:var(--muted);line-height:1.8}.error{color:#a33b2d}.footer{color:var(--muted);font-size:12px;margin-top:26px;line-height:1.8}@media(max-width:700px){.shell{padding:18px 14px 50px}.list{grid-template-columns:1fr}.article{padding:30px 20px 48px}.article h1{font-size:29px}.section p,.section ul{font-size:16px}.nav{display:block}.status{margin-top:8px}}
+</style>
+</head>
+<body>
+<main class="shell">
+  <header class="mast">
+    <div class="eyebrow">AUTOMATED LITERATURE READER · NGS / TGS / MULTI-OMICS / AGING</div>
+    <h1>测序与衰老文献<br>自动解读库</h1>
+    <p>每天从 Europe PMC 筛选相关论文，优先保留能够获得正文、正文图和图注的文章；再生成包含文章信息、背景、完整方法翻译、结果解析、原图图注、局限和启示的公众号式阅读稿。资料不完整的候选不会显示为已发布文章。</p>
+  </header>
+  <div class="nav"><a href="literature-demo.html">← 查看本地三篇完整示范</a><span class="status" id="status">正在读取自动更新记录…</span></div>
+  <section id="list" class="list" aria-label="自动更新文献目录"></section>
+  <section id="reader" class="article" aria-live="polite"></section>
+  <p class="footer">原图由论文开放全文中的 Figure 直链提供，不进行截图或裁剪。期刊指标由 EasyScholar 返回；若接口没有匹配结果，显示“指标待查”，不会由 AI 猜测。科学解读仍建议在正式使用前核对原文。</p>
+</main>
+<script>
+const DATA_URL = 'generated/articles.json';
+const list = document.querySelector('#list');
+const reader = document.querySelector('#reader');
+const statusNode = document.querySelector('#status');
+const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const textBlocks = value => {
+  if(Array.isArray(value)) return `<ul>${value.map(item => `<li>${esc(item)}</li>`).join('')}</ul>`;
+  return String(value ?? '').split(/\n+/).filter(Boolean).map(item => `<p>${esc(item)}</p>`).join('');
+};
+const metric = record => record.journal_display || `${record.journal || ''}（指标待查）`;
+function card(record, index){
+  const article = record.article || {};
+  const title = article.title_zh || record.title;
+  return `<article class="card" data-index="${index}"><span class="tag">${esc(record.article_type || '自动筛选')}</span><h2>${esc(title)}</h2><div class="meta"><b>作者：</b>${esc((record.authors || []).join('、') || '作者信息待查')}<br><b>期刊：</b>${esc(metric(record))} · ${esc(record.year || '')}</div><div class="summary">${esc(article.lead || '已获取正文和原图，等待阅读稿更新。')}</div><div class="meta">正文图 ${record.figures?.length || 0} 张 · DOI ${esc(record.doi || '待查')}</div></article>`;
+}
+function figureBlock(record, note, index){
+  const figure = (record.figures || [])[index] || {};
+  return `<figure class="figure"><img src="${esc(figure.image_url || '')}" alt="${esc(figure.label || `Figure ${index + 1}`)}" referrerpolicy="no-referrer" loading="lazy"><figcaption class="caption"><b>${esc(figure.label || `Figure ${index + 1}`)} 原文图注：</b>${esc(figure.caption || '原文未提供可提取图注')}</figcaption><h3>${esc(note?.label || figure.label || `图 ${index + 1}`)}</h3><div class="caption"><b>图注中文解读：</b>${esc(note?.caption_zh || '图注翻译待更新')}</div><p class="interpretation"><b>怎么读：</b>${esc(note?.interpretation || '图组解读待更新')}</p></figure>`;
+}
+function articleView(record){
+  const article = record.article || {};
+  const notes = Array.isArray(article.figure_notes) ? article.figure_notes : [];
+  const figures = (record.figures || []).map((_, index) => figureBlock(record, notes[index], index)).join('');
+  const supplements = (record.supplements || []).map(item => `<li><a href="${esc(item.url)}" target="_blank" rel="noreferrer">${esc(item.label || '补充材料')}</a>${item.description ? `：${esc(item.description)}` : ''}</li>`).join('');
+  const supplementSection = supplements ? `<section class="section"><h2>补充材料</h2><p>以下仅保留论文提供的补充材料入口，不下载或公开原始测序数据。</p><ul>${supplements}</ul></section>` : '';
+  return `<button class="back" id="back">← 返回文章目录</button><h1>${esc(article.title_zh || record.title)}</h1><div class="byline"><span>作者：${esc((record.authors || []).join('、') || '作者信息待查')}</span><span class="journal">期刊：${esc(metric(record))} · ${esc(record.year || '')}</span><span>DOI：${esc(record.doi || '待查')}</span></div><section class="section"><h2>文章简介</h2>${textBlocks(article.lead)}</section><section class="section"><h2>研究背景</h2>${textBlocks(article.background)}</section><section class="section"><h2>作者要解决什么问题？</h2>${textBlocks(article.research_question)}</section><section class="section"><h2>研究设计</h2>${textBlocks(article.study_design)}</section><section class="section"><h2>正文方法（中文翻译与适当缩写）</h2>${textBlocks(article.methods)}</section><section class="section"><h2>结果解析（按正文逻辑）</h2>${textBlocks(article.results)}</section><section class="section"><h2>逐图解读</h2>${figures || '<p>没有通过质量门禁的正文原图。</p>'}</section>${supplementSection}<section class="section"><h2>局限与边界</h2>${textBlocks(article.limitations)}</section><section class="section"><h2>对研究设计的启发</h2>${textBlocks(article.takeaways)}</section><p class="source">来源：${esc(record.source || 'Europe PMC')} · 正文状态：${esc(record.fulltext_ok ? '已提取' : '待核对')} · 指标状态：${esc(record.metrics?.status || '待查')}</p>`;
+}
+async function load(){
+  try{
+    const response = await fetch(DATA_URL, {cache:'no-store'});
+    if(!response.ok) throw new Error(`HTTP ${response.status}`);
+    const payload = await response.json();
+    const records = Array.isArray(payload.articles) ? payload.articles : [];
+    statusNode.textContent = `${records.length} 篇已通过质量门禁 · 最近更新 ${payload.generated_at || '尚无记录'}`;
+    if(!records.length){ list.innerHTML = '<div class="empty">当前还没有自动发布的文章。首次运行需要配置 LLM API，并且候选必须同时有正文、正文图和图注；不完整候选会留在运行报告中，不会混入网页。</div>'; return; }
+    list.innerHTML = records.map(card).join('');
+    list.querySelectorAll('.card').forEach(node => node.addEventListener('click', () => { const record = records[Number(node.dataset.index)]; reader.innerHTML = articleView(record); list.hidden = true; reader.classList.add('active'); window.scrollTo({top:0, behavior:'smooth'}); document.querySelector('#back').addEventListener('click', () => { reader.classList.remove('active'); list.hidden = false; window.scrollTo({top:0, behavior:'smooth'}); }); }));
+  }catch(error){ statusNode.innerHTML = `<span class="error">自动更新数据暂时无法读取：${esc(error.message)}。请通过 GitHub Pages 或本地 HTTP 服务打开。</span>`; list.innerHTML = '<div class="empty">如果直接双击本地 HTML，浏览器可能阻止读取 JSON；可在项目目录运行 <code>python3 -m http.server</code> 后打开。</div>'; }
+}
+load();
+</script>
+</body>
+</html>

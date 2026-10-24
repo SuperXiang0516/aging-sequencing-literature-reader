@@ -9,16 +9,27 @@ from unittest.mock import patch
 
 from automation.collector import (
     extract_fulltext,
+    easy_scholar_metrics,
     normalize_candidate,
     score_candidate,
     safe_key,
     run,
     parse_args,
+    publication_gate,
     search_ncbi_pmc,
 )
 
 
 BASE = Path(__file__).parent
+Q1_METRICS = {
+    "impact_factor": "12.3",
+    "jcr": "SCI Q1",
+    "jcr_quartile": "Q1",
+    "jcr_q1": True,
+    "status": "matched",
+    "source": "EasyScholar",
+    "retrieved_at": "2026-01-01T00:00:00Z",
+}
 
 
 class CollectorTests(unittest.TestCase):
@@ -64,7 +75,8 @@ class CollectorTests(unittest.TestCase):
                 "--report", str(root / "report.json"),
                 "--max-new", "5",
             ])
-            with patch.dict(os.environ, {"EASYSCHOLAR_SECRET_KEY": ""}, clear=False):
+            with patch.dict(os.environ, {"EASYSCHOLAR_SECRET_KEY": ""}, clear=False), \
+                 patch("automation.collector.easy_scholar_metrics", return_value=Q1_METRICS):
                 summary = run(args)
             self.assertEqual(summary["selected"], 1)
             self.assertEqual(summary["published"], 0)
@@ -96,7 +108,8 @@ class CollectorTests(unittest.TestCase):
                 "--output", str(root / "articles.json"),
                 "--report", str(root / "report.json"),
             ])
-            with patch("automation.collector.generate_llm_article", return_value=(article, "success")):
+            with patch("automation.collector.generate_llm_article", return_value=(article, "success")), \
+                 patch("automation.collector.easy_scholar_metrics", return_value=Q1_METRICS):
                 summary = run(args)
             self.assertEqual(summary["published"], 1)
             output = json.loads((root / "articles.json").read_text(encoding="utf-8"))
@@ -124,7 +137,8 @@ class CollectorTests(unittest.TestCase):
                 "--output", str(root / "articles.json"),
                 "--report", str(root / "report.json"),
             ])
-            with patch("automation.collector.generate_llm_article", return_value=(article, "success")):
+            with patch("automation.collector.generate_llm_article", return_value=(article, "success")), \
+                 patch("automation.collector.easy_scholar_metrics", return_value=Q1_METRICS):
                 self.assertEqual(run(args)["published"], 1)
                 self.assertEqual(run(args)["selected"], 0)
             output = json.loads((root / "articles.json").read_text(encoding="utf-8"))
@@ -185,8 +199,20 @@ class CollectorTests(unittest.TestCase):
                     "title": "Existing published article",
                     "year": "2026",
                     "status": "published",
+                    "publishable": True,
+                    "fulltext_ok": True,
+                    "figures": [{"label": "Fig. 1", "caption": "caption", "image_url": "https://example.org/fig1.jpg"}],
                     "article": {"title_zh": "已有文章"},
-                }
+                    "metrics": Q1_METRICS,
+                },
+                "doi:legacy-without-figure": {
+                    "id": "doi:legacy-without-figure",
+                    "title": "Legacy record without an original figure",
+                    "status": "published",
+                    "publishable": True,
+                    "metrics": Q1_METRICS,
+                    "article": {"title_zh": "旧记录"},
+                },
             }
             (root / "state.json").write_text(json.dumps({
                 "schema_version": 1,
@@ -259,6 +285,39 @@ class CollectorTests(unittest.TestCase):
             records = search_ncbi_pmc("aging AND nanopore", page_size=1)
         self.assertEqual(records[0]["relevance_score"], 12)
         self.assertIn("完整查询命中", records[0]["relevance_evidence"][-1])
+
+    def test_publication_gate_requires_jcr_q1(self):
+        record = {
+            "metrics": {
+                "impact_factor": "4.1",
+                "jcr": "SCI Q2",
+                "jcr_quartile": "Q2",
+                "jcr_q1": False,
+            },
+            "fulltext_ok": True,
+            "figures": [{"label": "Fig. 1", "caption": "caption"}],
+            "methods_text": "methods",
+            "results_text": "results",
+        }
+        article = {
+            "title_zh": "标题",
+            "background": "背景",
+            "methods": "方法",
+            "results": "结果",
+            "figure_notes": [{"caption_zh": "图注", "interpretation": "解读"}],
+        }
+        publishable, reasons = publication_gate(record, article)
+        self.assertFalse(publishable)
+        self.assertIn("期刊未确认属于 JCR/SCI 1 区", reasons)
+
+    def test_easyscholar_sci_q1_is_normalized_for_the_gate(self):
+        payload = {"data": {"officialRank": {"all": {"sciif": "12.3", "sci": "Q1"}}}}
+        with patch.dict(os.environ, {"EASYSCHOLAR_SECRET_KEY": "test-secret"}, clear=False), \
+             patch("automation.collector.http_json", return_value=payload):
+            metrics = easy_scholar_metrics("Example Aging Journal", {})
+        self.assertEqual(metrics["impact_factor"], "12.3")
+        self.assertEqual(metrics["jcr_quartile"], "Q1")
+        self.assertTrue(metrics["jcr_q1"])
 
     def test_europe_outage_uses_ncbi_fallback(self):
         candidate = {

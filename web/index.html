@@ -8,6 +8,71 @@
 <style>
 :root{--ink:#273431;--muted:#68756f;--line:#ddd9d1;--paper:#fffdf9;--accent:#3d6fd0;--warm:#b65d36;--soft:#fbf7f0;--green:#365f58}*{box-sizing:border-box}body{margin:0;background:#f3f4f1;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}.shell{max-width:1120px;margin:0 auto;padding:28px 24px 72px}.mast{border-bottom:1px solid var(--line);padding:24px 0 28px}.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--warm);font-weight:800}.mast h1{font-family:Georgia,"Songti SC",serif;font-size:clamp(30px,5vw,52px);font-weight:500;line-height:1.25;margin:12px 0}.mast p{max-width:760px;color:var(--muted);line-height:1.85;margin:0}.nav{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:22px 0}.nav a{color:var(--green);text-decoration:none;font-weight:700}.status{font-size:13px;color:var(--muted)}.list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:var(--paper);border:1px solid var(--line);padding:22px;min-height:280px;display:flex;flex-direction:column;cursor:pointer}.card:hover{border-color:var(--accent);box-shadow:0 12px 28px rgba(48,63,58,.1)}.card h2{font-family:Georgia,"Songti SC",serif;font-size:25px;line-height:1.4;font-weight:500;margin:10px 0}.meta{font-size:13px;color:var(--muted);line-height:1.8}.meta b{color:var(--ink)}.summary{margin:17px 0;line-height:1.9}.tag{color:var(--warm);font-size:12px;font-weight:800}.article{display:none;background:var(--paper);padding:48px 78px 72px;margin-top:20px}.article.active{display:block}.article h1{font-family:Georgia,"Songti SC",serif;font-size:clamp(29px,4vw,44px);font-weight:500;line-height:1.35;text-align:center;margin:0 0 18px}.article .byline{text-align:center;color:var(--muted);font-size:14px;border-bottom:1px solid var(--line);padding-bottom:24px;line-height:1.9}.article .byline .journal{display:block;color:var(--green);font-weight:700}.section{margin:38px 0}.section h2{font-size:23px;color:var(--accent);border-left:4px solid var(--warm);padding-left:12px;margin:0 0 16px}.section p{font-family:Georgia,"Songti SC",serif;font-size:17px;line-height:2.05;margin:0 0 15px}.section ul{font-family:Georgia,"Songti SC",serif;font-size:17px;line-height:2}.figure{border-top:1px solid var(--line);padding-top:28px;margin:38px 0}.figure img{display:block;width:100%;height:auto;margin:0 auto}.figure .caption{font-size:14px;line-height:1.85;color:var(--muted);margin-top:10px}.figure h3{font-size:20px;color:var(--accent);margin:16px 0 9px}.figure .interpretation{font-family:Georgia,"Songti SC",serif;font-size:16px;line-height:1.95}.source{border-top:1px dashed var(--line);padding-top:15px;color:var(--muted);font-size:12px;line-height:1.7}.back{border:0;background:transparent;padding:0;color:var(--green);font-weight:750;cursor:pointer;font-size:14px}.empty{background:var(--paper);border:1px solid var(--line);padding:28px;color:var(--muted);line-height:1.8}.error{color:#a33b2d}.footer{color:var(--muted);font-size:12px;margin-top:26px;line-height:1.8}@media(max-width:700px){.shell{padding:18px 14px 50px}.list{grid-template-columns:1fr}.article{padding:30px 20px 48px}.article h1{font-size:29px}.section p,.section ul{font-size:16px}.nav{display:block}.status{margin-top:8px}}
 </style>
+<style>
+/* Keep the automatic reader visually consistent with the local公众号/Word
+   demonstration.  The list remains a compact index; a selected article is
+   rendered as one continuous white page so the text and original figures are
+   the focus. */
+.shell{max-width:1440px}
+.article.active{max-width:1060px;margin:30px auto 70px;padding:52px 76px 78px;background:#fff;color:#2e3433;box-shadow:0 14px 35px rgba(24,56,58,.08)}
+.article.active h1{font-family:Georgia,"Songti SC","STSong",serif;font-size:clamp(28px,3.6vw,43px);line-height:1.3;color:#262b2a;margin:0 auto 14px}
+.article.active .byline{font-size:14px;line-height:1.9;color:#6d7772;padding:0 0 20px}
+.article.active .byline span{display:block}
+.article.active .byline .journal{color:#365f58;font-weight:750}
+.article.active .section{margin:38px 0}
+.article.active .section h2{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:23px;line-height:1.35;text-align:left;color:#3d6fd0;border-left:0;border-bottom:1px solid #d8d5ce;padding:0 0 10px;margin:0 0 18px}
+.article.active .section h2:before{content:"";display:inline-block;width:7px;height:22px;margin:0 10px -3px 0;border-radius:4px;background:#b65d36}
+.article.active .section p,.article.active .section li{font-family:Georgia,"Songti SC","STSong","Noto Serif CJK SC",serif;font-size:17px;line-height:2.05;color:#303735}
+.article.active .section ul{margin:0;padding-left:24px}
+.article.active .figure{border-top:0;padding-top:0;margin:34px 0 44px}
+.article.active .figure img{display:block;width:100%;height:auto;margin:0 auto;border:0;border-radius:0;background:#fff}
+.article.active .figure .caption{font-size:14px;line-height:1.85;color:#4b5752;margin-top:10px;padding:0 0 10px;border-bottom:1px dashed #d8d5ce}
+.article.active .figure h3{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:18px;line-height:1.5;text-align:center;color:#3d6fd0;background:#eef4ff;border:1px solid #d6e3ff;border-radius:2px;padding:8px 12px;margin:17px 0 13px}
+.article.active .figure .interpretation{font-family:Georgia,"Songti SC","STSong",serif;font-size:16px;line-height:1.95;color:#394542;margin:0 0 15px}
+.article.active .figure-source{font:13px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:#2e709b}
+.article.active .source{font-size:12px;line-height:1.7;border-top:1px solid #d8d5ce}
+.article.active .figure.image-missing{padding:18px;border:1px dashed #d8d5ce;background:#fbf7f0;color:#6d7772}
+.article.active .figure.image-missing img{display:none}
+@media(max-width:700px){.article.active{padding:32px 20px 52px}.article.active .section p,.article.active .section li{font-size:16px;line-height:1.9}.article.active .figure img{width:100%}}
+</style>
+<style>
+/* 与 literature-demo.html 的本地公众号示范保持同一套阅读层级。 */
+.article.active{max-width:1040px;margin:28px auto 70px;padding:0;background:#fff}
+.article.active .back{margin:0 0 18px}
+.article.active h1{font-size:clamp(30px,4vw,45px);color:#262b2a;margin:0 auto 14px}
+.article.active .byline{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+.article.active .byline .journal{color:var(--green)}
+.article.active .section{margin:38px 0}
+.article.active .section h2{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;text-align:center;border:0;padding:0;color:#3d6fd0;font-size:23px;line-height:1.35;letter-spacing:.02em}
+.article.active .section h2:before{content:"";display:inline-block;width:7px;height:22px;margin-right:9px;vertical-align:-2px;background:var(--warm);border-radius:5px}
+.article.active .paper-info{border-top:1px solid #d8d5ce;border-bottom:1px solid #d8d5ce;padding:17px 0 13px;margin-top:0}
+.article.active .paper-info h2{font-size:19px;margin-bottom:12px}
+.article.active .info-list{display:grid;grid-template-columns:112px minmax(0,1fr);gap:5px 18px;margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14px;line-height:1.75}
+.article.active .info-list dt{font-weight:750;color:#536862}.article.active .info-list dd{margin:0;color:#4c5753}
+.article.active .lead{font-size:20px;line-height:1.85;font-weight:400;max-width:none;margin:0 0 27px;padding:15px 18px;border-left:4px solid #a86b42;background:#fbf7f0;color:#443c35}
+.article.active .editor-note{margin:0 0 27px;padding:0;font-size:16px;line-height:1.9;color:#4b4038}
+.article.active .editor-note b{display:block;color:#c35d34;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:15px;margin-bottom:3px}
+.article.active .core-highlights{margin:30px 0 37px;padding:17px 0 14px;border-top:1px solid #d8d5ce;border-bottom:1px solid #d8d5ce}
+.article.active .core-highlights h2{margin:0 0 9px}.article.active .core-highlights ul{margin:0;padding-left:22px}
+.article.active .workflow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid #d8d5ce;border-bottom:1px solid #d8d5ce;padding:13px 0}
+.article.active .step{border:0;border-right:1px solid #e0ddd7;background:transparent;border-radius:0;padding:6px 9px;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:13px;font-weight:600;color:#52615d;line-height:1.5;text-align:center}
+.article.active .step:last-child{border-right:0}.article.active .step:not(:last-child):after{display:none}
+.article.active .method-flow{margin:20px 0 0;border-top:1px solid #d8d5ce;border-bottom:1px solid #d8d5ce}
+.article.active .method-flow:before{content:"方法流程 · 输入 → 操作 → 输出";display:block;padding:12px 0 4px;color:#3d6fd0;font-size:17px;font-weight:800;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+.article.active .method-flow-item{display:grid;grid-template-columns:48px 174px minmax(0,1fr);gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid #e3e0da}
+.article.active .method-flow-item:last-child{border-bottom:0}.article.active .method-flow-num{font-weight:800;color:#3d6fd0;font-size:17px}
+.article.active .method-flow-item strong{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:#c35d34;font-size:15px}
+.article.active .method-flow-item p{margin:0;font-size:15px;line-height:1.8;color:#3f4d49}
+.article.active .method-full{margin-top:22px;padding-top:18px;border-top:2px solid #d8d5ce;color:#3f4d49}
+.article.active .method-full h3{margin:0 0 14px;color:#3d6fd0;font-size:21px}.article.active .method-full h4{margin:22px 0 7px;color:#a85b37;font-size:17px}
+.article.active .method-full p{margin:0 0 12px;font-size:15px;line-height:1.95}
+.article.active .result-lead{margin:0 0 20px;color:#4b5752}.article.active .wechat-keyword{color:#c35432;font-weight:800}
+.article.active .figure{border-top:0;margin:32px 0 40px;padding-top:0}.article.active .figure img{border:0;border-radius:0}
+.article.active .figure .caption{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;text-align:center;font-size:12px;line-height:1.6}
+.article.active .figure h3{padding:8px 12px;text-align:center;color:#3d6fd0;background:#eef4ff;border:1px solid #d6e3ff;border-radius:2px}
+.article.active .figure .interpretation{font-size:16px;line-height:1.95}.article.active p b{color:#c35d34}
+@media(max-width:700px){.article.active{margin:20px 0 50px}.article.active .info-list{grid-template-columns:1fr;gap:1px}.article.active .info-list dd{padding-left:0}.article.active .workflow{grid-template-columns:1fr 1fr}.article.active .step{border-bottom:1px solid #e0ddd7}.article.active .method-flow-item{grid-template-columns:38px minmax(0,1fr);gap:8px}.article.active .method-flow-item p{grid-column:2}}
+</style>
 </head>
 <body>
 <main class="shell">
@@ -19,7 +84,7 @@
   <div class="nav"><a href="literature-demo.html">← 查看本地三篇完整示范</a><span class="status" id="status">正在读取自动更新记录…</span></div>
   <section id="list" class="list" aria-label="自动更新文献目录"></section>
   <section id="reader" class="article" aria-live="polite"></section>
-  <p class="footer">原图由论文开放全文中的 Figure 直链提供，不进行截图或裁剪。期刊指标由 EasyScholar 返回；若接口没有匹配结果，显示“指标待查”，不会由 AI 猜测。科学解读仍建议在正式使用前核对原文。</p>
+<p class="footer">原图由论文开放全文中的 Figure 直链提供，不进行截图或裁剪。网页只发布 EasyScholar 已确认属于 SCI/JCR 1 区、且同时具备正文、正文图和图注的文章；未满足条件的候选不会混入文章目录。科学解读仍建议在正式使用前核对原文。</p>
 </main>
 <script>
 const DATA_URL = 'generated/articles.json';
@@ -28,10 +93,21 @@ const reader = document.querySelector('#reader');
 const statusNode = document.querySelector('#status');
 const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const textBlocks = value => {
-  if(Array.isArray(value)) return `<ul>${value.map(item => `<li>${esc(item)}</li>`).join('')}</ul>`;
+  if(Array.isArray(value)) return value.map(item => `<p>${esc(typeof item === 'string' ? item : (item?.text || item?.content || JSON.stringify(item)))}</p>`).join('');
   return String(value ?? '').split(/\n+/).filter(Boolean).map(item => `<p>${esc(item)}</p>`).join('');
 };
 const metric = record => record.journal_display || `${record.journal || ''}（指标待查）`;
+const sentenceParts = value => String(value ?? '').replace(/\s+/g,' ').split(/(?<=[。！？；.!?;])\s*/).map(item => item.trim()).filter(Boolean);
+const workflow = value => {
+  const parts = sentenceParts(value).slice(0,5);
+  if(!parts.length) return '';
+  return `<div class="workflow">${parts.map((item,index) => `<div class="step">${String(index+1).padStart(2,'0')}<br>${esc(item.slice(0,42))}</div>`).join('')}</div>`;
+};
+const methodFlow = value => {
+  const parts = sentenceParts(value).slice(0,5);
+  if(!parts.length) return '';
+  return `<div class="method-flow">${parts.map((item,index) => `<div class="method-flow-item"><span class="method-flow-num">${String(index+1).padStart(2,'0')}</span><strong>方法环节 ${index+1}</strong><p>${esc(item)}</p></div>`).join('')}</div>`;
+};
 function card(record, index){
   const article = record.article || {};
   const title = article.title_zh || record.title;
@@ -39,7 +115,18 @@ function card(record, index){
 }
 function figureBlock(record, note, index){
   const figure = (record.figures || [])[index] || {};
-  return `<figure class="figure"><img src="${esc(figure.image_url || '')}" alt="${esc(figure.label || `Figure ${index + 1}`)}" referrerpolicy="no-referrer" loading="lazy"><figcaption class="caption"><b>${esc(figure.label || `Figure ${index + 1}`)} 原文图注：</b>${esc(figure.caption || '原文未提供可提取图注')}</figcaption><h3>${esc(note?.label || figure.label || `图 ${index + 1}`)}</h3><div class="caption"><b>图注中文解读：</b>${esc(note?.caption_zh || '图注翻译待更新')}</div><p class="interpretation"><b>怎么读：</b>${esc(note?.interpretation || '图组解读待更新')}</p></figure>`;
+  const source = figure.image_url || figure.original_url || figure.url || '';
+  const altSource = source.includes('www.ncbi.nlm.nih.gov/pmc/articles/') ? source.replace('www.ncbi.nlm.nih.gov/pmc/articles/', 'pmc.ncbi.nlm.nih.gov/articles/') : source.includes('pmc.ncbi.nlm.nih.gov/articles/') ? source.replace('pmc.ncbi.nlm.nih.gov/articles/', 'www.ncbi.nlm.nih.gov/pmc/articles/') : '';
+  const europeSource = source.match(/\/pmc\/articles\/(PMC[^/]+)\/bin\/(.+)$/i) ? `https://europepmc.org/articles/${source.match(/\/pmc\/articles\/(PMC[^/]+)\/bin\/(.+)$/i)[1]}/bin/${source.match(/\/pmc\/articles\/(PMC[^/]+)\/bin\/(.+)$/i)[2]}` : '';
+  const fallback = altSource ? ` data-alt-src="${esc(altSource)}"${europeSource ? ` data-alt-src2="${esc(europeSource)}"` : ''}` : (europeSource ? ` data-alt-src="${esc(europeSource)}"` : '');
+  const image = source ? `<img src="${esc(source)}" alt="${esc(figure.label || `Figure ${index + 1}`)}" referrerpolicy="no-referrer" loading="lazy" decoding="async"${fallback} onerror="figureImageFallback(this)">` : '<div class="image-missing">未找到正文原图地址。请查看运行报告中的质量门禁原因。</div>';
+  const sourceLink = source ? `<a class="figure-source" href="${esc(source)}" target="_blank" rel="noreferrer">打开论文提供的原图</a>` : '';
+  return `<figure class="figure${source ? '' : ' image-missing'}">${image}<figcaption class="caption"><b>${esc(figure.label || `Figure ${index + 1}`)} 原文图注：</b>${esc(figure.caption || '原文未提供可提取图注')} ${sourceLink}</figcaption><h3>${esc(note?.label || figure.label || `图 ${index + 1}`)}</h3><div class="caption"><b>图注中文解读：</b>${esc(note?.caption_zh || '图注翻译待更新')}</div><p class="interpretation"><b>怎么读：</b>${esc(note?.interpretation || '图组解读待更新')}</p></figure>`;
+}
+function figureImageFallback(image){
+  const alternate = image.dataset.altSrc;
+  if(alternate && image.src !== alternate){ image.dataset.altSrc = image.dataset.altSrc2 || ''; image.dataset.altSrc2 = ''; image.src = alternate; return; }
+  image.closest('.figure')?.classList.add('image-missing');
 }
 function articleView(record){
   const article = record.article || {};
@@ -47,7 +134,10 @@ function articleView(record){
   const figures = (record.figures || []).map((_, index) => figureBlock(record, notes[index], index)).join('');
   const supplements = (record.supplements || []).map(item => `<li><a href="${esc(item.url)}" target="_blank" rel="noreferrer">${esc(item.label || '补充材料')}</a>${item.description ? `：${esc(item.description)}` : ''}</li>`).join('');
   const supplementSection = supplements ? `<section class="section"><h2>补充材料</h2><p>以下仅保留论文提供的补充材料入口，不下载或公开原始测序数据。</p><ul>${supplements}</ul></section>` : '';
-  return `<button class="back" id="back">← 返回文章目录</button><h1>${esc(article.title_zh || record.title)}</h1><div class="byline"><span>作者：${esc((record.authors || []).join('、') || '作者信息待查')}</span><span class="journal">期刊：${esc(metric(record))} · ${esc(record.year || '')}</span><span>DOI：${esc(record.doi || '待查')}</span></div><section class="section"><h2>文章简介</h2>${textBlocks(article.lead)}</section><section class="section"><h2>研究背景</h2>${textBlocks(article.background)}</section><section class="section"><h2>作者要解决什么问题？</h2>${textBlocks(article.research_question)}</section><section class="section"><h2>研究设计</h2>${textBlocks(article.study_design)}</section><section class="section"><h2>正文方法（中文翻译与适当缩写）</h2>${textBlocks(article.methods)}</section><section class="section"><h2>结果解析（按正文逻辑）</h2>${textBlocks(article.results)}</section><section class="section"><h2>逐图解读</h2>${figures || '<p>没有通过质量门禁的正文原图。</p>'}</section>${supplementSection}<section class="section"><h2>局限与边界</h2>${textBlocks(article.limitations)}</section><section class="section"><h2>对研究设计的启发</h2>${textBlocks(article.takeaways)}</section><p class="source">来源：${esc(record.source || 'Europe PMC')} · 正文状态：${esc(record.fulltext_ok ? '已提取' : '待核对')} · 指标状态：${esc(record.metrics?.status || '待查')}</p>`;
+  const highlights = Array.isArray(article.takeaways) ? article.takeaways : sentenceParts(article.takeaways);
+  const highlightSection = highlights.length ? `<section class="section core-highlights"><h2>这篇文章最重要的结论</h2><ul>${highlights.map(item => `<li>${esc(typeof item === 'string' ? item : (item?.text || item?.content || JSON.stringify(item)))}</li>`).join('')}</ul></section>` : '';
+  const info = `<section class="section paper-info"><h2>文章信息</h2><dl class="info-list"><dt>英文题目</dt><dd>${esc(record.title || '待查')}</dd><dt>作者</dt><dd>${esc((record.authors || []).join('、') || '作者信息待查')}</dd><dt>期刊</dt><dd>${esc(metric(record))} · ${esc(record.year || '')}</dd><dt>文章类型</dt><dd>${esc(record.article_type || '研究论文')}</dd><dt>正文原图</dt><dd>${record.figures?.length || 0} 张；使用论文提供的原图直链，不截图、不裁剪</dd><dt>DOI</dt><dd>${record.doi ? `<a href="https://doi.org/${esc(record.doi)}" target="_blank" rel="noreferrer">${esc(record.doi)}</a>` : '待查'}</dd></dl></section>`;
+  return `<button class="back" id="back">← 返回文章目录</button><div class="article-paper"><h1>${esc(article.title_zh || record.title)}</h1><div class="byline"><span>作者：${esc((record.authors || []).join('、') || '作者信息待查')}</span><span class="journal">期刊：${esc(metric(record))} · ${esc(record.year || '')}</span><span>DOI：${esc(record.doi || '待查')}</span></div><div class="article-body">${info}<section class="section intro"><h2>文章简介</h2>${textBlocks(article.lead)}</section><section class="section"><h2>背景与作者要解决的问题</h2>${textBlocks(article.background)}${textBlocks(article.research_question)}</section>${highlightSection}<section class="section"><h2>研究设计</h2>${textBlocks(article.study_design)}${workflow(article.study_design)}</section><section class="section"><h2>正文方法（完整中文翻译与适当缩写）</h2>${methodFlow(article.methods)}<div class="method-full">${textBlocks(article.methods)}</div></section><section class="section"><h2>结果解析（按正文逻辑）</h2><div class="result-lead">${textBlocks(article.results)}</div></section><section class="section"><h2>正文原图与逐图解读</h2>${figures || '<p>没有通过质量门禁的正文原图。</p>'}</section>${supplementSection}<section class="section"><h2>局限与边界</h2>${textBlocks(article.limitations)}</section><section class="section"><h2>对研究设计的启发</h2>${textBlocks(article.takeaways)}</section></div><p class="source">来源：${esc(record.source || 'Europe PMC')} · 正文状态：${esc(record.fulltext_ok ? '已提取' : '待核对')} · 指标状态：${esc(record.metrics?.status || '待查')} · JCR/SCI 1 区门禁：${record.metrics?.jcr_q1 ? '通过' : '待核对'}</p></div>`;
 }
 async function load(){
   try{
