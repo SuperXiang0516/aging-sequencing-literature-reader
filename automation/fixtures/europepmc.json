@@ -1,0 +1,28 @@
+{
+  "resultList": {
+    "result": [
+      {
+        "title": "Long-read metagenomics reveals age-associated gut microbial genomes",
+        "authorString": "A. Example, B. Example",
+        "journalTitle": "Example Aging Journal",
+        "pubYear": "2026",
+        "doi": "10.0000/example.1",
+        "pmcid": "PMC1234567",
+        "pmid": "12345678",
+        "citedByCount": 12,
+        "abstractText": "Ageing is associated with senescence and altered gut microbiota. We used long-read metagenomic sequencing and multi-omics to study the association.",
+        "fullTextUrlList": {"fullTextUrl": [{"url": "https://example.org/fulltext", "documentStyle": "html"}]}
+      },
+      {
+        "title": "A plant biology transcriptome study",
+        "authorString": "C. Example",
+        "journalTitle": "Example Plant Journal",
+        "pubYear": "2026",
+        "doi": "10.0000/example.2",
+        "pmid": "22222222",
+        "abstractText": "Transcriptome sequencing in plants.",
+        "citedByCount": 2
+      }
+    ]
+  }
+}

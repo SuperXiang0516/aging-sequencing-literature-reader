@@ -1,0 +1,9 @@
+<article xmlns:xlink="http://www.w3.org/1999/xlink">
+  <front><article-meta><title-group><article-title>Long-read metagenomics reveals age-associated gut microbial genomes</article-title></title-group></article-meta></front>
+  <body>
+    <sec><title>Materials and methods</title><p>Samples were collected from adults. DNA was extracted and sequenced using PacBio HiFi. Reads were quality filtered and assembled with a long-read assembler.</p></sec>
+    <sec><title>Results</title><p>Age-associated microbial genomes were recovered. The long-read workflow generated complete contigs and identified multi-omics associations.</p></sec>
+    <fig id="F1"><label>Fig. 1</label><caption><p>Workflow and age-associated genome recovery.</p></caption><graphic xlink:href="example-f1.jpg"/></fig>
+    <supplementary-material id="SM1" xlink:href="example-supplement.pdf"><label>Supplementary Table 1</label><caption><p>Sample and assembly metadata.</p></caption></supplementary-material>
+  </body>
+</article>

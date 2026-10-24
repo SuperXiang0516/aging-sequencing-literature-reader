@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>肠道菌群方法学 · 文献图解测试</title>
+<style>
+:root{--ink:#173b3d;--muted:#607475;--line:#d7e4df;--paper:#fffdf8;--mint:#e7f2eb;--blue:#e8f0f9;--gold:#f4e6bd;--coral:#f7dfd2;--accent:#167b6b;--shadow:0 14px 35px rgba(24,56,58,.08)}
+*{box-sizing:border-box}body{margin:0;background:#f5f7f3;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65}a{color:#126b7c;text-decoration:none}a:hover{text-decoration:underline}.shell{max-width:1440px;margin:0 auto;padding:32px 28px 72px}.mast{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;border-bottom:1px solid var(--line);padding-bottom:26px}.eyebrow{color:var(--accent);font-weight:750;letter-spacing:.08em;font-size:13px}.mast h1{font-size:clamp(28px,4vw,52px);line-height:1.12;margin:8px 0 12px;letter-spacing:-.03em}.mast p{max-width:700px;color:var(--muted);margin:0}.status{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px 18px;min-width:238px;box-shadow:var(--shadow);font-size:13px}.status b{display:block;font-size:24px;line-height:1.15;margin-bottom:3px}.toolbar{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}.toolbar button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 15px;color:var(--ink);font-weight:650;cursor:pointer}.toolbar button.active,.toolbar button:hover{background:var(--ink);color:#fff;border-color:var(--ink)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:330px}.card.hidden{display:none}.card .type{font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--accent);text-transform:uppercase}.card h2{font-size:23px;line-height:1.25;margin:9px 0 10px}.card .journal{color:var(--muted);font-size:13px}.takeaway{background:var(--mint);border-radius:14px;padding:13px 15px;margin:17px 0;font-size:15px;font-weight:650}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:auto}.fact{background:#f3f6f2;border-radius:12px;padding:9px}.fact strong{display:block;font-size:18px}.fact span{display:block;color:var(--muted);font-size:11px;line-height:1.35}.detail{margin-top:24px}.detail article{background:var(--paper);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);overflow:hidden;margin:26px 0}.detail-head{padding:30px 32px 26px;background:linear-gradient(120deg,#e4f0e9,#fdf5e7 72%)}.detail-head .tagrow{display:flex;flex-wrap:wrap;gap:8px}.tag{display:inline-flex;border-radius:999px;padding:5px 10px;background:rgba(255,255,255,.74);font-size:12px;font-weight:700}.detail-head h2{font-size:clamp(26px,3.2vw,42px);line-height:1.18;max-width:970px;margin:13px 0 10px}.doi{font-size:13px;color:var(--muted);overflow-wrap:anywhere}.article-body{padding:28px 32px 34px}.lead{font-size:20px;line-height:1.5;font-weight:700;max-width:1000px;margin:0 0 24px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 30px}.metric{border:1px solid var(--line);border-radius:15px;padding:15px;background:#fff}.metric b{font-size:25px;display:block;line-height:1.15}.metric span{font-size:12px;color:var(--muted)}.section{margin:30px 0}.section h3{font-size:20px;margin:0 0 13px;display:flex;align-items:center;gap:10px}.section h3:before{content:"";width:7px;height:22px;background:var(--accent);border-radius:5px}.workflow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:center}.step{border:1px solid var(--line);background:#fff;border-radius:14px;padding:13px;text-align:center;font-weight:700;font-size:13px;position:relative}.step:not(:last-child):after{content:"→";position:absolute;right:-16px;top:28%;font-size:20px;color:var(--accent);z-index:1}.figure{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:22px;align-items:start;border-top:1px solid var(--line);padding-top:20px;margin-top:20px}.figure img{width:100%;height:auto;display:block;border:1px solid #cbd8d2;border-radius:12px;background:#fff}.figure figcaption{color:var(--muted);font-size:12px;margin-top:8px}.figure h4{font-size:18px;margin:0 0 9px}.figure dl{margin:0}.figure dt{font-weight:800;margin-top:10px}.figure dd{margin:2px 0 0;color:#415b5b}.method{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:13px}.method th,.method td{padding:11px 13px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}.method th{width:23%;background:#f0f6f2;color:#315b57}.method tr:last-child td,.method tr:last-child th{border-bottom:0}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:15px}.box{border-radius:15px;padding:17px;border:1px solid var(--line)}.box.good{background:var(--mint)}.box.warn{background:var(--coral)}.box h4{margin:0 0 8px;font-size:16px}.box ul{margin:0;padding-left:20px}.transfer{background:var(--blue);border-radius:15px;padding:18px}.transfer p{margin:5px 0}.source{font-size:12px;color:var(--muted);border-top:1px dashed var(--line);padding-top:14px;margin-top:24px}.footnote{margin-top:30px;color:var(--muted);font-size:12px}
+@media (max-width:1050px){.grid{grid-template-columns:1fr 1fr}.figure{grid-template-columns:1fr}.workflow{grid-template-columns:1fr 1fr}.step:not(:last-child):after{content:"↓";right:47%;top:auto;bottom:-23px}.metrics{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:680px){.shell{padding:22px 14px 48px}.mast{display:block}.status{margin-top:18px}.grid{grid-template-columns:1fr}.article-body,.detail-head{padding:22px 18px}.twocol{grid-template-columns:1fr}.workflow{grid-template-columns:1fr}.step:not(:last-child):after{right:47%;bottom:-23px}.metrics{grid-template-columns:1fr 1fr}.metric b{font-size:21px}.figure{gap:14px}.card h2{font-size:21px}}
+
+/* 单篇文章尽量接近公众号正文：少一点面板感，多一点连续阅读。 */
+.detail.active{max-width:1040px;margin:30px auto 70px}
+.detail.active .detail-head{background:transparent;border-bottom:1px solid var(--line);border-radius:0;padding:16px 0 22px}
+.detail.active .detail-head h2{max-width:900px;font-size:clamp(27px,3.6vw,43px)}
+.detail.active .tag{background:transparent;border:1px solid var(--line)}
+.detail.active .article-body{padding:25px 0 0;max-width:970px}
+.detail.active .lead{font-size:21px;max-width:900px}
+.detail.active .metric{border:0;border-left:3px solid var(--accent);border-radius:0;background:transparent;padding:8px 13px}
+.detail.active .figure{grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr)}
+.detail.active .section p{max-width:900px}
+.detail.active .box,.detail.active .transfer{border-radius:0;box-shadow:none}
+
+/* 公众号式阅读：目录只呈现摘要，文章在点击后单独打开 */
+.card{transition:transform .18s ease,box-shadow .18s ease}.card:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(24,56,58,.13)}
+.readmore{margin-top:16px;border:0;border-radius:999px;padding:10px 15px;background:var(--ink);color:#fff;font-weight:750;cursor:pointer;text-align:center}.readmore:hover{background:var(--accent)}
+.detail{margin-top:24px;display:none}.detail.active{display:block}.reader-toolbar{display:flex;justify-content:space-between;align-items:center;gap:14px;margin:10px 0 18px}.back-button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 15px;color:var(--ink);font-weight:750;cursor:pointer}.back-button:hover{background:var(--ink);color:#fff}.reader-note{font-size:13px;color:var(--muted);margin:0}
+.detail article{display:none;margin:0}.detail article.active{display:block}
+
+/* Word/公众号正文版：让文章像一张连续的白纸，而不是数据看板。 */
+.detail.active article{background:#fff;border:0;border-radius:0;box-shadow:none;max-width:900px;margin:0 auto;padding:52px 76px 78px;color:#2e3433}
+.detail.active .detail-head{padding:0 0 28px;border-bottom:1px solid #d8d5ce;text-align:center}
+.detail.active .detail-head .tagrow{justify-content:center;gap:7px}
+.detail.active .detail-head .tag{font-size:12px;color:#6f665e;border:0;padding:2px 7px;background:transparent;letter-spacing:.03em}
+.detail.active .detail-head h2{font-family:Georgia,"Songti SC","STSong",serif;font-size:clamp(27px,3.4vw,42px);line-height:1.3;letter-spacing:0;max-width:none;margin:16px auto 12px;color:#262b2a}
+.detail.active .doi{font-size:13px;color:#7c817d;text-align:center}
+.detail.active .article-body{padding:29px 0 0;max-width:none;font-family:Georgia,"Songti SC","STSong","Noto Serif CJK SC",serif;font-size:17px;line-height:2;color:#303735}
+.detail.active .article-body p{margin:0 0 1.05em}
+.detail.active .lead{font-size:20px;line-height:1.85;font-weight:400;max-width:none;margin:0 0 27px;padding:15px 18px;border-left:4px solid #a86b42;background:#fbf7f0;color:#443c35}
+.detail.active .metrics{grid-template-columns:repeat(4,1fr);gap:0;margin:26px 0 38px;padding:13px 0;border-top:1px solid #d8d5ce;border-bottom:1px solid #d8d5ce}
+.detail.active .metric{border:0;border-right:1px solid #e0ddd7;border-radius:0;background:transparent;padding:4px 12px;text-align:center}
+.detail.active .metric:last-child{border-right:0}
+.detail.active .metric b{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:22px;line-height:1.25;color:#385e58}
+.detail.active .metric span{font-size:12px;line-height:1.45;color:#7b807d}
+.detail.active .section{margin:38px 0}
+.detail.active .section h3{display:block;text-align:center;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:23px;line-height:1.35;margin:0 0 19px;color:#3d6fd0;letter-spacing:.02em}
+.detail.active .section h3:before{display:inline;margin-right:5px}
+.detail.active .section h3:after{display:none}
+.detail.active .workflow{grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid #d8d5ce;border-bottom:1px solid #d8d5ce;padding:13px 0}
+.detail.active .step{border:0;border-right:1px solid #e0ddd7;background:transparent;border-radius:0;padding:6px 9px;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:13px;font-weight:600;color:#52615d;line-height:1.5}
+.detail.active .step:last-child{border-right:0}
+.detail.active .step:not(:last-child):after{display:none}
+.detail.active .figure{display:block;border-top:0;padding-top:0;margin:32px 0 40px}
+.detail.active .figure>div:first-child{width:100%}
+.detail.active .figure img{width:100%;height:auto;display:block;border:0;border-radius:0;background:#fff;margin:0 auto}
+.detail.active .figure figcaption{text-align:center;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:12px;line-height:1.6;color:#7d827e;margin-top:10px}
+.detail.active .figure>div:nth-child(2){margin-top:17px}
+.detail.active .figure h4{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:18px;line-height:1.5;margin:0 0 13px;padding:8px 12px;text-align:center;color:#3d6fd0;background:#eef4ff;border:1px solid #d6e3ff;border-radius:2px}
+.detail.active .figure dl{font-size:16px;line-height:1.95}
+.detail.active .figure dt{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-weight:700;color:#c35d34;margin-top:8px}
+.detail.active .figure dd{margin:0;color:#394542}
+.detail.active .method{border:0;border-top:1px solid #d8d5ce;border-radius:0;background:transparent;font-size:15px;line-height:1.8}
+.detail.active .method th,.detail.active .method td{padding:12px 10px;border-bottom:1px solid #e3e0da;background:transparent}
+.detail.active .method th{width:25%;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-weight:700;color:#536862}
+.detail.active .twocol{display:block}
+.detail.active .box{border:0;border-top:1px solid #d8d5ce;border-radius:0;background:transparent;padding:18px 0 4px}
+.detail.active .box h4{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:17px;color:#536862}
+.detail.active .box ul{margin:0;padding-left:22px}
+.detail.active .transfer{background:#fbf7f0;border-left:4px solid #a86b42;border-radius:0;padding:18px 20px;line-height:1.9}
+.detail.active .source{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:12px;line-height:1.7;color:#7b817d;border-top:1px solid #d8d5ce}
+.detail.active .wechat-label{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:13px;font-weight:800;letter-spacing:.12em;color:#a86b42;margin:0 0 9px;text-transform:uppercase}
+.detail.active .paper-info{border-top:1px solid #d8d5ce;border-bottom:1px solid #d8d5ce;padding:17px 0 13px;margin:0 0 34px}
+.detail.active .paper-info h3{font-size:18px;margin:0 0 11px}
+.detail.active .paper-info h3:after{display:none}
+.detail.active .info-list{display:grid;grid-template-columns:112px minmax(0,1fr);gap:5px 18px;margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14px;line-height:1.7}
+.detail.active .info-list dt{font-weight:750;color:#536862}
+.detail.active .info-list dd{margin:0;color:#4c5753}
+.detail.active .intro p,.detail.active .question p{max-width:900px}
+.detail.active .result-lead{margin:0 0 20px;color:#4b5752}
+.detail.active .editor-note{margin:0 0 27px;border-left:0;background:transparent;padding:0;font-size:16px;line-height:1.9;color:#4b4038}
+.detail.active .editor-note b{display:block;color:#c35d34;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:15px;margin-bottom:3px}
+.detail.active .core-highlights{margin:30px 0 37px;padding:17px 0 14px;background:transparent;border-top:1px solid #d8d5ce;border-bottom:1px solid #d8d5ce;border-radius:0}
+.detail.active .core-highlights h3{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:20px;color:#3d6fd0;text-align:center;margin:0 0 9px}
+.detail.active .core-highlights h3:after{display:none}
+.detail.active .core-highlights ul{margin:0;padding-left:22px}
+.detail.active .core-highlights li{margin:6px 0;line-height:1.8}
+.detail.active .wechat-keyword{color:#c35432;font-weight:800}
+.detail.active .wechat-blue{color:#2e709b;font-weight:800}
+.detail.active p b{color:#c35432}
+.detail.active .reading-note{margin:14px 0 0;padding:0;border-left:0;background:transparent;color:#415b66;font-size:16px;line-height:1.9}
+.detail.active .reading-note b{color:#2e709b}
+.detail.active .method-explain{margin-top:18px;padding:15px 0 0;background:transparent;border-top:1px solid #d8d5ce;font-size:16px;line-height:1.9}
+.detail.active .method-explain b{color:#a85b37}
+.detail.active .method-detail{margin-top:14px;padding:14px 0 0;border-top:1px dashed #d8d5ce;font-size:15px;line-height:1.9;color:#46534f}
+.detail.active .method-detail b{color:#2e709b}
+.detail.active .figure-caption{margin:0 0 13px;padding:0 0 10px;border-bottom:1px dashed #d8d5ce;font-size:15px;line-height:1.85;color:#4b5752}
+.detail.active .figure-caption b{color:#c35d34;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+.detail.active .method-flow{margin:20px 0 0;border-top:1px solid #d8d5ce;border-bottom:1px solid #d8d5ce}
+.detail.active .method-flow:before{content:"方法流程 · 输入 → 操作 → 输出";display:block;padding:12px 0 4px;color:#3d6fd0;font-size:17px;font-weight:800;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+.detail.active .method-flow-item{display:grid;grid-template-columns:48px 174px minmax(0,1fr);gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid #e3e0da}
+.detail.active .method-flow-item:last-child{border-bottom:0}
+.detail.active .method-flow-num{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-weight:800;color:#3d6fd0;font-size:17px}
+.detail.active .method-flow-item strong{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:#c35d34;font-size:15px}
+.detail.active .method-flow-item p{margin:0;font-size:15px;line-height:1.8;color:#3f4d49}
+.detail.active .method-full{margin-top:22px;padding-top:18px;border-top:2px solid #d8d5ce;color:#3f4d49}
+.detail.active .method-full h3{margin:0 0 14px;color:#3d6fd0;font-size:21px}
+.detail.active .method-full h4{margin:22px 0 7px;color:#a85b37;font-size:17px}
+.detail.active .method-full p{margin:0 0 12px;font-size:15px;line-height:1.95}
+.detail.active .method-full b{color:#c35432}
+.detail.active .method-full code{font-size:.9em;color:#2e709b;background:#f2f5f3;padding:1px 4px;border-radius:3px}
+.detail.active .method-full .method-source-note{color:#687771;font-size:13px;border-left:3px solid #c35432;padding-left:12px}
+.detail.active .result-translation{margin-top:22px;padding-top:18px;border-top:2px solid #d8d5ce;color:#3f4d49}
+.detail.active .result-translation h3{margin:0 0 12px;color:#3d6fd0;font-size:21px}
+.detail.active .result-translation h4{margin:20px 0 7px;color:#3d6fd0;font-size:18px}
+.detail.active .result-translation p{margin:0 0 13px;font-size:15px;line-height:1.95}
+.detail.active .result-translation b{color:#c35432}
+.detail.active .result-translation .result-source-note{color:#687771;font-size:13px;border-left:3px solid #c35432;padding-left:12px}
+.detail.active .conclusion-list{margin:0;padding-left:22px}
+.detail.active .conclusion-list li{margin:8px 0;padding-left:3px}
+.detail.active .paper-info h3:before{content:"📌 ";color:#c35d34}
+.detail.active .intro h3:before{content:"📖 ";color:#c35d34}
+.detail.active .question h3:before{content:"🔎 ";color:#c35d34}
+.detail.active .section:has(.workflow) h3:before{content:"🧪 ";color:#c35d34}
+.detail.active .section:has(.result-lead) h3:before{content:"📊 ";color:#c35d34}
+.detail.active .section:has(> .figure) > h3:before{content:"📈 ";color:#c35d34}
+.detail.active .section:has(.method) h3:before{content:"🧾 ";color:#c35d34}
+.detail.active .section.evidence h3:before{content:"🔍 ";color:#c35d34}
+.detail.active .reader-toolbar{max-width:900px;margin:0 auto 12px}
+.detail.active .reader-note{font-size:12px;color:#858a86}
+.detail.active .back-button{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;border:0;background:transparent;color:#52716b;padding:8px 0}
+.detail.active .back-button:hover{background:transparent;color:#1f5048;text-decoration:underline}
+@media (max-width:680px){.detail.active article{padding:32px 20px 52px}.detail.active .article-body{font-size:16px;line-height:1.9}.detail.active .lead{font-size:18px}.detail.active .metrics{grid-template-columns:1fr 1fr}.detail.active .metric:nth-child(2){border-right:0}.detail.active .workflow{grid-template-columns:1fr 1fr}.detail.active .step:nth-child(even){border-right:0}.detail.active .step{border-bottom:1px solid #e0ddd7}.detail.active .step:last-child{border-bottom:0}.detail.active .detail-head h2{font-size:28px}.detail.active .info-list{grid-template-columns:1fr;gap:1px}.detail.active .info-list dt{margin-top:8px}.detail.active .info-list dd{padding-left:0}}
+@media (max-width:680px){.detail.active .method-flow-item{grid-template-columns:38px minmax(0,1fr);gap:8px}.detail.active .method-flow-item p{grid-column:2}}
+</style>
+</head>
+<body>
+<main class="shell">
+  <header class="mast">
+    <div>
+      <div class="eyebrow">LOCAL LITERATURE TEST · v0.1</div>
+      <h1>肠道菌群方法学<br>文献图解测试页</h1>
+      <p>从本地整理的 46 篇正文 PDF 中挑选 3 篇，采用“目录卡片 → 单篇文章”的公众号式解读：正文按背景、方法、结果、逐图解读、局限和启示完整展开；图像直接使用论文提供的 Figure 原图链接，不把 PDF 页面当作正文图。</p>
+    </div>
+    <div class="status"><b>3 篇完整示范</b>衰老机制 · 联合测序 · 工具/组装基准<br><span style="color:var(--muted)">正文图来自出版社 / PMC 原图直链 · 当前为本地演示</span></div>
+  </header>
+
+  <section id="library" class="library" aria-label="文献目录">
+  <nav class="toolbar" aria-label="文献类型筛选">
+    <button class="active" data-filter="all">全部 3</button>
+    <button data-filter="aging">衰老机制</button>
+    <button data-filter="hybrid">二代 + 三代</button>
+    <button data-filter="benchmark">工具 / 基准</button>
+  </nav>
+
+  <section class="grid" aria-label="文献目录">
+    <article class="card" data-type="aging">
+      <div class="type">研究发现型 · 衰老</div>
+      <h2>肠道菌群产生的 PAA 如何推动内皮细胞衰老？</h2>
+      <div class="journal">Nature Aging · Saeedi Saravi et al. · 2025</div>
+      <div class="takeaway">把“菌群变化—代谢物—血管衰老”连成了一条可实验验证的机制链。</div>
+      <div class="facts"><div class="fact"><strong>7,303</strong><span>人群年龄范围 18–95 岁</span></div><div class="fact"><strong>PAA/PAGln ↑</strong><span>人和小鼠均随年龄升高</span></div><div class="fact"><strong>H₂O₂</strong><span>线粒体氧化应激机制</span></div></div><button class="readmore" data-open="paa">查看文章解读 →</button>
+    </article>
+    <article class="card" data-type="hybrid">
+      <div class="type">方法型 · 二代 + 三代</div>
+      <h2>联合短读长与长读长，肠道病毒基因组能完整到什么程度？</h2>
+      <div class="journal">Advanced Science · Chen et al. · 2024</div>
+      <div class="takeaway">长读长负责“补完整度”，短读长负责“规模和覆盖”，混合组装扩大了病毒暗物质。</div>
+      <div class="facts"><div class="fact"><strong>135</strong><span>健康中国人粪便样本</span></div><div class="fact"><strong>21,499</strong><span>非冗余 vOTUs</span></div><div class="fact"><strong>≈35%</strong><span>完整病毒基因组</span></div></div><button class="readmore" data-open="hybrid">查看文章解读 →</button>
+    </article>
+    <article class="card" data-type="benchmark">
+      <div class="type">工具评测型 · 组装</div>
+      <h2>同一批肠道病毒样本，为什么不同组装器得到不同答案？</h2>
+      <div class="journal">Microbiome · Wang et al. · 2024</div>
+      <div class="takeaway">没有单一“最佳工具”：NGS、TGS、混合组装互补，多个 assembler 合并才接近完整图景。</div>
+      <div class="facts"><div class="fact"><strong>95</strong><span>配对 VLP 粪便样本</span></div><div class="fact"><strong>12</strong><span>组装器被比较</span></div><div class="fact"><strong>4.83–21.7×</strong><span>高质量病毒基因组扩增</span></div></div><button class="readmore" data-open="benchmark">查看文章解读 →</button>
+    </article>
+  </section>
+
+  </section>
+
+  <section class="detail">
+    <div class="reader-toolbar"><button class="back-button" id="backToLibrary">← 返回文献目录</button><p class="reader-note">单篇文章阅读 · 研究背景 → 方法 → 结果 → 图解 → 局限 → 对课题的启发</p></div>
+    <article id="paa">
+      <div class="detail-head"><div class="tagrow"><span class="tag">研究发现型</span><span class="tag">衰老 × 肠道菌群</span><span class="tag">shotgun + 代谢组 + 机制验证</span></div><h2>Gut microbiota-dependent increase in phenylacetic acid induces endothelial cell senescence during aging</h2><div class="doi">Nature Aging (2025) · DOI: <a href="https://doi.org/10.1038/s43587-025-00864-8" target="_blank" rel="noreferrer">10.1038/s43587-025-00864-8</a></div></div>
+      <div class="article-body">
+        <div class="wechat-label">导语 · 这篇文章讲了什么？</div>
+        <div class="editor-note"><b>编者注</b><p>这篇文章值得学习的不是“某个菌导致衰老”这一句结论，而是它如何把一个人群相关性拆成可验证的实验链：先找年龄相关代谢物，再追溯产生它的菌株和功能，最后用定植、细胞机制和反向干预逐层确认。</p></div>
+        <p class="lead">核心结论：衰老相关肠道菌群改变提高 PAA/PAGln 暴露，PAA 通过线粒体 H₂O₂ 诱导内皮细胞衰老；乙酸补充则提供了一个相反方向的 senomorphic 干预线索。</p>
+        <div class="section paper-info"><h3>文章信息</h3><dl class="info-list"><dt>中文题目</dt><dd>衰老过程中肠道菌群依赖的苯乙酸升高诱导内皮细胞衰老</dd><dt>英文题目</dt><dd>Gut microbiota-dependent increase in phenylacetic acid induces endothelial cell senescence during aging</dd><dt>作者</dt><dd>Saeedi Saravi 等</dd><dt>期刊</dt><dd><i>Nature Aging</i>（IF/JCR 待查） · 2025</dd><dt>研究类型</dt><dd>人群代谢组关联 + 小鼠菌株定植 + 内皮细胞机制验证</dd><dt>研究对象</dt><dd>18–95 岁人群、衰老小鼠、内皮细胞，以及 Clostridium sp. ASF356</dd><dt>文章入口</dt><dd><a href="https://doi.org/10.1038/s43587-025-00864-8" target="_blank" rel="noreferrer">DOI / 出版社原文</a> · 下方图片均为论文提供的 Figure 原图</dd></dl></div>
+        <div class="core-highlights"><h3>🌟 核心亮点</h3><ul><li><span class="wechat-keyword">从人群到机制</span>：7,303 人的年龄相关代谢物线索，最终落到小鼠定植和内皮细胞实验。</li><li><span class="wechat-keyword">不是只看菌丰度</span>：作者追踪 PAA/PAGln 的来源通路，并把 Clos ASF356 作为可干预的候选菌株。</li><li><span class="wechat-keyword">有反向验证</span>：用 D+Q 和乙酸干预观察血管/细胞表型是否能够被部分逆转。</li><li><span class="wechat-keyword">可学习的逻辑</span>：相关性 → 菌株因果 → 细胞机制 → 干预验证，每一步都对应一个更强的主张。</li></ul></div>
+        <div class="section intro"><h3>文章简介</h3><p>文章围绕一个很具体的衰老问题展开：年龄相关的肠道菌群变化，是否会通过 PAA/PAGln 代谢轴把信号传递到血管内皮？作者将人群观察、动物定植、细胞实验和干预验证串成一条证据链，最后把候选菌株和代谢物落到可测量的内皮衰老表型上。</p></div>
+        <div class="section intro"><h3>研究背景 · 为什么要研究这个问题？</h3><p>血管内皮功能下降是衰老的重要表型之一，但“年龄增长”如何通过可干预的生物学环节影响内皮细胞，仍然缺少完整解释。肠道菌群不仅改变炎症状态，也会持续产生进入循环的代谢物，因此可能把肠道生态变化传递到血管系统。</p><p>此前研究已经发现苯乙酸（PAA）及其衍生物 PAGln 与心血管风险有关，但年龄相关的菌群变化是否真的会增加 PAA 暴露、并进一步诱导内皮细胞衰老，尚未形成从人群到机制的证据链。</p><p>这里需要区分两个层次：血液中 PAA 升高只是一个暴露信号，内皮衰老则是宿主层面的功能结果。只有把“谁产生了 PAA、PAA 是否进入循环、细胞如何响应”依次接起来，才可能提出可检验的机制，而不是把年龄相关菌群差异直接等同于病因。</p></div>
+        <div class="section question"><h3>作者要解决什么问题？</h3><p>作者没有停留在“老年人和年轻人的菌群不同”这一相关性描述，而是连续追问三件事：哪些菌群功能与 PAA 升高相关？候选菌株能否在动物中造成相同的代谢和血管表型？PAA 是否通过氧化应激直接推动内皮细胞衰老？</p></div>
+        <div class="metrics"><div class="metric"><b>7,303</b><span>18–95 岁人群</span></div><div class="metric"><b>PPFOR / VOR ↑</b><span>衰老小鼠中的 PAA 相关通路</span></div><div class="metric"><b>Clos ASF356</b><span>与 PAA 升高相关的菌株</span></div><div class="metric"><b>H₂O₂</b><span>线粒体氧化应激环节</span></div></div>
+        <div class="section"><h3>研究设计</h3><div class="workflow"><div class="step">人群代谢物<br>年龄关联</div><div class="step">小鼠 shotgun<br>通路/菌株</div><div class="step">Clos 定植<br>因果验证</div><div class="step">内皮细胞<br>机制实验</div><div class="step">乙酸干预<br>反向验证</div></div><div class="method-flow"><div class="method-flow-item"><span class="method-flow-num">01</span><strong>人群代谢物筛选</strong><p>输入：7,303 名 18–95 岁人群的血液代谢物和年龄信息；操作：比较 PAA/PAGln 随年龄的变化并筛选候选轴；输出：年龄相关代谢物候选。</p></div><div class="method-flow-item"><span class="method-flow-num">02</span><strong>小鼠组学定位</strong><p>输入：年轻/衰老小鼠粪便 shotgun 数据；操作：比较 PPFOR/VOR 等 PAA 相关功能通路，并回溯候选菌株；输出：菌株—功能候选集合。</p></div><div class="method-flow-item"><span class="method-flow-num">03</span><strong>菌株定植验证</strong><p>输入：Clostridium sp. ASF356；操作：定植小鼠并测定血浆 PAA/PAGln 与血管表型；输出：“菌株→代谢物”方向性证据。</p></div><div class="method-flow-item"><span class="method-flow-num">04</span><strong>内皮机制实验</strong><p>输入：PAA 暴露的内皮细胞和主动脉组织；操作：检测 H₂O₂、p16、SA-β-gal、γ-H2A.X、SASP、迁移和成管；输出：代谢物→宿主表型机制。</p></div><div class="method-flow-item"><span class="method-flow-num">05</span><strong>反向干预</strong><p>输入：D+Q 或乙酸处理；操作：观察衰老和血管指标是否沿预期方向逆转；输出：机制边界与可干预线索。</p></div></div></div>
+        <div class="section"><h3>研究结果 · 先看作者得到的答案</h3><p class="result-lead">结果按“人群线索—动物因果—细胞机制—干预反证”逐层推进：先定位年龄相关代谢轴，再用菌株定植验证其方向，最后把表型落到线粒体氧化应激和细胞衰老标志物。</p><p><b>第一层：人群和小鼠给出同方向线索。</b> PAA/PAGln 随年龄升高，衰老小鼠中与 PAA 生成相关的微生物功能也更加突出。这个结果把候选代谢物从“已知风险分子”变成了“可能连接肠道和血管衰老的中间环节”。</p><p><b>第二层：定植实验把相关性向因果推进。</b> 作者选择 Clos ASF356 进行定植，观察到 PAA 暴露、血管表型和内皮衰老指标同步变化。这里的逻辑重点是干预了一个相对明确的菌株，而不是只比较两组自然形成的菌群。</p></div>
+        <div class="section"><h3>逐图解读</h3>
+          <figure class="figure"><div><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs43587-025-00864-8/MediaObjects/43587_2025_864_Fig1_HTML.png" alt="R006 Nature Aging Figure 1" loading="lazy" decoding="async"><figcaption>Figure 1 原图：年龄、PAA/PAGln 与微生物通路的连接（来源：Nature Aging 文章原图）。</figcaption></div><div><h4>图 1：年龄相关代谢物、微生物通路与内皮表型如何串起来？</h4><p class="figure-caption"><b>图注：</b>图1｜衰老过程中肠道菌群来源代谢物的血浆水平。a，年轻（3月龄）与衰老（>24月龄）C57BL/6J雌雄小鼠血浆PAA和PAGln定量示意图。b、c，采用LC–MS/MS测定小鼠血浆PAA和PAGln水平（n=6）。d，TwinsUK队列中血浆PAA/PAGln浓度与实际年龄的相关性（n=7,303）。e，膳食苯丙氨酸（Phe）经细菌VOR/PPFOR系统生成PAA的示意图。f，小鼠粪便shotgun宏基因组分析流程。g，衰老与年轻小鼠微生物组中VOR/PPFOR基因同源物的分布。h，衰老相关菌群的菌株水平丰度，深色表示携带VOR/PPFOR同源物的分类单元。i，PAA/PAGln与肠道细菌的相关性热图。j，TwinsUK中Clostridium丰度与血浆PAA/PAGln的相关性。k，Clostridium sp. ASF356厌氧培养上清中的PAA/PAGln浓度。l，离体张力肌图及主动脉环对乙酰胆碱的舒张反应。m，主动脉ECs的SA-β-gal染色及阳性细胞比例。n、o，主动脉ECs中p16INK4a和VCAM1的免疫印迹/免疫荧光。p，CD31+ ECs中的γ-H2A.X免疫染色。比例尺20、50和100 μm。误差线和统计检验按正文图注所列方法执行；图中a、d–f、l由BioRender绘制。</p><dl><dt>观察</dt><dd>人和小鼠的 PAA/PAGln 随年龄增加，衰老小鼠的 PPFOR/VOR 相关通路更丰富。</dd><dt>方法</dt><dd>人群代谢物分析、小鼠粪便 shotgun metagenomics、菌株相关性与定植实验。</dd><dt>结果</dt><dd>PAA 与相关微生物通路呈正向联系，Clos 定植可提高血中 PAA 并损害内皮血管生成能力。</dd><dt>边界</dt><dd>这是跨层级证据链，不等于所有衰老人群都由同一菌株驱动；队列、饮食和药物因素仍需外部验证。</dd></dl><p class="reading-note"><b>读图顺序：</b>先确认年龄与代谢物的方向，再看 PPFOR/VOR 等功能通路是否同步变化，最后看候选菌株能否把这个信号带到动物表型。<br><b>可学习的做法：</b>把每个 panel 绑定到一个明确问题；不要用“菌群变了”直接跳到“导致血管衰老”。</p></div></figure>
+          <figure class="figure"><div><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs43587-025-00864-8/MediaObjects/43587_2025_864_Fig2_HTML.png" alt="R006 Nature Aging Figure 2" loading="lazy" decoding="async"><figcaption>Figure 2 原图：Clostridium sp. ASF356 定植与内皮衰老。</figcaption></div><div><h4>图 2：定植实验到底补上了哪一块证据？</h4><p class="figure-caption"><b>图注：</b>图2｜Clostridium sp. ASF356诱导定植小鼠主动脉内皮细胞衰老。a，10–12周龄C57BL/6J雄鼠先接受2周抗生素预处理（ABx），随后灌胃定植ASF356（Clos）4周。b、c，LC–MS/MS测定血浆PAA/PAGln。d，主动脉Col3a1和MMP-9免疫印迹。e–g，主动脉ECs的p16INK4A、γ-H2A.X、IL-1β、IL-6和SA-β-gal衰老标志。h，离体张力肌图及Clos定植小鼠主动脉环舒张反应。i，主动脉内皮芽生长实验及芽数量定量。j，Clos定植后给予衰老细胞清除剂达沙替尼（D）+槲皮素（Q；D 5 mg kg−1、Q 50 mg kg−1，每日灌胃3天）的实验示意。k–m，D+Q处理后的EC衰老标志。n，D+Q对主动脉内皮芽生长的影响和数量定量。比例尺100和200 μm；统计检验、误差线和重复次数按正文图注所列方法执行；a、h–j由BioRender绘制。</p><p>作者先在小鼠中完成菌株定植，再观察血浆 PAA/PAGln、主动脉组织重塑和内皮细胞衰老标志物。图中的关键不是单个柱状图，而是定植后代谢物升高与血管功能下降同时出现，并可被 D+Q 处理部分逆转。</p><p>读这组图时，可以把“定植成功”“代谢物改变”和“宿主表型改变”看成三道质量门。若只有菌株丰度上升而没有 PAA 变化，机制链条并不成立；若 PAA 上升但血管功能不变，也不能直接推出内皮衰老。作者把这些层次放在同一组实验中，增强了证据的连贯性。</p><p class="reading-note"><b>具体看什么：</b>对照组与 Clos 定植组之间，PAA/PAGln、血管结构/功能和 p16、γ-H2A.X 等指标是否同向变化；D+Q 的作用则是帮助判断衰老细胞是否参与表型，而不是证明 PAA 已经被临床治疗逆转。</p></div></figure>
+          <figure class="figure"><div><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs43587-025-00864-8/MediaObjects/43587_2025_864_Fig3_HTML.png" alt="R006 Nature Aging Figure 3" loading="lazy" decoding="async"><figcaption>Figure 3 原图：PAA 暴露、内皮衰老与血管生成能力。</figcaption></div><div><h4>图 3：从分子标志物走到细胞功能</h4><p class="figure-caption"><b>图注：</b>图3｜PAA诱导内皮细胞衰老。a，p4–5代PECs接受PAA（10 μM）72 h后进行衰老标志检测。b，SA-β-gal染色及阳性细胞比例。c，免疫印迹和γ-H2A.X免疫染色反映DNA损伤反应。d，qPCR检测CDKN2A、CDKN2D和CDKN1A转录变化。e，Ki67免疫染色。f，qPCR检测SASP基因IL1A、IL1B、IL6、TNF和VCAM1。g，VCAM1免疫染色。h，10–12周龄雄鼠每日腹腔注射PAA（50 mg kg−1）4周后取主动脉。i，LC–MS/MS测定血浆PAA/PAGln。j–l，主动脉组织重塑和衰老标志的免疫印迹。m，主动脉环血管生成能力及内皮芽数量。体外实验为3次生物学独立重复；比例尺20、50和200 μm；统计检验按正文图注所列方法执行；a、h由BioRender绘制。</p><p>在细胞和小鼠实验中，PAA 会增加 SA-β-gal、p16、γ-H2A.X、IL-1β、IL-6 等衰老与 SASP 指标，并降低内皮迁移和成管能力。这一步把“菌株—代谢物”的关联推进到宿主细胞机制。</p><p>作者进一步把线粒体 H₂O₂ 放在中间位置：PAA 暴露后，氧化应激、DNA 损伤和 SASP 变化方向一致。对读者而言，这意味着图 3 不是单纯的标志物罗列，而是在回答“PAA 为什么能造成血管功能下降”这一机制问题。</p><p class="reading-note"><b>不要只看柱子的高低：</b>SA-β-gal、p16、DNA 损伤和 IL-6 是不同层面的读出，迁移/成管能力则是功能读出。只有分子、分泌和功能三个层次同时改变，才更接近“内皮衰老”这一综合表型。</p></div></figure>
+          <div class="section"><h3>结果解读</h3><p>PAA 代表的是一种潜在的有害衰老代谢轴，而乙酸代表另一条可能改善氧化还原稳态和炎症分泌的方向。对研究设计而言，最值得借鉴的是先用人群和动物数据定位候选通路，再用定植、细胞和代谢物补充实验逐级确认。</p><p>但这仍然不是“发现一个菌就能治疗衰老”。菌株定植、饮食、药物和宿主遗传背景都会改变代谢物水平，因而需要在独立队列和更接近临床的模型中复现。</p><p>对自己的多组学设计来说，可以把这篇文章拆成三个可复用的输出：一是年龄相关代谢物清单，二是能解释代谢物来源的菌株/功能基因，三是可以在细胞或动物中验证的宿主表型。三者缺一时，结论强度都应相应降低。</p></div>
+        </div>
+        <div class="section"><h3>方法卡片</h3><table class="method"><tr><th>研究对象</th><td>人群 18–95 岁；衰老小鼠；内皮细胞；Clostridium sp. ASF356 定植模型</td></tr><tr><th>组学层</th><td>血液 PAA/PAGln、粪便 shotgun metagenomics、代谢物与转录/蛋白验证</td></tr><tr><th>核心分析</th><td>KEGG 通路、CLR/ANCOM、菌株与代谢物关联、氧化应激和 SASP 机制实验</td></tr><tr><th>可迁移方法</th><td>先在队列中找代谢物—微生物通路关联，再用定植/补充实验区分相关与因果。</td></tr></table><div class="method-explain"><b>按作者的实验逻辑复述：</b>①在人群中筛出随年龄变化的 PAA/PAGln；②在年轻/衰老小鼠中确认相关微生物功能和代谢物方向；③从候选菌群中锁定 ASF356，并用定植实验测试它能否改变血中 PAA；④在主动脉和内皮细胞中检测衰老、SASP、氧化应激和血管生成能力；⑤用 D+Q/乙酸做反向干预，观察表型是否沿预期方向变化。这个顺序比“做了哪些组学”更能解释文章为什么有说服力。</div><div class="method-detail"><b>方法全称与缩写：</b>PAA（phenylacetic acid，苯乙酸）；PAGln（phenylacetylglutamine，苯乙酰谷氨酰胺）；shotgun metagenomics（鸟枪法宏基因组测序）；KEGG（Kyoto Encyclopedia of Genes and Genomes，京都基因与基因组百科全书）用于功能通路注释；CLR（centered log-ratio，中心化对数比变换）和 ANCOM（analysis of compositions of microbiomes，微生物组组成差异分析）用于组成型数据比较；SASP（senescence-associated secretory phenotype，衰老相关分泌表型）；SA-β-gal（senescence-associated β-galactosidase，衰老相关 β-半乳糖苷酶）；D+Q（dasatinib + quercetin，达沙替尼与槲皮素联合处理）。</div></div>
+        <div class="twocol"><div class="box good"><h4>优势</h4><ul><li>人群、小鼠和细胞实验形成闭环。</li><li>不是只报告菌群差异，而是给出代谢通路和机制。</li><li>同时提供 PAA 风险方向和乙酸干预方向。</li></ul></div><div class="box warn"><h4>需要谨慎</h4><ul><li>菌群通路丰度不等于实际代谢通量。</li><li>代谢物因果仍依赖特定定植和干预模型。</li><li>向你的长读长菌株级研究迁移时需重新验证菌株归属。</li></ul></div></div>
+        <div class="transfer"><b>对你的课题的启发</b><p>可以把“长读长菌株/功能基因 → 代谢物 → 衰老表型”作为一个可检验的多组学链条，而不是只做年龄组间的物种丰度比较。</p></div>
+        <div class="section"><h3>小结</h3><p>这项研究的价值不在于给出一个“衰老菌株清单”，而在于示范了如何把队列关联转化为可验证的微生物—代谢物—宿主机制。若用于自己的课题，最值得复用的是分层验证逻辑，同时要把菌株分辨率、代谢通量和人群外部验证补上。</p></div>
+        <div class="section evidence"><h3>证据状态</h3><p><b>已核：</b>题目、DOI、研究对象、主要实验链条和三张正文 Figure 来源。<b>仍需人工核对：</b>各子图的精确统计量、菌株定植效率和不同队列的协变量。<b>未执行：</b>作者原始分析代码和完整数据复现。</p></div>
+        <div class="source">本地来源：R006-Saeedi_Saravi_2025-Gut_microbiota-dependent_increase_in_phenylacetic_acid.pdf · 文件仅作本地阅读测试。</div>
+      </div>
+    </article>
+
+    <article id="hybrid">
+      <div class="detail-head"><div class="tagrow"><span class="tag">方法型</span><span class="tag">短读长 + PacBio</span><span class="tag">肠道病毒组</span></div><h2>Efficient Recovery of Complete Gut Viral Genomes by Combined Short- and Long-Read Sequencing</h2><div class="doi">Advanced Science (2024) · DOI: <a href="https://doi.org/10.1002/advs.202305818" target="_blank" rel="noreferrer">10.1002/advs.202305818</a></div></div>
+      <div class="article-body">
+        <div class="wechat-label">导语 · 这篇文章讲了什么？</div>
+        <div class="editor-note"><b>编者注</b><p>这篇文章适合用来理解“为什么要把二代和三代放在同一个研究设计里”。它不是简单比较谁的 reads 更多，而是追问：同一批样本中，短读长和长读长各自能恢复什么，混合组装是否真的带来新的完整基因组。</p></div>
+        <p class="lead">核心结论：Illumina 提供规模与覆盖，PacBio 提供跨重复区域的连续性；两者联合组装能显著提高完整肠道病毒基因组的回收率。</p>
+        <div class="section paper-info"><h3>文章信息</h3><dl class="info-list"><dt>中文题目</dt><dd>结合短读长与长读长测序，高效恢复完整肠道病毒基因组</dd><dt>英文题目</dt><dd>Efficient Recovery of Complete Gut Viral Genomes by Combined Short- and Long-Read Sequencing</dd><dt>作者</dt><dd>Chen 等</dd><dt>期刊</dt><dd><i>Advanced Science</i>（IF/JCR 待查） · 2024</dd><dt>研究类型</dt><dd>二代短读长、PacBio 长读长与混合组装的实际样本比较</dd><dt>研究对象</dt><dd>135 个健康中国人粪便样本，其中 83 个样本获得 PacBio 数据</dd><dt>文章入口</dt><dd><a href="https://doi.org/10.1002/advs.202305818" target="_blank" rel="noreferrer">DOI / 出版社原文</a> · 下方图片均为论文提供的 Figure 原图</dd></dl></div>
+        <div class="core-highlights"><h3>🌟 核心亮点</h3><ul><li><span class="wechat-keyword">同一样本配对</span>：尽量减少样本差异，把平台差异放到实验中心。</li><li><span class="wechat-keyword">长读长补连续性</span>：更容易跨过重复区，获得更长、更完整的病毒基因组。</li><li><span class="wechat-keyword">短读长保规模</span>：适合大样本筛查、丰度比较和高准确度纠错。</li><li><span class="wechat-keyword">输出不止是目录</span>：作者继续分析新颖性、功能和潜在宿主，说明完整基因组为什么有生物学价值。</li></ul></div>
+        <div class="section intro"><h3>文章简介</h3><p>这不是一篇单纯的“病毒组目录扩增”文章，而是一项对平台互补性的实测：同一批粪便样本分别经过 Illumina、PacBio 和混合组装后，作者比较完整度、长度、新颖性和潜在宿主信息，说明长读长究竟改变了哪些可回答的问题。</p></div>
+        <div class="section intro"><h3>研究背景 · 为什么需要联合测序？</h3><p>肠道病毒组的研究常常卡在两个相反的问题上：短读长便宜、覆盖面大，却容易把重复区域和末端结构组装成碎片；长读长能够跨越这些区域，但对 DNA 质量、测序成本和样本处理要求更高。</p><p>因此，真正需要回答的不是“二代还是三代更好”，而是两种数据在同一批样本上分别贡献什么，以及联合组装能否把这些互补信息转化为更多完整、可解释的病毒基因组。</p><p>对病毒基因组来说，“完整”也不是一个脱离流程的绝对词。它依赖于 contig 是否覆盖基因组两端、质量控制工具如何判断完整度，以及去冗余后是否仍能保留真实的不同病毒。理解这一点，才能正确解读文章中的 complete、high-quality 和 novel 等指标。</p></div>
+        <div class="section question"><h3>作者要解决什么问题？</h3><p>作者围绕三个问题展开：长读长是否能提高完整病毒基因组比例？混合组装能否恢复短读长和长读长各自遗漏的病毒？这些新增基因组是否带来新的功能和潜在宿主信息，而不只是增加目录数量？</p></div>
+        <div class="metrics"><div class="metric"><b>135</b><span>健康中国人样本</span></div><div class="metric"><b>83</b><span>PacBio 长读长数据集</span></div><div class="metric"><b>21,499</b><span>非冗余 vOTUs</span></div><div class="metric"><b>6,962</b><span>相对公共库的新 vOTUs</span></div></div>
+        <div class="section"><h3>研究设计</h3><div class="workflow"><div class="step">约 500 g<br>粪便 / VLP 富集</div><div class="step">Illumina<br>短读长</div><div class="step">PacBio<br>长读长</div><div class="step">短/长/混合<br>组装</div><div class="step">CheckV + 宿主<br>网络分析</div></div><div class="method-flow"><div class="method-flow-item"><span class="method-flow-num">01</span><strong>VLP 富集与 DNA 提取</strong><p>输入：粪便样本；操作：富集病毒样颗粒并提取病毒 DNA；输出：进入测序的 VLP DNA 文库。</p></div><div class="method-flow-item"><span class="method-flow-num">02</span><strong>测序平台分流</strong><p>输入：同一批 VLP DNA；操作：分别进行 Illumina short-read 与 PacBio long-read 测序；输出：高准确度短读长和连续性更强的长读长数据。</p></div><div class="method-flow-item"><span class="method-flow-num">03</span><strong>三种策略组装</strong><p>输入：短读长、长读长及两者组合；操作：分别执行 short、long 和 hybrid assembly；输出：三套候选 contig/病毒基因组目录。</p></div><div class="method-flow-item"><span class="method-flow-num">04</span><strong>质量控制与去冗余</strong><p>输入：候选 contigs；操作：病毒识别、去冗余、CheckV 完整度与质量分级；输出：可比较的非冗余 vOTU 集合。</p></div><div class="method-flow-item"><span class="method-flow-num">05</span><strong>生物学注释</strong><p>输入：高质量 vOTUs；操作：分析新颖性、功能基因和潜在宿主网络；输出：从技术目录走向生物学解释。</p></div></div></div>
+        <div class="section"><h3>研究结果 · 先看作者得到的答案</h3><p class="result-lead">作者得到的不是单个平台的胜负，而是一张互补地图：短读长扩大样本覆盖，长读长提高连续性，混合组装再把两者的独特 vOTUs 放回同一个质量控制框架。</p><p><b>第一层：联合目录的规模和完整度同时增加。</b> 文章建立了 21,499 个非冗余 vOTUs，其中相当一部分是相对公共数据库的新序列。重要的不是数量本身，而是这些序列经过病毒识别、去冗余和完整度评估后，能够作为后续比较的稳定单元。</p><p><b>第二层：不同平台贡献不同类型的信息。</b> Illumina 更适合在大量样本中发现丰度变化，PacBio 更容易跨越重复和结构复杂区域；混合组装则把短读长的碱基准确性和长读长的连续性放在同一条组装路径中。</p><p class="reading-note"><b>公众号式读法：</b>先回答“哪个平台找到更多”，再回答“哪些是完整的”，最后追问“新增序列是否改变了功能或宿主解释”。只报告 vOTU 数量，会把最重要的质量差异藏起来。</p></div>
+        <div class="section"><h3>逐图解读</h3><figure class="figure"><div><img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/5826/10987132/5f7dcb98c90e/ADVS-11-2305818-g006.jpg" alt="R020 Advanced Science Figure 1" loading="lazy" decoding="async"><figcaption>Figure 1 原图：联合组装、完整度、长度和新颖性（来源：PMC 文章原图）。</figcaption></div><div><h4>图 1：联合测序带来的不是“更多 reads”，而是更完整的基因组</h4><p class="figure-caption"><b>图注：</b>图中汇总 VLP 流程、短/长/混合组装、vOTU 数量、长度、完整度和新颖性，回答联合测序是否扩大了“可恢复的完整病毒基因组”范围。</p><dl><dt>观察</dt><dd>CHGV 包含约 35% 完整病毒基因组；长读长和混合组装贡献了大量短读长无法单独得到的 vOTUs。</dd><dt>方法</dt><dd>VLP 富集后分别进行 Illumina、PacBio 和混合组装，再去冗余、病毒识别和完整度评估。</dd><dt>结果</dt><dd>PacBio 组装完整基因组比例约 37%，Illumina 约 30%；联合目录覆盖大量两种平台各自独有的病毒。</dd><dt>边界</dt><dd>长读长的优势受 DNA 质量、样本量和组装策略影响；“完整”仍是基于检测工具和参考规则的判定。</dd></dl><p class="reading-note"><b>具体解读：</b>Figure 1 的逻辑是“数量—长度—完整度—新颖性”逐级收紧。越往后，结果越接近可复用的基因组资源；因此 35% complete 不能和 21,499 个 vOTUs 当成同一个指标。</p></div></figure>
+          <figure class="figure"><div><img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/5826/10987132/8bb13a2754bb/ADVS-11-2305818-g003.jpg" alt="R020 Advanced Science Figure 2" loading="lazy" decoding="async"><figcaption>Figure 2 原图：长读长、短读长和联合组装的互补性。</figcaption></div><div><h4>图 2：不同平台各自找到了什么？</h4><p class="figure-caption"><b>图注：</b>图中比较 Illumina、PacBio 和 hybrid 的重叠与独有 vOTUs，并把这些集合与长度、完整度和样本覆盖联系起来，说明平台互补来自不同的可见范围。</p><p>短读长组装适合覆盖大量样本，但更容易得到碎片化 contigs；PacBio 长读长能跨过重复区域，恢复更长的病毒基因组。联合目录并不是简单地把两批结果相加，而是先统一去冗余和质量筛选，再保留两种平台各自贡献的独特 vOTUs。</p><p>读这张图时，建议先看三类结果的重叠和独有部分，再看每类的长度、完整度和样本覆盖。独有序列并不自动等于“新病毒”，它们还要经过病毒性、质量和去冗余判定。</p><p class="reading-note"><b>设计启示：</b>如果你的主要问题是年龄组间丰度差异，二代的数据规模更重要；如果要研究完整噬菌体、质粒或结构变异，三代的独有部分才是重点。混合组装并不意味着所有样本都必须同时做两种测序。</p><p>因此，平台互补本身就是研究结果的一部分：联合测序的价值来自改变了可观察的基因组边界，而不仅仅是增加了 reads 数量。</p></div></figure>
+          <figure class="figure"><div><img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/5826/10987132/4765a6da1245/ADVS-11-2305818-g001.jpg" alt="R020 Advanced Science Figure 3" loading="lazy" decoding="async"><figcaption>Figure 3 原图：新颖性、宿主分布和功能分析。</figcaption></div><div><h4>从“目录”走向生物学解释</h4><p class="figure-caption"><b>图注：</b>图中展示新颖性、功能注释和潜在宿主网络，说明完整基因组不仅能让 contig 变长，还能支持病毒—宿主关系和功能潜力的后续解释。</p><p>CHGV 中约 32% vOTUs 相对已有公共肠道病毒库具有新颖性，作者进一步分析病毒功能和潜在宿主，说明长读长的价值不止是让 contig 变长，而是帮助连接病毒、细菌宿主和功能潜力。</p><p>这一步把技术评价推进到生物学解释：完整基因组更容易进行基因注释、结构比较和宿主关联，但“潜在宿主”仍然是推断结果，需要结合 CRISPR、共现关系或培养实验进一步验证。</p><p>对于衰老研究，这类目录可以作为后续纵向比较和宿主互作分析的参考背景；真正进入你的课题时，还要把年龄、饮食、药物和疾病状态作为协变量记录。</p><p class="reading-note"><b>怎么读：</b>先看新颖性比例，再看功能注释和潜在宿主连线；关键是把“完整基因组”与“可解释性”联系起来，边界是潜在宿主仍需实验验证。</p></div></figure>
+          <div class="section"><h3>结果解读</h3><p>这篇文章最适合用来说明“为什么要联合二代和三代”。如果问题是大规模样本的丰度变化，二代仍然有成本和覆盖优势；如果问题是完整基因组、结构变异、低丰度病毒或宿主链接，三代数据会显著改变可回答的问题。</p><p>但 VLP 富集、测序合格率和病毒识别规则都会影响最终目录，因此不能把本研究的完整度数字直接当作所有实验室的固定预期。</p><p>如果把这套思路迁移到衰老研究，建议将实验目标拆成两层：先用二代在足够大的队列中识别与年龄相关的丰度模式，再从代表性样本加入三代，追踪完整病毒、质粒或结构变异。这样既保留统计效能，也不会让长读长成本失去边界。</p></div>
+        </div>
+        <div class="section"><h3>方法卡片</h3><table class="method"><tr><th>样本</th><td>135 个健康中国人样本；83 个样本获得 PacBio 长读长数据；另有 135 个 mNGS 数据集</td></tr><tr><th>数据类型</th><td>VLP 富集病毒 DNA；Illumina short-read；PacBio long-read；short/long hybrid</td></tr><tr><th>结果规模</th><td>21,499 个非冗余 vOTUs；约 35% complete；约 41% high-quality；约 32% 为相对公共库的新颖 vOTUs</td></tr><tr><th>适合迁移</th><td>在你的肠道衰老研究中，可用短读长做大规模纵向筛查，再用长读长补充病毒/质粒/结构信息。</td></tr></table><div class="method-explain"><b>按作者流程复述：</b>先做 VLP 富集和病毒 DNA 提取，再分别得到 Illumina 与 PacBio 数据；随后比较短读长、长读长和 hybrid assembly；最后经过病毒识别、去冗余、CheckV 完整度评估及宿主/功能注释。每一步都会改变最终目录，所以不能只记录“用了 Illumina 和 PacBio”，还要记录富集方式、深度、组装器和质量阈值。</div><div class="method-detail"><b>方法全称与缩写：</b>VLP（virus-like particle，病毒样颗粒）富集后提取病毒 DNA；mNGS（metagenomic next-generation sequencing，宏基因组二代测序）指 Illumina short-read 数据；PacBio long-read 指单分子长读长数据；hybrid assembly（混合组装）联合短读长和长读长；vOTU（viral operational taxonomic unit，病毒操作分类单元）是去冗余后的病毒序列单位；contig（拼接序列）是组装中间产物；CheckV 用于评估病毒基因组完整度和质量；host prediction 指潜在宿主预测。完整流程是：VLP 富集 → DNA 提取 → Illumina/PacBio 测序 → short、long、hybrid assembly → 病毒识别与去冗余 → CheckV 质量分级 → 功能和宿主注释。</div></div>
+        <div class="twocol"><div class="box good"><h4>优势</h4><ul><li>明确展示二代与三代的互补关系。</li><li>样本规模大，输出目录可复用。</li><li>同时分析完整度、新颖性和宿主关联。</li></ul></div><div class="box warn"><h4>需要谨慎</h4><ul><li>VLP 富集流程不等于普通 shotgun 流程。</li><li>不同平台的测序深度和合格样本数并不完全一致。</li><li>不能把病毒组结果直接外推到全部细菌组。</li></ul></div></div>
+        <div class="transfer"><b>对你的课题的启发</b><p>网站中可以把“平台选择”从一句泛泛建议变成决策卡：研究目标是丰度/规模时偏向二代；目标是完整基因组、结构变异或宿主链接时加入三代；目标是两者兼顾时采用混合流程。</p></div>
+        <div class="section"><h3>小结</h3><p>这篇文章把“为什么要做二代 + 三代”讲得很具体：平台选择应由研究问题决定，而不是由某一种测序技术的宣传语决定。对于衰老课题，先用二代建立人群和纵向规模，再用三代补充完整基因组、结构信息和宿主链接，是更现实的组合。</p></div>
+        <div class="section evidence"><h3>证据状态</h3><p><b>已核：</b>样本规模、短读长/长读长/混合组装的比较框架、主要目录指标和三张正文 Figure 来源。<b>仍需人工核对：</b>每种组装策略的原始深度、完整度阈值和去冗余参数。<b>未执行：</b>作者完整组装流程和原始测序数据复现。</p></div>
+        <div class="source">本地来源：R020-Chen_2024-Efficient_recovery_of_complete_gut_viral_genomes.pdf · 文章版权页标注 CC BY，正式发布仍需保留原始署名与来源。</div>
+      </div>
+    </article>
+
+    <article id="benchmark">
+      <div class="detail-head"><div class="tagrow"><span class="tag">工具评测型</span><span class="tag">NGS / TGS / hybrid</span><span class="tag">assembler + binner</span></div><h2>Complementary insights into gut viral genomes: a comparative benchmark of short- and long-read metagenomes using diverse assemblers and binners</h2><div class="doi">Microbiome (2024) 12:260 · DOI: <a href="https://doi.org/10.1186/s40168-024-01981-z" target="_blank" rel="noreferrer">10.1186/s40168-024-01981-z</a></div></div>
+      <div class="article-body">
+        <div class="wechat-label">导语 · 这篇文章讲了什么？</div>
+        <div class="editor-note"><b>编者注</b><p>工具 benchmark 最容易被写成“软件排行榜”，但这篇文章真正值得学习的是比较设计：同一批配对样本、不同读长、多个 assembler 和 binner，最后用数量、完整度和分类一致性一起评价。</p></div>
+        <p class="lead">核心结论：工具选择本身会改变你看到的肠道病毒图谱；最稳妥的策略不是押注一个 assembler，而是根据测序类型组合工具并检查互补性。</p>
+        <div class="section paper-info"><h3>文章信息</h3><dl class="info-list"><dt>中文题目</dt><dd>肠道病毒基因组的互补信息：使用多种组装器和分箱器比较短读长与长读长宏基因组</dd><dt>英文题目</dt><dd>Complementary insights into gut viral genomes: a comparative benchmark of short- and long-read metagenomes using diverse assemblers and binners</dd><dt>作者</dt><dd>Wang 等</dd><dt>期刊</dt><dd><i>Microbiome</i>（IF/JCR 待查） · 2024 · 12:260</dd><dt>研究类型</dt><dd>配对真实样本的 NGS、TGS、hybrid assembler 与病毒分箱基准评测</dd><dt>研究对象</dt><dd>95 个配对 VLP 粪便样本；比较 3/5/4 类组装器和 4 种 binner</dd><dt>文章入口</dt><dd><a href="https://doi.org/10.1186/s40168-024-01981-z" target="_blank" rel="noreferrer">DOI / 出版社原文</a> · 下方图片均为论文提供的 Figure 原图</dd></dl></div>
+        <div class="core-highlights"><h3>🌟 核心亮点</h3><ul><li><span class="wechat-keyword">控制样本差异</span>：95 个配对样本让不同平台和软件可以直接比较。</li><li><span class="wechat-keyword">拆开两个问题</span>：先看 assembler 如何组装，再看 binner 如何组织 contig。</li><li><span class="wechat-keyword">拒绝单一排行榜</span>：最佳工具取决于读长、目标指标和样本复杂度。</li><li><span class="wechat-keyword">把参数写进结果</span>：软件版本、去冗余和质量阈值本身就是可复现性的一部分。</li></ul></div>
+        <div class="section intro"><h3>文章简介</h3><p>作者把一个常见但容易被忽视的问题摆到台面上：同一批数据换一个 assembler 或 binner，最后的病毒数量、完整度和分类结果都会变化。文章用配对的 NGS、TGS 和 hybrid 数据做系统 benchmark，目标不是宣布一个永久的“最佳软件”，而是给出带条件的选择依据。</p></div>
+        <div class="section intro"><h3>研究背景 · 为什么工具会改变结论？</h3><p>宏基因组分析中，“测序完成”并不等于“生物学问题已经回答”。读长、组装器、病毒识别和分箱策略都会改变 contig 的连续性、数量和分类归属，因此同一批样本可能得到不同的病毒图谱。</p><p>过去的工具比较常把数据类型、软件版本和评价指标混在一起，难以判断差异究竟来自 NGS/TGS/hybrid，还是来自 assembler 和 binner 本身。作者因此用同一批配对样本，把这些因素拆开比较。</p><p>尤其在低丰度、重复序列多或宿主污染明显的样本中，软件输出的差异会被误读为“新的生物学差异”。一个合格的 benchmark 需要同时报告输入数据、组装路径、去冗余规则和质量评价，而不是只给一张数量排行榜。</p></div>
+        <div class="section question"><h3>作者要解决什么问题？</h3><p>作者想知道：不同读长下哪个组装器更适合当前样本？多个 assembler 合并是否真的增加高质量病毒基因组？binner 得到的数量增加，是否同时保持了病毒分类的一致性？</p></div>
+        <div class="metrics"><div class="metric"><b>95</b><span>配对 VLP 粪便样本</span></div><div class="metric"><b>3 / 5 / 4</b><span>NGS / TGS / hybrid assemblers</span></div><div class="metric"><b>4</b><span>binning methods</span></div><div class="metric"><b>4.83–21.7×</b><span>合并结果的高质量基因组增益</span></div></div>
+        <div class="section"><h3>研究设计</h3><div class="workflow"><div class="step">同一样本<br>Illumina + PacBio</div><div class="step">NGS / TGS / HYB<br>多工具组装</div><div class="step">病毒识别<br>去冗余</div><div class="step">4 种 binner<br>分箱</div><div class="step">质量与分类<br>一致性评估</div></div><div class="method-flow"><div class="method-flow-item"><span class="method-flow-num">01</span><strong>配对样本与数据准备</strong><p>输入：95 个配对 VLP 粪便样本；操作：为同一样本准备 Illumina 与 PacBio 数据；输出：可直接比较的 NGS/TGS 输入。</p></div><div class="method-flow-item"><span class="method-flow-num">02</span><strong>多策略组装</strong><p>输入：NGS、TGS 和 hybrid reads；操作：分别运行对应 assembler；输出：按平台和工具分层的候选 contigs。</p></div><div class="method-flow-item"><span class="method-flow-num">03</span><strong>病毒候选清理</strong><p>输入：各 assembler 的 contigs；操作：病毒识别、质量筛选和去冗余；输出：统一口径的病毒序列集合。</p></div><div class="method-flow-item"><span class="method-flow-num">04</span><strong>多 binner 分箱</strong><p>输入：清理后的病毒 contigs；操作：运行 4 种 binner；输出：不同分箱策略下的候选病毒基因组 bins。</p></div><div class="method-flow-item"><span class="method-flow-num">05</span><strong>综合 benchmark</strong><p>输入：所有 bins；操作：比较数量、长度、完整度、包容性和分类一致性；输出：带适用边界的工具选择建议。</p></div></div></div>
+        <div class="section"><h3>研究结果 · 先看作者得到的答案</h3><p class="result-lead">这项 benchmark 的核心发现是“没有一个永远的第一名”。不同读长和 assembler 产生互补结果，合并后数量和完整度明显增加；但分箱结果还必须经过分类一致性检查，不能只看 bin 的数量。</p><p><b>第一层：数据类型决定可见范围。</b> NGS、TGS 和 hybrid 产生的病毒基因组重叠并不完全，说明平台本身已经在筛选你能看到的序列集合。</p><p><b>第二层：软件选择决定结果如何被组织。</b> assembler 决定 contig 如何连接，binner 决定哪些 contig 被放进同一个基因组；因此“数量更多”必须同时接受完整度和分类一致性的检验。</p><p class="reading-note"><b>这篇 benchmark 的学习重点：</b>不要先问“哪个软件最好”，而要先写清楚“我的输入是什么、我要优化哪个指标、错误结果会怎样影响后续生物学结论”。</p></div>
+        <div class="section"><h3>逐图解读</h3><figure class="figure"><div><img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs40168-024-01981-z/MediaObjects/40168_2024_1981_Fig1_HTML.png" alt="R014 Microbiome Figure 1" loading="lazy" decoding="async"><figcaption>Figure 1 原图：流程、工具和评估框架（来源：Springer 文章原图）。</figcaption></div><div><h4>图 1：先把比较问题拆成“数据类型”和“工具类型”</h4><p class="figure-caption"><b>图注：</b>图 1 展示 95 个配对 VLP 样本、NGS/TGS/hybrid assembler、binner、去冗余和评估指标的整体框架；它首先回答“比较是如何被设计出来的”。</p><dl><dt>观察</dt><dd>NGS、TGS 和混合数据得到的病毒基因组重叠有限，说明测序类型会直接改变发现结果。</dd><dt>方法</dt><dd>在相同的 95 个配对 VLP 样本上比较 NGS、TGS、hybrid assembler，并进一步比较 4 种 binner。</dd><dt>结果</dt><dd>MEGAHIT、metaFlye、hybridSPAdes 分别在对应数据类型中表现较好；合并多个 assembler 可将高质量非冗余病毒基因组提高 4.83–21.7 倍。</dd><dt>边界</dt><dd>最佳工具依赖样本、平台和评价指标；CONCOCT 的包容性较强，但可能混入不相关 contigs。</dd></dl><p class="reading-note"><b>读图顺序：</b>先看同一样本在 NGS/TGS/hybrid 下的交集和独有部分，再看不同 assembler 的结果，最后看 binner 是否保持分类一致性。作者把“输入差异”和“软件差异”分成了两层。</p></div></figure>
+          <figure class="figure"><div><img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs40168-024-01981-z/MediaObjects/40168_2024_1981_Fig2_HTML.png" alt="R014 Microbiome Figure 2" loading="lazy" decoding="async"><figcaption>Figure 2 原图：不同 assembler 的结果比较。</figcaption></div><div><h4>先比较 assembler，再比较数据类型</h4><p class="figure-caption"><b>图注：</b>图 2 比较不同 assembler 在 NGS、TGS 和 hybrid 数据中的输出规模、长度与完整度，重点不是给出永久排名，而是显示各工具的互补区间。</p><p>在 NGS、TGS 和 hybrid 三类数据中，最优工具并不相同。MEGAHIT、metaFlye 和 hybridSPAdes 的表现，是在本文样本、版本和评价指标下得到的结果，不应脱离这些条件简化成永久的工具排名。</p><p>读图时应先明确横轴和纵轴分别评价什么：是 contig 数量、完整基因组数量，还是分类一致性。不同指标指向不同的研究目标，不能把它们混成“性能”一个词。</p><p>真正稳定的结论是：不同 assembler 有互补性，单一工具会漏掉一部分病毒基因组。</p><p class="reading-note"><b>怎么读：</b>先按数据类型分组，再在同一组内横向比较 assembler；关键看完整度与长度是否同步提升，而不是只看 contig 数量。</p></div></figure>
+          <figure class="figure"><div><img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs40168-024-01981-z/MediaObjects/40168_2024_1981_Fig5_HTML.png" alt="R014 Microbiome Figure 5" loading="lazy" decoding="async"><figcaption>Figure 5 原图：四种 binner 的包容性和分类一致性。</figcaption></div><div><h4>分箱不是结果的终点</h4><p class="figure-caption"><b>图注：</b>图 5 比较四种 binner 的 inclusiveness 与 taxonomic consistency，展示“尽量不漏掉 contig”和“放入同一 bin 的序列确实一致”之间的权衡。</p><p>CONCOCT 更容易把 contigs 纳入同一 bin，但可能牺牲分类一致性；MetaBAT2、AVAMB 和 vRhyme 在包容性与一致性之间更平衡。</p><p>对初学者而言，“包容性”可以理解为尽量不漏掉 contig，“分类一致性”则是放进同一 bin 的 contig 是否真的属于同一病毒或同一类群。两者存在张力，所以需要同时报告。</p><p>这提醒我们：工具评测不能只看“得到多少 bins”，还要检查 bin 内部是否真的来自同一病毒或同一类群。</p><p class="reading-note"><b>怎么读：</b>把 inclusiveness 与 taxonomic consistency 放在同一坐标系中看；关键不是“谁最多”，而是哪个工具在不混入错误序列的前提下保留足够多的候选。</p></div></figure>
+          <div class="section"><h3>结果解读</h3><p>这篇文章适合放在网站的“工具选择”栏目。读者最终需要的不是一张孤立的性能排行榜，而是一条带条件的决策路径：输入是短读长、长读长还是混合数据？目标是数量、完整度、分类一致性还是宿主关系？是否有足够资源运行多套工具并合并结果？</p><p>对于你的研究，建议把软件版本、输入读长、组装类型、去冗余阈值和质量标准一起记录，否则很难复现“为什么这次结果更好”。</p><p>如果研究目标是衰老相关菌群变化，最好先固定一个可复现的主流程，再把 1–2 个互补工具作为敏感性分析。这样既能避免“挑最好看的结果”，也能把工具差异本身变成可报告的技术结果。</p></div>
+        </div>
+        <div class="section"><h3>方法卡片</h3><table class="method"><tr><th>比较对象</th><td>3 个 NGS assembler、5 个 TGS assembler、4 个 hybrid assembler、4 个 binner</td></tr><tr><th>主要推荐</th><td>NGS：MEGAHIT；TGS：metaFlye；hybrid：hybridSPAdes（以本文样本和指标为前提）</td></tr><tr><th>评价维度</th><td>病毒基因组数量、完整度、长度、分类一致性、分箱 inclusiveness 与 taxonomic consistency</td></tr><tr><th>可迁移方法</th><td>不要只记录“用了哪个软件”，还要保留版本、输入读长、组装类型、去冗余阈值和质量判定标准。</td></tr></table><div class="method-explain"><b>按作者流程复述：</b>先对同一样本获得的 NGS、TGS 和 hybrid 数据分别组装，再进行病毒识别和去冗余；随后把 assembler 输出交给不同 binner，最后用完整度、包容性和分类一致性同时判断。这个设计告诉我们，工具评测应当把“发现多少”和“发现得是否可信”分开报告。</div><div class="method-detail"><b>方法全称与缩写：</b>NGS（next-generation sequencing，二代测序）；TGS（third-generation sequencing，三代测序）；hybrid（混合组装）指同时使用短读长和长读长；assembler（组装器）把 reads 拼接成 contigs；binner（分箱器）按序列特征和丰度把 contigs 归并为候选基因组；inclusiveness（包容性）表示尽量保留候选序列，taxonomic consistency（分类一致性）表示同一 bin 内序列的分类归属是否一致。本文进一步比较 MEGAHIT、metaFlye、hybridSPAdes 等 assembler，以及 CONCOCT、MetaBAT2、AVAMB、vRhyme 等 binner，最后用数量、长度、完整度、包容性和分类一致性综合评价。</div></div>
+        <div class="twocol"><div class="box good"><h4>优势</h4><ul><li>同一样本配对比较，减少样本差异干扰。</li><li>同时评估 assembler 和 binner。</li><li>把“工具互补性”转化为可操作的流程建议。</li></ul></div><div class="box warn"><h4>需要谨慎</h4><ul><li>本文以 VLP 病毒组为主，不等于细菌宏基因组 benchmark。</li><li>版本更新后性能排序可能改变。</li><li>数量增加不一定代表生物学真实性提高。</li></ul></div></div>
+        <div class="transfer"><b>对你的课题的启发</b><p>未来网站的工具评测页应固定显示“输入类型—软件版本—评价指标—适用边界”，而不是只给一个“推荐工具”结论。</p></div>
+        <div class="section"><h3>小结</h3><p>这篇文章提醒我们，工具不是文章最后才补充的技术细节，而是决定结果形状的一部分。做二代、三代和多组学衰老研究时，应把输入数据、软件版本、组装策略、去冗余阈值和质量标准一起报告，读者才能知道一个“新发现”究竟有多稳。</p></div>
+        <div class="section evidence"><h3>证据状态</h3><p><b>已核：</b>95 个配对样本、NGS/TGS/hybrid 组装器和 binner 比较框架、评价维度及三张正文 Figure 来源。<b>仍需人工核对：</b>各工具版本、参数和每个指标的精确定义。<b>未执行：</b>作者 benchmark 全流程重跑。</p></div>
+        <div class="source">本地来源：R014-Wang_2024-Complementary_insights_into_gut_viral_genomes.pdf · 版权页标注 CC BY-NC-ND 4.0；本地页面仅用于结构测试，不对原图做改编。</div>
+      </div>
+    </article>
+  </section>
+  <p class="footnote">测试说明：本页是从本地整理文献生成的静态示范，不代表作者代码已经执行；正文图使用出版社或 PMC 提供的原图直链，正式上线仍需逐篇核对许可证、署名和第三方图片限制。下一步可把这些结构拆成真实数据 JSON、自动生成正文和可追溯的证据字段。</p>
+</main>
+<script>
+const library=document.querySelector('#library');
+const reader=document.querySelector('.detail');
+const buttons=[...document.querySelectorAll('[data-filter]')];
+const cards=[...document.querySelectorAll('.card')];
+const articles=[...document.querySelectorAll('.detail article')];
+const openButtons=[...document.querySelectorAll('[data-open]')];
+const backButton=document.querySelector('#backToLibrary');
+// 图注来自正文 Figure caption 的中文翻译；“怎么读/关键结果”仍保留在图注之后，避免把两者混写。
+const sourceCaptions={
+  paa:[
+    `<b>图注（正文翻译）：</b>图 1｜衰老过程中肠道微生物来源代谢物 PAA 和 PAGln 的血浆水平。a，检测年轻（3 月龄）和衰老（>24 月龄）C57BL/6J 雄性和雌性小鼠血浆 PAA、PAGln 的实验示意图。b、c，使用 LC–MS/MS 测定小鼠血浆 PAA（b）和 PAGln（c）水平（n = 6）。d，TwinsUK 队列中血浆 PAA（左）和 PAGln（右）浓度与实际年龄的相关性（18–95 岁；n = 7,303；男性和女性）。e，膳食苯丙氨酸（Phe）经细菌 VOR/PPFOR 系统生成 PAA 的示意图。f，小鼠粪便微生物组 shotgun 宏基因组分析流程。g，衰老与年轻小鼠微生物组中 VOR 和 PPFOR 基因同源物的分布（n = 5–6；K00169，VOR；K00179，PPFOR）。h，粪便微生物组在菌株水平的年龄相关丰度；深色表示携带 VOR 或 PPFOR 同源物的分类单元。i，衰老组和年轻组富集分类单元中，血浆 PAA/PAGln 与肠道细菌的相关性热图（n = 5–6）。j，TwinsUK 人群中血浆 PAA/PAGln 与 Clostridium 属丰度的相关性（n = 900）。k，Clostridium sp. ASF356 厌氧培养上清中 PAA/PAGln 浓度（n = 8）。l，离体主动脉等长张力肌描记及主动脉环对乙酰胆碱（ACh）的舒张反应（n = 10）。m，升主动脉内皮细胞的 SA-β-gal 染色及阳性细胞比例（n = 5–6）。n、o，主动脉内皮细胞中 p16<sup>INK4a</sup> 和 VCAM1 的免疫检测（n = 5–6）。p，CD31<sup>+</sup> 内皮细胞中的 γ-H2A.X 免疫染色（n = 5–6）。比例尺 20、50 和 100 μm；误差线、统计检验、箱线图定义和显著性标记按正文图注执行；a、d–f、l 由 BioRender 绘制。`,
+    `<b>图注（正文翻译）：</b>图 2｜Clostridium sp. ASF356 诱导定植小鼠主动脉内皮细胞衰老。a，10–12 周龄 C57BL/6J 雄性小鼠先接受 2 周抗生素（ABx）预处理，再经口灌胃 ASF356（Clos）并定植 4 周。b、c，LC–MS/MS 测定血浆 PAA/PAGln（n = 5–6）。d，主动脉 Col3a1 和 MMP-9 免疫印迹（n = 5–6）。e–g，主动脉内皮细胞的 p16<sup>INK4A</sup>、DNA 损伤反应标志 γ-H2A.X、SASP 组分 IL-1β/IL-6 和 SA-β-gal（n = 5–6）。h，离体张力肌描记及 Clos 定植小鼠主动脉环舒张反应（n = 5–6）。i，主动脉内皮出芽实验及出芽数量。j，Clos 定植后给予衰老细胞清除剂达沙替尼（D，5 mg kg<sup>−1</sup>）+ 槲皮素（Q，50 mg kg<sup>−1</sup>）每日灌胃 3 d。k–m，D+Q 处理后的 EC 衰老标志（n = 6）。n，D+Q 对主动脉内皮出芽的影响（n = 8）。i、n 数据来自 8 张显微图并代表 3 次独立生物学重复。比例尺 100 和 200 μm；误差线、统计检验和显著性标记按正文图注执行；a、h–j 由 BioRender 绘制。`,
+    `<b>图注（正文翻译）：</b>图 3｜PAA 诱导内皮细胞衰老。a，第 4–5 代增殖性内皮细胞（PEC）接受 PAA（10 μM）72 h 后检测衰老标志。b，PAA 处理 PEC、vehicle 对照和复制性衰老细胞（SEC）的 SA-β-gal 染色及阳性比例（n = 6）。c，免疫印迹和 γ-H2A.X 免疫染色显示 DNA 损伤反应（n = 6）。d，qPCR 检测 CDKN2A、CDKN2D、CDKN1A。e，Ki67 免疫染色。f，qPCR 检测 SASP 基因 IL1A、IL1B、IL6、TNF、VCAM1。g，VCAM1 免疫染色。h，雄性小鼠每日腹腔注射 PAA（50 mg kg<sup>−1</sup>）4 周后收集主动脉。i，LC–MS/MS 定量血浆 PAA/PAGln（n = 6）。j–l，主动脉 Col3a1/MMP-9、p16<sup>INK4a</sup>/γ-H2A.X、IL-1β/IL-6 的免疫检测。m，PAA 处理与 vehicle 对照小鼠主动脉环血管生成能力及出芽数量（n = 8）。体外实验为 3 次独立生物学重复；比例尺 20、50 和 200 μm；误差线、ANOVA/Tukey 与双侧 t 检验按正文图注执行；a、h 由 BioRender 绘制。`
+  ],
+  hybrid:[
+    `<b>图注（正文翻译）：</b>图 1｜通过长读长与短读长联合测序高效回收高质量肠道病毒操作分类单元（vOTU）。A，联合组装建立 CHGV（combined human gut virome）并评估完整度；B，使用 CheckV 对完整、环状和高质量基因组进行质量分级，并与 GVD/GPD 数据库比较；C，稀释曲线；D，病毒基因组长度分布；E，按 ANI 阈值（≥95% 为相同、≥70% 为部分相似、<70% 为新颖）评估新颖性；F，长读长、联合和短读长组装所得 vOTU 的 Venn 图；G–I，三类 vOTU 的长度、完整度和分类组成；J，根据 Virus–Host DB 宿主信息得到的 vOTU 宿主分布，宿主在科水平归类。`,
+    `<b>图注（正文翻译）：</b>图 2｜联合短读长与长读长组装对 CHGV 肠道病毒组的解析。A，CHGV 中高流行噬菌体与 crAssphage、Gubaphage 的比较；B，病毒基因组功能注释；C，样本间 Shannon 多样性和 Bray–Curtis 距离；D，使用 DeePhage 预测的病毒生活史类别；E，病毒群体（VP）流行率和丰度随裂解性类别的变化。统计比较使用 Wilcoxon 检验，具体定义与显著性按正文图注执行。`,
+    `<b>图注（正文翻译）：</b>图 3｜CHGV 中排名靠前病毒簇（VC）的分类学与功能特征。A，病毒簇的末端酶系统发育树，并标注丰度、流行率、基因组长度和来源；病毒基因组在样本中存在的判定为覆盖全基因组且深度 >4×。B，基于 Pfam/COG 的蛋白功能注释。C、D，VC1 和 VC4 的基因组结构与功能基因注释。`
+  ],
+  benchmark:[
+    `<b>图注（正文翻译）：</b>图 1｜本研究总体流程，包括测序 reads 处理、组装、去冗余、病毒基因组识别、分箱和质量评估。Vs2 为 VirSorter2，vf 为 VirFinder，dvf 为 DeepVirFinder。图中同时展示 NGS、TGS 和 hybrid 数据路径，以及 assembler、binner、CheckV、分类和一致性评价的连接关系。`,
+    `<b>图注（正文翻译）：</b>图 2｜不同组装器获得的 vOTU 识别与质量评估。A，按组装器和数据类型统计的 vOTU 数量，并标出 CheckV 质量类别；NGS、TGS 和 HYB 分别表示二代、三代及混合组装。B，污染或不完整 vOTU 的比较。C–E，contig 总数、N50 和最大长度等组装指标。F、H、J 等面板进一步比较高质量基因组数量、完整度和不同组装策略的互补性。`,
+    `<b>图注（正文翻译）：</b>图 5｜所选分箱器生成的分箱结果评估。A，不同 binner 得到的 bins 数量。B，bin 大小分布。C，分箱后完整度的改善。D，高质量 bins 及超大 bins 的数量。E–H，比较不同 binner 的 inclusiveness 与 taxonomic consistency，显示“尽量保留候选序列”和“同一 bin 内分类归属一致”之间的权衡。`
+  ]
+};
+
+sourceCaptions.paa[0]+= ` g 中 K00169 为 VOR、K00179 为 PPFOR；h 的深色分类单元携带 VOR 或 PPFOR 同源物，最左侧柱状图分别汇总衰老组（n=44）和年轻组（n=37）富集分类单元中的功能基因比例。误差线：b、c、m、n 为 s.d.，g、k、l 为 s.e.m.，d 为 95% 置信区间；b、c、l–n 使用双侧非配对 Student t 检验，d 使用 Pearson 相关，g、k 使用 Mann–Whitney U，h 使用 ANCOM，i 使用 Spearman 相关，j 使用线性混合模型和 CLR 转换；*P<0.05、**P<0.01、***P<0.001。`;
+sourceCaptions.paa[1]+= ` i、n 的数据分别来自显微图并代表 3 次独立生物学重复；误差线：b–g、i、k–n 为 s.d.，h 为 s.e.m.；b–i、k–n 使用双侧非配对 Student t 检验；*P<0.05、**P<0.01。`;
+sourceCaptions.paa[2]+= ` 体外实验为 3 次独立生物学重复；m 数据来自 8 张显微图并代表 3 次独立生物学重复。误差线：b–d、f、i–m 为 s.d.；b–d、f 使用单因素 ANOVA 加 Tukey 事后检验，j–m 使用双侧非配对 Student t 检验。`;
+
+// 下面的译文按每篇论文正文 Methods 的顺序排列；首次出现写出英文全称，后文只用缩写。
+const methodTranslations={
+  paa:`<div class="method-full"><h3>正文方法（中文翻译｜按原文顺序适当缩写）</h3><p class="method-source-note">本节不是二次概括，而是把论文 Methods 的实验对象、样本处理、测序/质谱、统计和功能验证按原顺序压缩成可阅读的中文。数值、平台、软件和主要阈值保留；试剂盒货号及引物序列请以原文补充表为准。</p><h4>一、TwinsUK 人群队列与粪便宏基因组</h4><p><b>血浆代谢组：</b>研究使用 TwinsUK 衰老队列的 1,116 种代谢物数据，受试者年龄 18–95 岁，来自超过 14,000 名成年双胞胎；所有受试者签署知情同意，研究经 NRES Committee London–Westminster（REC EC04/015）批准。后续在 7,303 名个体中分析 PAA（phenylacetic acid，苯乙酸）和 PAGln（phenylacetylglutamine，苯乙酰谷氨酰胺）。</p><p><b>粪便 DNA 与物种定量：</b>双胞胎居家采集粪便，样本在 −80 °C 保存后送 GenomeScan。使用 YAMP v0.9.5 的 <code>genomescan</code> 参数处理双端 reads；少于 10M 对双端 reads 的样本剔除。MetaPhlAn v4 基于 99,237 个参考基因组和 1,132,166 个标记识别物种；Bowtie2 v2.3.4.3 以 <code>very-sensitive</code> 模式比对，MAPQ&lt;5 的 reads 过滤。微生物特征与代谢物的关联用 R 包 <code>lmerTest</code>。</p><h4>二、小鼠、样本和血浆靶向 LC–HRMS</h4><p>动物实验按苏黎世大学 IACUC 和州伦理委员会批准执行。小鼠采用 12 h 明/暗周期，23±1 °C、湿度 55±10%，标准饲料和饮水自由摄取；年轻组为 3 月龄，衰老组为 &gt;24 月龄。粪便立即 −80 °C 保存；CO<sub>2</sub> 处死后心脏穿刺取血，125g 室温离心 8 min 分离血浆，部分血液室温孵育 1 h 后 1,500g 离心 10 min 制备血清，随后灌注并收集主动脉。</p><p>取 100 μl 血浆，用 −20 °C 预冷乙醇/甲醇提取，加入 0.25 μg ml<sup>−1</sup> D<sub>5</sub>-PAA 和 D<sub>5</sub>-PAGln 内标；13,000 rpm、4 °C 离心 20 min，上清以水∶甲醇 90∶10 重溶。样品经 Waters HSS T3（150×2.1 mm，1.8 μm）分离，连接 Thermo Ultimate 3000 LC 和 Exploris 120 Orbitrap；用标准品鉴定峰，Tracefinder 3.2 定量。</p><h4>三、粪便 shotgun 宏基因组、功能与乙酸</h4><p>粪便 DNA 使用 FastDNA SPIN Kit 提取，在 Illumina NovaSeq 6000 PE150 平台进行 250 bp 双端测序。Kraken2/Bracken2（<code>--confidence 0.51</code>）对照小鼠微生物群基因组目录（CMMG）进行分类；至少在 2 个样本检出且总覆盖 reads≥100 的分类单元进入分析。KEGG 功能注释重点筛查 K00169（<i>vor</i>）和 K00179（<i>ppfor</i>），并用 Spearman 相关评估 KO 丰度与 PAA/PAGln 的关系。</p><p>α/β 多样性使用 Hill-d<sub>0</sub>、d<sub>1</sub>、d<sub>2</sub> 和 Pielou 指数；组间差异分别使用 Wilcoxon 和 PERMANOVA。组成型丰度先做 CLR（centered log-ratio，中心化对数比）转换，再用 ANCOM（analysis of compositions of microbiomes）分析。粪便乙酸用 LaChrom HPLC、Rezex ROA-Organic Acid H<sup>+</sup> 柱和折光检测器 L-2490 定量。</p><h4>四、ASF356 体外代谢与小鼠定植</h4><p>Clostridium sp. ASF356 来自 Altered Schaedler Flora。菌株在 BHI 或 yeast-casitone-fatty-acid 培养基中厌氧、37 °C 复苏；1%（v/v）接种过夜预培养物，继续培养 46 h，培养上清用 LC–MS/MS 测定 PAA/PAGln。</p><p>10–12 周龄雄性 C57BL/6 小鼠饮水加入抗生素鸡尾酒（氨苄西林 0.5、 neomycin 0.5、vancomycin 0.25、metronidazole 0.5 mg ml<sup>−1</sup>）2 周。开始 ABx 2 d 后灌胃 0.2 ml ASF356，连续 3 d，之后每 7 d 1 次，共 4 周；用远端结肠粪便 PCR 验证定植。senolytic D+Q（dasatinib 5 mg kg<sup>−1</sup> + quercetin 50 mg kg<sup>−1</sup>）每日灌胃 3 d；另一路小鼠腹腔注射 PAA 50 mg kg<sup>−1</sup> d<sup>−1</sup>、持续 4 周。</p><h4>五、内皮细胞、衰老和氧化应激</h4><p>HAEC（human aortic endothelial cell，人主动脉内皮细胞）在 EBM-2/EGM-2、37 °C、5% CO<sub>2</sub> 培养；第 4–5 代为增殖性内皮细胞（PEC），第 15–17 代为复制性衰老细胞（SEC）。小鼠主动脉用 II 型胶原酶 1 mg ml<sup>−1</sup>、37 °C 消化 45 min，70 μm 滤网过滤后培养第 2–3 代细胞。另用 H<sub>2</sub>O<sub>2</sub> 50 μM 处理 PEC 4 h 建立早发性衰老模型。</p><p>衰老用 SA-β-gal（senescence-associated β-galactosidase）染色、p21 免疫印迹和细胞增殖停滞确认；CellROX Green 测氧化应激。使用靶向线粒体的 DAAO-HyPer7.2 慢病毒（MOI 20–50）并以 L-alanine/D-alanine 产生线粒体 H<sub>2</sub>O<sub>2</sub>；AV5-HyPer7.2-mito（MOI 1,000）实时成像，420/490 nm 激发、530 nm 发射。乙酰辅酶 A 用 MAK039，NAD<sup>+</sup> 用 MAK037 测定。</p><h4>六、分子、免疫和血管功能读出</h4><p>RNA 用 TRIzol 提取，Power SYBR Green 做 qPCR；70–80% 融合度时用 Lipofectamine RNAiMAX 转染 siRNA。组织和细胞用 RIPA 或核/胞质提取液裂解，20 μg 蛋白经 10% SDS–PAGE、免疫印迹并用 Amersham Imager 600 成像。Opal 多重免疫荧光检测 p-HDAC4、CD31、p16<sup>INK4a</sup>、VCAM1、γ-H2A.X 和 DAPI；切片用 Vectra Polaris 扫描。</p><p>Seahorse XF24 以 5,000 个细胞/孔进行线粒体压力测试，依次加入寡霉素 1 μM、FCCP 3 μM、鱼藤酮/抗霉素 A 各 0.5 μM，测 OCR/ECAR。迁移实验每 15 min 成像 16 h；Matrigel 管形成同样连续成像；主动脉环约 2 mm、Matrigel 上培养 5 d 统计出芽；2 mm 主动脉环置于 5 ml Krebs–Ringer 器官浴，递增 ACh（10<sup>−9</sup>–10<sup>−5</sup> M）记录内皮依赖性舒张。</p><h4>七、统计学与数据可得性</h4><p>样本量参考既往研究，n 为样本或动物数；实验通常至少 3 次独立生物学重复。两组比较用双侧非配对 Student <i>t</i> 检验或 Mann–Whitney U，多组用单/双因素 ANOVA 加 Tukey；相关性用 Spearman，组成为 CLR–ANCOM，α/β 多样性用 PERMANOVA，P 值进行 FDR 校正，P&lt;0.05 为显著。分析使用 GraphPad Prism 9、R 和 <code>lmerTest</code>。shotgun 数据提交 NCBI SRA（PRJNA1242241）；人体 TwinsUK 数据按隐私和数据治理流程申请。</p></div>`,
+  hybrid:`<div class="method-full"><h3>正文方法（中文翻译｜按原文顺序适当缩写）</h3><p class="method-source-note">本文的实验部分围绕“样本富集 → 双平台测序 → 三种组装 → 病毒识别与质量控制 → 功能/宿主注释”展开。下面保留原文中对样本量、缓冲液、离心、建库、软件和阈值的关键描述。</p><h4>一、样本与病毒样颗粒（VLP）富集</h4><p>研究从武汉和上海健康成人收集粪便样本，每份约 400–500 g；排除近期抗生素、慢性疾病和明显肠道症状者。样本加入 5 L SM buffer（200 mM NaCl、10 mM MgSO<sub>4</sub>、50 mM Tris-HCl，pH 7.5），120 rpm 搅拌后经纱布过滤。滤液先 5,000g 离心 45 min，再 8,000g 离心 45 min；上清经 100 kD 超滤浓缩至约 300 ml，加入 NaCl 0.5 M 和 PEG8000 10% 过夜沉淀，13,000g 离心 35 min。沉淀经氯仿、DNase I/RNase A 和 EDTA 处理，用 HiPure HP DNA Maxi 提取；蛋白酶 K/SDS 裂解后进行酚–氯仿–异戊醇纯化，病毒 DNA 保存于 −80 °C。</p><h4>二、Illumina 与 PacBio 测序</h4><p>短读长文库先用 g-TUBE 处理至约 400 bp，再用 Nextera XT 建库，在 HiSeq 2000 进行 PE150 测序。长读长文库使用约 5 kb g-TUBE，AMPure PB 纯化后按 SMRTbell 2.0 建库，在 PacBio RS II 平台进行 CCS（circular consensus sequencing）测序。二者来自同一 VLP DNA 体系，以便比较平台差异。</p><h4>三、原始 reads 质控与宿主去除</h4><p>Illumina reads 用 Trimmomatic v0.38，参数为 LEADING:3、TRAILING:3、SLIDINGWINDOW:15:30、MINLEN:50。PacBio CCS 用 pbccs v4 默认参数生成高准确度长读长。两类 reads 均用 Bowtie2 比对人类 hg38 去除人源序列，再用 UHGG-Minus 去除细菌基因组污染。</p><h4>四、组装、去冗余和病毒识别</h4><p>短读长使用 IDBA-UD v1.1.3（最大 k-mer 120、步长 10、最小 contig 1,000 bp）；长读长使用 Canu v2.0 和 Flye v2.8.2，并用 MetaBAT2 对 unitigs 进行分箱；混合组装使用 OPERA-MS v0.9 和 metaSPAdes v3.13.1。metaMIC v0.1 用于识别潜在错误组装；CD-HIT v4.8.1 以 <code>-c 0.95 -n 8</code> 去冗余。病毒识别联合 VirSorter v2、VirFinder、PPR-Meta、BLASTn ViralRefSeq、NCBI POG 和 CheckV；长度大于 5 kb 且通过病毒性判定的序列进入 CHGV 目录。</p><h4>五、分类、功能和宿主注释</h4><p>病毒分类使用 VirusTaxo、Demovir 和 PhageGCN。开放阅读框用 Prodigal 预测，蛋白功能用 eggNOG、hmmscan-Pfam、VOGdb 和 COG 注释；候选病毒基因组按 MUSCLE 比对、FastTree 构树并在 iTOL 中展示。潜在宿主结合 Virus–Host DB、CRISPR spacer、tRNA 和序列共现关系推断；丰度用 Bowtie2 回贴并按 RPKM 归一化。DeePhage 预测病毒生活史，分析流行率、丰度和裂解性之间的关系。</p><h4>六、质量分级、统计与可解释边界</h4><p>CheckV 根据病毒基因组覆盖、完整度和污染情况将序列分为完整、高质量、低质量或不确定类别；联合目录中的“新颖”按 ANI 与公共病毒库的相似性阈值定义，而不是单凭没有 BLAST 命中判断。样本间多样性用 Shannon 和 Bray–Curtis 等指标，组间差异使用 Wilcoxon 等非参数检验。本文的 VLP 富集和病毒识别规则不等同于普通 shotgun 宏基因组，潜在宿主关系仍需培养或感染实验验证。</p></div>`,
+  benchmark:`<div class="method-full"><h3>正文方法（中文翻译｜按原文顺序适当缩写）</h3><p class="method-source-note">本文是 benchmark，方法重点不是单个软件，而是同一批配对样本在 NGS、TGS、hybrid、assembler 和 binner 之间的可比性。下面按原文顺序保留样本、测序、组装、病毒识别、分箱和评价指标。</p><h4>一、配对样本与测序</h4><p>研究选取 CHGV 的 95 个健康中国人配对粪便样本，每份约 500 g，先进行 VLP 富集和病毒 DNA 提取。Illumina HiSeq 2000 产生 PE150 短读长；PacBio RS II 产生长读长数据。每个样本尽量保持同一份 VLP DNA 的 NGS/TGS 配对，以便把样本差异与平台差异分开。</p><h4>二、reads 质控与污染去除</h4><p>Illumina 数据使用 Trimmomatic v0.39 去除低质量碱基和接头，保留满足长度阈值的 reads；PacBio 数据用 pbccs v4 生成 CCS。两类数据用 Bowtie2 比对 hg38 去除人源 reads，并进一步去除细菌污染；所有后续 assembler 使用同一套过滤后的输入。</p><h4>三、三类 assembler 的比较</h4><p>NGS 组装比较 3 个 assembler，TGS 组装比较 5 个，hybrid 组装比较 4 个。短读长工具包括 MEGAHIT、metaSPAdes 等；长读长包括 metaFlye 等；混合策略包括 hybridSPAdes、metaViralSPAdes 和 OPERA-MS。metaMIC 用于识别潜在错拼；CD-HIT 以 <code>-c 0.95 -aS 0.85</code> 去冗余。比较每套流程的 contig 数量、长度、N50、最大长度、完整度和高质量病毒基因组数量。</p><h4>四、病毒识别与 vOTU 定义</h4><p>候选 contigs 依次经过 VirSorter2、DeepVirFinder、VirFinder、Seeker、PPR-Meta 和 VirRep 等工具识别，并结合序列长度、病毒性证据和 CheckV 质量进行筛选。通过去冗余后，一个非冗余病毒序列作为 vOTU（viral operational taxonomic unit，病毒操作分类单元）；高质量 vOTU 按 CheckV 的完整度和污染警告定义。</p><h4>五、四种 binner 与病毒基因组分箱</h4><p>将清理后的 contigs 交给 CONCOCT、MetaBAT2、AVAMB 和 vRhyme 进行分箱。每个 binner 根据序列组成、覆盖度和共现模式把 contigs 归并为候选病毒基因组；随后用 CheckV 评估 bins 的完整度和污染，使用 PhaGCN_newICTV 进行分类。Prokka 预测基因，MUSCLE 和 FastTree 构建系统发育关系，并用 iTOL/Evolview 可视化。</p><h4>六、benchmark 指标与可重复性</h4><p>作者分别报告 assembler 的病毒基因组数量、长度、N50、最大长度、完整度和高质量比例，以及 binner 的 inclusiveness（包容性：尽量保留候选序列）和 taxonomic consistency（分类一致性：同一 bin 内序列是否属于同一病毒/类群）。多 assembler 合并时先统一去冗余和质量阈值，再比较高质量非冗余基因组的增益。结论只适用于本文样本、测序深度、软件版本和参数，不能脱离这些条件变成永久的工具排名。</p></div>`
+};
+
+const methodSupplements={
+  hybrid:`<h4>原文参数补充：组装与注释边界</h4><p>短读长组装使用 IDBA-UD v1.1.3（最大 k-mer 120、步长 10、最小 contig 1,000 bp），长读长使用 Canu v2.0 和 Flye v2.8.2，混合组装使用 OPERA-MS v0.9 和 metaSPAdes v3.13.1；metaMIC 用于错拼检查，CD-HIT v4.8.1 以 95% 相似度去冗余。病毒识别同时参考 VirSorter2、VirFinder、PPR-Meta、BLASTn ViralRefSeq、NCBI POG 和 CheckV；长度大于 5 kb 且满足病毒性证据的序列才进入 CHGV。功能注释使用 Prodigal、eggNOG、Pfam/VOGdb/COG，分类使用 VirusTaxo、Demovir、PhageGCN，宿主关系结合 Virus–Host DB、CRISPR spacer 和 tRNA 证据。</p>`,
+  benchmark:`<h4>原文参数补充：版本、阈值与质量定义</h4><p>NGS assembler 包括 IDBA-UD v1.1.3、MEGAHIT v1.2.9、metaSPAdes v3.15.4；TGS assembler 包括 Canu v2.2、FALCON v1.8.1、Hifiasm-meta v0.3、metaFlye v2.9.1、wtdbg2 v2.5；hybrid assembler 包括 IDBA-hyb v1.1.3、hybridSPAdes v3.15.4、metaViralSPAdes v3.15.4、OPERA-MS v0.83。reads 质控使用 Trimmomatic v0.39（LEADING:3、TRAILING:3、SLIDINGWINDOW:15:30、MINLEN:50），PacBio CCS 使用 pbccs v4.0.0，Bowtie2 v2.4.2 比对 hg38 去除人源序列。</p><p>病毒候选依次用 VirSorter2 v2.2.4、DeepVirFinder v1.0、VirFinder v1.1、Seeker、PPR-Meta v1.1 和 VirRep；VirSorter2 score≥0.7、VirFinder score&gt;0.6、PPR-Meta phage score&gt;0.7，至少满足 6 个标准中的 2 个且长度&gt;1.5 kb 才判为病毒 contig。分箱使用 CONCOCT v1.1.0、MetaBAT2 v2.15.2、AVAMB v4.1 和 vRhyme v1.1.0。CheckV v1.0.1 的 high-quality 定义为 completeness&gt;90% 且无“contig 长度超过预期 1.5 倍”或“高 k-mer 频率提示大重复”警告；PhaGCN_newICTV 仅保留 score=1 的科水平注释，蛋白用 Prokka v1.14.6，系统树用 MUSCLE v3.8.1551 和 FastTree v2.1.11，并用 iTOL v6.8/Evolview v3 展示。</p>`
+};
+methodSupplements.hybrid += `<p>原文还说明：样本来自武汉和上海健康志愿者，近期抗生素/益生菌、慢性肠道病和可能显著改变菌群的药物使用者被排除；粪便置于干冰并在 5 h 内转入 −80 °C。VLP 富集后，沉淀重悬于 18–36 ml TE，与等体积氯仿轻摇，3,500×g、4 °C 离心 10 min；DNase I（33.3 U μl<sup>−1</sup>）和 RNase A（0.5 U μl<sup>−1</sup>）37 °C 处理 30 min，EDTA 终浓度 35 mM、70 °C 失活 10 min。DNA 提取使用蛋白酶 K/SDS、56 °C 1 h 的裂解和酚∶氯仿∶异戊醇（25∶24∶1）纯化。短读长文库用约 400 bp g-TUBE/Nextera XT，长读长文库用约 5 kb g-TUBE、AMPure PB 和 SMRTbell 2.0；原文报告约 4.89 TB 短读长和 561 GB CCS 长读长数据。病毒分类依次使用 VirusTaxo、Demovir、PhageGCN；丰度用 Bowtie2 回贴并以 RPKM 表示，DeePhage 将 vOTU 分为 temperate、uncertain temperate、uncertain virulent 和 virulent。CRISPR spacer、tRNA 和序列共现用于宿主推断，故宿主链接属于计算推断而非培养验证。</p>`;
+const resultTranslations={
+  paa:`<div class="result-translation"><h3>Results 正文翻译（按图组顺序）</h3><p class="result-source-note">以下段落把论文 Results 中的观察和数值译成中文；PAA 为 phenylacetic acid（苯乙酸），PAGln 为 phenylacetylglutamine（苯乙酰谷氨酰胺），EC 为 endothelial cell（内皮细胞），SASP 为 senescence-associated secretory phenotype（衰老相关分泌表型）。</p><h4>1. 年龄升高伴随 PAA/PAGln 增加，并与肠道功能联系</h4><p>靶向代谢组显示，衰老小鼠（&gt;24 月龄）的血浆 PAA 和 PAGln 均高于年轻小鼠（3 月龄）。为排除肾功能、性别和体重造成的假象，作者对这些因素进行匹配，补充图显示肾功能不能解释主要差异。TwinsUK 人群的非靶向代谢组得到同方向结果：PAA 与年龄的线性相关为 <i>r</i>=0.06、R<sup>2</sup>=0.003，P&lt;0.001；PAGln 为 <i>r</i>=0.25、R<sup>2</sup>=0.063，P&lt;0.001。相关强度并不等于很强，但方向在小鼠和人群之间一致，提示这两个循环代谢物可以作为年龄相关候选轴，而不是单凭单一动物模型得出的现象。</p><h4>2. VOR/PPFOR 和 Clostridium 指向可能的微生物来源</h4><p>作者把膳食苯丙氨酸（Phe）到 PAA 的细菌代谢路线拆成 VOR（vinylacetyl-CoA delta-isomerase，K00169）和 PPFOR（phenylpyruvate:ferredoxin oxidoreductase，K00179）功能。年轻/衰老小鼠的 shotgun 宏基因组显示，衰老组携带 VOR/PPFOR 同源物的分类单元比例更高；菌株层面相关性热图进一步把 PAA/PAGln 与具体细菌联系起来。TwinsUK 中 Clostridium 属丰度与 PAA、PAGln 也呈显著关系（图 1j，P=0.00002457 和 P=0.00010633）。在体外，Clostridium sp. ASF356 厌氧培养上清能检测到 PAA/PAGln，说明它具备把 Phe 转向这条代谢轴的功能。</p><h4>3. 年龄相关代谢轴与血管衰老表型同向变化</h4><p>衰老小鼠主动脉的内皮依赖性舒张下降：10<sup>−5</sup> M 乙酰胆碱（ACh）下，年轻组最大舒张为 97.57±1.91%，衰老组为 69.13±4.25%（P&lt;0.001）；半数有效浓度 EC<sub>50</sub> 由 34.23±9.01 nM 右移至 51.33±12.32 nM（P&lt;0.05）。功能下降同时伴随 SA-β-gal（senescence-associated β-galactosidase）阳性增加、CDK 抑制因子 p16<sup>INK4a</sup>、SASP 成分 VCAM1 和 DNA 损伤标志 γ-H2A.X 增加。这里的结果链是“代谢物—微生物功能—血管功能—细胞衰老”同时出现，而不是只凭一张菌群差异图作因果判断。</p><h4>4. ASF356 定植把相关性推进到体内因果方向</h4><p>抗生素预处理后，年轻小鼠经口定植 Clos（Clostridium sp. ASF356）4 周；菌株特异性 GroEL PCR 证实定植。与 vehicle 对照相比，Clos 使血浆 PAA 约增加 3.15 倍、PAGln 约增加 1.7 倍。主动脉 Col3a1（胶原蛋白 3a1）和 MMP-9（基质金属蛋白酶 9）升高，主动脉周围脂肪组织血管化和内脏脂肪湿重增加；EC 中 p16、γ-H2A.X、IL-1β、IL-6 和 SA-β-gal 同步升高。ACh 10<sup>−5</sup> M 下最大舒张由 vehicle 的 88.53±5.40 降至 Clos 的 77.15±6.66（P&lt;0.01），主动脉环内皮出芽也减少。</p><h4>5. D+Q 反向干预支持“衰老细胞参与表型”</h4><p>作者使用 senolytic（衰老细胞清除剂）D+Q，即达沙替尼（D，5 mg kg<sup>−1</sup>）+槲皮素（Q，50 mg kg<sup>−1</sup>）。D+Q 降低 Clos 定植小鼠主动脉 EC 的 p16、γ-H2A.X、IL-1β、IL-6 和 SA-β-gal，并恢复主动脉环出芽能力。这个实验支持衰老细胞参与血管表型，但不能单独证明“D+Q 已经治疗衰老”，因为它是机制反证而非临床疗效试验。</p><h4>6. PAA 直接诱导内皮细胞衰老，并影响功能</h4><p>在人原代主动脉 EC 中，PAA（10 μM，72 h）使 PEC（proliferating EC，增殖性内皮细胞）出现细胞体积增大、变扁和多核等形态，并增加 SA-β-gal、γ-H2A.X、CDKN2A/p16、CDKN2D/p19<sup>INK4d</sup> 和 CDKN1A/p21<sup>WAF1/Cip1</sup>，同时降低 Ki67。qPCR 显示 SASP 基因 IL1A、IL1B、IL6、TNF 和 VCAM1 转录增加，VCAM1 免疫染色得到验证。PAA 处理后再用体外 D+Q（500 nM + 20 μM，24 h），衰老 EC 存活率下降约 67.82%，增殖细胞约 88.55% 得以保留；SA-β-gal 阳性减少约 60.12%，成管能力约提高 1.5 倍。</p><h4>7. 体内 PAA 复现主动脉衰老表型</h4><p>年轻小鼠腹腔注射 PAA（50 mg kg<sup>−1</sup> d<sup>−1</sup>，4 周）后，血浆 PAA/PAGln、Col3a1/MMP-9、p16、γ-H2A.X、IL-1β/IL-6 和 SA-β-gal 均沿衰老方向改变，主动脉环血管生成能力下降。综合图 1–3，作者的证据顺序是：人群与小鼠发现年龄相关轴 → 菌株改变代谢物并产生血管表型 → PAA 在细胞和动物中复现衰老；因此 PAA 是“可被验证的机制候选”，而不是仅凭相关性确定的单一病因。</p></div>`,
+  hybrid:`<div class="result-translation"><h3>Results 正文翻译（按图组顺序）</h3><p class="result-source-note">vOTU 为 viral operational taxonomic unit（病毒操作分类单元）；CHGV 为 combined human gut virome（联合人类肠道病毒组）；ANI 为 average nucleotide identity（平均核苷酸一致性）；GVD/GPD 分别为 Gut Virome Database/Gut Phage Database。</p><h4>1. 联合目录同时提高规模、完整度和新颖性</h4><p>作者对 135 名健康中国参与者获得 135 份病毒短读长数据、83 份 PacBio 长读长数据和 135 份常规 mNGS 数据。去除人源和细菌污染后，对短读长、长读长和 hybrid 数据分别组装，并以 95% 全局 ANI 去冗余。CHGV 建立了约 35% 为完整噬菌体基因组的目录；公开目录比较中，CheckV 100% completeness 约占 28%，环状基因组约占 21%，CheckV high-quality 约占 41%。</p><h4>2. 长读长和联合组装贡献了短读长没有的 vOTU</h4><p>在长度超过 5 kb 且通过病毒识别的候选 contigs 中，作者最终得到 21,499 个非冗余病毒群体。图 1F 显示 Long-read、Both 和 Short-read 三类 vOTU 的重叠有限；长读长单独恢复了大量短读长无法组装的序列。图 1D 还显示，CHGV 中长度≥10 kb 的 vOTU 比 GPD 中同标准序列更长（Wilcoxon 秩和检验，P&lt;0.01），但 CHGV 的完整基因组本身可能更短。图 1J 的宿主归属来自 Virus–Host DB，属于科水平计算注释。</p><h4>3. 联合组装改变了样本内外多样性解释</h4><p>图 2C 中，CHGV 全部病毒的 Shannon 指数（α 多样性）高于 Short-read 组，说明加入长读长后每个样本可识别的 vOTU 更多。相反，Bray–Curtis 距离（β 多样性）在 CHGV 中更低，提示短读长碎片化可能夸大样本间差异。图 2D 显示 70.78% vOTU 属于 temperate（溶原型）或 uncertain temperate，29.22% 属于 uncertain virulent 或 virulent；但后者虽然数量少，贡献了约 58.66% 的总病毒丰度，说明“多样性比例”和“活跃丰度”不是同一个指标。</p><h4>4. 长读长发现高流行且具有功能信息的病毒簇</h4><p>作者用 MCL（Markov clustering）把 CHGV vOTU 聚为 1,886 个非单成员病毒簇（VC），其中 27 个 VC 至少含 10 个 vOTU。前十个 VC 中有 5 个 Gubaphage、3 个 crAssphage；VC1 和 VC4 分别约 40 kb 和 50 kb，median prevalence 约 0.7% 和 4%，并分别被 CheckV 判为 high-quality 和 medium-quality。两者的重要成员来自长读长组装，提示长读长不仅增加 contig 长度，还能扩大高流行病毒簇的真实多样性。</p><h4>5. 结果边界</h4><p>Virus–Host DB、CRISPR、共现和功能注释都属于计算推断；例如高流行病毒 NCF004_NODE_374 的宿主仍无法通过 CRISPR spacer 或 tRNA 确定。因而“完整基因组”“新颖”“潜在宿主”应分别报告，不能把它们合并成一个确定的生物学结论。</p></div>`,
+  benchmark:`<div class="result-translation"><h3>Results 正文翻译（按图组顺序）</h3><p class="result-source-note">NGS 为 next-generation sequencing（二代测序/短读长），TGS 为 third-generation sequencing（三代测序/长读长），HYB 为 hybrid（混合组装）；hq-vOTU 指 high-quality vOTU，N50 为组装连续性指标。</p><h4>1. 先比较 assembler：最佳工具取决于数据类型和质量指标</h4><p>作者在 95 个配对 VLP 样本上比较 3 个 NGS、5 个 TGS 和 4 个 HYB assembler。若只看 vOTU 数量，NGS、TGS、HYB 组分别由 MEGAHIT、FALCON、IDBA-hyb 产生最多；但按 CheckV 定义的 hq-vOTU（完整度&gt;90%，且无超长 contig 或高 k-mer 重复警告），表现最佳的分别是 MEGAHIT、metaFlye 和 hybridSPAdes。未针对宏基因组优化的 Canu、wtdbg2 产生的 vOTU 明显更少。</p><h4>2. 数量、污染和长度指标并不指向同一个工具</h4><p>所有 assembler 产生的 vOTU 中，超过 97% 的污染低于 5%，因此污染不是区分工具的主要指标。NGS 中 MEGAHIT 的总 contig 长度和 N50 最高，而 metaSPAdes 的最大 contig 最长；TGS 中 Hifiasm-meta 的总长度和最大 contig 最大，但 metaFlye 的 N50 最高且总长度/最大长度并不明显落后；HYB 中 hybridSPAdes 的最大 contig 最长，总长度和 N50 与 IDBA-hyb、metaViralSPAdes 接近。作者因此把“更多、更长、更完整”拆成多个维度，而不是简单排名。</p><h4>3. 多工具合并产生大量 assembler-specific hq-vOTU</h4><p>将所有 assembler 的 hq-vOTU 按 95% 相似度去冗余后，得到 17,931 个非冗余 hq-vOTU；其中 54.5%（9,771 个）为某一个 assembler 特异恢复。三类数据共同恢复的仅 1,478 个（8.24%）；TGS、HYB、NGS 各自独有的 hq-vOTU 分别为 4,725（26.4%）、3,191（17.8%）和 2,955（16.5%）。合并集合相对单个 assembler 的高质量基因组增益为 4.83–21.7 倍，说明差异主要是互补性而非简单错拼。</p><h4>4. 系统发育验证支持“工具特异结果”并非全部假阳性</h4><p>约 16% hq-vOTU 编码 large terminase，作者用其蛋白序列构建最大似然树。树上的家族分支与 PhaGCN_newICTV 的分类边界总体一致，同一病毒科内可以同时看到多个 assembler 来源的非冗余 vOTU；例如 Autographiviridae 中，MEGAHIT 贡献 4 个 hq-vOTU，其他 assembler 另贡献 37 个。这个结果支持多 assembler 确实扩大了病毒组发现范围。</p><h4>5. 不同 binner 的行为差异更明显</h4><p>AVAMB 产生的 bins 数量最多；CONCOCT 的 bin 中位大小为 154 个 contig，明显高于 MetaBAT2（8）、AVAMB（1）和 vRhyme（2），且有 95 个超大 bin 无法用 CheckV 评估而被排除。与每个 bin 中完整度最高的成员 contig 相比，四种 binner 都显著提高 bin 完整度；平均提升分别为 AVAMB 17.6、CONCOCT 3.04、MetaBAT2 10.7、vRhyme 17.3 个百分点。分类一致性方面，CONCOCT 的多 contig bin 中 52.7% 含不同病毒科；MetaBAT2 为 97.8% 同科一致，AVAMB 多 vOTU bin 为 94.0% 一致，vRhyme 为 96.7% 一致。换言之，CONCOCT 更“包容”，但更容易混入不同分类单元；MetaBAT2、AVAMB 和 vRhyme 在一致性上更稳。</p><h4>6. 对工具选择的正文结论</h4><p>作者建议短读长优先考虑 MEGAHIT、长读长优先考虑 metaFlye、混合数据优先考虑 hybridSPAdes，但这不是脱离样本和版本的永久排名。若目标是 hq bins，AVAMB 更有优势；若目标是 bin 内分类一致性，MetaBAT2 表现突出；vRhyme 在多个指标间较均衡。对于衰老多组学，最可靠的做法是固定主流程，再以互补 assembler/binner 做敏感性分析，并同时报告完整度、污染、N50、包容性和分类一致性。</p></div>`
+};
+
+function installSourceCaptionsAndMethods(){
+  for(const article of articles){
+    const captions=sourceCaptions[article.id];
+    if(captions){
+      article.querySelectorAll('.figure-caption').forEach((node,i)=>{
+        if(captions[i]) node.innerHTML=captions[i];
+      });
+    }
+    const method=methodTranslations[article.id];
+    const card=article.querySelector('.method-detail');
+    if(method && card && !article.querySelector('.method-full')){
+      card.insertAdjacentHTML('afterend',method);
+      if(methodSupplements[article.id]){
+        article.querySelector('.method-full').insertAdjacentHTML('beforeend',methodSupplements[article.id]);
+      }
+    }
+    const resultBlock=article.querySelector('.result-lead');
+    if(resultTranslations[article.id] && resultBlock && !article.querySelector('.result-translation')){
+      resultBlock.parentElement.insertAdjacentHTML('beforeend',resultTranslations[article.id]);
+    }
+  }
+}
+installSourceCaptionsAndMethods();
+// 单篇文章包含 9 张正文原图；不要让隐藏文章的 lazy 图片一直等到浏览器认为它们可见。
+// 这样从目录切换到任意文章时，原图会立即开始加载；no-referrer 也可避免出版社按本地 file:// 来源拦截。
+document.querySelectorAll('.detail article img').forEach(img=>{
+  img.removeAttribute('loading');
+  img.setAttribute('referrerpolicy','no-referrer');
+});
+
+function primeArticleImages(article){
+  article.querySelectorAll('img').forEach(img=>{
+    const original=img.getAttribute('src');
+    img.removeAttribute('loading');
+    img.loading='eager';
+    img.referrerPolicy='no-referrer';
+    // 部分浏览器在 display:none 状态下不会重新评估 lazy 图片；切换文章时强制重启一次未完成请求。
+    if(!img.complete && original){ img.src=''; img.src=original; }
+  });
+}
+
+function showLibrary(){
+  library.hidden=false;
+  reader.classList.remove('active');
+  articles.forEach(article=>article.classList.remove('active'));
+  if(location.hash) history.replaceState(null,'',location.pathname+location.search);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function showArticle(id, updateHash=true){
+  const article=document.getElementById(id);
+  if(!article) return showLibrary();
+  library.hidden=true;
+  reader.classList.add('active');
+  articles.forEach(item=>item.classList.toggle('active',item===article));
+  primeArticleImages(article);
+  if(updateHash) history.replaceState(null,'','#'+id);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+buttons.forEach(btn=>btn.addEventListener('click',()=>{
+  buttons.forEach(x=>x.classList.remove('active'));
+  btn.classList.add('active');
+  const f=btn.dataset.filter;
+  cards.forEach(card=>card.classList.toggle('hidden',f!=='all'&&card.dataset.type!==f));
+}));
+openButtons.forEach(btn=>btn.addEventListener('click',()=>showArticle(btn.dataset.open)));
+backButton.addEventListener('click',()=>{library.hidden=false;showLibrary();});
+window.addEventListener('hashchange',()=>{
+  const id=location.hash.slice(1);
+  if(id) showArticle(id,false); else {library.hidden=false;showLibrary();}
+});
+if(location.hash) showArticle(location.hash.slice(1),false);
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+config.env
+.env
+.env.*
+!.env.example
+data/private/
+data/raw/
+__pycache__/
+*.pyc
+.DS_Store
+# 当前演示页直接加载出版社/PMC原图；本地测试时生成的截图/裁剪文件不纳入提交
+web/demo-assets/
