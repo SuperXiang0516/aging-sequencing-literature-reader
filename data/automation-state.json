@@ -1,21 +1,27 @@
 {
   "schema_version": 1,
   "records": {
-    "doi:10.1371/journal.pone.0359621": {
-      "id": "doi:10.1371/journal.pone.0359621",
-      "title": "Investigating potential molecular mechanisms linking 6PPD-quinone exposure to Intervertebral Disc Degeneration: A network toxicology, molecular docking, and molecular dynamics simulation study.",
+    "doi:10.1099/mgen.0.001859": {
+      "id": "doi:10.1099/mgen.0.001859",
+      "title": "UShER-TB: scalable, comprehensive, accessible phylogenomic analysis of Mycobacterium tuberculosis.",
       "authors": [
-        "Yang B",
-        "Wang X",
-        "Zhuo L",
-        "Chen Y",
-        "He Q"
+        "Karim LM",
+        "Martínez-Martínez FJ",
+        "O'Farrell A",
+        "Hinrichs AS",
+        "Sanderson T",
+        "Iqbal Z",
+        "Kozyreva VK",
+        "Bell JM",
+        "López MG",
+        "Comas I",
+        "Corbett-Detig R"
       ],
-      "journal": "PloS one",
+      "journal": "Microbial genomics",
       "year": "2026",
-      "doi": "10.1371/journal.pone.0359621",
-      "pmcid": "PMC13690237",
-      "pmid": "42911944",
+      "doi": "10.1099/mgen.0.001859",
+      "pmcid": "PMC13690021",
+      "pmid": "42911656",
       "citation_count": 0,
       "fulltext_urls": [],
       "source": "NCBI PMC",
@@ -25,138 +31,374 @@
       ],
       "figures": [
         {
-          "label": "Fig 1",
-          "caption": "Two-dimensional and three-dimensional structures of 6PPD-quinone. (A) Two-dimensional chemical structure of 6PPD-quinone. (B) Three-dimensional molecular conformation of 6PPD-quinone.",
-          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g001.webp"
+          "label": "Fig. 1.",
+          "caption": "Transmission cluster assignment comparison workflow.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690021/bin/mgen-12-01859-g001.webp"
         },
         {
-          "label": "Fig 2",
-          "caption": "Venn diagram of 6PPD-Q and IVDD-related targets.",
-          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g002.webp"
+          "label": "Fig. 2.",
+          "caption": "Summary of samples included in the global UShER-TB phylogenomics resource. (a) Global phylogeny of 129,312 samples processed with the myco pipeline and placed with usher-sampled. The phylogeny, samples and metadata can be explored interactively on Taxonium . (b) Geographical distribution of samples. Note that sample depth does not necessarily correspond to density of infections, as sequencing resources contribute heavily to data collection.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690021/bin/mgen-12-01859-g002.webp"
         },
         {
-          "label": "Fig 3",
-          "caption": "Candidate targets were identified by PPI analysis. A total of 12 key targets were obtained by screening 59 cross targets by DC, BC and CC.",
-          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g003.webp"
+          "label": "Fig. 3.",
+          "caption": "Motivation and effects of local masking. (a) Example demonstrating a placement artefact that occurs when samples have missing sequence information, where their close neighbours may have variants. On the left, Sample B has missing data (highlighted in the sequence alignment in orange) at position 6, while neighbours C and D share a >T mutation (mutations highlighted in blue) there. The placement algorithm treats this as a difference, inflating mutation distances despite alignment evidence. To avoid such false distances between closely related samples, we mask mutations like those at positions 6 and 8 (right) (see Methods). (b) To test the effect of multiple rounds of post-inference local masking, we tracked the number of mutations needing to be masked across four rounds of the procedure. (c) We tracked the number of revertant mutations present in the global tree after each round of masking to assess improvements in phylogenetic quality.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690021/bin/mgen-12-01859-g003.webp"
         },
         {
-          "label": "Fig 4",
-          "caption": "GO enrichment analysis. Including biological processes, cellular components, and molecular functions.",
-          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g004.webp"
+          "label": "Fig. 4.",
+          "caption": "Placement consistency in different settings. (a) Summary of transmission cluster assignment results in local and global settings. (b) Proportion of samples that are correctly assigned to their original transmission group. (c) Proportion of samples that fall within two or less nodes from their original location in the tree. In both cases, different scenarios are considered. From left to right: local dataset placing 40% of samples (LP_40), global dataset placing 40% of the samples (GP_40) and global dataset placing all the sequences (GP_all).",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690021/bin/mgen-12-01859-g004.webp"
         },
         {
-          "label": "Fig 5",
-          "caption": "The top 20 KEGG enrichment analysis pathways.",
-          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g005.webp"
+          "label": "Fig. 5.",
+          "caption": "Location of candidate phylogenetically distinct clades. Summary of the UShER-TB global tree (with major lineages collapsed), illustrating where samples with potential novel clade designation are phylogenetically placed.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690021/bin/mgen-12-01859-g005.webp"
         },
         {
-          "label": "Fig 6",
-          "caption": "Target–pathway interaction network of core genes and enriched KEGG pathways.",
-          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g006.webp"
-        },
-        {
-          "label": "Fig 7",
-          "caption": "The heat map and molecular docking results of 6PPD-Q biological compounds and core targets. (A) Binding energy value of molecular docking. (B) 6PPD-Q -PTGS2 complex. (C) 6PPD-Q -MMP2 complex. (D) 6PPD-Q -SMAD3 complex. (E) 6PPD-Q -RELA complex. (F) 6PPD-Q -GSK3B complex.",
-          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g007.webp"
-        },
-        {
-          "label": "Fig 8",
-          "caption": "Molecular dynamics simulation analysis of the 6PPD-Q–RELA complex. (A) Root-mean-square deviation (RMSD) profiles of the protein, ligand, and protein–ligand complex during the 100-ns simulation. (B) Root-mean-square fluctuation (RMSF) of protein residues. (C) Solvent-accessible surface area (SASA) of the complex over the simulation trajectory. (D) Radius of gyration (Rg) and its components along the principal axes. (E) Number of hydrogen bonds formed between 6PPD-Q and RELA during the simulation. (F) Free-energy landscape of the 6PPD-Q–RELA complex constructed based on RMSD and Rg.",
-          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g008.webp"
+          "label": "Fig. 6.",
+          "caption": "Phylogenetic neighbourhoods of ancient DNA-placed samples. All the nodes show the placed samples (in red), the neighbouring taxa codified by the country in which the samples were collected and the lineage of the samples within the node. (a) and (b) correspond to the Hungarian mummies’ sequences, (c) corresponds to the Bishop’s sequence and (d) shows the M. pinnipedii sequences.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690021/bin/mgen-12-01859-g006.webp"
         }
       ],
       "supplements": [
         {
-          "label": "S1 Table",
-          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s001.xlsx",
-          "description": "PubChem information for 6PPD-Q. (XLSX)"
-        },
-        {
-          "label": "S2 Table",
-          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s002.xlsx",
-          "description": "Potential targets of 6PPD-Q retrieved from different target prediction databases. (XLSX)"
-        },
-        {
-          "label": "S3 Table",
-          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s003.xlsx",
-          "description": "IVDD-associated genes retrieved from different disease-related databases. (XLSX)"
-        },
-        {
-          "label": "S4 Table",
-          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s004.xlsx",
-          "description": "Common targets between 6PPD-Q and intervertebral disc degeneration. (XLSX)"
-        },
-        {
-          "label": "S5 Table",
-          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s005.xlsx",
-          "description": "Detailed results of GO and KEGG enrichment analyses. (XLSX)"
-        },
-        {
-          "label": "S6 Table",
-          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s006.xlsx",
-          "description": "Underlying numerical data for molecular dynamics simulation analyses of the 6PPD-Q–RELA complex. (XLSX)"
+          "label": "Supplementary Material 1.",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690021/bin/mgen-12-01859-s001.pdf",
+          "description": ""
         }
       ],
       "fulltext_ok": true,
       "metrics": {
-        "impact_factor": "2.8",
-        "jcr": "SCI Q2",
+        "impact_factor": "4.5",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
         "status": "matched",
         "source": "EasyScholar",
-        "retrieved_at": "2026-10-24T10:32:26Z"
+        "retrieved_at": "2026-10-24T12:43:49Z"
       },
-      "journal_display": "PloS one（IF 2.8；JCR SCI Q2）",
-      "updated_at": "2026-10-24T10:32:26Z",
+      "journal_display": "Microbial genomics（IF 4.5；JCR SCI Q1）",
+      "updated_at": "2026-10-24T12:43:49Z",
       "article": {
-        "title_zh": "6PPD-醌暴露与椎间盘退变：网络毒理学、分子对接与分子动力学模拟的整合解读",
-        "lead": "一项发表于PLoS ONE的计算研究，通过ADMETLAB 3.0毒性预测、四数据库靶点检索、PPI网络分析、GO/KEGG富集、分子对接及100 ns分子动力学模拟，提出6PPD-醌可能通过PTGS2、MMP2、RELA等核心靶点及氧化应激、炎症、凋亡相关通路与椎间盘退变（IVDD）发生关联。但该研究完全基于生物信息学与计算模拟，未提供任何实验验证，结论应视为假说生成而非因果证据。",
-        "background": "6PPD-醌（6PPD-quinone，6PPD-Q）是轮胎橡胶抗氧化剂6PPD的环境转化产物，近年来因其对水生生物的急性毒性而受到关注。椎间盘退变（intervertebral disc degeneration，IVDD）是腰痛的主要病理基础，其发生涉及氧化应激、炎症、细胞外基质降解和细胞凋亡等多种机制。环境污染物是否以及如何参与IVDD进程，目前仍缺乏系统研究。该文尝试用网络毒理学（network toxicology）结合分子对接（molecular docking）和分子动力学（molecular dynamics，MD）模拟，从计算角度探索6PPD-Q与IVDD之间的潜在分子联系。",
-        "research_question": "6PPD-Q的预测毒性特征如何？其潜在人类靶点与IVDD相关基因是否存在交集？交集靶点构成的蛋白互作网络中有哪些核心节点？这些核心靶点与6PPD-Q的结合在热力学和动力学上是否稳定？由此能否提出6PPD-Q参与IVDD的候选分子机制假说？",
-        "study_design": "纯计算研究，无实验验证。流程为：从PubChem获取6PPD-Q结构，用ADMETLAB 3.0预测毒性；用ChEMBL、SEA、TargetNet、Swiss Target Prediction四库检索人类靶点并去重、经UniProt标准化；用GeneCards、OMIM、Ensembl整合IVDD相关基因；取交集后经STRING构建蛋白-蛋白相互作用（protein-protein interaction，PPI）网络，用Cytoscape 3.10.1及CentiScaPe 2.2插件按拓扑参数筛选核心靶点；用Metascape做GO和KEGG富集；用AutoDock 4对前五位核心靶点做分子对接；最后对结合最优的复合物做100 ns GROMACS分子动力学模拟。",
-        "methods": "6PPD-Q的化学结构、分子式与SMILES（Simplified Molecular Input Line Entry System）字符串取自PubChem，导入ADMETLAB 3.0平台预测毒性参数。靶点检索限定物种为Homo sapiens，合并ChEMBL、SEA、TargetNet、Swiss Target Prediction四库结果并去重，经UniProt标准化后构建6PPD-Q靶点库。以“Intervertebral disc degeneration”为检索词，从GeneCards、OMIM、Ensembl收集IVDD相关基因，合并去重建立疾病靶点集，用Venn图取交集。交集靶点导入STRING（物种Homo sapiens，置信度阈值>0.4）获取互作数据，在Cytoscape 3.10.1中构建并可视化PPI网络，用CentiScaPe 2.2插件计算度中心性（degree centrality，DC）、介数中心性（betweenness centrality，BC）和接近中心性（closeness centrality，CC），以均值为阈值筛选核心靶点。Metascape用于GO（覆盖生物过程BP、细胞组分CC、分子功能MF）和KEGG富集：最小重叠为3，原始P值 cutoff 0.01，最小富集因子1.5，P值用超几何检验计算，Benjamini–Hochberg校正控制多重检验，校正q值<0.05视为显著，取前10个GO条目和前20条KEGG通路可视化，并用Cytoscape构建靶点-通路网络。分子对接：6PPD-Q三维结构经OpenBabel 3.1.1转为Mol2，AutoDock Tools 1.5.7加氢、计算电荷并导出PDBQT配体文件；核心靶点高分辨率晶体结构取自RCSB PDB，PyMOL 3.6.1去水去杂原子后经AutoDock Tools转PDBQT；AutoDock 4对接，受体刚性、配体柔性，每对取预测结合能最低构象为代表姿势，PyMOL可视化。分子动力学：选取对接评分最优的复合物，用GROMACS 2025.3模拟，蛋白采用AMBER14SB力场，配体拓扑由Sobtop生成；复合物置于周期性立方盒，TIP3P水模型溶剂化，补加离子至生理NaCl浓度150 mM；先做500步共轭梯度能量最小化（收敛容差100.0 kJ/mol·nm，步长0.01 nm），再做100 ps限制性平衡（时间步1 fs），随后进行100 ns生产模拟（时间步2 fs）；温度298.15 K由V-rescale恒温器维持（耦合常数0.2 ps），压力1.0 bar由C-rescale恒压器维持；含氢键用LINCS约束；长程静电用粒子网格Ewald（particle mesh Ewald，PME）方法，截断1.0 nm，范德华相互作用用Verlet截断方案，截断1.0 nm，并施加能量与压力的色散校正，模拟中移除质心运动。轨迹分析包括均方根偏差（root-mean-square deviation，RMSD）、均方根涨落（root-mean-square fluctuation，RMSF）、回转半径（radius of gyration，Rg）、溶剂可及表面积（solvent-accessible surface area，SASA）和蛋白-配体氢键数；并以RMSD和Rg为集体变量构建二维和三维自由能景观（free-energy landscape，FEL）。",
-        "results": "毒性预测方面，6PPD-Q分子式为C18H22N2O2，分子量298.4 g/mol。ADMETLAB 3.0给出肝毒性H-HT 0.830、药物性肝损伤DILI 0.858、血液毒性0.740、遗传毒性0.994，以及SR-MMP 0.913、SR-ARE 0.909等参数。作者据此提示6PPD-Q的暴露风险可能不止于全身毒性，还可能干扰氧化应激（oxidative stress，OS）与基质降解过程。需要强调，这些是平台预测分数而非实测毒性，不能直接外推为人体危害。靶点交集方面，四库合并去重后得到204个6PPD-Q潜在结合靶点，三库整合得到2236个IVDD相关基因，Venn图取交集得59个共同基因（图2），作为后续分析的分子基础。PPI网络方面，59个交集靶点经STRING（置信度>0.4）构建出含55个节点、224条边的初始网络；用CentiScaPe按均值阈值（Degree>8.145、Betweenness>75.745、Closeness>0.008）筛选，得到12个节点、33条边的核心子网（图3，表2）。按Degree排序前五位枢纽基因为PTGS2、MMP2、SMAD3、RELA、GSK3B。读图时应注意，节点数和边数较交集基因数少，说明部分靶点未进入互作网络；拓扑筛选是启发式的，核心地位不等于因果驱动。富集分析方面，GO得到797个BP、58个CC、73个MF条目（图4）：BP显著富集于酶联受体蛋白信号通路、细胞迁移正调控以及OS应答和凋亡信号调控等线粒体相关过程；CC主要定位在外细胞膜、受体复合物和突触结构；MF集中于激酶结合、蛋白激酶活性和转录因子结合，与PPI中的激酶枢纽GSK3B相呼应。KEGG（图5）显示靶点显著富集于MAPK、PI3K-Akt等环境应激相关经典通路，AGE-RAGE和凋亡通路的富集提示与氧化应激和线粒体功能障碍的潜在关联，TNF和IL-17信号通路的存在则提示6PPD-Q可能参与髓核细胞内炎症介导的基质稳态破坏。靶点-通路网络（图6）显示PTGS2、MMP2、RELA、SMAD3、GSK3B广泛分布于AGE-RAGE、PI3K-Akt、MAPK、TNF、IL-17等通路，其中PTGS2、MMP2、RELA连接多条通路，可能作为连接氧化应激、炎症、凋亡与基质降解的桥接节点。这些结果支持“多靶点、多通路”的计算假说，但不能证明6PPD-Q在体内确实激活或抑制这些通路。分子对接方面，对前五位枢纽基因对接，以结合能<−5 kcal/mol为良好结合的一般标准；结果显示6PPD-Q与五个靶点的结合能均<−6.0 kcal/mol（图7A，表3），其中6PPD-Q-RELA复合物（−8.82 kcal/mol）和6PPD-Q-MMP2复合物（−8.30 kcal/mol）结合最稳定，其余为PTGS2 −7.2、GSK3B −7.5、SMAD3 −6.09 kcal/mol。可视化（图7B–F）显示6PPD-Q可嵌入各靶点活性口袋，通过氢键和疏水作用维持构象稳定，例如与HIS-39、CYS-47残基形成关键氢键，与GSK3B的VAL-135残基形成稳定结合。对接分数是打分函数的近似，受受体构象刚性和口袋选择影响，不能等同于真实亲和力。分子动力学方面，对结合最优的6PPD-Q-RELA复合物做了100 ns模拟（图8）。蛋白及复合物RMSD在初始约15–20 ns上升后波动于约0.28–0.35 nm的较窄区间，提示先经历构象调整后进入相对稳定状态；配体RMSD整体较低，主要在约0.10–0.20 nm间波动，模拟中段有短暂升高。RMSF显示多数残基涨落低于0.20 nm，少数局部区域峰值接近0.4–0.5 nm，提示存在柔性片段。SASA在约90–98 nm²内基本稳定，无持续突变，提示未发生明显整体解折叠；Rg稳定在约1.49–1.53 nm，说明复合物紧凑性得以保持。氢键分析显示6PPD-Q与RELA在整个轨迹中维持间歇性氢键，数目以0–1为主，偶达2–3。自由能景观显示主导低能盆地集中于RMSD约0.30–0.35 nm、Rg约1.51–1.52 nm处，提示复合物偏好采样相对明确的低能构象态。总体而言，这些结果支持6PPD-Q-RELA复合物在所模拟条件下的动态稳定性，但仅针对单一复合物、单一轨迹，且模拟条件为298.15 K、1.0 bar的标准计算设置，不能据此推断体内结合或功能效应。",
-        "limitations": "第一，全文为计算研究，无细胞、动物或人群实验验证，所有关联均为预测性假说。第二，ADMETLAB 3.0的毒性参数是模型预测分数，不能等同于实测毒理学终点。第三，靶点来源于四个数据库的预测与检索，假阳性与假阴性均可能存在，且未限定暴露途径、剂量或组织分布。第四，IVDD相关基因来自三个疾病数据库的合并，异质性强，交集分析不能反映组织特异性表达或疾病分期。第五，PPI核心靶点依赖拓扑阈值筛选，阈值设定带有主观性，核心地位不等于因果驱动。第六，分子对接将受体视为刚性，打分函数存在近似误差，结合能排序不宜过度解读。第七，分子动力学仅对6PPD-Q-RELA一个复合物做了单条100 ns轨迹，未做重复模拟或结合自由能计算，统计稳健性有限。第八，研究未考虑6PPD-Q在体内的代谢、生物利用度与血-椎间盘屏障等药代动力学因素。",
-        "takeaways": "该研究以计算流程提出一个可检验的假说：6PPD-Q可能通过PTGS2、MMP2、SMAD3、RELA、GSK3B等核心靶点，经由氧化应激、炎症、凋亡和基质降解相关通路（MAPK、PI3K-Akt、AGE-RAGE、TNF、IL-17等）与IVDD发生潜在关联，其中6PPD-Q-RELA在对接和100 ns模拟中表现最稳定。对读者的实际意义是：这为环境污染物与椎间盘退变的交叉研究提供了候选靶点清单和机制方向，但尚不能作为6PPD-Q致IVDD的证据；后续需要表达谱、细胞与动物暴露实验以及结合自由能计算等独立验证。",
+        "title_zh": "UShER-TB：可扩展、全面、可及的结核分枝杆菌系统发育基因组学分析平台",
+        "lead": "一项新研究构建了迄今规模最大的结核分枝杆菌复合群（Mycobacterium tuberculosis complex, MTBC）全基因组系统发育树，纳入129,312个样本，并配套开发了开源流程myco与UShER-TB资源，使全球结核分枝杆菌（Mycobacterium tuberculosis, MTB）传播监测、耐药预测和古DNA定位在同一框架下完成。",
+        "background": "MTBC是全球重要的呼吸道病原体，公共数据库中已有数十万条全基因组序列，但受技术限制，这些数据此前未被整合进单一、全面的系统发育树。缺乏统一参考树，使得跨地区、跨研究的传播簇比较和进化推断难以进行。",
+        "research_question": "能否将公共序列读取档案（Sequence Read Archive, SRA）中几乎所有可用的MTBC Illumina测序数据整合为一棵可扩展、可交互的全球系统发育树，并验证其在传播簇识别、地理引入推断和古DNA样本定位中的准确性？",
+        "study_design": "方法学与资源构建研究：开发WDL流程myco处理SRA数据，使用UShER（Ultrafast Sample placement on Existing tRee）的usher-sampled子工具推断全球树；通过模拟数据评估拓扑与近邻恢复准确性，并在西班牙瓦伦西亚地区、泰国清莱府和摩尔多瓦三个真实数据集上基准测试传播簇分配。",
+        "methods": "数据获取：检索截至2024年6月SRA中几乎所有Illumina处理的MTBC序列，共242,430个样本。元数据经Ranchero工具标准化，整合NCBI字段、文献与专家咨询，并纳入31,552个样本的表型药敏试验（phenotypic drug susceptibility testing, pDST）数据。样本处理：myco流程以工作流描述语言（Workflow Description Language, WDL）编写，经Terra云平台运行；用SRANWRP下载FASTQ，用clockwork进行基因分型；大于450 MB的FASTQ用seqtk sample降采样至1,000,000条reads，少于1,000条reads的样本丢弃；用CRyPTIC掩码文件屏蔽难分型参考区域；低深度区域及插入缺失/结构变异转为模糊核苷酸；TBProfiler 4.4.2提供谱系与耐药预测；输出MAPLE格式。系统发育推断：135,180个样本合并后连同H37Rv参考基因组（NC_000962.3）输入UShER 0.6.4的usher-sampled，默认参数，64线程、1 TB内存Linux服务器；输出突变注释树（Mutation Annotated Tree, MAT）协议缓冲文件，经TaxoniumTools 2.0.86转换为Taxonium可视化格式。以谱系8与M. canettii共同祖先节点为根，剪除137个M. canettii样本。共感染筛查：基于读段支持比例（fraction of read support, FRS），将超过19%变异FRS<0.85的样本判为候选共感染并剔除，另经人工检查剔除100个基部放置样本。局部掩码：开发“放置后局部掩码”，在名义掩码距离内对近缘样本的缺失位点进行掩码，再用matOptimize优化简约性。准确性评估：用Alisim以30,000样本真树模拟数据，计算归一化Robinson–Foulds距离与近邻恢复率（Neighbourhood Recovery Rate, NRR）；对500个随机样本在15个FRS阈值和6个掩码距离下评估10-SNP簇分配敏感性。传播簇基准：以10-SNP阈值的标准流程为金标准，计算精确率、召回率和调整Rand指数。地理引入：用matUtils introduce默认设置推断，并对样本量最大的七国进行10%–60%降采样敏感性分析。",
+        "results": "研究最终获得129,312个样本的全球MTBC系统发育树，文件仅17 Mb；随机抽取100个样本重复加入树中，40线程下耗时3分11秒、峰值内存7.1 GB。树中55.48%样本有宿主注释，其中93.15%为人类；49.69%有分离年份。TBProfiler为99.88%样本分配谱系，单一明确谱系中以谱系4最多（44.28%），其次谱系2（30.13%）。耐药预测中敏感占51.47%，耐多药结核病（multidrug-resistant TB, MDR-TB）占18.25%，而“其他”类别占11.95%，多于准广泛耐药（pre-XDR-TB，11,688例），提示常用耐药简称的局限。模拟评估中，真树与推断树的归一化Robinson–Foulds距离为0.02；真实数据集中与IQ-TREE2树的归一化RF距离分别为瓦伦西亚0.04、泰国0.01、摩尔多瓦0.11。近邻恢复率方面，真实分化时间≤1年时，1-SNP阈值可在83.2%的情况下找回全部最近亲缘样本；阈值增大可找回更多近缘样本，但也会纳入更多无关样本。局部掩码一轮后，需掩码的突变数下降91%–94%，回复突变下降41%–45%；以10-SNP距离计，在15,946个节点上掩码24,436个SNP，被掩码位点中11.2%含回复突变，而全树突变中仅0.63%，支持该方法有效去除错误推断位点。传播簇基准中，两种方法共识别769个传播样本，705个（91.7%）一致；230个簇中176个（76.5%）完全匹配，精确率0.98、召回率0.92、调整Rand指数0.95。三个真实场景的基因组簇比例分别为瓦伦西亚46.5%、泰国37.1%、摩尔多瓦62.3%；局部与全球框架下Cohen's Kappa在瓦伦西亚为0.993对0.962、泰国0.973对0.989、摩尔多瓦0.857对0.944，说明全球背景可保持簇完整性，但摩尔多瓦因与邻国样本混合而一致性略低。地理引入分析共识别51,077次引入事件；48种降采样情景显示，采样充分国家的引入模式稳定，而基因组代表性不足地区变异较大，提示对这些区域结果需谨慎解读。研究还发现若干候选新谱系样本，如SAMEA7423516为谱系5的姐妹群（分支长度432，与谱系5内样本分支长度差异无统计学意义，P约0.15），SAMEA3448377位于谱系3内高度分化位置（353个独特突变，P约0.09），均通过混合感染质控，提示可能代表既往未充分描述的遗传多样性。古DNA定位方面，匈牙利木乃伊样本分别落入L4.1.2.1和L4.8/L4.10节点，17世纪瑞典主教样本落入L4.8/L4.10，均与原谱系分型一致；秘鲁前接触期样本被置于M. pinnipedii与M. microti共同祖先的基部，而非最接近M. pinnipedii，经IQ-TREE最大似然树重建后得到与已发表拓扑一致的局部结构，说明古DNA分析仍需定制流程。",
+        "limitations": "地理代表性受测序资源与监测能力影响显著，样本数不等于感染密度；地理引入推断在采样不足地区不稳定，降采样敏感性分析已显示这一点。共感染筛查依赖19%的FRS阈值，虽经敏感性分析支持，但仍属操作阈值而非生物学界限。局部掩码仅优化近缘样本的缺失位点，不能解决所有缺失数据问题。古DNA样本的最终定位仍需定制化分析流程。此外，全球树基于公共数据库元数据，字段不一致与错误难以完全消除。",
+        "takeaways": "UShER-TB将公共SRA中几乎所有MTBC Illumina数据整合为一棵可交互、可下载、可在线放置新样本的全球参考树，配套myco流程与Ranchero元数据工具，显著降低了大规模MTB系统发育分析的门槛。基准测试表明其拓扑推断与传播簇识别具有较高准确性，局部掩码可有效减少缺失数据导致的放置伪影。该资源适用于采样充分地区的传播动态与引入分析，并可作为古DNA和候选新谱系样本的初步筛查框架；对采样不足地区的推断应保持谨慎。",
         "figure_notes": [
           {
-            "label": "Fig 1",
-            "caption_zh": "6PPD-醌的二维化学结构（A）与三维分子构象（B）。",
-            "interpretation": "展示研究对象的化学身份，是后续ADMET预测和分子对接的输入基础；本身不提供毒性或结合信息。"
+            "label": "Fig. 1",
+            "caption_zh": "传播簇分配比较流程：目标数据集分别经局部与全球从头系统发育、带放置步骤的流程处理，各自在10-SNP阈值下生成基因组传播簇并进行比较。",
+            "interpretation": "该图说明基准测试的设计逻辑：以不同建树与放置策略产生的10-SNP簇为比较对象，评估usher-sampled放置与标准流程的一致性。"
           },
           {
-            "label": "Fig 2",
-            "caption_zh": "6PPD-Q靶点与IVDD相关靶点的Venn图。",
-            "interpretation": "显示204个化合物潜在靶点与2236个IVDD相关基因的交集为59个基因；交集大小反映数据库层面的重叠，不代表生物学因果。"
+            "label": "Fig. 2",
+            "caption_zh": "全球UShER-TB系统发育资源概览：(a) 129,312个样本经myco处理并用usher-sampled放置的全球系统发育树；(b) 样本地理分布。样本深度不一定对应感染密度，测序资源对数据收集影响很大。",
+            "interpretation": "图2a展示最终树的整体拓扑与谱系分布，图2b的choropleth地图显示欧洲与亚洲样本最多，英国、中国、印度居前。读图时应注意地图反映的是测序可得性而非疾病负担。"
           },
           {
-            "label": "Fig 3",
-            "caption_zh": "PPI分析识别候选靶点：59个交集靶点经DC、BC、CC筛选得到12个关键靶点。",
-            "interpretation": "网络节点大小和颜色通常对应拓扑指标；12个核心靶点按Degree排序前五位为PTGS2、MMP2、SMAD3、RELA、GSK3B。读图应关注筛选阈值的人为设定，核心节点是网络中心性而非功能驱动力的证明。"
+            "label": "Fig. 3",
+            "caption_zh": "局部掩码的动机与效果：(a) 示例说明样本缺失序列信息时，若近邻在该位点携带变异，放置算法会将其误判为差异，从而夸大突变距离；右侧显示对第6、8位等位点进行掩码可避免这种虚假距离。(b) 四轮放置后局部掩码中需掩码突变数的变化。(c) 每轮掩码后全球树中回复突变数的变化。",
+            "interpretation": "图3a是方法原理示意，说明缺失数据如何制造放置伪影；图3b、3c显示一轮掩码后需掩码突变与回复突变均大幅下降，支持局部掩码能有效清理错误推断位点。柱状与折线图对应掩码距离6、8、10，趋势一致。"
           },
           {
-            "label": "Fig 4",
-            "caption_zh": "GO富集分析，包括生物过程、细胞组分和分子功能三个维度。",
-            "interpretation": "富集条目提示交集靶点涉及受体信号、细胞迁移、氧化应激应答、凋亡调控、激酶结合与转录因子结合等；这些是功能注释层面的统计关联，不能说明6PPD-Q改变了这些过程。"
+            "label": "Fig. 4",
+            "caption_zh": "不同场景下的放置一致性：(a) 局部与全球设置下传播簇分配结果汇总；(b) 被正确分配至原传播组的样本比例；(c) 落在原树位置两个节点以内的样本比例。场景从左至右为局部数据集放置40%样本（LP_40）、全球数据集放置40%样本（GP_40）和全球数据集放置全部序列（GP_all）。",
+            "interpretation": "该图比较西班牙、泰国和摩尔多瓦在三种场景下的一致性。西班牙与泰国一致性超过97%，摩尔多瓦略低（约88%–94%），与其样本和邻国混合较多相符。读图时应关注场景间差异而非单一数值。"
           },
           {
-            "label": "Fig 5",
-            "caption_zh": "KEGG富集分析前20条通路。",
-            "interpretation": "MAPK、PI3K-Akt、AGE-RAGE、凋亡、TNF、IL-17等通路显著富集，支持氧化应激、炎症、凋亡与基质降解的多通路假说；富集显著性依赖输入基因集，不能推断通路活性方向。"
+            "label": "Fig. 5",
+            "caption_zh": "候选系统发育独立支系的位置：UShER-TB全球树摘要（主要谱系折叠），展示潜在新支系样本的系统发育位置。",
+            "interpretation": "图中折叠树显示谱系1至9、La1–La3及未分类SAMEA样本的位置，谱系4和2样本量最大。SAMEA3182759和SAMEA4798873为谱系6和9的并系外群，可能属于已知动物适应支系A1；SAMEA104112310所在小支系与La1–La3为姐妹群，可能属于包含M. microti与M. pinnipedii的动物宿主支系A2。该图用于提出候选，而非正式命名新谱系。"
           },
           {
-            "label": "Fig 6",
-            "caption_zh": "核心基因与富集KEGG通路的靶点-通路相互作用网络；蓝色节点为核心靶基因，红色节点为信号通路，边表示靶点与通路的关联。",
-            "interpretation": "PTGS2、MMP2、RELA等节点连接多条通路，提示其可能作为桥接节点；该网络是注释关系的可视化，边的存在不等于调控关系或因果作用。"
+            "label": "Fig. 6",
+            "caption_zh": "古DNA样本放置后的系统发育邻域：红色为被放置样本，邻近分类单元按采集国家编码并标注节点内样本谱系。(a)(b)为匈牙利木乃伊序列，(c)为主教序列，(d)为M. pinnipedii序列。",
+            "interpretation": "四棵子树显示古DNA样本在全局树中的位置：匈牙利木乃伊分别落入L4.1.2.1和L4.8/L4.10，主教样本落入L4.8/L4.10，均与原分型一致；三个秘鲁样本嵌套于M. pinnipedii相关分支。该图支持UShER-TB可用于古DNA初步定位，但(d)的精确拓扑仍需最大似然重建确认。"
+          }
+        ]
+      },
+      "ai_status": "success",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    },
+    "doi:10.1002/jcsm.70409": {
+      "id": "doi:10.1002/jcsm.70409",
+      "title": "Circulating MicroRNAs Reflect Systemic Inflammation and Metabolic Dysfunction in Oesophageal Squamous Cell Carcinoma-Associated Cachexia.",
+      "authors": [
+        "Li Y",
+        "Chen R",
+        "Lv X",
+        "Wei S",
+        "Xu Y",
+        "Ding S"
+      ],
+      "journal": "Journal of cachexia, sarcopenia and muscle",
+      "year": "2026",
+      "doi": "10.1002/jcsm.70409",
+      "pmcid": "PMC13688428",
+      "pmid": "42910566",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ],
+      "figures": [
+        {
+          "label": "FIGURE 1",
+          "caption": "Identification and validation of cachexia‐associated circulating miRNAs in ESCC patients. (A, B) Hierarchical clustering of differentially expressed circulating miRNAs in healthy controls versus cachectic ESCC and cachectic versus noncachectic ESCC. (C, D) Corresponding volcano plots. (E) Intersection of miRNAs upregulated in cachectic ESCC in both comparisons, identifying hsa‐miR‐5187‐5p and hsa‐miR‐4433b‐3p. (F) qRT‐PCR expression in healthy controls, noncachectic ESCC and cachectic ESCC ( n = 42/group). Points represent participants; bars indicate mean ± SEM. * p < 0.05; *** p < 0.001; **** p < 0.0001.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-g004.webp"
+        },
+        {
+          "label": "FIGURE 2",
+          "caption": "ROC performance of circulating miRNAs for ESCC cachexia classification. ROC curves for hsa‐miR‐5187‐5p (A–C) and hsa‐miR‐4433b‐3p (D–F) comparing healthy controls (HC), noncachectic ESCC (ESCC‐NC) and cachectic ESCC (ESCC‐C). AUC, p value, cohort‐derived cut‐off, sensitivity and specificity are shown in each panel.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-g001.webp"
+        },
+        {
+          "label": "FIGURE 3",
+          "caption": "Unadjusted associations with overall survival in ESCC. Kaplan–Meier curves according to (A) cachexia status, (B) hsa‐miR‐5187‐5p, (C) hsa‐miR‐4433b‐3p, (D) IL‐6, (E) TNF‐α, (F) CRP and (G) IL‐1β. Hazard ratios were estimated using univariate Cox regression and were not adjusted for TNM stage, age, sex or other clinicopathological variables.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-g005.webp"
+        },
+        {
+          "label": "FIGURE 4",
+          "caption": "Associations of candidate miRNAs with inflammatory markers and albumin. Cross‐sectional correlations of hsa‐miR‐5187‐5p and hsa‐miR‐4433b‐3p with (A) IL‐6, (B) TNF‐α, (C) IL‐1β, (D) CRP and (E) albumin. Fitted lines and confidence bands are shown. Correlations were weak to moderate and do not establish causality.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-g002.webp"
+        },
+        {
+          "label": "FIGURE 5",
+          "caption": "Functional enrichment and pathway network analysis. (A, B) GO and KEGG enrichment for miRNAs differentially expressed between ESCC and healthy controls. (C, D) GO and KEGG enrichment for cachectic versus noncachectic ESCC, highlighting inflammatory and metabolic pathways. (E) Predicted miRNA‐target gene‐pathway network for hsa‐miR‐5187‐5p and hsa‐miR‐4433b‐3p.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-g003.webp"
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary file 1",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s001.docx",
+          "description": "Table S1: RNA quality and PCR efficiency for all samples."
+        },
+        {
+          "label": "Supplementary file 2",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s005.docx",
+          "description": "Table S2: Oligonucleotide sequences for miRNA RT‐qPCR."
+        },
+        {
+          "label": "Supplementary file 3",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s003.docx",
+          "description": "Table S3: Normalized miRNA levels were compared pairwise among healthy control (HC), non‐cachexia, and cachexia."
+        },
+        {
+          "label": "Supplementary file 4",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s008.xls",
+          "description": "Table S4: Differentially expressed miRNAs identified by sequencing between healthy controls and cachexia."
+        },
+        {
+          "label": "Supplementary file 5",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s002.xls",
+          "description": "Table S5: Differentially expressed miRNAs identified by sequencing between healthy controls and non‐cachexia."
+        },
+        {
+          "label": "Supplementary file 6",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s007.xls",
+          "description": "Table S6: Genes significantly targeted by differentially expressed miRNAs identified by sequencing between healthy controls and cachexia."
+        },
+        {
+          "label": "Supplementary file 7",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s009.xls",
+          "description": "Table S7: Genes significantly targeted by differentially expressed miRNAs identified by sequencing between healthy controls and Non‐cachexia."
+        },
+        {
+          "label": "Supplementary file 8",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s006.xlsx",
+          "description": "Table S8: miRTarBase enrichment of two genes of interest."
+        },
+        {
+          "label": "Supplementary file 9",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s010.docx",
+          "description": "Table S9: Pathway‐gene interactions included in the network."
+        },
+        {
+          "label": "Supplementary file 10",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13688428/bin/JCSM-17-e70409-s004.docx",
+          "description": "Figure S1: Elevated circulating inflammatory markers in ESCC patients with cachexia . Box‐and‐whisker plots showing serum concentrations of (A) IL‐6, (B) TNF‐α, (C) IL‐1β, and (D) CRP in healthy controls (n=42), ESCC patients without cachexia (non‐cachexia) (n=42), and ESCC patients with cachexia (n=42). Data are presented as median with interquartile range; whiskers indicate minimum and maximum values. Statistical significance was assessed using appropriate multiple‐group comparison tests. ****P < 0.0001."
+        }
+      ],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "9.9",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T12:44:20Z"
+      },
+      "journal_display": "Journal of cachexia, sarcopenia and muscle（IF 9.9；JCR SCI Q1）",
+      "updated_at": "2026-10-24T12:44:20Z",
+      "article": {
+        "title_zh": "循环microRNA映照食管鳞癌相关恶病质的全身炎症与代谢紊乱：一项探索性队列研究解读",
+        "lead": "食管鳞状细胞癌（ESCC）患者一旦进入恶病质状态，往往意味着营养耗竭、炎症激活与预后恶化。南通大学附属南通市第一人民医院团队在《Journal of Cachexia, Sarcopenia and Muscle》发表研究，通过小RNA测序与队列qRT-PCR，锁定hsa-miR-5187-5p与hsa-miR-4433b-3p两个循环候选分子，发现其表达随“健康对照→非恶病质ESCC→恶病质ESCC”逐步升高，并与炎症因子、白蛋白及总生存期存在关联。需要强调的是，该研究为单中心、同队列内探索性分析，ROC与生存结果均未经独立验证或多因素校正，不能据此推断因果或独立预后价值。",
+        "background": "癌症恶病质并非单纯的“吃得少、掉体重”，而是以骨骼肌与脂肪组织进行性消耗、全身炎症激活和代谢重编程为特征的综合征，在食管癌患者中尤为常见。ESCC患者因吞咽困难、肿瘤负荷与炎症因子（如白细胞介素-6，interleukin-6，IL-6；肿瘤坏死因子-α，tumor necrosis factor-alpha，TNF-α；C反应蛋白，C-reactive protein，CRP）升高，常出现体重下降、白蛋白与前白蛋白降低。临床上缺乏便捷、可重复的血液标志物来反映这种炎症-代谢轴的状态。微小RNA（microRNA，miRNA）是一类稳定存在于血浆中的小非编码RNA，参与炎症与代谢调控，因而被视为潜在的循环指示分子。但此前针对ESCC相关恶病质的循环miRNA研究多为零散报道，缺乏从发现到队列验证的系统性探索。",
+        "research_question": "在ESCC患者中，循环miRNA能否区分恶病质与非恶病质状态，并与全身炎症、营养生化指标及总生存期相关联？具体而言：哪些血浆miRNA在恶病质ESCC中特异性上调？这些候选分子的表达是否随疾病进展呈阶梯式变化？其与炎症因子、白蛋白的相关性及对生存的未校正关联如何？",
+        "study_design": "单中心、横断面病例对照研究，嵌套发现-验证设计。共纳入126名参与者：42名健康对照、42例非恶病质ESCC、42例恶病质ESCC。恶病质依据国际共识标准判定。先在每组4例的发现子集中进行血浆小RNA测序，筛选差异表达miRNA，再在全队列（每组42例）中用qRT-PCR验证候选分子。随后在同一队列内进行探索性受试者工作特征（receiver operating characteristic，ROC）分析、Kaplan-Meier生存分析与单因素Cox回归，并构建两个探索性多因素logistic回归模型。研究未设独立外部验证队列。",
+        "methods": "研究对象为2021年1月至12月在南通市第一人民医院连续招募的初诊、组织病理学确诊的ESCC患者，手术前未接受放疗、化疗或其他抗肿瘤治疗；排除食管腺癌、贲门癌、活动性感染、合并其他恶性肿瘤、既往抗肿瘤治疗、激素治疗或长期使用糖皮质激素者。健康对照来自医院体检中心，无近期非意愿性体重下降、重大系统性疾病或相关用药。肿瘤分期采用第八版UICC/AJCC TNM分类。人体测量：身高精确至1厘米，体重精确至0.5千克，计算体重指数（body mass index，BMI）；体脂百分比用基于BMI与年龄的性别特异性公式估算（男性1.2×BMI+0.23×年龄−16.2，女性1.2×BMI+0.23×年龄−5.4），并据此推算脂肪质量指数与去脂质量指数——作者明确说明这些为公式估算值，仅作描述性表征，不视为骨骼肌或脂肪组织的直接测量。测序：每组4例的血浆总RNA用miRNeasy Plasma Midi Kit提取，QIAseq miRNA Library Kit建库，Illumina HiSeq平台测序，由上海生物技术公司完成；差异表达定义为p<0.05且|log2 fold change|>2，用层次聚类热图与火山图展示；对ESCC vs 健康对照、恶病质 vs 非恶病质两套差异miRNA分别做基因本体（Gene Ontology，GO）与京都基因与基因组百科全书（Kyoto Encyclopedia of Genes and Genomes，KEGG）富集分析，并为hsa-miR-5187-5p与hsa-miR-4433b-3p构建预测的miRNA-mRNA-通路网络；生物信息学分析在R中完成。qRT-PCR：外周血4°C、4000×g离心15分钟取血浆，用miRcute血浆miRNA提取试剂盒提取，溶于20微升无RNase水，−80°C保存；用miRcute增强型miRNA cDNA合成试剂盒在20微升体系中42°C 60分钟、95°C 3分钟逆转录；qRT-PCR用miRcute增强型miRNA荧光定量检测试剂盒，扩增条件为95°C 15分钟，5个预扩增循环（94°C 20秒、65°C 30秒、72°C 34秒），45个扩增循环（94°C 20秒、60°C 34秒），随后做熔解曲线分析；以U6小核RNA为内参，用2−ΔΔCt法计算相对表达，每个样本设三个技术重复取均值；作者在文中承认单一内参U6是方法学局限。酶联免疫吸附试验（enzyme-linked immunosorbent assay，ELISA）检测血浆IL-6、TNF-α、IL-1β与CRP，技术重复取均值后统计。统计：正态数据以均值±标准差表示，非正态以中位数（四分位距）表示；两组比较用独立样本t检验或Mann-Whitney U检验，三组比较用单因素方差分析加事后检验或Kruskal-Wallis检验加事后比较；分类变量用χ²或Fisher精确检验；miRNA相对表达用同样策略分析。ROC曲线评估组间区分度，计算曲线下面积（area under the curve，AUC）、灵敏度、特异度及队列内推导的最佳截断值；因候选筛选、qRT-PCR与ROC均在同一队列完成，ROC结果被视为探索性，不作为独立验证。生存分析仅限ESCC患者，Kaplan-Meier曲线用log-rank检验比较，按各标志物均值分为高、低表达组，用单因素Cox比例风险模型估计风险比（hazard ratio，HR）及95%置信区间（confidence interval，CI）；因队列规模有限、担心不稳定与过拟合，未做纳入TNM分期、年龄、性别等的多因素Cox回归，生存分析被视为未校正的探索性分析。logistic回归评估候选标志物与分组状态的关联，构建两个探索性多因素模型：模型1纳入hsa-miR-5187-5p、IL-6、TNF-α、IL-1β、CRP与白蛋白；模型2以hsa-miR-4433b-3p替换对应miRNA。年龄、性别、TNM分期等未系统纳入ROC、相关性、生存或多因素logistic分析，故观察到的关联不能解释为独立于肿瘤分期或整体疾病负荷。分析用SPSS 23.0、R与GraphPad Prism 9.3.1完成，双侧检验，p<0.05为显著。",
+        "results": "第一，临床与生化特征呈现典型的“炎症-营养”双轴改变。作者首先提醒：体重下降与BMI本身就是恶病质共识标准的组成部分，因此组间差异属设计使然，只能作描述性解读；公式估算的体脂百分比、脂肪质量指数与去脂质量指数同样仅为描述，不能当作骨骼肌或脂肪消耗的直接证据。在未用于定义恶病质的变量中，恶病质ESCC患者白蛋白（33.58±3.80 vs 41.57±3.14 g/L）、总蛋白（59.40±3.99 vs 70.51±4.09 g/L）、前白蛋白（146.88±34.53 vs 228.86±73.22）与血红蛋白均低于非恶病质患者（均p<0.05）；与此同时，IL-6（22.83±1.00 vs 21.75±0.99 ng/L）、TNF-α（483.11±20.25 vs 433.30±21.14 ng/L）、CRP（2756.38±123.03 vs 2496.64±116.06 μg/L）与IL-1β（49.33±1.91 vs 45.12±1.79 pg/mL）均更高（均p<0.05）。白细胞、血小板与肌酐组间无显著差异。恶病质组晚期TNM分期比例更高、总生存更短，因此生存差异只能读作未校正关联，而非恶病质本身的独立效应。第二，发现阶段锁定两个候选分子。血浆miRNA谱在三组间呈现不同表达模式（图1A–D）；将“恶病质ESCC vs 健康对照”与“恶病质ESCC vs 非恶病质ESCC”两个比较中上调的miRNA取交集，得到hsa-miR-5187-5p与hsa-miR-4433b-3p（图1E）。全队列qRT-PCR证实二者从健康对照到非恶病质ESCC再到恶病质ESCC呈阶梯式升高，恶病质组最高（图1F）。读图要点：图1F每个点代表一名参与者，柱为均值±标准误，星号表示组间差异；阶梯式升高支持“这两个miRNA与ESCC及恶病质状态相关”的假设，但由于是横断面数据，不能说明表达变化发生在体重下降之前还是之后。第三，ROC分析显示候选miRNA在涉及恶病质的比较中区分度更强，但须牢记这是同一队列内的探索性估计。hsa-miR-5187-5p区分健康对照与非恶病质ESCC的AUC为0.8435（95%CI 0.7512–0.9359，p<0.0001；截断值>2.778，灵敏度97.62%，特异度71.43%），区分健康对照与恶病质ESCC的AUC为0.9439（95%CI 0.8973–0.9904，p<0.0001；截断值>7.032，灵敏度83.33%，特异度92.86%），区分非恶病质与恶病质ESCC的AUC为0.8594（95%CI 0.7707–0.9481，p<0.0001；截断值>9.523，灵敏度76.19%，特异度90.48%）。hsa-miR-4433b-3p区分健康对照与非恶病质ESCC的能力有限（AUC 0.6412，95%CI 0.5207–0.7616，p=0.0259；截断值>2.601，灵敏度90.48%，特异度40.48%），但区分健康对照与恶病质ESCC（AUC 0.8889，95%CI 0.8141–0.9636，p<0.0001；截断值>11.26，灵敏度78.57%，特异度95.24%）及非恶病质与恶病质ESCC（AUC 0.8175，95%CI 0.7233–0.9116，p<0.0001；截断值>11.02，灵敏度78.57%，特异度80.95%）较强。图2每个面板均标注AUC、p值、队列推导截断值、灵敏度与特异度；由于候选筛选、qRT-PCR与ROC使用同一批样本，这些估计可能偏乐观，必须经独立队列验证才能谈“诊断价值”。第四，生存分析显示恶病质与两个miRNA高表达均与更短总生存相关，但均为未校正结果。恶病质ESCC较非恶病质ESCC总生存更短（HR 1.708，95%CI 1.011–2.887，p=0.026；每组42例；图3A）；hsa-miR-5187-5p高表达者生存更短（HR 3.635，95%CI 2.113–6.253，p<0.0001；高表达41例、低表达42例），hsa-miR-4433b-3p高表达者亦然（HR 3.190，95%CI 1.871–5.439，p<0.0001；高表达42例、低表达41例）（图3B、C）。炎症标志物升高同样与更短生存相关：IL-6（HR 3.945，95%CI 1.405–11.08，p=0.0097）、TNF-α（HR 2.152，95%CI 1.157–4.004，p=0.0037）、CRP（HR 3.861，95%CI 1.954–7.627，p=0.011）与IL-1β（HR 2.074，95%CI 1.188–3.622，p=0.002）（图3D–G）。读图要点：图3为Kaplan-Meier曲线，HR来自单因素Cox回归，未校正TNM分期、年龄、性别等，因此不能据此宣称独立预后价值；此外，恶病质组本身晚期比例更高，生存差异可能部分由肿瘤负荷驱动。第五，logistic回归揭示两个miRNA与恶病质状态而非早期ESCC相关。单因素分析中，hsa-miR-5187-5p与hsa-miR-4433b-3p均与非恶病质ESCC vs 健康对照无关；二者均与恶病质ESCC vs 健康对照相关（hsa-miR-5187-5p：OR 1.104，95%CI 1.056–1.170，p=0.0001；hsa-miR-4433b-3p：OR 1.089，95%CI 1.048–1.147，p=0.0002），也与恶病质 vs 非恶病质ESCC相关（hsa-miR-5187-5p：OR 1.354，95%CI 1.185–1.636，p=0.0002；hsa-miR-4433b-3p：OR 1.069，95%CI 1.036–1.115，p=0.0004）。IL-6与IL-1β在三个组间比较中均显著；TNF-α在健康对照 vs 非恶病质ESCC及非恶病质 vs 恶病质ESCC中显著；CRP在涉及恶病质的比较中显著；白蛋白与恶病质呈负相关（健康对照 vs 恶病质：OR 0.3553，p=0.0004；非恶病质 vs 恶病质：OR 0.4059，p<0.0001）。在纳入炎症标志物与白蛋白的探索性多因素模型中，hsa-miR-5187-5p仍与恶病质ESCC vs 健康对照（OR 2.810，95%CI 1.224–5.323，p=0.006）及恶病质 vs 非恶病质ESCC（OR 12.885，95%CI 1.180–51.410，p=0.023）相关，但与非恶病质ESCC vs 健康对照无关（p=0.433）；hsa-miR-4433b-3p在相应校正模型中均不显著（均p>0.05）。部分炎症标志物与白蛋白仍与分组状态相关。作者强调，这些模型未纳入TNM分期、年龄、性别等潜在混杂因素，部分估计置信区间很宽，只能视为探索性，不能作为独立生物标志物性能的证据。第六，相关性分析显示两个miRNA与炎症及营养指标呈弱至中度相关。与IL-6的相关性较弱（hsa-miR-5187-5p：r=0.2706，p=0.0026；hsa-miR-4433b-3p：r=0.2754，p=0.0030）；与TNF-α（r=0.3919与0.4733）、IL-1β（r=0.4455与0.3629）、CRP（r=0.3880与0.4099）呈正相关（均p<0.0001）；白蛋白与hsa-miR-5187-5p（r=−0.4183，p<0.0001）及hsa-miR-4433b-3p（r=−0.3446，p=0.0002）呈负相关。图4展示散点与拟合线及置信带；这些中等强度系数只说明部分共变，不能证明直接生物学调控或因果关系。第七，功能富集与通路网络提示炎症与代谢通路参与，但基于预测靶点，属假设生成。ESCC vs 健康对照的差异miRNA富集于信号相关生物学过程及致癌、血管生成与代谢通路，包括血管内皮生长因子（vascular endothelial growth factor，VEGF）、ErbB、p53、糖鞘脂生物合成与氨基酸代谢；恶病质 vs 非恶病质ESCC的差异则富集于脂质代谢、氧化应激、细胞衰老、炎症调控、细胞因子-细胞因子受体相互作用、JAK-STAT、PI3K-Akt、转化生长因子-β（transforming growth factor-beta，TGF-β）与胰岛素信号通路。预测的靶点网络将hsa-miR-5187-5p与hsa-miR-4433b-3p连接至TNF/细胞因子信号、生长因子通路与代谢调控（图5E）。读图要点：图5A–D为GO与KEGG富集结果，图5E为预测网络；由于网络基于预测靶点，不能作为miRNA直接调控的证据。",
+        "limitations": "第一，单中心、样本量有限（每组42例），且发现、qRT-PCR与ROC分析均在同一总体队列内完成，ROC估计可能偏乐观，缺乏独立外部验证。第二，生存分析为未校正的单因素分析，未纳入TNM分期、年龄、性别等；恶病质组晚期比例更高，观察到的生存差异可能部分反映肿瘤负荷而非恶病质本身。多因素Cox回归因样本量有限、担心过拟合而未进行。第三，多因素logistic模型仅纳入miRNA、炎症标志物与白蛋白，未系统纳入年龄、性别、TNM分期等混杂因素，部分估计置信区间很宽，只能视为探索性。第四，qRT-PCR仅以U6单一内参归一化，作者本人承认这是方法学局限。第五，体脂百分比、脂肪质量指数与去脂质量指数均为公式估算而非直接测量，不能作为骨骼肌或脂肪组织消耗的直接证据。第六，研究为横断面设计，无法判断miRNA变化与体重下降、炎症激活的时间先后，不能推断因果。第七，功能富集与网络分析基于预测靶点，属假设生成，未做实验验证。第八，恶病质的定义本身包含体重与BMI，相关组间差异属设计使然，不能作为独立发现。",
+        "takeaways": "一，该研究在ESCC中识别出两个随“健康→非恶病质→恶病质”阶梯式升高的循环miRNA——hsa-miR-5187-5p与hsa-miR-4433b-3p，并显示其与全身炎症（IL-6、TNF-α、IL-1β、CRP升高）及营养生化受损（白蛋白、总蛋白、前白蛋白降低）同步出现，为“循环miRNA映照炎症-代谢轴”提供了初步人群证据。二，ROC与生存结果均来自同一队列的探索性分析，未经独立验证与多因素校正，不能据此宣称诊断或独立预后价值；AUC与HR应视为假设生成信号。三，相关性仅为弱至中度，提示miRNA与炎症/营养指标只是部分共变，不能推断直接调控或因果。四，临床与科研启示：未来需多中心、前瞻性、独立验证队列，采用多内参归一化与直接体成分测量，并将TNM分期等纳入校正模型，才能判断这些循环miRNA是否真正反映恶病质的生物学过程，还是肿瘤负荷与全身炎症的伴随现象。",
+        "figure_notes": [
+          {
+            "label": "Figure 1",
+            "caption_zh": "ESCC患者中恶病质相关循环miRNA的鉴定与验证。（A、B）健康对照 vs 恶病质ESCC、恶病质 vs 非恶病质ESCC差异表达循环miRNA的层次聚类热图；（C、D）对应的火山图；（E）两个比较中恶病质ESCC均上调miRNA的交集，锁定hsa-miR-5187-5p与hsa-miR-4433b-3p；（F）健康对照、非恶病质ESCC与恶病质ESCC的qRT-PCR表达（每组42例），点代表个体，柱为均值±标准误，*p<0.05，***p<0.001，****p<0.0001。",
+            "interpretation": "热图与火山图展示发现子集（每组4例）的差异表达格局，交集分析是候选筛选的关键步骤；图1F的全队列qRT-PCR显示两个miRNA呈阶梯式升高，支持其与ESCC及恶病质状态相关。但该图为横断面比较，不能说明表达变化与体重下降的先后关系，也不能排除肿瘤负荷的混杂。"
           },
           {
-            "label": "Fig 7",
-            "caption_zh": "6PPD-Q与核心靶点分子对接的结合能热图（A）及各复合物对接构象（B–F：PTGS2、MMP2、SMAD3、RELA、GSK3B）。",
-            "interpretation": "所有结合能<−6.0 kcal/mol，RELA（−8.82）和MMP2（−8.30）最优；构象图显示氢键与疏水作用。对接分数是打分函数近似，受体刚性处理限制了对真实亲和力的推断。"
+            "label": "Figure 2",
+            "caption_zh": "循环miRNA对ESCC恶病质分类的ROC性能。hsa-miR-5187-5p（A–C）与hsa-miR-4433b-3p（D–F）在健康对照（HC）、非恶病质ESCC（ESCC-NC）与恶病质ESCC（ESCC-C）之间的ROC曲线，各面板标注AUC、p值、队列推导截断值、灵敏度与特异度。",
+            "interpretation": "两个miRNA在涉及恶病质ESCC的比较中AUC更高（hsa-miR-5187-5p：健康 vs 恶病质0.9439、非恶病质 vs 恶病质0.8594；hsa-miR-4433b-3p：0.8889与0.8175），而在健康 vs 非恶病质ESCC中较弱（尤其hsa-miR-4433b-3p仅0.6412）。这提示其信号更多与恶病质状态相关而非早期ESCC。但候选筛选、qRT-PCR与ROC均在同一队列完成，截断值亦为队列内推导，AUC可能偏乐观，不能作为独立诊断验证。"
           },
           {
-            "label": "Fig 8",
-            "caption_zh": "6PPD-Q-RELA复合物的分子动力学模拟分析：（A）蛋白、配体及复合物的RMSD；（B）蛋白残基RMSF；（C）SASA；（D）Rg及其主轴分量；（E）6PPD-Q与RELA间氢键数；（F）基于RMSD和Rg的自由能景观。",
-            "interpretation": "RMSD在约15–20 ns后稳定于0.28–0.35 nm，配体RMSD多在0.10–0.20 nm；SASA约90–98 nm²、Rg约1.49–1.53 nm保持稳定，氢键以0–1为主，自由能景观显示单一主导低能盆地。这些支持复合物在模拟条件下的动态稳定性，但仅为单条100 ns轨迹、单一复合物，不能外推至体内。"
+            "label": "Figure 3",
+            "caption_zh": "ESCC总生存的未校正关联。按（A）恶病质状态、（B）hsa-miR-5187-5p、（C）hsa-miR-4433b-3p、（D）IL-6、（E）TNF-α、（F）CRP、（G）IL-1β分层的Kaplan-Meier曲线；HR由单因素Cox回归估计，未校正TNM分期、年龄、性别或其他临床病理变量。",
+            "interpretation": "恶病质状态、两个miRNA高表达及四种炎症标志物升高均与更短总生存相关（如hsa-miR-5187-5p HR 3.635、hsa-miR-4433b-3p HR 3.190）。读图时须注意这是未校正分析，且恶病质组晚期TNM比例更高，生存差异可能部分由肿瘤负荷驱动；因此这些HR不能解释为独立预后价值。"
+          },
+          {
+            "label": "Figure 4",
+            "caption_zh": "候选miRNA与炎症标志物及白蛋白的关联。hsa-miR-5187-5p与hsa-miR-4433b-3p分别与（A）IL-6、（B）TNF-α、（C）IL-1β、（D）CRP、（E）白蛋白的横断面相关性，图中显示拟合线与置信带；相关性为弱至中度，不能确立因果。",
+            "interpretation": "两个miRNA与IL-6仅弱相关（r约0.27），与TNF-α、IL-1β、CRP呈中度正相关（r约0.36–0.47），与白蛋白呈中度负相关（r约−0.34至−0.42）。这说明miRNA与炎症/营养指标存在部分共变，但相关系数不高，提示其并非同一生物学过程的简单替代指标，也不能据此推断miRNA直接调控炎症或白蛋白。"
+          },
+          {
+            "label": "Figure 5",
+            "caption_zh": "功能富集与通路网络分析。（A、B）ESCC vs 健康对照差异miRNA的GO与KEGG富集；（C、D）恶病质 vs 非恶病质ESCC的GO与KEGG富集，突出炎症与代谢通路；（E）hsa-miR-5187-5p与hsa-miR-4433b-3p的预测miRNA-靶基因-通路网络。",
+            "interpretation": "ESCC相关差异富集于VEGF、ErbB、p53、糖鞘脂生物合成与氨基酸代谢等通路；恶病质相关差异则富集于脂质代谢、氧化应激、细胞衰老、炎症调控、细胞因子-细胞因子受体相互作用、JAK-STAT、PI3K-Akt、TGF-β与胰岛素信号，与“炎症-代谢”表型相呼应。图5E将两个miRNA连接至TNF/细胞因子信号、生长因子与代谢调控，但网络基于预测靶点，属假设生成，不能作为直接调控证据。"
+          }
+        ]
+      },
+      "ai_status": "success",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    },
+    "doi:10.1186/s13287-026-05192-1": {
+      "id": "doi:10.1186/s13287-026-05192-1",
+      "title": "Hydrogels modified with IL4 or SDF1 mimicking peptides serve as a supportive environment for human iPSC-derived myoblasts.",
+      "authors": [
+        "Michalska Z",
+        "Ostaszewska A",
+        "Dzierżyńska M",
+        "Grabowska I",
+        "Zimowska M",
+        "Fularczyk M",
+        "Skorupiński P",
+        "Płoska W",
+        "Romańska A",
+        "Pluta A",
+        "Bartoszewicz Z",
+        "Jańczyk-Ilach K",
+        "Rodziewicz-Motowidło S",
+        "Ciemerych MA",
+        "Brzoska E",
+        "Archacka K"
+      ],
+      "journal": "Stem cell research & therapy",
+      "year": "2026",
+      "doi": "10.1186/s13287-026-05192-1",
+      "pmcid": "PMC13689189",
+      "pmid": "42908013",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ],
+      "figures": [
+        {
+          "label": "Fig. 1",
+          "caption": "Expression and activity of selected MMPs in hiPSC-derived myoblasts cultured on different hydrogels. A . Expression of MMP2 , MMP3 , MMP7 , MMP9 , MMP13 , MMP14 in MB-DMD and MB-LMNβ1 cultured for 3 days in SKM02 on different hydrogels (R1, R1-RGD, R1-SDF1-X, R4-RGD, R4-IL4-Y). The mean RQ (2 −ΔΔCT ) values with standard deviation of at least 3 experiments are shown. The myoblasts on day 0 served as a reference sample. * p ≤ 0.05, ** p ≤ 0.01, *** p ≤ 0.001, **** p ≤ 0.0001. The grey line indicates the level of expression in control cells cultured on collagen I. B . Immunolocalization of indicated MMP proteins in MB-DMD and MB-LMNβ1 cultured on gelatin-coated cover slides. Nuclei are visualised in red, MMPs in green; Scale bar − 40 μm; C . In situ zymography showing gelatinolytic activity in in vitro cultured MB-DMD and MB-LMNβ1 on day 3. The nuclei are visualised in red, and gelatinolytic activity is visualised in green; D . Ingel zymography detecting the activity of MMP2, MMP7, and MMP9 in medium collected after 3 days of MB-DMD and MB-LMNβ1 culture on collagen I",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13689189/bin/13287_2026_5192_Fig1_HTML.webp"
+        },
+        {
+          "label": "Fig. 2",
+          "caption": "Proliferation, apoptosis, and myogenic differentiation of hiPSC-derived myoblasts cultured on different hydrogels. A . The percentage of MB-DMD that underwent two or more cellular divisions (d2+), one (d1), or none (d0) during 48 h culture on the indicated hydrogel types (R1, R1-RGD, R1-SDF1-X, R4-RGD, R4-IL4-Y), or on collagen I (COL I), i.e. in control variant. Data are shown as mean ± SD; B . The percentage of MB-LMNβ1 that underwent two or more (d2+), one (d1), or none (d0) cellular divisions during 48 h culture on indicated hydrogels or on collagen I. Data are shown as mean ± SD; * p ≤ 0.05, ** p ≤ 0.01, *** p ≤ 0.001; C . The percentage of apoptotic cells after 72 h of MB-DMD culture on indicated hydrogels or collagen I; D . The percentage of apoptotic cells after 72 h of MB-LMNβ1 culture on the indicated surfaces; E . Representative photos of myotubes formed during MB-DMD culture on indicated surfaces, stained with Giemsa-May Grünwald. Scale bar − 100 μm; F . Representative photos of myotubes formed during MB-LMNβ1 culture on the indicated surfaces, stained with Giemsa-May Grünwald. Scale bar − 100 μm; G . Fusion index of MB-DMD cultured on the indicated surfaces; D . Fusion index of MB-LMNβ1 cultured on indicated surfaces",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13689189/bin/13287_2026_5192_Fig2_HTML.webp"
+        },
+        {
+          "label": "Fig. 3",
+          "caption": "Assessment of migration and undesired differentiation of hiPSC-derived myoblasts cultured on different hydrogels. A . Representative images of the scratch wound healing assay after 18 h of MB-DMD culture on hydrogel-coated surfaces or on plastic in the control variant; B . Quantification of the scratch wound healing assay. Data are shown as a number of cells that migrated into the wound area in four independent replicates; C . Colorimetric migration assay of MB-DMD cultured on collagen I or on peptide functionalised hydrogels after 18 h of culture. The OD was measured at 560 nm. Data are shown for four independent replicates; * p ≤ 0.05, ** p ≤ 0.01; D . Representative photos of MB-DMD after 14 days of culture in adipogenesis inducing medium on peptide-functionalised hydrogels or on collagen I. Lipid droplets stained with Oil Red O. Scale bar − 100 μm; E . qRT-PCR analysis of PPARγ mRNA expression in MB-DMD after 14 day culture in adipogenesis inducing medium, on different tested hydrogels or collagen I. F . Representative photos of MB-DMD after 7 days of culture in osteogenesis inducing medium on collagen I or hydrogel coated surfaces. Calcium residues visualised with Alizarin Red S. Scale bar − 100 μm; G . qRT-PCR analysis of SP7 mRNA expression in MB-DMD after a 7 day culture in osteogenesis inducing medium, on collagen I or hydrogel-coated surfaces. H . Representative photos of MB-DMD after 21 days of culture in chondrogenesis-inducing medium on collagen I or hydrogel coated surfaces. Acidic polysaccharides in cartilage stained with Alcian Blue. Scale bar − 100 μm; I . qRT-PCR analysis of SOX9 mRNA expression in MB-DMD after a 21 day culture in chondrogenesis inducing medium, on hydrogel-coated surfaces. For E , G and I - mean RQ (2 −ΔΔCT ) values with standard deviation from at least 3 experiments are shown. Myoblasts cultured on collagen I served as a reference sample. * p ≤ 0.05, ** p ≤ 0.01, *** p ≤ 0.001",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13689189/bin/13287_2026_5192_Fig3_HTML.webp"
+        },
+        {
+          "label": "Fig. 4",
+          "caption": "Heat maps and Venn diagram of transcripts up-regulated in hiPSC-derived myoblasts cultured on different types of hydrogels. A . Heat map of transcripts up-regulated in myoblasts cultured on indicated hydrogels compared to control cells cultured on collagen I (R1 vs. COL I, R1-SDF1-X vs. COL I, R4-IL4-Y vs. COL I). The list includes transcripts that were characterized by fold-change > 3 at least in one of the indicated comparisons (R1 vs. COL I, R1-SDF1-X vs. COL I, R4-IL4-Y vs. COL I). B . Heat map of transcripts up-regulated in myoblasts cultured on indicated hydrogels compared to cells cultured on control hydrogel (R1-SDF1-X vs. R1, R4-IL4-Y vs. R1). The list includes transcripts which were characterised by fold-change > 1.5 at least in one of the indicated comparisons (R1-SDF1-X vs. R1, R4-IL4-Y vs. R1). C . Heat map of transcripts up-regulated in myoblasts cultured on R4-IL4-Y compared to cells cultured on R1-SDF1-X hydrogel. The list includes genes which were characterised by fold-change > 1.5. D . Venn diagram presents overlapped up-regulated transcripts between myoblasts cultured on different hydrogel types (R1, R1-SDF1-X, R4-IL4-Y)",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13689189/bin/13287_2026_5192_Fig4_HTML.webp"
+        },
+        {
+          "label": "Fig. 5",
+          "caption": "qRT-PCR analysis of transcripts selected on the basis of NGS analysis. mRNA expression was determined in MB-DMD after 3 days of culture on collagen I (COL I, control) or hydrogel-coated surfaces. Data are shown as fold change compared to cells cultured in collagen I. * p ≤ 0.05, ** p ≤ 0.01, *** p ≤ 0.001, **** p ≤ 0.0001. A . Transcripts found by NGS analysis to be elevated in cells cultured on R1-SDF1-X to R1. B . Transcripts found by NGS analysis to be elevated in cells cultured on R4-IL4-Y to other variants. C . Transcripts found by NGS analysis to be elevated in cells cultured on R4-IL4-Y to R1. D . Transcripts found by NGS analysis to be elevated in cells cultured on R4-IL4-Y to R1-SDF1-X",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13689189/bin/13287_2026_5192_Fig5_HTML.webp"
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary file 1",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13689189/bin/13287_2026_5192_MOESM1_ESM.docx",
+          "description": "Supplementary Material 1."
+        }
+      ],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "7.8",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T12:46:27Z"
+      },
+      "journal_display": "Stem cell research & therapy（IF 7.8；JCR SCI Q1）",
+      "updated_at": "2026-10-24T12:46:27Z",
+      "article": {
+        "title_zh": "IL4或SDF1模拟肽修饰的水凝胶：人iPSC来源成肌细胞的支撑性微环境",
+        "lead": "一项发表于《Stem Cell Research & Therapy》的研究系统评估了RADA16-I水凝胶经IL4或SDF1模拟肽功能化后，对人诱导多能干细胞（induced pluripotent stem cells, iPSCs）来源成肌细胞（hiPSC-derived myoblasts, hiPSC-MBs）的增殖、凋亡、迁移、成肌分化及转录组/分泌组的影响。结果显示，这些水凝胶支持成肌细胞的正常增殖、迁移与成肌分化，且不诱导凋亡或非目标分化；在特定细胞系中，IL4或SDF1模拟肽修饰还能提升融合指数。",
+        "background": "骨骼肌修复与细胞治疗需要可规模化扩增并保持成肌潜能的细胞来源。人iPSC来源成肌细胞被认为是有前景的候选，但其体外维持与分化常依赖胶原等基质。RADA16-I是一种自组装肽水凝胶，可被改造为携带生物活性肽的支架。研究团队此前设计了通过基质金属蛋白酶（matrix metalloproteinases, MMPs）可切割连接序列（PAGL或VLGL）偶联IL4或SDF1模拟肽的功能化水凝胶，理论上可由细胞分泌的MMPs按需释放活性肽。然而，这类材料对hiPSC-MBs的生物学效应尚缺乏系统数据。",
+        "research_question": "经IL4或SDF1模拟肽修饰的RADA16-I水凝胶是否能为hiPSC-MBs提供支持性环境，维持或增强其成肌分化潜能，同时不诱导凋亡或非成肌分化？细胞是否表达并具有活性MMPs以释放所偶联的模拟肽？水凝胶对成肌细胞转录组和分泌因子有何影响？",
+        "study_design": "体外细胞学研究。使用两株商业化人iPSC系（hiPSC-DMD-EGFP与hiPSC-LMNβ1-EGFP），经SKM-KITM诱导为成肌细胞（分别记为MB-DMD与MB-LMNβ1）。比较五种水凝胶（R1、R1-RGD、R1-SDF1-X、R4-RGD、R4-IL4-Y）与胶原I（collagen I, COL I）对照，评估MMP表达与活性、增殖、凋亡、成肌分化、迁移、脂肪/成骨/软骨分化，并对MB-DMD进行RNA测序转录组分析和Luminex分泌因子检测。",
+        "methods": "肽合成与纯化：采用加热固相肽合成（solid phase peptide synthesis, SPPS）在自动合成仪上合成粗肽，使用Tentagel R RAM树脂，二异丙基碳二亚胺（DIC）与Oxyma Pure为缩合试剂，25%哌啶（含1% Triton X-100的DMF/NMP/DCM 1:1:1）脱Fmoc，N-乙酰咪唑封端；以TFA/TIS/苯酚/水（88:2:5:5）切割，冷乙醚沉淀、冻干，反相高效液相色谱（HPLC，Jupiter Proteo C12柱）纯化。\n水凝胶制备：肽以紫外（254 nm）灭菌，层流下复溶至1%（w/v），涡旋超声至澄清，37°C过夜成胶；必要时调pH至约5。功能化肽（R1-RGD、R1-SDF1-X、R4-RGD、R4-IL4-Y）终浓度5 mg/ml，与RADA16-I（5 mg/ml）等体积混合，最终肽浓度10 mg/ml（1% w/v）。\n细胞培养与分化：hiPSC在玻连蛋白（5 µg/ml）包被板、Essential 8 Medium中培养；以Accutase消化，按5,000 cells/cm²接种于胶原I板，先用SKM01诱导向PAX7+肌前体（6–10天），再换SKM02诱导为成肌细胞（6–8天）。水凝胶包被：每孔约10 µl水凝胶，37°C聚合4 h，SKM02过夜平衡后用于实验。\n功能实验：凋亡用Annexin V APC染色、流式细胞术（CytoFLEX，CytExpert）在72 h检测；增殖用CFSE（0.5 µM）标记、48 h后流式检测分裂代数；迁移用8 µm孔径Transwell比色法（18 h，560 nm）与Ibidi Culture-Insert划痕实验（18 h，Giemsa/May-Grünwald染色，ImageJ计数）；成肌分化用SKM02 3天+SKM03 6天，Giemsa/May-Grünwald染色，融合指数=肌管内核数/总核数；脂肪/成骨/软骨分化分别用AdipoMAX（14天，Oil Red O）、OsteoMAX（7天，Alizarin Red S）、ChondroMAX（21天，Alcian Blue），并以RT-qPCR检测PPARγ、SP7、SOX9。\nMMP分析：免疫细胞化学检测MMP2、MMP3、MMP7、MMP9、MMP13、MMP14（共聚焦Axio Observer Z1 LSM 700）；明胶原位酶谱检测MMP2/9活性；明胶或酪蛋白凝胶内酶谱检测条件培养基中MMP2/9与MMP7活性（Coomassie染色，GelDoc Quantity One）。\nRT-qPCR：High Pure RNA Isolation Kit提取RNA，RevertAid First Strand cDNA Synthesis Kit逆转录（0.5 µg RNA），TaqMan Gene Expression Master Mix与TaqMan探针，每反应25 ng cDNA，GAPDH为内参，LightCycler 96 Software 1.1分析，报告ΔCT或RQ（2^−ΔΔCT）。\nRNA测序：mirVana miRNA Isolation Kit提取1000 ng总RNA，RNA Clean & Concentrator-5纯化，Agilent TapeStation 2200质控；KAPA RNA HyperPrep Kit with RiboErase去rRNA并建库（500 ng RNA，94°C 5 min片段化，8个富集循环），Illumina NovaSeq 6000（S1 Reagent Kit v1.5，2×100 bp，0.5% PhiX）。Trimmomatic 0.39质控修剪，Hisat2比对至ENSEMBL GRCh38_snp_tran，GATK 4.2.3.0 MarkDuplicates去光学重复，HTSeq-count 2.0.1（Ensembl v106）计数，DESeq2 1.38.3筛选差异基因；clusterProfiler对p值前5%基因做GO与KEGG过表征分析；另用Metascape、ShinyGO 0.82与STRING辅助注释。\nLuminex：Human Premixed Multi-Analyte kit LXSAH（R&D Systems）在Bio-Plex MAGPIX检测BMP2、IL4、IL8（CXCL8）、SDF1、VEGF-A，Bio-Plex Manager 6.1拟合5-log标准曲线并计算浓度，结果以COL I对照归一化。\n统计：每组至少3次独立实验；依正态性与方差齐性选择ANOVA、Kruskal-Wallis或Brown-Forsythe and Welch ANOVA，分别用Tukey、Dunn或Dunnett T3事后检验；数据以均值±标准差表示，显著性* p≤0.05、** p≤0.01、*** p≤0.001、**** p≤0.0001；GraphPad Prism 10分析。",
+        "results": "成肌分化进程验证：两株hiPSC在未分化、肌前体、成肌细胞、肌管四个阶段的PAX7、MYOD及MYHC2/MYHC3/MYHC7表达变化符合预期——PAX7在肌前体最高，MYOD与各MYHC在肌管最高，提示诱导分化成功（Supplementary Fig. 1）。\nMMP表达与活性：在COL I上，两株成肌细胞MMP2表达最高，MMP9/MMP14中等，MMP3/MMP7/MMP13较低（Supplementary Fig. 2A）。培养3天后，R4-IL4-Y上的MB-DMD与MB-LMNβ1的MMP2、MMP9、MMP14显著高于COL I对照；R4-RGD上的MMP2也升高（Supplementary Fig. 2B–C）。图1A进一步显示，R4-RGD上的MMP2高于R1对照水凝胶，MB-DMD中亦高于R1-RGD；R4-IL4-Y上的MB-DMD MMP2高于R1与R1-RGD，MMP14也显著升高。MMP7（可切割R1-RGD/R1-SDF1-X的VLGL连接）在MB-DMD的R1-RGD组升高，在MB-LMNβ1的R1、R4-IL4-Y及R1-SDF1-X组升高。免疫细胞化学（图1B）在两株细胞中检出所有目标MMP蛋白；原位酶谱（图1C）与凝胶内酶谱（图1D）证实MMP2、MMP7、MMP9具有活性。这些数据支持“细胞具备释放模拟肽的酶学条件”，但RT-qPCR、免疫细胞化学与酶谱并非同一层面的直接对应，不能据此推断释放量或释放动力学。\n增殖与凋亡：CFSE显示MB-DMD在各水凝胶与COL I间无显著差异（图2A）；MB-LMNβ1在R1、R1-SDF1-X、R4-IL4-Y及R4-RGD上完成≥2次分裂的比例高于COL I，完成1次分裂的比例相应降低（图2B），提示该细胞系对水凝胶更敏感，但这一效应未在MB-DMD重现。72 h Annexin V检测显示两株细胞在各组间凋亡比例均无显著差异（图2C–D），支持水凝胶不诱导凋亡。\n成肌分化：所有水凝胶与COL I上均形成细长肌管（图2E–F）。融合指数方面，MB-DMD在R1-SDF1-X与R4-IL4-Y上显著高于COL I、R1、R1-RGD，R4-IL4-Y亦高于R4-RGD（图2G）；MB-LMNβ1各组无显著差异（图2H）。因此，“IL4/SDF1模拟肽促进成肌分化”的结论仅适用于MB-DMD，不能外推至MB-LMNβ1。分化标志物方面，第3天MB-DMD在R1上MYOD、MYOG高于COL I，R4-RGD上MYOG、MYHC3升高；MB-LMNβ1在R4-RGD上MYHC3升高、MYOD/MYOG高于COL I，R4-IL4-Y上MYOD升高（Supplementary Fig. 3A–B）；第9天各组无显著差异（Supplementary Fig. 3C–D），说明标志物差异是暂时性的，最终均支持肌管形成。\n迁移：划痕实验显示各水凝胶与COL I预处理后的MB-DMD均能迁移，组间无显著差异（图3A–B）；Transwell比色法显示R4-IL4-Y上的MB-DMD迁移低于R1-SDF1-X与塑料对照，与其他组相当（图3C）。两种迁移实验结论不完全一致，提示迁移效应依赖实验体系，不能简单判定某水凝胶促进或抑制迁移。\n非目标分化：成脂诱导14天后Oil Red O几乎不着色，PPARγ在各组均低且均一（图3D–E）。成骨诱导7天后Alizarin Red S在各水凝胶组均可见染色，但SP7仅在R1-RGD显著升高（图3F–G），作者认为阳性染色更可能反映培养基或成胶过程残留钙离子，而非水凝胶诱导成骨。软骨诱导21天后Alcian Blue在R1-RGD、R4-RGD、R4-IL4-Y及COL I呈有限染色，SOX9在各组均低，且COL I高于各水凝胶组（图3H–I）。总体不支持水凝胶促进成脂、成骨或软骨分化。\n转录组：对MB-DMD在COL I、R1、R1-SDF1-X、R4-IL4-Y上的RNA测序显示，上调转录本富集于细胞外基质（extracellular matrix, ECM）形成（所有水凝胶）、黏附（R1或R4-IL4-Y）及肌肉细胞发育与分化（所有水凝胶）（Supplementary Fig. 4）。图4A–C以热图展示不同比较组合的上调基因（阈值分别为fold-change>3或>1.5），图4D维恩图显示各水凝胶共享与特异的转录本。RT-qPCR验证（图5）显示：CXCL8在R1-SDF1-X升高，R4-IL4-Y亦高于对照；NOTCH4各组相近；ACTC1、ADAMTS16、FIBIN、MLIP在R4-IL4-Y升高（ACTC1在R1与R1-SDF1-X亦升高）；TBX2在R4-IL4-Y升高，R1-SDF1-X亦高于对照；CDH9、IRS4、FREM2在R4-IL4-Y升高；而BMP2、ID1、ID2、LGR5、NEB、NOG、SMAD9未见显著差异（Supplementary Fig. 6A）。这些结果说明水凝胶引起与血管生成、炎症介导、细胞黏附、神经发生及成肌程序调控相关因子的表达变化，但转录本变化不等同于蛋白功能改变。\n分泌组：Luminex未检出SDF1或IL8在各组间的显著差异；R4-IL4-Y与R1-SDF1-X培养上清中VEGF-A低于COL I但未达统计学显著；IL4与BMP2低于检测范围（Supplementary Fig. 6B）。因此该研究不能证明模拟肽被大量释放进入培养基，也不能排除其局部作用或快速降解。",
+        "limitations": "第一，主要功能结论基于两株hiPSC系，且部分效应（增殖、融合指数）仅见于其中一株，细胞系间差异限制普遍性。第二，迁移实验两种方法结果不一致，且Transwell与划痕实验设计不同，难以合并解读。第三，未直接定量模拟肽从水凝胶中的释放量、释放动力学或局部浓度；Luminex未能检出IL4/BMP2，SDF1无组间差异，释放证据主要为MMP表达与活性的间接支持。第四，转录组与RT-qPCR主要聚焦上调转录本，下调基因信息有限；部分NGS候选（如BMP2、ID1/2、LGR5、NEB、NOG、SMAD9）未获qPCR验证。第五，非目标分化实验中Alizarin Red S阳性缺乏SP7一致升高支持，作者归因于残留钙离子，但未直接排除其他来源。第六，研究为体外短期培养（多为3天，分化至9天），未涉及体内植入、长期安全性或免疫原性。第七，统计与样本量以至少3次独立实验为基础，但部分图注未逐一列出每组样本量。",
+        "takeaways": "1）RADA16-I基水凝胶（无论是否功能化）可支持hiPSC-MBs的存活、增殖、迁移与成肌分化，且不诱导凋亡或成脂/成骨/软骨分化。2）hiPSC-MBs表达并有活性MMP2、MMP7、MMP9等，具备切割PAGL/VLGL连接、释放IL4或SDF1模拟肽的酶学基础。3）在MB-DMD中，R1-SDF1-X与R4-IL4-Y提高融合指数，提示模拟肽修饰可增强成肌分化；该效应未在MB-LMNβ1重现。4）水凝胶引起CXCL8、FREM2、ADAMTS16、CDH9、IRS4、FIBIN、MLIP等转录本变化，涉及血管生成、炎症、黏附与成肌调控，但蛋白与功能层面的因果链尚未建立。5）该材料作为hiPSC来源成肌细胞的体外支撑基质具有可行性，但肽释放定量、细胞系普适性与体内效果仍需进一步验证。",
+        "figure_notes": [
+          {
+            "label": "Fig. 1",
+            "caption_zh": "hiPSC来源成肌细胞在不同水凝胶上培养3天后选定MMP的表达与活性。A：MB-DMD与MB-LMNβ1在R1、R1-RGD、R1-SDF1-X、R4-RGD、R4-IL4-Y上MMP2、MMP3、MMP7、MMP9、MMP13、MMP14的RQ（2^−ΔΔCT）均值±标准差（至少3次实验），以第0天成肌细胞为参照，灰线为COL I对照表达水平；B：明胶包被玻片上MMP蛋白免疫定位（核红、MMP绿，标尺40 μm）；C：第3天原位酶谱（核红、明胶酶活性绿）；D：COL I培养3天条件培养基的凝胶内酶谱检测MMP2、MMP7、MMP9活性。",
+            "interpretation": "图1A支持R4-IL4-Y与R4-RGD上的成肌细胞上调可切割PAGL连接的相关MMP（尤其MMP2，部分细胞系还有MMP9/MMP14），R1-SDF1-X相关MMP7在MB-LMNβ1升高；但不同细胞系与不同水凝胶的MMP谱并不一致，不能据此推断释放效率。图1B–D证明MMP蛋白存在且具明胶/酪蛋白降解活性，为“细胞可释放模拟肽”提供酶学前提，但未直接测量肽释放。"
+          },
+          {
+            "label": "Fig. 2",
+            "caption_zh": "hiPSC来源成肌细胞在不同水凝胶上的增殖、凋亡与成肌分化。A：MB-DMD在48 h内完成≥2次（d2+）、1次（d1）或0次（d0）分裂的百分比；B：MB-LMNβ1相应分裂比例；C：MB-DMD培养72 h后凋亡细胞百分比；D：MB-LMNβ1凋亡百分比；E–F：MB-DMD与MB-LMNβ1形成的肌管代表图（Giemsa-May Grünwald染色，标尺100 μm）；G–H：MB-DMD与MB-LMNβ1融合指数。",
+            "interpretation": "图2A–B显示水凝胶对增殖的影响具有细胞系特异性：MB-LMNβ1在R1、R1-SDF1-X、R4-IL4-Y及R4-RGD上更多进入≥2次分裂，而MB-DMD无差异。图2C–D支持各水凝胶不增加凋亡。图2E–H表明所有水凝胶均允许肌管形成；融合指数在MB-DMD的R1-SDF1-X与R4-IL4-Y组升高，但MB-LMNβ1无差异，因此“模拟肽促进成肌分化”不能作为跨细胞系的普遍结论。"
+          },
+          {
+            "label": "Fig. 3",
+            "caption_zh": "hiPSC来源成肌细胞的迁移与非目标分化评估。A：MB-DMD在水凝胶或塑料对照上18 h划痕实验代表图；B：划痕实验中迁移入创面细胞数（4次独立重复）；C：COL I或肽功能化水凝胶上18 h比色迁移实验（560 nm OD，4次独立重复）；D：成脂诱导14天后Oil Red O染色代表图（标尺100 μm）；E：PPARγ mRNA的RT-qPCR；F：成骨诱导7天后Alizarin Red S染色；G：SP7 mRNA的RT-qPCR；H：软骨诱导21天后Alcian Blue染色；I：SOX9 mRNA的RT-qPCR。E、G、I为至少3次实验的RQ均值±标准差，以COL I为参照。",
+            "interpretation": "图3A–B显示各水凝胶预处理不影响MB-DMD划痕迁移；图3C的Transwell结果则提示R4-IL4-Y上细胞迁移低于R1-SDF1-X与塑料，两种方法结论不完全一致，说明迁移效应依赖实验体系。图3D–E不支持成脂分化；图3F–G中Alizarin Red S普遍阳性但SP7仅R1-RGD升高，作者认为染色可能源于残留钙离子而非成骨诱导；图3H–I显示软骨标志SOX9在各水凝胶组均低且低于COL I，不支持软骨分化。"
+          },
+          {
+            "label": "Fig. 4",
+            "caption_zh": "不同水凝胶上hiPSC来源成肌细胞上调转录本的热图与维恩图。A：与COL I对照相比（R1 vs COL I、R1-SDF1-X vs COL I、R4-IL4-Y vs COL I）上调转录本热图，纳入至少一个比较中fold-change>3的转录本；B：与对照水凝胶R1相比（R1-SDF1-X vs R1、R4-IL4-Y vs R1）上调转录本热图，纳入至少一个比较中fold-change>1.5的转录本；C：R4-IL4-Y vs R1-SDF1-X上调转录本热图（fold-change>1.5）；D：各水凝胶上调转录本重叠的维恩图。",
+            "interpretation": "图4展示水凝胶诱导的转录组改变具有共享与材料特异性成分：所有水凝胶均上调ECM与肌肉发育相关转录本，R1与R4-IL4-Y还富集黏附相关条目。热图与维恩图用于生成候选基因列表，属于发现性分析；其阈值（fold-change>3或>1.5）与统计筛选不能直接等同于功能重要性，后续需RT-qPCR与蛋白层面验证。"
+          },
+          {
+            "label": "Fig. 5",
+            "caption_zh": "基于NGS结果选定的转录本的RT-qPCR验证。MB-DMD在COL I（对照）或水凝胶上培养3天后检测mRNA表达，数据以相对COL I的fold change表示。A：NGS提示在R1-SDF1-X相对R1升高的转录本；B：NGS提示在R4-IL4-Y相对其他变体升高的转录本；C：NGS提示在R4-IL4-Y相对R1升高的转录本；D：NGS提示在R4-IL4-Y相对R1-SDF1-X升高的转录本。",
+            "interpretation": "图5部分验证了NGS候选：CXCL8、ACTC1、ADAMTS16、FIBIN、MLIP、TBX2、CDH9、IRS4、FREM2在相应水凝胶组升高，支持转录组发现的可靠性；但NOTCH4各组相近，BMP2、ID1、ID2、LGR5、NEB、NOG、SMAD9未显示显著差异（Supplementary Fig. 6A），说明NGS候选并非全部可重复。该图支持水凝胶引起与血管生成、炎症、黏附及成肌调控相关的转录本变化，但不能证明这些变化转化为相应蛋白功能或直接驱动融合指数提升。"
           }
         ]
       },
@@ -183,6 +425,174 @@
       "attempts": 1,
       "updated_at": "2026-10-24T10:32:26Z",
       "gate_reasons": []
+    },
+    "doi:10.1080/19336934.2026.2749209": {
+      "status": "discarded",
+      "attempts": 1,
+      "updated_at": "2026-10-24T12:43:24Z",
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "正文 Methods 未提取",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ]
+    },
+    "doi:10.1002/cne.70218": {
+      "status": "manual_review",
+      "attempts": 1,
+      "updated_at": "2026-10-24T12:43:27Z",
+      "gate_reasons": [
+        "正文 Methods 未提取",
+        "AI 图组解读数量少于正文原图数量"
+      ]
+    },
+    "doi:10.1099/mgen.0.001859": {
+      "status": "published",
+      "attempts": 1,
+      "updated_at": "2026-10-24T12:43:49Z",
+      "gate_reasons": []
+    },
+    "doi:10.1002/jor.70303": {
+      "status": "discarded",
+      "attempts": 1,
+      "updated_at": "2026-10-24T12:44:12Z",
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ]
+    },
+    "doi:10.1002/cpz1.70489": {
+      "status": "discarded",
+      "attempts": 1,
+      "updated_at": "2026-10-24T12:44:15Z",
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ]
+    },
+    "doi:10.1002/jnr.70162": {
+      "status": "discarded",
+      "attempts": 1,
+      "updated_at": "2026-10-24T12:44:18Z",
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ]
+    },
+    "doi:10.1002/jcsm.70409": {
+      "status": "published",
+      "attempts": 1,
+      "updated_at": "2026-10-24T12:44:20Z",
+      "gate_reasons": []
+    },
+    "doi:10.1002/kjm2.70307": {
+      "status": "discarded",
+      "attempts": 1,
+      "updated_at": "2026-10-24T12:44:52Z",
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ]
+    },
+    "doi:10.1039/d6cs00998k": {
+      "status": "manual_review",
+      "attempts": 1,
+      "updated_at": "2026-10-24T12:44:54Z",
+      "gate_reasons": [
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ]
+    },
+    "doi:10.1111/tpj.71174": {
+      "status": "discarded",
+      "attempts": 1,
+      "updated_at": "2026-10-24T12:45:47Z",
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ]
+    },
+    "doi:10.1113/ep094458": {
+      "status": "discarded",
+      "attempts": 1,
+      "updated_at": "2026-10-24T12:45:49Z",
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "正文 Methods 未提取",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ]
+    },
+    "doi:10.1002/brb3.71806": {
+      "status": "discarded",
+      "attempts": 1,
+      "updated_at": "2026-10-24T12:45:50Z",
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ]
+    },
+    "doi:10.1111/jcmm.71412": {
+      "status": "discarded",
+      "attempts": 1,
+      "updated_at": "2026-10-24T12:45:53Z",
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "正文 Methods 未提取",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：background",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：figure_notes"
+      ]
+    },
+    "doi:10.1186/s13062-026-00902-4": {
+      "status": "manual_review",
+      "attempts": 1,
+      "updated_at": "2026-10-24T12:45:55Z",
+      "gate_reasons": [
+        "存在缺失图注",
+        "AI 图组解读数量少于正文原图数量"
+      ]
+    },
+    "doi:10.1186/s13287-026-05192-1": {
+      "status": "published",
+      "attempts": 1,
+      "updated_at": "2026-10-24T12:46:27Z",
+      "gate_reasons": []
     }
   },
   "metrics_cache": {
@@ -199,17 +609,152 @@
       "status": "matched",
       "source": "EasyScholar",
       "retrieved_at": "2026-10-24T10:32:26Z"
+    },
+    "fly": {
+      "impact_factor": "1.4",
+      "jcr": "SCI Q4",
+      "jcr_quartile": "Q4",
+      "jcr_q1": false,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-24T12:43:24Z"
+    },
+    "the journal of comparative neurology": {
+      "impact_factor": "2.3",
+      "jcr": "SCI Q1",
+      "jcr_quartile": "Q1",
+      "jcr_q1": true,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-24T12:43:27Z"
+    },
+    "microbial genomics": {
+      "impact_factor": "4.5",
+      "jcr": "SCI Q1",
+      "jcr_quartile": "Q1",
+      "jcr_q1": true,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-24T12:43:49Z"
+    },
+    "journal of orthopaedic research : official publication of the orthopaedic research society": {
+      "impact_factor": "",
+      "jcr": "",
+      "jcr_quartile": "",
+      "jcr_q1": false,
+      "status": "not_found",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-24T12:44:12Z"
+    },
+    "current protocols": {
+      "impact_factor": "2.5",
+      "jcr": "",
+      "jcr_quartile": "",
+      "jcr_q1": false,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-24T12:44:15Z"
+    },
+    "journal of neuroscience research": {
+      "impact_factor": "3.1",
+      "jcr": "SCI Q3",
+      "jcr_quartile": "Q3",
+      "jcr_q1": false,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-24T12:44:18Z"
+    },
+    "journal of cachexia, sarcopenia and muscle": {
+      "impact_factor": "9.9",
+      "jcr": "SCI Q1",
+      "jcr_quartile": "Q1",
+      "jcr_q1": true,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-24T12:44:20Z"
+    },
+    "the kaohsiung journal of medical sciences": {
+      "impact_factor": "3.1",
+      "jcr": "SCI Q2",
+      "jcr_quartile": "Q2",
+      "jcr_q1": false,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-24T12:44:52Z"
+    },
+    "chemical society reviews": {
+      "impact_factor": "48.3",
+      "jcr": "SCI Q1",
+      "jcr_quartile": "Q1",
+      "jcr_q1": true,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-24T12:44:54Z"
+    },
+    "the plant journal : for cell and molecular biology": {
+      "impact_factor": "",
+      "jcr": "",
+      "jcr_quartile": "",
+      "jcr_q1": false,
+      "status": "not_found",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-24T12:45:47Z"
+    },
+    "experimental physiology": {
+      "impact_factor": "3.0",
+      "jcr": "SCI Q2",
+      "jcr_quartile": "Q2",
+      "jcr_q1": false,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-24T12:45:49Z"
+    },
+    "brain and behavior": {
+      "impact_factor": "2.8",
+      "jcr": "SCI Q2",
+      "jcr_quartile": "Q2",
+      "jcr_q1": false,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-24T12:45:50Z"
+    },
+    "journal of cellular and molecular medicine": {
+      "impact_factor": "4.7",
+      "jcr": "SCI Q2",
+      "jcr_quartile": "Q2",
+      "jcr_q1": false,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-24T12:45:53Z"
+    },
+    "biology direct": {
+      "impact_factor": "5.5",
+      "jcr": "SCI Q1",
+      "jcr_quartile": "Q1",
+      "jcr_q1": true,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-24T12:45:55Z"
+    },
+    "stem cell research & therapy": {
+      "impact_factor": "7.8",
+      "jcr": "SCI Q1",
+      "jcr_quartile": "Q1",
+      "jcr_q1": true,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-24T12:46:27Z"
     }
   },
-  "updated_at": "2026-10-24T10:32:48Z",
+  "updated_at": "2026-10-24T12:46:59Z",
   "last_run": {
     "status": "fallback_ncbi",
-    "selected": 1,
-    "published": 1,
-    "candidates": 10,
+    "selected": 15,
+    "published": 3,
+    "candidates": 79,
     "skipped_without_pmcid": 0,
     "search_error": "Europe PMC HTTP 503: HTTP Error 503:",
-    "preserved_articles": 1,
-    "finished_at": "2026-10-24T10:32:48Z"
+    "preserved_articles": 3,
+    "finished_at": "2026-10-24T12:46:59Z"
   }
 }
