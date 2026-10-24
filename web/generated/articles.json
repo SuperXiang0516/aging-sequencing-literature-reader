@@ -1,5 +1,170 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-24T09:58:05Z",
-  "articles": []
+  "generated_at": "2026-10-24T10:32:48Z",
+  "articles": [
+    {
+      "id": "doi:10.1371/journal.pone.0359621",
+      "title": "Investigating potential molecular mechanisms linking 6PPD-quinone exposure to Intervertebral Disc Degeneration: A network toxicology, molecular docking, and molecular dynamics simulation study.",
+      "authors": [
+        "Yang B",
+        "Wang X",
+        "Zhuo L",
+        "Chen Y",
+        "He Q"
+      ],
+      "journal": "PloS one",
+      "year": "2026",
+      "doi": "10.1371/journal.pone.0359621",
+      "pmcid": "PMC13690237",
+      "pmid": "42911944",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ],
+      "figures": [
+        {
+          "label": "Fig 1",
+          "caption": "Two-dimensional and three-dimensional structures of 6PPD-quinone. (A) Two-dimensional chemical structure of 6PPD-quinone. (B) Three-dimensional molecular conformation of 6PPD-quinone.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g001.webp"
+        },
+        {
+          "label": "Fig 2",
+          "caption": "Venn diagram of 6PPD-Q and IVDD-related targets.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g002.webp"
+        },
+        {
+          "label": "Fig 3",
+          "caption": "Candidate targets were identified by PPI analysis. A total of 12 key targets were obtained by screening 59 cross targets by DC, BC and CC.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g003.webp"
+        },
+        {
+          "label": "Fig 4",
+          "caption": "GO enrichment analysis. Including biological processes, cellular components, and molecular functions.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g004.webp"
+        },
+        {
+          "label": "Fig 5",
+          "caption": "The top 20 KEGG enrichment analysis pathways.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g005.webp"
+        },
+        {
+          "label": "Fig 6",
+          "caption": "Target–pathway interaction network of core genes and enriched KEGG pathways.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g006.webp"
+        },
+        {
+          "label": "Fig 7",
+          "caption": "The heat map and molecular docking results of 6PPD-Q biological compounds and core targets. (A) Binding energy value of molecular docking. (B) 6PPD-Q -PTGS2 complex. (C) 6PPD-Q -MMP2 complex. (D) 6PPD-Q -SMAD3 complex. (E) 6PPD-Q -RELA complex. (F) 6PPD-Q -GSK3B complex.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g007.webp"
+        },
+        {
+          "label": "Fig 8",
+          "caption": "Molecular dynamics simulation analysis of the 6PPD-Q–RELA complex. (A) Root-mean-square deviation (RMSD) profiles of the protein, ligand, and protein–ligand complex during the 100-ns simulation. (B) Root-mean-square fluctuation (RMSF) of protein residues. (C) Solvent-accessible surface area (SASA) of the complex over the simulation trajectory. (D) Radius of gyration (Rg) and its components along the principal axes. (E) Number of hydrogen bonds formed between 6PPD-Q and RELA during the simulation. (F) Free-energy landscape of the 6PPD-Q–RELA complex constructed based on RMSD and Rg.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g008.webp"
+        }
+      ],
+      "supplements": [
+        {
+          "label": "S1 Table",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s001.xlsx",
+          "description": "PubChem information for 6PPD-Q. (XLSX)"
+        },
+        {
+          "label": "S2 Table",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s002.xlsx",
+          "description": "Potential targets of 6PPD-Q retrieved from different target prediction databases. (XLSX)"
+        },
+        {
+          "label": "S3 Table",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s003.xlsx",
+          "description": "IVDD-associated genes retrieved from different disease-related databases. (XLSX)"
+        },
+        {
+          "label": "S4 Table",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s004.xlsx",
+          "description": "Common targets between 6PPD-Q and intervertebral disc degeneration. (XLSX)"
+        },
+        {
+          "label": "S5 Table",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s005.xlsx",
+          "description": "Detailed results of GO and KEGG enrichment analyses. (XLSX)"
+        },
+        {
+          "label": "S6 Table",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s006.xlsx",
+          "description": "Underlying numerical data for molecular dynamics simulation analyses of the 6PPD-Q–RELA complex. (XLSX)"
+        }
+      ],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "2.8",
+        "jcr": "SCI Q2",
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T10:32:26Z"
+      },
+      "journal_display": "PloS one（IF 2.8；JCR SCI Q2）",
+      "updated_at": "2026-10-24T10:32:26Z",
+      "article": {
+        "title_zh": "6PPD-醌暴露与椎间盘退变：网络毒理学、分子对接与分子动力学模拟的整合解读",
+        "lead": "一项发表于PLoS ONE的计算研究，通过ADMETLAB 3.0毒性预测、四数据库靶点检索、PPI网络分析、GO/KEGG富集、分子对接及100 ns分子动力学模拟，提出6PPD-醌可能通过PTGS2、MMP2、RELA等核心靶点及氧化应激、炎症、凋亡相关通路与椎间盘退变（IVDD）发生关联。但该研究完全基于生物信息学与计算模拟，未提供任何实验验证，结论应视为假说生成而非因果证据。",
+        "background": "6PPD-醌（6PPD-quinone，6PPD-Q）是轮胎橡胶抗氧化剂6PPD的环境转化产物，近年来因其对水生生物的急性毒性而受到关注。椎间盘退变（intervertebral disc degeneration，IVDD）是腰痛的主要病理基础，其发生涉及氧化应激、炎症、细胞外基质降解和细胞凋亡等多种机制。环境污染物是否以及如何参与IVDD进程，目前仍缺乏系统研究。该文尝试用网络毒理学（network toxicology）结合分子对接（molecular docking）和分子动力学（molecular dynamics，MD）模拟，从计算角度探索6PPD-Q与IVDD之间的潜在分子联系。",
+        "research_question": "6PPD-Q的预测毒性特征如何？其潜在人类靶点与IVDD相关基因是否存在交集？交集靶点构成的蛋白互作网络中有哪些核心节点？这些核心靶点与6PPD-Q的结合在热力学和动力学上是否稳定？由此能否提出6PPD-Q参与IVDD的候选分子机制假说？",
+        "study_design": "纯计算研究，无实验验证。流程为：从PubChem获取6PPD-Q结构，用ADMETLAB 3.0预测毒性；用ChEMBL、SEA、TargetNet、Swiss Target Prediction四库检索人类靶点并去重、经UniProt标准化；用GeneCards、OMIM、Ensembl整合IVDD相关基因；取交集后经STRING构建蛋白-蛋白相互作用（protein-protein interaction，PPI）网络，用Cytoscape 3.10.1及CentiScaPe 2.2插件按拓扑参数筛选核心靶点；用Metascape做GO和KEGG富集；用AutoDock 4对前五位核心靶点做分子对接；最后对结合最优的复合物做100 ns GROMACS分子动力学模拟。",
+        "methods": "6PPD-Q的化学结构、分子式与SMILES（Simplified Molecular Input Line Entry System）字符串取自PubChem，导入ADMETLAB 3.0平台预测毒性参数。靶点检索限定物种为Homo sapiens，合并ChEMBL、SEA、TargetNet、Swiss Target Prediction四库结果并去重，经UniProt标准化后构建6PPD-Q靶点库。以“Intervertebral disc degeneration”为检索词，从GeneCards、OMIM、Ensembl收集IVDD相关基因，合并去重建立疾病靶点集，用Venn图取交集。交集靶点导入STRING（物种Homo sapiens，置信度阈值>0.4）获取互作数据，在Cytoscape 3.10.1中构建并可视化PPI网络，用CentiScaPe 2.2插件计算度中心性（degree centrality，DC）、介数中心性（betweenness centrality，BC）和接近中心性（closeness centrality，CC），以均值为阈值筛选核心靶点。Metascape用于GO（覆盖生物过程BP、细胞组分CC、分子功能MF）和KEGG富集：最小重叠为3，原始P值 cutoff 0.01，最小富集因子1.5，P值用超几何检验计算，Benjamini–Hochberg校正控制多重检验，校正q值<0.05视为显著，取前10个GO条目和前20条KEGG通路可视化，并用Cytoscape构建靶点-通路网络。分子对接：6PPD-Q三维结构经OpenBabel 3.1.1转为Mol2，AutoDock Tools 1.5.7加氢、计算电荷并导出PDBQT配体文件；核心靶点高分辨率晶体结构取自RCSB PDB，PyMOL 3.6.1去水去杂原子后经AutoDock Tools转PDBQT；AutoDock 4对接，受体刚性、配体柔性，每对取预测结合能最低构象为代表姿势，PyMOL可视化。分子动力学：选取对接评分最优的复合物，用GROMACS 2025.3模拟，蛋白采用AMBER14SB力场，配体拓扑由Sobtop生成；复合物置于周期性立方盒，TIP3P水模型溶剂化，补加离子至生理NaCl浓度150 mM；先做500步共轭梯度能量最小化（收敛容差100.0 kJ/mol·nm，步长0.01 nm），再做100 ps限制性平衡（时间步1 fs），随后进行100 ns生产模拟（时间步2 fs）；温度298.15 K由V-rescale恒温器维持（耦合常数0.2 ps），压力1.0 bar由C-rescale恒压器维持；含氢键用LINCS约束；长程静电用粒子网格Ewald（particle mesh Ewald，PME）方法，截断1.0 nm，范德华相互作用用Verlet截断方案，截断1.0 nm，并施加能量与压力的色散校正，模拟中移除质心运动。轨迹分析包括均方根偏差（root-mean-square deviation，RMSD）、均方根涨落（root-mean-square fluctuation，RMSF）、回转半径（radius of gyration，Rg）、溶剂可及表面积（solvent-accessible surface area，SASA）和蛋白-配体氢键数；并以RMSD和Rg为集体变量构建二维和三维自由能景观（free-energy landscape，FEL）。",
+        "results": "毒性预测方面，6PPD-Q分子式为C18H22N2O2，分子量298.4 g/mol。ADMETLAB 3.0给出肝毒性H-HT 0.830、药物性肝损伤DILI 0.858、血液毒性0.740、遗传毒性0.994，以及SR-MMP 0.913、SR-ARE 0.909等参数。作者据此提示6PPD-Q的暴露风险可能不止于全身毒性，还可能干扰氧化应激（oxidative stress，OS）与基质降解过程。需要强调，这些是平台预测分数而非实测毒性，不能直接外推为人体危害。靶点交集方面，四库合并去重后得到204个6PPD-Q潜在结合靶点，三库整合得到2236个IVDD相关基因，Venn图取交集得59个共同基因（图2），作为后续分析的分子基础。PPI网络方面，59个交集靶点经STRING（置信度>0.4）构建出含55个节点、224条边的初始网络；用CentiScaPe按均值阈值（Degree>8.145、Betweenness>75.745、Closeness>0.008）筛选，得到12个节点、33条边的核心子网（图3，表2）。按Degree排序前五位枢纽基因为PTGS2、MMP2、SMAD3、RELA、GSK3B。读图时应注意，节点数和边数较交集基因数少，说明部分靶点未进入互作网络；拓扑筛选是启发式的，核心地位不等于因果驱动。富集分析方面，GO得到797个BP、58个CC、73个MF条目（图4）：BP显著富集于酶联受体蛋白信号通路、细胞迁移正调控以及OS应答和凋亡信号调控等线粒体相关过程；CC主要定位在外细胞膜、受体复合物和突触结构；MF集中于激酶结合、蛋白激酶活性和转录因子结合，与PPI中的激酶枢纽GSK3B相呼应。KEGG（图5）显示靶点显著富集于MAPK、PI3K-Akt等环境应激相关经典通路，AGE-RAGE和凋亡通路的富集提示与氧化应激和线粒体功能障碍的潜在关联，TNF和IL-17信号通路的存在则提示6PPD-Q可能参与髓核细胞内炎症介导的基质稳态破坏。靶点-通路网络（图6）显示PTGS2、MMP2、RELA、SMAD3、GSK3B广泛分布于AGE-RAGE、PI3K-Akt、MAPK、TNF、IL-17等通路，其中PTGS2、MMP2、RELA连接多条通路，可能作为连接氧化应激、炎症、凋亡与基质降解的桥接节点。这些结果支持“多靶点、多通路”的计算假说，但不能证明6PPD-Q在体内确实激活或抑制这些通路。分子对接方面，对前五位枢纽基因对接，以结合能<−5 kcal/mol为良好结合的一般标准；结果显示6PPD-Q与五个靶点的结合能均<−6.0 kcal/mol（图7A，表3），其中6PPD-Q-RELA复合物（−8.82 kcal/mol）和6PPD-Q-MMP2复合物（−8.30 kcal/mol）结合最稳定，其余为PTGS2 −7.2、GSK3B −7.5、SMAD3 −6.09 kcal/mol。可视化（图7B–F）显示6PPD-Q可嵌入各靶点活性口袋，通过氢键和疏水作用维持构象稳定，例如与HIS-39、CYS-47残基形成关键氢键，与GSK3B的VAL-135残基形成稳定结合。对接分数是打分函数的近似，受受体构象刚性和口袋选择影响，不能等同于真实亲和力。分子动力学方面，对结合最优的6PPD-Q-RELA复合物做了100 ns模拟（图8）。蛋白及复合物RMSD在初始约15–20 ns上升后波动于约0.28–0.35 nm的较窄区间，提示先经历构象调整后进入相对稳定状态；配体RMSD整体较低，主要在约0.10–0.20 nm间波动，模拟中段有短暂升高。RMSF显示多数残基涨落低于0.20 nm，少数局部区域峰值接近0.4–0.5 nm，提示存在柔性片段。SASA在约90–98 nm²内基本稳定，无持续突变，提示未发生明显整体解折叠；Rg稳定在约1.49–1.53 nm，说明复合物紧凑性得以保持。氢键分析显示6PPD-Q与RELA在整个轨迹中维持间歇性氢键，数目以0–1为主，偶达2–3。自由能景观显示主导低能盆地集中于RMSD约0.30–0.35 nm、Rg约1.51–1.52 nm处，提示复合物偏好采样相对明确的低能构象态。总体而言，这些结果支持6PPD-Q-RELA复合物在所模拟条件下的动态稳定性，但仅针对单一复合物、单一轨迹，且模拟条件为298.15 K、1.0 bar的标准计算设置，不能据此推断体内结合或功能效应。",
+        "limitations": "第一，全文为计算研究，无细胞、动物或人群实验验证，所有关联均为预测性假说。第二，ADMETLAB 3.0的毒性参数是模型预测分数，不能等同于实测毒理学终点。第三，靶点来源于四个数据库的预测与检索，假阳性与假阴性均可能存在，且未限定暴露途径、剂量或组织分布。第四，IVDD相关基因来自三个疾病数据库的合并，异质性强，交集分析不能反映组织特异性表达或疾病分期。第五，PPI核心靶点依赖拓扑阈值筛选，阈值设定带有主观性，核心地位不等于因果驱动。第六，分子对接将受体视为刚性，打分函数存在近似误差，结合能排序不宜过度解读。第七，分子动力学仅对6PPD-Q-RELA一个复合物做了单条100 ns轨迹，未做重复模拟或结合自由能计算，统计稳健性有限。第八，研究未考虑6PPD-Q在体内的代谢、生物利用度与血-椎间盘屏障等药代动力学因素。",
+        "takeaways": "该研究以计算流程提出一个可检验的假说：6PPD-Q可能通过PTGS2、MMP2、SMAD3、RELA、GSK3B等核心靶点，经由氧化应激、炎症、凋亡和基质降解相关通路（MAPK、PI3K-Akt、AGE-RAGE、TNF、IL-17等）与IVDD发生潜在关联，其中6PPD-Q-RELA在对接和100 ns模拟中表现最稳定。对读者的实际意义是：这为环境污染物与椎间盘退变的交叉研究提供了候选靶点清单和机制方向，但尚不能作为6PPD-Q致IVDD的证据；后续需要表达谱、细胞与动物暴露实验以及结合自由能计算等独立验证。",
+        "figure_notes": [
+          {
+            "label": "Fig 1",
+            "caption_zh": "6PPD-醌的二维化学结构（A）与三维分子构象（B）。",
+            "interpretation": "展示研究对象的化学身份，是后续ADMET预测和分子对接的输入基础；本身不提供毒性或结合信息。"
+          },
+          {
+            "label": "Fig 2",
+            "caption_zh": "6PPD-Q靶点与IVDD相关靶点的Venn图。",
+            "interpretation": "显示204个化合物潜在靶点与2236个IVDD相关基因的交集为59个基因；交集大小反映数据库层面的重叠，不代表生物学因果。"
+          },
+          {
+            "label": "Fig 3",
+            "caption_zh": "PPI分析识别候选靶点：59个交集靶点经DC、BC、CC筛选得到12个关键靶点。",
+            "interpretation": "网络节点大小和颜色通常对应拓扑指标；12个核心靶点按Degree排序前五位为PTGS2、MMP2、SMAD3、RELA、GSK3B。读图应关注筛选阈值的人为设定，核心节点是网络中心性而非功能驱动力的证明。"
+          },
+          {
+            "label": "Fig 4",
+            "caption_zh": "GO富集分析，包括生物过程、细胞组分和分子功能三个维度。",
+            "interpretation": "富集条目提示交集靶点涉及受体信号、细胞迁移、氧化应激应答、凋亡调控、激酶结合与转录因子结合等；这些是功能注释层面的统计关联，不能说明6PPD-Q改变了这些过程。"
+          },
+          {
+            "label": "Fig 5",
+            "caption_zh": "KEGG富集分析前20条通路。",
+            "interpretation": "MAPK、PI3K-Akt、AGE-RAGE、凋亡、TNF、IL-17等通路显著富集，支持氧化应激、炎症、凋亡与基质降解的多通路假说；富集显著性依赖输入基因集，不能推断通路活性方向。"
+          },
+          {
+            "label": "Fig 6",
+            "caption_zh": "核心基因与富集KEGG通路的靶点-通路相互作用网络；蓝色节点为核心靶基因，红色节点为信号通路，边表示靶点与通路的关联。",
+            "interpretation": "PTGS2、MMP2、RELA等节点连接多条通路，提示其可能作为桥接节点；该网络是注释关系的可视化，边的存在不等于调控关系或因果作用。"
+          },
+          {
+            "label": "Fig 7",
+            "caption_zh": "6PPD-Q与核心靶点分子对接的结合能热图（A）及各复合物对接构象（B–F：PTGS2、MMP2、SMAD3、RELA、GSK3B）。",
+            "interpretation": "所有结合能<−6.0 kcal/mol，RELA（−8.82）和MMP2（−8.30）最优；构象图显示氢键与疏水作用。对接分数是打分函数近似，受体刚性处理限制了对真实亲和力的推断。"
+          },
+          {
+            "label": "Fig 8",
+            "caption_zh": "6PPD-Q-RELA复合物的分子动力学模拟分析：（A）蛋白、配体及复合物的RMSD；（B）蛋白残基RMSF；（C）SASA；（D）Rg及其主轴分量；（E）6PPD-Q与RELA间氢键数；（F）基于RMSD和Rg的自由能景观。",
+            "interpretation": "RMSD在约15–20 ns后稳定于0.28–0.35 nm，配体RMSD多在0.10–0.20 nm；SASA约90–98 nm²、Rg约1.49–1.53 nm保持稳定，氢键以0–1为主，自由能景观显示单一主导低能盆地。这些支持复合物在模拟条件下的动态稳定性，但仅为单条100 ns轨迹、单一复合物，不能外推至体内。"
+          }
+        ]
+      },
+      "ai_status": "success",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    }
+  ]
 }

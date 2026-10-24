@@ -1,16 +1,354 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-24T09:58:05Z",
+  "generated_at": "2026-10-24T10:32:48Z",
   "last_run": {
     "status": "fallback_ncbi",
-    "selected": 0,
-    "published": 0,
-    "candidates": 0,
+    "selected": 1,
+    "published": 1,
+    "candidates": 10,
     "skipped_without_pmcid": 0,
     "search_error": "Europe PMC HTTP 503: HTTP Error 503:",
-    "preserved_articles": 0,
-    "finished_at": "2026-10-24T09:58:05Z"
+    "preserved_articles": 1,
+    "finished_at": "2026-10-24T10:32:48Z"
   },
-  "processed": [],
-  "pending_candidates": []
+  "processed": [
+    {
+      "id": "doi:10.1371/journal.pone.0359621",
+      "title": "Investigating potential molecular mechanisms linking 6PPD-quinone exposure to Intervertebral Disc Degeneration: A network toxicology, molecular docking, and molecular dynamics simulation study.",
+      "authors": [
+        "Yang B",
+        "Wang X",
+        "Zhuo L",
+        "Chen Y",
+        "He Q"
+      ],
+      "journal": "PloS one",
+      "year": "2026",
+      "doi": "10.1371/journal.pone.0359621",
+      "pmcid": "PMC13690237",
+      "pmid": "42911944",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ],
+      "figures": [
+        {
+          "label": "Fig 1",
+          "caption": "Two-dimensional and three-dimensional structures of 6PPD-quinone. (A) Two-dimensional chemical structure of 6PPD-quinone. (B) Three-dimensional molecular conformation of 6PPD-quinone.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g001.webp"
+        },
+        {
+          "label": "Fig 2",
+          "caption": "Venn diagram of 6PPD-Q and IVDD-related targets.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g002.webp"
+        },
+        {
+          "label": "Fig 3",
+          "caption": "Candidate targets were identified by PPI analysis. A total of 12 key targets were obtained by screening 59 cross targets by DC, BC and CC.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g003.webp"
+        },
+        {
+          "label": "Fig 4",
+          "caption": "GO enrichment analysis. Including biological processes, cellular components, and molecular functions.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g004.webp"
+        },
+        {
+          "label": "Fig 5",
+          "caption": "The top 20 KEGG enrichment analysis pathways.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g005.webp"
+        },
+        {
+          "label": "Fig 6",
+          "caption": "Target–pathway interaction network of core genes and enriched KEGG pathways.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g006.webp"
+        },
+        {
+          "label": "Fig 7",
+          "caption": "The heat map and molecular docking results of 6PPD-Q biological compounds and core targets. (A) Binding energy value of molecular docking. (B) 6PPD-Q -PTGS2 complex. (C) 6PPD-Q -MMP2 complex. (D) 6PPD-Q -SMAD3 complex. (E) 6PPD-Q -RELA complex. (F) 6PPD-Q -GSK3B complex.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g007.webp"
+        },
+        {
+          "label": "Fig 8",
+          "caption": "Molecular dynamics simulation analysis of the 6PPD-Q–RELA complex. (A) Root-mean-square deviation (RMSD) profiles of the protein, ligand, and protein–ligand complex during the 100-ns simulation. (B) Root-mean-square fluctuation (RMSF) of protein residues. (C) Solvent-accessible surface area (SASA) of the complex over the simulation trajectory. (D) Radius of gyration (Rg) and its components along the principal axes. (E) Number of hydrogen bonds formed between 6PPD-Q and RELA during the simulation. (F) Free-energy landscape of the 6PPD-Q–RELA complex constructed based on RMSD and Rg.",
+          "image_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.g008.webp"
+        }
+      ],
+      "supplements": [
+        {
+          "label": "S1 Table",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s001.xlsx",
+          "description": "PubChem information for 6PPD-Q. (XLSX)"
+        },
+        {
+          "label": "S2 Table",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s002.xlsx",
+          "description": "Potential targets of 6PPD-Q retrieved from different target prediction databases. (XLSX)"
+        },
+        {
+          "label": "S3 Table",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s003.xlsx",
+          "description": "IVDD-associated genes retrieved from different disease-related databases. (XLSX)"
+        },
+        {
+          "label": "S4 Table",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s004.xlsx",
+          "description": "Common targets between 6PPD-Q and intervertebral disc degeneration. (XLSX)"
+        },
+        {
+          "label": "S5 Table",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s005.xlsx",
+          "description": "Detailed results of GO and KEGG enrichment analyses. (XLSX)"
+        },
+        {
+          "label": "S6 Table",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13690237/bin/pone.0359621.s006.xlsx",
+          "description": "Underlying numerical data for molecular dynamics simulation analyses of the 6PPD-Q–RELA complex. (XLSX)"
+        }
+      ],
+      "fulltext_ok": true,
+      "metrics": {
+        "impact_factor": "2.8",
+        "jcr": "SCI Q2",
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T10:32:26Z"
+      },
+      "journal_display": "PloS one（IF 2.8；JCR SCI Q2）",
+      "updated_at": "2026-10-24T10:32:26Z",
+      "ai_status": "success",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    }
+  ],
+  "pending_candidates": [
+    {
+      "id": "doi:10.1002/cne.70218",
+      "title": "A Tale of Two States: Similarities and Differences in Neuropeptide Signaling in Larval and Adult Drosophila.",
+      "authors": [
+        "Nässel DR"
+      ],
+      "journal": "The Journal of comparative neurology",
+      "year": "2026",
+      "doi": "10.1002/cne.70218",
+      "pmcid": "PMC13690095",
+      "pmid": "42911801",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1099/mgen.0.001859",
+      "title": "UShER-TB: scalable, comprehensive, accessible phylogenomic analysis of Mycobacterium tuberculosis.",
+      "authors": [
+        "Karim LM",
+        "Martínez-Martínez FJ",
+        "O'Farrell A",
+        "Hinrichs AS",
+        "Sanderson T",
+        "Iqbal Z",
+        "Kozyreva VK",
+        "Bell JM",
+        "López MG",
+        "Comas I",
+        "Corbett-Detig R"
+      ],
+      "journal": "Microbial genomics",
+      "year": "2026",
+      "doi": "10.1099/mgen.0.001859",
+      "pmcid": "PMC13690021",
+      "pmid": "42911656",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1002/jor.70303",
+      "title": "The F-Actin of In Situ Chondrocytes in Non-Degenerate and Mildly-Degenerate Human Cartilage: Changes With Cell Volume, and Cytoplasmic Processes.",
+      "authors": [
+        "Garni MSMA",
+        "Amin AK",
+        "Hall AC"
+      ],
+      "journal": "Journal of orthopaedic research : official publication of the Orthopaedic Research Society",
+      "year": "2026",
+      "doi": "10.1002/jor.70303",
+      "pmcid": "PMC13690011",
+      "pmid": "42911637",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1002/cpz1.70489",
+      "title": "A Gravity-driven Microfluidic Platform for High-throughput Culture and Inflammatory Stimulation of Human Articular Chondrocytes.",
+      "authors": [
+        "Silva AMD",
+        "Lamghari M",
+        "Nguyen HT",
+        "Kettunen J",
+        "Mosser S",
+        "Singh P",
+        "Mobasheri A",
+        "Lorite GS",
+        "Rodrigues PC"
+      ],
+      "journal": "Current protocols",
+      "year": "2026",
+      "doi": "10.1002/cpz1.70489",
+      "pmcid": "PMC13690009",
+      "pmid": "42911226",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1002/jnr.70162",
+      "title": "Knockdown of CLEC7A Alleviates Ischemic Brain Injury by an Anti-Inflammatory Microglial Phenotype via the CXCL1/CXCR2 Axis.",
+      "authors": [
+        "Xi M",
+        "Yang M",
+        "Xu T",
+        "Yun C",
+        "Lu H",
+        "Zhao Z",
+        "Li J",
+        "Li J",
+        "Fu Y",
+        "Li Y",
+        "Li W"
+      ],
+      "journal": "Journal of neuroscience research",
+      "year": "2026",
+      "doi": "10.1002/jnr.70162",
+      "pmcid": "PMC13688411",
+      "pmid": "42910573",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1002/jcsm.70409",
+      "title": "Circulating MicroRNAs Reflect Systemic Inflammation and Metabolic Dysfunction in Oesophageal Squamous Cell Carcinoma-Associated Cachexia.",
+      "authors": [
+        "Li Y",
+        "Chen R",
+        "Lv X",
+        "Wei S",
+        "Xu Y",
+        "Ding S"
+      ],
+      "journal": "Journal of cachexia, sarcopenia and muscle",
+      "year": "2026",
+      "doi": "10.1002/jcsm.70409",
+      "pmcid": "PMC13688428",
+      "pmid": "42910566",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1002/kjm2.70307",
+      "title": "Composite Inflammatory Score for Predicting Progression-Free Survival in Metastatic Clear Cell Renal Cell Carcinoma Treated With First-Line Toripalimab Plus Axitinib.",
+      "authors": [
+        "Wu YF",
+        "Wang JS",
+        "Zhang CA",
+        "Zhang F",
+        "Zhang ZY"
+      ],
+      "journal": "The Kaohsiung journal of medical sciences",
+      "year": "2026",
+      "doi": "10.1002/kjm2.70307",
+      "pmcid": "PMC13688549",
+      "pmid": "42910542",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1039/d6cs00998k",
+      "title": "Identical-location electron microscopy for the discovery of heterogeneous catalysts' dynamics at the single-particle level.",
+      "authors": [
+        "Chen Y",
+        "Alves Fernandes J",
+        "Khlobystov AN"
+      ],
+      "journal": "Chemical Society reviews",
+      "year": "2026",
+      "doi": "10.1039/d6cs00998k",
+      "pmcid": "PMC13688316",
+      "pmid": "42910484",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    },
+    {
+      "id": "doi:10.1111/tpj.71174",
+      "title": "Genome architecture modulates 35S and 5S rDNA homogenization in Asteraceae.",
+      "authors": [
+        "Vitales D",
+        "Pascual-Díaz JP",
+        "Zoulová V",
+        "Kovarik A",
+        "Garcia S"
+      ],
+      "journal": "The Plant journal : for cell and molecular biology",
+      "year": "2026",
+      "doi": "10.1111/tpj.71174",
+      "pmcid": "PMC13688046",
+      "pmid": "42908423",
+      "abstract": "",
+      "citation_count": 0,
+      "fulltext_urls": [],
+      "source": "NCBI PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+      ]
+    }
+  ]
 }
