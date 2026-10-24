@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-24T07:15:06Z",
+  "last_run": {
+    "selected": 1,
+    "published": 0,
+    "candidates": 5,
+    "finished_at": "2026-10-24T07:15:06Z"
+  },
+  "processed": [
+    {
+      "id": "doi:10.1038/nature05414",
+      "title": "An obesity-associated gut microbiome with increased capacity for energy harvest.",
+      "authors": [
+        "Turnbaugh PJ",
+        "Ley RE",
+        "Mahowald MA",
+        "Magrini V",
+        "Mardis ER",
+        "Gordon JI"
+      ],
+      "journal": "Nature",
+      "year": "2006",
+      "doi": "10.1038/nature05414",
+      "pmcid": "",
+      "pmid": "17183312",
+      "citation_count": 8881,
+      "fulltext_urls": [
+        "https://doi.org/10.1038/nature05414"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 17,
+      "relevance_evidence": [
+        "sequencing: metagenom",
+        "disease_bridge: obesity"
+      ],
+      "figures": [],
+      "supplements": [],
+      "fulltext_ok": false,
+      "metrics": {
+        "impact_factor": "56.1",
+        "jcr": "SCI Q1",
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T07:14:59Z"
+      },
+      "journal_display": "Nature（IF 56.1；JCR SCI Q1）",
+      "updated_at": "2026-10-24T07:14:59Z",
+      "ai_status": "success",
+      "publishable": false,
+      "gate_reasons": [
+        "正文全文未成功提取",
+        "没有可追溯的正文原图",
+        "正文 Methods 未提取",
+        "正文 Results 未提取"
+      ],
+      "status": "discarded"
+    }
+  ],
+  "pending_candidates": [
+    {
+      "id": "doi:10.1016/j.cell.2013.05.039",
+      "title": "The hallmarks of aging.",
+      "authors": [
+        "López-Otín C",
+        "Blasco MA",
+        "Partridge L",
+        "Serrano M",
+        "Kroemer G"
+      ],
+      "journal": "Cell",
+      "year": "2013",
+      "doi": "10.1016/j.cell.2013.05.039",
+      "pmcid": "PMC3836174",
+      "pmid": "23746838",
+      "abstract": "Aging is characterized by a progressive loss of physiological integrity, leading to impaired function and increased vulnerability to death. This deterioration is the primary risk factor for major human pathologies, including cancer, diabetes, cardiovascular disorders, and neurodegenerative diseases. Aging research has experienced an unprecedented advance over recent years, particularly with the discovery that the rate of aging is controlled, at least to some extent, by genetic pathways and biochemical processes conserved in evolution. This Review enumerates nine tentative hallmarks that represent common denominators of aging in different organisms, with special emphasis on mammalian aging. These hallmarks are: genomic instability, telomere attrition, epigenetic alterations, loss of proteostasis, deregulated nutrient sensing, mitochondrial dysfunction, cellular senescence, stem cell exhaustion, and altered intercellular communication. A major challenge is to dissect the interconnectedness between the candidate hallmarks and their relative contributions to aging, with the final goal of identifying pharmaceutical targets to improve human health during aging, with minimal side effects.",
+      "citation_count": 12416,
+      "fulltext_urls": [
+        "https://doi.org/10.1016/j.cell.2013.05.039",
+        "https://europepmc.org/articles/PMC3836174",
+        "https://europepmc.org/articles/PMC3836174?pdf=render",
+        "https://doi.org/10.1016/j.cell.2013.05.039"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 16,
+      "relevance_evidence": [
+        "aging: aging, senescence",
+        "disease_bridge: diabetes, cardiovascular"
+      ]
+    },
+    {
+      "id": "doi:10.1038/nbt.4096",
+      "title": "Integrating single-cell transcriptomic data across different conditions, technologies, and species.",
+      "authors": [
+        "Butler A",
+        "Hoffman P",
+        "Smibert P",
+        "Papalexi E",
+        "Satija R"
+      ],
+      "journal": "Nature biotechnology",
+      "year": "2018",
+      "doi": "10.1038/nbt.4096",
+      "pmcid": "PMC6700744",
+      "pmid": "29608179",
+      "abstract": "Computational single-cell RNA-seq (scRNA-seq) methods have been successfully applied to experiments representing a single condition, technology, or species to discover and define cellular phenotypes. However, identifying subpopulations of cells that are present across multiple data sets remains challenging. Here, we introduce an analytical strategy for integrating scRNA-seq data sets based on common sources of variation, enabling the identification of shared populations across data sets and downstream comparative analysis. We apply this approach, implemented in our R toolkit Seurat (http://satijalab.org/seurat/), to align scRNA-seq data sets of peripheral blood mononuclear cells under resting and stimulated conditions, hematopoietic progenitors sequenced using two profiling technologies, and pancreatic cell 'atlases' generated from human and mouse islets. In each case, we learn distinct or transitional cell states jointly across data sets, while boosting statistical power through integrated analysis. Our approach facilitates general comparisons of scRNA-seq data sets, potentially deepening our understanding of how distinct cell states respond to perturbation, disease, and evolution.",
+      "citation_count": 11393,
+      "fulltext_urls": [
+        "https://europepmc.org/articles/pmc6700744?pdf=render",
+        "https://doi.org/10.1038/nbt.4096",
+        "https://europepmc.org/articles/PMC6700744",
+        "https://europepmc.org/articles/PMC6700744?pdf=render",
+        "https://doi.org/10.1038/nbt.4096"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 16,
+      "relevance_evidence": [
+        "sequencing: single-cell",
+        "multiomics: transcriptom"
+      ]
+    },
+    {
+      "id": "doi:10.1038/s41592-019-0619-0",
+      "title": "Fast, sensitive and accurate integration of single-cell data with Harmony.",
+      "authors": [
+        "Korsunsky I",
+        "Millard N",
+        "Fan J",
+        "Slowikowski K",
+        "Zhang F",
+        "Zhang F",
+        "Wei K",
+        "Baglaenko Y",
+        "Brenner M",
+        "Loh PR",
+        "Raychaudhuri S"
+      ],
+      "journal": "Nature methods",
+      "year": "2019",
+      "doi": "10.1038/s41592-019-0619-0",
+      "pmcid": "PMC6884693",
+      "pmid": "31740819",
+      "abstract": "The emerging diversity of single-cell RNA-seq datasets allows for the full transcriptional characterization of cell types across a wide variety of biological and clinical conditions. However, it is challenging to analyze them together, particularly when datasets are assayed with different technologies, because biological and technical differences are interspersed. We present Harmony (https://github.com/immunogenomics/harmony), an algorithm that projects cells into a shared embedding in which cells group by cell type rather than dataset-specific conditions. Harmony simultaneously accounts for multiple experimental and biological factors. In six analyses, we demonstrate the superior performance of Harmony to previously published algorithms while requiring fewer computational resources. Harmony enables the integration of ~10<sup>6</sup> cells on a personal computer. We apply Harmony to peripheral blood mononuclear cells from datasets with large experimental differences, five studies of pancreatic islet cells, mouse embryogenesis datasets and the integration of scRNA-seq with spatial transcriptomics data.",
+      "citation_count": 10292,
+      "fulltext_urls": [
+        "https://doi.org/10.1038/s41592-019-0619-0",
+        "https://europepmc.org/articles/PMC6884693",
+        "https://europepmc.org/articles/PMC6884693?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 16,
+      "relevance_evidence": [
+        "sequencing: single-cell",
+        "multiomics: transcriptom"
+      ]
+    },
+    {
+      "id": "doi:10.1186/gb-2011-12-6-r60",
+      "title": "Metagenomic biomarker discovery and explanation.",
+      "authors": [
+        "Segata N",
+        "Izard J",
+        "Waldron L",
+        "Gevers D",
+        "Miropolsky L",
+        "Garrett WS",
+        "Huttenhower C"
+      ],
+      "journal": "Genome biology",
+      "year": "2011",
+      "doi": "10.1186/gb-2011-12-6-r60",
+      "pmcid": "PMC3218848",
+      "pmid": "21702898",
+      "abstract": "This study describes and validates a new method for metagenomic biomarker discovery by way of class comparison, tests of biological consistency and effect size estimation. This addresses the challenge of finding organisms, genes, or pathways that consistently explain the differences between two or more microbial communities, which is a central problem to the study of metagenomics. We extensively validate our method on several microbiomes and a convenient online interface for the method is provided at http://huttenhower.sph.harvard.edu/lefse/.",
+      "citation_count": 12298,
+      "fulltext_urls": [
+        "https://genomebiology.biomedcentral.com/counter/pdf/10.1186/gb-2011-12-6-r60",
+        "https://doi.org/10.1186/gb-2011-12-6-r60",
+        "https://europepmc.org/articles/PMC3218848",
+        "https://europepmc.org/articles/PMC3218848?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "sequencing: metagenom"
+      ]
+    }
+  ]
+}
