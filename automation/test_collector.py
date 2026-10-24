@@ -200,7 +200,10 @@ class CollectorTests(unittest.TestCase):
                 "--report", str(root / "report.json"),
             ])
             outage = urllib.error.HTTPError("https://www.ebi.ac.uk/europepmc", 503, "Service Unavailable", {}, None)
-            with patch("automation.collector.search_europe_pmc", side_effect=outage):
+            # This test covers the case where both providers are unavailable;
+            # keep it deterministic by blocking the NCBI fallback as well.
+            with patch("automation.collector.search_europe_pmc", side_effect=outage), \
+                 patch("automation.collector.search_ncbi_pmc", side_effect=outage):
                 summary = run(args)
             self.assertEqual(summary["status"], "upstream_unavailable")
             self.assertEqual(summary["published"], 0)
