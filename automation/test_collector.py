@@ -241,6 +241,25 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(records[0]["authors"], ["A. Example"])
         self.assertGreaterEqual(records[0]["relevance_score"], 12)
 
+    def test_ncbi_query_match_is_not_dropped_when_esummary_has_no_abstract(self):
+        payloads = [
+            {"esearchresult": {"idlist": ["123456"]}},
+            {"result": {
+                "uids": ["123456"],
+                "123456": {
+                    "uid": "123456",
+                    "title": "A paper whose relevant terms are only in the indexed abstract",
+                    "fulljournalname": "Example Genomics",
+                    "pubdate": "2026",
+                    "articleids": [{"idtype": "pmcid", "value": "PMC123456"}],
+                },
+            }},
+        ]
+        with patch("automation.collector.ncbi_json", side_effect=payloads):
+            records = search_ncbi_pmc("aging AND nanopore", page_size=1)
+        self.assertEqual(records[0]["relevance_score"], 12)
+        self.assertIn("完整查询命中", records[0]["relevance_evidence"][-1])
+
     def test_europe_outage_uses_ncbi_fallback(self):
         candidate = {
             "id": "pmcid:PMC123456",

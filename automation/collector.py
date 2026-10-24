@@ -46,6 +46,11 @@ EUROPE_PMC_SEARCH = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
 EASYSCHOLAR_URL = "https://www.easyscholar.cc/open/getPublicationRank"
 NCBI_EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 TRANSIENT_HTTP_STATUS = {408, 425, 429, 500, 502, 503, 504}
+# NCBI ESummary does not return the abstract.  A PMC ESearch match therefore
+# often has a zero title-only score even though the paper matched the complete
+# ageing + sequencing query.  Keep such hits eligible for the later full-text
+# and figure gates; those gates are the final relevance/quality check.
+NCBI_QUERY_MATCH_SCORE = 12
 
 
 def utc_now() -> str:
@@ -319,6 +324,13 @@ def search_ncbi_pmc(query: str, *, page_size: int = 40) -> list[dict[str, Any]]:
             if isinstance(item, Mapping):
                 summaries.append(item)
     records = [_ncbi_summary_to_candidate(item) for item in summaries]
+    for record in records:
+        if record["relevance_score"] < NCBI_QUERY_MATCH_SCORE:
+            record["relevance_score"] = NCBI_QUERY_MATCH_SCORE
+            record["relevance_evidence"] = list(record.get("relevance_evidence", []))
+            record["relevance_evidence"].append(
+                "NCBI：完整查询命中（ESummary 未提供摘要，待全文质量门禁复核）"
+            )
     return sorted(records, key=lambda x: (x["relevance_score"], x["citation_count"], x["year"]), reverse=True)
 
 
@@ -562,7 +574,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     except (OSError, urllib.error.URLError, ValueError) as exc:
         code = getattr(exc, "code", "")
         detail = clean_text(str(exc))
-        search_error = f"Europe PMC HTTP {code}: {detail}" if code else (f"Europe PMC: {detail}" or type(exc).__name__)
+        search_error = f"Europe PMC HTTP {code}: {detail}" if code else (f"Europe PMC: {detail}" if detail else type(exc).__name__)
         try:
             candidates = search_ncbi_pmc(args.query, page_size=args.candidate_limit)
             search_status = "fallback_ncbi"
@@ -570,7 +582,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             search_status = "upstream_unavailable"
             fallback_code = getattr(fallback_exc, "code", "")
             fallback_detail = clean_text(str(fallback_exc))
-            fallback_message = f"NCBI HTTP {fallback_code}: {fallback_detail}" if fallback_code else (f"NCBI: {fallback_detail}" or type(fallback_exc).__name__)
+            fallback_message = f"NCBI HTTP {fallback_code}: {fallback_detail}" if fallback_code else (f"NCBI: {fallback_detail}" if fallback_detail else type(fallback_exc).__name__)
             search_error = f"{search_error}; {fallback_message}"
             candidates = []
     def eligible(candidate: Mapping[str, Any]) -> bool:
