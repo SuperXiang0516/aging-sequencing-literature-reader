@@ -430,7 +430,11 @@ def easy_scholar_metrics(journal: str, cache: dict[str, Any]) -> dict[str, str]:
     params = urllib.parse.urlencode({"secretKey": secret, "publicationName": journal})
     try:
         payload = http_json(f"{EASYSCHOLAR_URL}?{params}", timeout=20)
-        ranks = payload.get("data", {}).get("officialRank", {}).get("all", {}) if isinstance(payload, Mapping) else {}
+        data = payload.get("data") if isinstance(payload, Mapping) else {}
+        official_rank = data.get("officialRank") if isinstance(data, Mapping) else {}
+        ranks = official_rank.get("all") if isinstance(official_rank, Mapping) else {}
+        if not isinstance(ranks, Mapping):
+            ranks = {}
         sci = clean_text(ranks.get("sci"))
         ssci = clean_text(ranks.get("ssci"))
         jcr = " / ".join(x for x in (f"SCI {sci}" if sci else "", f"SSCI {ssci}" if ssci else "") if x)

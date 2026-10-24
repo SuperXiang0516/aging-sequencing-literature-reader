@@ -319,6 +319,13 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(metrics["jcr_quartile"], "Q1")
         self.assertTrue(metrics["jcr_q1"])
 
+    def test_easyscholar_empty_rank_response_does_not_abort_collection(self):
+        with patch.dict(os.environ, {"EASYSCHOLAR_SECRET_KEY": "test-secret"}, clear=False), \
+             patch("automation.collector.http_json", return_value={"data": {"officialRank": {"all": None}}}):
+            metrics = easy_scholar_metrics("Example Aging Journal", {})
+        self.assertEqual(metrics["status"], "not_found")
+        self.assertFalse(metrics["jcr_q1"])
+
     def test_europe_outage_uses_ncbi_fallback(self):
         candidate = {
             "id": "pmcid:PMC123456",
