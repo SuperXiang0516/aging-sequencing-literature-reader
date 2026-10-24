@@ -59,6 +59,7 @@ class CollectorTests(unittest.TestCase):
         self.assertIn("complete contigs", results)
         self.assertIn("Age-associated microbial genomes", fulltext)
         self.assertEqual(figures[0]["label"], "Fig. 1")
+        self.assertTrue(figures[0]["image_url"].startswith("https://pmc.ncbi.nlm.nih.gov/articles/PMC1234567/bin/"))
         self.assertTrue(figures[0]["image_url"].endswith("/example-f1.jpg"))
         self.assertIn("Workflow", figures[0]["caption"])
         self.assertEqual(supplements[0]["label"], "Supplementary Table 1")

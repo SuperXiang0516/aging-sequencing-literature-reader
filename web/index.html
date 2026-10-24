@@ -73,6 +73,24 @@
 .article.active .figure .interpretation{font-size:16px;line-height:1.95}.article.active p b{color:#c35d34}
 @media(max-width:700px){.article.active{margin:20px 0 50px}.article.active .info-list{grid-template-columns:1fr;gap:1px}.article.active .info-list dd{padding-left:0}.article.active .workflow{grid-template-columns:1fr 1fr}.article.active .step{border-bottom:1px solid #e0ddd7}.article.active .method-flow-item{grid-template-columns:38px minmax(0,1fr);gap:8px}.article.active .method-flow-item p{grid-column:2}}
 </style>
+<style>
+.article-tools{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 28px;padding:13px 0;border-top:1px solid #d8d5ce;border-bottom:1px solid #d8d5ce}
+.article-tools button,.figure-open{border:1px solid #9cb6e8;background:#eef4ff;color:#2f62b9;border-radius:4px;padding:8px 13px;font:600 14px/1.4 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;cursor:pointer}
+.article-tools button:hover,.figure-open:hover{background:#dfeaff}
+.card-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:12px;border-top:1px solid #e4e0d8}.card-actions button{border:1px solid #ddb28f;background:#fff8f2;color:#a7512e;border-radius:4px;padding:7px 10px;font:600 12px/1.4 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;cursor:pointer}.card-actions button:hover{background:#ffeedf}.card-actions span{font-size:12px;color:#68756f}
+.figure-open{display:inline-block;margin-top:10px;background:#fff8f2;border-color:#ddb28f;color:#a7512e;font-size:13px}
+.figure-modal[hidden]{display:none}
+.figure-modal{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(24,31,30,.72)}
+.figure-modal-backdrop{position:absolute;inset:0}
+.figure-modal-card{position:relative;z-index:1;width:min(1180px,96vw);max-height:94vh;overflow:auto;background:#fffdf9;padding:22px 26px 25px;box-shadow:0 18px 60px rgba(0,0,0,.3)}
+.figure-modal-close{position:absolute;right:13px;top:10px;border:0;background:transparent;color:#42524d;font-size:27px;line-height:1;cursor:pointer}
+.figure-modal img{display:block;max-width:100%;max-height:76vh;width:auto;height:auto;margin:10px auto 14px;object-fit:contain;background:#fff}
+.figure-modal-title{margin:0 34px 5px;color:#2f62b9;font:700 19px/1.45 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+.figure-modal-caption{margin:0;color:#4c5753;font:15px/1.8 Georgia,"Songti SC","STSong",serif}
+.figure-modal-link{display:inline-block;margin-top:10px;color:#2e709b;font:13px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+body.modal-open{overflow:hidden}
+@media(max-width:700px){.figure-modal{padding:8px}.figure-modal-card{padding:18px 14px 20px}.figure-modal img{max-height:70vh}.figure-modal-caption{font-size:14px}}
+</style>
 </head>
 <body>
 <main class="shell">
@@ -84,6 +102,16 @@
   <div class="nav"><a href="literature-demo.html">← 查看本地三篇完整示范</a><span class="status" id="status">正在读取自动更新记录…</span></div>
   <section id="list" class="list" aria-label="自动更新文献目录"></section>
   <section id="reader" class="article" aria-live="polite"></section>
+  <div id="figureModal" class="figure-modal" hidden aria-hidden="true">
+    <div class="figure-modal-backdrop" data-close-figure></div>
+    <div class="figure-modal-card" role="dialog" aria-modal="true" aria-labelledby="figureModalTitle">
+      <button class="figure-modal-close" type="button" data-close-figure aria-label="关闭">×</button>
+      <h2 id="figureModalTitle" class="figure-modal-title"></h2>
+      <img id="figureModalImage" alt="正文原图">
+      <p id="figureModalCaption" class="figure-modal-caption"></p>
+      <a id="figureModalLink" class="figure-modal-link" target="_blank" rel="noreferrer">打开论文提供的原图</a>
+    </div>
+  </div>
 <p class="footer">原图由论文开放全文中的 Figure 直链提供，不进行截图或裁剪。网页只发布 EasyScholar 已确认属于 SCI/JCR 1 区、且同时具备正文、正文图和图注的文章；未满足条件的候选不会混入文章目录。科学解读仍建议在正式使用前核对原文。</p>
 </main>
 <script>
@@ -111,22 +139,73 @@ const methodFlow = value => {
 function card(record, index){
   const article = record.article || {};
   const title = article.title_zh || record.title;
-  return `<article class="card" data-index="${index}"><span class="tag">${esc(record.article_type || '自动筛选')}</span><h2>${esc(title)}</h2><div class="meta"><b>作者：</b>${esc((record.authors || []).join('、') || '作者信息待查')}<br><b>期刊：</b>${esc(metric(record))} · ${esc(record.year || '')}</div><div class="summary">${esc(article.lead || '已获取正文和原图，等待阅读稿更新。')}</div><div class="meta">正文图 ${record.figures?.length || 0} 张 · DOI ${esc(record.doi || '待查')}</div></article>`;
+  const figureCount = record.figures?.length || 0;
+  return `<article class="card" data-index="${index}"><span class="tag">${esc(record.article_type || '自动筛选')}</span><h2>${esc(title)}</h2><div class="meta"><b>作者：</b>${esc((record.authors || []).join('、') || '作者信息待查')}<br><b>期刊：</b>${esc(metric(record))} · ${esc(record.year || '')}</div><div class="summary">${esc(article.lead || '已获取正文和原图，等待阅读稿更新。')}</div><div class="meta">正文图 ${figureCount} 张 · DOI ${esc(record.doi || '待查')}</div><div class="card-actions"><button type="button" data-card-figures>查看正文原图（${figureCount} 张）</button><span>点击卡片阅读全文</span></div></article>`;
 }
 function figureBlock(record, note, index){
   const figure = (record.figures || [])[index] || {};
-  const source = figure.image_url || figure.original_url || figure.url || '';
+  const sourceRaw = figure.image_url || figure.original_url || figure.url || '';
+  const source = sourceRaw.replace('https://www.ncbi.nlm.nih.gov/pmc/articles/', 'https://pmc.ncbi.nlm.nih.gov/articles/');
   const altSource = source.includes('www.ncbi.nlm.nih.gov/pmc/articles/') ? source.replace('www.ncbi.nlm.nih.gov/pmc/articles/', 'pmc.ncbi.nlm.nih.gov/articles/') : source.includes('pmc.ncbi.nlm.nih.gov/articles/') ? source.replace('pmc.ncbi.nlm.nih.gov/articles/', 'www.ncbi.nlm.nih.gov/pmc/articles/') : '';
   const europeSource = source.match(/\/pmc\/articles\/(PMC[^/]+)\/bin\/(.+)$/i) ? `https://europepmc.org/articles/${source.match(/\/pmc\/articles\/(PMC[^/]+)\/bin\/(.+)$/i)[1]}/bin/${source.match(/\/pmc\/articles\/(PMC[^/]+)\/bin\/(.+)$/i)[2]}` : '';
   const fallback = altSource ? ` data-alt-src="${esc(altSource)}"${europeSource ? ` data-alt-src2="${esc(europeSource)}"` : ''}` : (europeSource ? ` data-alt-src="${esc(europeSource)}"` : '');
   const image = source ? `<img src="${esc(source)}" alt="${esc(figure.label || `Figure ${index + 1}`)}" referrerpolicy="no-referrer" loading="lazy" decoding="async"${fallback} onerror="figureImageFallback(this)">` : '<div class="image-missing">未找到正文原图地址。请查看运行报告中的质量门禁原因。</div>';
   const sourceLink = source ? `<a class="figure-source" href="${esc(source)}" target="_blank" rel="noreferrer">打开论文提供的原图</a>` : '';
-  return `<figure class="figure${source ? '' : ' image-missing'}">${image}<figcaption class="caption"><b>${esc(figure.label || `Figure ${index + 1}`)} 原文图注：</b>${esc(figure.caption || '原文未提供可提取图注')} ${sourceLink}</figcaption><h3>${esc(note?.label || figure.label || `图 ${index + 1}`)}</h3><div class="caption"><b>图注中文解读：</b>${esc(note?.caption_zh || '图注翻译待更新')}</div><p class="interpretation"><b>怎么读：</b>${esc(note?.interpretation || '图组解读待更新')}</p></figure>`;
+  const modalCaption = `原文图注：${figure.caption || '原文未提供可提取图注'}\n\n中文图注解读：${note?.caption_zh || '图注翻译待更新'}`;
+  const openButton = source ? `<button type="button" class="figure-open" data-figure-open data-image="${esc(source)}" data-label="${esc(note?.label || figure.label || `图 ${index + 1}`)}" data-caption="${esc(modalCaption)}">放大查看原图</button>` : '';
+  return `<figure id="figure-${index + 1}" class="figure${source ? '' : ' image-missing'}">${image}<figcaption class="caption"><b>${esc(figure.label || `Figure ${index + 1}`)} 原文图注：</b>${esc(figure.caption || '原文未提供可提取图注')} ${sourceLink}<br>${openButton}</figcaption><h3>${esc(note?.label || figure.label || `图 ${index + 1}`)}</h3><div class="caption"><b>图注中文解读：</b>${esc(note?.caption_zh || '图注翻译待更新')}</div><p class="interpretation"><b>怎么读：</b>${esc(note?.interpretation || '图组解读待更新')}</p></figure>`;
 }
 function figureImageFallback(image){
   const alternate = image.dataset.altSrc;
   if(alternate && image.src !== alternate){ image.dataset.altSrc = image.dataset.altSrc2 || ''; image.dataset.altSrc2 = ''; image.src = alternate; return; }
   image.closest('.figure')?.classList.add('image-missing');
+}
+const figureModal = document.querySelector('#figureModal');
+const figureModalImage = document.querySelector('#figureModalImage');
+const figureModalTitle = document.querySelector('#figureModalTitle');
+const figureModalCaption = document.querySelector('#figureModalCaption');
+const figureModalLink = document.querySelector('#figureModalLink');
+function openFigureModal(imageUrl, label, caption){
+  if(!figureModal || !imageUrl) return;
+  figureModalImage.src = imageUrl;
+  figureModalImage.alt = label || '正文原图';
+  figureModalTitle.textContent = label || '正文原图';
+  figureModalCaption.textContent = caption || '';
+  figureModalLink.href = imageUrl;
+  figureModal.hidden = false;
+  figureModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+}
+function closeFigureModal(){
+  if(!figureModal) return;
+  figureModal.hidden = true;
+  figureModal.setAttribute('aria-hidden', 'true');
+  figureModalImage.removeAttribute('src');
+  document.body.classList.remove('modal-open');
+}
+reader.addEventListener('click', event => {
+  const openButton = event.target.closest('[data-figure-open]');
+  if(openButton){
+    const figure = openButton.closest('.figure');
+    const currentImage = figure?.querySelector('img')?.currentSrc || openButton.dataset.image;
+    openFigureModal(currentImage, openButton.dataset.label, openButton.dataset.caption);
+    return;
+  }
+  const jumpButton = event.target.closest('[data-jump-figures]');
+  if(jumpButton){
+    event.preventDefault();
+    document.querySelector('#article-figures')?.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+});
+document.addEventListener('click', event => { if(event.target.closest('[data-close-figure]')) closeFigureModal(); });
+document.addEventListener('keydown', event => { if(event.key === 'Escape') closeFigureModal(); });
+function showRecord(record, jumpToFigures=false){
+  reader.innerHTML = articleView(record);
+  list.hidden = true;
+  reader.classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+  document.querySelector('#back').addEventListener('click', () => { closeFigureModal(); reader.classList.remove('active'); list.hidden = false; window.scrollTo({top:0, behavior:'smooth'}); });
+  if(jumpToFigures) window.setTimeout(() => document.querySelector('#article-figures')?.scrollIntoView({behavior:'smooth', block:'start'}), 80);
 }
 function articleView(record){
   const article = record.article || {};
@@ -137,7 +216,8 @@ function articleView(record){
   const highlights = Array.isArray(article.takeaways) ? article.takeaways : sentenceParts(article.takeaways);
   const highlightSection = highlights.length ? `<section class="section core-highlights"><h2>这篇文章最重要的结论</h2><ul>${highlights.map(item => `<li>${esc(typeof item === 'string' ? item : (item?.text || item?.content || JSON.stringify(item)))}</li>`).join('')}</ul></section>` : '';
   const info = `<section class="section paper-info"><h2>文章信息</h2><dl class="info-list"><dt>英文题目</dt><dd>${esc(record.title || '待查')}</dd><dt>作者</dt><dd>${esc((record.authors || []).join('、') || '作者信息待查')}</dd><dt>期刊</dt><dd>${esc(metric(record))} · ${esc(record.year || '')}</dd><dt>文章类型</dt><dd>${esc(record.article_type || '研究论文')}</dd><dt>正文原图</dt><dd>${record.figures?.length || 0} 张；使用论文提供的原图直链，不截图、不裁剪</dd><dt>DOI</dt><dd>${record.doi ? `<a href="https://doi.org/${esc(record.doi)}" target="_blank" rel="noreferrer">${esc(record.doi)}</a>` : '待查'}</dd></dl></section>`;
-  return `<button class="back" id="back">← 返回文章目录</button><div class="article-paper"><h1>${esc(article.title_zh || record.title)}</h1><div class="byline"><span>作者：${esc((record.authors || []).join('、') || '作者信息待查')}</span><span class="journal">期刊：${esc(metric(record))} · ${esc(record.year || '')}</span><span>DOI：${esc(record.doi || '待查')}</span></div><div class="article-body">${info}<section class="section intro"><h2>文章简介</h2>${textBlocks(article.lead)}</section><section class="section"><h2>背景与作者要解决的问题</h2>${textBlocks(article.background)}${textBlocks(article.research_question)}</section>${highlightSection}<section class="section"><h2>研究设计</h2>${textBlocks(article.study_design)}${workflow(article.study_design)}</section><section class="section"><h2>正文方法（完整中文翻译与适当缩写）</h2>${methodFlow(article.methods)}<div class="method-full">${textBlocks(article.methods)}</div></section><section class="section"><h2>结果解析（按正文逻辑）</h2><div class="result-lead">${textBlocks(article.results)}</div></section><section class="section"><h2>正文原图与逐图解读</h2>${figures || '<p>没有通过质量门禁的正文原图。</p>'}</section>${supplementSection}<section class="section"><h2>局限与边界</h2>${textBlocks(article.limitations)}</section><section class="section"><h2>对研究设计的启发</h2>${textBlocks(article.takeaways)}</section></div><p class="source">来源：${esc(record.source || 'Europe PMC')} · 正文状态：${esc(record.fulltext_ok ? '已提取' : '待核对')} · 指标状态：${esc(record.metrics?.status || '待查')} · JCR/SCI 1 区门禁：${record.metrics?.jcr_q1 ? '通过' : '待核对'}</p></div>`;
+  const figureJump = figures ? `<div class="article-tools"><button type="button" data-jump-figures>查看正文原图（${record.figures.length} 张）</button><span class="status">图片来自论文正文 Figure 原图，不截图、不裁剪；点击每张图下方按钮可放大查看。</span></div>` : '';
+  return `<button class="back" id="back">← 返回文章目录</button><div class="article-paper"><h1>${esc(article.title_zh || record.title)}</h1><div class="byline"><span>作者：${esc((record.authors || []).join('、') || '作者信息待查')}</span><span class="journal">期刊：${esc(metric(record))} · ${esc(record.year || '')}</span><span>DOI：${esc(record.doi || '待查')}</span></div><div class="article-body">${info}${figureJump}<section class="section intro"><h2>文章简介</h2>${textBlocks(article.lead)}</section><section class="section"><h2>背景与作者要解决的问题</h2>${textBlocks(article.background)}${textBlocks(article.research_question)}</section>${highlightSection}<section class="section"><h2>研究设计</h2>${textBlocks(article.study_design)}${workflow(article.study_design)}</section><section class="section"><h2>正文方法（完整中文翻译与适当缩写）</h2>${methodFlow(article.methods)}<div class="method-full">${textBlocks(article.methods)}</div></section><section class="section"><h2>结果解析（按正文逻辑）</h2><div class="result-lead">${textBlocks(article.results)}</div></section><section id="article-figures" class="section"><h2>正文原图与逐图解读</h2>${figures || '<p>没有通过质量门禁的正文原图。</p>'}</section>${supplementSection}<section class="section"><h2>局限与边界</h2>${textBlocks(article.limitations)}</section><section class="section"><h2>对研究设计的启发</h2>${textBlocks(article.takeaways)}</section></div><p class="source">来源：${esc(record.source || 'Europe PMC')} · 正文状态：${esc(record.fulltext_ok ? '已提取' : '待核对')} · 指标状态：${esc(record.metrics?.status || '待查')} · JCR/SCI 1 区门禁：${record.metrics?.jcr_q1 ? '通过' : '待核对'}</p></div>`;
 }
 async function load(){
   try{
@@ -148,7 +228,7 @@ async function load(){
     statusNode.textContent = `${records.length} 篇已通过质量门禁 · 最近更新 ${payload.generated_at || '尚无记录'}`;
     if(!records.length){ list.innerHTML = '<div class="empty">当前还没有自动发布的文章。首次运行需要配置 LLM API，并且候选必须同时有正文、正文图和图注；不完整候选会留在运行报告中，不会混入网页。</div>'; return; }
     list.innerHTML = records.map(card).join('');
-    list.querySelectorAll('.card').forEach(node => node.addEventListener('click', () => { const record = records[Number(node.dataset.index)]; reader.innerHTML = articleView(record); list.hidden = true; reader.classList.add('active'); window.scrollTo({top:0, behavior:'smooth'}); document.querySelector('#back').addEventListener('click', () => { reader.classList.remove('active'); list.hidden = false; window.scrollTo({top:0, behavior:'smooth'}); }); }));
+    list.querySelectorAll('.card').forEach(node => node.addEventListener('click', event => { const record = records[Number(node.dataset.index)]; showRecord(record, Boolean(event.target.closest('[data-card-figures]'))); }));
   }catch(error){ statusNode.innerHTML = `<span class="error">自动更新数据暂时无法读取：${esc(error.message)}。请通过 GitHub Pages 或本地 HTTP 服务打开。</span>`; list.innerHTML = '<div class="empty">如果直接双击本地 HTML，浏览器可能阻止读取 JSON；可在项目目录运行 <code>python3 -m http.server</code> 后打开。</div>'; }
 }
 load();

@@ -364,7 +364,9 @@ def fetch_pmc_xml(pmcid: str, *, prefer_ncbi: bool = False) -> str:
 def figure_url(pmcid: str, href: str) -> str:
     if href.startswith("http://") or href.startswith("https://"):
         return href
-    return f"https://www.ncbi.nlm.nih.gov/pmc/articles/{urllib.parse.quote(pmcid)}/bin/{urllib.parse.quote(href)}"
+    # The current PMC site serves figure binaries from this canonical host;
+    # the frontend still retains old/new host fallbacks for existing records.
+    return f"https://pmc.ncbi.nlm.nih.gov/articles/{urllib.parse.quote(pmcid)}/bin/{urllib.parse.quote(href)}"
 
 
 def extract_fulltext(xml_text: str, pmcid: str) -> tuple[str, str, str, list[dict[str, str]], list[dict[str, str]]]:
