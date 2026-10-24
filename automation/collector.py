@@ -25,6 +25,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -43,6 +44,7 @@ DEFAULT_QUERY = (
 )
 EUROPE_PMC_SEARCH = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
 EASYSCHOLAR_URL = "https://www.easyscholar.cc/open/getPublicationRank"
+TRANSIENT_HTTP_STATUS = {408, 425, 429, 500, 502, 503, 504}
 
 
 def utc_now() -> str:
@@ -147,17 +149,42 @@ def score_candidate(record: Mapping[str, Any]) -> tuple[int, list[str]]:
     return min(score, 100), evidence
 
 
+def _http_read(request: urllib.request.Request, *, timeout: int, max_bytes: int) -> bytes:
+    """Read a bounded response, retrying transient upstream failures."""
+    last_error: Optional[BaseException] = None
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                return response.read(max_bytes)
+        except urllib.error.HTTPError as exc:
+            last_error = exc
+            if exc.code not in TRANSIENT_HTTP_STATUS or attempt == 3:
+                raise
+            retry_after = clean_text(exc.headers.get("Retry-After")) if exc.headers else ""
+            try:
+                delay = max(1, min(30, int(retry_after))) if retry_after else 2 ** attempt
+            except ValueError:
+                delay = 2 ** attempt
+            time.sleep(delay)
+        except (urllib.error.URLError, TimeoutError) as exc:
+            last_error = exc
+            if attempt == 3:
+                raise
+            time.sleep(2 ** attempt)
+    if last_error:
+        raise last_error
+    raise RuntimeError("HTTP request ended without a response")
+
+
 def http_json(url: str, *, timeout: int = 30, headers: Optional[Mapping[str, str]] = None) -> Any:
     request = urllib.request.Request(url, headers={"User-Agent": "paper-plot-library/1.0", **(headers or {})})
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        payload = response.read(8 * 1024 * 1024)
+    payload = _http_read(request, timeout=timeout, max_bytes=8 * 1024 * 1024)
     return json.loads(payload.decode("utf-8"))
 
 
 def http_text(url: str, *, timeout: int = 40) -> str:
     request = urllib.request.Request(url, headers={"User-Agent": "paper-plot-library/1.0", "Accept": "application/xml,text/xml,text/plain"})
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        return response.read(20 * 1024 * 1024).decode("utf-8", errors="replace")
+    return _http_read(request, timeout=timeout, max_bytes=20 * 1024 * 1024).decode("utf-8", errors="replace")
 
 
 def search_europe_pmc(query: str, *, page_size: int = 40, fixture: Optional[Path] = None) -> list[dict[str, Any]]:
