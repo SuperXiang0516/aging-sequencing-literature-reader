@@ -1,6 +1,33 @@
 {
   "schema_version": 1,
   "records": {},
-  "attempted": {},
-  "metrics_cache": {}
+  "attempted": {
+    "doi:10.1038/nature05414": {
+      "status": "discarded",
+      "attempts": 1,
+      "updated_at": "2026-10-24T07:14:59Z",
+      "gate_reasons": [
+        "正文全文未成功提取",
+        "没有可追溯的正文原图",
+        "正文 Methods 未提取",
+        "正文 Results 未提取"
+      ]
+    }
+  },
+  "metrics_cache": {
+    "nature": {
+      "impact_factor": "56.1",
+      "jcr": "SCI Q1",
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-24T07:14:59Z"
+    }
+  },
+  "updated_at": "2026-10-24T07:15:06Z",
+  "last_run": {
+    "selected": 1,
+    "published": 0,
+    "candidates": 5,
+    "finished_at": "2026-10-24T07:15:06Z"
+  }
 }
