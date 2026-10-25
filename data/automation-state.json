@@ -641,18 +641,18 @@
       "retrieved_at": "2026-10-25T06:33:13Z"
     }
   },
-  "updated_at": "2026-10-25T06:33:13Z",
+  "updated_at": "2026-10-25T06:50:35Z",
   "last_run": {
     "status": "success",
     "selected": 0,
     "published": 0,
     "candidates": 0,
-    "scope_rejected": 4,
-    "q1_rejected": 1,
+    "scope_rejected": 0,
+    "q1_rejected": 0,
     "skipped_without_pmcid": 0,
     "search_error": "",
     "preserved_articles": 0,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-10-25T06:33:13Z"
+    "finished_at": "2026-10-25T06:50:35Z"
   }
 }
