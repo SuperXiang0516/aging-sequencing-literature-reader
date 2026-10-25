@@ -1,177 +1,35 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-25T02:24:51Z",
+  "generated_at": "2026-10-25T06:16:58Z",
   "last_run": {
     "status": "success",
-    "selected": 2,
+    "selected": 3,
     "published": 0,
-    "candidates": 2,
+    "candidates": 3,
     "skipped_without_pmcid": 0,
     "search_error": "",
     "preserved_articles": 0,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-10-25T02:24:51Z"
+    "finished_at": "2026-10-25T06:16:58Z"
   },
   "processed": [
     {
-      "id": "doi:10.1016/j.cell.2013.05.039",
-      "title": "The hallmarks of aging.",
+      "id": "doi:10.1038/nature11234",
+      "title": "Structure, function and diversity of the healthy human microbiome.",
       "authors": [
-        "López-Otín C",
-        "Blasco MA",
-        "Partridge L",
-        "Serrano M",
-        "Kroemer G"
+        "Human Microbiome Project Consortium."
       ],
-      "journal": "Cell",
-      "year": "2013",
-      "doi": "10.1016/j.cell.2013.05.039",
-      "pmcid": "PMC3836174",
-      "pmid": "23746838",
-      "citation_count": 12416,
+      "journal": "Nature",
+      "year": "2012",
+      "doi": "10.1038/nature11234",
+      "pmcid": "PMC3564958",
+      "pmid": "22699609",
+      "citation_count": 8793,
       "fulltext_urls": [
-        "https://doi.org/10.1016/j.cell.2013.05.039",
-        "https://europepmc.org/articles/PMC3836174",
-        "https://europepmc.org/articles/PMC3836174?pdf=render",
-        "https://doi.org/10.1016/j.cell.2013.05.039"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 16,
-      "relevance_evidence": [
-        "aging: aging, senescence",
-        "disease_bridge: diabetes, cardiovascular"
-      ],
-      "figures": [
-        {
-          "label": "Figure 1",
-          "caption": "The Hallmarks of Aging The scheme enumerates the nine hallmarks described in this review: genomic instability, telomere attrition, epigenetic alterations, loss of proteostasis, deregulated nutrient-sensing, mitochondrial dysfunction, cellular senescence, stem cell exhaustion, and altered intercellular communication.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0001.jpg",
-          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0001.jpg",
-          "asset_status": "error",
-          "asset_error": "HTTPError"
-        },
-        {
-          "label": "Figure 2",
-          "caption": "Genomic and Epigenomic Alterations A) Genomic instability and telomere attrition. Endogenous or exogenous agents can stimulate a variety of DNA lesions that are schematically represented on one single chromosome. Such lesions can by repaired by a variety of mechanisms. Excessive DNA damage or insufficient DNA repair favors the aging process. Note that both nuclear DNA and mitochondrial DNA (not represented here) are subjected to age-associated genomic alterations. BER, base excision repair; HR, homologous recombination; NER, nucleotide excision repair; NHEJ, non-homologous end joining; MMR, mismatch repair; ROS, reactive oxygen species; TLS, translesion synthesis; SAC, spindle assembly checkpoint. B) Epigenetic alterations . Alterations in the acetylation and methylation of DNA or histones, as well as of other chromatin-associated proteins, can induce epigenetic changes that contribute to the aging process.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0002.jpg",
-          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0002.jpg",
-          "asset_status": "error",
-          "asset_error": "HTTPError"
-        },
-        {
-          "label": "Figure 3",
-          "caption": "Loss of Proteostasis Endogenous and exogenous stress causes the unfolding of proteins (or impairs proper folding during protein synthesis). Unfolded proteins are usually refolded by heat-shock proteins (HSP) or targeted to destruction by the ubiquitin-proteasome or lysosomal (autophagic) pathways. The autophagic pathways include recognition of unfolded proteins by the chaperone Hsc70 and their subsequent import into lysosomes (chaperone-mediated autophagy) or sequestration of damaged proteins and organelles in autophagosomes that later fuse with lysosomes (macroautophagy). Failure to refold or degrade unfolded proteins can lead to their accumulation and aggregation, resulting in proteotoxic effects.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0004.jpg",
-          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0004.jpg",
-          "asset_status": "error",
-          "asset_error": "HTTPError"
-        },
-        {
-          "label": "Figure 4",
-          "caption": "Metabolic Alterations A) Deregulated nutrient-sensing. Overview of the somatroph axis involving growth hormone (GH) and the insulin/insulin growth factor 1 (IGF-1) signaling pathway, and its relationship to dietary restriction and aging. Molecules that favor aging are shown in orange, while molecules with anti-aging properties are shown in light green. B) Mitochondrial dysfunction. Mitochondrial function becomes perturbed by aging-associated mtDNA mutations, reduced mitochondriogenesis, destabilization of the electron transport chain (ETC) complexes, altered mitochondrial dynamics or defective quality control by mitophagy. Stress signals and defective mitochondrial function generate ROS that, below a certain threshold, induce survival signals to restore cellular homeostasis, but at higher or continued levels can contribute to aging. Similarly, mild mitochondrial damage can induce a hormetic response (mitohormesis) that triggers adaptive compensatory processes.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0005.jpg",
-          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0005.jpg",
-          "asset_status": "error",
-          "asset_error": "HTTPError"
-        },
-        {
-          "label": "Figure 5",
-          "caption": "Cellular Senescence, Stem Cell Exhaustion and Altered Intercellular Communication A) Cellular senescence. In young organisms, cellular senescence prevents the proliferation of damaged cells, thus protecting from cancer and contributing to tissue homeostasis. In old organisms, the pervasive damage and the deficient clearance and replenishment of senescent cells results in their accumulation, and this has a number of deleterious effects on tissue homeostasis that contribute to aging. B) Stem cell exhaustion . Consequences of the exhaustion of hematopoietic stem cells (HSCs), mesenchymal stem cells (MSCs), satellite cells and intestinal epithelial stem cells (IESCs) are exemplified. C) Altered intercellular communication. Examples of altered intercellular communication associated with aging.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0007.jpg",
-          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0007.jpg",
-          "asset_status": "error",
-          "asset_error": "HTTPError"
-        },
-        {
-          "label": "Figure 6",
-          "caption": "Functional Interconnections between the Hallmarks of Aging The proposed nine hallmarks of aging are grouped into three categories. In the top, those hallmarks considered to be the primary causes of cellular damage. In the middle, those considered to be part of compensatory or antagonistic responses to the damage. These responses initially mitigate the damage, but eventually, if chronic or exacerbated, they become deleterious themselves. In the bottom, there are integrative hallmarks that are the end result of the previous two groups of hallmarks and are ultimately responsible for the functional decline associated with aging.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0009.jpg",
-          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0009.jpg",
-          "asset_status": "error",
-          "asset_error": "HTTPError"
-        },
-        {
-          "label": "Figure 7",
-          "caption": "Interventions that Might Extend Human Healthspan The nine hallmarks of aging are shown together with those therapeutic strategies for which there are proof of principle in mice.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0010.jpg",
-          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0010.jpg",
-          "asset_status": "error",
-          "asset_error": "HTTPError"
-        }
-      ],
-      "supplements": [],
-      "fulltext_ok": true,
-      "asset_errors": [
-        "fig-01:HTTPError",
-        "fig-02:HTTPError",
-        "fig-03:HTTPError",
-        "fig-04:HTTPError",
-        "fig-05:HTTPError",
-        "fig-06:HTTPError",
-        "fig-07:HTTPError"
-      ],
-      "assets_required": true,
-      "metrics": {
-        "impact_factor": "45.1",
-        "jcr": "SCI Q1",
-        "jcr_quartile": "Q1",
-        "jcr_q1": true,
-        "status": "matched",
-        "source": "EasyScholar",
-        "retrieved_at": "2026-10-24T13:20:42Z"
-      },
-      "journal_display": "Cell（IF 45.1；JCR SCI Q1）",
-      "updated_at": "2026-10-25T02:24:48Z",
-      "ai_status": "skipped_no_retrievable_fulltext_or_assets",
-      "publishable": false,
-      "gate_reasons": [
-        "存在未成功缓存到网站的正文原图",
-        "正文 Methods 未提取",
-        "AI 字段缺失：title_zh",
-        "AI 字段缺失：lead",
-        "AI 字段缺失：background",
-        "AI 字段缺失：research_question",
-        "AI 字段缺失：study_design",
-        "AI 字段缺失：methods",
-        "AI 字段缺失：results",
-        "AI 字段缺失：limitations",
-        "AI 字段缺失：takeaways",
-        "AI 字段缺失：figure_notes",
-        "AI 内容过短：lead",
-        "AI 内容过短：background",
-        "AI 内容过短：research_question",
-        "AI 内容过短：study_design",
-        "AI 内容过短：methods",
-        "AI 内容过短：results",
-        "AI 内容过短：limitations",
-        "AI 内容过短：takeaways",
-        "AI 图组解读不是数组"
-      ],
-      "status": "discarded"
-    },
-    {
-      "id": "doi:10.1186/gb-2011-12-6-r60",
-      "title": "Metagenomic biomarker discovery and explanation.",
-      "authors": [
-        "Segata N",
-        "Izard J",
-        "Waldron L",
-        "Gevers D",
-        "Miropolsky L",
-        "Garrett WS",
-        "Huttenhower C"
-      ],
-      "journal": "Genome biology",
-      "year": "2011",
-      "doi": "10.1186/gb-2011-12-6-r60",
-      "pmcid": "PMC3218848",
-      "pmid": "21702898",
-      "citation_count": 12298,
-      "fulltext_urls": [
-        "https://genomebiology.biomedcentral.com/counter/pdf/10.1186/gb-2011-12-6-r60",
-        "https://doi.org/10.1186/gb-2011-12-6-r60",
-        "https://europepmc.org/articles/PMC3218848",
-        "https://europepmc.org/articles/PMC3218848?pdf=render"
+        "https://escholarship.org/uc/item/0126f84t",
+        "https://doi.org/10.1038/nature11234",
+        "https://europepmc.org/articles/PMC3564958",
+        "https://europepmc.org/articles/PMC3564958?pdf=render"
       ],
       "source": "Europe PMC",
       "relevance_score": 12,
@@ -181,180 +39,112 @@
       "figures": [
         {
           "label": "Figure 1",
-          "caption": "LEfSe mines a wide range of high-throughput genetic data to find biologically relevant features characterizing one or more experimental conditions . The inputs to the system are the specifications of the biological hypothesis under investigation (conditions and inter-condition sample groupings), the high-dimensional data obtained experimentally, and, optionally, prior knowledge from literature or databases used to define known relationships between features (used for meaningful hierarchical organization of the discovered biomarkers) or samples (used for testing biological consistency of potential biomarkers). LEfSe is a three-step algorithm (detailed in Figure 6). (a) LEfSe first provides the list of features that are differential among conditions of interest with statistical and biological significance, ranking them according to the effect size. (b) For problems with known hierarchical structure, either phylogenetic or functional, we then provide a mapping of the differences to taxonomic or functional trees. (c) Finally, the system produces a histogram visualizing the raw data within the specified problem structure for each relevant feature. While LEfSe has been developed primarily for metagenomic data containing taxon or gene abundances, it can be used for biomarker discovery in any setting where prior biological knowledge regarding the structure of a comparison is coupled with statistically significant differences in high-dimensional genomic features. KEGG, Kyoto Encyclopedia of Genes and Genomes; WGS, whole genome shotgun.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-1.jpg",
-          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-1.jpg",
-          "asset_status": "error",
-          "asset_error": "HTTPError"
+          "caption": "Diversity of the human microbiome is concordant among measures, unique to each individual, and strongly determined by microbial habitat A) Alpha diversity within subjects by body habitat, as measured using the relative inverse Simpson index of 16S rRNA gene OTUs (red), genus-level phylotypes (blue), shotgun metagenomic reads matched to reference genomes (green), functional modules (yellow), and enzyme families (white). The mouth generally shows high within-subject diversity and the vagina low diversity, with other habitats intermediate; variation among individuals often exceeds variation among body habitats. B) Bray-Curtis beta diversity among subjects by body habitat, colors as for A. Skin differs most between subjects, with oral habitats and vaginal genera more stable. Although alpha- and beta-diversity are not directly comparable, changes in structure among communities (A) occupy a wider dynamic range than do changes within communities among individuals (B). C) Principal coordinates plot showing variation among samples demonstrates that primary clustering is by body area, with the oral, gastrointestinal, skin, and urogenital habitats separate; the nares bridge oral and skin habitats. D) Repeated samples from the same subject (red) are more similar than microbiomes from different subjects (yellow). Technical replicates (green) are in turn more similar; these patterns are consistent for all body habitats and for both phylogenetic and metabolic community composition. See previously described sample counts 1 for all comparisons.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3564958.1/nihms378076f1.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3564958.1/nihms378076f1.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3564958.1/nihms378076f1.jpg",
+          "local_url": "generated/assets/PMC3564958/fig-01.jpg",
+          "asset_path": "generated/assets/PMC3564958/fig-01.jpg",
+          "asset_bytes": 101870,
+          "asset_sha256": "b80f912fdc15213e2185eb452d6aa01a3a50ff87a3300eb6dd9539db4cfb10eb",
+          "asset_status": "downloaded",
+          "asset_error": ""
         },
         {
           "label": "Figure 2",
-          "caption": "LEfSe results on human microbiomes . (a-c) Mucosal body site analysis. Mucosal microbial communities are diverse, while non-mucosal body sites are characterized by several clades, including the Actinobacteria. The analysis reported here is carried out on initial data from the Human Microbiome Project [ 55 , 56 ] assigning the main body sites to mucosal and non-mucosal classes, and using the body sites as subclasses. These graphical outputs were generated by the publicly available LEfSe visualization modules applied on the analysis results and integrating microbial taxonomic prior knowledge [ 58 ]. (a) Histogram of the LDA scores computed for features differentially abundant between mucosal and non-mucosal body sites. LEfSe scores can be interpreted as the degree of consistent difference in relative abundance between features in the two classes of analyzed microbial communities. The histogram thus identifies which clades among all those detected as statistically and biologically differential explain the greatest differences between communities. (b) Taxonomic representation of statistically and biologically consistent differences between mucosal and non-mucosal body sites. Differences are represented in the color of the most abundant class (red indicating non-mucosal, yellow non-significant). Each circle's diameter is proportional to the taxon's abundance. This representation, here employing the Ribosomal Database Project (RDP) taxonomy [ 58 ], simultaneously highlights high-level trends and specific genera - for example, multiple differentially abundant sibling taxa consistent with the variation of the parent clade. (c) Histogram of the Actinomycetales relative abundances (in the 0[ 1 ] interval) in mucosal and non-mucosal body sites. Subclasses (specific body sites) are differentially colored and the mean and median relative abundance of the Actinomycetales are indicated with solid and dashed lines, respectively. (d,e) Aerobiosis analysis. The cladograms report the taxa (highlighted by small circles and by shading) showing different abundance values (according to LEfSe) in the three O 2 -dependent classes as described in Results; for each taxon, the color denotes the class with higher median for both the small circles and the shading. (d) The strict (all classes differential) version of LEfSe detects 13 biomarkers whereas (e) the non-strict (at least one class differential) version of LEfSe detects 60 microbial biomarkers with abundance differential under aerobic, anaerobic, or microaerobic conditions. Additional file 2 reports the non-strict version of LEfSe focused on the Firmicutes phylum, highlighting several low-O 2 specific genera within Ruminococcaceae and Lachnospiraceae.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-2.jpg",
-          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-2.jpg",
-          "asset_status": "error",
-          "asset_error": "HTTPError"
+          "caption": "Carriage of microbial taxa varies while metabolic pathways remain stable within a healthy population Vertical bars represent microbiome samples by body habitat in the seven locations with both shotgun and 16S data; bars indicate relative abundances colored by A) microbial phyla from binned OTUs and B) metabolic modules. Legend indicates most abundant phyla/pathways by average within one or more body habitats; RC = retroauricular crease. A plurality of most communities’ memberships consists of a single dominant phylum (and often genus; see Supp. Fig. 2 ), but this is universal neither to all body habitats nor to all individuals. Conversely, most metabolic pathways are evenly distributed and prevalent across both individuals and body habitats.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3564958.1/nihms378076f2.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3564958.1/nihms378076f2.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3564958.1/nihms378076f2.jpg",
+          "local_url": "generated/assets/PMC3564958/fig-02.jpg",
+          "asset_path": "generated/assets/PMC3564958/fig-02.jpg",
+          "asset_bytes": 61882,
+          "asset_sha256": "0b1bfbf3946ef4eb652f40eb1fa46398fa3ca15c5ab356da9becfbb2c0997dbc",
+          "asset_status": "downloaded",
+          "asset_error": ""
         },
         {
           "label": "Figure 3",
-          "caption": "Comparison between Rag2 -/- (control) and T-bet -/- × Rag2 -/- (case) mice highlighting that, at the phylum level, Firmicutes are enriched in T-bet -/- × Rag2 -/- mice, whereas Actinobacteria are enriched in Rag2 -/- mice . In agreement with previous culture-based studies, Bifidobacterium species are underabundant in T-bet -/- × Rag2 -/- mice [ 68 ], and LEfSe highlights several additional genus-level clades, including the specifically depleted Roseburia and Papillibacter within the otherwise overabundant Firmicutes.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-3.jpg",
-          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-3.jpg",
-          "asset_status": "error",
-          "asset_error": "HTTPError"
+          "caption": "Abundant taxa in the human microbiome, which has been metagenomically and taxonomically well-defined in the HMP population A–C) Prevalence (intensity, color denoting phylum/class) and abundance when present (size) of clades in the healthy microbiome. The most abundant A) metagenomically-identified species, B) 16S-identified genera, and C) PATRIC 14 “pathogens” (metagenomic). The population size and sequencing depths of the HMP have well-defined the microbiome at all assayed body sites, as assessed by saturation of added community D) metabolic configurations (rarefaction of minimum Bray-Curtis β-diversity of metagenomic EC abundances to nearest neighbor, inter-quartile range over 100 samples) and E) phylogenetic configurations (min. 16S OTU weighted UniFrac distance to nearest neighbor).",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3564958.1/nihms378076f3.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3564958.1/nihms378076f3.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3564958.1/nihms378076f3.jpg",
+          "local_url": "generated/assets/PMC3564958/fig-03.jpg",
+          "asset_path": "generated/assets/PMC3564958/fig-03.jpg",
+          "asset_bytes": 101582,
+          "asset_sha256": "9fdc79382ab0e7be597ff2b1f93ffe414e7e0dae0be8402e3f8f7109c76fd2d8",
+          "asset_status": "downloaded",
+          "asset_error": ""
         },
         {
           "label": "Figure 4",
-          "caption": "LEfSe highlights pathways consistently differential between bacterial microbiomes and viromes within diverse environmental subclasses . (a) Using the SEED [ 71 ] catalog of functional pathways, LEfSe reports Nucleoside and nucleotide metabolism and Respiration to differ consistently between bacterial microbiomes and viromes across environmental samples described in [ 70 ]. The former is significant using the strictest all-subclasses test, the latter in the more lenient one-subclass test. (b) A two-level cladogram reporting the significant pathway differences as visualized using the SEED hierarchy (see Additional file 3 for the three-level cladogram and detailed differences). (c) Metastats [ 45 ] reports four additional pathways differential among these data (Carbohydrates, DNA metabolism, Membrane transport and Nitrogen metabolism). Using only the KW test portion of LEfSe (α = 0.05), we obtain results consonant with Metastats (excluding Nitrogen metabolism). However, as shown here, an overview of the abundance histograms of these subsystems demonstrates them to be less consistent across environments (for example, Coral and Hyper-saline subclasses in the Carbohydrates, Membrane transport and Nitrogen metabolism) and to lose significance within individual subclasses (as for the DNA metabolism subsystem).",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-4.jpg",
-          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-4.jpg",
-          "asset_status": "error",
-          "asset_error": "HTTPError"
+          "caption": "Microbial carriage varies between subjects down to the species and strain level Metagenomic reads from 127 tongue samples spanning 90 subjects were processed with MetaPhlAn to determine relative abundances for each species. A) Relative abundances of 11 distinct Streptococcus spp. In addition to variation in broader clades (see Fig. 2 ), individual species within a single habitat demonstrate a wide range of compositional variation. Inset illustrates average tongue sample composition. B) Metabolic modules present/absent (grey/white) in KEGG 28 reference genomes of tongue streptococci denote selected areas of strain-specific functional differentiation. C) Comparative genomic coverage for the single Streptococcus mitis B6 strain. Grey dots are median Reads Per Kilobase per Million reads (RPKM) for 1kb windows, gray bars are the 25th to 75th percentiles across all samples, red line the lowess smoothed average. Red bars at the bottom highlight predicted genomic islands 31 . Large, discrete, and highly variable islands are commonly under-represented. D) Two islands highlighted, V = V-type H+ ATPase subunits I,K,E,C,F,A & B, and CH = Choline binding proteins cbp6 and cbp12, indicating functional cohesion of strain-specific gene loss within individual human hosts.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3564958.1/nihms378076f4.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3564958.1/nihms378076f4.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3564958.1/nihms378076f4.jpg",
+          "local_url": "generated/assets/PMC3564958/fig-04.jpg",
+          "asset_path": "generated/assets/PMC3564958/fig-04.jpg",
+          "asset_bytes": 93762,
+          "asset_sha256": "11625a06d55d66ab156ba487ac3ee7cb3981bcd98a4f4332388d1ede7ee520c6",
+          "asset_status": "downloaded",
+          "asset_error": ""
         },
         {
           "label": "Figure 5",
-          "caption": "Comparison of LEfSe and the KW test alone for false positive and negative rates in synthetic data . Both tests used α = 0.05 in all cases, and the three artificial datasets comprise 100 samples, each in two classes, each with two subclasses of cardinality 25. The samples consist of 1,000 synthetic features taking the place of microbial taxa, pathways, and so on; half are negative (not biomarkers) and the other half positive. (a) LEfSe and KW false positive and negative rates at increasing values of the difference between class means. Negative features are normally distributed with parameters (μ = 10,000, σ = 100) across classes; positive features contain classes with increasingly different means. (b) Performance as standard deviation varies within classes (rather than the difference between means, fixed at 2,000). (c) Performance as standard deviation increases within inconsistent subclasses. Negative features have subclasses sampled from the same normal distribution (and thus not representing consistent biomarkers). Positive features are distributed as in (b). In all cases, LEfSe sacrifices a small number of false negatives in order to achieve a false positive rate near zero, with the goal of ensuring that biomarkers of large effect size will be both reproducible and biologically interpretable.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-5.jpg",
-          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-5.jpg",
-          "asset_status": "error",
-          "asset_error": "HTTPError"
-        },
-        {
-          "label": "Figure 6",
-          "caption": "Schematic representation of the statistical and computational steps implemented in LEfSe . Input data consist of a collection of m samples (columns) each made up of n numerical features (rows, typically normalized per-sample, red representing high values and green low). These samples are labeled with a class (taking two or more possible values) that represents the main biological comparison under investigation; they may also have one or more subclass labels reflecting within-class groupings. (a) Step 1 analyzes all features, testing whether values in different classes are differentially distributed. (b) Features violating the null hypothesis are further analyzed in step 2, which tests whether all pairwise comparisons between subclasses in different classes significantly agree with the class level trend. (c) The resulting subset of vectors is used to build a LDA model from which the relative difference among classes is used to rank the features. The final output thus consists of a list of features that are discriminative with respect to the classes, consistent with the subclass grouping within classes, and ranked according to the effect size with which they differentiate classes.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-6.jpg",
-          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-6.jpg",
-          "asset_status": "error",
-          "asset_error": "HTTPError"
+          "caption": "Microbial community membership and function correlates with host phenotype and sample metadata The pathway and clade abundances most significantly associated (all FDR q<0.2) using a multivariate linear model with A) subject race or ethnicity, B) vaginal posterior fornix pH, C) subject age, and D) BMI. Samples’ scatter plots are shown with lines indicating best simple linear fit. Race/ethnicity and vaginal pH are particularly strong associations; age and BMI are more representative of typically modest phenotypic associations ( Sup. Table 3 ), suggesting that variation in the healthy microbiota may correspond to other host or environmental factors.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3564958.1/nihms378076f5.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3564958.1/nihms378076f5.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3564958.1/nihms378076f5.jpg",
+          "local_url": "generated/assets/PMC3564958/fig-05.jpg",
+          "asset_path": "generated/assets/PMC3564958/fig-05.jpg",
+          "asset_bytes": 108158,
+          "asset_sha256": "a06a40278850ed9662f11359d3de6e19ded853748189bf956bdd513b1e2e5f02",
+          "asset_status": "downloaded",
+          "asset_error": ""
         }
       ],
       "supplements": [
         {
-          "label": "Supplementary file 1",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S1.PDF",
-          "description": "Additional file 1 Supplementary Figure S6 . Histogram of within-subject β-diversity (community dissimilarity) between different mucosal (red) and non-mucosal (green) body sites."
+          "label": "1",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3564958/bin/NIHMS378076-supplement-1.doc",
+          "description": ""
         },
         {
-          "label": "Supplementary file 2",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S2.PDF",
-          "description": "Additional file 2 Supplementary Figure S1 . Cladogram representing the differences between viromes and microbiomes on the subsystem framework."
+          "label": "2",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3564958/bin/NIHMS378076-supplement-2.doc",
+          "description": ""
         },
         {
-          "label": "Supplementary file 3",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S3.PDF",
-          "description": "Additional file 3 Supplementary Figure S2 . Histogram of LDA logarithmic scores of biomarkers found by LEfSe comparing microbiomes and viromes within the subsystem framework."
+          "label": "3",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3564958/bin/NIHMS378076-supplement-3.xlsx",
+          "description": ""
         },
         {
-          "label": "Supplementary file 4",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S4.PDF",
-          "description": "Additional file 4 Supplementary Figure S3 . Histogram of LDA logarithmic scores of COG biomarkers found by LEfSe comparing adult and infant microbiomes."
+          "label": "4",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3564958/bin/NIHMS378076-supplement-4.xlsx",
+          "description": ""
         },
         {
-          "label": "Supplementary file 5",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S5.PDF",
-          "description": "Additional file 5 Supplementary Figure S4 . Functional features (COGs) that are discrimantive for the comparison between adult and infant microbiomes according to LEfSe but not detected by Metastats among the discriminant features with LDA score higher than 3. If we consider all the discriminant features without threhold on LDA score, LEfSe identifies 366 COGs in total, 185 of which are not discriminant for Metastats."
-        },
-        {
-          "label": "Supplementary file 6",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S6.PDF",
-          "description": "Additional file 6 Supplementary Figure S5 . Functional features (COGs) that are discrimantive for the comparison between adult and infant microbiomes according to Metastats but not detected by LEfSe. Even if median and variance suggest the differences to be discriminative, there are always some microbiomes (at least two) that are overlapping between classes. This is due to the stringent α-value (0.01) set for the KW test in LEfSe and to the fact that we use non-parametric statistics (differently from Metastats). Notice, however, that even using a low α-value LEfSe detects many more biomarkers than metastats (366 versus 192)."
-        },
-        {
-          "label": "Supplementary file 7",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S7.PDF",
-          "description": "Additional file 7 Supplementary Figure S9 . Comparison between LEfSe and Metastats using the synthetic data described in Figure 5 and in the Materials and methods. LEfSe was applied as detailed in the paper; for Metastats we used the default settings (that is, α = 0.05 and N permutations = 1,000) and, as for LEfSe and KW, we disabled the per-sample normalization as the features are independent. (a,b) Metastats has a higher false positive rate (average 5%) than LEfSe (average below 0.5%) and lower false negative rate. (c) When the subclass information is meaningful (see Figure 5 for the representation of the dataset), LEfSe performs substantially better than Metastats both in terms of false positive and false negatives. Overall, on these synthetic data, Metastats achieves very similar results compared to KW (Figure 5 ) and neither of them can make use of additional information regarding the within-class structure, thus achieving poor results compared to LEfSe when such kinds of information are available."
-        },
-        {
-          "label": "Supplementary file 8",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S8.PDF",
-          "description": "Additional file 8 Supplementary Figure S7 . SVM-based effect size estimation for the biomarkers found for the Rag2 -/- versus T-bet -/- xRag2 -/- comparison reported in Figure 3 of the manuscript. The LDA-based approach for assessing effect size (Figure 3 ) is closer to the biological follow-up experiments and is more visually consistent. The reason for LDA superiority over SVM approaches for effect size estimation is theoretically connected with the ability of LDA to find the axis with the highest variance, and the SVM effort on evaluating the combined feature predictive power rather than single feature relevance. It is worth specifying that the effect size estimation accuracy of an algorithm is not directly connected with its predictive ability (SVM approaches are usually considered more accurate than LDA for prediction)."
-        },
-        {
-          "label": "Supplementary file 9",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S9.PDF",
-          "description": "Additional file 9 Supplementary Figure S8 . Comparison between the features with the highest SVM-based effect size ( Papillibacter , on the left), the highest LDA-based effect size ( Bifidobacterium , in the center), and the Actinobacteria phylum (on the right). From a visual analysis, Bifidobacerium shows a larger effect size, which is also evident looking at the ratios between class means, suggesting LDA as a better option for effect size estimation than SVM approaches. As detailed in the manuscript, the relevance of Bifidobacterium has been experimentally validated. Moreover, the large difference in the score given by the SVM approach to Actinobacteria compared to Bifidobacterium and Papillibacter is not consistent."
-        },
-        {
-          "label": "Supplementary file 10",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S10.TXT",
-          "description": "Additional file 10 T-bet -/- × Rag2 -/- - Rag2 -/- dataset . Input LEfSe file for the analysis of the ulcerative colitis phenotype in mice."
-        },
-        {
-          "label": "Supplementary file 11",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S1.PDF",
-          "description": "Additional file 1 Supplementary Figure S6 . Histogram of within-subject β-diversity (community dissimilarity) between different mucosal (red) and non-mucosal (green) body sites."
-        },
-        {
-          "label": "Supplementary file 12",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S2.PDF",
-          "description": "Additional file 2 Supplementary Figure S1 . Cladogram representing the differences between viromes and microbiomes on the subsystem framework."
-        },
-        {
-          "label": "Supplementary file 13",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S3.PDF",
-          "description": "Additional file 3 Supplementary Figure S2 . Histogram of LDA logarithmic scores of biomarkers found by LEfSe comparing microbiomes and viromes within the subsystem framework."
-        },
-        {
-          "label": "Supplementary file 14",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S4.PDF",
-          "description": "Additional file 4 Supplementary Figure S3 . Histogram of LDA logarithmic scores of COG biomarkers found by LEfSe comparing adult and infant microbiomes."
-        },
-        {
-          "label": "Supplementary file 15",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S5.PDF",
-          "description": "Additional file 5 Supplementary Figure S4 . Functional features (COGs) that are discrimantive for the comparison between adult and infant microbiomes according to LEfSe but not detected by Metastats among the discriminant features with LDA score higher than 3. If we consider all the discriminant features without threhold on LDA score, LEfSe identifies 366 COGs in total, 185 of which are not discriminant for Metastats."
-        },
-        {
-          "label": "Supplementary file 16",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S6.PDF",
-          "description": "Additional file 6 Supplementary Figure S5 . Functional features (COGs) that are discrimantive for the comparison between adult and infant microbiomes according to Metastats but not detected by LEfSe. Even if median and variance suggest the differences to be discriminative, there are always some microbiomes (at least two) that are overlapping between classes. This is due to the stringent α-value (0.01) set for the KW test in LEfSe and to the fact that we use non-parametric statistics (differently from Metastats). Notice, however, that even using a low α-value LEfSe detects many more biomarkers than metastats (366 versus 192)."
-        },
-        {
-          "label": "Supplementary file 17",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S7.PDF",
-          "description": "Additional file 7 Supplementary Figure S9 . Comparison between LEfSe and Metastats using the synthetic data described in Figure 5 and in the Materials and methods. LEfSe was applied as detailed in the paper; for Metastats we used the default settings (that is, α = 0.05 and N permutations = 1,000) and, as for LEfSe and KW, we disabled the per-sample normalization as the features are independent. (a,b) Metastats has a higher false positive rate (average 5%) than LEfSe (average below 0.5%) and lower false negative rate. (c) When the subclass information is meaningful (see Figure 5 for the representation of the dataset), LEfSe performs substantially better than Metastats both in terms of false positive and false negatives. Overall, on these synthetic data, Metastats achieves very similar results compared to KW (Figure 5 ) and neither of them can make use of additional information regarding the within-class structure, thus achieving poor results compared to LEfSe when such kinds of information are available."
-        },
-        {
-          "label": "Supplementary file 18",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S8.PDF",
-          "description": "Additional file 8 Supplementary Figure S7 . SVM-based effect size estimation for the biomarkers found for the Rag2 -/- versus T-bet -/- xRag2 -/- comparison reported in Figure 3 of the manuscript. The LDA-based approach for assessing effect size (Figure 3 ) is closer to the biological follow-up experiments and is more visually consistent. The reason for LDA superiority over SVM approaches for effect size estimation is theoretically connected with the ability of LDA to find the axis with the highest variance, and the SVM effort on evaluating the combined feature predictive power rather than single feature relevance. It is worth specifying that the effect size estimation accuracy of an algorithm is not directly connected with its predictive ability (SVM approaches are usually considered more accurate than LDA for prediction)."
-        },
-        {
-          "label": "Supplementary file 19",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S9.PDF",
-          "description": "Additional file 9 Supplementary Figure S8 . Comparison between the features with the highest SVM-based effect size ( Papillibacter , on the left), the highest LDA-based effect size ( Bifidobacterium , in the center), and the Actinobacteria phylum (on the right). From a visual analysis, Bifidobacerium shows a larger effect size, which is also evident looking at the ratios between class means, suggesting LDA as a better option for effect size estimation than SVM approaches. As detailed in the manuscript, the relevance of Bifidobacterium has been experimentally validated. Moreover, the large difference in the score given by the SVM approach to Actinobacteria compared to Bifidobacterium and Papillibacter is not consistent."
-        },
-        {
-          "label": "Supplementary file 20",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S10.TXT",
-          "description": "Additional file 10 T-bet -/- × Rag2 -/- - Rag2 -/- dataset . Input LEfSe file for the analysis of the ulcerative colitis phenotype in mice."
+          "label": "5",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3564958/bin/NIHMS378076-supplement-5.xlsx",
+          "description": ""
         }
       ],
       "fulltext_ok": true,
-      "asset_errors": [
-        "fig-01:HTTPError",
-        "fig-02:HTTPError",
-        "fig-03:HTTPError",
-        "fig-04:HTTPError",
-        "fig-05:HTTPError",
-        "fig-06:HTTPError"
-      ],
+      "asset_errors": [],
       "assets_required": true,
       "metrics": {
-        "impact_factor": "9.2",
+        "impact_factor": "56.1",
         "jcr": "SCI Q1",
-        "jcr_quartile": "Q1",
-        "jcr_q1": true,
         "status": "matched",
         "source": "EasyScholar",
-        "retrieved_at": "2026-10-25T02:24:51Z"
+        "retrieved_at": "2026-10-24T07:14:59Z"
       },
-      "journal_display": "Genome biology（IF 9.2；JCR SCI Q1）",
-      "updated_at": "2026-10-25T02:24:51Z",
-      "ai_status": "skipped_no_retrievable_fulltext_or_assets",
+      "journal_display": "Nature（IF 56.1；JCR SCI Q1）",
+      "updated_at": "2026-10-25T06:14:39Z",
+      "ai_status": "llm_error:JSONDecodeError",
       "publishable": false,
       "gate_reasons": [
-        "存在未成功缓存到网站的正文原图",
         "AI 字段缺失：title_zh",
         "AI 字段缺失：lead",
         "AI 字段缺失：background",
@@ -375,7 +165,369 @@
         "AI 内容过短：takeaways",
         "AI 图组解读不是数组"
       ],
-      "status": "discarded"
+      "status": "manual_review"
+    },
+    {
+      "id": "doi:10.1038/s41586-020-2008-3",
+      "title": "A new coronavirus associated with human respiratory disease in China.",
+      "authors": [
+        "Wu F",
+        "Zhao S",
+        "Yu B",
+        "Chen YM",
+        "Wang W",
+        "Song ZG",
+        "Hu Y",
+        "Tao ZW",
+        "Tian JH",
+        "Pei YY",
+        "Yuan ML",
+        "Zhang YL",
+        "Dai FH",
+        "Liu Y",
+        "Wang QM",
+        "Zheng JJ",
+        "Xu L",
+        "Holmes EC",
+        "Zhang YZ"
+      ],
+      "journal": "Nature",
+      "year": "2020",
+      "doi": "10.1038/s41586-020-2008-3",
+      "pmcid": "PMC7094943",
+      "pmid": "32015508",
+      "citation_count": 8243,
+      "fulltext_urls": [
+        "https://doi.org/10.1038/s41586-020-2008-3",
+        "https://europepmc.org/articles/PMC7094943",
+        "https://europepmc.org/articles/PMC7094943?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "sequencing: metagenom, rna sequencing"
+      ],
+      "figures": [
+        {
+          "label": "Fig. 1",
+          "caption": "Genome organization of SARS and SARS-like CoVs. The organization of genes for WHCV, bat SL-CoVZC45 and SARS-CoV Tor2.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig1_HTML.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig1_HTML.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig1_HTML.jpg",
+          "local_url": "generated/assets/PMC7094943/fig-01.jpg",
+          "asset_path": "generated/assets/PMC7094943/fig-01.jpg",
+          "asset_bytes": 23090,
+          "asset_sha256": "7ce49d902808b5b654ad7f6bc5589556bab7e1f243e2118578dfd02447f9ba1e",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Fig. 2",
+          "caption": "Maximum likelihood phylogenetic trees of nucleotide sequences of the ORF1a , ORF1b , E and M genes of WHCV and related coronaviruses. a , Phylogenetic trees of ORF1a . b , Phylogenetic trees of ORF1b . c , Phylogenetic trees of E . d , Phylogenetic trees of M . EriCoV, Erinaceus coronavirus. Numbers (>70) above or below the branches indicate percentage bootstrap values for the associated nodes. The trees were mid-point rooted for clarity only. The scale bar represents the number of substitutions per site.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig2_HTML.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig2_HTML.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig2_HTML.jpg",
+          "local_url": "generated/assets/PMC7094943/fig-02.jpg",
+          "asset_path": "generated/assets/PMC7094943/fig-02.jpg",
+          "asset_bytes": 213125,
+          "asset_sha256": "ad4a064c1b5ccdc9c612c25557d78d724e2257bc4b9bb6bb95a09bcb1112fad4",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Fig. 3",
+          "caption": "Possible recombination events in the S gene of sarbecoviruses. a , The sequence similarity plot reveals two putative recombination breakpoints (black dashed lines), with their locations indicated at the bottom. The plot shows similarity comparisons of the S gene of WHCV (query) compared with the sequences of SARS-CoV Tor2 and bat SARS-like CoVs WIV1, Rf1 and CoVZC45. b , Phylogenies of the major parental region (1–1,028 and 1,653–3,804) and minor parental region (1,029–1,652). Phylogenies were estimated using a maximum likelihood method and were mid-point rooted for clarity only. Numbers above or below the branches indicate percentage bootstrap values. The scale bar represents the number of substitutions per site.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig3_HTML.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig3_HTML.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig3_HTML.jpg",
+          "local_url": "generated/assets/PMC7094943/fig-03.jpg",
+          "asset_path": "generated/assets/PMC7094943/fig-03.jpg",
+          "asset_bytes": 78669,
+          "asset_sha256": "431cf4acaf3847a6014bc05582ba58657c69841db33663ef3084c32b2ddc23e3",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Extended Data Fig. 1",
+          "caption": "Chest radiographs of the patient. a – d , Computed-tomography scans of the chest were obtained on the day of admission (day 6 after the onset of disease). Bilateral focal consolidation, lobar consolidation and patchy consolidation were clearly observed, especially in the lower lung. e , A chest radiograph was obtained on day 5 after admission (day 11 after the onset of disease). Bilateral diffuse patchy and fuzzy shadows were observed.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig4_ESM.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig4_ESM.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig4_ESM.jpg",
+          "local_url": "generated/assets/PMC7094943/fig-04.jpg",
+          "asset_path": "generated/assets/PMC7094943/fig-04.jpg",
+          "asset_bytes": 55322,
+          "asset_sha256": "7c8a6e6c3e63d2bf02952287c0c879307c02e42f3999a9e1d8beef63532f1578",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Extended Data Fig. 2",
+          "caption": "Other respiratory pathogens were not detected in the BALF sample by real-time RT–PCR. a – e , The BALF sample was tested for the presence of influenza A virus ( a ), the Victoria lineage of influenza B viruses ( b ), the Yamagata lineage of influenza B viruses ( c ), human adenovirus ( d ) and Chlamydia pneumoniae ( e ). Sample 1 was the BALF sample of the patient, water was used as a negative (NEG) control and positive (POS) control samples included plasmids covering the Taqman primers and probe regions of influenza A, the Victoria and Yamagata lineages of influenza B viruses, human adenovirus and Chlamydia pneumoniae .",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig5_ESM.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig5_ESM.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig5_ESM.jpg",
+          "local_url": "generated/assets/PMC7094943/fig-05.jpg",
+          "asset_path": "generated/assets/PMC7094943/fig-05.jpg",
+          "asset_bytes": 53884,
+          "asset_sha256": "4bf4184ae5e8486e84b9ebb6d665d2358ad2c4c5edf049167cdba2836a9f89e7",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Extended Data Fig. 3",
+          "caption": "Mapped read count plot of the WHCV genome. The histograms show the coverage depth per base of the WHCV genome. The mean sequencing depth of the WHCV genome was 604.21 nt.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig6_ESM.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig6_ESM.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig6_ESM.jpg",
+          "local_url": "generated/assets/PMC7094943/fig-06.jpg",
+          "asset_path": "generated/assets/PMC7094943/fig-06.jpg",
+          "asset_bytes": 39127,
+          "asset_sha256": "47e7d4357716f17299688d4ceb6d920d2e61d2fce9707014a6ee823be98440de",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Extended Data Fig. 4",
+          "caption": "Quantification of WHCV in clinical samples by real-time RT–PCR. a , Specificity evaluation of the WHCV primers. Test samples comprised clinical samples that were positive for at least one of the following viruses: influenza A virus (09H1N1 and H3N2), influenza B virus, human adenovirus, respiratory syncytial virus, rhinovirus, parainfluenza virus type 1–4, human bocavirus, human metapneumovirus, coronavirus OC43, coronavirus NL63, coronavirus 229E and coronavirus HKU1. Only the standard plasmid of WHCV (WHCV 15,704–16,846 bp in a pLB vector) led to positive amplification (brown curve). b , Amplification curve of the DNA standard for WHCV. From left to right, the DNA concentrations were 1.8 × 10 8 , 1.8 × 10 7 , 1.8 × 10 6 , 1.8 × 10 5 , 1.8 × 10 4 and 1.8 × 10 3 . c , Linear fitted curve of C t values to concentrations of the WHCV DNA standard. d , Quantification of WHCV in the BALF sample by real-time RT–PCR. The WHCV DNA standard was used as positive control (POS), water (NEG) and blank were used as negative controls. The amplification curve of the BALF sample is shown in green.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig7_ESM.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig7_ESM.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig7_ESM.jpg",
+          "local_url": "generated/assets/PMC7094943/fig-07.jpg",
+          "asset_path": "generated/assets/PMC7094943/fig-07.jpg",
+          "asset_bytes": 70739,
+          "asset_sha256": "f765459bb5a6c341c3784e3409d5436ed9f3495de5a398410d6bcc8e8ba1566b",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Extended Data Fig. 5",
+          "caption": "Maximum likelihood phylogenetic trees of the nucleotide sequences of the whole genome, and S and N genes of WHCV and related coronaviruses. Numbers (>70) above or below the branches indicate percentage bootstrap values. The trees were mid-point rooted for clarity only. The scale bar represents the number of substitutions per site.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig8_ESM.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig8_ESM.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig8_ESM.jpg",
+          "local_url": "generated/assets/PMC7094943/fig-08.jpg",
+          "asset_path": "generated/assets/PMC7094943/fig-08.jpg",
+          "asset_bytes": 119291,
+          "asset_sha256": "969e6406798bf2daaf61ef2ba235aedf3490887192987524e5753e1250b6eee6",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Extended Data Fig. 6",
+          "caption": "Maximum likelihood phylogenetic trees of the nucleotide sequences of the 3CL , RdRp , Hel , ExoN , NendoU and O-MT genes of WHCV and related coronaviruses. Numbers (>70) above or below the branches indicate percentage bootstrap values. The trees were mid-point rooted for clarity only. The scale bar represents the number of substitutions per site.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig9_ESM.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig9_ESM.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig9_ESM.jpg",
+          "local_url": "generated/assets/PMC7094943/fig-09.jpg",
+          "asset_path": "generated/assets/PMC7094943/fig-09.jpg",
+          "asset_bytes": 125688,
+          "asset_sha256": "b87b1d99e5341a5c4cf0bc33a1471efaf5a535d139c3cb673980f22839b859cc",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Extended Data Fig. 7",
+          "caption": "Analysis of RBD of the spike protein of WHCV coronavirus. a , Amino acid sequence alignments of RBD sequences of SARS-like CoVs. Three bat SARS-like CoVs—which could efficiently use the human ACE2 as receptor—had an RBD sequence of similar size to SARS-CoV. WHCV contains a single Val470 insertion. The key amino acid residues involved in the interaction with human ACE2 are marked by orange squares. By contrast, five bat SARS-like CoVs, including Rp3, which has previously been found not to bind to ACE2 14 —had amino acid deletions in two motifs (amino acids 433–437 and 460–472, highlighted by red boxes) compared with those of SARS-CoV.11 b , The two motifs (amino acids 433–437 and 460–472) are shown in red for the crystal structure of the RBD of the spike protein of SARS-CoV in complex with the human ACE2 receptor (PDB 2AJF). Human ACE2 is shown in blue and the RBD of the spike protein of SARS-CoV is shown in green. Important residues in human ACE2 that interact with the RBD of the spike protein of SARS-CoV are marked. c , Predicted protein structure of the RBD of the spike protein of WHCV based on target–template alignment using ProMod3 on the SWISS-MODEL server. d , Predicted structure of the RBD of the spike protein of SARS-like CoV Rs4874. e , Predicted structure of the RBD of the spike protein of SARS-like CoV Rp3. f , Crystal structure of the RBD of the spike protein of SARS-CoV (green) (PDB 2GHV). Motifs that resemble amino acids 433–437 and 460–472 of the spike protein of SARS-CoV are shown in red.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig10_ESM.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig10_ESM.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig10_ESM.jpg",
+          "local_url": "generated/assets/PMC7094943/fig-10.jpg",
+          "asset_path": "generated/assets/PMC7094943/fig-10.jpg",
+          "asset_bytes": 242024,
+          "asset_sha256": "0748d775becc2ada0dd38e416c7eab4f65f7b531e72568edd8f3516f2d1f316a",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Extended Data Fig. 8",
+          "caption": "Amino acid sequence comparison of the N-terminal domain of the spike protein. Amino acid sequence comparison of the N-terminal domain of the spike protein of WHCV, bovine coronavirus (BCoV), mouse hepatitis virus (MHV) and human coronaviruses (HCoV OC43 and HKU1) that can bind to sialic acid and the SARS-CoVs that cannot (SZ3, WH20, BJ0 and Tor2). The key residues 16 for sialic acid binding on BCoV, MHV, and HCoV OC43 and HKU1 are highlighted by orange squares.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig11_ESM.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig11_ESM.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig11_ESM.jpg",
+          "local_url": "generated/assets/PMC7094943/fig-11.jpg",
+          "asset_path": "generated/assets/PMC7094943/fig-11.jpg",
+          "asset_bytes": 132631,
+          "asset_sha256": "eb3a9655fca69a593ea002064f430c25c578403b4004d07834044590b84d02f7",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Extended Data Fig. 9",
+          "caption": "Recombination events in WHCV. The sequence similarity plot of WHCV, SARS-like CoVs and bat SARS-like CoVs reveals putative recombination events.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig12_ESM.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig12_ESM.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7094943.1/41586_2020_2008_Fig12_ESM.jpg",
+          "local_url": "generated/assets/PMC7094943/fig-12.jpg",
+          "asset_path": "generated/assets/PMC7094943/fig-12.jpg",
+          "asset_bytes": 75132,
+          "asset_sha256": "52e18403c0a43409c1fcdec3ad06f1fc4052a5bfca5bc39bfe42df47c389f188",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary Tables",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7094943/bin/41586_2020_2008_MOESM1_ESM.pdf",
+          "description": "This file contains Supplementary Tables 1-8."
+        },
+        {
+          "label": "Supplementary file 2",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7094943/bin/41586_2020_2008_MOESM2_ESM.pdf",
+          "description": "Reporting Summary"
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "56.1",
+        "jcr": "SCI Q1",
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T07:14:59Z"
+      },
+      "journal_display": "Nature（IF 56.1；JCR SCI Q1）",
+      "updated_at": "2026-10-25T06:15:32Z",
+      "ai_status": "llm_error:JSONDecodeError",
+      "publishable": false,
+      "gate_reasons": [
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：lead",
+        "AI 字段缺失：background",
+        "AI 字段缺失：research_question",
+        "AI 字段缺失：study_design",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：limitations",
+        "AI 字段缺失：takeaways",
+        "AI 字段缺失：figure_notes",
+        "AI 内容过短：lead",
+        "AI 内容过短：background",
+        "AI 内容过短：research_question",
+        "AI 内容过短：study_design",
+        "AI 内容过短：methods",
+        "AI 内容过短：results",
+        "AI 内容过短：limitations",
+        "AI 内容过短：takeaways",
+        "AI 图组解读不是数组"
+      ],
+      "status": "manual_review"
+    },
+    {
+      "id": "doi:10.1093/nar/gkac1052",
+      "title": "UniProt: the Universal Protein Knowledgebase in 2023.",
+      "authors": [
+        "UniProt Consortium."
+      ],
+      "journal": "Nucleic acids research",
+      "year": "2023",
+      "doi": "10.1093/nar/gkac1052",
+      "pmcid": "PMC9825514",
+      "pmid": "36408920",
+      "citation_count": 6891,
+      "fulltext_urls": [
+        "https://academic.oup.com/nar/article-pdf/51/D1/D523/48441158/gkac1052.pdf",
+        "https://academic.oup.com/nar/article-pdf/51/D1/D523/48441158/gkac1052.pdf",
+        "https://academic.oup.com/nar/article-pdf/51/D1/D523/48441158/gkac1052.pdf",
+        "https://academic.oup.com/nar/article-pdf/51/D1/D523/48441158/gkac1052.pdf",
+        "https://doi.org/10.1093/nar/gkac1052",
+        "https://europepmc.org/articles/PMC9825514",
+        "https://europepmc.org/articles/PMC9825514?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "multiomics: proteom",
+        "tools: pipeline"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1",
+          "caption": "( A ) Growth of UniProt databases over the last 10 years and ( B ) Growth of Reference Proteomes and taxonomic breakdown.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9825514.1/gkac1052fig1.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9825514.1/gkac1052fig1.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9825514.1/gkac1052fig1.jpg",
+          "local_url": "generated/assets/PMC9825514/fig-01.jpg",
+          "asset_path": "generated/assets/PMC9825514/fig-01.jpg",
+          "asset_bytes": 26759,
+          "asset_sha256": "839de2d7ce659ef14314d7e26684b1b373fd194f069a0db6b16f26ef8b87a5a3",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 2.",
+          "caption": "Statistics of UniProt crowdsourcing activity. ( A ) Cumulative number of submissions, unique publications and proteins covered, and number of contributors for selected releases. Release 2019_08 was the first release where community submissions appeared, and 2022_03 is the latest release at the time of this manuscript preparation. ( B ) Taxonomic distribution of unique protein entries that have at least one publication submitted by the community. ( C ) Block chart showing the relative distribution of annotations by categories.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9825514.1/gkac1052fig2.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9825514.1/gkac1052fig2.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9825514.1/gkac1052fig2.jpg",
+          "local_url": "generated/assets/PMC9825514/fig-02.jpg",
+          "asset_path": "generated/assets/PMC9825514/fig-02.jpg",
+          "asset_bytes": 65292,
+          "asset_sha256": "e29ef7804e51c02f6eec7432f835ac1d69dd09f787059b681b35caa96e0593db",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 3",
+          "caption": "( A ) Card view of results following a search of the UniProt website and ( B ). Table view of results following the same search.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9825514.1/gkac1052fig3.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9825514.1/gkac1052fig3.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9825514.1/gkac1052fig3.jpg",
+          "local_url": "generated/assets/PMC9825514/fig-03.jpg",
+          "asset_path": "generated/assets/PMC9825514/fig-03.jpg",
+          "asset_bytes": 54614,
+          "asset_sha256": "b6307b4068b44fdcf0abb6281bbe1331c6344b06765a4775499baaaf7d0ac672",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 4.",
+          "caption": "UniProtKB entry CL18A_HUMAN (UniProtKB: A5D8T8 ) shows an embedded SwissBioPics image: the generic animal cell (Eumetazoa) is selected based on organism taxonomy. It contains 71 interactive locations, of which the endoplasmic reticulum, Golgi apparatus, endosome and secretory space are highlighted using annotations from the UniProt entry.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9825514.1/gkac1052fig4.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9825514.1/gkac1052fig4.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9825514.1/gkac1052fig4.jpg",
+          "local_url": "generated/assets/PMC9825514/fig-04.jpg",
+          "asset_path": "generated/assets/PMC9825514/fig-04.jpg",
+          "asset_bytes": 38880,
+          "asset_sha256": "5da663be79fd6fdb83394bc1ba2dbaf5310d1ba00be76aabfb9a7edd4e42cf79",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "supplements": [
+        {
+          "label": "gkac1052_Supplemental_File",
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9825514.1/gkac1052_supplemental_file.jpeg",
+          "description": "Click here for additional data file."
+        },
+        {
+          "label": "gkac1052_Supplemental_File",
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9825514.1/gkac1052_supplemental_file.jpeg",
+          "description": "Click here for additional data file."
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "15.0",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-24T13:24:24Z"
+      },
+      "journal_display": "Nucleic acids research（IF 15.0；JCR SCI Q1）",
+      "updated_at": "2026-10-25T06:16:18Z",
+      "ai_status": "success",
+      "publishable": false,
+      "gate_reasons": [
+        "第 2 张图的结果解读过短",
+        "第 3 张图的结果解读过短"
+      ],
+      "status": "manual_review"
     }
   ],
   "pending_candidates": []
