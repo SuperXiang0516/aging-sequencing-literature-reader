@@ -279,6 +279,124 @@
         "AI 内容过短：takeaways",
         "AI 图组解读不是数组"
       ]
+    },
+    "doi:10.1038/nature11234": {
+      "status": "manual_review",
+      "attempts": 1,
+      "updated_at": "2026-10-25T03:49:44Z",
+      "gate_reasons": [
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：lead",
+        "AI 字段缺失：background",
+        "AI 字段缺失：research_question",
+        "AI 字段缺失：study_design",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：limitations",
+        "AI 字段缺失：takeaways",
+        "AI 字段缺失：figure_notes",
+        "AI 内容过短：lead",
+        "AI 内容过短：background",
+        "AI 内容过短：research_question",
+        "AI 内容过短：study_design",
+        "AI 内容过短：methods",
+        "AI 内容过短：results",
+        "AI 内容过短：limitations",
+        "AI 内容过短：takeaways",
+        "AI 图组解读不是数组"
+      ]
+    },
+    "doi:10.1038/s41586-020-2008-3": {
+      "status": "manual_review",
+      "attempts": 1,
+      "updated_at": "2026-10-25T03:50:31Z",
+      "gate_reasons": [
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：lead",
+        "AI 字段缺失：background",
+        "AI 字段缺失：research_question",
+        "AI 字段缺失：study_design",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：limitations",
+        "AI 字段缺失：takeaways",
+        "AI 字段缺失：figure_notes",
+        "AI 内容过短：lead",
+        "AI 内容过短：background",
+        "AI 内容过短：research_question",
+        "AI 内容过短：study_design",
+        "AI 内容过短：methods",
+        "AI 内容过短：results",
+        "AI 内容过短：limitations",
+        "AI 内容过短：takeaways",
+        "AI 图组解读不是数组"
+      ]
+    },
+    "doi:10.1093/nar/gkac1052": {
+      "status": "manual_review",
+      "attempts": 1,
+      "updated_at": "2026-10-25T03:51:14Z",
+      "gate_reasons": [
+        "第 2 张图的结果解读过短"
+      ]
+    },
+    "doi:10.1083/jcb.119.3.493": {
+      "status": "discarded",
+      "attempts": 1,
+      "updated_at": "2026-10-25T03:51:54Z",
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "正文全文未成功提取",
+        "没有可追溯的正文原图",
+        "正文 Methods 未提取",
+        "正文 Results 未提取",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：lead",
+        "AI 字段缺失：background",
+        "AI 字段缺失：research_question",
+        "AI 字段缺失：study_design",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：limitations",
+        "AI 字段缺失：takeaways",
+        "AI 字段缺失：figure_notes",
+        "AI 内容过短：lead",
+        "AI 内容过短：background",
+        "AI 内容过短：research_question",
+        "AI 内容过短：study_design",
+        "AI 内容过短：methods",
+        "AI 内容过短：results",
+        "AI 内容过短：limitations",
+        "AI 内容过短：takeaways",
+        "AI 图组解读不是数组"
+      ]
+    },
+    "doi:10.12688/f1000research.7563.2": {
+      "status": "discarded",
+      "attempts": 1,
+      "updated_at": "2026-10-25T03:51:57Z",
+      "gate_reasons": [
+        "期刊未确认属于 JCR/SCI 1 区",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：lead",
+        "AI 字段缺失：background",
+        "AI 字段缺失：research_question",
+        "AI 字段缺失：study_design",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：limitations",
+        "AI 字段缺失：takeaways",
+        "AI 字段缺失：figure_notes",
+        "AI 内容过短：lead",
+        "AI 内容过短：background",
+        "AI 内容过短：research_question",
+        "AI 内容过短：study_design",
+        "AI 内容过短：methods",
+        "AI 内容过短：results",
+        "AI 内容过短：limitations",
+        "AI 内容过短：takeaways",
+        "AI 图组解读不是数组"
+      ]
     }
   },
   "metrics_cache": {
@@ -493,18 +611,36 @@
       "status": "matched",
       "source": "EasyScholar",
       "retrieved_at": "2026-10-25T02:24:51Z"
+    },
+    "the journal of cell biology": {
+      "impact_factor": "6.1",
+      "jcr": "SCI Q2",
+      "jcr_quartile": "Q2",
+      "jcr_q1": false,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-25T03:51:54Z"
+    },
+    "f1000research": {
+      "impact_factor": "",
+      "jcr": "",
+      "jcr_quartile": "",
+      "jcr_q1": false,
+      "status": "not_found",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-25T03:51:57Z"
     }
   },
-  "updated_at": "2026-10-25T02:24:51Z",
+  "updated_at": "2026-10-25T03:51:57Z",
   "last_run": {
     "status": "success",
-    "selected": 2,
+    "selected": 5,
     "published": 0,
-    "candidates": 2,
+    "candidates": 5,
     "skipped_without_pmcid": 0,
     "search_error": "",
     "preserved_articles": 0,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-10-25T02:24:51Z"
+    "finished_at": "2026-10-25T03:51:57Z"
   }
 }
