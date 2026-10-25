@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-25T03:51:57Z",
+  "generated_at": "2026-10-25T06:16:58Z",
   "last_run": {
     "status": "success",
-    "selected": 5,
+    "selected": 3,
     "published": 0,
-    "candidates": 5,
+    "candidates": 3,
     "skipped_without_pmcid": 0,
     "search_error": "",
     "preserved_articles": 0,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-10-25T03:51:57Z"
+    "finished_at": "2026-10-25T06:16:58Z"
   },
   "processed": [
     {
@@ -141,7 +141,7 @@
         "retrieved_at": "2026-10-24T07:14:59Z"
       },
       "journal_display": "Nature（IF 56.1；JCR SCI Q1）",
-      "updated_at": "2026-10-25T03:49:44Z",
+      "updated_at": "2026-10-25T06:14:39Z",
       "ai_status": "llm_error:JSONDecodeError",
       "publishable": false,
       "gate_reasons": [
@@ -388,7 +388,7 @@
         "retrieved_at": "2026-10-24T07:14:59Z"
       },
       "journal_display": "Nature（IF 56.1；JCR SCI Q1）",
-      "updated_at": "2026-10-25T03:50:31Z",
+      "updated_at": "2026-10-25T06:15:32Z",
       "ai_status": "llm_error:JSONDecodeError",
       "publishable": false,
       "gate_reasons": [
@@ -520,274 +520,14 @@
         "retrieved_at": "2026-10-24T13:24:24Z"
       },
       "journal_display": "Nucleic acids research（IF 15.0；JCR SCI Q1）",
-      "updated_at": "2026-10-25T03:51:14Z",
+      "updated_at": "2026-10-25T06:16:18Z",
       "ai_status": "success",
       "publishable": false,
       "gate_reasons": [
-        "第 2 张图的结果解读过短"
+        "第 2 张图的结果解读过短",
+        "第 3 张图的结果解读过短"
       ],
       "status": "manual_review"
-    },
-    {
-      "id": "doi:10.1083/jcb.119.3.493",
-      "title": "Identification of programmed cell death in situ via specific labeling of nuclear DNA fragmentation.",
-      "authors": [
-        "Gavrieli Y",
-        "Sherman Y",
-        "Ben-Sasson SA"
-      ],
-      "journal": "The Journal of cell biology",
-      "year": "1992",
-      "doi": "10.1083/jcb.119.3.493",
-      "pmcid": "PMC2289665",
-      "pmid": "1400587",
-      "citation_count": 6823,
-      "fulltext_urls": [
-        "https://doi.org/10.1083/jcb.119.3.493",
-        "https://europepmc.org/articles/PMC2289665",
-        "https://europepmc.org/articles/PMC2289665?pdf=render"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 12,
-      "relevance_evidence": [
-        "sequencing: single-cell"
-      ],
-      "figures": [],
-      "supplements": [],
-      "fulltext_ok": false,
-      "asset_errors": [],
-      "assets_required": true,
-      "metrics": {
-        "impact_factor": "6.1",
-        "jcr": "SCI Q2",
-        "jcr_quartile": "Q2",
-        "jcr_q1": false,
-        "status": "matched",
-        "source": "EasyScholar",
-        "retrieved_at": "2026-10-25T03:51:54Z"
-      },
-      "journal_display": "The Journal of cell biology（IF 6.1；JCR SCI Q2）",
-      "updated_at": "2026-10-25T03:51:54Z",
-      "ai_status": "skipped_non_jcr_q1",
-      "publishable": false,
-      "gate_reasons": [
-        "期刊未确认属于 JCR/SCI 1 区",
-        "正文全文未成功提取",
-        "没有可追溯的正文原图",
-        "正文 Methods 未提取",
-        "正文 Results 未提取",
-        "AI 字段缺失：title_zh",
-        "AI 字段缺失：lead",
-        "AI 字段缺失：background",
-        "AI 字段缺失：research_question",
-        "AI 字段缺失：study_design",
-        "AI 字段缺失：methods",
-        "AI 字段缺失：results",
-        "AI 字段缺失：limitations",
-        "AI 字段缺失：takeaways",
-        "AI 字段缺失：figure_notes",
-        "AI 内容过短：lead",
-        "AI 内容过短：background",
-        "AI 内容过短：research_question",
-        "AI 内容过短：study_design",
-        "AI 内容过短：methods",
-        "AI 内容过短：results",
-        "AI 内容过短：limitations",
-        "AI 内容过短：takeaways",
-        "AI 图组解读不是数组"
-      ],
-      "status": "discarded"
-    },
-    {
-      "id": "doi:10.12688/f1000research.7563.2",
-      "title": "Differential analyses for RNA-seq: transcript-level estimates improve gene-level inferences.",
-      "authors": [
-        "Soneson C",
-        "Love MI",
-        "Robinson MD"
-      ],
-      "journal": "F1000Research",
-      "year": "2015",
-      "doi": "10.12688/f1000research.7563.2",
-      "pmcid": "PMC4712774",
-      "pmid": "26925227",
-      "citation_count": 3443,
-      "fulltext_urls": [
-        "https://doi.org/10.12688/f1000research.7563.2",
-        "https://europepmc.org/articles/PMC4712774",
-        "https://europepmc.org/articles/PMC4712774?pdf=render"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 12,
-      "relevance_evidence": [
-        "multiomics: transcriptom",
-        "tools: pipeline"
-      ],
-      "figures": [
-        {
-          "label": "Figure 1 (sim2).",
-          "caption": "A : Accuracy of gene- and transcript-level TPM estimates from Salmon and scaled FPKM estimates derived from simple counts from featureCounts , in one of the simulated samples (sampleA1). Spearman correlations are indicated in the respective panels. Top row: using the complete annotation. Bottom row: using an incomplete annotation, with 20% of the transcripts randomly removed. Gene-level estimates are more accurate than transcript-level estimates. Gene-level estimates from Salmon are more accurate than those from featureCounts . B : Distribution of the coefficients of variation of gene- and transcript-level abundance estimates from Salmon , calculated across 30 bootstrap samples of one of the simulated samples (sampleA1). Gene-level estimates are less variable than transcript-level estimates. C : An example of unidentifiable transcript-level estimates, as uneven coverage does not cover the critical regions that would determine the amount that each transcript is expressed, while gene-level estimation is still possible.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4712774.2/f1000research-4-8770-g0000.jpg",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4712774.2/f1000research-4-8770-g0000.jpg",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4712774.2/f1000research-4-8770-g0000.jpg",
-          "local_url": "generated/assets/PMC4712774/fig-01.jpg",
-          "asset_path": "generated/assets/PMC4712774/fig-01.jpg",
-          "asset_bytes": 36510,
-          "asset_sha256": "d41d981cab1641c8f6b752c60dff9e6c8bf665c7f6b9b4b3ab30470d2218ef3d",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "Figure 2 (sim2).",
-          "caption": "A : DTE detection performance on transcript- and gene-level, using edgeR applied to transcript-level estimated counts from Salmon . The statistical analysis was performed on transcript level and aggregated for each gene using the perGeneQValue function from the DEXSeq R package; aggregated results show higher detection power. The curves trace out the observed FDR and TPR for each significance cutoff value. The three circles mark the performance at adjusted p-value cutoffs of 0.01, 0.05 and 0.1. B : Schematic illustration of different ways in which differential transcript expression (DTE) can arise, in terms of absence or presence of differential gene expression (DGE) and differential transcript usage (DTU).",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4712774.2/f1000research-4-8770-g0001.jpg",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4712774.2/f1000research-4-8770-g0001.jpg",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4712774.2/f1000research-4-8770-g0001.jpg",
-          "local_url": "generated/assets/PMC4712774/fig-02.jpg",
-          "asset_path": "generated/assets/PMC4712774/fig-02.jpg",
-          "asset_bytes": 19014,
-          "asset_sha256": "64f408422d35ac0577d7d9527f4ed9558a788e36bfe9dd61b75fca6f07d0c6dd",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "Figure 3 (sim2).",
-          "caption": "A : DGE detection performance of edgeR applied to three different count matrices (simplesum, scaledTPM, featureCounts), with or without including an offset representing the average transcript length (for simplesum and featureCounts, avetxl indicates that such offsets were used). Including the offset or using the scaledTPM count matrix leads to improved FDR control compared to using simplesum or featureCounts matrices without offset. The curves trace out the observed FDR and TPR for each significance cutoff value. The three circles mark the performance at adjusted p-value cutoffs of 0.01, 0.05 and 0.1. B : stratification of the results in A by the presence of differential isoform usage. The improvement in FDR control seen in A results from an improved treatment of genes with differential isoform usage, while all methods perform similarly for genes without differential isoform usage.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4712774.2/f1000research-4-8770-g0002.jpg",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4712774.2/f1000research-4-8770-g0002.jpg",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4712774.2/f1000research-4-8770-g0002.jpg",
-          "local_url": "generated/assets/PMC4712774/fig-03.jpg",
-          "asset_path": "generated/assets/PMC4712774/fig-03.jpg",
-          "asset_bytes": 31525,
-          "asset_sha256": "3c86e36185e98ea6980d8a57ff14a67a5dc246d599acc960eab618f28f2d770b",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "Figure 4.",
-          "caption": "Comparison of log-fold change estimates from edgeR , based on simplesum and scaledTPM count matrices, in four different data sets. For the simulated data set ( sim2 ), where signals have been exaggerated to pinpoint underlying causes of various observations, genes with induced DTU (whose true overall log-fold change is 0) show a clear overestimation of log-fold changes when using simplesum counts. However, none of the real data sets contain a similar population of genes, suggesting that for many real data sets, simple gene counting leads to overall similar conclusions as accounting for underlying changes in transcript usage.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4712774.2/f1000research-4-8770-g0003.jpg",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4712774.2/f1000research-4-8770-g0003.jpg",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4712774.2/f1000research-4-8770-g0003.jpg",
-          "local_url": "generated/assets/PMC4712774/fig-04.jpg",
-          "asset_path": "generated/assets/PMC4712774/fig-04.jpg",
-          "asset_bytes": 52156,
-          "asset_sha256": "d2d13529754af2b9e3841cbde4a6323367be870ee462576126eea48fdd4fe33c",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        }
-      ],
-      "supplements": [
-        {
-          "label": "Data set 1",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4712774/bin/f1000research-4-8770-s0000.tgz",
-          "description": "http://dx.doi.org/10.5256/f1000research.7563.d114722 Dataset 1 (html) contains all the R code that was used to perform the analyses and generate the figures for the sim1 data set 30 . Copyright: © 2016 Soneson C et al. Data associated with the article are available under the terms of the Creative Commons Zero \"No rights reserved\" data waiver (CC0 1.0 Public domain dedication)."
-        },
-        {
-          "label": "Data set 2",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4712774/bin/f1000research-4-8770-s0001.tgz",
-          "description": "http://dx.doi.org/10.5256/f1000research.7563.d114723 Data set 2 (html) contains all the R code that was used to perform the analyses and generate the figures for the sim2 data set 31 . Copyright: © 2016 Soneson C et al. Data associated with the article are available under the terms of the Creative Commons Zero \"No rights reserved\" data waiver (CC0 1.0 Public domain dedication)."
-        },
-        {
-          "label": "Data set 3",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4712774/bin/f1000research-4-8770-s0002.tgz",
-          "description": "http://dx.doi.org/10.5256/f1000research.7563.d114724 Data set 3 (html) contains all the R code that was used to perform the analyses and generate the figures for the Bottomly data set 32 . Copyright: © 2016 Soneson C et al. Data associated with the article are available under the terms of the Creative Commons Zero \"No rights reserved\" data waiver (CC0 1.0 Public domain dedication)."
-        },
-        {
-          "label": "Data set 4",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4712774/bin/f1000research-4-8770-s0003.tgz",
-          "description": "http://dx.doi.org/10.5256/f1000research.7563.d114725 Data set 4 (html) contains all the R code that was used to perform the analyses and generate the figures for the GSE64570 data set 33 . Copyright: © 2016 Soneson C et al. Data associated with the article are available under the terms of the Creative Commons Zero \"No rights reserved\" data waiver (CC0 1.0 Public domain dedication)."
-        },
-        {
-          "label": "Data set 5",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4712774/bin/f1000research-4-8770-s0004.tgz",
-          "description": "http://dx.doi.org/10.5256/f1000research.7563.d114726 Data set 5 (html) contains all the R code that was used to perform the analyses and generate the figures for the GSE69244 data set 34 . Copyright: © 2016 Soneson C et al. Data associated with the article are available under the terms of the Creative Commons Zero \"No rights reserved\" data waiver (CC0 1.0 Public domain dedication)."
-        },
-        {
-          "label": "Data set 6",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4712774/bin/f1000research-4-8770-s0005.tgz",
-          "description": "http://dx.doi.org/10.5256/f1000research.7563.d114730 Data set 6 (html) contain all the R code that was used to perform the analyses and generate the figures for the GSE72165 data set 35 . Copyright: © 2016 Soneson C et al. Data associated with the article are available under the terms of the Creative Commons Zero \"No rights reserved\" data waiver (CC0 1.0 Public domain dedication)."
-        },
-        {
-          "label": "Supplementary file 7",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4712774/bin/f1000research-4-8770-s0006.tgz",
-          "description": "Click here for additional data file."
-        },
-        {
-          "label": "Data set 1",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4712774/bin/f1000research-4-8770-s0000.tgz",
-          "description": "http://dx.doi.org/10.5256/f1000research.7563.d114722 Dataset 1 (html) contains all the R code that was used to perform the analyses and generate the figures for the sim1 data set 30 . Copyright: © 2016 Soneson C et al. Data associated with the article are available under the terms of the Creative Commons Zero \"No rights reserved\" data waiver (CC0 1.0 Public domain dedication)."
-        },
-        {
-          "label": "Data set 2",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4712774/bin/f1000research-4-8770-s0001.tgz",
-          "description": "http://dx.doi.org/10.5256/f1000research.7563.d114723 Data set 2 (html) contains all the R code that was used to perform the analyses and generate the figures for the sim2 data set 31 . Copyright: © 2016 Soneson C et al. Data associated with the article are available under the terms of the Creative Commons Zero \"No rights reserved\" data waiver (CC0 1.0 Public domain dedication)."
-        },
-        {
-          "label": "Data set 3",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4712774/bin/f1000research-4-8770-s0002.tgz",
-          "description": "http://dx.doi.org/10.5256/f1000research.7563.d114724 Data set 3 (html) contains all the R code that was used to perform the analyses and generate the figures for the Bottomly data set 32 . Copyright: © 2016 Soneson C et al. Data associated with the article are available under the terms of the Creative Commons Zero \"No rights reserved\" data waiver (CC0 1.0 Public domain dedication)."
-        },
-        {
-          "label": "Data set 4",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4712774/bin/f1000research-4-8770-s0003.tgz",
-          "description": "http://dx.doi.org/10.5256/f1000research.7563.d114725 Data set 4 (html) contains all the R code that was used to perform the analyses and generate the figures for the GSE64570 data set 33 . Copyright: © 2016 Soneson C et al. Data associated with the article are available under the terms of the Creative Commons Zero \"No rights reserved\" data waiver (CC0 1.0 Public domain dedication)."
-        },
-        {
-          "label": "Data set 5",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4712774/bin/f1000research-4-8770-s0004.tgz",
-          "description": "http://dx.doi.org/10.5256/f1000research.7563.d114726 Data set 5 (html) contains all the R code that was used to perform the analyses and generate the figures for the GSE69244 data set 34 . Copyright: © 2016 Soneson C et al. Data associated with the article are available under the terms of the Creative Commons Zero \"No rights reserved\" data waiver (CC0 1.0 Public domain dedication)."
-        },
-        {
-          "label": "Data set 6",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4712774/bin/f1000research-4-8770-s0005.tgz",
-          "description": "http://dx.doi.org/10.5256/f1000research.7563.d114730 Data set 6 (html) contain all the R code that was used to perform the analyses and generate the figures for the GSE72165 data set 35 . Copyright: © 2016 Soneson C et al. Data associated with the article are available under the terms of the Creative Commons Zero \"No rights reserved\" data waiver (CC0 1.0 Public domain dedication)."
-        },
-        {
-          "label": "Supplementary file 14",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4712774/bin/f1000research-4-8770-s0006.tgz",
-          "description": "Click here for additional data file."
-        }
-      ],
-      "fulltext_ok": true,
-      "asset_errors": [],
-      "assets_required": true,
-      "metrics": {
-        "impact_factor": "",
-        "jcr": "",
-        "jcr_quartile": "",
-        "jcr_q1": false,
-        "status": "not_found",
-        "source": "EasyScholar",
-        "retrieved_at": "2026-10-25T03:51:57Z"
-      },
-      "journal_display": "F1000Research（指标待查）",
-      "updated_at": "2026-10-25T03:51:57Z",
-      "ai_status": "skipped_non_jcr_q1",
-      "publishable": false,
-      "gate_reasons": [
-        "期刊未确认属于 JCR/SCI 1 区",
-        "AI 字段缺失：title_zh",
-        "AI 字段缺失：lead",
-        "AI 字段缺失：background",
-        "AI 字段缺失：research_question",
-        "AI 字段缺失：study_design",
-        "AI 字段缺失：methods",
-        "AI 字段缺失：results",
-        "AI 字段缺失：limitations",
-        "AI 字段缺失：takeaways",
-        "AI 字段缺失：figure_notes",
-        "AI 内容过短：lead",
-        "AI 内容过短：background",
-        "AI 内容过短：research_question",
-        "AI 内容过短：study_design",
-        "AI 内容过短：methods",
-        "AI 内容过短：results",
-        "AI 内容过短：limitations",
-        "AI 内容过短：takeaways",
-        "AI 图组解读不是数组"
-      ],
-      "status": "discarded"
     }
   ],
   "pending_candidates": []

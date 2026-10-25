@@ -282,8 +282,8 @@
     },
     "doi:10.1038/nature11234": {
       "status": "manual_review",
-      "attempts": 1,
-      "updated_at": "2026-10-25T03:49:44Z",
+      "attempts": 2,
+      "updated_at": "2026-10-25T06:14:39Z",
       "gate_reasons": [
         "AI 字段缺失：title_zh",
         "AI 字段缺失：lead",
@@ -308,8 +308,8 @@
     },
     "doi:10.1038/s41586-020-2008-3": {
       "status": "manual_review",
-      "attempts": 1,
-      "updated_at": "2026-10-25T03:50:31Z",
+      "attempts": 2,
+      "updated_at": "2026-10-25T06:15:32Z",
       "gate_reasons": [
         "AI 字段缺失：title_zh",
         "AI 字段缺失：lead",
@@ -334,10 +334,11 @@
     },
     "doi:10.1093/nar/gkac1052": {
       "status": "manual_review",
-      "attempts": 1,
-      "updated_at": "2026-10-25T03:51:14Z",
+      "attempts": 2,
+      "updated_at": "2026-10-25T06:16:18Z",
       "gate_reasons": [
-        "第 2 张图的结果解读过短"
+        "第 2 张图的结果解读过短",
+        "第 3 张图的结果解读过短"
       ]
     },
     "doi:10.1083/jcb.119.3.493": {
@@ -631,16 +632,16 @@
       "retrieved_at": "2026-10-25T03:51:57Z"
     }
   },
-  "updated_at": "2026-10-25T03:51:57Z",
+  "updated_at": "2026-10-25T06:16:58Z",
   "last_run": {
     "status": "success",
-    "selected": 5,
+    "selected": 3,
     "published": 0,
-    "candidates": 5,
+    "candidates": 3,
     "skipped_without_pmcid": 0,
     "search_error": "",
     "preserved_articles": 0,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-10-25T03:51:57Z"
+    "finished_at": "2026-10-25T06:16:58Z"
   }
 }
