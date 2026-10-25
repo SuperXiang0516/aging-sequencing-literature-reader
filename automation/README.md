@@ -9,6 +9,7 @@ Europe PMC 检索
   → 衰老/二代/三代/多组学/工具相关性评分
   → 每次最多选择 5 篇新候选
   → 获取 PMC 全文 XML、Methods、Results 和 Figure 原图/图注
+  → 下载并校验原图，保存到 web/generated/assets/<PMCID>/
   → EasyScholar 查询 IF/JCR
   → 仅保留 EasyScholar 确认的 SCI/JCR 1 区期刊
   → DeepSeek 生成结构化中文公众号式解读
@@ -22,7 +23,7 @@ Europe PMC 检索
 
 1. 主题评分达到阈值；
 2. 正文 XML 可以读取；
-3. 至少有一张带原始图注的正文 Figure，图片使用论文/PMC 原图直链，不截图、不裁剪；
+3. 至少有一张带原始图注的正文 Figure；图片先下载到网站资源目录并校验为真实图像，不截图、不裁剪；网页优先使用本地缓存，原始直链仅作为备用；
 4. AI 返回完整的导语、背景、研究问题、方法、结果、局限、启示和逐图解读；
 5. 通过质量门禁。
 
@@ -41,6 +42,7 @@ python3 -m unittest automation.test_collector -v
 python3 automation/collector.py \
   --fixture automation/fixtures/europepmc.json \
   --xml-fixture automation/fixtures/pmc-example.xml \
+  --assets-dir /tmp/library-assets \
   --state /tmp/library-state.json \
   --output /tmp/library-articles.json \
   --report /tmp/library-report.json
@@ -50,7 +52,7 @@ python3 automation/collector.py \
 
 ## 数据和指标
 
-`data/automation-state.json` 保存稳定 ID、已发布记录、有限重试状态和 EasyScholar 缓存；`web/generated/articles.json` 只包含已通过门禁的公开文章；`web/generated/run-report.json` 保存本轮摘要和失败原因。
+`data/automation-state.json` 保存稳定 ID、已发布记录、有限重试状态和 EasyScholar 缓存；`web/generated/articles.json` 只包含已通过门禁的公开文章；`web/generated/run-report.json` 保存本轮摘要和失败原因；`web/generated/assets/` 保存已发布文章的原始正文图。运行时下载到临时目录的文件可以删除，但已发布网页使用的本地资源不能删除。
 
 作者和期刊在数据中分开保存。网页展示为：
 

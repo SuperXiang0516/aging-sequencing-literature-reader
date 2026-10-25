@@ -8,6 +8,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from automation.collector import (
+    cache_figure_assets,
     extract_fulltext,
     easy_scholar_metrics,
     normalize_candidate,
@@ -64,6 +65,75 @@ class CollectorTests(unittest.TestCase):
         self.assertIn("Workflow", figures[0]["caption"])
         self.assertEqual(supplements[0]["label"], "Supplementary Table 1")
         self.assertTrue(supplements[0]["url"].endswith("/example-supplement.pdf"))
+
+    def test_cache_figure_assets_writes_validated_local_image(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            figures = [{"label": "Fig. 1", "caption": "caption", "image_url": "https://example.org/fig-1.png"}]
+            png = b"\x89PNG\r\n\x1a\n" + b"fake-png-payload"
+            with patch("automation.collector._http_read", return_value=png):
+                cached, errors = cache_figure_assets(figures, "PMC123456", root / "assets")
+            self.assertEqual(errors, [])
+            self.assertEqual(cached[0]["asset_status"], "downloaded")
+            self.assertTrue(cached[0]["local_url"].endswith("generated/assets/PMC123456/fig-01.png"))
+            self.assertEqual(cached[0]["asset_bytes"], len(png))
+            self.assertTrue((root / "assets/PMC123456/fig-01.png").exists())
+
+    def test_cache_figure_assets_rejects_html_error_page(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            figures = [{"label": "Fig. 1", "caption": "caption", "image_url": "https://example.org/fig-1.png"}]
+            with patch("automation.collector._http_read", return_value=b"<html>blocked</html>"):
+                cached, errors = cache_figure_assets(figures, "PMC123456", root / "assets")
+            self.assertEqual(len(errors), 1)
+            self.assertEqual(cached[0]["asset_status"], "error")
+            self.assertFalse((root / "assets/PMC123456/fig-01.png").exists())
+
+    def test_run_publishes_only_after_local_assets_are_cached(self):
+        article = {
+            "title_zh": "长读长宏基因组揭示年龄相关肠道基因组",
+            "lead": "这是一段来源可追溯的导语，用于说明研究对象、核心发现、关键方法和读者为什么需要继续阅读。" * 2,
+            "background": "背景说明" * 30,
+            "research_question": "研究问题" * 20,
+            "study_design": "研究设计" * 30,
+            "methods": "完整方法翻译，包含样本、测序平台、质控、统计和数据处理步骤。" * 20,
+            "results": "按正文翻译的结果，逐步说明比较对象、方向、统计证据和结论边界。" * 20,
+            "limitations": "局限与外推边界" * 12,
+            "takeaways": "对后续研究的启示" * 12,
+            "figure_notes": [{
+                "label": "图1",
+                "caption_zh": "图注翻译：展示研究流程、关键比较和主要结果。",
+                "what_question": "这张图回答研究问题。",
+                "how_to_read": "先看实验分组，再按 panel 顺序比较方向，最后结合正文统计量判断证据强度。" * 3,
+                "panel_reading": [{"panel": "a", "experiment": "实验流程", "comparison": "两组比较", "result": "正文报告的主要结果", "statistics": "正文未报告"}],
+                "interpretation": "结果解读" * 30,
+                "evidence": "正文图注与结果段共同支持该结论。",
+                "boundary": "该结果不应外推为普遍因果关系。",
+            }],
+        }
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            args = parse_args([
+                "--fixture", str(BASE / "fixtures/europepmc.json"),
+                "--xml-fixture", str(BASE / "fixtures/pmc-example.xml"),
+                "--assets-dir", str(root / "assets"),
+                "--state", str(root / "state.json"),
+                "--output", str(root / "articles.json"),
+                "--report", str(root / "report.json"),
+            ])
+            png = b"\x89PNG\r\n\x1a\n" + b"fake-png-payload"
+            with patch("automation.collector.generate_llm_article", return_value=(article, "success")), \
+                 patch("automation.collector.easy_scholar_metrics", return_value=Q1_METRICS), \
+                 patch("automation.collector._http_read", return_value=png):
+                summary = run(args)
+                second = run(args)
+            self.assertEqual(summary["published"], 1)
+            self.assertEqual(second["selected"], 0)
+            output = json.loads((root / "articles.json").read_text(encoding="utf-8"))
+            figure = output["articles"][0]["figures"][0]
+            self.assertEqual(figure["asset_status"], "downloaded")
+            self.assertTrue(figure["local_url"].startswith("generated/assets/PMC1234567/"))
+            self.assertTrue((root / "assets/PMC1234567/fig-01.png").exists())
 
     def test_dry_run_does_not_publish_without_llm(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -310,6 +380,25 @@ class CollectorTests(unittest.TestCase):
         publishable, reasons = publication_gate(record, article)
         self.assertFalse(publishable)
         self.assertIn("期刊未确认属于 JCR/SCI 1 区", reasons)
+
+    def test_production_gate_rejects_short_article_and_incomplete_figure_note(self):
+        record = {
+            "metrics": {"jcr_q1": True},
+            "assets_required": True,
+            "fulltext_ok": True,
+            "figures": [{"label": "Fig. 1", "caption": "caption", "image_url": "https://example.org/fig.jpg", "local_url": "generated/assets/PMC1/fig-01.jpg", "asset_status": "downloaded"}],
+            "methods_text": "methods",
+            "results_text": "results",
+        }
+        article = {
+            "title_zh": "标题", "lead": "短", "background": "短", "research_question": "短", "study_design": "短",
+            "methods": "短", "results": "短", "limitations": "短", "takeaways": "短",
+            "figure_notes": [{"caption_zh": "图注", "interpretation": "一句话"}, {"caption_zh": "多余图", "interpretation": "多余解读"}],
+        }
+        publishable, reasons = publication_gate(record, article)
+        self.assertFalse(publishable)
+        self.assertIn("AI 内容过短：methods", reasons)
+        self.assertIn("AI 图组解读数量与正文原图数量不一致", reasons)
 
     def test_easyscholar_sci_q1_is_normalized_for_the_gate(self):
         payload = {"data": {"officialRank": {"all": {"sciif": "12.3", "sci": "Q1"}}}}

@@ -54,15 +54,17 @@ jobs:
           DAILY_NEW_LIMIT: ${{ inputs.max_new || '5' }}
           CANDIDATE_LIMIT: ${{ inputs.candidate_limit || '40' }}
         run: |
+          mkdir -p web/generated/assets
           python automation/collector.py \
             --max-new "${DAILY_NEW_LIMIT}" \
-            --candidate-limit "${CANDIDATE_LIMIT}"
+            --candidate-limit "${CANDIDATE_LIMIT}" \
+            --assets-dir web/generated/assets
 
       - name: Commit generated state and report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/automation-state.json web/generated/articles.json web/generated/run-report.json
+          git add data/automation-state.json web/generated/articles.json web/generated/run-report.json web/generated/assets
           if git diff --cached --quiet; then
             echo "没有新的状态或文章变更。"
           else

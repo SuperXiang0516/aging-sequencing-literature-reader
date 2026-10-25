@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import html
 import json
 import os
@@ -46,6 +47,15 @@ EUROPE_PMC_SEARCH = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
 EASYSCHOLAR_URL = "https://www.easyscholar.cc/open/getPublicationRank"
 NCBI_EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 TRANSIENT_HTTP_STATUS = {408, 425, 429, 500, 502, 503, 504}
+MAX_FIGURE_BYTES = 32 * 1024 * 1024
+IMAGE_MAGIC = (
+    (b"\x89PNG\r\n\x1a\n", ".png"),
+    (b"\xff\xd8\xff", ".jpg"),
+    (b"GIF87a", ".gif"),
+    (b"GIF89a", ".gif"),
+    (b"II*\x00", ".tif"),
+    (b"MM\x00*", ".tif"),
+)
 # NCBI ESummary does not return the abstract.  A PMC ESearch match therefore
 # often has a zero title-only score even though the paper matched the complete
 # ageing + sequencing query.  Keep such hits eligible for the later full-text
@@ -79,6 +89,24 @@ def first_child(node: ET.Element, name: str) -> Optional[ET.Element]:
         if local_name(child.tag) == name:
             return child
     return None
+
+
+def iter_leaf_sections(node: ET.Element, parents: tuple[str, ...] = ()) -> Iterable[tuple[tuple[str, ...], str]]:
+    """Yield each leaf XML section once, avoiding nested-section duplication."""
+    if local_name(node.tag) != "sec":
+        for child in node:
+            yield from iter_leaf_sections(child, parents)
+        return
+    title = element_text(first_child(node, "title"))
+    current = parents + ((title,) if title else ())
+    child_sections = [child for child in node if local_name(child.tag) == "sec"]
+    if child_sections:
+        for child in child_sections:
+            yield from iter_leaf_sections(child, current)
+        return
+    text = element_text(node)
+    if text:
+        yield current, text
 
 
 def safe_key(record: Mapping[str, Any]) -> str:
@@ -191,6 +219,102 @@ def http_json(url: str, *, timeout: int = 30, headers: Optional[Mapping[str, str
 def http_text(url: str, *, timeout: int = 40) -> str:
     request = urllib.request.Request(url, headers={"User-Agent": "paper-plot-library/1.0", "Accept": "application/xml,text/xml,text/plain"})
     return _http_read(request, timeout=timeout, max_bytes=20 * 1024 * 1024).decode("utf-8", errors="replace")
+
+
+def image_suffix(payload: bytes, url: str = "") -> str:
+    """Return a safe image suffix after checking the binary magic bytes."""
+    for magic, suffix in IMAGE_MAGIC:
+        if payload.startswith(magic):
+            return suffix
+    # WebP files begin with RIFF but also carry WEBP at byte 8.  Keep this
+    # explicit so an HTML error page cannot be saved as a published image.
+    if payload[:4] == b"RIFF" and payload[8:12] == b"WEBP":
+        return ".webp"
+    if payload.lstrip().startswith(b"<svg"):
+        return ".svg"
+    return ""
+
+
+def download_image(url: str, destination_stem: Path) -> dict[str, Any]:
+    """Download and validate one original figure into a deterministic path."""
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "paper-plot-library/1.0",
+            "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+            "Referer": "https://pmc.ncbi.nlm.nih.gov/",
+        },
+    )
+    payload = _http_read(request, timeout=60, max_bytes=MAX_FIGURE_BYTES)
+    if not payload:
+        raise ValueError("empty_image_response")
+    if len(payload) >= MAX_FIGURE_BYTES:
+        raise ValueError("image_too_large")
+    suffix = image_suffix(payload, url)
+    if not suffix:
+        raise ValueError("response_is_not_a_supported_image")
+    destination = destination_stem.with_suffix(suffix)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_bytes(payload)
+    return {
+        "path": destination,
+        "bytes": len(payload),
+        "sha256": hashlib.sha256(payload).hexdigest(),
+        "suffix": suffix,
+    }
+
+
+def cache_figure_assets(figures: list[dict[str, Any]], pmcid: str, assets_dir: Optional[Path], *, url_prefix: str = "generated/assets") -> tuple[list[dict[str, Any]], list[str]]:
+    """Persist original figure binaries and attach stable web-relative URLs.
+
+    ``assets_dir`` is intentionally optional for deterministic unit tests. The
+    GitHub workflow always supplies ``web/generated/assets`` so a published
+    article never depends on a hot-linked image.
+    """
+    if not assets_dir:
+        return figures, []
+    paper_key = re.sub(r"[^A-Za-z0-9_.-]+", "-", clean_text(pmcid) or "paper").strip("-") or "paper"
+    errors: list[str] = []
+    for index, figure in enumerate(figures, start=1):
+        if not isinstance(figure, dict):
+            errors.append(f"fig-{index:02d}:invalid_record")
+            continue
+        source = clean_text(figure.get("image_url") or figure.get("original_url"))
+        if not source:
+            errors.append(f"fig-{index:02d}:missing_source_url")
+            continue
+        stem = Path(assets_dir) / paper_key / f"fig-{index:02d}"
+        try:
+            result = download_image(source, stem)
+            filename = result["path"].name
+            relative_url = f"{url_prefix.rstrip('/')}/{paper_key}/{filename}"
+            figure.update({
+                "original_url": source,
+                "local_url": relative_url,
+                "asset_path": relative_url,
+                "asset_bytes": result["bytes"],
+                "asset_sha256": result["sha256"],
+                "asset_status": "downloaded",
+            })
+        except (OSError, urllib.error.URLError, ValueError) as exc:
+            figure.update({"original_url": source, "asset_status": "error", "asset_error": type(exc).__name__})
+            errors.append(f"fig-{index:02d}:{type(exc).__name__}")
+    return figures, errors
+
+
+def local_asset_path(assets_dir: Optional[Path], relative_url: Any) -> Optional[Path]:
+    """Resolve a stored web-relative asset URL inside the configured asset root."""
+    if not assets_dir:
+        return None
+    parts = Path(clean_text(relative_url)).parts
+    if len(parts) < 2:
+        return None
+    return Path(assets_dir) / parts[-2] / parts[-1]
+
+
+def local_asset_exists(assets_dir: Optional[Path], relative_url: Any) -> bool:
+    path = local_asset_path(assets_dir, relative_url)
+    return bool(path and path.is_file() and path.stat().st_size > 0)
 
 
 def search_europe_pmc(query: str, *, page_size: int = 40, fixture: Optional[Path] = None) -> list[dict[str, Any]]:
@@ -376,16 +500,10 @@ def extract_fulltext(xml_text: str, pmcid: str) -> tuple[str, str, str, list[dic
     results: list[str] = []
     figures: list[dict[str, str]] = []
     supplements: list[dict[str, str]] = []
-    for section in root.iter():
-        if local_name(section.tag) != "sec":
-            continue
-        title_node = first_child(section, "title")
-        title = element_text(title_node)
-        text = element_text(section)
-        if not text:
-            continue
-        paragraphs.append(f"{title}: {text}" if title else text)
-        lowered = title.lower()
+    for path, text in iter_leaf_sections(root):
+        heading = " / ".join(path)
+        paragraphs.append(f"{heading}: {text}" if heading else text)
+        lowered = " ".join(path).lower()
         if any(token in lowered for token in ("method", "material", "experimental", "protocol")):
             methods.append(text)
         if "result" in lowered:
@@ -472,7 +590,7 @@ def is_jcr_q1(metrics: Mapping[str, Any]) -> bool:
 
 def llm_prompt(record: Mapping[str, Any]) -> str:
     figures = "\n".join(f"{f.get('label')}: {f.get('caption')}" for f in record.get("figures", []))
-    return f"""你是严谨的生物医学文献编辑。请把下面的论文材料写成中文公众号式深度解读，不能补造材料中没有的数字、实验或结论。首次出现的缩写写出英文全称，后文使用缩写。结果部分按正文逻辑解释：观察到什么、怎么读图、支持什么、不能支持什么。方法部分要把正文方法翻译并适当压缩，但保留样本、平台、关键软件、阈值和统计方法。只返回 JSON，不要 Markdown 代码围栏，字段必须完整：title_zh, lead, background, research_question, study_design, methods, results, limitations, takeaways, figure_notes。figure_notes 是数组，每项包含 label、caption_zh、interpretation。\n\n题目：{record.get('title')}\n作者：{', '.join(record.get('authors', []))}\n期刊：{record.get('journal')}\n摘要：{record.get('abstract')}\n正文方法：{record.get('methods_text', '')[:24000]}\n正文结果：{record.get('results_text', '')[:30000]}\n正文图注：{figures[:16000]}"""
+    return f"""你是严谨的生物医学文献编辑，负责生成接近高质量中文公众号长文的论文精读稿。只能使用给出的摘要、Methods、Results 和图注；不能补造材料中没有的数字、样本、实验或结论。如果正文没有提供某个数值，明确写“正文未报告”，不要猜测。首次出现的缩写写出英文全称，后文使用缩写。方法部分要把正文 Methods 翻译成中文并适当压缩，但保留研究对象、样本量、平台、建库/测序流程、关键软件、阈值、统计方法和数据可得性。结果部分要按正文逻辑解释观察、读图顺序、证据支持和结论边界。只返回 JSON，不要 Markdown 代码围栏。顶层字段必须完整：title_zh, lead, background, research_question, study_design, methods, results, limitations, takeaways, figure_notes。figure_notes 必须与正文图数量一致；每项包含 label、caption_zh、what_question、how_to_read、panel_reading（数组，每项含 panel、experiment、comparison、result、statistics）、interpretation、evidence、boundary。panel_reading 只能根据图注和正文结果填写；如果某个 panel 的数值或统计量没有在材料中出现，写“正文未报告”。\n\n题目：{record.get('title')}\n作者：{', '.join(record.get('authors', []))}\n期刊：{record.get('journal')}\n摘要：{record.get('abstract')}\n正文方法：{record.get('methods_text', '')[:24000]}\n正文结果：{record.get('results_text', '')[:30000]}\n正文图注：{figures[:16000]}"""
 
 
 def generate_llm_article(record: dict[str, Any]) -> tuple[dict[str, Any], str]:
@@ -509,26 +627,70 @@ def publication_gate(record: Mapping[str, Any], article: Mapping[str, Any]) -> t
         reasons.append("没有可追溯的正文原图")
     if any(not isinstance(fig, Mapping) or not clean_text(fig.get("image_url") or fig.get("original_url")) for fig in figures):
         reasons.append("存在缺失正文原图直链")
+    if record.get("assets_required") and any(not isinstance(fig, Mapping) or not clean_text(fig.get("local_url") or fig.get("asset_path")) or fig.get("asset_status") != "downloaded" for fig in figures):
+        reasons.append("存在未成功缓存到网站的正文原图")
     if any(not isinstance(fig, Mapping) or not clean_text(fig.get("caption")) for fig in figures):
         reasons.append("存在缺失图注")
     if not clean_text(record.get("methods_text")):
         reasons.append("正文 Methods 未提取")
     if not clean_text(record.get("results_text")):
         reasons.append("正文 Results 未提取")
-    for field in ("title_zh", "background", "methods", "results", "figure_notes"):
+    prose_fields = ("title_zh", "lead", "background", "research_question", "study_design", "methods", "results", "limitations", "takeaways")
+    for field in prose_fields:
         if not article.get(field):
             reasons.append(f"AI 字段缺失：{field}")
+        elif not isinstance(article.get(field), str):
+            reasons.append(f"AI 字段类型错误：{field}")
+    if not article.get("figure_notes"):
+        reasons.append("AI 字段缺失：figure_notes")
+    # The production workflow asks for a full公众号-style article. Keep the
+    # fixture/legacy path permissive, but do not publish a production record
+    # when the model has returned only one-line placeholders.
+    if record.get("assets_required"):
+        minimum_lengths = {
+            "lead": 40,
+            "background": 120,
+            "research_question": 60,
+            "study_design": 100,
+            "methods": 220,
+            "results": 220,
+            "limitations": 60,
+            "takeaways": 60,
+        }
+        for field, minimum in minimum_lengths.items():
+            value = article.get(field)
+            if not isinstance(value, str) or len(clean_text(value)) < minimum:
+                reasons.append(f"AI 内容过短：{field}")
     notes = article.get("figure_notes")
-    if isinstance(notes, list) and len(notes) < len(figures):
-        reasons.append("AI 图组解读数量少于正文原图数量")
-    if isinstance(notes, list):
-        for index, note in enumerate(notes[: len(figures)]):
+    if not isinstance(notes, list):
+        reasons.append("AI 图组解读不是数组")
+    elif len(notes) != len(figures):
+        reasons.append("AI 图组解读数量与正文原图数量不一致")
+    elif record.get("assets_required"):
+        for index, note in enumerate(notes):
+            required_note_fields = ("caption_zh", "what_question", "how_to_read", "interpretation", "evidence", "boundary")
+            if not isinstance(note, Mapping) or any(not clean_text(note.get(field)) for field in required_note_fields):
+                reasons.append(f"第 {index + 1} 张图的图注/读图/证据字段不完整")
+                continue
+            if len(clean_text(note.get("caption_zh"))) < 20:
+                reasons.append(f"第 {index + 1} 张图的中文图注过短")
+            if len(clean_text(note.get("how_to_read"))) < 40:
+                reasons.append(f"第 {index + 1} 张图的读图说明过短")
+            if len(clean_text(note.get("interpretation"))) < 70:
+                reasons.append(f"第 {index + 1} 张图的结果解读过短")
+            panels = note.get("panel_reading")
+            if not isinstance(panels, list) or not panels:
+                reasons.append(f"第 {index + 1} 张图缺少 panel 逐项阅读")
+            elif any(not isinstance(panel, Mapping) or any(not clean_text(panel.get(field)) for field in ("panel", "experiment", "comparison", "result", "statistics")) for panel in panels):
+                reasons.append(f"第 {index + 1} 张图的 panel 阅读字段不完整")
+    elif isinstance(notes, list):
+        for index, note in enumerate(notes):
             if not isinstance(note, Mapping) or not clean_text(note.get("caption_zh")) or not clean_text(note.get("interpretation")):
                 reasons.append(f"第 {index + 1} 张图的中文图注或解读不完整")
     return not reasons, reasons
 
 
-def make_record(candidate: dict[str, Any], metrics_cache: dict[str, Any], xml_fixture: Optional[Path] = None) -> dict[str, Any]:
+def make_record(candidate: dict[str, Any], metrics_cache: dict[str, Any], xml_fixture: Optional[Path] = None, assets_dir: Optional[Path] = None, assets_url_prefix: str = "generated/assets") -> dict[str, Any]:
     record = dict(candidate)
     xml_text = ""
     try:
@@ -538,11 +700,14 @@ def make_record(candidate: dict[str, Any], metrics_cache: dict[str, Any], xml_fi
             xml_text = fetch_pmc_xml(record["pmcid"], prefer_ncbi=record.get("source") == "NCBI PMC")
         if xml_text and record.get("pmcid"):
             fulltext, methods, results, figures, supplements = extract_fulltext(xml_text, record["pmcid"])
+            figures, asset_errors = cache_figure_assets(figures, record["pmcid"], assets_dir, url_prefix=assets_url_prefix)
             record.update({"fulltext_text": fulltext, "methods_text": methods, "results_text": results or fulltext, "figures": figures, "supplements": supplements, "fulltext_ok": bool(fulltext)})
+            record["asset_errors"] = asset_errors
         else:
-            record.update({"fulltext_text": "", "methods_text": "", "results_text": "", "figures": [], "supplements": [], "fulltext_ok": False})
+            record.update({"fulltext_text": "", "methods_text": "", "results_text": "", "figures": [], "supplements": [], "fulltext_ok": False, "asset_errors": []})
     except (OSError, ET.ParseError, urllib.error.URLError, ValueError):
-        record.update({"fulltext_text": "", "methods_text": "", "results_text": "", "figures": [], "supplements": [], "fulltext_ok": False})
+        record.update({"fulltext_text": "", "methods_text": "", "results_text": "", "figures": [], "supplements": [], "fulltext_ok": False, "asset_errors": ["fulltext_or_asset_fetch_failed"]})
+    record["assets_required"] = bool(assets_dir)
     record["metrics"] = easy_scholar_metrics(record.get("journal", ""), metrics_cache)
     record["journal_display"] = f"{record.get('journal', '')}（{metric_label(record['metrics'])}）"
     record["updated_at"] = utc_now()
@@ -553,14 +718,15 @@ def make_record(candidate: dict[str, Any], metrics_cache: dict[str, Any], xml_fi
         # Do not spend a DeepSeek request on a journal that cannot be shown
         # under the user's JCR-1-only policy.
         article, ai_status = {}, "skipped_non_jcr_q1"
-    elif record.get("fulltext_ok") and record.get("figures"):
+    elif record.get("fulltext_ok") and record.get("figures") and (not record.get("assets_required") or not record.get("asset_errors")):
         article, ai_status = generate_llm_article(record)
     else:
-        article, ai_status = {}, "skipped_no_retrievable_fulltext"
+        article, ai_status = {}, "skipped_no_retrievable_fulltext_or_assets"
     record["article"] = article
     record["ai_status"] = ai_status
     record["publishable"], record["gate_reasons"] = publication_gate(record, article)
-    record["status"] = "published" if record["publishable"] else ("manual_review" if record["fulltext_ok"] and record["figures"] and ai_status != "skipped_non_jcr_q1" else "discarded")
+    source_incomplete = ai_status in {"skipped_non_jcr_q1", "skipped_no_retrievable_fulltext_or_assets"}
+    record["status"] = "published" if record["publishable"] else ("manual_review" if record["fulltext_ok"] and record["figures"] and not source_incomplete else "discarded")
     return record
 
 
@@ -582,7 +748,7 @@ def public_projection(record: Mapping[str, Any]) -> dict[str, Any]:
     return {key: value for key, value in record.items() if key not in excluded}
 
 
-def is_preservable_record(record: Mapping[str, Any]) -> bool:
+def is_preservable_record(record: Mapping[str, Any], assets_dir: Optional[Path] = None) -> bool:
     """Keep only already-published records that still satisfy the public gate.
 
     Older state files can contain records created before the original-figure
@@ -597,16 +763,40 @@ def is_preservable_record(record: Mapping[str, Any]) -> bool:
         return False
     if any(not isinstance(figure, Mapping) or not clean_text(figure.get("caption")) or not clean_text(figure.get("image_url") or figure.get("original_url")) for figure in figures):
         return False
+    if record.get("assets_required") and any(not isinstance(figure, Mapping) or figure.get("asset_status") != "downloaded" or not clean_text(figure.get("local_url") or figure.get("asset_path")) for figure in figures):
+        return False
+    if assets_dir and record.get("assets_required"):
+        for figure in figures:
+            relative = clean_text(figure.get("local_url") or figure.get("asset_path"))
+            if not local_asset_exists(assets_dir, relative):
+                return False
     return True
 
 
 def run(args: argparse.Namespace) -> dict[str, Any]:
     state = load_json(args.state, {"schema_version": SCHEMA_VERSION, "records": {}, "attempted": {}, "metrics_cache": {}})
-    records: dict[str, Any] = {
-        key: public_projection(value)
-        for key, value in (state.get("records", {}) if isinstance(state.get("records"), Mapping) else {}).items()
-        if isinstance(value, Mapping) and is_preservable_record(value)
-    }
+    records: dict[str, Any] = {}
+    raw_records = state.get("records", {}) if isinstance(state.get("records"), Mapping) else {}
+    for key, raw_value in raw_records.items():
+        if not isinstance(raw_value, Mapping):
+            continue
+        value = dict(raw_value)
+        # Migrate previously published records from remote-only figure URLs to
+        # local web assets.  A record is preserved only after every figure has
+        # been downloaded and validated; a broken image is never silently kept.
+        if args.assets_dir and value.get("fulltext_ok") and isinstance(value.get("figures"), list):
+            figures = [dict(item) for item in value["figures"] if isinstance(item, Mapping)]
+            if figures and any(
+                not clean_text(item.get("local_url") or item.get("asset_path"))
+                or not local_asset_exists(args.assets_dir, item.get("local_url") or item.get("asset_path"))
+                for item in figures
+            ):
+                figures, asset_errors = cache_figure_assets(figures, clean_text(value.get("pmcid")) or key, args.assets_dir, url_prefix=args.assets_url_prefix)
+                value["figures"] = figures
+                value["asset_errors"] = asset_errors
+                value["assets_required"] = True
+        if is_preservable_record(value, args.assets_dir):
+            records[key] = public_projection(value)
     attempted: dict[str, Any] = state.get("attempted", {}) if isinstance(state.get("attempted"), Mapping) else {}
     metrics_cache: dict[str, Any] = state.get("metrics_cache", {}) if isinstance(state.get("metrics_cache"), Mapping) else {}
     # Europe PMC occasionally returns a transient 5xx/429 response even when
@@ -657,7 +847,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         if published_this_run >= args.max_new:
             break
         selected.append(candidate)
-        record = make_record(candidate, metrics_cache, args.xml_fixture)
+        record = make_record(candidate, metrics_cache, args.xml_fixture, args.assets_dir, args.assets_url_prefix)
         processed.append(record)
         previous_attempts = int(attempted.get(record["id"], {}).get("attempts", 0)) if isinstance(attempted.get(record["id"]), Mapping) else 0
         attempted[record["id"]] = {"status": record["status"], "attempts": previous_attempts + 1, "updated_at": record["updated_at"], "gate_reasons": record["gate_reasons"]}
@@ -665,7 +855,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             records[record["id"]] = public_projection(record)
             published_this_run += 1
     published = sorted(records.values(), key=lambda r: (r.get("year", ""), r.get("updated_at", "")), reverse=True)
-    state.update({"schema_version": SCHEMA_VERSION, "updated_at": utc_now(), "records": records, "attempted": attempted, "metrics_cache": metrics_cache, "last_run": {"status": search_status, "selected": len(selected), "published": published_this_run, "candidates": len(candidates), "skipped_without_pmcid": skipped_without_pmcid, "search_error": search_error, "preserved_articles": len(records), "finished_at": utc_now()}})
+    state.update({"schema_version": SCHEMA_VERSION, "updated_at": utc_now(), "records": records, "attempted": attempted, "metrics_cache": metrics_cache, "last_run": {"status": search_status, "selected": len(selected), "published": published_this_run, "candidates": len(candidates), "skipped_without_pmcid": skipped_without_pmcid, "search_error": search_error, "preserved_articles": len(records), "asset_dir": str(args.assets_dir) if args.assets_dir else "", "finished_at": utc_now()}})
     save_json(args.state, state)
     save_json(args.output, {"schema_version": SCHEMA_VERSION, "generated_at": utc_now(), "articles": [public_projection(record) for record in published]})
     report_records = [{key: value for key, value in record.items() if key not in {"abstract", "fulltext_text", "methods_text", "results_text", "article"}} for record in processed]
@@ -678,6 +868,8 @@ def parse_args(argv: Optional[Iterable[str]] = None) -> argparse.Namespace:
     parser.add_argument("--state", type=Path, default=Path("data/automation-state.json"))
     parser.add_argument("--output", type=Path, default=Path("web/generated/articles.json"))
     parser.add_argument("--report", type=Path, default=Path("web/generated/run-report.json"))
+    parser.add_argument("--assets-dir", type=Path, default=None, help="Persist validated original figure binaries here")
+    parser.add_argument("--assets-url-prefix", default="generated/assets", help="Web-relative prefix stored in figure.local_url")
     parser.add_argument("--fixture", type=Path, help="Use a saved Europe PMC JSON response for deterministic tests")
     parser.add_argument("--xml-fixture", type=Path, help="Use a saved PMC XML document for deterministic tests")
     parser.add_argument("--query", default=os.environ.get("LITERATURE_QUERY", DEFAULT_QUERY))

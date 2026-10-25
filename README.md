@@ -4,14 +4,14 @@
 
 ## 当前已完成
 
-- `web/index.html`：自动更新网站入口；以公众号/Word 式连续文章展示 `web/generated/articles.json` 中通过门禁的论文。
+- `web/index.html`：自动更新网站入口；以公众号/Word 式连续文章展示 `web/generated/articles.json` 中通过门禁的论文。每篇文章进入独立阅读页，正文图紧跟图注和逐图解读。
 - 「图形形式」与「分析功能」两个独立下拉选项，支持组合筛选。
 - 论文目录、图源与代码链接、输入文件结构、中文静态阅读笔记、待核问题。
 - 已移除双入口导航和衰老日报快照。
 
 当前仓库已经包含一个独立的自动化入口：`automation/collector.py`、`.github/workflows/daily-literature.yml` 和 `web/auto-library.html`。它不会执行作者代码，也不会把 PDF 页面截图当作正文图；它只在全文、正文图和图注都能追溯时发布文章。现有 `literature-demo.html` 的 3 篇示范仍然保留。
 
-自动化流程为：Europe PMC 候选检索 → 衰老/二代/三代/多组学/工具开发相关性评分 → 只选取尚未处理且分数达标的候选（默认每天最多 5 篇）→ 获取 PMC 全文 XML、正文方法、结果和 Figure 原图直链 → 查询 EasyScholar 期刊指标 → 只保留 EasyScholar 确认的 SCI/JCR 1 区期刊 → 调用 DeepSeek/OpenAI 兼容接口生成公众号式中文解读 → 质量门禁 → 写入 `web/generated/articles.json` → GitHub Pages 发布。无法获取正文、正文图、图注或 Q1 指标的候选会进入运行报告，不会显示在网站上；暂时的 AI 失败会在后续运行中有限重试。
+自动化流程为：Europe PMC 候选检索 → 衰老/二代/三代/多组学/工具开发相关性评分 → 只选取尚未处理且分数达标的候选（默认每天最多 5 篇）→ 获取 PMC 全文 XML、正文方法、结果和 Figure 原图直链 → 下载并校验原始图到 `web/generated/assets/<PMCID>/` → 查询 EasyScholar 期刊指标 → 只保留 EasyScholar 确认的 SCI/JCR 1 区期刊 → 调用 DeepSeek/OpenAI 兼容接口生成公众号式中文解读 → 质量门禁 → 写入 `web/generated/articles.json` → GitHub Pages 发布。网页优先读取本地原图，远程直链只作备用；无法获取正文、正文图、图注、网站本地图或 Q1 指标的候选会进入运行报告，不会显示在网站上；暂时的 AI 失败会在后续运行中有限重试。
 
 ## 后续复用范围
 
@@ -63,3 +63,26 @@ GitHub Secrets 官方说明：https://docs.github.com/en/actions/how-tos/write-w
 4. 完成许可、图—脚本映射、输入结构和失败恢复检查后，配置独立 Pages 与 Actions。
 
 现有衰老网站继续使用自己的仓库、网址和任务；本原型不会改变它。
+
+## 同步到已有 GitHub Desktop 仓库
+
+本地核验通过后，只把源码和工作流同步到已有 clone；不要用示例运行生成的
+`data/automation-state.json`、`web/generated/articles.json` 或
+`web/generated/run-report.json` 覆盖线上已有数据。可在 Terminal 执行（路径按你的电脑修改）：
+
+```bash
+SRC="/Users/xiangzhoufu/Documents/Codex/2026-09-19/https-github-com-yin-huamin-meta/paper-plot-library"
+DST="/Users/xiangzhoufu/Projects/Github_tools/aging-sequencing-literature-reader/script"
+cp -p "$SRC/automation/collector.py" "$DST/automation/collector.py"
+cp -p "$SRC/automation/test_collector.py" "$DST/automation/test_collector.py"
+cp -p "$SRC/automation/README.md" "$DST/automation/README.md"
+cp -p "$SRC/README.md" "$DST/README.md"
+cp -p "$SRC/.github/workflows/daily-literature.yml" "$DST/.github/workflows/daily-literature.yml"
+cp -p "$SRC/web/auto-library.html" "$DST/web/auto-library.html"
+cp -p "$SRC/web/index.html" "$DST/web/index.html"
+mkdir -p "$DST/web/generated/assets"
+cd "$DST"
+python3 -m unittest automation.test_collector -v
+```
+
+确认测试通过后，在 GitHub Desktop 检查 Changes，只提交上述源码/工作流和你明确要保留的网页文件；不要提交 `.env`、API key、临时下载目录或本地 PDF。提交并 Push origin 后，到 Actions 手动运行一次 `Daily sequencing and ageing literature reader`，确认 build 与 deploy 都为绿色，再等待下一次定时运行。
