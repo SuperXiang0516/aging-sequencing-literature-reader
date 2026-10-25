@@ -641,14 +641,31 @@ def extract_fulltext(xml_text: str, pmcid: str, asset_map: Optional[Mapping[str,
             continue
         label = element_text(first_child(fig, "label"))
         caption = element_text(first_child(fig, "caption"))
+        fig_id = clean_text(fig.attrib.get("id") or fig.attrib.get("xml:id")).casefold()
         href = ""
         for node in fig.iter():
             if local_name(node.tag) == "graphic":
                 href = clean_text(node.attrib.get("{http://www.w3.org/1999/xlink}href") or node.attrib.get("href"))
                 if href:
                     break
-        if href:
-            figures.append({"label": label or f"Figure {len(figures) + 1}", "caption": caption, "image_url": _mapped_figure_url(pmcid, href, asset_map)})
+        # A ``fig`` without a caption is usually a graphical abstract, a
+        # decorative thumbnail, or a publisher-only placeholder.  It is not
+        # a正文 figure that can be explained and therefore must not consume a
+        # figure-note slot or make the whole article fail the caption gate.
+        # Keeping it out here also prevents the first ``ga1`` object in many
+        # PMC packages from producing ``存在缺失图注`` later in the pipeline.
+        figure_hint = f"{fig_id} {label} {caption} {href}".casefold()
+        # PMC packages commonly expose the graphical abstract as ``ga1`` or
+        # as a separately labelled ``Graphical abstract`` object.  It is not
+        # a numbered正文图 and has no corresponding results discussion, so it
+        # must not consume a figure-note slot.
+        if re.search(r"(?:^|[\s_-])ga\d*(?:$|[\s_.-])", figure_hint) or "graphical abstract" in figure_hint:
+            continue
+        if href and caption:
+            image_url = _mapped_figure_url(pmcid, href, asset_map)
+            if any(clean_text(existing.get("image_url")).casefold() == image_url.casefold() for existing in figures):
+                continue
+            figures.append({"label": label or f"Figure {len(figures) + 1}", "caption": caption, "image_url": image_url})
     for node in root.iter():
         if local_name(node.tag) != "supplementary-material":
             continue
@@ -659,6 +676,22 @@ def extract_fulltext(xml_text: str, pmcid: str, asset_map: Optional[Mapping[str,
                 href = clean_text(child.attrib.get("{http://www.w3.org/1999/xlink}href") or child.attrib.get("href"))
         if href:
             supplements.append({"label": label or f"Supplementary file {len(supplements) + 1}", "url": _mapped_figure_url(pmcid, href, asset_map), "description": element_text(first_child(node, "caption"))})
+    # A small number of PMC XML packages put Methods in a non-leaf section or
+    # use a heading such as ``Experimental procedures``.  The leaf traversal
+    # above intentionally avoids duplicate nested text, but that can leave
+    # ``methods`` empty.  Recover the section once, using its complete text,
+    # before the publication gate sees a false missing-Methods failure.
+    if not methods:
+        method_markers = ("method", "material", "experimental", "protocol", "实验方法", "材料与方法")
+        for section in root.iter():
+            if local_name(section.tag) != "sec":
+                continue
+            heading = element_text(first_child(section, "title")).lower()
+            if any(marker in heading for marker in method_markers):
+                text = element_text(section)
+                if text:
+                    methods.append(text)
+                    break
     return "\n\n".join(paragraphs), "\n\n".join(methods), "\n\n".join(results), figures, supplements
 
 
@@ -716,25 +749,97 @@ def is_jcr_q1(metrics: Mapping[str, Any]) -> bool:
     return bool(re.search(r"(?:^|(?:sci|jcr))q?1(?:$|[^0-9])", value) or re.search(r"(?:^|(?:sci|jcr))1区(?:$|[^0-9])", value))
 
 
-def llm_prompt(record: Mapping[str, Any]) -> str:
+def llm_prompt(record: Mapping[str, Any], *, compact: bool = False) -> str:
+    """Build a bounded source prompt for the article generator.
+
+    A paper with ten or more figures can easily exceed the context/output
+    budget when the first failed request is repeated verbatim.  Retry prompts
+    deliberately use smaller source windows and concise panel instructions;
+    this keeps the model focused on producing a complete JSON object instead
+    of returning an empty/error object after truncation.
+    """
+    methods_limit = 8_000 if compact else 24_000
+    results_limit = 12_000 if compact else 30_000
+    figures_limit = 9_000 if compact else 16_000
     figures = "\n".join(f"{f.get('label')}: {f.get('caption')}" for f in record.get("figures", []))
-    return f"""你是严谨的生物医学文献编辑，负责生成接近高质量中文公众号长文的论文精读稿。只能使用给出的摘要、Methods、Results 和图注；不能补造材料中没有的数字、样本、实验或结论。如果正文没有提供某个数值，明确写“正文未报告”，不要猜测。首次出现的缩写写出英文全称，后文使用缩写。方法部分要把正文 Methods 翻译成中文并适当压缩，但保留研究对象、样本量、平台、建库/测序流程、关键软件、阈值、统计方法和数据可得性。结果部分要按正文逻辑解释观察、读图顺序、证据支持和结论边界。只返回一个合法 JSON 对象，不要 Markdown 代码围栏、前言或对象后的解释。所有顶层 prose 字段必须是中文字符串，不能是数组或对象。顶层字段必须完整：title_zh, lead, background, research_question, study_design, methods, results, limitations, takeaways, figure_notes。figure_notes 必须与正文图数量一致；每项包含 label、caption_zh、what_question、how_to_read、panel_reading（数组，每项含 panel、experiment、comparison、result、statistics）、interpretation、evidence、boundary。panel_reading 只能根据图注和正文结果填写；如果某个 panel 的数值或统计量没有在材料中出现，写“正文未报告”。\n\n题目：{record.get('title')}\n作者：{', '.join(record.get('authors', []))}\n期刊：{record.get('journal')}\n摘要：{record.get('abstract')}\n正文方法：{record.get('methods_text', '')[:24000]}\n正文结果：{record.get('results_text', '')[:30000]}\n正文图注：{figures[:16000]}"""
+    retry_hint = "本次为重试：每个顶层段落写 2–4 个完整句子，每个 panel 写 1 个完整句子，优先保证 JSON 完整和所有图均有记录；不要扩写未提供的数字。" if compact else ""
+    return f"""你是严谨的生物医学文献编辑，负责生成接近高质量中文公众号长文的论文精读稿。只能使用给出的摘要、Methods、Results 和图注；不能补造材料中没有的数字、样本、实验或结论。如果正文没有提供某个数值，明确写“正文未报告”，不要猜测。首次出现的缩写写出英文全称，后文使用缩写。方法部分要把正文 Methods 翻译成中文并适当压缩，但保留研究对象、样本量、平台、建库/测序流程、关键软件、阈值、统计方法和数据可得性。结果部分要按正文逻辑解释观察、读图顺序、证据支持和结论边界。只返回一个合法 JSON 对象，不要 Markdown 代码围栏、前言或对象后的解释。所有顶层 prose 字段必须完整且为中文字符串，不能是数组或对象。顶层字段必须完整：title_zh, lead, background, research_question, study_design, methods, results, limitations, takeaways, figure_notes。figure_notes 必须与正文图数量一致；每项包含 label、caption_zh、what_question、how_to_read、panel_reading（数组，每项含 panel、experiment、comparison、result、statistics）、interpretation、evidence、boundary。panel_reading 只能根据图注和正文结果填写；如果某个 panel 的数值或统计量没有在材料中出现，写“正文未报告”。{retry_hint}\n\n题目：{record.get('title')}\n作者：{', '.join(record.get('authors', []))}\n期刊：{record.get('journal')}\n摘要：{record.get('abstract')}\n正文方法：{record.get('methods_text', '')[:methods_limit]}\n正文结果：{record.get('results_text', '')[:results_limit]}\n正文图注：{figures[:figures_limit]}"""
 
 
 def _llm_content_text(value: Any) -> str:
-    """Normalize the two content shapes used by DeepSeek/OpenAI-compatible APIs."""
+    """Normalize content blocks used by DeepSeek/OpenAI-compatible APIs."""
     if isinstance(value, str):
         return value
+    if isinstance(value, Mapping):
+        # Responses API and a few gateways wrap text in nested ``content`` or
+        # ``text`` objects.  Recurse instead of stringifying the mapping (the
+        # latter would turn valid JSON into a Python repr).
+        for key in ("text", "content", "output_text", "value"):
+            if key in value:
+                text = _llm_content_text(value.get(key))
+                if text:
+                    return text
+        return ""
     if isinstance(value, list):
         chunks: list[str] = []
         for item in value:
-            if isinstance(item, str):
-                chunks.append(item)
-            elif isinstance(item, Mapping):
-                text = item.get("text") or item.get("content")
-                if isinstance(text, str):
-                    chunks.append(text)
+            text = _llm_content_text(item)
+            if text:
+                chunks.append(text)
         return "".join(chunks)
+    return ""
+
+
+def _llm_response_content(payload: Any) -> str:
+    """Extract assistant text from common OpenAI-compatible response shapes.
+
+    DeepSeek's native endpoint uses ``choices[0].message.content``.  Several
+    local gateways/proxies instead return ``choices[0].text`` or
+    ``output_text``; treating those valid responses as an empty article was
+    the reason all four Q1 candidates became ``llm_schema_incomplete`` in the
+    last run.
+    """
+    if not isinstance(payload, Mapping):
+        return ""
+    choices = payload.get("choices")
+    if isinstance(choices, Mapping):
+        choices = [choices]
+    if isinstance(choices, list):
+        for choice in choices:
+            if not isinstance(choice, Mapping):
+                continue
+            message = choice.get("message")
+            if isinstance(message, Mapping):
+                content = _llm_content_text(message.get("content"))
+                if content:
+                    return content
+                embedded_error = message.get("error")
+                if isinstance(embedded_error, Mapping):
+                    detail = embedded_error.get("message") or embedded_error.get("detail") or embedded_error.get("code")
+                    if detail:
+                        return "__LLM_ERROR__:" + clean_text(detail)
+            content = _llm_content_text(choice.get("text") or choice.get("content"))
+            if content:
+                return content
+    output = payload.get("output")
+    if isinstance(output, Mapping):
+        output = [output]
+    if isinstance(output, list):
+        content = _llm_content_text(output)
+        if content:
+            return content
+    for key in ("output_text", "content", "text", "response"):
+        content = _llm_content_text(payload.get(key))
+        if content:
+            return content
+    # Some proxy error envelopes put the useful detail in ``error.message``;
+    # return it so the caller can expose a diagnostic status instead of
+    # silently labelling it an incomplete scientific article.
+    error = payload.get("error")
+    if isinstance(error, Mapping):
+        message = _llm_content_text(error.get("message") or error.get("detail"))
+        if message:
+            return "__LLM_ERROR__:" + message
     return ""
 
 
@@ -779,6 +884,30 @@ def _extract_json_object(content: str) -> dict[str, Any]:
 def _normalize_llm_article(article: Mapping[str, Any], figure_count: int) -> dict[str, Any]:
     """Normalize harmless shape differences without inventing article prose."""
     output = dict(article)
+    # Some gateways wrap the model object in ``article``/``result``/``data``;
+    # some Chinese prompts lead the model to use Chinese top-level keys.  Both
+    # are shape differences, not scientific transformations, so unwrap/map
+    # them before the strict publication gate runs.
+    for wrapper in ("article", "文章", "result", "data", "output"):
+        nested = output.get(wrapper)
+        schema_hints = {"title_zh", "title", "标题", "中文标题", "lead", "导语", "methods", "方法", "results", "结果", "figure_notes", "图组解读"}
+        if isinstance(nested, Mapping) and any(key in nested for key in schema_hints):
+            merged = dict(nested)
+            merged.update({key: value for key, value in output.items() if key != wrapper})
+            output = merged
+            break
+    top_aliases = {
+        "title": "title_zh", "标题": "title_zh", "中文标题": "title_zh",
+        "导语": "lead", "引言": "background", "背景": "background",
+        "研究问题": "research_question", "科学问题": "research_question",
+        "研究设计": "study_design", "设计": "study_design", "方法": "methods",
+        "结果": "results", "结果解析": "results", "局限": "limitations", "局限性": "limitations",
+        "要点": "takeaways", "结论": "takeaways", "图组解读": "figure_notes", "图组": "figure_notes",
+        "图注": "figure_notes",
+    }
+    for source, target in top_aliases.items():
+        if target not in output and source in output:
+            output[target] = output[source]
     # Some compatible endpoints return arrays for long sections.  Joining is
     # lossless and lets the publication gate inspect the complete translation.
     for field in ("title_zh", "lead", "background", "research_question", "study_design", "methods", "results", "limitations", "takeaways"):
@@ -836,7 +965,6 @@ def generate_llm_article(record: dict[str, Any], feedback: Optional[Iterable[str
         return {}, "missing_llm_key"
     endpoint = clean_text(os.environ.get("LLM_API_URL")) or "https://api.deepseek.com/chat/completions"
     figure_count = len(record.get("figures", [])) if isinstance(record.get("figures"), list) else 0
-    base_prompt = llm_prompt(record) + f"\n本次正文原图数量为 {figure_count}；figure_notes 必须恰好输出 {figure_count} 项，并按原图顺序对应。"
     feedback_text = "; ".join(clean_text(item) for item in (feedback or []) if clean_text(item))
     try:
         max_attempts = max(1, min(3, int(os.environ.get("LLM_MAX_ATTEMPTS", "3"))))
@@ -849,9 +977,12 @@ def generate_llm_article(record: dict[str, Any], feedback: Optional[Iterable[str
     json_mode = os.environ.get("LLM_JSON_MODE", "1").casefold() not in {"0", "false", "no"}
     last_error = "llm_error:unknown"
     for attempt in range(max_attempts):
-        prompt = base_prompt
+        # Use a compact source window on retries.  Repeating the original
+        # 50k-character prompt is counterproductive when the first response
+        # was truncated or rejected by a gateway.
+        prompt = llm_prompt(record, compact=attempt > 0) + f"\n本次正文原图数量为 {figure_count}；figure_notes 必须恰好输出 {figure_count} 项，并按原图顺序对应。"
         if attempt:
-            prompt += "\n上一次输出无法通过结构化校验。请重新生成，必须只输出一个完整 JSON 对象；不要 Markdown 围栏、不要说明文字、不要省略任何 figure_notes。为避免长文截断，每个顶层段落保持 2–5 个完整句子，每个 panel 的说明保持 1–2 个完整句子，但不得省略实验、比较、结果和统计字段。"
+            prompt += "\n上一次输出无法通过结构化校验。请重新生成，必须只输出一个完整 JSON 对象；不要 Markdown 围栏、不要说明文字、不要省略任何 figure_notes。"
             if feedback_text:
                 prompt += f"\n上一版还需要修复：{feedback_text}"
         body_data = {
@@ -875,11 +1006,30 @@ def generate_llm_article(record: dict[str, Any], feedback: Optional[Iterable[str
         try:
             with urllib.request.urlopen(request, timeout=120) as response:
                 payload = json.loads(response.read(8 * 1024 * 1024).decode("utf-8"))
-            content = _llm_content_text(payload["choices"][0]["message"]["content"])
-            article = _normalize_llm_article(_extract_json_object(content), figure_count)
+            content = _llm_response_content(payload)
+            if content.startswith("__LLM_ERROR__:"):
+                last_error = "llm_api_error:" + content.split(":", 1)[1][:180]
+                continue
+            if not content:
+                last_error = "llm_error:empty_content"
+                continue
+            parsed = _extract_json_object(content)
+            # A few API gateways return HTTP 200 with an error envelope inside
+            # ``message.content``.  It is valid JSON but not a draft; expose
+            # the provider message instead of mislabelling it as a missing
+            # scientific field.
+            error_keys = {"error", "message", "detail", "code", "status"}
+            if parsed and set(parsed).issubset(error_keys) and any(key in parsed for key in ("error", "message", "detail")):
+                detail = parsed.get("message") or parsed.get("detail") or parsed.get("error")
+                if isinstance(detail, Mapping):
+                    detail = detail.get("message") or detail.get("detail") or detail.get("code")
+                last_error = f"llm_api_payload:{clean_text(detail)[:180]}"
+                continue
+            article = _normalize_llm_article(parsed, figure_count)
             required = ("title_zh", "lead", "background", "research_question", "study_design", "methods", "results", "limitations", "takeaways", "figure_notes")
             if not all(article.get(field) for field in required):
-                last_error = "llm_schema_incomplete"
+                missing = ",".join(field for field in required if not article.get(field))
+                last_error = f"llm_schema_incomplete:{missing[:180]}"
                 continue
             if not isinstance(article.get("figure_notes"), list) or len(article["figure_notes"]) != figure_count:
                 last_error = "llm_figure_notes_incomplete"
@@ -1021,6 +1171,12 @@ def make_record(candidate: dict[str, Any], metrics_cache: dict[str, Any], xml_fi
         article, ai_status = {}, "skipped_no_retrievable_fulltext_or_assets"
     record["article"] = article
     record["ai_status"] = ai_status
+    # Keep a machine-readable failure reason in the report/state.  The old
+    # workflow only exposed a generic ``llm_schema_incomplete`` label, which
+    # made an authentication, quota, proxy-shape, or truncation problem look
+    # identical.  This field is deliberately concise and contains no prompt
+    # or full-text material.
+    record["ai_error"] = "" if ai_status.startswith("success") or ai_status.startswith("skipped_") else ai_status
     record["publishable"], record["gate_reasons"] = publication_gate(record, article)
     # A syntactically valid draft can still miss one detailed figure field.
     # Give the model one bounded, feedback-directed repair before discarding a
@@ -1038,6 +1194,7 @@ def make_record(candidate: dict[str, Any], metrics_cache: dict[str, Any], xml_fi
             article = repaired
             record["article"] = article
             record["ai_status"] = f"{repaired_status}_gate_repair"
+            record["ai_error"] = "" if repaired_status.startswith("success") else repaired_status
             record["publishable"], record["gate_reasons"] = publication_gate(record, article)
     source_incomplete = ai_status in {"skipped_non_jcr_q1", "skipped_no_retrievable_fulltext_or_assets"}
     record["status"] = "published" if record["publishable"] else ("manual_review" if record["fulltext_ok"] and record["figures"] and not source_incomplete else "discarded")
@@ -1105,10 +1262,18 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
                 or not local_asset_exists(args.assets_dir, item.get("local_url") or item.get("asset_path"))
                 for item in figures
             ):
+                # Records created before local asset caching was introduced
+                # have ``assets_required`` absent.  Try to backfill local
+                # copies, but retain the already-published remote originals
+                # if an old PMC URL has become unavailable.  A temporary
+                # migration failure must not erase the existing library.
+                legacy_remote_record = not bool(value.get("assets_required"))
                 figures, asset_errors = cache_figure_assets(figures, clean_text(value.get("pmcid")) or key, args.assets_dir, url_prefix=args.assets_url_prefix)
                 value["figures"] = figures
                 value["asset_errors"] = asset_errors
-                value["assets_required"] = True
+                value["assets_required"] = not (legacy_remote_record and asset_errors)
+                if legacy_remote_record and asset_errors:
+                    value["asset_status"] = "legacy_remote_fallback"
         if is_preservable_record(value, args.assets_dir):
             records[key] = public_projection(value)
     attempted: dict[str, Any] = state.get("attempted", {}) if isinstance(state.get("attempted"), Mapping) else {}
@@ -1156,6 +1321,25 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     raw_candidate_count = len(eligible_candidates)
     scope_rejected = sum(1 for candidate in eligible_candidates if not candidate_matches_scope(candidate))
     scoped_candidates = [candidate for candidate in eligible_candidates if candidate_matches_scope(candidate)]
+    recovery_used = False
+    # A broad synonym query can occasionally return a window made entirely of
+    # out-of-scope records even though a field-qualified ageing/omics paper is
+    # available just beyond that window.  Perform one bounded recovery search
+    # only in that case; normal daily runs retain the single search request.
+    if not scoped_candidates and not args.fixture and search_status != "upstream_unavailable":
+        try:
+            recovery_candidates = search_europe_pmc(strict_europe_pmc_query(), page_size=args.candidate_limit)
+            existing_ids = {candidate.get("id") for candidate in eligible_candidates}
+            recovered = [candidate for candidate in recovery_candidates if candidate.get("id") not in existing_ids and eligible(candidate)]
+            if recovered:
+                recovery_used = True
+                raw_candidate_count += len(recovered)
+                scoped_candidates = [candidate for candidate in recovered if candidate_matches_scope(candidate)]
+                scope_rejected += len(recovered) - len(scoped_candidates)
+        except (OSError, urllib.error.URLError, ValueError):
+            # The primary search result remains valid; a failed recovery query
+            # is diagnostic, not a reason to erase the existing library.
+            pass
     score_rejected = sum(1 for candidate in scoped_candidates if candidate["relevance_score"] < args.min_score)
     # The scope predicate is the hard gate; the score is a ranking signal only.
     # Keep all in-scope records so a low-keyword but genuinely relevant recent
@@ -1196,7 +1380,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             records[record["id"]] = public_projection(record)
             published_this_run += 1
     published = sorted(records.values(), key=lambda r: (r.get("year", ""), r.get("updated_at", "")), reverse=True)
-    state.update({"schema_version": SCHEMA_VERSION, "updated_at": utc_now(), "records": records, "attempted": attempted, "metrics_cache": metrics_cache, "last_run": {"status": search_status, "selected": len(selected), "published": published_this_run, "candidates": len(candidates), "raw_candidates": raw_candidate_count, "score_rejected": score_rejected, "scope_rejected": scope_rejected, "q1_rejected": q1_rejected, "skipped_without_pmcid": skipped_without_pmcid, "search_error": search_error, "preserved_articles": len(records), "asset_dir": str(args.assets_dir) if args.assets_dir else "", "finished_at": utc_now()}})
+    state.update({"schema_version": SCHEMA_VERSION, "updated_at": utc_now(), "records": records, "attempted": attempted, "metrics_cache": metrics_cache, "last_run": {"status": search_status, "selected": len(selected), "published": published_this_run, "candidates": len(candidates), "raw_candidates": raw_candidate_count, "score_rejected": score_rejected, "scope_rejected": scope_rejected, "recovery_used": recovery_used, "q1_rejected": q1_rejected, "skipped_without_pmcid": skipped_without_pmcid, "search_error": search_error, "preserved_articles": len(records), "asset_dir": str(args.assets_dir) if args.assets_dir else "", "finished_at": utc_now()}})
     save_json(args.state, state)
     save_json(args.output, {"schema_version": SCHEMA_VERSION, "generated_at": utc_now(), "articles": [public_projection(record) for record in published]})
     report_records = [{key: value for key, value in record.items() if key not in {"abstract", "fulltext_text", "methods_text", "results_text", "article"}} for record in processed]

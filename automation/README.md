@@ -8,8 +8,8 @@
 Europe PMC 检索
   → 衰老/二代/三代/多组学/工具相关性评分
   → 每次最多选择 5 篇新候选
-  → 获取 PMC 全文 XML、Methods、Results 和 Figure 原图/图注
-  → 下载并校验原图，保存到 web/generated/assets/<PMCID>/
+  → 获取 PMC 全文 XML、Methods、Results 和 Figure 图注
+  → 从 PMC 文章 AWS 数据集解析原始图文件，下载并校验原图，保存到 web/generated/assets/<PMCID>/
   → EasyScholar 查询 IF/JCR
   → 仅保留 EasyScholar 确认的 SCI/JCR 1 区期刊
   → DeepSeek 生成结构化中文公众号式解读
@@ -29,9 +29,13 @@ Europe PMC 检索
 
 其中第 5 项还包含严格的 JCR/SCI 1 区门禁：没有 EasyScholar 密钥、没有匹配到期刊指标、或返回的分区不是 Q1/1 区时，候选不会调用 DeepSeek，也不会写入公开文章库。IF 数值本身不替代分区判断。
 
-没有正文或原图的候选会写入 `web/generated/run-report.json`，状态为 `discarded`，不会污染网站。全文完整但 AI 暂时失败的候选状态为 `manual_review`，最多有限重试；已有 `published` 文章不会因为一次接口失败被清空。
+没有正文或原图的候选会写入 `web/generated/run-report.json`，状态为 `discarded`，不会污染网站。PMC 在 2026 年迁移了文章数据分发地址，旧的 `pmc.ncbi.nlm.nih.gov/articles/.../bin/...` 图链接可能返回 404；程序现在会查询官方 `pmc-oa-opendata` AWS 清单并使用同名原图。若文章本身没有可再分发的图文件，则仍会丢弃该候选。全文完整但 AI 暂时失败的候选状态为 `manual_review`，最多有限重试；已有 `published` 文章不会因为一次接口失败被清空。
 
 Europe PMC 的临时 5xx/429/超时会自动重试；若重试后仍不可用，本轮会以 `upstream_unavailable` 写入运行报告并保留原有文章，工作流不会因一次上游故障清空网站或直接失败。待接口恢复后，下一次定时运行会从未处理候选继续检索。
+
+如果旧版本文章只有 PMC 远程原图、尚未有本地缓存，升级后的流程会先尝试补存本地图；补存失败时仍保留已有远程原图，不会因为一次图片迁移失败清空旧文章。若历史运行曾把状态误写为空，Actions 会从 Git 历史中恢复最近一个非空快照，再由当前的 JCR、全文、原图和 AI 门禁重新核验。
+
+AI 失败原因会写入 `processed[].ai_status` 和 `processed[].ai_error`，例如 `llm_http_401`、`llm_api_payload:quota exceeded`、`llm_error:empty_content` 或 `llm_schema_incomplete:methods,results`。这比只看到“0 篇”更适合定位密钥、额度、代理返回格式和上下文过长问题。
 
 ## 运行方式
 

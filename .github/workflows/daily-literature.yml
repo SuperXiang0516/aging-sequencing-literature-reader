@@ -34,11 +34,52 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Keep history so a transient/buggy run that wrote an empty state
+          # can recover the latest non-empty published library snapshot.
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      - name: Recover a previous non-empty library snapshot
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+
+          state_path = Path("data/automation-state.json")
+          try:
+              state = json.loads(state_path.read_text(encoding="utf-8"))
+          except (OSError, ValueError):
+              state = {}
+          if state.get("records"):
+              print(f"当前状态已有 {len(state['records'])} 篇，跳过恢复。")
+          else:
+              commits = subprocess.check_output(
+                  ["git", "log", "--format=%H", "--", str(state_path)], text=True
+              ).splitlines()
+              recovered = None
+              for commit in commits[1:]:
+                  try:
+                      raw = subprocess.check_output(
+                          ["git", "show", f"{commit}:{state_path}"], text=True
+                      )
+                      candidate = json.loads(raw)
+                  except (OSError, ValueError, subprocess.CalledProcessError):
+                      continue
+                  if candidate.get("records"):
+                      recovered = candidate
+                      break
+              if recovered:
+                  state_path.write_text(json.dumps(recovered, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+                  print(f"已恢复 {len(recovered['records'])} 篇历史文章，随后由新门禁重新核验。")
+              else:
+                  print("没有找到可恢复的历史文章快照。")
+          PY
 
       - name: Run deterministic tests
         run: python -m unittest automation.test_collector -v

@@ -20,6 +20,7 @@ from automation.collector import (
     search_ncbi_pmc,
     pmc_aws_file_map,
     _extract_json_object,
+    _llm_response_content,
     _normalize_llm_article,
     generate_llm_article,
 )
@@ -64,6 +65,23 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(status, "success_retried")
         self.assertEqual(parsed["title_zh"], "充分的中文内容")
 
+    def test_llm_generation_exposes_embedded_error_envelope(self):
+        class Response:
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                return False
+            def read(self, _size):
+                payload = {"choices": [{"message": {"content": '{"error":"quota exceeded"}'}}]}
+                return json.dumps(payload).encode("utf-8")
+
+        record = {"title": "test", "authors": [], "figures": [], "methods_text": "", "results_text": ""}
+        with patch.dict(os.environ, {"DEEPSEEK_API_KEY": "test-key", "LLM_MAX_ATTEMPTS": "1"}, clear=False), \
+             patch("automation.collector.urllib.request.urlopen", return_value=Response()):
+            parsed, status = generate_llm_article(record)
+        self.assertEqual(parsed, {})
+        self.assertEqual(status, "llm_api_payload:quota exceeded")
+
     def test_llm_json_parser_accepts_fence_and_preamble(self):
         payload = '下面是文章 JSON：\n```json\n{"title_zh":"标题","figure_notes":[]}\n```\n'
         parsed = _extract_json_object(payload)
@@ -83,6 +101,13 @@ class CollectorTests(unittest.TestCase):
         note = article["figure_notes"][0]
         self.assertEqual(note["caption_zh"], "完整图注")
         self.assertEqual(note["panel_reading"][0]["panel"], "a")
+
+    def test_llm_response_content_accepts_proxy_shapes(self):
+        article = {"title_zh": "标题", "figure_notes": []}
+        encoded = json.dumps(article, ensure_ascii=False)
+        self.assertEqual(_llm_response_content({"choices": [{"text": encoded}]}), encoded)
+        self.assertEqual(_llm_response_content({"output_text": encoded}), encoded)
+        self.assertTrue(_llm_response_content({"error": {"message": "context too long"}}).startswith("__LLM_ERROR__:"))
 
     def test_title_only_keys_are_stable_and_distinct(self):
         self.assertEqual(safe_key({"title": "First paper"}), "title:first paper")
@@ -121,6 +146,25 @@ class CollectorTests(unittest.TestCase):
         mapped = {"example-f1.jpg": "https://pmc-oa-opendata.s3.amazonaws.com/PMC1234567.1/example-f1.jpg"}
         _, _, _, figures, _ = extract_fulltext(xml, "PMC1234567", mapped)
         self.assertEqual(figures[0]["image_url"], mapped["example-f1.jpg"])
+
+    def test_xml_excludes_graphical_abstract_from_body_figures(self):
+        xml = """<article xmlns:xlink="http://www.w3.org/1999/xlink"><body>
+          <fig id="ga1"><label>Graphical abstract</label><caption>Graphical abstract.</caption><graphic xlink:href="ga1.webp"/></fig>
+          <fig id="F1"><label>Fig. 1</label><caption>Study workflow.</caption><graphic xlink:href="f1.jpg"/></fig>
+        </body></article>"""
+        _, _, _, figures, _ = extract_fulltext(xml, "PMC1234567")
+        self.assertEqual([figure["label"] for figure in figures], ["Fig. 1"])
+
+    def test_llm_normalizer_unwraps_chinese_article_keys(self):
+        article = _normalize_llm_article({
+            "文章": {"标题": "标题", "方法": "方法", "图组解读": []},
+            "lead": "导语",
+        }, 0)
+        # The wrapper is intentionally only one of the supported aliases; the
+        # test also verifies that Chinese top-level labels are mapped before
+        # the production schema gate runs.
+        self.assertEqual(article["title_zh"], "标题")
+        self.assertEqual(article["methods"], "方法")
 
     def test_pmc_aws_file_map_selects_only_image_objects(self):
         listing = """<ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
@@ -391,6 +435,35 @@ class CollectorTests(unittest.TestCase):
             self.assertIn("503", report["last_run"]["search_error"])
             self.assertEqual(report["processed"], [])
 
+    def test_legacy_remote_record_survives_failed_local_asset_migration(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            legacy = {
+                "id": "doi:legacy",
+                "title": "Legacy published article",
+                "year": "2026",
+                "status": "published",
+                "publishable": True,
+                "fulltext_ok": True,
+                "figures": [{"label": "Fig. 1", "caption": "caption", "image_url": "https://example.org/fig1.jpg"}],
+                "article": {"title_zh": "已有文章"},
+                "metrics": Q1_METRICS,
+            }
+            (root / "state.json").write_text(json.dumps({"schema_version": 1, "records": {"doi:legacy": legacy}, "attempted": {}, "metrics_cache": {}}), encoding="utf-8")
+            args = parse_args([
+                "--state", str(root / "state.json"), "--output", str(root / "articles.json"),
+                "--report", str(root / "report.json"), "--assets-dir", str(root / "assets"),
+            ])
+            outage = urllib.error.HTTPError("https://www.ebi.ac.uk/europepmc", 503, "Service Unavailable", {}, None)
+            migrated = [dict(legacy["figures"][0], asset_status="error", asset_error="HTTPError")]
+            with patch("automation.collector.cache_figure_assets", return_value=(migrated, ["fig-01:HTTPError"])), \
+                 patch("automation.collector.search_europe_pmc", side_effect=outage), \
+                 patch("automation.collector.search_ncbi_pmc", side_effect=outage):
+                summary = run(args)
+            self.assertEqual(summary["preserved_articles"], 1)
+            output = json.loads((root / "articles.json").read_text(encoding="utf-8"))
+            self.assertEqual(len(output["articles"]), 1)
+
     def test_ncbi_summary_is_normalized_to_pmc_candidate(self):
         payloads = [
             {"esearchresult": {"idlist": ["123456"]}},
@@ -458,6 +531,14 @@ class CollectorTests(unittest.TestCase):
         self.assertTrue(candidate_matches_scope({"title": "Ageing-associated methylome sequencing", "abstract": "senescence and long-read sequencing"}))
         self.assertTrue(candidate_matches_scope({"title": "Diabetes nanopore benchmark", "abstract": "a bioinformatic workflow"}))
         self.assertFalse(candidate_matches_scope({"title": "A highly cited metagenomics paper", "abstract": "healthy microbiome"}))
+
+    def test_europe_search_defaults_to_newest_first(self):
+        payload = {"resultList": {"result": []}}
+        with patch("automation.collector.http_json", return_value=payload) as request:
+            from automation.collector import search_europe_pmc
+            search_europe_pmc("aging AND nanopore", page_size=5)
+        query_url = request.call_args.args[0]
+        self.assertIn("P_PDATE_D+desc", query_url)
 
     def test_publication_gate_requires_jcr_q1(self):
         record = {
