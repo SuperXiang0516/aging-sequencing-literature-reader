@@ -19,6 +19,7 @@ from automation.collector import (
     publication_gate,
     search_ncbi_pmc,
     pmc_aws_file_map,
+    image_suffix,
     _extract_json_object,
     _llm_response_content,
     _normalize_llm_article,
@@ -154,6 +155,17 @@ class CollectorTests(unittest.TestCase):
         </body></article>"""
         _, _, _, figures, _ = extract_fulltext(xml, "PMC1234567")
         self.assertEqual([figure["label"] for figure in figures], ["Fig. 1"])
+
+    def test_xml_extracts_media_and_inline_graphic_body_figures(self):
+        xml = """<article xmlns:xlink="http://www.w3.org/1999/xlink"><body>
+          <fig id="F1"><label>Fig. 1</label><caption>Media figure.</caption><media xlink:href="f1.svg"/></fig>
+          <fig id="F2"><label>Fig. 2</label><caption>Inline figure.</caption><inline-graphic xlink:href="f2.png"/></fig>
+        </body></article>"""
+        _, _, _, figures, _ = extract_fulltext(xml, "PMC1234567")
+        self.assertEqual([figure["image_url"].rsplit("/", 1)[-1] for figure in figures], ["f1.svg", "f2.png"])
+
+    def test_image_suffix_accepts_svg_xml_declaration(self):
+        self.assertEqual(image_suffix(b"<?xml version=\"1.0\"?><svg xmlns=\"http://www.w3.org/2000/svg\"></svg>", "fig.bin"), ".svg")
 
     def test_llm_normalizer_unwraps_chinese_article_keys(self):
         article = _normalize_llm_article({
@@ -342,14 +354,14 @@ class CollectorTests(unittest.TestCase):
         def candidate(identifier, pmcid):
             return {
                 "id": identifier,
-                "title": identifier,
+                "title": f"Ageing long-read sequencing study {identifier}",
                 "authors": [],
                 "journal": "Example Journal",
                 "year": "2026",
                 "doi": identifier,
                 "pmcid": pmcid,
                 "pmid": "",
-                "abstract": "ageing sequencing",
+                "abstract": "ageing long-read sequencing data and bioinformatic analysis",
                 "fulltext_urls": [],
                 "source": "fixture",
                 "relevance_score": 20,
@@ -435,7 +447,7 @@ class CollectorTests(unittest.TestCase):
             self.assertIn("503", report["last_run"]["search_error"])
             self.assertEqual(report["processed"], [])
 
-    def test_legacy_remote_record_survives_failed_local_asset_migration(self):
+    def test_legacy_remote_record_is_dropped_when_local_asset_migration_fails(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             legacy = {
@@ -460,9 +472,9 @@ class CollectorTests(unittest.TestCase):
                  patch("automation.collector.search_europe_pmc", side_effect=outage), \
                  patch("automation.collector.search_ncbi_pmc", side_effect=outage):
                 summary = run(args)
-            self.assertEqual(summary["preserved_articles"], 1)
+            self.assertEqual(summary["preserved_articles"], 0)
             output = json.loads((root / "articles.json").read_text(encoding="utf-8"))
-            self.assertEqual(len(output["articles"]), 1)
+            self.assertEqual(len(output["articles"]), 0)
 
     def test_ncbi_summary_is_normalized_to_pmc_candidate(self):
         payloads = [
@@ -529,8 +541,20 @@ class CollectorTests(unittest.TestCase):
     def test_candidate_scope_requires_topic_and_omics_signal(self):
         from automation.collector import candidate_matches_scope
         self.assertTrue(candidate_matches_scope({"title": "Ageing-associated methylome sequencing", "abstract": "senescence and long-read sequencing"}))
-        self.assertTrue(candidate_matches_scope({"title": "Diabetes nanopore benchmark", "abstract": "a bioinformatic workflow"}))
+        self.assertTrue(candidate_matches_scope({"title": "Diabetes nanopore benchmark", "abstract": "nanopore sequencing data and a bioinformatic workflow"}))
         self.assertFalse(candidate_matches_scope({"title": "A highly cited metagenomics paper", "abstract": "healthy microbiome"}))
+        self.assertFalse(candidate_matches_scope({
+            "title": "Tissue engineering polymeric formulations enable lymphangiogenesis for myocardial repair",
+            "abstract": "Single-cell RNA sequencing was used as one validation assay in a biomaterials study.",
+        }))
+        self.assertFalse(candidate_matches_scope({
+            "title": "Age-associated inflammation in older adults",
+            "abstract": "RNA sequencing was briefly mentioned, without sequencing data analysis or an omics study design.",
+        }))
+        self.assertFalse(candidate_matches_scope({
+            "title": "Aging hydrogel therapy",
+            "abstract": "Single-cell RNA sequencing was used to validate treatment efficacy.",
+        }))
 
     def test_europe_search_defaults_to_newest_first(self):
         payload = {"resultList": {"result": []}}

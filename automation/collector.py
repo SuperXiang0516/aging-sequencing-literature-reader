@@ -194,22 +194,70 @@ def candidate_matches_scope(record: Mapping[str, Any]) -> bool:
     five-paper daily quota while still allowing diabetes/metabolic bridges and
     computational-method papers.
     """
-    text = f"{record.get('title', '')} {record.get('abstract', '')}".lower()
-    topic_terms = (
+    title = clean_text(record.get("title")).casefold()
+    abstract = clean_text(record.get("abstract")).casefold()
+    text = f"{title} {abstract}"
+    ageing_terms = (
         "aging", "ageing", "senescence", "geroscience", "age-related", "age-associated",
         "aging-associated", "ageing-related", "ageing-associated", "age-dependent", "age-dependent",
         "older adult", "older people", "elderly", "chronological age", "lifespan", "longevity",
-        "healthspan", "inflammaging", "diabetes", "diabetic", "metabolic syndrome", "metabolic disease",
-        "obesity", "cardiovascular", "kidney disease", "衰老",
+        "healthspan", "inflammaging", "衰老",
     )
-    omics_terms = (
-        "sequenc", "long-read", "long read", "nanopore", "pacbio", "hifi",
-        "metagenom", "transcriptom", "methylom", "proteom", "metabolom",
-        "epigenom", "multi-omics", "multiomics", "single-cell", "scRNA",
-        "rna-seq", "rna sequencing", "whole-genome", "illumina", "assembler",
-        "benchmark", "bioinformatic", "pipeline", "software", "workflow",
+    bridge_terms = (
+        "diabetes", "diabetic", "metabolic syndrome", "metabolic disease", "obesity",
+        "cardiovascular", "kidney disease",
     )
-    return any(term in text for term in topic_terms) and any(term.lower() in text for term in omics_terms)
+    # A single incidental phrase such as “RNA sequencing was used for
+    # validation” is not enough.  Require a method/data signal and at least
+    # two independent omics families unless the title itself names the
+    # sequencing/omics method.  This removes tissue-engineering or drug papers
+    # that merely mention one sequencing assay while retaining genuine ageing
+    # studies and the user's allowed diabetes/metabolic bridge papers.
+    omics_title_terms = (
+        "sequenced", "sequencing", "sequencing data", "sequence data", "long-read", "long read", "nanopore", "pacbio", "hifi", "metagenom",
+        "transcriptom", "methylom", "proteom", "metabolom", "epigenom", "multi-omics",
+        "multiomics", "single-cell", "scrna", "rna-seq", "rna sequencing", "whole-genome",
+        "wgs", "illumina", "atac-seq", "chip-seq", "spatial transcriptom",
+    )
+    family_terms = {
+        "sequencing": ("sequenc", "long-read", "long read", "nanopore", "pacbio", "hifi", "rna-seq", "rna sequencing", "whole-genome", "wgs", "illumina", "atac-seq", "chip-seq"),
+        "microbiome": ("metagenom", "shotgun metagenom", "amplicon sequencing", "16s sequencing"),
+        "transcriptome": ("transcriptom", "single-cell", "scrna", "spatial transcriptom"),
+        "epigenome": ("methylom", "epigenom", "chromatin", "atac-seq", "chip-seq"),
+        "other_omics": ("proteom", "metabolom", "multi-omics", "multiomics"),
+        "bioinformatics": ("bioinformatic", "pipeline", "workflow", "assembler", "variant calling", "taxonomic profiling", "differential expression"),
+    }
+    # Explicit assay/data signals are required. Generic words such as
+    # ``pipeline``, ``workflow`` and ``bioinformatics`` are not enough: a
+    # biomaterials or drug-delivery paper may mention them incidentally while
+    # not being a sequencing study.
+    data_terms = (
+        "sequenced", "sequencing data", "sequence data", "long-read", "long read", "nanopore", "pacbio", "hifi", "metagenom",
+        "transcriptom", "methylom", "proteom", "metabolom", "epigenom", "multi-omics", "multiomics",
+        "reads", "read depth", "fastq", "alignment", "assembly", "library preparation",
+        "differential expression", "taxonomic profiling", "feature abundance", "omics data",
+        "variant calling", "single-cell analysis", "whole-genome", "wgs", "illumina",
+        "atac-seq", "chip-seq",
+    )
+    topic_ageing = any(term in text for term in ageing_terms)
+    topic_bridge = any(term in text for term in bridge_terms)
+    if not (topic_ageing or topic_bridge):
+        return False
+    title_core = any(term in title for term in omics_title_terms)
+    families = {family for family, terms in family_terms.items() if any(term in text for term in terms)}
+    abstract_core = len(families - {"bioinformatics"}) >= 2
+    data_core = any(term in abstract for term in data_terms)
+    if title_core and (data_core or abstract_core):
+        return True
+    # For an ageing-focused title, permit the omics platform to be introduced
+    # in the abstract, but still demand more than one omics family plus an
+    # explicit data/analysis signal.
+    if topic_ageing and abstract_core and data_core:
+        return True
+    # Disease bridges are intentionally stricter: they must name the omics or
+    # sequencing method in the title, otherwise broad clinical papers flood
+    # the daily queue.
+    return topic_bridge and title_core and abstract_core and data_core
 
 
 def strict_europe_pmc_query() -> str:
@@ -290,7 +338,9 @@ def image_suffix(payload: bytes, url: str = "") -> str:
     # explicit so an HTML error page cannot be saved as a published image.
     if payload[:4] == b"RIFF" and payload[8:12] == b"WEBP":
         return ".webp"
-    if payload.lstrip().startswith(b"<svg"):
+    # SVG files from PMC may begin with an XML declaration or a byte-order
+    # marker before the root element.
+    if re.match(rb"^\s*(?:\xef\xbb\xbf)?(?:<\?xml[^>]*>\s*)?<svg(?:\s|>)", payload, flags=re.I):
         return ".svg"
     return ""
 
@@ -644,7 +694,7 @@ def extract_fulltext(xml_text: str, pmcid: str, asset_map: Optional[Mapping[str,
         fig_id = clean_text(fig.attrib.get("id") or fig.attrib.get("xml:id")).casefold()
         href = ""
         for node in fig.iter():
-            if local_name(node.tag) == "graphic":
+            if local_name(node.tag) in {"graphic", "inline-graphic", "media"}:
                 href = clean_text(node.attrib.get("{http://www.w3.org/1999/xlink}href") or node.attrib.get("href"))
                 if href:
                     break
@@ -1234,9 +1284,12 @@ def is_preservable_record(record: Mapping[str, Any], assets_dir: Optional[Path] 
         return False
     if any(not isinstance(figure, Mapping) or not clean_text(figure.get("caption")) or not clean_text(figure.get("image_url") or figure.get("original_url")) for figure in figures):
         return False
-    if record.get("assets_required") and any(not isinstance(figure, Mapping) or figure.get("asset_status") != "downloaded" or not clean_text(figure.get("local_url") or figure.get("asset_path")) for figure in figures):
+    # In production every displayed image must be a verified local asset. A
+    # remote URL can remain as metadata, but it is never sufficient to keep an
+    # article in the public library because PMC hot-links can later break.
+    if assets_dir and any(not isinstance(figure, Mapping) or figure.get("asset_status") != "downloaded" or not clean_text(figure.get("local_url") or figure.get("asset_path")) for figure in figures):
         return False
-    if assets_dir and record.get("assets_required"):
+    if assets_dir:
         for figure in figures:
             relative = clean_text(figure.get("local_url") or figure.get("asset_path"))
             if not local_asset_exists(assets_dir, relative):
@@ -1258,22 +1311,20 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         if args.assets_dir and value.get("fulltext_ok") and isinstance(value.get("figures"), list):
             figures = [dict(item) for item in value["figures"] if isinstance(item, Mapping)]
             if figures and any(
+                item.get("asset_status") != "downloaded"
+                or
                 not clean_text(item.get("local_url") or item.get("asset_path"))
                 or not local_asset_exists(args.assets_dir, item.get("local_url") or item.get("asset_path"))
                 for item in figures
             ):
                 # Records created before local asset caching was introduced
-                # have ``assets_required`` absent.  Try to backfill local
-                # copies, but retain the already-published remote originals
-                # if an old PMC URL has become unavailable.  A temporary
-                # migration failure must not erase the existing library.
-                legacy_remote_record = not bool(value.get("assets_required"))
+                # are migrated once. A published article remains public only
+                # after every figure has a verified local copy; retaining a
+                # broken hot-link would create an article with no visible image.
                 figures, asset_errors = cache_figure_assets(figures, clean_text(value.get("pmcid")) or key, args.assets_dir, url_prefix=args.assets_url_prefix)
                 value["figures"] = figures
                 value["asset_errors"] = asset_errors
-                value["assets_required"] = not (legacy_remote_record and asset_errors)
-                if legacy_remote_record and asset_errors:
-                    value["asset_status"] = "legacy_remote_fallback"
+                value["assets_required"] = True
         if is_preservable_record(value, args.assets_dir):
             records[key] = public_projection(value)
     attempted: dict[str, Any] = state.get("attempted", {}) if isinstance(state.get("attempted"), Mapping) else {}

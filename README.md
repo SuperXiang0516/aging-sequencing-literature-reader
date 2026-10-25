@@ -11,7 +11,7 @@
 
 当前仓库已经包含一个独立的自动化入口：`automation/collector.py`、`.github/workflows/daily-literature.yml` 和 `web/auto-library.html`。它不会执行作者代码，也不会把 PDF 页面截图当作正文图；它只在全文、正文图和图注都能追溯时发布文章。现有 `literature-demo.html` 的 3 篇示范仍然保留。
 
-自动化流程为：Europe PMC 候选检索 → 衰老/二代/三代/多组学/工具开发相关性评分 → 只选取尚未处理且分数达标的候选（默认每天最多 5 篇）→ 获取 PMC 全文 XML、正文方法、结果和 Figure 原图直链 → 下载并校验原始图到 `web/generated/assets/<PMCID>/` → 查询 EasyScholar 期刊指标 → 只保留 EasyScholar 确认的 SCI/JCR 1 区期刊 → 调用 DeepSeek/OpenAI 兼容接口生成公众号式中文解读 → 质量门禁 → 写入 `web/generated/articles.json` → GitHub Pages 发布。网页优先读取本地原图，远程直链只作备用；无法获取正文、正文图、图注、网站本地图或 Q1 指标的候选会进入运行报告，不会显示在网站上；暂时的 AI 失败会在后续运行中有限重试。
+自动化流程为：Europe PMC 候选检索（默认限定开放获取文章）→ 衰老/二代/三代/多组学/工具开发相关性评分 → 通过“题目/摘要有明确测序平台、组学类型或组学数据分析信号”的硬筛选（仅提到一次 single-cell/RNA、pipeline、workflow 或 bioinformatics 的非测序论文会被排除）→ 只选取尚未处理且分数达标的候选（默认每天最多 5 篇）→ 获取 PMC 全文 XML、正文方法、结果和 Figure 图注 → 从 PMC 2026 年新的 AWS 文章数据集解析原始图文件（旧 `/bin/` 地址失效时自动改用 AWS 地址）→ 下载并校验原始图到 `web/generated/assets/<PMCID>/` → 查询 EasyScholar 期刊指标 → 只保留 EasyScholar 确认的 SCI/JCR 1 区期刊 → 调用 DeepSeek/OpenAI 兼容接口生成公众号式中文解读 → 质量门禁 → 写入 `web/generated/articles.json` → GitHub Pages 发布。公开网页只显示每一张正文图都已下载并验证的文章；无法获取正文、正文图、图注、网站本地图或 Q1 指标的候选会进入运行报告，不会显示在网站上；暂时的 AI 失败会在后续运行中有限重试。
 
 ## 后续复用范围
 
