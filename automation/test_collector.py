@@ -19,6 +19,9 @@ from automation.collector import (
     publication_gate,
     search_ncbi_pmc,
     pmc_aws_file_map,
+    _extract_json_object,
+    _normalize_llm_article,
+    generate_llm_article,
 )
 
 
@@ -35,6 +38,52 @@ Q1_METRICS = {
 
 
 class CollectorTests(unittest.TestCase):
+    def test_llm_generation_retries_after_malformed_json(self):
+        article = {field: "充分的中文内容" for field in (
+            "title_zh", "lead", "background", "research_question", "study_design",
+            "methods", "results", "limitations", "takeaways",
+        )}
+        article["figure_notes"] = [{"caption_zh": "图注", "interpretation": "解读"}]
+
+        class Response:
+            def __init__(self, payload):
+                self.payload = payload
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                return False
+            def read(self, _size):
+                return json.dumps(self.payload).encode("utf-8")
+
+        malformed = {"choices": [{"message": {"content": "```json {not valid```"}}]}
+        valid = {"choices": [{"message": {"content": json.dumps(article, ensure_ascii=False)}}]}
+        record = {"title": "test", "authors": [], "figures": [{"label": "Fig. 1", "caption": "caption"}], "methods_text": "", "results_text": ""}
+        with patch.dict(os.environ, {"DEEPSEEK_API_KEY": "test-key", "LLM_MAX_ATTEMPTS": "2"}, clear=False), \
+             patch("automation.collector.urllib.request.urlopen", side_effect=[Response(malformed), Response(valid)]):
+            parsed, status = generate_llm_article(record)
+        self.assertEqual(status, "success_retried")
+        self.assertEqual(parsed["title_zh"], "充分的中文内容")
+
+    def test_llm_json_parser_accepts_fence_and_preamble(self):
+        payload = '下面是文章 JSON：\n```json\n{"title_zh":"标题","figure_notes":[]}\n```\n'
+        parsed = _extract_json_object(payload)
+        self.assertEqual(parsed["title_zh"], "标题")
+        self.assertEqual(parsed["figure_notes"], [])
+
+    def test_llm_normalizer_handles_content_arrays_and_panel_aliases(self):
+        article = _normalize_llm_article({
+            "lead": ["第一段", "第二段"],
+            "figure_notes": {"items": [{
+                "图注": "完整图注", "读图": "按 a、b 顺序阅读",
+                "panels": [{"面板": "a", "实验": "实验", "比较": "两组", "结果": "升高", "统计": "正文未报告"}],
+                "解读": "解释", "证据": "正文", "边界": "边界",
+            }]},
+        }, 1)
+        self.assertEqual(article["lead"], "第一段\n\n第二段")
+        note = article["figure_notes"][0]
+        self.assertEqual(note["caption_zh"], "完整图注")
+        self.assertEqual(note["panel_reading"][0]["panel"], "a")
+
     def test_title_only_keys_are_stable_and_distinct(self):
         self.assertEqual(safe_key({"title": "First paper"}), "title:first paper")
         self.assertNotEqual(safe_key({"title": "First paper"}), safe_key({"title": "Second paper"}))
@@ -386,6 +435,29 @@ class CollectorTests(unittest.TestCase):
             records = search_ncbi_pmc("aging AND nanopore", page_size=1)
         self.assertEqual(records[0]["relevance_score"], 12)
         self.assertIn("完整查询命中", records[0]["relevance_evidence"][-1])
+
+    def test_ncbi_fallback_translates_europe_pmc_open_access_syntax(self):
+        payloads = [
+            {"esearchresult": {"idlist": []}},
+        ]
+        captured = []
+
+        def fake_ncbi(endpoint, params, **kwargs):
+            captured.append((endpoint, params))
+            return payloads.pop(0)
+
+        with patch("automation.collector.ncbi_json", side_effect=fake_ncbi):
+            search_ncbi_pmc("OPEN_ACCESS:Y AND ((aging) AND (nanopore))", page_size=1)
+        self.assertEqual(len(captured), 1)
+        term = captured[0][1]["term"]
+        self.assertNotIn("OPEN_ACCESS", term.upper())
+        self.assertIn("open access[filter]", term)
+
+    def test_candidate_scope_requires_topic_and_omics_signal(self):
+        from automation.collector import candidate_matches_scope
+        self.assertTrue(candidate_matches_scope({"title": "Ageing-associated methylome sequencing", "abstract": "senescence and long-read sequencing"}))
+        self.assertTrue(candidate_matches_scope({"title": "Diabetes nanopore benchmark", "abstract": "a bioinformatic workflow"}))
+        self.assertFalse(candidate_matches_scope({"title": "A highly cited metagenomics paper", "abstract": "healthy microbiome"}))
 
     def test_publication_gate_requires_jcr_q1(self):
         record = {

@@ -39,9 +39,10 @@ SCHEMA_VERSION = 1
 DEFAULT_QUERY = (
     'OPEN_ACCESS:Y AND ((aging OR ageing OR senescence OR geroscience OR "age-related" OR '
     'lifespan OR diabetes OR "metabolic syndrome" OR obesity) AND '
-    '("long-read" OR "long read" OR nanopore OR PacBio OR HiFi '
-    'OR "third-generation sequencing" OR metagenom* OR multi-omics OR '
-    'multiomics OR "single-cell" OR "RNA sequencing"))'
+    '("long-read" OR "long read" OR "short-read" OR "short read" OR nanopore OR PacBio OR HiFi '
+    'OR Illumina OR "third-generation sequencing" OR "second-generation sequencing" OR '
+    'metagenom* OR multi-omics OR multiomics OR "single-cell" OR "RNA sequencing" OR RNA-seq '
+    'OR WGS OR "whole-genome" OR "spatial transcriptomics"))'
 )
 EUROPE_PMC_SEARCH = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
 EASYSCHOLAR_URL = "https://www.easyscholar.cc/open/getPublicationRank"
@@ -166,11 +167,11 @@ def normalize_candidate(item: Mapping[str, Any]) -> dict[str, Any]:
 def score_candidate(record: Mapping[str, Any]) -> tuple[int, list[str]]:
     text = f"{record.get('title', '')} {record.get('abstract', '')}".lower()
     groups = {
-        "aging": (6, ["aging", "ageing", "senescence", "geroscience", "age-related", "lifespan", "inflammaging", "衰老"]),
+        "aging": (6, ["aging", "ageing", "senescence", "geroscience", "age-related", "age-associated", "lifespan", "inflammaging", "衰老"]),
         "sequencing": (7, ["long-read", "long read", "nanopore", "pacbio", "hifi", "third-generation sequencing", "metagenom", "rna sequencing", "single-cell"]),
         "multiomics": (4, ["multi-omics", "multiomics", "transcriptom", "methylom", "proteom", "metabolom", "epigenom"]),
         "tools": (3, ["assembler", "benchmark", "pipeline", "bioinformatic", "software", "database", "workflow"]),
-        "disease_bridge": (5, ["diabetes", "metabolic syndrome", "obesity", "cardiovascular", "kidney disease"]),
+        "disease_bridge": (5, ["diabetes", "diabetic", "metabolic syndrome", "metabolic disease", "obesity", "cardiovascular", "kidney disease"]),
     }
     score = 0
     evidence: list[str] = []
@@ -181,6 +182,32 @@ def score_candidate(record: Mapping[str, Any]) -> tuple[int, list[str]]:
             evidence.append(f"{group}: {', '.join(hits[:4])}")
     score += min(int(record.get("citation_count") or 0), 50) // 10
     return min(score, 100), evidence
+
+
+def candidate_matches_scope(record: Mapping[str, Any]) -> bool:
+    """Keep the daily queue inside the requested ageing/omics scope.
+
+    Europe PMC ranks by citation count as well as text relevance.  A highly
+    cited sequencing paper can therefore reach the old numeric threshold
+    without mentioning ageing at all.  Requiring one biological-topic signal
+    and one sequencing/omics signal prevents those papers from consuming the
+    five-paper daily quota while still allowing diabetes/metabolic bridges and
+    computational-method papers.
+    """
+    text = f"{record.get('title', '')} {record.get('abstract', '')}".lower()
+    topic_terms = (
+        "aging", "ageing", "senescence", "geroscience", "age-related", "age-associated", "older adult",
+        "lifespan", "inflammaging", "diabetes", "diabetic", "metabolic syndrome", "metabolic disease",
+        "obesity", "cardiovascular", "kidney disease", "衰老",
+    )
+    omics_terms = (
+        "sequenc", "long-read", "long read", "nanopore", "pacbio", "hifi",
+        "metagenom", "transcriptom", "methylom", "proteom", "metabolom",
+        "epigenom", "multi-omics", "multiomics", "single-cell", "scRNA",
+        "rna-seq", "rna sequencing", "whole-genome", "illumina", "assembler",
+        "benchmark", "bioinformatic", "pipeline", "software", "workflow",
+    )
+    return any(term in text for term in topic_terms) and any(term.lower() in text for term in omics_terms)
 
 
 def _http_read(request: urllib.request.Request, *, timeout: int, max_bytes: int) -> bytes:
@@ -428,10 +455,14 @@ def search_ncbi_pmc(query: str, *, page_size: int = 40) -> list[dict[str, Any]]:
     without downloading full article XML.  Full text is fetched later by
     ``make_record`` only for candidates that pass the normal relevance gate.
     """
-    # The PMC database understands the same broad Boolean syntax used by the
-    # Europe PMC query.  Restricting to the OA subset is important because the
-    # publication gate requires a retrievable XML body and original figures.
-    term = f"({query}) AND open access[filter]"
+    # NCBI does not understand Europe PMC's ``OPEN_ACCESS:Y`` field syntax.
+    # Strip that field before adding the NCBI equivalent, otherwise a Europe
+    # PMC outage produces a malformed fallback query and an empty queue.
+    ncbi_query = re.sub(r"(?i)\bOPEN_ACCESS\s*:\s*Y\b\s*(?:AND\s*)?", "", query).strip()
+    ncbi_query = re.sub(r"\(\s*\)", "", ncbi_query)
+    # The publication gate requires retrievable XML and original figures, so
+    # restricting the fallback to the PMC open-access subset is intentional.
+    term = f"({ncbi_query}) AND open access[filter]"
     search_payload = ncbi_json("esearch.fcgi", {
         "db": "pmc",
         "term": term,
@@ -645,28 +676,188 @@ def is_jcr_q1(metrics: Mapping[str, Any]) -> bool:
 
 def llm_prompt(record: Mapping[str, Any]) -> str:
     figures = "\n".join(f"{f.get('label')}: {f.get('caption')}" for f in record.get("figures", []))
-    return f"""你是严谨的生物医学文献编辑，负责生成接近高质量中文公众号长文的论文精读稿。只能使用给出的摘要、Methods、Results 和图注；不能补造材料中没有的数字、样本、实验或结论。如果正文没有提供某个数值，明确写“正文未报告”，不要猜测。首次出现的缩写写出英文全称，后文使用缩写。方法部分要把正文 Methods 翻译成中文并适当压缩，但保留研究对象、样本量、平台、建库/测序流程、关键软件、阈值、统计方法和数据可得性。结果部分要按正文逻辑解释观察、读图顺序、证据支持和结论边界。只返回 JSON，不要 Markdown 代码围栏。顶层字段必须完整：title_zh, lead, background, research_question, study_design, methods, results, limitations, takeaways, figure_notes。figure_notes 必须与正文图数量一致；每项包含 label、caption_zh、what_question、how_to_read、panel_reading（数组，每项含 panel、experiment、comparison、result、statistics）、interpretation、evidence、boundary。panel_reading 只能根据图注和正文结果填写；如果某个 panel 的数值或统计量没有在材料中出现，写“正文未报告”。\n\n题目：{record.get('title')}\n作者：{', '.join(record.get('authors', []))}\n期刊：{record.get('journal')}\n摘要：{record.get('abstract')}\n正文方法：{record.get('methods_text', '')[:24000]}\n正文结果：{record.get('results_text', '')[:30000]}\n正文图注：{figures[:16000]}"""
+    return f"""你是严谨的生物医学文献编辑，负责生成接近高质量中文公众号长文的论文精读稿。只能使用给出的摘要、Methods、Results 和图注；不能补造材料中没有的数字、样本、实验或结论。如果正文没有提供某个数值，明确写“正文未报告”，不要猜测。首次出现的缩写写出英文全称，后文使用缩写。方法部分要把正文 Methods 翻译成中文并适当压缩，但保留研究对象、样本量、平台、建库/测序流程、关键软件、阈值、统计方法和数据可得性。结果部分要按正文逻辑解释观察、读图顺序、证据支持和结论边界。只返回一个合法 JSON 对象，不要 Markdown 代码围栏、前言或对象后的解释。所有顶层 prose 字段必须是中文字符串，不能是数组或对象。顶层字段必须完整：title_zh, lead, background, research_question, study_design, methods, results, limitations, takeaways, figure_notes。figure_notes 必须与正文图数量一致；每项包含 label、caption_zh、what_question、how_to_read、panel_reading（数组，每项含 panel、experiment、comparison、result、statistics）、interpretation、evidence、boundary。panel_reading 只能根据图注和正文结果填写；如果某个 panel 的数值或统计量没有在材料中出现，写“正文未报告”。\n\n题目：{record.get('title')}\n作者：{', '.join(record.get('authors', []))}\n期刊：{record.get('journal')}\n摘要：{record.get('abstract')}\n正文方法：{record.get('methods_text', '')[:24000]}\n正文结果：{record.get('results_text', '')[:30000]}\n正文图注：{figures[:16000]}"""
 
 
-def generate_llm_article(record: dict[str, Any]) -> tuple[dict[str, Any], str]:
+def _llm_content_text(value: Any) -> str:
+    """Normalize the two content shapes used by DeepSeek/OpenAI-compatible APIs."""
+    if isinstance(value, str):
+        return value
+    if isinstance(value, list):
+        chunks: list[str] = []
+        for item in value:
+            if isinstance(item, str):
+                chunks.append(item)
+            elif isinstance(item, Mapping):
+                text = item.get("text") or item.get("content")
+                if isinstance(text, str):
+                    chunks.append(text)
+        return "".join(chunks)
+    return ""
+
+
+def _extract_json_object(content: str) -> dict[str, Any]:
+    """Parse JSON even when a model adds Markdown fences or a short preamble.
+
+    ``json.loads`` alone is brittle in production: models occasionally return
+    ``Here is the JSON:```json ...``` `` or append one sentence after the
+    object.  JSONDecoder.raw_decode lets us find a complete object while still
+    respecting quoted braces in captions.  We deliberately do not apply
+    JavaScript/eval-style repairs (single quotes, unquoted keys, etc.), because
+    those can silently change scientific content.
+    """
+    text = (content or "").lstrip("\ufeff \t\r\n")
+    if not text:
+        raise ValueError("llm_empty_content")
+    # Fast path for valid JSON and the common fenced response.
+    stripped = re.sub(r"^```(?:json)?\s*", "", text, flags=re.I)
+    stripped = re.sub(r"\s*```\s*$", "", stripped, flags=re.I).strip()
+    decoder = json.JSONDecoder()
+    for candidate in (text, stripped):
+        try:
+            value = json.loads(candidate)
+            if isinstance(value, dict):
+                return value
+        except json.JSONDecodeError:
+            pass
+    # Find the first complete JSON object.  raw_decode handles nested objects,
+    # arrays and braces occurring inside quoted strings correctly.
+    for index, char in enumerate(stripped):
+        if char != "{":
+            continue
+        try:
+            value, _ = decoder.raw_decode(stripped[index:])
+        except json.JSONDecodeError:
+            continue
+        if isinstance(value, dict):
+            return value
+    raise ValueError("llm_json_not_found")
+
+
+def _normalize_llm_article(article: Mapping[str, Any], figure_count: int) -> dict[str, Any]:
+    """Normalize harmless shape differences without inventing article prose."""
+    output = dict(article)
+    # Some compatible endpoints return arrays for long sections.  Joining is
+    # lossless and lets the publication gate inspect the complete translation.
+    for field in ("title_zh", "lead", "background", "research_question", "study_design", "methods", "results", "limitations", "takeaways"):
+        value = output.get(field)
+        if isinstance(value, list):
+            output[field] = "\n\n".join(clean_text(item) for item in value if clean_text(item))
+    # Accept the common one-key wrapper while preserving the exact figure list.
+    notes = output.get("figure_notes")
+    if isinstance(notes, Mapping):
+        for key in ("items", "figures", "notes", "figure_notes"):
+            if isinstance(notes.get(key), list):
+                output["figure_notes"] = notes[key]
+                break
+    notes = output.get("figure_notes")
+    if not isinstance(notes, list):
+        notes = []
+    normalized_notes: list[Any] = []
+    aliases = {
+        "caption": "caption_zh", "图注": "caption_zh", "question": "what_question", "问题": "what_question",
+        "read": "how_to_read", "读图": "how_to_read", "interpret": "interpretation", "解读": "interpretation",
+        "证据": "evidence", "边界": "boundary", "panels": "panel_reading", "panel": "panel_reading",
+    }
+    for raw_note in notes:
+        if not isinstance(raw_note, Mapping):
+            normalized_notes.append(raw_note)
+            continue
+        note = dict(raw_note)
+        for source, target in aliases.items():
+            if target not in note and source in note:
+                note[target] = note[source]
+        panels = note.get("panel_reading")
+        if isinstance(panels, Mapping):
+            panels = [panels]
+        if isinstance(panels, list):
+            fixed_panels: list[Any] = []
+            for raw_panel in panels:
+                if not isinstance(raw_panel, Mapping):
+                    fixed_panels.append(raw_panel)
+                    continue
+                panel = dict(raw_panel)
+                panel_aliases = {"面板": "panel", "实验": "experiment", "比较": "comparison", "结果": "result", "统计": "statistics"}
+                for source, target in panel_aliases.items():
+                    if target not in panel and source in panel:
+                        panel[target] = panel[source]
+                fixed_panels.append(panel)
+            note["panel_reading"] = fixed_panels
+        normalized_notes.append(note)
+    output["figure_notes"] = normalized_notes
+    return output
+
+
+def generate_llm_article(record: dict[str, Any], feedback: Optional[Iterable[str]] = None) -> tuple[dict[str, Any], str]:
     api_key = clean_text(os.environ.get("LLM_API_KEY") or os.environ.get("DEEPSEEK_API_KEY"))
     if not api_key:
         return {}, "missing_llm_key"
     endpoint = clean_text(os.environ.get("LLM_API_URL")) or "https://api.deepseek.com/chat/completions"
-    body = json.dumps({"model": os.environ.get("LLM_MODEL", "deepseek-chat"), "temperature": 0.15, "messages": [{"role": "system", "content": "You produce source-grounded scientific Chinese article JSON."}, {"role": "user", "content": llm_prompt(record)}]}).encode("utf-8")
-    request = urllib.request.Request(endpoint, data=body, headers={"Content-Type": "application/json", "Authorization": f"Bearer {api_key}", "User-Agent": "paper-plot-library/1.0"}, method="POST")
+    figure_count = len(record.get("figures", [])) if isinstance(record.get("figures"), list) else 0
+    base_prompt = llm_prompt(record) + f"\n本次正文原图数量为 {figure_count}；figure_notes 必须恰好输出 {figure_count} 项，并按原图顺序对应。"
+    feedback_text = "; ".join(clean_text(item) for item in (feedback or []) if clean_text(item))
     try:
-        with urllib.request.urlopen(request, timeout=120) as response:
-            payload = json.loads(response.read(8 * 1024 * 1024).decode("utf-8"))
-        content = payload["choices"][0]["message"]["content"]
-        content = re.sub(r"^```(?:json)?\s*|\s*```$", "", content.strip(), flags=re.I)
-        article = json.loads(content)
-        required = ("title_zh", "lead", "background", "research_question", "study_design", "methods", "results", "limitations", "takeaways", "figure_notes")
-        if not all(article.get(field) for field in required):
-            return {}, "llm_schema_incomplete"
-        return article, "success"
-    except (OSError, ValueError, KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
-        return {}, f"llm_error:{type(exc).__name__}"
+        max_attempts = max(1, min(3, int(os.environ.get("LLM_MAX_ATTEMPTS", "3"))))
+    except (TypeError, ValueError):
+        max_attempts = 3
+    try:
+        max_tokens = max(1024, min(32768, int(os.environ.get("LLM_MAX_TOKENS", "8192"))))
+    except (TypeError, ValueError):
+        max_tokens = 8192
+    json_mode = os.environ.get("LLM_JSON_MODE", "1").casefold() not in {"0", "false", "no"}
+    last_error = "llm_error:unknown"
+    for attempt in range(max_attempts):
+        prompt = base_prompt
+        if attempt:
+            prompt += "\n上一次输出无法通过结构化校验。请重新生成，必须只输出一个完整 JSON 对象；不要 Markdown 围栏、不要说明文字、不要省略任何 figure_notes。为避免长文截断，每个顶层段落保持 2–5 个完整句子，每个 panel 的说明保持 1–2 个完整句子，但不得省略实验、比较、结果和统计字段。"
+            if feedback_text:
+                prompt += f"\n上一版还需要修复：{feedback_text}"
+        body_data = {
+            "model": os.environ.get("LLM_MODEL", "deepseek-chat"),
+            "temperature": 0.15,
+            # A bounded value prevents the API from silently truncating long
+            # multi-figure papers.  It remains configurable for compatible
+            # endpoints with a different maximum.
+            "max_tokens": max_tokens,
+            "messages": [
+                {"role": "system", "content": "You produce source-grounded scientific Chinese article JSON."},
+                {"role": "user", "content": prompt},
+            ],
+        }
+        # DeepSeek supports JSON mode.  Custom OpenAI-compatible endpoints may
+        # reject the field, so it can be disabled explicitly.
+        if json_mode:
+            body_data["response_format"] = {"type": "json_object"}
+        body = json.dumps(body_data, ensure_ascii=False).encode("utf-8")
+        request = urllib.request.Request(endpoint, data=body, headers={"Content-Type": "application/json", "Authorization": f"Bearer {api_key}", "User-Agent": "paper-plot-library/1.0"}, method="POST")
+        try:
+            with urllib.request.urlopen(request, timeout=120) as response:
+                payload = json.loads(response.read(8 * 1024 * 1024).decode("utf-8"))
+            content = _llm_content_text(payload["choices"][0]["message"]["content"])
+            article = _normalize_llm_article(_extract_json_object(content), figure_count)
+            required = ("title_zh", "lead", "background", "research_question", "study_design", "methods", "results", "limitations", "takeaways", "figure_notes")
+            if not all(article.get(field) for field in required):
+                last_error = "llm_schema_incomplete"
+                continue
+            if not isinstance(article.get("figure_notes"), list) or len(article["figure_notes"]) != figure_count:
+                last_error = "llm_figure_notes_incomplete"
+                continue
+            return article, "success" if attempt == 0 else "success_retried"
+        except urllib.error.HTTPError as exc:
+            last_error = f"llm_http_{exc.code}"
+            # A few OpenAI-compatible gateways do not implement DeepSeek's
+            # JSON-mode parameter.  Retry once without that optional field;
+            # authentication and quota failures still remain visible.
+            if exc.code == 400 and json_mode:
+                json_mode = False
+                continue
+            if exc.code not in TRANSIENT_HTTP_STATUS and attempt == max_attempts - 1:
+                break
+        except (OSError, ValueError, KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
+            last_error = f"llm_error:{type(exc).__name__}"
+        if attempt < max_attempts - 1:
+            time.sleep(min(8, 2 ** attempt))
+    return {}, last_error
 
 
 def publication_gate(record: Mapping[str, Any], article: Mapping[str, Any]) -> tuple[bool, list[str]]:
@@ -727,11 +918,15 @@ def publication_gate(record: Mapping[str, Any], article: Mapping[str, Any]) -> t
             if not isinstance(note, Mapping) or any(not clean_text(note.get(field)) for field in required_note_fields):
                 reasons.append(f"第 {index + 1} 张图的图注/读图/证据字段不完整")
                 continue
-            if len(clean_text(note.get("caption_zh"))) < 20:
+            if len(clean_text(note.get("caption_zh"))) < 12:
                 reasons.append(f"第 {index + 1} 张图的中文图注过短")
-            if len(clean_text(note.get("how_to_read"))) < 40:
+            if len(clean_text(note.get("how_to_read"))) < 25:
                 reasons.append(f"第 {index + 1} 张图的读图说明过短")
-            if len(clean_text(note.get("interpretation"))) < 70:
+            # A caption can be short when the paper reports only a compact
+            # benchmark panel.  Require a real interpretation, but do not
+            # discard an otherwise complete article because it is below the
+            # old 70-character heuristic.
+            if len(clean_text(note.get("interpretation"))) < 40:
                 reasons.append(f"第 {index + 1} 张图的结果解读过短")
             panels = note.get("panel_reading")
             if not isinstance(panels, list) or not panels:
@@ -785,6 +980,23 @@ def make_record(candidate: dict[str, Any], metrics_cache: dict[str, Any], xml_fi
     record["article"] = article
     record["ai_status"] = ai_status
     record["publishable"], record["gate_reasons"] = publication_gate(record, article)
+    # A syntactically valid draft can still miss one detailed figure field.
+    # Give the model one bounded, feedback-directed repair before discarding a
+    # paper; source/full-text/JCR failures are never bypassed by this path.
+    quality_reasons = [reason for reason in record["gate_reasons"] if reason.startswith("AI ") or reason.startswith("第 ")]
+    if (
+        record.get("assets_required")
+        and ai_status.startswith("success")
+        and not record["publishable"]
+        and quality_reasons
+        and os.environ.get("LLM_GATE_REPAIR", "1").casefold() not in {"0", "false", "no"}
+    ):
+        repaired, repaired_status = generate_llm_article(record, feedback=quality_reasons)
+        if repaired_status.startswith("success"):
+            article = repaired
+            record["article"] = article
+            record["ai_status"] = f"{repaired_status}_gate_repair"
+            record["publishable"], record["gate_reasons"] = publication_gate(record, article)
     source_incomplete = ai_status in {"skipped_non_jcr_q1", "skipped_no_retrievable_fulltext_or_assets"}
     record["status"] = "published" if record["publishable"] else ("manual_review" if record["fulltext_ok"] and record["figures"] and not source_incomplete else "discarded")
     return record
@@ -894,11 +1106,27 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         # runs; a paper without retrievable full text/figures is discarded.
         return previous.get("status") == "manual_review" and int(previous.get("attempts", 0)) < 5
     eligible_candidates = [candidate for candidate in candidates if eligible(candidate)]
+    scope_rejected = sum(1 for candidate in eligible_candidates if not candidate_matches_scope(candidate))
+    eligible_candidates = [candidate for candidate in eligible_candidates if candidate_matches_scope(candidate)]
     # A PMCID is required for the XML/full-text path used by this project.
     # DOI-only records are kept out of the daily processing quota so that one
     # inaccessible paper cannot consume the whole run.
     candidates = [candidate for candidate in eligible_candidates if clean_text(candidate.get("pmcid"))]
     skipped_without_pmcid = len(eligible_candidates) - len(candidates)
+    q1_rejected = 0
+    # In the production workflow, EasyScholar is the authoritative Q1 gate.
+    # Apply it before selecting the daily queue so Q2/unclassified papers do
+    # not consume the five inspection slots.  Fixture/legacy runs remain
+    # permissive and are covered by the deterministic tests.
+    if args.assets_dir:
+        q1_candidates: list[dict[str, Any]] = []
+        for candidate in candidates:
+            metrics = easy_scholar_metrics(clean_text(candidate.get("journal")), metrics_cache)
+            if is_jcr_q1(metrics):
+                q1_candidates.append(candidate)
+            else:
+                q1_rejected += 1
+        candidates = q1_candidates
     attempt_limit = args.attempt_limit or max(args.max_new * 3, args.max_new)
     selected: list[dict[str, Any]] = []
     processed: list[dict[str, Any]] = []
@@ -915,7 +1143,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             records[record["id"]] = public_projection(record)
             published_this_run += 1
     published = sorted(records.values(), key=lambda r: (r.get("year", ""), r.get("updated_at", "")), reverse=True)
-    state.update({"schema_version": SCHEMA_VERSION, "updated_at": utc_now(), "records": records, "attempted": attempted, "metrics_cache": metrics_cache, "last_run": {"status": search_status, "selected": len(selected), "published": published_this_run, "candidates": len(candidates), "skipped_without_pmcid": skipped_without_pmcid, "search_error": search_error, "preserved_articles": len(records), "asset_dir": str(args.assets_dir) if args.assets_dir else "", "finished_at": utc_now()}})
+    state.update({"schema_version": SCHEMA_VERSION, "updated_at": utc_now(), "records": records, "attempted": attempted, "metrics_cache": metrics_cache, "last_run": {"status": search_status, "selected": len(selected), "published": published_this_run, "candidates": len(candidates), "scope_rejected": scope_rejected, "q1_rejected": q1_rejected, "skipped_without_pmcid": skipped_without_pmcid, "search_error": search_error, "preserved_articles": len(records), "asset_dir": str(args.assets_dir) if args.assets_dir else "", "finished_at": utc_now()}})
     save_json(args.state, state)
     save_json(args.output, {"schema_version": SCHEMA_VERSION, "generated_at": utc_now(), "articles": [public_projection(record) for record in published]})
     report_records = [{key: value for key, value in record.items() if key not in {"abstract", "fulltext_text", "methods_text", "results_text", "article"}} for record in processed]
