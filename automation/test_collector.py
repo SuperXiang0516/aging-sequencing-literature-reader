@@ -18,6 +18,7 @@ from automation.collector import (
     parse_args,
     publication_gate,
     search_ncbi_pmc,
+    pmc_aws_file_map,
 )
 
 
@@ -66,6 +67,23 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(supplements[0]["label"], "Supplementary Table 1")
         self.assertTrue(supplements[0]["url"].endswith("/example-supplement.pdf"))
 
+    def test_xml_prefers_pmc_aws_media_when_available(self):
+        xml = (BASE / "fixtures/pmc-example.xml").read_text(encoding="utf-8")
+        mapped = {"example-f1.jpg": "https://pmc-oa-opendata.s3.amazonaws.com/PMC1234567.1/example-f1.jpg"}
+        _, _, _, figures, _ = extract_fulltext(xml, "PMC1234567", mapped)
+        self.assertEqual(figures[0]["image_url"], mapped["example-f1.jpg"])
+
+    def test_pmc_aws_file_map_selects_only_image_objects(self):
+        listing = """<ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Contents><Key>PMC1234567.1/PMC1234567.1.xml</Key></Contents>
+          <Contents><Key>PMC1234567.1/example-f1.jpg</Key></Contents>
+          <Contents><Key>PMC1234567.1/supplement.pdf</Key></Contents>
+        </ListBucketResult>"""
+        with patch("automation.collector.http_text", return_value=listing):
+            mapped = pmc_aws_file_map("PMC1234567")
+        self.assertEqual(list(mapped), ["example-f1.jpg"])
+        self.assertTrue(mapped["example-f1.jpg"].endswith("/PMC1234567.1/example-f1.jpg"))
+
     def test_cache_figure_assets_writes_validated_local_image(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
@@ -88,6 +106,18 @@ class CollectorTests(unittest.TestCase):
             self.assertEqual(len(errors), 1)
             self.assertEqual(cached[0]["asset_status"], "error")
             self.assertFalse((root / "assets/PMC123456/fig-01.png").exists())
+
+    def test_cache_figure_assets_uses_aws_source_when_legacy_url_fails(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            figures = [{"label": "Fig. 1", "caption": "caption", "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC123456/bin/example-f1.jpg"}]
+            png = b"\x89PNG\r\n\x1a\n" + b"fake-png-payload"
+            with patch("automation.collector.download_image", return_value={"path": root / "assets/PMC123456/fig-01.png", "bytes": len(png), "sha256": "abc", "suffix": ".png"}), \
+                 patch("automation.collector.pmc_aws_file_map", return_value={"example-f1.jpg": "https://pmc-oa-opendata.s3.amazonaws.com/PMC123456.1/example-f1.jpg"}):
+                cached, errors = cache_figure_assets(figures, "PMC123456", root / "assets")
+            self.assertEqual(errors, [])
+            self.assertEqual(cached[0]["original_url"], "https://pmc-oa-opendata.s3.amazonaws.com/PMC123456.1/example-f1.jpg")
+            self.assertEqual(cached[0]["source_url"], "https://pmc.ncbi.nlm.nih.gov/articles/PMC123456/bin/example-f1.jpg")
 
     def test_run_publishes_only_after_local_assets_are_cached(self):
         article = {

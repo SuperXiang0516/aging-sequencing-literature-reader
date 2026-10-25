@@ -37,7 +37,7 @@ from typing import Any, Iterable, Mapping, Optional
 
 SCHEMA_VERSION = 1
 DEFAULT_QUERY = (
-    '((aging OR ageing OR senescence OR geroscience OR "age-related" OR '
+    'OPEN_ACCESS:Y AND ((aging OR ageing OR senescence OR geroscience OR "age-related" OR '
     'lifespan OR diabetes OR "metabolic syndrome" OR obesity) AND '
     '("long-read" OR "long read" OR nanopore OR PacBio OR HiFi '
     'OR "third-generation sequencing" OR metagenom* OR multi-omics OR '
@@ -264,7 +264,7 @@ def download_image(url: str, destination_stem: Path) -> dict[str, Any]:
     }
 
 
-def cache_figure_assets(figures: list[dict[str, Any]], pmcid: str, assets_dir: Optional[Path], *, url_prefix: str = "generated/assets") -> tuple[list[dict[str, Any]], list[str]]:
+def cache_figure_assets(figures: list[dict[str, Any]], pmcid: str, assets_dir: Optional[Path], *, url_prefix: str = "generated/assets", asset_map: Optional[Mapping[str, str]] = None) -> tuple[list[dict[str, Any]], list[str]]:
     """Persist original figure binaries and attach stable web-relative URLs.
 
     ``assets_dir`` is intentionally optional for deterministic unit tests. The
@@ -275,6 +275,7 @@ def cache_figure_assets(figures: list[dict[str, Any]], pmcid: str, assets_dir: O
         return figures, []
     paper_key = re.sub(r"[^A-Za-z0-9_.-]+", "-", clean_text(pmcid) or "paper").strip("-") or "paper"
     errors: list[str] = []
+    aws_map = dict(asset_map) if asset_map is not None else pmc_aws_file_map(pmcid)
     for index, figure in enumerate(figures, start=1):
         if not isinstance(figure, dict):
             errors.append(f"fig-{index:02d}:invalid_record")
@@ -283,22 +284,35 @@ def cache_figure_assets(figures: list[dict[str, Any]], pmcid: str, assets_dir: O
         if not source:
             errors.append(f"fig-{index:02d}:missing_source_url")
             continue
+        source_urls = [source]
+        filename = Path(urllib.parse.unquote(urllib.parse.urlsplit(source).path)).name.casefold()
+        mapped_source = aws_map.get(filename)
+        if mapped_source and mapped_source not in source_urls:
+            source_urls.insert(0, mapped_source)
         stem = Path(assets_dir) / paper_key / f"fig-{index:02d}"
-        try:
-            result = download_image(source, stem)
-            filename = result["path"].name
-            relative_url = f"{url_prefix.rstrip('/')}/{paper_key}/{filename}"
-            figure.update({
-                "original_url": source,
-                "local_url": relative_url,
-                "asset_path": relative_url,
-                "asset_bytes": result["bytes"],
-                "asset_sha256": result["sha256"],
-                "asset_status": "downloaded",
-            })
-        except (OSError, urllib.error.URLError, ValueError) as exc:
-            figure.update({"original_url": source, "asset_status": "error", "asset_error": type(exc).__name__})
-            errors.append(f"fig-{index:02d}:{type(exc).__name__}")
+        last_error: Optional[BaseException] = None
+        for candidate_url in source_urls:
+            try:
+                result = download_image(candidate_url, stem)
+                filename = result["path"].name
+                relative_url = f"{url_prefix.rstrip('/')}/{paper_key}/{filename}"
+                figure.update({
+                    "original_url": candidate_url,
+                    "source_url": source,
+                    "local_url": relative_url,
+                    "asset_path": relative_url,
+                    "asset_bytes": result["bytes"],
+                    "asset_sha256": result["sha256"],
+                    "asset_status": "downloaded",
+                    "asset_error": "",
+                })
+                last_error = None
+                break
+            except (OSError, urllib.error.URLError, ValueError) as exc:
+                last_error = exc
+        if last_error is not None:
+            figure.update({"original_url": source, "asset_status": "error", "asset_error": type(last_error).__name__})
+            errors.append(f"fig-{index:02d}:{type(last_error).__name__}")
     return figures, errors
 
 
@@ -493,7 +507,48 @@ def figure_url(pmcid: str, href: str) -> str:
     return f"https://pmc.ncbi.nlm.nih.gov/articles/{urllib.parse.quote(pmcid)}/bin/{urllib.parse.quote(href)}"
 
 
-def extract_fulltext(xml_text: str, pmcid: str) -> tuple[str, str, str, list[dict[str, str]], list[dict[str, str]]]:
+PMC_AWS_BUCKET = "https://pmc-oa-opendata.s3.amazonaws.com/"
+
+
+def pmc_aws_file_map(pmcid: str) -> dict[str, str]:
+    """Return filename -> public AWS URL for one PMC article package.
+
+    PMC moved its article-dataset distribution to the public
+    ``pmc-oa-opendata`` bucket in 2026.  The old ``/articles/<pmcid>/bin``
+    paths can now return 404 even when the XML remains available.  Articles
+    without redistributable media simply return an empty mapping and are
+    rejected by the original-figure gate.
+    """
+    pmcid = clean_text(pmcid)
+    if not pmcid:
+        return {}
+    prefix = urllib.parse.quote(pmcid, safe="") + "."
+    try:
+        payload = http_text(f"{PMC_AWS_BUCKET}?list-type=2&prefix={prefix}", timeout=30)
+        root = ET.fromstring(payload)
+    except (OSError, ET.ParseError, urllib.error.URLError, ValueError):
+        return {}
+    output: dict[str, str] = {}
+    image_suffixes = {".jpg", ".jpeg", ".png", ".gif", ".tif", ".tiff", ".webp", ".svg"}
+    for node in root.iter():
+        if local_name(node.tag) != "Key" or not node.text:
+            continue
+        key = clean_text(node.text)
+        name = Path(urllib.parse.unquote(key)).name
+        if Path(name).suffix.lower() not in image_suffixes:
+            continue
+        output.setdefault(name.casefold(), urllib.parse.urljoin(PMC_AWS_BUCKET, urllib.parse.quote(key, safe="/")))
+    return output
+
+
+def _mapped_figure_url(pmcid: str, href: str, asset_map: Optional[Mapping[str, str]]) -> str:
+    name = Path(urllib.parse.unquote(clean_text(href))).name.casefold()
+    if asset_map and name in asset_map:
+        return asset_map[name]
+    return figure_url(pmcid, href)
+
+
+def extract_fulltext(xml_text: str, pmcid: str, asset_map: Optional[Mapping[str, str]] = None) -> tuple[str, str, str, list[dict[str, str]], list[dict[str, str]]]:
     root = ET.fromstring(xml_text)
     paragraphs: list[str] = []
     methods: list[str] = []
@@ -520,7 +575,7 @@ def extract_fulltext(xml_text: str, pmcid: str) -> tuple[str, str, str, list[dic
                 if href:
                     break
         if href:
-            figures.append({"label": label or f"Figure {len(figures) + 1}", "caption": caption, "image_url": figure_url(pmcid, href)})
+            figures.append({"label": label or f"Figure {len(figures) + 1}", "caption": caption, "image_url": _mapped_figure_url(pmcid, href, asset_map)})
     for node in root.iter():
         if local_name(node.tag) != "supplementary-material":
             continue
@@ -530,7 +585,7 @@ def extract_fulltext(xml_text: str, pmcid: str) -> tuple[str, str, str, list[dic
             if not href and local_name(child.tag) in {"media", "graphic"}:
                 href = clean_text(child.attrib.get("{http://www.w3.org/1999/xlink}href") or child.attrib.get("href"))
         if href:
-            supplements.append({"label": label or f"Supplementary file {len(supplements) + 1}", "url": figure_url(pmcid, href), "description": element_text(first_child(node, "caption"))})
+            supplements.append({"label": label or f"Supplementary file {len(supplements) + 1}", "url": _mapped_figure_url(pmcid, href, asset_map), "description": element_text(first_child(node, "caption"))})
     return "\n\n".join(paragraphs), "\n\n".join(methods), "\n\n".join(results), figures, supplements
 
 
@@ -699,8 +754,13 @@ def make_record(candidate: dict[str, Any], metrics_cache: dict[str, Any], xml_fi
         elif record.get("pmcid"):
             xml_text = fetch_pmc_xml(record["pmcid"], prefer_ncbi=record.get("source") == "NCBI PMC")
         if xml_text and record.get("pmcid"):
-            fulltext, methods, results, figures, supplements = extract_fulltext(xml_text, record["pmcid"])
-            figures, asset_errors = cache_figure_assets(figures, record["pmcid"], assets_dir, url_prefix=assets_url_prefix)
+            # Resolve figure filenames against the supported PMC AWS article
+            # dataset before caching.  The legacy PMC ``/bin`` URL is kept as
+            # a diagnostic fallback, but it is no longer reliable after the
+            # 2026 PMC distribution migration.
+            asset_map = {} if xml_fixture else pmc_aws_file_map(record["pmcid"])
+            fulltext, methods, results, figures, supplements = extract_fulltext(xml_text, record["pmcid"], asset_map)
+            figures, asset_errors = cache_figure_assets(figures, record["pmcid"], assets_dir, url_prefix=assets_url_prefix, asset_map=asset_map)
             record.update({"fulltext_text": fulltext, "methods_text": methods, "results_text": results or fulltext, "figures": figures, "supplements": supplements, "fulltext_ok": bool(fulltext)})
             record["asset_errors"] = asset_errors
         else:
