@@ -1,15 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-24T13:24:41Z",
+  "generated_at": "2026-10-25T02:24:51Z",
   "last_run": {
     "status": "success",
-    "selected": 7,
-    "published": 5,
-    "candidates": 17,
-    "skipped_without_pmcid": 4,
+    "selected": 2,
+    "published": 0,
+    "candidates": 2,
+    "skipped_without_pmcid": 0,
     "search_error": "",
-    "preserved_articles": 8,
-    "finished_at": "2026-10-24T13:24:41Z"
+    "preserved_articles": 0,
+    "asset_dir": "web/generated/assets",
+    "finished_at": "2026-10-25T02:24:51Z"
   },
   "processed": [
     {
@@ -44,41 +45,72 @@
         {
           "label": "Figure 1",
           "caption": "The Hallmarks of Aging The scheme enumerates the nine hallmarks described in this review: genomic instability, telomere attrition, epigenetic alterations, loss of proteostasis, deregulated nutrient-sensing, mitochondrial dysfunction, cellular senescence, stem cell exhaustion, and altered intercellular communication.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0001.jpg"
+          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0001.jpg",
+          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0001.jpg",
+          "asset_status": "error",
+          "asset_error": "HTTPError"
         },
         {
           "label": "Figure 2",
           "caption": "Genomic and Epigenomic Alterations A) Genomic instability and telomere attrition. Endogenous or exogenous agents can stimulate a variety of DNA lesions that are schematically represented on one single chromosome. Such lesions can by repaired by a variety of mechanisms. Excessive DNA damage or insufficient DNA repair favors the aging process. Note that both nuclear DNA and mitochondrial DNA (not represented here) are subjected to age-associated genomic alterations. BER, base excision repair; HR, homologous recombination; NER, nucleotide excision repair; NHEJ, non-homologous end joining; MMR, mismatch repair; ROS, reactive oxygen species; TLS, translesion synthesis; SAC, spindle assembly checkpoint. B) Epigenetic alterations . Alterations in the acetylation and methylation of DNA or histones, as well as of other chromatin-associated proteins, can induce epigenetic changes that contribute to the aging process.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0002.jpg"
+          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0002.jpg",
+          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0002.jpg",
+          "asset_status": "error",
+          "asset_error": "HTTPError"
         },
         {
           "label": "Figure 3",
           "caption": "Loss of Proteostasis Endogenous and exogenous stress causes the unfolding of proteins (or impairs proper folding during protein synthesis). Unfolded proteins are usually refolded by heat-shock proteins (HSP) or targeted to destruction by the ubiquitin-proteasome or lysosomal (autophagic) pathways. The autophagic pathways include recognition of unfolded proteins by the chaperone Hsc70 and their subsequent import into lysosomes (chaperone-mediated autophagy) or sequestration of damaged proteins and organelles in autophagosomes that later fuse with lysosomes (macroautophagy). Failure to refold or degrade unfolded proteins can lead to their accumulation and aggregation, resulting in proteotoxic effects.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0004.jpg"
+          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0004.jpg",
+          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0004.jpg",
+          "asset_status": "error",
+          "asset_error": "HTTPError"
         },
         {
           "label": "Figure 4",
           "caption": "Metabolic Alterations A) Deregulated nutrient-sensing. Overview of the somatroph axis involving growth hormone (GH) and the insulin/insulin growth factor 1 (IGF-1) signaling pathway, and its relationship to dietary restriction and aging. Molecules that favor aging are shown in orange, while molecules with anti-aging properties are shown in light green. B) Mitochondrial dysfunction. Mitochondrial function becomes perturbed by aging-associated mtDNA mutations, reduced mitochondriogenesis, destabilization of the electron transport chain (ETC) complexes, altered mitochondrial dynamics or defective quality control by mitophagy. Stress signals and defective mitochondrial function generate ROS that, below a certain threshold, induce survival signals to restore cellular homeostasis, but at higher or continued levels can contribute to aging. Similarly, mild mitochondrial damage can induce a hormetic response (mitohormesis) that triggers adaptive compensatory processes.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0005.jpg"
+          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0005.jpg",
+          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0005.jpg",
+          "asset_status": "error",
+          "asset_error": "HTTPError"
         },
         {
           "label": "Figure 5",
           "caption": "Cellular Senescence, Stem Cell Exhaustion and Altered Intercellular Communication A) Cellular senescence. In young organisms, cellular senescence prevents the proliferation of damaged cells, thus protecting from cancer and contributing to tissue homeostasis. In old organisms, the pervasive damage and the deficient clearance and replenishment of senescent cells results in their accumulation, and this has a number of deleterious effects on tissue homeostasis that contribute to aging. B) Stem cell exhaustion . Consequences of the exhaustion of hematopoietic stem cells (HSCs), mesenchymal stem cells (MSCs), satellite cells and intestinal epithelial stem cells (IESCs) are exemplified. C) Altered intercellular communication. Examples of altered intercellular communication associated with aging.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0007.jpg"
+          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0007.jpg",
+          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0007.jpg",
+          "asset_status": "error",
+          "asset_error": "HTTPError"
         },
         {
           "label": "Figure 6",
           "caption": "Functional Interconnections between the Hallmarks of Aging The proposed nine hallmarks of aging are grouped into three categories. In the top, those hallmarks considered to be the primary causes of cellular damage. In the middle, those considered to be part of compensatory or antagonistic responses to the damage. These responses initially mitigate the damage, but eventually, if chronic or exacerbated, they become deleterious themselves. In the bottom, there are integrative hallmarks that are the end result of the previous two groups of hallmarks and are ultimately responsible for the functional decline associated with aging.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0009.jpg"
+          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0009.jpg",
+          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0009.jpg",
+          "asset_status": "error",
+          "asset_error": "HTTPError"
         },
         {
           "label": "Figure 7",
           "caption": "Interventions that Might Extend Human Healthspan The nine hallmarks of aging are shown together with those therapeutic strategies for which there are proof of principle in mice.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0010.jpg"
+          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0010.jpg",
+          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3836174/bin/emss-55354-f0010.jpg",
+          "asset_status": "error",
+          "asset_error": "HTTPError"
         }
       ],
       "supplements": [],
       "fulltext_ok": true,
+      "asset_errors": [
+        "fig-01:HTTPError",
+        "fig-02:HTTPError",
+        "fig-03:HTTPError",
+        "fig-04:HTTPError",
+        "fig-05:HTTPError",
+        "fig-06:HTTPError",
+        "fig-07:HTTPError"
+      ],
+      "assets_required": true,
       "metrics": {
         "impact_factor": "45.1",
         "jcr": "SCI Q1",
@@ -89,679 +121,33 @@
         "retrieved_at": "2026-10-24T13:20:42Z"
       },
       "journal_display": "Cell（IF 45.1；JCR SCI Q1）",
-      "updated_at": "2026-10-24T13:20:42Z",
-      "ai_status": "success",
+      "updated_at": "2026-10-25T02:24:48Z",
+      "ai_status": "skipped_no_retrievable_fulltext_or_assets",
       "publishable": false,
       "gate_reasons": [
-        "正文 Methods 未提取"
+        "存在未成功缓存到网站的正文原图",
+        "正文 Methods 未提取",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：lead",
+        "AI 字段缺失：background",
+        "AI 字段缺失：research_question",
+        "AI 字段缺失：study_design",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：limitations",
+        "AI 字段缺失：takeaways",
+        "AI 字段缺失：figure_notes",
+        "AI 内容过短：lead",
+        "AI 内容过短：background",
+        "AI 内容过短：research_question",
+        "AI 内容过短：study_design",
+        "AI 内容过短：methods",
+        "AI 内容过短：results",
+        "AI 内容过短：limitations",
+        "AI 内容过短：takeaways",
+        "AI 图组解读不是数组"
       ],
-      "status": "manual_review"
-    },
-    {
-      "id": "doi:10.1038/nbt.4096",
-      "title": "Integrating single-cell transcriptomic data across different conditions, technologies, and species.",
-      "authors": [
-        "Butler A",
-        "Hoffman P",
-        "Smibert P",
-        "Papalexi E",
-        "Satija R"
-      ],
-      "journal": "Nature biotechnology",
-      "year": "2018",
-      "doi": "10.1038/nbt.4096",
-      "pmcid": "PMC6700744",
-      "pmid": "29608179",
-      "citation_count": 11393,
-      "fulltext_urls": [
-        "https://europepmc.org/articles/pmc6700744?pdf=render",
-        "https://doi.org/10.1038/nbt.4096",
-        "https://europepmc.org/articles/PMC6700744",
-        "https://europepmc.org/articles/PMC6700744?pdf=render",
-        "https://doi.org/10.1038/nbt.4096"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 16,
-      "relevance_evidence": [
-        "sequencing: single-cell",
-        "multiomics: transcriptom"
-      ],
-      "figures": [
-        {
-          "label": "Figure 1.",
-          "caption": "Overview of Seurat alignment of single cell RNA-seq datasets (A) Toy example of heterogeneous populations profiled in a case/control study after drug treatment. Cells across four types are plotted with different symbols, while stimulation condition is encoded by color. In a standard workflow, cells often cluster both by cell type and stimulation condition, creating challenges for downstream comparative analysis. (B) The Seurat alignment procedure uses canonical correlation analysis to identify shared correlation structures across datasets, and aligns these dimensions using dynamic time warping. After alignment, cells are embedded in a shared low-dimensional space (visualized here in 2D with tSNE). (C) After alignment, a single integrated clustering can identify conserved cell types across conditions, allowing for comparative analysis to identify shifts in cell type proportion, as well as cell-type specific transcriptional responses to drug treatment.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6700744/bin/nihms-990262-f0001.jpg"
-        },
-        {
-          "label": "Figure 2.",
-          "caption": "Integrated analysis of resting and stimulated PBMC (A-C) tSNE plots of 14,039 human PBMCs split between control and IFN-β-stimulated conditions, prior to (A) and post (B) alignment. After alignment, cells across stimulation conditions group together based on shared cell type, allowing for a single joint clustering (C) to detect 13 immune populations. (D) Integrated analysis reveals markers of cell types (conserved across stimulation conditions), uniform markers of IFN-β response (independent of cell type), and components of the IFN-β response that vary across cell types. The size of each circle reflects the percentage of cells in a cluster where the gene is detected, and the color reflects the average expression level within each cluster. (E) The fraction of cells (median across 8 donors) falling in each cluster (n = 13 clusters) for stimulated and unstimulated cells. (F) Examples of heterogeneous responses to IFN-β between conventional and plasmacytoid dendritic cells (global analysis shown in Supplementary Figure 4B ). Each column represents the average expression of single cells within a single patient. Only patient/cluster combinations with at least five cells are shown. (G) Correlation heatmap (n = 430 genes with difference > ln(2) between resting and stimulated) of cell-type specific responses to IFN-β (individual correlations for T and DC subsets shown in Supplementary Figure 4A – B ). Cells from myeloid and lymphoid lineages show highly correlated responses, but plasmacytoid dendritic cells exhibit a unique IFN-β response.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6700744/bin/nihms-990262-f0002.jpg"
-        },
-        {
-          "label": "Figure 3.",
-          "caption": "Comparative analysis of mouse hematopoietic progenitors across scRNA-seq technologies (A-C) tSNE plots of 3,451 hematopoietic progenitor cells from murine bone marrow sequenced using MARS-seq (2,686) and SMART-Seq2 (765), prior to (A) and post (B-C) alignment. After alignment, cells group together based on shared progenitor type irrespective of sequencing technology. (C-D) Cells from the SMART-Seq2 dataset were mapped onto the closest MARS-Seq cluster and associated lineage (from Paul et al.). (C) tSNE plot of cells colored by assigned lineage. (D) Mapping correspondence between SMART-Seq2 lineage assignments (from Nestorawa et al.) and MARS-Seq clusters. (E-F) Heatmaps showing lineage- specific gene expression patterns in MARS-Seq and SMART-Seq2 datasets. Each column represents average expression after cells are grouped either by the original MARS-Seq cluster assignments (E), or the MARS-Seq cluster they map to (F). (G-H) Integrated diffusion maps of erythroid-committed cells in both datasets reveals an aligned developmental trajectory (G), with conserved ‘pseudo-temporal’ dynamics (H). (I) Scatter plot comparing the range in expression (absolute value) over the developmental trajectory, for each gene, across both datasets.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6700744/bin/nihms-990262-f0003.jpg"
-        },
-        {
-          "label": "Figure 4.",
-          "caption": "Joint identification of cell types across human and mouse islet scRNA-seq atlases (A-C) tSNE plots of 10,191 pancreatic islet cells from human (n = 8,424 cells) and mouse (n = 1,767 cells) donors, prior to (A) and post (B) alignment. After alignment, cells group across species based on shared cell type, allowing for a joint clustering (C) to detect 10 cell populations. (D-E) Unsupervised identification of shared cell-type markers between human and mouse. Single cell expression heatmap for genes identified with joint DE testing across species. (F) Violin plots showing the distribution of gene expression of select genes in the beta cell cluster for human (n = 2,431 cells) and mouse (n = 762 cells) and the stressed beta cell clusters for human (n = 126 cells) and mouse (n = 10 cells). (G) Top n=100 genes up-regulated in the ‘ER-stress’ subpopulation of beta cells in both species are strongly enriched for components of the ER unfolded protein stress response. GO enrichment is visualized using the GOplot R package.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6700744/bin/nihms-990262-f0004.jpg"
-        },
-        {
-          "label": "Figure 5.",
-          "caption": "Benchmarking alignment and batch correction methods (A, D, G, J, M) tSNE plots for the PBMC dataset (n = 14,039 cells) (A), hematopoietic progenitor cell dataset (n = 3,451 cells) (B), pancreatic islet cell dataset (n = 10,306 cells) (C), multiple human pancreatic islet cell datasets (n = 6,224 cells) (J), and multiple PBMC datasets (n = 16,653 cells) (M) after correction with ComBat and (B, E, H, K, N) with limma. (C, F, I, L, O) Bar plots of the alignment score after correction using the Seurat alignment procedure, ComBat, limma, and after no correction. Seurat alignment outperforms other methods in all five examples. Additional examples of ‘negative controls’ where Seurat fails to align datasets from different tissues are shown in Supplementary Figure 15 .",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6700744/bin/nihms-990262-f0005.jpg"
-        }
-      ],
-      "supplements": [
-        {
-          "label": "Supplementary Data 2",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6700744/bin/NIHMS990262-supplement-Supplementary_Data_2.txt",
-          "description": ""
-        },
-        {
-          "label": "Supplementary Data 3",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6700744/bin/NIHMS990262-supplement-Supplementary_Data_3.txt",
-          "description": ""
-        },
-        {
-          "label": "Supplementary Figures",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6700744/bin/NIHMS990262-supplement-Supplementary_Figures.pdf",
-          "description": ""
-        },
-        {
-          "label": "Supplementary Table 1",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6700744/bin/NIHMS990262-supplement-Supplementary_Table_1.tsv",
-          "description": ""
-        }
-      ],
-      "fulltext_ok": true,
-      "metrics": {
-        "impact_factor": "44.5",
-        "jcr": "SCI Q1",
-        "jcr_quartile": "Q1",
-        "jcr_q1": true,
-        "status": "matched",
-        "source": "EasyScholar",
-        "retrieved_at": "2026-10-24T13:21:11Z"
-      },
-      "journal_display": "Nature biotechnology（IF 44.5；JCR SCI Q1）",
-      "updated_at": "2026-10-24T13:21:11Z",
-      "ai_status": "success",
-      "publishable": true,
-      "gate_reasons": [],
-      "status": "published"
-    },
-    {
-      "id": "doi:10.1038/s41592-019-0619-0",
-      "title": "Fast, sensitive and accurate integration of single-cell data with Harmony.",
-      "authors": [
-        "Korsunsky I",
-        "Millard N",
-        "Fan J",
-        "Slowikowski K",
-        "Zhang F",
-        "Zhang F",
-        "Wei K",
-        "Baglaenko Y",
-        "Brenner M",
-        "Loh PR",
-        "Raychaudhuri S"
-      ],
-      "journal": "Nature methods",
-      "year": "2019",
-      "doi": "10.1038/s41592-019-0619-0",
-      "pmcid": "PMC6884693",
-      "pmid": "31740819",
-      "citation_count": 10292,
-      "fulltext_urls": [
-        "https://doi.org/10.1038/s41592-019-0619-0",
-        "https://europepmc.org/articles/PMC6884693",
-        "https://europepmc.org/articles/PMC6884693?pdf=render"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 16,
-      "relevance_evidence": [
-        "sequencing: single-cell",
-        "multiomics: transcriptom"
-      ],
-      "figures": [
-        {
-          "label": "Figure 1.",
-          "caption": "Overview of Harmony algorithm. We represent datasets with colors, and different cell types with shapes. Before we apply Harmony, principal components analysis embeds cells into a space with reduced dimensionality. Harmony accepts the cell coordinates in this reduced space and runs an iterative algorithm to adjust for data set specific effects. (A) Harmony uses fuzzy clustering to assign each cell to multiple clusters, while a penalty term ensures that the diversity of datasets within each cluster is maximized. (B) Harmony calculates a global centroid for each cluster, as well as dataset-specific centroids for each cluster. (C) Within each cluster, Harmony calculates a correction factor for each dataset based on the centroids. (D) Finally, Harmony corrects each cell with a cell-specific factor: a linear combination of dataset correction factors weighted by its soft cluster assignments made in step A. Harmony repeats steps A through D until convergence. The dependence between cluster assignment and dataset diminishes with each round.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6884693/bin/nihms-1539299-f0001.jpg"
-        },
-        {
-          "label": "Figure 2.",
-          "caption": "Quantitative assessment of dataset mixing and cell-type accuracy with cell line datasets. (A) iLISI measures the degree of mixing among datasets in an embedding, ranging from 1 in an unmixed space to B in a well mixed space. B is the number of datasets in the analysis. (B) cLISI measures integration accuracy using the same formulation but computed on cell-type labels instead. An accurate embedding has a cLISI close to 1 for every neighborhood, reflecting separation of different cell types. Jurkat and HEK293T cells from pure (purple and yellow) and mixed (green) cell-line datasets were analyzed together. Before Harmony integration, cells grouped by dataset (C) and known cell-type (D). (C) iLISI and (D) cLISI were computed for every cell's neighborhood and summarized with quantiles (5, 25, 50, 75, 95). After Harmony integration, cells from the mixture dataset are mixed into the other datasets (E), achieved by mixing Jurkat with Jurkat cells and HEK293T with HEK293T cells (F). (E) iLISI and (F) cLISI were re-computed in the Harmony embedding.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6884693/bin/nihms-1539299-f0002.jpg"
-        },
-        {
-          "label": "Figure 3.",
-          "caption": "Computational efficiency benchmarks. We ran Harmony, BBKNN, Scanorama, MNN Correct, and MultiCCA on 5 downsampled HCA datasets of increasing sizes, from 25,000 to 500,000 cells. We recorded the (A) total runtime and (B) maximum memory required to analyze each dataset. Scanorama, MultiCCA, and MNN Correct were terminated for excessive memory requests on the 250,000 and 500,000 cell datasets. The mixing between tissues in the Harmony embedding is visualized in (C). In the Harmony embedding, (D) we clustered cells and labeled populations by canonical markers: pre-T cells, CD4 Naive T cells, CD4 Memory T cells, T-regs, CD8 Naive T cells, CD8 Effector T cells, natural killer cells (NK), pre-B cells, Naive B cells, Memory B cells, plasma cells, plasmacytoid dendritic cells (pDC), conventional dendritic cells (DC), granulocyte macrophage progenitor (GMP), CD16− monocytes (CD14 Mono), CD16+ monocytes (CD16 Mono), a population of monocytes also positive for Megakaryocyte markers (PPBP Mono), Megakaryocytes (Mk), Erythroid progenitors (Eryth), and a cluster of hematopoietic stem cells and multipotent progenitor cells (HSC/MPP).",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6884693/bin/nihms-1539299-f0003.jpg"
-        },
-        {
-          "label": "Figure 4.",
-          "caption": "Fine-grained subpopulation identification in PBMCs across technologies. Three PBMC datasets were assayed with 10X, using different library construction protocols: 5-prime (orange), 3-prime V1 (purple), and 3-prime V2 (green). Before integration (A), cells group by dataset. After Harmony integration (B), datasets are mixed together. (C) Harmony achieves the most thorough integration among datasets, while preserving (D) cell type differences. Using canonical markers (E), we identified (F) 5 shared subtypes of T cells and 2 shared subtypes of B cells. (G) Other integration algorithms fail to group these cells by subtype.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6884693/bin/nihms-1539299-f0004.jpg"
-        },
-        {
-          "label": "Figure 5.",
-          "caption": "Integration of pancreatic islet cells by both donor and technology. Human pancreatic islet cells from 36 donors were assayed on 5 different technologies. Cells initially group by (A) technology, denoted by different colors, and (B) donor, denoted by shades of colors. Harmony integrates cells simultaneously across (C) technology and (D) donor. (E) Clustering in the Harmony embedding identified common and rare cell types, including a previously identified beta population under ER stress. Except for activated stellate cells, all rare cell types were found across the 5 technology datasets (F). The ER stress beta population was enriched for ER stress genes (G) and had decreased expression of key genes necessary for endocrine function (H). We also identified a previously undescribed population of alpha cell, also enriched for ER stress genes (I) with decreased expression of key endocrine genes (J). The abundances of the two ER stress populations were correlated across donors (K).",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6884693/bin/nihms-1539299-f0005.jpg"
-        },
-        {
-          "label": "Figure 6.",
-          "caption": "Harmony integrates spatially resolved transcriptomic with dissociated scRNAseq datasets. (A) Cells from the hypothalamic preoptic region of mouse brain were assayed in parallel with two technologies. The full transcriptome of dissociated cells was profiled with 10X. 155 genes were profiled in-situ on intact tissue with MERFISH. (B) Harmony integrated cells from the two modalities into a shared embedding, correctly merging the 12 previously identified cell types. (C) Satb1 expression (blue), unmeasured in the MERFISH dataset, was inferred and predicted to be spatially autocorrelated in inhibitory neurons. Satb1 expression was highest in anterior slices and diminished in slices that contained ventricle-lining Ependymal cells (green). (D) Matched images from an independent in-situ hybridization experiment measuring Satb1 expression from the Allen Brain Atlas. Satb1 expression (blue) is co-localized in similar regions of the slices and diminishes with the appearance of ventricle structures (green).",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6884693/bin/nihms-1539299-f0006.jpg"
-        }
-      ],
-      "supplements": [
-        {
-          "label": "1",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6884693/bin/NIHMS1539299-supplement-1.zip",
-          "description": ""
-        },
-        {
-          "label": "2",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6884693/bin/NIHMS1539299-supplement-2.zip",
-          "description": ""
-        },
-        {
-          "label": "3",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6884693/bin/NIHMS1539299-supplement-3.pdf",
-          "description": ""
-        },
-        {
-          "label": "4",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6884693/bin/NIHMS1539299-supplement-4.pdf",
-          "description": ""
-        },
-        {
-          "label": "5",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6884693/bin/NIHMS1539299-supplement-5.html",
-          "description": ""
-        },
-        {
-          "label": "6",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6884693/bin/NIHMS1539299-supplement-6.html",
-          "description": ""
-        },
-        {
-          "label": "7",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6884693/bin/NIHMS1539299-supplement-7.html",
-          "description": ""
-        },
-        {
-          "label": "8",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6884693/bin/NIHMS1539299-supplement-8.xlsx",
-          "description": ""
-        }
-      ],
-      "fulltext_ok": true,
-      "metrics": {
-        "impact_factor": "28.3",
-        "jcr": "SCI Q1",
-        "jcr_quartile": "Q1",
-        "jcr_q1": true,
-        "status": "matched",
-        "source": "EasyScholar",
-        "retrieved_at": "2026-10-24T13:21:43Z"
-      },
-      "journal_display": "Nature methods（IF 28.3；JCR SCI Q1）",
-      "updated_at": "2026-10-24T13:21:43Z",
-      "ai_status": "success",
-      "publishable": true,
-      "gate_reasons": [],
-      "status": "published"
-    },
-    {
-      "id": "doi:10.1038/s41590-018-0276-y",
-      "title": "Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage.",
-      "authors": [
-        "Aran D",
-        "Looney AP",
-        "Liu L",
-        "Wu E",
-        "Fong V",
-        "Hsu A",
-        "Chak S",
-        "Naikawadi RP",
-        "Wolters PJ",
-        "Abate AR",
-        "Butte AJ",
-        "Bhattacharya M"
-      ],
-      "journal": "Nature immunology",
-      "year": "2019",
-      "doi": "10.1038/s41590-018-0276-y",
-      "pmcid": "PMC6340744",
-      "pmid": "30643263",
-      "citation_count": 4587,
-      "fulltext_urls": [
-        "https://europepmc.org/articles/pmc6340744?pdf=render",
-        "https://doi.org/10.1038/s41590-018-0276-y",
-        "https://europepmc.org/articles/PMC6340744",
-        "https://europepmc.org/articles/PMC6340744?pdf=render"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 16,
-      "relevance_evidence": [
-        "sequencing: rna sequencing, single-cell",
-        "multiomics: transcriptom"
-      ],
-      "figures": [
-        {
-          "label": "Figure 1.",
-          "caption": "Reference-based annotation of scRNA-seq. a, Schematic of SingleR, a protocol for cell-type annotation by reference to transcriptomes of pure cell types. b, tSNE plot of a published scRNA-seq dataset of fibroblast and bone marrow-derived dendritic cells 15 (top left). Heatmap of SingleR scores for top correlated cell types (top right). SingleR annotation of cell identity indicated on t-SNE plot (bottom left). Expression in single cells of genes derived by differential expression analysis of published microarray data from bone marrow-derived, GM-CSF-cultured macrophages (GM-Macs) and DCs (GM-DCs) 18 (bottom right). c, t-SNE plots of a published scRNA-seq dataset of PBMC 20 analyzed by Seurat without (top) and with (middle) SingleR annotations indicated for individual cells. Cell type markers expressed by SingleR annotation (bottom). T CM = central memory T cell; T EM =effector memory T cell.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/nihms-1512141-f0001.jpg"
-        },
-        {
-          "label": "Figure 2.",
-          "caption": "Reference datasets reveal heterogeneity of macrophage subtypes in lung fibrosis. a-c, t-SNE plots of single-cell suspensions from mouse whole lung sequenced by Drop-seq color-coded by condition (a) ; annotated by SingleR using the ImmGen database as reference (b) ; and annotated by SingleR with lung-specific myeloid datasets 26 , 27 (c) . Data shown pool replicates (n=3 biologically independent mice for bleomycin-injured and n=6 biologically independent mice for healthy control). d, Quantification of similarity in gene expression of individual cells to bulk RNA-seq profiles of alveolar macrophages (AM) and CD11c + interstitial macrophages (IM) 27 .",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/nihms-1512141-f0002.jpg"
-        },
-        {
-          "label": "Figure 3.",
-          "caption": "Hierarchical clustering by reference annotation reveals a transitional macrophage in fibrosis. a, Heatmap of SingleR annotation scores derived by reference to the ImmGen database with clusters superimposed on the t-SNE plot. MF = macrophages. b, Heatmap of genes differentially expressed between C1 and C3 with examples superimposed on the t-SNE plot. Cells are ordered by the number of non-zero C3 genes. c, Percentage of cells in each cluster that express genes in b (differentially expressed between C1 and C3). Asterisk indicates that 45% of C2 cells express at least 33% of C1 genes and at least 33% of C3 genes. d, Heatmap of the expression of C3 genes in bulk RNA-seq of alveolar macrophages (SiglecF + CD11c + ) sorted on MHCII lo at baseline and both MHCII lo and MHCII hi at two time points after bleomycin lung injury (n=2 mice biologically independent mice for baseline, n=3 biologically independent mice at 2 weeks, and n=3 biologically independent mice at 4 weeks).",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/nihms-1512141-f0003.jpg"
-        },
-        {
-          "label": "Figure 4.",
-          "caption": "Markers of macrophages identified by scRNA-seq are found in multiple fibrosis models. a, Heatmap of C3 genes from bleomycin-induced fibrosis measured by microarray in an epithelial telomere dysfunction model of progressive lung fibrosis (n=3 biologically independent mice in each condition, center value is mean). b, Gene set enrichment analysis scores of human orthologues of cluster C1 genes and of MHCII genes in bulk RNA-seq samples from patient lung biopsy specimens 32 . Points indicate individual microarray samples from n=167 and n=50 patients and controls, respectively. c, Immunofluorescence of human fibrotic and healthy control lung (representative images are shown; quantitation is for n=3 independent fibrotic patient lung and n=3 independent healthy lung samples, 10 images per sample). Scale bar, 50 μm. SH=second harmonic imaging of collagen. Box plot center line is median, box limits are upper and lower quartiles, and whiskers denote the largest and smallest values no more than 1.5 times the interquartile range from the limits. Wilcoxon test 2-tailed p-values are presented. * p<0.01, ** p<0.0001.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/nihms-1512141-f0004.jpg"
-        },
-        {
-          "label": "Figure 5.",
-          "caption": "Transitional macrophages expressing CX3CR1, MHCII, and SiglecF localize to sites of fibroblast accumulation after lung injury. a, Flow cytometry of TdTomato + lung cells in Cx3cr1 -CreERT2 / Rosa26-loxp-STOP-loxp-TdTomato mice with tamoxifen administration before and after injury followed by flow cytometry, with representative pseudocolor plots and values plotted for TdTomato + cells at three different time points (n=3 biologically independent mice per group, mean is marked). b , Lung immunofluorescence at 14 days after injury in Cx3cr1 -CreERT2 / Rosa26-loxp-STOP-loxp-TdTomato mice treated as in a (representative images are shown; quantitation is for n=3 biologically independent mice, 5 images per mouse). Scale bar, 50 μm. c, Expression of CX3CR1 in bulk RNA-seq samples from patient lung biopsy specimens 32 . Box plot center lines are median, box limits are upper and lower quartiles, and whiskers denote the largest and smallest values no more than 1.5 times the interquartile range from the limits. Wilcoxon test 2-sided p-values are presented. * p <0.001; ** p < 0.0001.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/nihms-1512141-f0005.jpg"
-        },
-        {
-          "label": "Figure 6.",
-          "caption": "Pdgf-aa is a macrophage-derived trophic factor for fibroblasts. a, Pdgfa expression in lung scRNA-seq macrophage clusters and by bulk RNA-seq of SiglecF + CD11c + lung macrophages after bleomycin injury. Mean is marked. Wald test 2-sided p-value is presented (for the lung scRNA-seq data, n=3 biologically independent mice for bleomycin-injured and n=6 biologically independent mice for healthy control; for the bulk RNA-seq data, n=2 biologically independent mice for baseline, n=3 biologically independent mice for all other conditions). b, Lung immunofluorescence at baseline (bottom) and 14 days after injury (top) in tamoxifen-induced Cx3cr1 -CreERT2 / Rosa26 loxp STOP loxp -TdTomato mice (representative images are shown; quantitation is for the 14-day time point in n=3 biologically independent mice, 5 images per mouse). Scale bar, 50 μm. c, 3T3 fibroblast gap closure in response to conditioned media (CM) from lung macrophages sorted by MHCII expression, with and without Pdgf-aa blocking antibody (Ab; n=8 biologically independent mice total, each point a separate assay). d , EDU quantitation in 3T3 fibroblasts co-cultured with TdTomato + cells sorted from tamoxifen-induced Cx3cr1 -CreERT2 / Rosa26-loxp-STOP-loxp-TdTomato mice 14 days after injury. Mean is marked (n=3 biologically independent co-cultures). e , t-SNE of SingleR-annotated fibroblasts from the lung scRNA-seq dataset showing intensity of cell cycle signature (n=3 biologically independent mice for bleomycin, n=6 biologically independent mice for control). Box plot center lines are median, box limits are upper and lower quartiles, and whiskers denote the largest and smallest values no more than 1.5 times the interquartile range from the limits. Wilcoxon test 2-sided p-values are presented. * p < 0.01; ** p < 0.0001.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/nihms-1512141-f0006.jpg"
-        },
-        {
-          "label": "Figure 7.",
-          "caption": "Cx3cr1 -derived macrophages drive fibroblast accumulation and fibrosis after lung injury. a, Lung immunofluorescence of fibroblast and macrophage markers 21 days after bleomycin injury in Cx3cr1-CreERT2 / Rosa26-loxp-STOP-loxp-Diphtheria Toxin A and wild-type mice (quantitation is for n=3 biologically independent mice per group, 5 images per mouse). b , Fibrosis measured by hydroxyproline assay for lung collagen content in mice treated as in a (blue points are Cx3cr1- CreERT2 / Rosa26 loxp STOP loxp -Diptheria Toxin A mice and red points are wild type; n=10, n=7, and n=7 biologically independent mice per group from left to right). Scale bar, 50 μm. c , Immunofluorescence of fibrotic (high SH) and non-fibrotic (low SH) regions from explanted human fibrotic lung, with quantification of individual images from 3 separate patients (8 high and 9 low regions in patient 1, 16 high and 16 low in patient 2, and 3 high and 6 low in patient 3). SH=second harmonic signal for collagen. Scale bar, 50 μm. Box plot center lines are median, box limits are upper and lower quartiles, and whiskers denote the largest and smallest values no more than 1.5 times the interquartile range from the limits. Wilcoxon test 2-sided p-values are presented. * p < 0.05; ** p < 0.01; *** p < 0.001; **** p < 0.0001.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/nihms-1512141-f0007.jpg"
-        }
-      ],
-      "supplements": [
-        {
-          "label": "1",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/NIHMS1512141-supplement-1.pdf",
-          "description": ""
-        },
-        {
-          "label": "2",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/NIHMS1512141-supplement-2.doc",
-          "description": ""
-        },
-        {
-          "label": "3",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/NIHMS1512141-supplement-3.xlsx",
-          "description": ""
-        },
-        {
-          "label": "4",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/NIHMS1512141-supplement-4.xlsx",
-          "description": ""
-        },
-        {
-          "label": "5",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/NIHMS1512141-supplement-5.xlsx",
-          "description": ""
-        },
-        {
-          "label": "6",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/NIHMS1512141-supplement-6.pdf",
-          "description": ""
-        },
-        {
-          "label": "7",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/NIHMS1512141-supplement-7.pdf",
-          "description": ""
-        },
-        {
-          "label": "1",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/NIHMS1512141-supplement-1.pdf",
-          "description": ""
-        },
-        {
-          "label": "2",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/NIHMS1512141-supplement-2.doc",
-          "description": ""
-        },
-        {
-          "label": "3",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/NIHMS1512141-supplement-3.xlsx",
-          "description": ""
-        },
-        {
-          "label": "4",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/NIHMS1512141-supplement-4.xlsx",
-          "description": ""
-        },
-        {
-          "label": "5",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/NIHMS1512141-supplement-5.xlsx",
-          "description": ""
-        },
-        {
-          "label": "6",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/NIHMS1512141-supplement-6.pdf",
-          "description": ""
-        },
-        {
-          "label": "7",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6340744/bin/NIHMS1512141-supplement-7.pdf",
-          "description": ""
-        }
-      ],
-      "fulltext_ok": true,
-      "metrics": {
-        "impact_factor": "26.5",
-        "jcr": "SCI Q1",
-        "jcr_quartile": "Q1",
-        "jcr_q1": true,
-        "status": "matched",
-        "source": "EasyScholar",
-        "retrieved_at": "2026-10-24T13:22:06Z"
-      },
-      "journal_display": "Nature immunology（IF 26.5；JCR SCI Q1）",
-      "updated_at": "2026-10-24T13:22:06Z",
-      "ai_status": "success",
-      "publishable": true,
-      "gate_reasons": [],
-      "status": "published"
-    },
-    {
-      "id": "doi:10.1038/s41587-019-0114-2",
-      "title": "Determining cell type abundance and expression from bulk tissues with digital cytometry.",
-      "authors": [
-        "Newman AM",
-        "Steen CB",
-        "Liu CL",
-        "Gentles AJ",
-        "Chaudhuri AA",
-        "Scherer F",
-        "Khodadoust MS",
-        "Esfahani MS",
-        "Luca BA",
-        "Steiner D",
-        "Diehn M",
-        "Alizadeh AA"
-      ],
-      "journal": "Nature biotechnology",
-      "year": "2019",
-      "doi": "10.1038/s41587-019-0114-2",
-      "pmcid": "PMC6610714",
-      "pmid": "31061481",
-      "citation_count": 4057,
-      "fulltext_urls": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6610714",
-        "https://doi.org/10.1038/s41587-019-0114-2",
-        "https://europepmc.org/articles/PMC6610714",
-        "https://europepmc.org/articles/PMC6610714?pdf=render"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 16,
-      "relevance_evidence": [
-        "sequencing: single-cell",
-        "multiomics: transcriptom"
-      ],
-      "figures": [
-        {
-          "label": "Figure 1.",
-          "caption": "Framework for in silico cell enumeration and purification. A typical CIBERSORTx workflow involves a serial approach, in which molecular profiles of cell subsets are first obtained from a small collection of tissue samples and then repeatedly used to perform systematic analyses of cellular abundance and gene expression signatures from bulk tissue transcriptomes. This process involves: (1) transcriptome profiling of single cells or sorted cell subpopulations to define a “signature matrix” consisting of barcode genes that can discriminate each cell subset of interest in a given tissue type; (2) applying the signature matrix to bulk tissue RNA profiles in order to infer cell type proportions and (3) representative cell type expression signatures; and (4) purifying multiple transcriptomes for each cell type from a cohort of related tissue samples. Using metastatic melanomas as an example, Figure 6 illustrates the application of each step.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6610714/bin/nihms-1525543-f0001.jpg"
-        },
-        {
-          "label": "Figure 2.",
-          "caption": "Bulk tissue deconvolution with single-cell reference profiles. ( a ) Left: t-SNE projection of scRNA-seq data from the peripheral blood of a patient with NSCLC, with six major leukocyte populations indicated. Right: Heat map of signature matrix genes distinguishing these six subsets. ( b ) Enumeration of leukocyte frequencies in RNA-seq profiles of whole blood ( n = 12 healthy adults) using the PBMC signature matrix from panel a, shown before and after cross-platform normalization. Performance gains are shown as Pearson correlations and assessed for each sample across five cell types quantified by flow cytometry and automated complete blood counts (CBCs): B cells, NK cells, CD8 T cells, CD4 T cells, and monocytes. Statistical significance was determined using a two-sided Wilcoxon signed-rank test. Data are presented as boxplots ( n = 12 per group; center line, median; box limits, upper and lower quartiles; whiskers, maximum and minimum values). ( c ) t-SNE projection of scRNA-seq data from 23 head and neck squamous cell carcinoma (HNSCC) tumors 9 (left) and training/validation approach for assessing single-cell deconvolution performance (right). ( d ) Concordance between cell type proportions measured by scRNA-seq and CIBERSORTx deconvolution for 20 held-out HNSCC tumors for validation from panel c. All tumor GEPs were reconstructed from single-cell data. ( e ) Analysis of cell subset enumeration across diverse signature matrices, tissues, and platforms. Deconvolution was run with batch correction ( Methods ). Ground truth cell proportions were determined by scRNA-seq (HNSCC, melanoma) or by flow cytometry and automated hematology leukocyte differential counter (blood). Cell subsets within the gray band are significantly concordant with ground truth by Pearson correlation ( P < 0.05). Signature matrices are provided in Supplementary Table 2 , with the exception of LM22 15 . Data are presented as medians ± interquartile range. Additional details are provided in Supplementary Note 1 . ( f ) Left : t-SNE plot of pancreatic islet subsets from ten human subjects, five of which were profiled by scRNA-seq, bulk RNA-seq, and IHC 21 (also see Supplementary Fig. 3f - i ). Right: Scatterplots depicting concordance between the frequencies of four major islet subsets quantitated by IHC versus scRNA-seq (top) and CIBERSORTx deconvolution of bulk RNA-seq (bottom), as determined by linear regression. The significance of the result was assessed by a two-sided t test. Cell subset abbreviations: Mono, monocytes; Macs, macrophages; DCs, dendritic cells; Mast, mast cells; CAFs, cancer-associated fibroblasts; Endo, endothelial cells; Myo, myocytes.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6610714/bin/nihms-1525543-f0002.jpg"
-        },
-        {
-          "label": "Figure 3.",
-          "caption": "Purification of representative cell type-specific transcriptome profiles from a group of specimens. ( a ) Approach for in silico purification and validation of group-mode cell type-specific GEPs. ( b ) Scatterplots comparing genome-wide expression profiles of mathematically purified ( x -axis) and FACS-purified ( y -axis) B cells and CD8 T cells from FL lymph nodes. ( c ) Scatterplots showing the predicted expression level of each gene in panel b ( y -axis) as a function of its uncertainty, as captured by the geometric coefficient of variation (c.v.) ( x -axis). ( d ) Same as b, but after applying an adaptive noise filter based on the transcriptome-wide distribution of c.v. values for each cell type. Concordance in b,d was determined by applying Pearson correlation ( r ), Spearman correlation ( ρ ), and linear regression (diagonal line) to genes with detectable expression on both platforms. ( e ) Analysis of the impact of sample size on group-mode gene expression purification for three FL tumor cell subsets, as assessed by Spearman correlation against corresponding FACS-purified GEPs (“ground truth”) in log 2 space. For each sample size, tumors were subsampled without replacement from a larger cohort ( n = 302) 10 times, and the results are shown with and without adaptive noise filtration. Data are presented as boxplots (center line, median; box limits, upper and lower quartiles; whiskers, 1.5x interquartile range; points, outliers). ( f ) Heat map comparing imputed and ground truth expression profiles for three FL immune subsets, with LM22 genes as rows and immune cell types as columns. Genes that were not predicted to be expressed or that were removed by adaptive noise filtration are colored navy blue. ( g ) Same as f, but for immune (CD45 + ), epithelial/cancer (EpCAM + ), and stromal (CD10 + or CD31 + ) subpopulations imputed from bulk RNA-seq profiles of 26 NSCLC tumors. Ground truth GEPs ( y -axis) were obtained from FACS-purified populations.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6610714/bin/nihms-1525543-f0003.jpg"
-        },
-        {
-          "label": "Figure 4.",
-          "caption": "High-resolution purification of cell type-specific expression from synthetic mixtures. ( a ) Schematic illustrating a hypothetical example of unobserved (left) and observed (right) expression data for a series of four randomly admixed immune subsets, each with one or two sets of ground truth DEGs (indicated by colored block-like patterns). ( b ) Results of in silico purification applied to the bulk tissue expression matrix in panel a. ( c ) t-SNE representation of purified expression matrices in b ( n = 400 samples), performed separately for each cell type and color-coded by the class corresponding to each block pattern in b (red = leftmost block, blue = rightmost block). ( d ) Left: Synthetic GEP matrix of four randomly admixed immune subsets, one of which contains DEGs in the shape of a bullseye (monocytes). Right: Results of in silico purification. ( e ) Analysis of the sensitivity and specificity of DEG recovery in synthetic mixtures ( n = 50) across 30 conditions (six CD8 T cell proportions and five DEG fold changes) when sample classes are known. Left : DEGs with a given fold change were added into the reference profile of CD8 T cells, which were spiked at a predetermined proportion into random mixtures of three other immune subsets. A colon cancer cell line GEP was added into each mixture to simulate ~50% unknown content. After in silico purification, known CD8 T cell DEGs were assessed in each purified cell type by ranking genes by fold change with respect to known DEG classes. The area under the curve (AUC) for DEG recovery was calculated for each combination of fold change and cell type spike-in fraction, and shown as a heat map. Data in panels a-b,d were log 2 adjusted and median-centered for each gene prior to rendering the heat maps.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6610714/bin/nihms-1525543-f0004.jpg"
-        },
-        {
-          "label": "Figure 5.",
-          "caption": "High-resolution expression profiling of bulk tumor biopsies. ( a–c ) Analysis of CREBBP mutation-associated expression changes in B cells from follicular lymphoma (FL) tumors. ( a ) Schema outlining the application of high-resolution purification to identify CREBBP mutation-associated DEGs in follicular lymphoma B cells. ( b ) Heat map confirming loss of MHC class II expression in CREBBP -mutant FL B cell GEPs inferred by CIBERSORTx. Expression values were median-centered prior to plotting. ( c ) Analysis of published gene sets 29 associated with lower (left) or higher (right) B cell expression in CREBBP -mutant FL tumors. Scatter plots show the corresponding log 2 expression of each gene in digitally sorted B cell GEPs, after median centering and averaging by CREBBP mutation status. Group comparisons in b and c were assessed by a two-sided Wilcoxon signed-rank test. Data are presented as means ± s.d. WT, wildtype ( n = 10); MT, mutant ( n = 14). ( d – f ) High-resolution expression profiling of tumor cell subpopulations from non-small cell lung cancer (NSCLC) tumors. ( d ) Schema for profiling and validating expression signatures of epithelial and cancer cells (Epith., EpCAM + ), immune cells (Imm., CD45 + ), fibroblasts (Fib., CD10 + ), and endothelial cells (Endo., CD31 + ) in 1,022 NSCLC tumor and 110 adjacent normal GEPs from TCGA. ( e ) Left: tSNE plots showing population-specific transcriptional diversity imputed from 1,132 bulk NSCLC GEPs, color-coded to denote tumor histological subtype (LUAD vs. LUSC) and adjacent normal tissues. Plots were created with perplexity set to 10. Right: PCA plots of 21 GEPs from corresponding FACS-purified populations, color-coded by tumor histological subtype. Histological differences are highlighted by ovals. ( f ) Heat maps showing DEGs identified in epithelial/cancer, immune, and fibroblast populations identified in NSCLC tumors from TCGA (left, n = 1,022 tumor samples) and RNA-seq profiles of corresponding FACS-purified populations from 21 NSCLC patients with LUAD or LUSC (right; Supplementary Table 1 ). The same genes are shown in both heat maps and are ordered identically. For clarity, a maximum of 300 over- and under-expressed genes are shown for each cell type (all DEGs are provided in Supplementary Table 4 ). Median centering was applied to each cell population separately. To quantify DEG concordance between CIBERSORTx and the bulk-sorted validation profiles in panel f, we used a Monte Carlo strategy described in Supplementary Note 1 . LUAD, lung adenocarcinoma; LUSC, lung squamous cell carcinoma.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6610714/bin/nihms-1525543-f0005.jpg"
-        },
-        {
-          "label": "Figure 6.",
-          "caption": "Cellular signatures of melanoma driver mutation status and immunotherapy response. ( a , b ) High-resolution expression profiling of mutation-associated phenotypic states in distinct tumor cell types. ( a ) Top: tSNE plot showing 8 major tumor subpopulations profiled from 19 melanomas by scRNA-seq 10 . Bottom: schema for characterizing and validating context-dependent expression variation in 342 bulk melanoma tumors from TCGA. ( b ) Heat maps depicting cell type-specific DEGs identified by CIBERSORTx that are associated with BRAF or NRAS driver mutations in melanoma. Expression values were averaged across TCGA tumor samples (CIBERSORTx, left) and single-cell GEPs (scRNA-seq, right) for clarity. Underlying data are provided in Supplementary Fig. 16 and Supplementary Table 4 . Only cell types with DEGs detected by CIBERSORTx and with available single-cell validation data are shown. For clarity, a maximum of 300 over- and under-expressed genes are shown for each cell type. CAFs, cancer associated fibroblasts; MT, mutant; WT, wildtype. ( c ) Left: Heat map showing the absolute difference in gene expression, expressed as ranks, between a normal CD8 T cell reference profile 61 and the following three melanoma CD8 TIL GEPs: ‘Imputed (FF)’, a group-mode CD8 TIL GEP imputed from 473 bulk RNA-seq profiles of fresh/frozen (FF) tumors generated by TCGA 44 ; ‘Imputed (FFPE)’, a group-mode CD8 TIL profile predicted from 42 FFPE tumors 50 ; ‘scRNA-seq’, a representative CD8 TIL profile derived from aggregated single-cell data of 19 melanoma patients 10 . The heat map is ordered by the difference in ranks between the “Imputed (FF)” vector and the normal CD8 T cell GEP. All imputed profiles were processed by adaptive noise filtration. Genes predicted in the FF but not FFPE cohorts (owing to noise filtration) are colored gray in the latter. Selected T cell exhaustion genes are indicated. Right: Gene set enrichment analysis (GSEA) 62 of a previously published melanoma CD8 TIL-associated gene set 49 , assessed relative to the ordering of genes in the heat map. ( d ) Framework for characterizing the clinical relevance of PDCD1 + CTLA4 + CD8 T cells in bulk melanoma tumors using single-cell reference profiles. ( e ) Estimated levels of PDCD1 + CTLA4 + CD8 T cells in bulk tumor expression profiles from melanoma patients who received immunotherapy, stratified by clinical response. VA, Van Allen and colleagues 50 ( n = 37); N, Nathanson and colleagues 55 ( n = 24); C, Chen and colleagues 20 ( n = 26). Statistical comparisons were performed using a two-sided Mann-Whitney test. Data are expressed as boxplots (center line, median; box limits, upper and lower quartiles; whiskers, maximum and minimum values). ( f ) Kaplan-Meier plot showing differences in overall survival between melanoma patients with high and low estimated levels of PDCD1 + CTLA4 + CD8 T cells in biopsies preceding immune checkpoint blockade (pre-treatment). Patients were split by the median estimated fractional abundance of PDCD1 + CTLA4 + CD8 T cells into high and low groups, and subsequently pooled across two studies with available overall survival data 50 , 55 . Statistical significance was calculated by a two-sided log-rank test. HR, hazard ratio. 95% HR confidence intervals are shown in brackets.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6610714/bin/nihms-1525543-f0006.jpg"
-        }
-      ],
-      "supplements": [
-        {
-          "label": "1",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6610714/bin/NIHMS1525543-supplement-1.pdf",
-          "description": ""
-        },
-        {
-          "label": "2",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6610714/bin/NIHMS1525543-supplement-2.xlsx",
-          "description": ""
-        },
-        {
-          "label": "3",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6610714/bin/NIHMS1525543-supplement-3.xlsx",
-          "description": ""
-        },
-        {
-          "label": "4",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6610714/bin/NIHMS1525543-supplement-4.xlsx",
-          "description": ""
-        },
-        {
-          "label": "5",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6610714/bin/NIHMS1525543-supplement-5.xlsx",
-          "description": ""
-        },
-        {
-          "label": "6",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6610714/bin/NIHMS1525543-supplement-6.pdf",
-          "description": ""
-        }
-      ],
-      "fulltext_ok": true,
-      "metrics": {
-        "impact_factor": "44.5",
-        "jcr": "SCI Q1",
-        "jcr_quartile": "Q1",
-        "jcr_q1": true,
-        "status": "matched",
-        "source": "EasyScholar",
-        "retrieved_at": "2026-10-24T13:21:11Z"
-      },
-      "journal_display": "Nature biotechnology（IF 44.5；JCR SCI Q1）",
-      "updated_at": "2026-10-24T13:23:03Z",
-      "ai_status": "success",
-      "publishable": true,
-      "gate_reasons": [],
-      "status": "published"
-    },
-    {
-      "id": "doi:10.1038/s41591-019-0675-0",
-      "title": "Chronic inflammation in the etiology of disease across the life span.",
-      "authors": [
-        "Furman D",
-        "Campisi J",
-        "Verdin E",
-        "Carrera-Bastos P",
-        "Targ S",
-        "Franceschi C",
-        "Ferrucci L",
-        "Gilroy DW",
-        "Fasano A",
-        "Miller GW",
-        "Miller AH",
-        "Mantovani A",
-        "Weyand CM",
-        "Barzilai N",
-        "Goronzy JJ",
-        "Rando TA",
-        "Effros RB",
-        "Lucia A",
-        "Kleinstreuer N",
-        "Slavich GM"
-      ],
-      "journal": "Nature medicine",
-      "year": "2019",
-      "doi": "10.1038/s41591-019-0675-0",
-      "pmcid": "PMC7147972",
-      "pmid": "31806905",
-      "citation_count": 3746,
-      "fulltext_urls": [
-        "https://doi.org/10.1038/s41591-019-0675-0",
-        "https://europepmc.org/articles/PMC7147972",
-        "https://europepmc.org/articles/PMC7147972?pdf=render",
-        "https://doi.org/10.1038/s41591-019-0675-0"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 16,
-      "relevance_evidence": [
-        "aging: aging",
-        "disease_bridge: diabetes, cardiovascular, kidney disease"
-      ],
-      "figures": [
-        {
-          "label": "Fig. 1 |",
-          "caption": "Causes and consequences of low-grade systemic chronic inflammation. Several causes of low-grade systemic chronic inflammation (SCI) and their consequences have been identified. As shown on the left, the most common triggers of SCI (in counter-clockwise direction) include chronic infections, physical inactivity, (visceral) obesity, intestinal dysbiosis, diet, social isolation, psychological stress, disturbed sleep and disrupted circadian rhythm, and exposure to xenobiotics such as air pollutants, hazardous waste products, industrial chemicals and tobacco smoking. As shown on the right, the consequences of SCI (in clockwise direction) include metabolic syndrome, type 2 diabetes, non-alcoholic fatty liver disease (NAFLD), cardiovascular disease, cancer, depression, autoimmune diseases, neurodegenerative diseases, sarcopenia, osteoporosis and immunosenescence.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7147972/bin/nihms-1578211-f0001.jpg"
-        },
-        {
-          "label": "Fig. 2 |",
-          "caption": "The maternal exposome and low-grade systemic chronic inflammation. Maternal lifestyle and environmental exposures—collectively referred to as the exposome—include diet, physical activity, psychological stress and exposure to various xenobiotics, such as pollutants and smoking during intrauterine life. These factors in turn can influence the programming of the immune system of the offspring, potentially leading to a more pro-inflammatory phenotype later in life. Relevant factors, including environmental factors such as poor access to healthy food, housing insecurity, psychological stress and polluted air, lead to a mother giving birth to a fetus with epigenetic marks that increase the child’s risk for obesity, low-grade SCI and its associated consequences in adolescence and adulthood.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7147972/bin/nihms-1578211-f0002.jpg"
-        },
-        {
-          "label": "Fig. 3 |",
-          "caption": "Inflammatory model of immunosenescence and chronic disease. This proposed model associates elevated baseline phosphorylated signaling proteins (for example, phosphorylated STAT (pSTAT) levels) with cellular unresponsiveness and chronically elevated inflammatory activity. The model involves an elevation of baseline pSTAT levels and its association with hallmark phenomenon of immunosenescence, an increased pro-inflammatory environment, unresponsive cells and a clinical impact on immune response. (Adapted with permission from ref. 22 , Elsevier.)",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7147972/bin/nihms-1578211-f0003.jpg"
-        }
-      ],
-      "supplements": [],
-      "fulltext_ok": true,
-      "metrics": {
-        "impact_factor": "52.5",
-        "jcr": "SCI Q1",
-        "jcr_quartile": "Q1",
-        "jcr_q1": true,
-        "status": "matched",
-        "source": "EasyScholar",
-        "retrieved_at": "2026-10-24T13:23:54Z"
-      },
-      "journal_display": "Nature medicine（IF 52.5；JCR SCI Q1）",
-      "updated_at": "2026-10-24T13:23:54Z",
-      "ai_status": "success",
-      "publishable": false,
-      "gate_reasons": [
-        "正文 Methods 未提取"
-      ],
-      "status": "manual_review"
-    },
-    {
-      "id": "doi:10.1093/nar/gkz430",
-      "title": "GEPIA2: an enhanced web server for large-scale expression profiling and interactive analysis.",
-      "authors": [
-        "Tang Z",
-        "Kang B",
-        "Li C",
-        "Chen T",
-        "Zhang Z"
-      ],
-      "journal": "Nucleic acids research",
-      "year": "2019",
-      "doi": "10.1093/nar/gkz430",
-      "pmcid": "PMC6602440",
-      "pmid": "31114875",
-      "citation_count": 4157,
-      "fulltext_urls": [
-        "https://doi.org/10.1093/nar/gkz430",
-        "https://europepmc.org/articles/PMC6602440",
-        "https://europepmc.org/articles/PMC6602440?pdf=render"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 15,
-      "relevance_evidence": [
-        "sequencing: single-cell",
-        "tools: database"
-      ],
-      "figures": [
-        {
-          "label": "Figure 1.",
-          "caption": "Schema describing the features of public data and uploaded data analyses in GEPIA2.",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6602440/bin/gkz430fig1.jpg"
-        },
-        {
-          "label": "Figure 2.",
-          "caption": "Examples of GEPIA2 outputs. ( A ) Users can check the prognostic impacts of gene or isoform expression level based on the survival heat map. The heat map shows the hazard ratios in logarithmic scale (log10) for different genes. The red and blue blocks denote higher and lower risks, respectively. The rectangles with frames mean the significant unfavorable and favorable results in prognostic analyses. ( B ) The violin-plots show the expression level (log 2 (TPM + 1)) of each isoform in a certain gene while the bar-plot panel present the isoform usage (from 0% to 100%) distribution. ( C ) GEPIA2 provides differential signature score analysis based on the box plots. The signature score is calculated by mean value of log 2 (TPM + 1) of each gene in Th1-like signature gene set. The orange box indicates the tumor samples while the blue one represents the normal tissues. The Th1-like signature score level in stomach tumors is significantly higher than normal tissues. ( D ) The overall survival analyses based on the cancer type and cancer subtype showed the significant prognostic impact of MAPK6 in Lumina A breast cancer subtype (left, P = 0.022) but not the whole breast cancer (right, P = 0.15).",
-          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6602440/bin/gkz430fig2.jpg"
-        }
-      ],
-      "supplements": [],
-      "fulltext_ok": true,
-      "metrics": {
-        "impact_factor": "15.0",
-        "jcr": "SCI Q1",
-        "jcr_quartile": "Q1",
-        "jcr_q1": true,
-        "status": "matched",
-        "source": "EasyScholar",
-        "retrieved_at": "2026-10-24T13:24:24Z"
-      },
-      "journal_display": "Nucleic acids research（IF 15.0；JCR SCI Q1）",
-      "updated_at": "2026-10-24T13:24:24Z",
-      "ai_status": "success",
-      "publishable": true,
-      "gate_reasons": [],
-      "status": "published"
-    }
-  ],
-  "pending_candidates": [
-    {
-      "id": "doi:10.1073/pnas.0504978102",
-      "title": "Obesity alters gut microbial ecology.",
-      "authors": [
-        "Ley RE",
-        "Bäckhed F",
-        "Turnbaugh P",
-        "Lozupone CA",
-        "Knight RD",
-        "Gordon JI"
-      ],
-      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
-      "year": "2005",
-      "doi": "10.1073/pnas.0504978102",
-      "pmcid": "PMC1176910",
-      "pmid": "16033867",
-      "abstract": "We have analyzed 5,088 bacterial 16S rRNA gene sequences from the distal intestinal (cecal) microbiota of genetically obese ob/ob mice, lean ob/+ and wild-type siblings, and their ob/+ mothers, all fed the same polysaccharide-rich diet. Although the majority of mouse gut species are unique, the mouse and human microbiota(s) are similar at the division (superkingdom) level, with Firmicutes and Bacteroidetes dominating. Microbial-community composition is inherited from mothers. However, compared with lean mice and regardless of kinship, ob/ob animals have a 50% reduction in the abundance of Bacteroidetes and a proportional increase in Firmicutes. These changes, which are division-wide, indicate that, in this model, obesity affects the diversity of the gut microbiota and suggest that intentional manipulation of community structure may be useful for regulating energy balance in obese individuals. The sequences reported in this paper have been deposited in the GenBank database [accession nos. DQ 014552--DQ 015671 (mothers) and AY 989911--AY 993908 (offspring)].",
-      "citation_count": 4488,
-      "fulltext_urls": [
-        "https://doi.org/10.1073/pnas.0504978102",
-        "https://europepmc.org/articles/PMC1176910",
-        "https://europepmc.org/articles/PMC1176910?pdf=render",
-        "https://doi.org/10.1073/pnas.0504978102"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 13,
-      "relevance_evidence": [
-        "tools: database",
-        "disease_bridge: obesity"
-      ]
+      "status": "discarded"
     },
     {
       "id": "doi:10.1186/gb-2011-12-6-r60",
@@ -780,7 +166,6 @@
       "doi": "10.1186/gb-2011-12-6-r60",
       "pmcid": "PMC3218848",
       "pmid": "21702898",
-      "abstract": "This study describes and validates a new method for metagenomic biomarker discovery by way of class comparison, tests of biological consistency and effect size estimation. This addresses the challenge of finding organisms, genes, or pathways that consistently explain the differences between two or more microbial communities, which is a central problem to the study of metagenomics. We extensively validate our method on several microbiomes and a convenient online interface for the method is provided at http://huttenhower.sph.harvard.edu/lefse/.",
       "citation_count": 12298,
       "fulltext_urls": [
         "https://genomebiology.biomedcentral.com/counter/pdf/10.1186/gb-2011-12-6-r60",
@@ -792,369 +177,206 @@
       "relevance_score": 12,
       "relevance_evidence": [
         "sequencing: metagenom"
-      ]
-    },
-    {
-      "id": "doi:10.1038/nature11234",
-      "title": "Structure, function and diversity of the healthy human microbiome.",
-      "authors": [
-        "Human Microbiome Project Consortium."
       ],
-      "journal": "Nature",
-      "year": "2012",
-      "doi": "10.1038/nature11234",
-      "pmcid": "PMC3564958",
-      "pmid": "22699609",
-      "abstract": "Studies of the human microbiome have revealed that even healthy individuals differ remarkably in the microbes that occupy habitats such as the gut, skin and vagina. Much of this diversity remains unexplained, although diet, environment, host genetics and early microbial exposure have all been implicated. Accordingly, to characterize the ecology of human-associated microbial communities, the Human Microbiome Project has analysed the largest cohort and set of distinct, clinically relevant body habitats so far. We found the diversity and abundance of each habitat's signature microbes to vary widely even among healthy subjects, with strong niche specialization both within and among individuals. The project encountered an estimated 81-99% of the genera, enzyme families and community configurations occupied by the healthy Western microbiome. Metagenomic carriage of metabolic pathways was stable among individuals despite variation in community structure, and ethnic/racial background proved to be one of the strongest associations of both pathways and microbes with clinical metadata. These results thus delineate the range of structural and functional configurations normal in the microbial communities of a healthy population, enabling future characterization of the epidemiology, ecology and translational applications of the human microbiome.",
-      "citation_count": 8793,
-      "fulltext_urls": [
-        "https://escholarship.org/uc/item/0126f84t",
-        "https://doi.org/10.1038/nature11234",
-        "https://europepmc.org/articles/PMC3564958",
-        "https://europepmc.org/articles/PMC3564958?pdf=render"
+      "figures": [
+        {
+          "label": "Figure 1",
+          "caption": "LEfSe mines a wide range of high-throughput genetic data to find biologically relevant features characterizing one or more experimental conditions . The inputs to the system are the specifications of the biological hypothesis under investigation (conditions and inter-condition sample groupings), the high-dimensional data obtained experimentally, and, optionally, prior knowledge from literature or databases used to define known relationships between features (used for meaningful hierarchical organization of the discovered biomarkers) or samples (used for testing biological consistency of potential biomarkers). LEfSe is a three-step algorithm (detailed in Figure 6). (a) LEfSe first provides the list of features that are differential among conditions of interest with statistical and biological significance, ranking them according to the effect size. (b) For problems with known hierarchical structure, either phylogenetic or functional, we then provide a mapping of the differences to taxonomic or functional trees. (c) Finally, the system produces a histogram visualizing the raw data within the specified problem structure for each relevant feature. While LEfSe has been developed primarily for metagenomic data containing taxon or gene abundances, it can be used for biomarker discovery in any setting where prior biological knowledge regarding the structure of a comparison is coupled with statistically significant differences in high-dimensional genomic features. KEGG, Kyoto Encyclopedia of Genes and Genomes; WGS, whole genome shotgun.",
+          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-1.jpg",
+          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-1.jpg",
+          "asset_status": "error",
+          "asset_error": "HTTPError"
+        },
+        {
+          "label": "Figure 2",
+          "caption": "LEfSe results on human microbiomes . (a-c) Mucosal body site analysis. Mucosal microbial communities are diverse, while non-mucosal body sites are characterized by several clades, including the Actinobacteria. The analysis reported here is carried out on initial data from the Human Microbiome Project [ 55 , 56 ] assigning the main body sites to mucosal and non-mucosal classes, and using the body sites as subclasses. These graphical outputs were generated by the publicly available LEfSe visualization modules applied on the analysis results and integrating microbial taxonomic prior knowledge [ 58 ]. (a) Histogram of the LDA scores computed for features differentially abundant between mucosal and non-mucosal body sites. LEfSe scores can be interpreted as the degree of consistent difference in relative abundance between features in the two classes of analyzed microbial communities. The histogram thus identifies which clades among all those detected as statistically and biologically differential explain the greatest differences between communities. (b) Taxonomic representation of statistically and biologically consistent differences between mucosal and non-mucosal body sites. Differences are represented in the color of the most abundant class (red indicating non-mucosal, yellow non-significant). Each circle's diameter is proportional to the taxon's abundance. This representation, here employing the Ribosomal Database Project (RDP) taxonomy [ 58 ], simultaneously highlights high-level trends and specific genera - for example, multiple differentially abundant sibling taxa consistent with the variation of the parent clade. (c) Histogram of the Actinomycetales relative abundances (in the 0[ 1 ] interval) in mucosal and non-mucosal body sites. Subclasses (specific body sites) are differentially colored and the mean and median relative abundance of the Actinomycetales are indicated with solid and dashed lines, respectively. (d,e) Aerobiosis analysis. The cladograms report the taxa (highlighted by small circles and by shading) showing different abundance values (according to LEfSe) in the three O 2 -dependent classes as described in Results; for each taxon, the color denotes the class with higher median for both the small circles and the shading. (d) The strict (all classes differential) version of LEfSe detects 13 biomarkers whereas (e) the non-strict (at least one class differential) version of LEfSe detects 60 microbial biomarkers with abundance differential under aerobic, anaerobic, or microaerobic conditions. Additional file 2 reports the non-strict version of LEfSe focused on the Firmicutes phylum, highlighting several low-O 2 specific genera within Ruminococcaceae and Lachnospiraceae.",
+          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-2.jpg",
+          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-2.jpg",
+          "asset_status": "error",
+          "asset_error": "HTTPError"
+        },
+        {
+          "label": "Figure 3",
+          "caption": "Comparison between Rag2 -/- (control) and T-bet -/- × Rag2 -/- (case) mice highlighting that, at the phylum level, Firmicutes are enriched in T-bet -/- × Rag2 -/- mice, whereas Actinobacteria are enriched in Rag2 -/- mice . In agreement with previous culture-based studies, Bifidobacterium species are underabundant in T-bet -/- × Rag2 -/- mice [ 68 ], and LEfSe highlights several additional genus-level clades, including the specifically depleted Roseburia and Papillibacter within the otherwise overabundant Firmicutes.",
+          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-3.jpg",
+          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-3.jpg",
+          "asset_status": "error",
+          "asset_error": "HTTPError"
+        },
+        {
+          "label": "Figure 4",
+          "caption": "LEfSe highlights pathways consistently differential between bacterial microbiomes and viromes within diverse environmental subclasses . (a) Using the SEED [ 71 ] catalog of functional pathways, LEfSe reports Nucleoside and nucleotide metabolism and Respiration to differ consistently between bacterial microbiomes and viromes across environmental samples described in [ 70 ]. The former is significant using the strictest all-subclasses test, the latter in the more lenient one-subclass test. (b) A two-level cladogram reporting the significant pathway differences as visualized using the SEED hierarchy (see Additional file 3 for the three-level cladogram and detailed differences). (c) Metastats [ 45 ] reports four additional pathways differential among these data (Carbohydrates, DNA metabolism, Membrane transport and Nitrogen metabolism). Using only the KW test portion of LEfSe (α = 0.05), we obtain results consonant with Metastats (excluding Nitrogen metabolism). However, as shown here, an overview of the abundance histograms of these subsystems demonstrates them to be less consistent across environments (for example, Coral and Hyper-saline subclasses in the Carbohydrates, Membrane transport and Nitrogen metabolism) and to lose significance within individual subclasses (as for the DNA metabolism subsystem).",
+          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-4.jpg",
+          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-4.jpg",
+          "asset_status": "error",
+          "asset_error": "HTTPError"
+        },
+        {
+          "label": "Figure 5",
+          "caption": "Comparison of LEfSe and the KW test alone for false positive and negative rates in synthetic data . Both tests used α = 0.05 in all cases, and the three artificial datasets comprise 100 samples, each in two classes, each with two subclasses of cardinality 25. The samples consist of 1,000 synthetic features taking the place of microbial taxa, pathways, and so on; half are negative (not biomarkers) and the other half positive. (a) LEfSe and KW false positive and negative rates at increasing values of the difference between class means. Negative features are normally distributed with parameters (μ = 10,000, σ = 100) across classes; positive features contain classes with increasingly different means. (b) Performance as standard deviation varies within classes (rather than the difference between means, fixed at 2,000). (c) Performance as standard deviation increases within inconsistent subclasses. Negative features have subclasses sampled from the same normal distribution (and thus not representing consistent biomarkers). Positive features are distributed as in (b). In all cases, LEfSe sacrifices a small number of false negatives in order to achieve a false positive rate near zero, with the goal of ensuring that biomarkers of large effect size will be both reproducible and biologically interpretable.",
+          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-5.jpg",
+          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-5.jpg",
+          "asset_status": "error",
+          "asset_error": "HTTPError"
+        },
+        {
+          "label": "Figure 6",
+          "caption": "Schematic representation of the statistical and computational steps implemented in LEfSe . Input data consist of a collection of m samples (columns) each made up of n numerical features (rows, typically normalized per-sample, red representing high values and green low). These samples are labeled with a class (taking two or more possible values) that represents the main biological comparison under investigation; they may also have one or more subclass labels reflecting within-class groupings. (a) Step 1 analyzes all features, testing whether values in different classes are differentially distributed. (b) Features violating the null hypothesis are further analyzed in step 2, which tests whether all pairwise comparisons between subclasses in different classes significantly agree with the class level trend. (c) The resulting subset of vectors is used to build a LDA model from which the relative difference among classes is used to rank the features. The final output thus consists of a list of features that are discriminative with respect to the classes, consistent with the subclass grouping within classes, and ranked according to the effect size with which they differentiate classes.",
+          "image_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-6.jpg",
+          "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-6.jpg",
+          "asset_status": "error",
+          "asset_error": "HTTPError"
+        }
       ],
-      "source": "Europe PMC",
-      "relevance_score": 12,
-      "relevance_evidence": [
-        "sequencing: metagenom"
-      ]
-    },
-    {
-      "id": "doi:10.1038/s41586-020-2008-3",
-      "title": "A new coronavirus associated with human respiratory disease in China.",
-      "authors": [
-        "Wu F",
-        "Zhao S",
-        "Yu B",
-        "Chen YM",
-        "Wang W",
-        "Song ZG",
-        "Hu Y",
-        "Tao ZW",
-        "Tian JH",
-        "Pei YY",
-        "Yuan ML",
-        "Zhang YL",
-        "Dai FH",
-        "Liu Y",
-        "Wang QM",
-        "Zheng JJ",
-        "Xu L",
-        "Holmes EC",
-        "Zhang YZ"
+      "supplements": [
+        {
+          "label": "Supplementary file 1",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S1.PDF",
+          "description": "Additional file 1 Supplementary Figure S6 . Histogram of within-subject β-diversity (community dissimilarity) between different mucosal (red) and non-mucosal (green) body sites."
+        },
+        {
+          "label": "Supplementary file 2",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S2.PDF",
+          "description": "Additional file 2 Supplementary Figure S1 . Cladogram representing the differences between viromes and microbiomes on the subsystem framework."
+        },
+        {
+          "label": "Supplementary file 3",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S3.PDF",
+          "description": "Additional file 3 Supplementary Figure S2 . Histogram of LDA logarithmic scores of biomarkers found by LEfSe comparing microbiomes and viromes within the subsystem framework."
+        },
+        {
+          "label": "Supplementary file 4",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S4.PDF",
+          "description": "Additional file 4 Supplementary Figure S3 . Histogram of LDA logarithmic scores of COG biomarkers found by LEfSe comparing adult and infant microbiomes."
+        },
+        {
+          "label": "Supplementary file 5",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S5.PDF",
+          "description": "Additional file 5 Supplementary Figure S4 . Functional features (COGs) that are discrimantive for the comparison between adult and infant microbiomes according to LEfSe but not detected by Metastats among the discriminant features with LDA score higher than 3. If we consider all the discriminant features without threhold on LDA score, LEfSe identifies 366 COGs in total, 185 of which are not discriminant for Metastats."
+        },
+        {
+          "label": "Supplementary file 6",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S6.PDF",
+          "description": "Additional file 6 Supplementary Figure S5 . Functional features (COGs) that are discrimantive for the comparison between adult and infant microbiomes according to Metastats but not detected by LEfSe. Even if median and variance suggest the differences to be discriminative, there are always some microbiomes (at least two) that are overlapping between classes. This is due to the stringent α-value (0.01) set for the KW test in LEfSe and to the fact that we use non-parametric statistics (differently from Metastats). Notice, however, that even using a low α-value LEfSe detects many more biomarkers than metastats (366 versus 192)."
+        },
+        {
+          "label": "Supplementary file 7",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S7.PDF",
+          "description": "Additional file 7 Supplementary Figure S9 . Comparison between LEfSe and Metastats using the synthetic data described in Figure 5 and in the Materials and methods. LEfSe was applied as detailed in the paper; for Metastats we used the default settings (that is, α = 0.05 and N permutations = 1,000) and, as for LEfSe and KW, we disabled the per-sample normalization as the features are independent. (a,b) Metastats has a higher false positive rate (average 5%) than LEfSe (average below 0.5%) and lower false negative rate. (c) When the subclass information is meaningful (see Figure 5 for the representation of the dataset), LEfSe performs substantially better than Metastats both in terms of false positive and false negatives. Overall, on these synthetic data, Metastats achieves very similar results compared to KW (Figure 5 ) and neither of them can make use of additional information regarding the within-class structure, thus achieving poor results compared to LEfSe when such kinds of information are available."
+        },
+        {
+          "label": "Supplementary file 8",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S8.PDF",
+          "description": "Additional file 8 Supplementary Figure S7 . SVM-based effect size estimation for the biomarkers found for the Rag2 -/- versus T-bet -/- xRag2 -/- comparison reported in Figure 3 of the manuscript. The LDA-based approach for assessing effect size (Figure 3 ) is closer to the biological follow-up experiments and is more visually consistent. The reason for LDA superiority over SVM approaches for effect size estimation is theoretically connected with the ability of LDA to find the axis with the highest variance, and the SVM effort on evaluating the combined feature predictive power rather than single feature relevance. It is worth specifying that the effect size estimation accuracy of an algorithm is not directly connected with its predictive ability (SVM approaches are usually considered more accurate than LDA for prediction)."
+        },
+        {
+          "label": "Supplementary file 9",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S9.PDF",
+          "description": "Additional file 9 Supplementary Figure S8 . Comparison between the features with the highest SVM-based effect size ( Papillibacter , on the left), the highest LDA-based effect size ( Bifidobacterium , in the center), and the Actinobacteria phylum (on the right). From a visual analysis, Bifidobacerium shows a larger effect size, which is also evident looking at the ratios between class means, suggesting LDA as a better option for effect size estimation than SVM approaches. As detailed in the manuscript, the relevance of Bifidobacterium has been experimentally validated. Moreover, the large difference in the score given by the SVM approach to Actinobacteria compared to Bifidobacterium and Papillibacter is not consistent."
+        },
+        {
+          "label": "Supplementary file 10",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S10.TXT",
+          "description": "Additional file 10 T-bet -/- × Rag2 -/- - Rag2 -/- dataset . Input LEfSe file for the analysis of the ulcerative colitis phenotype in mice."
+        },
+        {
+          "label": "Supplementary file 11",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S1.PDF",
+          "description": "Additional file 1 Supplementary Figure S6 . Histogram of within-subject β-diversity (community dissimilarity) between different mucosal (red) and non-mucosal (green) body sites."
+        },
+        {
+          "label": "Supplementary file 12",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S2.PDF",
+          "description": "Additional file 2 Supplementary Figure S1 . Cladogram representing the differences between viromes and microbiomes on the subsystem framework."
+        },
+        {
+          "label": "Supplementary file 13",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S3.PDF",
+          "description": "Additional file 3 Supplementary Figure S2 . Histogram of LDA logarithmic scores of biomarkers found by LEfSe comparing microbiomes and viromes within the subsystem framework."
+        },
+        {
+          "label": "Supplementary file 14",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S4.PDF",
+          "description": "Additional file 4 Supplementary Figure S3 . Histogram of LDA logarithmic scores of COG biomarkers found by LEfSe comparing adult and infant microbiomes."
+        },
+        {
+          "label": "Supplementary file 15",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S5.PDF",
+          "description": "Additional file 5 Supplementary Figure S4 . Functional features (COGs) that are discrimantive for the comparison between adult and infant microbiomes according to LEfSe but not detected by Metastats among the discriminant features with LDA score higher than 3. If we consider all the discriminant features without threhold on LDA score, LEfSe identifies 366 COGs in total, 185 of which are not discriminant for Metastats."
+        },
+        {
+          "label": "Supplementary file 16",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S6.PDF",
+          "description": "Additional file 6 Supplementary Figure S5 . Functional features (COGs) that are discrimantive for the comparison between adult and infant microbiomes according to Metastats but not detected by LEfSe. Even if median and variance suggest the differences to be discriminative, there are always some microbiomes (at least two) that are overlapping between classes. This is due to the stringent α-value (0.01) set for the KW test in LEfSe and to the fact that we use non-parametric statistics (differently from Metastats). Notice, however, that even using a low α-value LEfSe detects many more biomarkers than metastats (366 versus 192)."
+        },
+        {
+          "label": "Supplementary file 17",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S7.PDF",
+          "description": "Additional file 7 Supplementary Figure S9 . Comparison between LEfSe and Metastats using the synthetic data described in Figure 5 and in the Materials and methods. LEfSe was applied as detailed in the paper; for Metastats we used the default settings (that is, α = 0.05 and N permutations = 1,000) and, as for LEfSe and KW, we disabled the per-sample normalization as the features are independent. (a,b) Metastats has a higher false positive rate (average 5%) than LEfSe (average below 0.5%) and lower false negative rate. (c) When the subclass information is meaningful (see Figure 5 for the representation of the dataset), LEfSe performs substantially better than Metastats both in terms of false positive and false negatives. Overall, on these synthetic data, Metastats achieves very similar results compared to KW (Figure 5 ) and neither of them can make use of additional information regarding the within-class structure, thus achieving poor results compared to LEfSe when such kinds of information are available."
+        },
+        {
+          "label": "Supplementary file 18",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S8.PDF",
+          "description": "Additional file 8 Supplementary Figure S7 . SVM-based effect size estimation for the biomarkers found for the Rag2 -/- versus T-bet -/- xRag2 -/- comparison reported in Figure 3 of the manuscript. The LDA-based approach for assessing effect size (Figure 3 ) is closer to the biological follow-up experiments and is more visually consistent. The reason for LDA superiority over SVM approaches for effect size estimation is theoretically connected with the ability of LDA to find the axis with the highest variance, and the SVM effort on evaluating the combined feature predictive power rather than single feature relevance. It is worth specifying that the effect size estimation accuracy of an algorithm is not directly connected with its predictive ability (SVM approaches are usually considered more accurate than LDA for prediction)."
+        },
+        {
+          "label": "Supplementary file 19",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S9.PDF",
+          "description": "Additional file 9 Supplementary Figure S8 . Comparison between the features with the highest SVM-based effect size ( Papillibacter , on the left), the highest LDA-based effect size ( Bifidobacterium , in the center), and the Actinobacteria phylum (on the right). From a visual analysis, Bifidobacerium shows a larger effect size, which is also evident looking at the ratios between class means, suggesting LDA as a better option for effect size estimation than SVM approaches. As detailed in the manuscript, the relevance of Bifidobacterium has been experimentally validated. Moreover, the large difference in the score given by the SVM approach to Actinobacteria compared to Bifidobacterium and Papillibacter is not consistent."
+        },
+        {
+          "label": "Supplementary file 20",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3218848/bin/gb-2011-12-6-r60-S10.TXT",
+          "description": "Additional file 10 T-bet -/- × Rag2 -/- - Rag2 -/- dataset . Input LEfSe file for the analysis of the ulcerative colitis phenotype in mice."
+        }
       ],
-      "journal": "Nature",
-      "year": "2020",
-      "doi": "10.1038/s41586-020-2008-3",
-      "pmcid": "PMC7094943",
-      "pmid": "32015508",
-      "abstract": "Emerging infectious diseases, such as severe acute respiratory syndrome (SARS) and Zika virus disease, present a major threat to public health<sup>1-3</sup>. Despite intense research efforts, how, when and where new diseases appear are still a source of considerable uncertainty. A severe respiratory disease was recently reported in Wuhan, Hubei province, China. As of 25 January 2020, at least 1,975 cases had been reported since the first patient was hospitalized on 12 December 2019. Epidemiological investigations have suggested that the outbreak was associated with a seafood market in Wuhan. Here we study a single patient who was a worker at the market and who was admitted to the Central Hospital of Wuhan on 26 December 2019 while experiencing a severe respiratory syndrome that included fever, dizziness and a cough. Metagenomic RNA sequencing<sup>4</sup> of a sample of bronchoalveolar lavage fluid from the patient identified a new RNA virus strain from the family Coronaviridae, which is designated here 'WH-Human 1' coronavirus (and has also been referred to as '2019-nCoV'). Phylogenetic analysis of the complete viral genome (29,903 nucleotides) revealed that the virus was most closely related (89.1% nucleotide similarity) to a group of SARS-like coronaviruses (genus Betacoronavirus, subgenus Sarbecovirus) that had previously been found in bats in China<sup>5</sup>. This outbreak highlights the ongoing ability of viral spill-over from animals to cause severe disease in humans.",
-      "citation_count": 8243,
-      "fulltext_urls": [
-        "https://doi.org/10.1038/s41586-020-2008-3",
-        "https://europepmc.org/articles/PMC7094943",
-        "https://europepmc.org/articles/PMC7094943?pdf=render"
+      "fulltext_ok": true,
+      "asset_errors": [
+        "fig-01:HTTPError",
+        "fig-02:HTTPError",
+        "fig-03:HTTPError",
+        "fig-04:HTTPError",
+        "fig-05:HTTPError",
+        "fig-06:HTTPError"
       ],
-      "source": "Europe PMC",
-      "relevance_score": 12,
-      "relevance_evidence": [
-        "sequencing: metagenom, rna sequencing"
-      ]
-    },
-    {
-      "id": "doi:10.1038/nature08821",
-      "title": "A human gut microbial gene catalogue established by metagenomic sequencing.",
-      "authors": [
-        "Qin J",
-        "Li R",
-        "Raes J",
-        "Arumugam M",
-        "Burgdorf KS",
-        "Manichanh C",
-        "Nielsen T",
-        "Pons N",
-        "Levenez F",
-        "Yamada T",
-        "Mende DR",
-        "Li J",
-        "Xu J",
-        "Li S",
-        "Li D",
-        "Cao J",
-        "Wang B",
-        "Liang H",
-        "Zheng H",
-        "Xie Y",
-        "Tap J",
-        "Lepage P",
-        "Bertalan M",
-        "Batto JM",
-        "Hansen T",
-        "Le Paslier D",
-        "Linneberg A",
-        "Nielsen HB",
-        "Pelletier E",
-        "Renault P",
-        "Sicheritz-Ponten T",
-        "Turner K",
-        "Zhu H",
-        "Yu C",
-        "Li S",
-        "Jian M",
-        "Zhou Y",
-        "Li Y",
-        "Zhang X",
-        "Li S",
-        "Qin N",
-        "Yang H",
-        "Wang J",
-        "Brunak S",
-        "Doré J",
-        "Guarner F",
-        "Kristiansen K",
-        "Pedersen O",
-        "Parkhill J",
-        "Weissenbach J",
-        "Bork P",
-        "Ehrlich SD",
-        "Wang J"
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "9.2",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-25T02:24:51Z"
+      },
+      "journal_display": "Genome biology（IF 9.2；JCR SCI Q1）",
+      "updated_at": "2026-10-25T02:24:51Z",
+      "ai_status": "skipped_no_retrievable_fulltext_or_assets",
+      "publishable": false,
+      "gate_reasons": [
+        "存在未成功缓存到网站的正文原图",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：lead",
+        "AI 字段缺失：background",
+        "AI 字段缺失：research_question",
+        "AI 字段缺失：study_design",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：limitations",
+        "AI 字段缺失：takeaways",
+        "AI 字段缺失：figure_notes",
+        "AI 内容过短：lead",
+        "AI 内容过短：background",
+        "AI 内容过短：research_question",
+        "AI 内容过短：study_design",
+        "AI 内容过短：methods",
+        "AI 内容过短：results",
+        "AI 内容过短：limitations",
+        "AI 内容过短：takeaways",
+        "AI 图组解读不是数组"
       ],
-      "journal": "Nature",
-      "year": "2010",
-      "doi": "10.1038/nature08821",
-      "pmcid": "PMC3779803",
-      "pmid": "20203603",
-      "abstract": "To understand the impact of gut microbes on human health and well-being it is crucial to assess their genetic potential. Here we describe the Illumina-based metagenomic sequencing, assembly and characterization of 3.3 million non-redundant microbial genes, derived from 576.7 gigabases of sequence, from faecal samples of 124 European individuals. The gene set, approximately 150 times larger than the human gene complement, contains an overwhelming majority of the prevalent (more frequent) microbial genes of the cohort and probably includes a large proportion of the prevalent human intestinal microbial genes. The genes are largely shared among individuals of the cohort. Over 99% of the genes are bacterial, indicating that the entire cohort harbours between 1,000 and 1,150 prevalent bacterial species and each individual at least 160 such species, which are also largely shared. We define and describe the minimal gut metagenome and the minimal gut bacterial genome in terms of functions present in all individuals and most bacteria, respectively.",
-      "citation_count": 8210,
-      "fulltext_urls": [
-        "https://www.nature.com/articles/nature08821.pdf",
-        "https://doi.org/10.1038/nature08821",
-        "https://europepmc.org/articles/PMC3779803",
-        "https://europepmc.org/articles/PMC3779803?pdf=render",
-        "https://doi.org/10.1038/nature08821"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 12,
-      "relevance_evidence": [
-        "sequencing: metagenom"
-      ]
-    },
-    {
-      "id": "doi:10.1083/jcb.119.3.493",
-      "title": "Identification of programmed cell death in situ via specific labeling of nuclear DNA fragmentation.",
-      "authors": [
-        "Gavrieli Y",
-        "Sherman Y",
-        "Ben-Sasson SA"
-      ],
-      "journal": "The Journal of cell biology",
-      "year": "1992",
-      "doi": "10.1083/jcb.119.3.493",
-      "pmcid": "PMC2289665",
-      "pmid": "1400587",
-      "abstract": "Programmed cell death (PCD) plays a key role in developmental biology and in maintenance of the steady state in continuously renewing tissues. Currently, its existence is inferred mainly from gel electrophoresis of a pooled DNA extract as PCD was shown to be associated with DNA fragmentation. Based on this observation, we describe here the development of a method for the in situ visualization of PCD at the single-cell level, while preserving tissue architecture. Conventional histological sections, pretreated with protease, were nick end labeled with biotinylated poly dU, introduced by terminal deoxy-transferase, and then stained using avidin-conjugated peroxidase. The reaction is specific, only nuclei located at positions where PCD is expected are stained. The initial screening includes: small and large intestine, epidermis, lymphoid tissues, ovary, and other organs. A detailed analysis revealed that the process is initiated at the nuclear periphery, it is relatively short (1-3 h from initiation to cell elimination) and that PCD appears in tissues in clusters. The extent of tissue-PCD revealed by this method is considerably greater than apoptosis detected by nuclear morphology, and thus opens the way for a variety of studies.",
-      "citation_count": 6823,
-      "fulltext_urls": [
-        "https://doi.org/10.1083/jcb.119.3.493",
-        "https://europepmc.org/articles/PMC2289665",
-        "https://europepmc.org/articles/PMC2289665?pdf=render"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 12,
-      "relevance_evidence": [
-        "sequencing: single-cell"
-      ]
-    },
-    {
-      "id": "doi:10.1093/nar/gkac1052",
-      "title": "UniProt: the Universal Protein Knowledgebase in 2023.",
-      "authors": [
-        "UniProt Consortium."
-      ],
-      "journal": "Nucleic acids research",
-      "year": "2023",
-      "doi": "10.1093/nar/gkac1052",
-      "pmcid": "PMC9825514",
-      "pmid": "36408920",
-      "abstract": "The aim of the UniProt Knowledgebase is to provide users with a comprehensive, high-quality and freely accessible set of protein sequences annotated with functional information. In this publication we describe enhancements made to our data processing pipeline and to our website to adapt to an ever-increasing information content. The number of sequences in UniProtKB has risen to over 227 million and we are working towards including a reference proteome for each taxonomic group. We continue to extract detailed annotations from the literature to update or create reviewed entries, while unreviewed entries are supplemented with annotations provided by automated systems using a variety of machine-learning techniques. In addition, the scientific community continues their contributions of publications and annotations to UniProt entries of their interest. Finally, we describe our new website (https://www.uniprot.org/), designed to enhance our users' experience and make our data easily accessible to the research community. This interface includes access to AlphaFold structures for more than 85% of all entries as well as improved visualisations for subcellular localisation of proteins.",
-      "citation_count": 6711,
-      "fulltext_urls": [
-        "https://academic.oup.com/nar/article-pdf/51/D1/D523/48441158/gkac1052.pdf",
-        "https://academic.oup.com/nar/article-pdf/51/D1/D523/48441158/gkac1052.pdf",
-        "https://academic.oup.com/nar/article-pdf/51/D1/D523/48441158/gkac1052.pdf",
-        "https://academic.oup.com/nar/article-pdf/51/D1/D523/48441158/gkac1052.pdf",
-        "https://doi.org/10.1093/nar/gkac1052",
-        "https://europepmc.org/articles/PMC9825514",
-        "https://europepmc.org/articles/PMC9825514?pdf=render"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 12,
-      "relevance_evidence": [
-        "multiomics: proteom",
-        "tools: pipeline"
-      ]
-    },
-    {
-      "id": "doi:10.1038/nature09944",
-      "title": "Enterotypes of the human gut microbiome.",
-      "authors": [
-        "Arumugam M",
-        "Raes J",
-        "Pelletier E",
-        "Le Paslier D",
-        "Yamada T",
-        "Mende DR",
-        "Fernandes GR",
-        "Tap J",
-        "Bruls T",
-        "Batto JM",
-        "Bertalan M",
-        "Borruel N",
-        "Casellas F",
-        "Fernandez L",
-        "Gautier L",
-        "Hansen T",
-        "Hattori M",
-        "Hayashi T",
-        "Kleerebezem M",
-        "Kurokawa K",
-        "Leclerc M",
-        "Levenez F",
-        "Manichanh C",
-        "Nielsen HB",
-        "Nielsen T",
-        "Pons N",
-        "Poulain J",
-        "Qin J",
-        "Sicheritz-Ponten T",
-        "Tims S",
-        "Torrents D",
-        "Ugarte E",
-        "Zoetendal EG",
-        "Wang J",
-        "Wang J",
-        "Guarner F",
-        "Pedersen O",
-        "de Vos WM",
-        "Brunak S",
-        "Doré J",
-        "Antolín M",
-        "Artiguenave F",
-        "Blottiere HM",
-        "Almeida M",
-        "Brechot C",
-        "Cara C",
-        "Chervaux C",
-        "Cultrone A",
-        "Delorme C",
-        "Denariaz G",
-        "Dervyn R",
-        "Foerstner KU",
-        "Friss C",
-        "van de Guchte M",
-        "Guedon E",
-        "Haimet F",
-        "Huber W",
-        "van Hylckama-Vlieg J",
-        "Jamet A",
-        "Juste C",
-        "Kaci G",
-        "Knol J",
-        "Lakhdari O",
-        "Layec S",
-        "Le Roux K",
-        "Maguin E",
-        "Mérieux A",
-        "Melo Minardi R",
-        "M'rini C",
-        "Muller J",
-        "Oozeer R",
-        "Parkhill J",
-        "Renault P",
-        "Rescigno M",
-        "Sanchez N",
-        "Sunagawa S",
-        "Torrejon A",
-        "Turner K",
-        "Vandemeulebrouck G",
-        "Varela E",
-        "Winogradsky Y",
-        "Zeller G",
-        "Weissenbach J",
-        "Ehrlich SD",
-        "Bork P"
-      ],
-      "journal": "Nature",
-      "year": "2011",
-      "doi": "10.1038/nature09944",
-      "pmcid": "PMC3728647",
-      "pmid": "21508958",
-      "abstract": "Our knowledge of species and functional composition of the human gut microbiome is rapidly increasing, but it is still based on very few cohorts and little is known about variation across the world. By combining 22 newly sequenced faecal metagenomes of individuals from four countries with previously published data sets, here we identify three robust clusters (referred to as enterotypes hereafter) that are not nation or continent specific. We also confirmed the enterotypes in two published, larger cohorts, indicating that intestinal microbiota variation is generally stratified, not continuous. This indicates further the existence of a limited number of well-balanced host-microbial symbiotic states that might respond differently to diet and drug intake. The enterotypes are mostly driven by species composition, but abundant molecular functions are not necessarily provided by abundant species, highlighting the importance of a functional analysis to understand microbial communities. Although individual host properties such as body mass index, age, or gender cannot explain the observed enterotypes, data-driven marker genes or functional modules can be identified for each of these host properties. For example, twelve genes significantly correlate with age and three functional modules with the body mass index, hinting at a diagnostic potential of microbial markers.",
-      "citation_count": 5391,
-      "fulltext_urls": [
-        "https://hal.science/hal-03649169",
-        "https://doi.org/10.1038/nature09944",
-        "https://europepmc.org/articles/PMC3728647",
-        "https://europepmc.org/articles/PMC3728647?pdf=render",
-        "https://doi.org/10.1038/nature09944"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 12,
-      "relevance_evidence": [
-        "sequencing: metagenom"
-      ]
-    },
-    {
-      "id": "doi:10.1126/science.1262110",
-      "title": "Human genomics. The Genotype-Tissue Expression (GTEx) pilot analysis: multitissue gene regulation in humans.",
-      "authors": [
-        "GTEx Consortium."
-      ],
-      "journal": "Science (New York, N.Y.)",
-      "year": "2015",
-      "doi": "10.1126/science.1262110",
-      "pmcid": "PMC4547484",
-      "pmid": "25954001",
-      "abstract": "Understanding the functional consequences of genetic variation, and how it affects complex human disease and quantitative traits, remains a critical challenge for biomedicine. We present an analysis of RNA sequencing data from 1641 samples across 43 tissues from 175 individuals, generated as part of the pilot phase of the Genotype-Tissue Expression (GTEx) project. We describe the landscape of gene expression across tissues, catalog thousands of tissue-specific and shared regulatory expression quantitative trait loci (eQTL) variants, describe complex network relationships, and identify signals from genome-wide association studies explained by eQTLs. These findings provide a systematic understanding of the cellular and biological consequences of human genetic variation and of the heterogeneity of such effects among a diverse set of human tissues.",
-      "citation_count": 4525,
-      "fulltext_urls": [
-        "https://doi.org/10.1126/science.1262110",
-        "https://europepmc.org/articles/PMC4547484",
-        "https://europepmc.org/articles/PMC4547484?pdf=render",
-        "https://doi.org/10.1126/science.1262110"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 12,
-      "relevance_evidence": [
-        "sequencing: rna sequencing"
-      ]
-    },
-    {
-      "id": "doi:10.12688/f1000research.7563.2",
-      "title": "Differential analyses for RNA-seq: transcript-level estimates improve gene-level inferences.",
-      "authors": [
-        "Soneson C",
-        "Love MI",
-        "Robinson MD"
-      ],
-      "journal": "F1000Research",
-      "year": "2015",
-      "doi": "10.12688/f1000research.7563.2",
-      "pmcid": "PMC4712774",
-      "pmid": "26925227",
-      "abstract": "High-throughput sequencing of cDNA (RNA-seq) is used extensively to characterize the transcriptome of cells. Many transcriptomic studies aim at comparing either abundance levels or the transcriptome composition between given conditions, and as a first step, the sequencing reads must be used as the basis for abundance quantification of transcriptomic features of interest, such as genes or transcripts. Various quantification approaches have been proposed, ranging from simple counting of reads that overlap given genomic regions to more complex estimation of underlying transcript abundances. In this paper, we show that gene-level abundance estimates and statistical inference offer advantages over transcript-level analyses, in terms of performance and interpretability. We also illustrate that the presence of differential isoform usage can lead to inflated false discovery rates in differential gene expression analyses on simple count matrices but that this can be addressed by incorporating offsets derived from transcript-level abundance estimates. We also show that the problem is relatively minor in several real data sets. Finally, we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines.",
-      "citation_count": 3443,
-      "fulltext_urls": [
-        "https://doi.org/10.12688/f1000research.7563.2",
-        "https://europepmc.org/articles/PMC4712774",
-        "https://europepmc.org/articles/PMC4712774?pdf=render"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 12,
-      "relevance_evidence": [
-        "multiomics: transcriptom",
-        "tools: pipeline"
-      ]
+      "status": "discarded"
     }
-  ]
+  ],
+  "pending_candidates": []
 }
