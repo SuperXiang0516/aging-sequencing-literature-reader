@@ -398,6 +398,114 @@
         "AI 内容过短：takeaways",
         "AI 图组解读不是数组"
       ]
+    },
+    "doi:10.1016/j.bioactmat.2026.09.022": {
+      "status": "manual_review",
+      "attempts": 1,
+      "updated_at": "2026-10-25T08:34:23Z",
+      "gate_reasons": [
+        "存在缺失图注",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：lead",
+        "AI 字段缺失：background",
+        "AI 字段缺失：research_question",
+        "AI 字段缺失：study_design",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：limitations",
+        "AI 字段缺失：takeaways",
+        "AI 字段缺失：figure_notes",
+        "AI 内容过短：lead",
+        "AI 内容过短：background",
+        "AI 内容过短：research_question",
+        "AI 内容过短：study_design",
+        "AI 内容过短：methods",
+        "AI 内容过短：results",
+        "AI 内容过短：limitations",
+        "AI 内容过短：takeaways",
+        "AI 图组解读不是数组"
+      ]
+    },
+    "doi:10.1016/j.bioactmat.2026.08.048": {
+      "status": "manual_review",
+      "attempts": 1,
+      "updated_at": "2026-10-25T08:36:51Z",
+      "gate_reasons": [
+        "存在缺失图注",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：lead",
+        "AI 字段缺失：background",
+        "AI 字段缺失：research_question",
+        "AI 字段缺失：study_design",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：limitations",
+        "AI 字段缺失：takeaways",
+        "AI 字段缺失：figure_notes",
+        "AI 内容过短：lead",
+        "AI 内容过短：background",
+        "AI 内容过短：research_question",
+        "AI 内容过短：study_design",
+        "AI 内容过短：methods",
+        "AI 内容过短：results",
+        "AI 内容过短：limitations",
+        "AI 内容过短：takeaways",
+        "AI 图组解读不是数组"
+      ]
+    },
+    "doi:10.1016/j.bioactmat.2026.08.051": {
+      "status": "manual_review",
+      "attempts": 1,
+      "updated_at": "2026-10-25T08:39:16Z",
+      "gate_reasons": [
+        "存在缺失图注",
+        "正文 Methods 未提取",
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：lead",
+        "AI 字段缺失：background",
+        "AI 字段缺失：research_question",
+        "AI 字段缺失：study_design",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：limitations",
+        "AI 字段缺失：takeaways",
+        "AI 字段缺失：figure_notes",
+        "AI 内容过短：lead",
+        "AI 内容过短：background",
+        "AI 内容过短：research_question",
+        "AI 内容过短：study_design",
+        "AI 内容过短：methods",
+        "AI 内容过短：results",
+        "AI 内容过短：limitations",
+        "AI 内容过短：takeaways",
+        "AI 图组解读不是数组"
+      ]
+    },
+    "doi:10.1016/j.gendis.2026.102382": {
+      "status": "manual_review",
+      "attempts": 1,
+      "updated_at": "2026-10-25T08:41:27Z",
+      "gate_reasons": [
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：lead",
+        "AI 字段缺失：background",
+        "AI 字段缺失：research_question",
+        "AI 字段缺失：study_design",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：limitations",
+        "AI 字段缺失：takeaways",
+        "AI 字段缺失：figure_notes",
+        "AI 内容过短：lead",
+        "AI 内容过短：background",
+        "AI 内容过短：research_question",
+        "AI 内容过短：study_design",
+        "AI 内容过短：methods",
+        "AI 内容过短：results",
+        "AI 内容过短：limitations",
+        "AI 内容过短：takeaways",
+        "AI 图组解读不是数组"
+      ]
     }
   },
   "metrics_cache": {
@@ -639,20 +747,49 @@
       "status": "not_found",
       "source": "EasyScholar",
       "retrieved_at": "2026-10-25T06:33:13Z"
+    },
+    "synthetic and systems biotechnology": {
+      "impact_factor": "4.8",
+      "jcr": "SCI Q2",
+      "jcr_quartile": "Q2",
+      "jcr_q1": false,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-25T08:34:16Z"
+    },
+    "bioactive materials": {
+      "impact_factor": "23.6",
+      "jcr": "SCI Q1",
+      "jcr_quartile": "Q1",
+      "jcr_q1": true,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-25T08:34:16Z"
+    },
+    "genes & diseases": {
+      "impact_factor": "14.6",
+      "jcr": "SCI Q1",
+      "jcr_quartile": "Q1",
+      "jcr_q1": true,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-25T08:34:18Z"
     }
   },
-  "updated_at": "2026-10-25T06:50:35Z",
+  "updated_at": "2026-10-25T08:43:29Z",
   "last_run": {
     "status": "success",
-    "selected": 0,
+    "selected": 4,
     "published": 0,
-    "candidates": 0,
-    "scope_rejected": 0,
-    "q1_rejected": 0,
+    "candidates": 4,
+    "raw_candidates": 39,
+    "score_rejected": 2,
+    "scope_rejected": 34,
+    "q1_rejected": 1,
     "skipped_without_pmcid": 0,
     "search_error": "",
     "preserved_articles": 0,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-10-25T06:50:35Z"
+    "finished_at": "2026-10-25T08:43:29Z"
   }
 }
