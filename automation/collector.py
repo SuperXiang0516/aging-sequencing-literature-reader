@@ -196,8 +196,10 @@ def candidate_matches_scope(record: Mapping[str, Any]) -> bool:
     """
     text = f"{record.get('title', '')} {record.get('abstract', '')}".lower()
     topic_terms = (
-        "aging", "ageing", "senescence", "geroscience", "age-related", "age-associated", "older adult",
-        "lifespan", "inflammaging", "diabetes", "diabetic", "metabolic syndrome", "metabolic disease",
+        "aging", "ageing", "senescence", "geroscience", "age-related", "age-associated",
+        "aging-associated", "ageing-related", "ageing-associated", "age-dependent", "age-dependent",
+        "older adult", "older people", "elderly", "chronological age", "lifespan", "longevity",
+        "healthspan", "inflammaging", "diabetes", "diabetic", "metabolic syndrome", "metabolic disease",
         "obesity", "cardiovascular", "kidney disease", "衰老",
     )
     omics_terms = (
@@ -208,6 +210,37 @@ def candidate_matches_scope(record: Mapping[str, Any]) -> bool:
         "benchmark", "bioinformatic", "pipeline", "software", "workflow",
     )
     return any(term in text for term in topic_terms) and any(term.lower() in text for term in omics_terms)
+
+
+def strict_europe_pmc_query() -> str:
+    """Return a field-qualified Europe PMC query for the recovery search.
+
+    Europe PMC accepts the unqualified Boolean query used by the public
+    workflow, but its parser can return a very broad result set for nested
+    synonym groups.  This recovery query puts each synonym in TITLE/ABSTRACT
+    explicitly.  It is only used when the normal candidate window contains no
+    in-scope papers, so the normal daily run keeps its configured query and
+    request budget.
+    """
+    topic_terms = (
+        "aging", "ageing", "senescence", "geroscience", "age-related", "age-associated",
+        "age-dependent", "lifespan", "longevity", "healthspan", "inflammaging", "diabetes",
+        "diabetic", "metabolic syndrome", "metabolic disease", "obesity", "cardiovascular",
+        "kidney disease",
+    )
+    omics_terms = (
+        "sequencing", "long-read", "long read", "nanopore", "PacBio", "HiFi", "metagenomics",
+        "multi-omics", "multiomics", "single-cell", "RNA sequencing", "RNA-seq", "WGS",
+        "whole-genome", "Illumina", "transcriptomics", "methylomics", "proteomics", "metabolomics",
+        "epigenomics", "bioinformatics", "pipeline", "workflow",
+    )
+
+    def fields(terms: Iterable[str]) -> str:
+        return "(" + " OR ".join(
+            f'TITLE:"{term}" OR ABSTRACT:"{term}"' for term in terms
+        ) + ")"
+
+    return f"OPEN_ACCESS:Y AND {fields(topic_terms)} AND {fields(omics_terms)}"
 
 
 def _http_read(request: urllib.request.Request, *, timeout: int, max_bytes: int) -> bytes:
@@ -367,7 +400,10 @@ def search_europe_pmc(query: str, *, page_size: int = 40, fixture: Optional[Path
         # the daily queue before newer ageing/omics studies are seen.  The
         # reader is a daily feed, so newest publication date is the correct
         # primary order; citation count remains part of the candidate score.
-        sort_order = clean_text(os.environ.get("LITERATURE_SORT")) or "FIRST_PDATE_D desc"
+        # Europe PMC's REST search API names the publication-date sort field
+        # ``P_PDATE_D``.  ``FIRST_PDATE_D`` looks plausible but is not a REST
+        # sort key and can yield an empty result list on the runner.
+        sort_order = clean_text(os.environ.get("LITERATURE_SORT")) or "P_PDATE_D desc"
         params = urllib.parse.urlencode({"query": query, "format": "json", "pageSize": page_size, "resultType": "core", "sort": sort_order})
         payload = http_json(f"{EUROPE_PMC_SEARCH}?{params}")
     result_list = payload.get("resultList", {}).get("result", []) if isinstance(payload, Mapping) else []
@@ -1103,7 +1139,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             search_error = f"{search_error}; {fallback_message}"
             candidates = []
     def eligible(candidate: Mapping[str, Any]) -> bool:
-        if candidate["relevance_score"] < args.min_score or candidate["id"] in records:
+        if candidate["id"] in records:
             return False
         previous = attempted.get(candidate["id"])
         if not isinstance(previous, Mapping):
@@ -1111,9 +1147,20 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         # A temporary LLM/API failure may be retried for a bounded number of
         # runs; a paper without retrievable full text/figures is discarded.
         return previous.get("status") == "manual_review" and int(previous.get("attempts", 0)) < 5
+    # Apply the explicit biological scope before the numeric relevance score.
+    # Europe PMC's newest-first records often use terms such as ``age-related
+    # disease`` or ``whole-genome`` that are not in the weighted score table,
+    # even though they satisfy the requested ageing/omics scope.  Filtering by
+    # score first made a valid daily page silently become an empty page.
     eligible_candidates = [candidate for candidate in candidates if eligible(candidate)]
+    raw_candidate_count = len(eligible_candidates)
     scope_rejected = sum(1 for candidate in eligible_candidates if not candidate_matches_scope(candidate))
-    eligible_candidates = [candidate for candidate in eligible_candidates if candidate_matches_scope(candidate)]
+    scoped_candidates = [candidate for candidate in eligible_candidates if candidate_matches_scope(candidate)]
+    score_rejected = sum(1 for candidate in scoped_candidates if candidate["relevance_score"] < args.min_score)
+    # The scope predicate is the hard gate; the score is a ranking signal only.
+    # Keep all in-scope records so a low-keyword but genuinely relevant recent
+    # paper can still reach the full-text, figure and JCR-Q1 gates.
+    eligible_candidates = scoped_candidates
     # A PMCID is required for the XML/full-text path used by this project.
     # DOI-only records are kept out of the daily processing quota so that one
     # inaccessible paper cannot consume the whole run.
@@ -1149,7 +1196,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             records[record["id"]] = public_projection(record)
             published_this_run += 1
     published = sorted(records.values(), key=lambda r: (r.get("year", ""), r.get("updated_at", "")), reverse=True)
-    state.update({"schema_version": SCHEMA_VERSION, "updated_at": utc_now(), "records": records, "attempted": attempted, "metrics_cache": metrics_cache, "last_run": {"status": search_status, "selected": len(selected), "published": published_this_run, "candidates": len(candidates), "scope_rejected": scope_rejected, "q1_rejected": q1_rejected, "skipped_without_pmcid": skipped_without_pmcid, "search_error": search_error, "preserved_articles": len(records), "asset_dir": str(args.assets_dir) if args.assets_dir else "", "finished_at": utc_now()}})
+    state.update({"schema_version": SCHEMA_VERSION, "updated_at": utc_now(), "records": records, "attempted": attempted, "metrics_cache": metrics_cache, "last_run": {"status": search_status, "selected": len(selected), "published": published_this_run, "candidates": len(candidates), "raw_candidates": raw_candidate_count, "score_rejected": score_rejected, "scope_rejected": scope_rejected, "q1_rejected": q1_rejected, "skipped_without_pmcid": skipped_without_pmcid, "search_error": search_error, "preserved_articles": len(records), "asset_dir": str(args.assets_dir) if args.assets_dir else "", "finished_at": utc_now()}})
     save_json(args.state, state)
     save_json(args.output, {"schema_version": SCHEMA_VERSION, "generated_at": utc_now(), "articles": [public_projection(record) for record in published]})
     report_records = [{key: value for key, value in record.items() if key not in {"abstract", "fulltext_text", "methods_text", "results_text", "article"}} for record in processed]
