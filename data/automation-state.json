@@ -630,18 +630,29 @@
       "status": "not_found",
       "source": "EasyScholar",
       "retrieved_at": "2026-10-25T03:51:57Z"
+    },
+    "genetics in medicine : official journal of the american college of medical genetics": {
+      "impact_factor": "",
+      "jcr": "",
+      "jcr_quartile": "",
+      "jcr_q1": false,
+      "status": "not_found",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-25T06:33:13Z"
     }
   },
-  "updated_at": "2026-10-25T06:16:58Z",
+  "updated_at": "2026-10-25T06:33:13Z",
   "last_run": {
     "status": "success",
-    "selected": 3,
+    "selected": 0,
     "published": 0,
-    "candidates": 3,
+    "candidates": 0,
+    "scope_rejected": 4,
+    "q1_rejected": 1,
     "skipped_without_pmcid": 0,
     "search_error": "",
     "preserved_articles": 0,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-10-25T06:16:58Z"
+    "finished_at": "2026-10-25T06:33:13Z"
   }
 }
