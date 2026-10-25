@@ -362,7 +362,13 @@ def search_europe_pmc(query: str, *, page_size: int = 40, fixture: Optional[Path
     if fixture:
         payload = json.loads(fixture.read_text(encoding="utf-8"))
     else:
-        params = urllib.parse.urlencode({"query": query, "format": "json", "pageSize": page_size, "resultType": "core", "sort": "CITED desc"})
+        # Citation sorting repeatedly returns famous historical papers (for
+        # example coronavirus or the original HMP paper), which can exhaust
+        # the daily queue before newer ageing/omics studies are seen.  The
+        # reader is a daily feed, so newest publication date is the correct
+        # primary order; citation count remains part of the candidate score.
+        sort_order = clean_text(os.environ.get("LITERATURE_SORT")) or "FIRST_PDATE_D desc"
+        params = urllib.parse.urlencode({"query": query, "format": "json", "pageSize": page_size, "resultType": "core", "sort": sort_order})
         payload = http_json(f"{EUROPE_PMC_SEARCH}?{params}")
     result_list = payload.get("resultList", {}).get("result", []) if isinstance(payload, Mapping) else []
     if isinstance(result_list, Mapping):
