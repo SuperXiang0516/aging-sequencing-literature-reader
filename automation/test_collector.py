@@ -103,6 +103,45 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(note["caption_zh"], "完整图注")
         self.assertEqual(note["panel_reading"][0]["panel"], "a")
 
+    def test_llm_normalizer_cleans_format_markers_but_keeps_statistical_stars(self):
+        article = _normalize_llm_article({
+            "methods": "第一步\\n第二步：**关键方法**；显著性* p≤0.05、** p≤0.01。",
+            "figure_notes": [{"caption_zh": "`图注`", "interpretation": "__重点结论__"}],
+        }, 1)
+        self.assertEqual(article["methods"], "第一步\n第二步：关键方法；显著性* p≤0.05、** p≤0.01。")
+        self.assertEqual(article["figure_notes"][0]["caption_zh"], "图注")
+        self.assertEqual(article["figure_notes"][0]["interpretation"], "重点结论")
+
+    def test_llm_normalizer_extracts_text_from_object_prose_items(self):
+        article = _normalize_llm_article({
+            "methods": [{"text": "样本处理"}, {"content": "测序分析"}],
+            "results": {"text": "主要结果"},
+            "figure_notes": [],
+        }, 0)
+        self.assertEqual(article["methods"], "样本处理\n\n测序分析")
+        self.assertEqual(article["results"], "主要结果")
+
+    def test_llm_normalizer_extracts_text_from_nested_note_and_panel_objects(self):
+        article = _normalize_llm_article({
+            "figure_notes": [{
+                "caption_zh": {"text": "图注说明"},
+                "panel_reading": [{
+                    "panel": {"text": "a"},
+                    "experiment": {"content": "测序实验"},
+                    "comparison": "两组",
+                    "result": "**显著升高**",
+                    "statistics": "** p≤0.01",
+                }],
+            }],
+        }, 1)
+        note = article["figure_notes"][0]
+        panel = note["panel_reading"][0]
+        self.assertEqual(note["caption_zh"], "图注说明")
+        self.assertEqual(panel["panel"], "a")
+        self.assertEqual(panel["experiment"], "测序实验")
+        self.assertEqual(panel["result"], "显著升高")
+        self.assertEqual(panel["statistics"], "** p≤0.01")
+
     def test_llm_response_content_accepts_proxy_shapes(self):
         article = {"title_zh": "标题", "figure_notes": []}
         encoded = json.dumps(article, ensure_ascii=False)
@@ -155,6 +194,13 @@ class CollectorTests(unittest.TestCase):
         </body></article>"""
         _, _, _, figures, _ = extract_fulltext(xml, "PMC1234567")
         self.assertEqual([figure["label"] for figure in figures], ["Fig. 1"])
+
+    def test_xml_caption_spacing_is_normalized_without_changing_values(self):
+        xml = """<article xmlns:xlink="http://www.w3.org/1999/xlink"><body>
+          <fig id="F1"><label>Fig. 1</label><caption>Panel ( A ) shows MMP2 , MMP3 after post -treatment ( n = 12 ).</caption><graphic xlink:href="f1.jpg"/></fig>
+        </body></article>"""
+        _, _, _, figures, _ = extract_fulltext(xml, "PMC1234567")
+        self.assertEqual(figures[0]["caption"], "Panel (A) shows MMP2, MMP3 after post-treatment ( n = 12 ).")
 
     def test_xml_extracts_media_and_inline_graphic_body_figures(self):
         xml = """<article xmlns:xlink="http://www.w3.org/1999/xlink"><body>

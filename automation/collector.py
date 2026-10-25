@@ -75,6 +75,43 @@ def clean_text(value: Any) -> str:
     return text
 
 
+def normalize_generated_text(value: Any) -> str:
+    """Normalize harmless LLM formatting artifacts without changing facts.
+
+    Some OpenAI-compatible gateways return escaped newlines literally and
+    some models leave Markdown emphasis/code markers in a JSON prose field.
+    Only paired emphasis markers whose content starts/ends with a non-space
+    character are removed; unpaired statistical stars such as ``** p<0.01``
+    are preserved.
+    """
+    text = "" if value is None else str(value)
+    text = text.replace("\\r\\n", "\n").replace("\\n", "\n").replace("\\t", " ")
+    text = re.sub(r"```(?:json|markdown|text)?", "", text, flags=re.I)
+    text = text.replace("```", "")
+    text = re.sub(r"\*\*([^\s*][^\n]*?[^\s*])\*\*", r"\1", text)
+    text = re.sub(r"__([^\s_][^\n]*?[^\s_])__", r"\1", text)
+    text = re.sub(r"`([^`\n]+)`", r"\1", text)
+    return text.strip()
+
+
+def normalize_xml_text(value: Any) -> str:
+    """Repair spacing introduced when XML inline tags are flattened.
+
+    This helper is intentionally used for figure captions only.  It fixes
+    presentation artefacts such as ``( A )`` and ``MMP2 , MMP3`` without
+    rewriting numerical values or statistical notation in the body text.
+    """
+    text = clean_text(value)
+    text = re.sub(
+        r"\(\s*([A-Za-z](?:\s*[,–-]\s*[A-Za-z])*)\s*\)",
+        lambda match: "(" + re.sub(r"\s*([,–-])\s*", r"\1", match.group(1)) + ")",
+        text,
+    )
+    text = re.sub(r"\s+([,.;:!?，。；：！？])", r"\1", text)
+    text = re.sub(r"(?<=[A-Za-z])\s+-\s*(?=[A-Za-z])", "-", text)
+    return text
+
+
 def local_name(tag: str) -> str:
     return tag.rsplit("}", 1)[-1]
 
@@ -690,7 +727,7 @@ def extract_fulltext(xml_text: str, pmcid: str, asset_map: Optional[Mapping[str,
         if local_name(fig.tag) != "fig":
             continue
         label = element_text(first_child(fig, "label"))
-        caption = element_text(first_child(fig, "caption"))
+        caption = normalize_xml_text(element_text(first_child(fig, "caption")))
         fig_id = clean_text(fig.attrib.get("id") or fig.attrib.get("xml:id")).casefold()
         href = ""
         for node in fig.iter():
@@ -840,6 +877,19 @@ def _llm_content_text(value: Any) -> str:
     return ""
 
 
+def generated_field_text(value: Any) -> str:
+    """Turn a model prose value into readable text without Python reprs."""
+    if isinstance(value, Mapping):
+        for key in ("text", "content", "title", "value", "description"):
+            if key in value:
+                return generated_field_text(value[key])
+        return normalize_generated_text(json.dumps(value, ensure_ascii=False))
+    if isinstance(value, list):
+        parts = [generated_field_text(item) for item in value]
+        return "\n\n".join(part for part in parts if part)
+    return normalize_generated_text(value)
+
+
 def _llm_response_content(payload: Any) -> str:
     """Extract assistant text from common OpenAI-compatible response shapes.
 
@@ -963,7 +1013,9 @@ def _normalize_llm_article(article: Mapping[str, Any], figure_count: int) -> dic
     for field in ("title_zh", "lead", "background", "research_question", "study_design", "methods", "results", "limitations", "takeaways"):
         value = output.get(field)
         if isinstance(value, list):
-            output[field] = "\n\n".join(clean_text(item) for item in value if clean_text(item))
+            output[field] = generated_field_text(value)
+        elif value is not None:
+            output[field] = generated_field_text(value)
     # Accept the common one-key wrapper while preserving the exact figure list.
     notes = output.get("figure_notes")
     if isinstance(notes, Mapping):
@@ -1002,8 +1054,14 @@ def _normalize_llm_article(article: Mapping[str, Any], figure_count: int) -> dic
                 for source, target in panel_aliases.items():
                     if target not in panel and source in panel:
                         panel[target] = panel[source]
+                for field in ("panel", "experiment", "comparison", "result", "statistics"):
+                    if panel.get(field) is not None:
+                        panel[field] = generated_field_text(panel[field])
                 fixed_panels.append(panel)
             note["panel_reading"] = fixed_panels
+        for field in ("label", "caption_zh", "what_question", "how_to_read", "interpretation", "evidence", "boundary"):
+            if note.get(field) is not None:
+                note[field] = generated_field_text(note[field])
         normalized_notes.append(note)
     output["figure_notes"] = normalized_notes
     return output

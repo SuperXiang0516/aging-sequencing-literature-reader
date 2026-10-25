@@ -68,10 +68,10 @@
 .article.active .method-full p{margin:0 0 12px;font-size:15px;line-height:1.95}
 .article.active .result-lead{margin:0 0 20px;color:#4b5752}.article.active .wechat-keyword{color:#c35432;font-weight:800}
 .article.active .figure{border-top:0;margin:32px 0 40px;padding-top:0}.article.active .figure img{border:0;border-radius:0}
-.article.active .figure .caption{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;text-align:center;font-size:12px;line-height:1.6}
+.article.active .figure .caption{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;text-align:center;font-size:12px;line-height:1.6;white-space:pre-line}
 .article.active .figure h3{padding:8px 12px;text-align:center;color:#3d6fd0;background:#eef4ff;border:1px solid #d6e3ff;border-radius:2px}
 .article.active .figure .interpretation{font-size:16px;line-height:1.95}.article.active p b{color:#c35d34}
-.article.active .figure-detail{margin-top:14px;padding:14px 16px;background:#fbf7f0;border-left:3px solid #c35d34;font-family:Georgia,"Songti SC","STSong",serif;font-size:16px;line-height:1.95;color:#394542}
+.article.active .figure-detail{margin-top:14px;padding:14px 16px;background:#fbf7f0;border-left:3px solid #c35d34;font-family:Georgia,"Songti SC","STSong",serif;font-size:16px;line-height:1.95;color:#394542;white-space:pre-line}
 .article.active .figure-detail p{margin:0 0 9px;font-size:16px}.article.active .figure-detail p:last-child{margin-bottom:0}.article.active .figure-detail ol{margin:5px 0 10px;padding-left:24px}.article.active .figure-detail li{margin:0 0 8px;font-size:15px;line-height:1.85}
 @media(max-width:700px){.article.active{margin:20px 0 50px}.article.active .info-list{grid-template-columns:1fr;gap:1px}.article.active .info-list dd{padding-left:0}.article.active .workflow{grid-template-columns:1fr 1fr}.article.active .step{border-bottom:1px solid #e0ddd7}.article.active .method-flow-item{grid-template-columns:38px minmax(0,1fr);gap:8px}.article.active .method-flow-item p{grid-column:2}}
 </style>
@@ -88,7 +88,7 @@
 .figure-modal-close{position:absolute;right:13px;top:10px;border:0;background:transparent;color:#42524d;font-size:27px;line-height:1;cursor:pointer}
 .figure-modal img{display:block;max-width:100%;max-height:76vh;width:auto;height:auto;margin:10px auto 14px;object-fit:contain;background:#fff}
 .figure-modal-title{margin:0 34px 5px;color:#2f62b9;font:700 19px/1.45 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
-.figure-modal-caption{margin:0;color:#4c5753;font:15px/1.8 Georgia,"Songti SC","STSong",serif}
+.figure-modal-caption{margin:0;color:#4c5753;font:15px/1.8 Georgia,"Songti SC","STSong",serif;white-space:pre-line}
 .figure-modal-link{display:inline-block;margin-top:10px;color:#2e709b;font:13px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
 .asset-badge{display:inline-block;margin-left:7px;padding:2px 7px;border-radius:10px;background:#e7f4ec;color:#28704d;font:600 11px/1.4 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
 .asset-badge.remote{background:#fff2e8;color:#a7512e}
@@ -123,13 +123,26 @@ const DATA_URL = 'generated/articles.json';
 const list = document.querySelector('#list');
 const reader = document.querySelector('#reader');
 const statusNode = document.querySelector('#status');
-const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const textValue = value => {
+  if(value == null) return '';
+  if(typeof value === 'string') return value;
+  if(Array.isArray(value)) return value.map(textValue).filter(Boolean).join('\n\n');
+  if(typeof value === 'object'){
+    for(const key of ['text','content','output_text','value','title','description']){
+      if(key in value){ const text = textValue(value[key]); if(text) return text; }
+    }
+    try { return JSON.stringify(value); } catch { return ''; }
+  }
+  return String(value);
+};
+const plainText = value => textValue(value).replace(/\r\n?/g,'\n').replace(/\\r\\n/g,'\n').replace(/\\n/g,'\n').replace(/\\t/g,' ').replace(/```(?:json|markdown|text)?/gi,'').replace(/```/g,'').replace(/\*\*([^\s*][^\n]*?[^\s*])\*\*/g,'$1').replace(/__([^\s_][^\n]*?[^\s_])__/g,'$1').replace(/`([^`\n]+)`/g,'$1');
+const captionText = value => plainText(value).replace(/\(\s*([A-Za-z](?:\s*[,–-]\s*[A-Za-z])*)\s*\)/g, (_, inner) => `(${inner.replace(/\s*([,–-])\s*/g,'$1')})`).replace(/\s+([,.;:!?，。；：！？])/g,'$1').replace(/([A-Za-z])\s+-\s*(?=[A-Za-z])/g,'$1-');
+const esc = value => plainText(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const textBlocks = value => {
-  if(Array.isArray(value)) return value.map(item => `<p>${esc(typeof item === 'string' ? item : (item?.text || item?.content || JSON.stringify(item)))}</p>`).join('');
-  return String(value ?? '').split(/\n+/).filter(Boolean).map(item => `<p>${esc(item)}</p>`).join('');
+  return plainText(value).split(/\n+/).map(item => item.trim()).filter(Boolean).map(item => `<p>${esc(item)}</p>`).join('');
 };
 const metric = record => record.journal_display || `${record.journal || ''}（指标待查）`;
-const sentenceParts = value => String(value ?? '').replace(/\s+/g,' ').split(/(?<=[。！？；.!?;])\s*/).map(item => item.trim()).filter(Boolean);
+const sentenceParts = value => plainText(value).replace(/\s+/g,' ').split(/(?<=[。！？；.!?;])\s*/).map(item => item.trim()).filter(Boolean);
 const workflow = value => {
   const parts = sentenceParts(value).slice(0,5);
   if(!parts.length) return '';
@@ -158,13 +171,13 @@ function figureBlock(record, note, index){
   const source = localSource;
   const image = source ? `<img src="${esc(source)}" alt="${esc(figure.label || `Figure ${index + 1}`)}" referrerpolicy="no-referrer" loading="lazy" decoding="async"${fallback} onerror="figureImageFallback(this)">` : '<div class="image-missing">未找到正文原图地址。请查看运行报告中的质量门禁原因。</div>';
   const sourceLink = remoteSource ? `<a class="figure-source" href="${esc(remoteSource)}" target="_blank" rel="noreferrer">打开论文提供的原图</a>` : '';
-  const modalCaption = `原文图注：${figure.caption || '原文未提供可提取图注'}\n\n中文图注解读：${note?.caption_zh || '图注翻译待更新'}`;
+  const modalCaption = `原文图注：${captionText(figure.caption || '原文未提供可提取图注')}\n\n中文图注解读：${plainText(note?.caption_zh || '图注翻译待更新')}`;
   const openButton = source ? `<button type="button" class="figure-open" data-figure-open data-image="${esc(source)}" data-label="${esc(note?.label || figure.label || `图 ${index + 1}`)}" data-caption="${esc(modalCaption)}">放大查看原图</button>` : '';
   const assetLabel = localSource ? '<span class="asset-badge">已缓存到网站</span>' : '<span class="asset-badge remote">未缓存</span>';
   const panels = Array.isArray(note?.panel_reading) ? note.panel_reading : [];
   const panelHtml = panels.length ? `<div class="panel-reading"><b>Panel 逐项阅读：</b><ol>${panels.map(panel => `<li><strong>${esc(panel?.panel || 'Panel')}</strong>：${esc(panel?.experiment || '')}；比较 ${esc(panel?.comparison || '正文未说明')}；结果 ${esc(panel?.result || '正文未报告')}；统计 ${esc(panel?.statistics || '正文未报告')}</li>`).join('')}</ol></div>` : '';
   const detailHtml = `<div class="figure-detail"><p><b>这张图回答的问题：</b>${esc(note?.what_question || '正文未明确拆分问题')}</p><p><b>怎么读：</b>${esc(note?.how_to_read || note?.interpretation || '图组解读待更新')}</p>${panelHtml}<p><b>证据作用：</b>${esc(note?.evidence || note?.interpretation || '正文未提供单独证据说明')}</p><p><b>边界：</b>${esc(note?.boundary || '正文未明确说明；请结合原文核对')}</p></div>`;
-  return `<figure id="figure-${index + 1}" class="figure${source ? '' : ' image-missing'}">${image}<figcaption class="caption"><b>${esc(figure.label || `Figure ${index + 1}`)} 原文图注：</b>${esc(figure.caption || '原文未提供可提取图注')} ${assetLabel} ${sourceLink}<br>${openButton}</figcaption><h3>${esc(note?.label || figure.label || `图 ${index + 1}`)}</h3><div class="caption"><b>图注中文解读：</b>${esc(note?.caption_zh || '图注翻译待更新')}</div>${detailHtml}</figure>`;
+  return `<figure id="figure-${index + 1}" class="figure${source ? '' : ' image-missing'}">${image}<figcaption class="caption"><b>${esc(figure.label || `Figure ${index + 1}`)} 原文图注：</b>${esc(captionText(figure.caption || '原文未提供可提取图注'))} ${assetLabel} ${sourceLink}<br>${openButton}</figcaption><h3>${esc(note?.label || figure.label || `图 ${index + 1}`)}</h3><div class="caption"><b>图注中文解读：</b>${esc(note?.caption_zh || '图注翻译待更新')}</div>${detailHtml}</figure>`;
 }
 function figureImageFallback(image){
   const alternate = image.dataset.altSrc;

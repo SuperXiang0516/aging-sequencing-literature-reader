@@ -35,7 +35,7 @@ Europe PMC 的临时 5xx/429/超时会自动重试；若重试后仍不可用，
 
 如果旧版本文章只有 PMC 远程原图、尚未有本地缓存，升级后的流程会先尝试补存本地图；补存失败或无法验证的记录会从公开文章库移除并在运行报告中标记，避免网页留下无图文章。若历史运行曾把状态误写为空，Actions 会从 Git 历史中恢复最近一个非空快照，再由当前的 JCR、全文、原图和 AI 门禁重新核验。
 
-AI 失败原因会写入 `processed[].ai_status` 和 `processed[].ai_error`，例如 `llm_http_401`、`llm_api_payload:quota exceeded`、`llm_error:empty_content` 或 `llm_schema_incomplete:methods,results`。这比只看到“0 篇”更适合定位密钥、额度、代理返回格式和上下文过长问题。
+AI 失败原因会写入 `processed[].ai_status` 和 `processed[].ai_error`，例如 `llm_http_401`、`llm_api_payload:quota exceeded`、`llm_error:empty_content` 或 `llm_schema_incomplete:methods,results`。这比只看到“0 篇”更适合定位密钥、额度、代理返回格式和上下文过长问题。生成文本会统一转义换行并清除成对 Markdown 标记；图注只修复 XML 内嵌标签造成的括号、标点和连字符空格，不改数字、单位和统计显著性符号。
 
 ## 运行方式
 
