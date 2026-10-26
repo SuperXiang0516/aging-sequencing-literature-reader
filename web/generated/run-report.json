@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-26T01:42:34Z",
+  "generated_at": "2026-10-26T06:25:11Z",
   "last_run": {
     "status": "success",
     "selected": 1,
@@ -15,7 +15,7 @@
     "search_error": "",
     "preserved_articles": 0,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-10-26T01:42:34Z"
+    "finished_at": "2026-10-26T06:25:11Z"
   },
   "processed": [
     {
@@ -205,7 +205,7 @@
         "retrieved_at": "2026-10-25T11:08:28Z"
       },
       "journal_display": "Genes & diseases（IF 14.6；JCR SCI Q1）",
-      "updated_at": "2026-10-26T01:40:29Z",
+      "updated_at": "2026-10-26T06:23:04Z",
       "ai_status": "llm_schema_incomplete:title_zh,lead,background,research_question,study_design,methods,results,limitations,takeaways,figure_notes",
       "ai_error": "llm_schema_incomplete:title_zh,lead,background,research_question,study_design,methods,results,limitations,takeaways,figure_notes",
       "publishable": false,
