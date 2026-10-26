@@ -17,6 +17,7 @@ from automation.collector import (
     run,
     parse_args,
     publication_gate,
+    is_preservable_record,
     search_ncbi_pmc,
     pmc_aws_file_map,
     image_suffix,
@@ -370,7 +371,7 @@ class CollectorTests(unittest.TestCase):
             self.assertEqual(output["articles"][0]["status"], "published")
             self.assertNotIn("fulltext_text", output["articles"][0])
             self.assertNotIn("methods_text", output["articles"][0])
-            self.assertEqual(output["articles"][0]["supplements"][0]["label"], "Supplementary Table 1")
+            self.assertNotIn("supplements", output["articles"][0])
 
     def test_second_run_preserves_published_record_and_does_not_duplicate(self):
         article = {
@@ -395,6 +396,38 @@ class CollectorTests(unittest.TestCase):
                 self.assertEqual(run(args)["selected"], 0)
             output = json.loads((root / "articles.json").read_text(encoding="utf-8"))
             self.assertEqual(len(output["articles"]), 1)
+
+    def test_legacy_preservation_drops_old_out_of_scope_records(self):
+        base = {
+            "metrics": Q1_METRICS,
+            "publishable": True,
+            "fulltext_ok": True,
+            "figures": [{"label": "Fig. 1", "caption": "caption", "image_url": "https://example.org/fig.jpg"}],
+            "article": {
+                "title_zh": "标题", "lead": "导语", "background": "背景", "research_question": "问题",
+                "study_design": "设计", "methods": "方法", "results": "结果", "limitations": "局限", "takeaways": "启示",
+                "figure_notes": [{
+                    "caption_zh": "图注", "what_question": "问题", "how_to_read": "读图", "interpretation": "解读",
+                    "evidence": "证据", "boundary": "边界",
+                    "panel_reading": [{"panel": "a", "experiment": "实验", "comparison": "比较", "result": "结果", "statistics": "统计"}],
+                }],
+            },
+        }
+        self.assertFalse(is_preservable_record({
+            **base,
+            "title": "Fast, sensitive and accurate integration of single-cell data with Harmony",
+            "relevance_evidence": ["sequencing: single-cell"],
+        }))
+        self.assertFalse(is_preservable_record({
+            **base,
+            "title": "Tissue engineering polymeric formulations enable lymphangiogenesis for myocardial repair",
+            "relevance_evidence": ["sequencing: rna sequencing", "disease_bridge: cardiovascular"],
+        }))
+        self.assertTrue(is_preservable_record({
+            **base,
+            "title": "Ageing-associated long-read metagenomics reveals gut microbial genomes",
+            "relevance_evidence": ["aging: ageing", "sequencing: long-read, metagenom"],
+        }))
 
     def test_run_skips_doi_only_hits_and_continues_after_failed_candidate(self):
         def candidate(identifier, pmcid):

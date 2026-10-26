@@ -56,7 +56,7 @@ python3 automation/collector.py \
 
 ## 数据和指标
 
-`data/automation-state.json` 保存稳定 ID、已发布记录、有限重试状态和 EasyScholar 缓存；`web/generated/articles.json` 只包含已通过门禁的公开文章；`web/generated/run-report.json` 保存本轮摘要和失败原因；`web/generated/assets/` 保存已发布文章的原始正文图。运行时下载到临时目录的文件可以删除，但已发布网页使用的本地资源不能删除。
+`data/automation-state.json` 保存稳定 ID、已发布记录、有限重试状态和 EasyScholar 缓存；`web/generated/articles.json` 只包含已通过门禁的公开文章，不再输出补充材料列表；`web/generated/run-report.json` 保存本轮摘要和失败原因；`web/generated/assets/` 保存已发布文章的原始正文图。运行时下载到临时目录的文件可以删除，但已发布网页使用的本地资源不能删除。升级后的首次运行还会重新检查历史记录的研究范围、正文图、图片本地缓存和逐图解读字段，旧版本误收的越界或不完整文章不会继续保留。
 
 作者和期刊在数据中分开保存。网页展示为：
 

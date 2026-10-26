@@ -1323,7 +1323,7 @@ def save_json(path: Path, value: Any) -> None:
 
 def public_projection(record: Mapping[str, Any]) -> dict[str, Any]:
     """Keep publishable metadata and generated prose, never raw full text."""
-    excluded = {"abstract", "fulltext_text", "methods_text", "results_text"}
+    excluded = {"abstract", "fulltext_text", "methods_text", "results_text", "supplements"}
     return {key: value for key, value in record.items() if key not in excluded}
 
 
@@ -1334,6 +1334,11 @@ def is_preservable_record(record: Mapping[str, Any], assets_dir: Optional[Path] 
     and JCR-Q1 rules were added.  They must not silently reappear on the next
     run just because the upstream search is temporarily unavailable.
     """
+    if not legacy_record_matches_scope(record):
+        return False
+    if record.get("assets_required") and isinstance(record.get("relevance_evidence"), (list, tuple)) and record.get("relevance_evidence"):
+        if not legacy_article_is_complete(record):
+            return False
     metrics = record.get("metrics", {}) if isinstance(record.get("metrics"), Mapping) else {}
     figures = record.get("figures", [])
     if not is_jcr_q1(metrics) or record.get("publishable") is False:
@@ -1351,6 +1356,86 @@ def is_preservable_record(record: Mapping[str, Any], assets_dir: Optional[Path] 
         for figure in figures:
             relative = clean_text(figure.get("local_url") or figure.get("asset_path"))
             if not local_asset_exists(assets_dir, relative):
+                return False
+    return True
+
+
+def legacy_record_matches_scope(record: Mapping[str, Any]) -> bool:
+    """Re-check records created before the current hard scope gate existed.
+
+    Published state intentionally omits the raw abstract, so a full
+    ``candidate_matches_scope`` call is not always possible during migration.
+    We nevertheless remove records whose title is clearly outside the
+    ageing/disease-bridge topic. An ageing title with stored sequencing or
+    omics evidence is retained; a generic tool or biomaterials title is not
+    allowed to survive merely because it once passed an older score gate.
+    """
+    title = clean_text(record.get("title")).casefold()
+    abstract = clean_text(record.get("abstract")).casefold()
+    if abstract:
+        return candidate_matches_scope(record)
+    stored_evidence = record.get("relevance_evidence")
+    # Hand-curated/very old records may not have the machine-generated scope
+    # evidence at all. Preserve those records during an upstream outage rather
+    # than deleting user content that cannot be re-evaluated from the reduced
+    # public projection. Records with stored evidence are checked below.
+    if not isinstance(stored_evidence, (list, tuple)) or not stored_evidence:
+        return True
+    ageing_terms = (
+        "aging", "ageing", "senescence", "geroscience", "age-related", "age-associated",
+        "ageing-related", "ageing-associated", "age-dependent", "older adult", "elderly",
+        "lifespan", "longevity", "healthspan", "inflammaging", "衰老",
+    )
+    bridge_terms = (
+        "diabetes", "diabetic", "metabolic syndrome", "metabolic disease", "obesity",
+        "cardiovascular", "kidney disease",
+    )
+    omics_title_terms = (
+        "sequenced", "sequencing", "long-read", "long read", "nanopore", "pacbio", "hifi",
+        "metagenom", "transcriptom", "methylom", "proteom", "metabolom", "epigenom",
+        "multi-omics", "multiomics", "single-cell", "scrna", "rna-seq", "rna sequencing",
+        "whole-genome", "wgs", "illumina", "atac-seq", "chip-seq", "spatial transcriptom",
+    )
+    evidence = " ".join(str(item) for item in stored_evidence).casefold()
+    omics_evidence_terms = omics_title_terms + (
+        "reads", "fastq", "alignment", "assembly", "library preparation", "omics data",
+        "bioinformatic", "taxonomic profiling", "differential expression",
+    )
+    topic_ageing = any(term in title for term in ageing_terms)
+    topic_bridge = any(term in title for term in bridge_terms)
+    title_core = any(term in title for term in omics_title_terms)
+    evidence_core = any(term in evidence for term in omics_evidence_terms)
+    if not (topic_ageing or topic_bridge):
+        return False
+    if title_core:
+        return True
+    return topic_ageing and evidence_core
+
+
+def legacy_article_is_complete(record: Mapping[str, Any]) -> bool:
+    """Check the structured article fields available in historical state."""
+    article = record.get("article")
+    if not isinstance(article, Mapping):
+        return False
+    prose_fields = (
+        "title_zh", "lead", "background", "research_question", "study_design",
+        "methods", "results", "limitations", "takeaways",
+    )
+    if any(not isinstance(article.get(field), str) or not clean_text(article.get(field)) for field in prose_fields):
+        return False
+    figures = record.get("figures")
+    notes = article.get("figure_notes")
+    if not isinstance(figures, list) or not isinstance(notes, list) or len(figures) != len(notes):
+        return False
+    required_note_fields = ("caption_zh", "what_question", "how_to_read", "interpretation", "evidence", "boundary")
+    for note in notes:
+        if not isinstance(note, Mapping) or any(not clean_text(note.get(field)) for field in required_note_fields):
+            return False
+        panels = note.get("panel_reading")
+        if not isinstance(panels, list) or not panels:
+            return False
+        for panel in panels:
+            if not isinstance(panel, Mapping) or any(not clean_text(panel.get(field)) for field in ("panel", "experiment", "comparison", "result", "statistics")):
                 return False
     return True
 
