@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-25T14:53:04Z",
+  "generated_at": "2026-10-26T01:42:34Z",
   "last_run": {
     "status": "success",
     "selected": 1,
@@ -13,9 +13,9 @@
     "q1_rejected": 1,
     "skipped_without_pmcid": 0,
     "search_error": "",
-    "preserved_articles": 8,
+    "preserved_articles": 0,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-10-25T14:53:04Z"
+    "finished_at": "2026-10-26T01:42:34Z"
   },
   "processed": [
     {
@@ -205,17 +205,30 @@
         "retrieved_at": "2026-10-25T11:08:28Z"
       },
       "journal_display": "Genes & diseases（IF 14.6；JCR SCI Q1）",
-      "updated_at": "2026-10-25T14:49:26Z",
-      "ai_status": "success_retried",
-      "ai_error": "",
+      "updated_at": "2026-10-26T01:40:29Z",
+      "ai_status": "llm_schema_incomplete:title_zh,lead,background,research_question,study_design,methods,results,limitations,takeaways,figure_notes",
+      "ai_error": "llm_schema_incomplete:title_zh,lead,background,research_question,study_design,methods,results,limitations,takeaways,figure_notes",
       "publishable": false,
       "gate_reasons": [
-        "第 7 张图的读图说明过短",
-        "第 7 张图的结果解读过短",
-        "第 8 张图的读图说明过短",
-        "第 8 张图的结果解读过短",
-        "第 9 张图的读图说明过短",
-        "第 9 张图的结果解读过短"
+        "AI 字段缺失：title_zh",
+        "AI 字段缺失：lead",
+        "AI 字段缺失：background",
+        "AI 字段缺失：research_question",
+        "AI 字段缺失：study_design",
+        "AI 字段缺失：methods",
+        "AI 字段缺失：results",
+        "AI 字段缺失：limitations",
+        "AI 字段缺失：takeaways",
+        "AI 字段缺失：figure_notes",
+        "AI 内容过短：lead",
+        "AI 内容过短：background",
+        "AI 内容过短：research_question",
+        "AI 内容过短：study_design",
+        "AI 内容过短：methods",
+        "AI 内容过短：results",
+        "AI 内容过短：limitations",
+        "AI 内容过短：takeaways",
+        "AI 图组解读不是数组"
       ],
       "status": "manual_review"
     }
