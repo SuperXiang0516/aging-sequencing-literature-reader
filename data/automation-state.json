@@ -2235,8 +2235,8 @@
     },
     "doi:10.1016/j.gendis.2026.102382": {
       "status": "manual_review",
-      "attempts": 2,
-      "updated_at": "2026-10-25T13:34:32Z",
+      "attempts": 3,
+      "updated_at": "2026-10-25T14:49:26Z",
       "gate_reasons": [
         "第 7 张图的读图说明过短",
         "第 7 张图的结果解读过短",
@@ -2479,7 +2479,7 @@
       "retrieved_at": "2026-10-25T11:08:28Z"
     }
   },
-  "updated_at": "2026-10-25T13:38:53Z",
+  "updated_at": "2026-10-25T14:53:04Z",
   "last_run": {
     "status": "success",
     "selected": 1,
@@ -2494,6 +2494,6 @@
     "search_error": "",
     "preserved_articles": 8,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-10-25T13:38:53Z"
+    "finished_at": "2026-10-25T14:53:04Z"
   }
 }
