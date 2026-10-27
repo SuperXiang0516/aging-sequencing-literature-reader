@@ -263,7 +263,7 @@
     "doi:10.1016/j.gendis.2026.102382": {
       "status": "manual_review",
       "attempts": 4,
-      "updated_at": "2026-10-26T06:23:04Z",
+      "updated_at": "2026-10-27T06:24:08Z",
       "gate_reasons": [
         "AI 字段缺失：title_zh",
         "AI 字段缺失：lead",
@@ -519,7 +519,7 @@
       "retrieved_at": "2026-10-25T11:08:28Z"
     }
   },
-  "updated_at": "2026-10-26T06:25:11Z",
+  "updated_at": "2026-10-27T06:26:19Z",
   "last_run": {
     "status": "success",
     "selected": 1,
@@ -534,6 +534,6 @@
     "search_error": "",
     "preserved_articles": 0,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-10-26T06:25:11Z"
+    "finished_at": "2026-10-27T06:26:19Z"
   }
 }
