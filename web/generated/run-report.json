@@ -1,23 +1,630 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-27T06:26:19Z",
+  "generated_at": "2026-10-28T07:05:19Z",
   "last_run": {
-    "status": "success",
-    "selected": 1,
-    "published": 0,
-    "candidates": 1,
-    "raw_candidates": 38,
-    "score_rejected": 1,
-    "scope_rejected": 36,
-    "recovery_used": false,
-    "q1_rejected": 1,
+    "status": "fallback_ncbi",
+    "selected": 5,
+    "published": 3,
+    "candidates": 5,
+    "raw_candidates": 79,
+    "score_rejected": 3,
+    "scope_rejected": 72,
+    "recovery_used": true,
+    "q1_rejected": 2,
     "skipped_without_pmcid": 0,
-    "search_error": "",
-    "preserved_articles": 0,
+    "search_error": "Europe PMC HTTP 503: HTTP Error 503:",
+    "preserved_articles": 3,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-10-27T06:26:19Z"
+    "finished_at": "2026-10-28T07:05:19Z"
   },
   "processed": [
+    {
+      "id": "doi:10.1080/0886022x.2026.2704989",
+      "title": "Integrative transcriptomic and single-cell analysis identifies anoikis-related molecular signatures in vascular calcification.",
+      "authors": [
+        "Chen D",
+        "Dai T",
+        "Yu W",
+        "Xie X",
+        "Li R",
+        "Wang Y"
+      ],
+      "journal": "Renal failure",
+      "year": "2026",
+      "doi": "10.1080/0886022x.2026.2704989",
+      "pmcid": "PMC13508498",
+      "pmid": "42634887",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1080/0886022X.2026.2704989",
+        "https://europepmc.org/articles/PMC13508498",
+        "https://europepmc.org/articles/PMC13508498?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 16,
+      "relevance_evidence": [
+        "sequencing: single-cell",
+        "multiomics: transcriptom",
+        "disease_bridge: cardiovascular, kidney disease"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1.",
+          "caption": "Identification of DEGs and DEARGs. (A–B) PCA of GSE146638 (rat CKD-VC) and GSE37558 (human VSMC). (C) Volcano plot of GSE146638 (voom; FDR < 0.05, |log 2 FC| > 1; 153 DEGs). (D) Volcano plot of GSE37558 (690 DEGs). In C–D, the y-axis is − log10(P.Value) for visualization, whereas Up/Down coloring denotes significance defined on FDR (FDR < 0.05 and |log2FC| > 1); vertical dashed lines mark |log2FC| = 1. (E) Venn diagram of human-mapped DEGs intersected with the 529-gene ARG set: 2 DEARGs from GSE146638 and 46 from GSE37558, union = 48, with no common cross-species gene.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0001_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0001_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0001_C.webp",
+          "local_url": "generated/assets/PMC13508498/fig-01.webp",
+          "asset_path": "generated/assets/PMC13508498/fig-01.webp",
+          "asset_bytes": 113552,
+          "asset_sha256": "8ca19f7ce9bfed43933083b12bf99134e7b89e1c4b3a0541a8dc6ce0a9c56cd3",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 2.",
+          "caption": "Functional enrichment of the 48 union DEARGs. (A) GO:BP dot plot (top terms: regulation of smooth muscle cell proliferation, wound healing, apoptotic signaling). (B–C) GO MF/CC dot plots. (D) KEGG dot plot. (E–F) GSEA GO:BP and KEGG dot plots from the full GSE37558 transcriptome (441 GO and 39 KEGG terms significant).",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0002_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0002_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0002_C.webp",
+          "local_url": "generated/assets/PMC13508498/fig-02.webp",
+          "asset_path": "generated/assets/PMC13508498/fig-02.webp",
+          "asset_bytes": 101788,
+          "asset_sha256": "18d1d750b1d32e1947cfb41d54d9bf9592ebab64921b6a2c9593bb1acd13279a",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 3.",
+          "caption": "Pathway analysis in GSE37558. (A) GSVA heatmap of the 15 prioritized KEGG pathways (rows in Title case, KEGG_ prefix removed; columns ordered and annotated by group). Cell Adhesion Molecules (CAMs) was the only pathway significant after FDR correction (adjusted p = 0.002) and is marked with an asterisk (*); all other pathways showed nominal trends only (adjusted p ≥ 0.20). The ssGSEA immune-related gene-programme analysis, for which no signature survived FDR correction, is now presented separately in Supplementary Figure S5.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0003_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0003_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0003_C.webp",
+          "local_url": "generated/assets/PMC13508498/fig-03.webp",
+          "asset_path": "generated/assets/PMC13508498/fig-03.webp",
+          "asset_bytes": 54592,
+          "asset_sha256": "98d3cf8b96580faa261867a1d1e6543e22002ab1fa7be51d731505a164c1b863",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 4.",
+          "caption": "Symmetric machine-learning hub-gene selection. (A) LASSO coefficient path. (B) LASSO cross-validation; λ1se. (C) Random forest importance (MDA). (D) Consensus of LASSO, random forest, and SVM-RFE top-10 candidates; seven genes (BDNF, CRYAB, CYP1B1, DAPK1, HAS2, PDGFRB, PLAU) were selected by ≥ 2 of 3 algorithms. The full SVM-RFE ranking is in Supplementary Table S4.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0004_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0004_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0004_C.webp",
+          "local_url": "generated/assets/PMC13508498/fig-04.webp",
+          "asset_path": "generated/assets/PMC13508498/fig-04.webp",
+          "asset_bytes": 66116,
+          "asset_sha256": "b8132d1efacc2a0c5190bd1e1acb43363d89dedda7d1b88d9c082ea8df7a36a3",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 5.",
+          "caption": "Diagnostic model performance. (A) Training ROC ( GSE37558; apparent AUC = 1.000, not interpreted as performance). (B) External validation ROC ( GSE43292; AUC = 0.811, DeLong 95% CI 0.706–0.915). (C) Single-gene validation ROC curves. (D) Hub-gene expression boxplots.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0005_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0005_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0005_C.webp",
+          "local_url": "generated/assets/PMC13508498/fig-05.webp",
+          "asset_path": "generated/assets/PMC13508498/fig-05.webp",
+          "asset_bytes": 67548,
+          "asset_sha256": "ad89c530ff3c791bf9ae7919d38f6bb679a0ae3f90677bffb1524ea8457aa3f9",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 6.",
+          "caption": "Hub gene–immune-related gene-programme correlation heatmap (Spearman; GSE37558 ). Non-significant correlations ( p ≥ 0.05) are masked in grey; significant cells are annotated with asterisks (* p < 0.05, ** p < 0.01).",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0006_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0006_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0006_C.webp",
+          "local_url": "generated/assets/PMC13508498/fig-06.webp",
+          "asset_path": "generated/assets/PMC13508498/fig-06.webp",
+          "asset_bytes": 37566,
+          "asset_sha256": "1c739b40d1f71cc6c5b56ee4c18244116acbc15710aab2d8d893504f0a972db7",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 7.",
+          "caption": "Protein–protein interaction (PPI) network of the 48 union DEARGs (STRING v12.0, confidence ≥ 0.400). Nodes are labeled with gene symbols; the seven consensus hub genes (BDNF, CRYAB, CYP1B1, DAPK1, HAS2, PDGFRB, PLAU) are highlighted in red and enlarged, while the remaining DEARGs are shaded grey by connectivity (node size scales with degree). The network comprises 46 nodes and 224 edges; the two isolated nodes CRYAB and LMO3, which had no medium-confidence interactions, were excluded from the displayed network. PDGFRB connects to FN1 and ITGAV within the network.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0007_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0007_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0007_C.webp",
+          "local_url": "generated/assets/PMC13508498/fig-07.webp",
+          "asset_path": "generated/assets/PMC13508498/fig-07.webp",
+          "asset_bytes": 77928,
+          "asset_sha256": "76a07e726569b6ff537bb8b5f719655b3bb3b5b471d102601d784d9aa5408ce0",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 8.",
+          "caption": "Single-cell contextualization in GSE159677. (A) UMAP of 47,861 cells annotated into 18 cell types (labels placed with repelled boxes). (B–E) FeaturePlots of representative hub genes (CRYAB, PDGFRB, PLAU, CYP1B1). (F) DotPlot of all seven hub genes across cell types; PDGFRB highest in VSMCs/fibroblasts and lost in modulated VSMCs and osteoblast-like cells. (G) Violin plots of the anoikis module score by cell type. (H) Mean anoikis module score per cell type; highest in osteoblast-like, fibroblast, mesothelial and macrophage populations, with comparatively low scores in modulated VSMCs.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0008_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0008_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0008_C.webp",
+          "local_url": "generated/assets/PMC13508498/fig-08.webp",
+          "asset_path": "generated/assets/PMC13508498/fig-08.webp",
+          "asset_bytes": 142814,
+          "asset_sha256": "9938c419794a51fbf81473883ef8afa691f6c157c2db6d0bca844a0e123da56a",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary file 1",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13508498/bin/IRNF_A_2704989_SM0186.docx",
+          "description": "Supplementary Material.docx"
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "3.8",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-28T06:55:08Z"
+      },
+      "journal_display": "Renal failure（IF 3.8；JCR SCI Q1）",
+      "updated_at": "2026-10-28T06:55:11Z",
+      "ai_status": "success_retried",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    },
+    {
+      "id": "doi:10.1080/0886022x.2026.2707003",
+      "title": "Integrative multi-omics analysis identifies VCAN and ESM1 as candidate cell-type-associated biomarkers of NET-related glomerular injury in diabetic kidney disease.",
+      "authors": [
+        "Liang Y",
+        "Li C",
+        "Huang B",
+        "Wang A",
+        "Qiu M",
+        "Lu J",
+        "Wan J"
+      ],
+      "journal": "Renal failure",
+      "year": "2026",
+      "doi": "10.1080/0886022x.2026.2707003",
+      "pmcid": "PMC13455701",
+      "pmid": "42563361",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1080/0886022X.2026.2707003",
+        "https://europepmc.org/articles/PMC13455701",
+        "https://europepmc.org/articles/PMC13455701?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 16,
+      "relevance_evidence": [
+        "sequencing: rna sequencing, single-cell",
+        "multiomics: multi-omics, transcriptom",
+        "disease_bridge: diabetic, kidney disease"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1.",
+          "caption": "Integrated bioinformatics analysis identifies VCAN and ESM1 as core feature genes. (A) Volcano plot of 115 DEGs between DKD and controls. (B) GO enrichment analysis of the 115 DEGs. (C) KEGG pathway enrichment analysis. (D) WGCNA module-trait relationship heatmap. (E) Gene dendrogram with module assignments. (F) Venn diagram of DEGs and brown module genes. (G) LASSO regression coefficient profiles. (H) Random forest feature importance. (I) Venn diagram of LASSO and random forest outputs. (J) Venn diagram showing the overlap between the candidate genes identified in (I) and NET-related genes. DEGs: differentially expressed genes; GO: Gene Ontology; KEGG: Kyoto Encyclopedia of Genes and Genomes; WGCNA: weighted gene co-expression network analysis; LASSO: Least Absolute Shrinkage and Selection Operator.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0001_C.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0001_C.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0001_C.jpg",
+          "local_url": "generated/assets/PMC13455701/fig-01.jpg",
+          "asset_path": "generated/assets/PMC13455701/fig-01.jpg",
+          "asset_bytes": 96816,
+          "asset_sha256": "158c6c5891c1e2fb4eed628a0ab9c2efaeffd4cb51b266e162c03b3154bc4692",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 2.",
+          "caption": "Single-cell atlas reveals NETs activation and cell type-specific expression of VCAN and ESM1 in DKD. (A,B) UMAP visualization (A) and marker gene expression (B) of 11 renal cell clusters from control and early DKD samples ( n = 19,897 cells). (C) Dot plots showing the downregulation of ESM1 in endothelial cells (ENDO), and the upregulation of VCAN in mesangial cells (MES), but its downregulation in CFH-positive parietal epithelial cells (CFH + PECs) in DKD. (D) UMAP projection of NETs activity scores. (E,F) KEGG pathway analysis of upregulated genes in DKD endothelial cells (E) and CFH + PECs (F). (G,H) GSEA of NETs-related signatures in endothelial cells (G) versus CFH + PECs (H). (I,J) Feature plots validating the co-localization of VCAN with CFH (I) and ESM1 with EGFL7 (J). UMAP: Uniform Manifold Approximation and Projection; ENDO: endothelial cells; MES: mesangial cells; PECs: parietal epithelial cells; GSEA: Gene Set Enrichment Analysis.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0002_C.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0002_C.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0002_C.jpg",
+          "local_url": "generated/assets/PMC13455701/fig-02.jpg",
+          "asset_path": "generated/assets/PMC13455701/fig-02.jpg",
+          "asset_bytes": 118592,
+          "asset_sha256": "79985809f3b24bf7a4ff05968f50353455a87d8524c1b38b4808748d74d22b94",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 3.",
+          "caption": "Subcluster heterogeneity and pseudotime trajectory analysis of VCAN and ESM1. (A) UMAP plot of CFH+PEC subclusters. (B) Density plot showing VCAN expression in CFH+PEC cells. (C) Pseudotime trajectory of CFH+PEC cells colored by pseudotime. (D) Heatmap showing dynamic gene expression patterns along pseudotime with associated biological processes. (E) VCAN relative expression along pseudotime. (F) Pseudotime dynamics of fibrosis and inflammation signature scores in CFH+PEC cells. (G) UMAP plot of ENDO subclusters. (H) Density plot showing ESM1 expression in ENDO cells. (I) Pseudotime trajectory of ENDO cells colored by pseudotime. (J) Heatmap showing dynamic gene expression patterns along pseudotime with associated biological processes. (K) ESM1 relative expression along pseudotime. (L) Pseudotime dynamics of fibrosis and inflammation signature scores in ENDO cells.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0003_C.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0003_C.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0003_C.jpg",
+          "local_url": "generated/assets/PMC13455701/fig-03.jpg",
+          "asset_path": "generated/assets/PMC13455701/fig-03.jpg",
+          "asset_bytes": 79003,
+          "asset_sha256": "9b630f0791a9ccd7e462b3fb58c30cb0c14a15bd76850c09f39c327b3aa9a5bd",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 4.",
+          "caption": "Inferring intercellular communication networks in DKD glomeruli. (A) Circle plots showing the number and strength of inferred interactions among cell types in Control and DKD groups. (B) Scatter plot identifying key sender and receiver populations based on dominant incoming and outgoing signaling patterns. (C–D) Bubble plots showing the up-regulated (left) and down-regulated (right) signaling ligand-receptor pairs in DKD. The x-axis includes both Control and DKD samples to provide a direct visual comparison of the communication probabilities (indicated by dot color) for the same ligand-receptor pair (y-axis) between the two groups. (E) Network plots of the Collagen (COL) signaling pathway, highlighting mesangial cells and CFH + PECs as primary senders driving matrix remodeling. (F) Network plots of additional stress response pathways (e.g., APP).",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0004_C.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0004_C.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0004_C.jpg",
+          "local_url": "generated/assets/PMC13455701/fig-04.jpg",
+          "asset_path": "generated/assets/PMC13455701/fig-04.jpg",
+          "asset_bytes": 94433,
+          "asset_sha256": "f0cffe543c1a3415b3ac932f8c9196c206b8c19b1ac2cb01ce339fb22bed36fa",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 5.",
+          "caption": "Validation of ESM1 and VCAN expression, diagnostic value, and clinical correlations. (A–B) Differential expression (boxplots) and diagnostic performance (ROC curves) of ESM1 in the training cohort (merged GSE30528 and GSE96804 ) (A) and the independent external validation cohort ( GSE142025 ) (B). (C) Validation of ESM1 expression in the Nephroseq database and its correlation with eGFR. (D–E) Differential expression (boxplots) and ROC curves of VCAN in the training cohort (D) and the external validation cohort (E). (F) Validation of VCAN expression in the Nephroseq database and its correlation with eGFR. (G) Diagnostic performance (ROC curve) of the combined ESM1 and VCAN model. (H) Expression levels of ESM1 (left) and VCAN (right) in human glomerular endothelial cells co-cultured with podocytes under high glucose conditions for 48h and 96h ( GSE220227 ). (I) Expression levels of ESM1 (left) and VCAN (right) in podocytes from the high-glucose co-culture model for 48h and 96h ( GSE220228 ). (J) Correlation analysis between ESM1 expression and the relative abundance of 22 immune cell types. (K) Correlation analysis between VCAN expression and the relative abundance of 22 immune cell types. Data in (H) and (I) are presented as mean ± SD. * p < 0.05, ** p < 0.01, ns: not significant. ROC: receiver operating characteristic; AUC: area under the curve; eGFR: estimated glomerular filtration rate.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0005_C.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0005_C.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0005_C.jpg",
+          "local_url": "generated/assets/PMC13455701/fig-05.jpg",
+          "asset_path": "generated/assets/PMC13455701/fig-05.jpg",
+          "asset_bytes": 94906,
+          "asset_sha256": "4df0355a8c9a1b0f001de983dbb208cd901fcbc1c11e48c7d229d1e61bc5994a",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 6.",
+          "caption": "In vivo validation in db/db diabetic mice and molecular docking predictions. (A) qRT-PCR analysis of VCAN and ESM1 mRNA expression in kidney tissues from control (CTRL) and DKD mice. (B) Analysis of serum ESM1 protein levels (left) and the Pearson correlation analysis between serum ESM1 concentration and urinary albumin-to-creatinine ratio (ACR) (right). (C) Pearson correlation analysis between serum ESM1 concentration and NETs expression (mean OD450). (D) Representative immunohistochemistry (IHC) staining images and quantitative analysis of MPO, CitH3, VCAN, and ESM1 in kidney tissues from CTRL and DKD groups. Scale bar: 60 μm. (E) Molecular docking visualization showing the binding mode of ZINC005331 with the target protein, highlighting the 3D structure and key interacting residues (ARG-305, THR-324, TYR-326, HIS-153). (F) Molecular docking visualization showing the binding mode of ZINC171091 with the target protein, depicting hydrogen bond interactions with GLN-118 and SER-119. Data are presented as mean ± SEM. * p < 0.05, ** p < 0.01, *** p < 0.001, **** p < 0.0001. qRT-PCR: quantitative real-time polymerase chain reaction; ACR: albumin-to-creatinine ratio; MPO: myeloperoxidase; CitH3: citrullinated histone H3.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0006_C.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0006_C.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0006_C.jpg",
+          "local_url": "generated/assets/PMC13455701/fig-06.jpg",
+          "asset_path": "generated/assets/PMC13455701/fig-06.jpg",
+          "asset_bytes": 139085,
+          "asset_sha256": "824acd5df0e24e298d7d305777bcde8dd63c45d0b0809cf66f47a2f42fee10bd",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary file 1",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13455701/bin/IRNF_A_2707003_SM9749.docx",
+          "description": "Supplementary_Material.docx"
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "3.8",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-28T06:55:08Z"
+      },
+      "journal_display": "Renal failure（IF 3.8；JCR SCI Q1）",
+      "updated_at": "2026-10-28T06:56:27Z",
+      "ai_status": "success_retried",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    },
+    {
+      "id": "doi:10.1016/j.gendis.2026.102167",
+      "title": "Single-cell sequencing-guided discovery of narciclasine as a dual VCAM-1/ICAM-1 inhibitor for atherosclerosis management.",
+      "authors": [
+        "Wang Y",
+        "Cao Z",
+        "Lan H",
+        "Li B",
+        "Wang G",
+        "Chen Q"
+      ],
+      "journal": "Genes & diseases",
+      "year": "2027",
+      "doi": "10.1016/j.gendis.2026.102167",
+      "pmcid": "PMC13589088",
+      "pmid": "42763524",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1016/j.gendis.2026.102167",
+        "https://europepmc.org/articles/PMC13589088",
+        "https://europepmc.org/articles/PMC13589088?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 12,
+      "relevance_evidence": [
+        "sequencing: rna sequencing, single-cell",
+        "disease_bridge: cardiovascular"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1",
+          "caption": "Cell subpopulations in human carotid artery AS plaques and adjacent regions via scRNA-seq. (A) t-SNE plot showing 21 distinct cell clusters. (B) t-SNE plot depicting cell types enriched with specific marker genes. (C) Heatmap displaying the top 10 genes for each of the 21 cell clusters. (D) Bubble plot showing the expression of characteristic genes within each cell cluster.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr1.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr1.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr1.webp",
+          "local_url": "generated/assets/PMC13589088/fig-01.webp",
+          "asset_path": "generated/assets/PMC13589088/fig-01.webp",
+          "asset_bytes": 243242,
+          "asset_sha256": "4fb4387cb900b2d8cd612b22baa21ea5a0ed5c77a97ec6550ac8ed5fe3a3c3c8",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 2",
+          "caption": "Cellular communication in adjacent and AS plaque regions. (A) Total number and intensity of interactions among different cell types in AS plaques and adjacent regions. (B) Network diagram illustrating changes in cell interactions between the AS plaque and adjacent regions. Red indicates an increase in the number or intensity of interactions, whereas blue indicates a decrease. (C) Heatmap of alterations in cell interactions between AS plaques and adjacent regions. (D) Enrichment analysis of ligand–receptor interactions at the signaling pathway level among various cell types in AS plaques and adjacent regions. (E) Overview of ligand–receptor interactions between macrophages and other cells in atherosclerotic plaque regions. ∗∗p < 0.01.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr2.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr2.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr2.webp",
+          "local_url": "generated/assets/PMC13589088/fig-02.webp",
+          "asset_path": "generated/assets/PMC13589088/fig-02.webp",
+          "asset_bytes": 257384,
+          "asset_sha256": "011c420a7b73b3bc00e67f8e6fad7dfa5395c26d86f61485bf25e853e8b10375",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 3",
+          "caption": "DEGs in VSMCs, VECs, T cells, and macrophages in atherosclerotic plaque regions compared with adjacent regions. (A) GO molecular function and KEGG signaling pathway enrichment of upregulated genes in VECs in the atherosclerotic plaque region. (B) GO molecular function and KEGG signaling pathway enrichment of upregulated genes in VSMCs in the atherosclerotic plaque region. (C) GO molecular function and KEGG signaling pathway enrichment of upregulated genes in macrophages in the atherosclerotic plaque region. (D) GO molecular function and KEGG signaling pathway enrichment of upregulated genes in T cells in the atherosclerotic plaque region. (E) Venn diagram of upregulated genes in VECs, VSMCs, macrophages, and T cells within the atherosclerotic plaque region. (F) PPI analysis of coupregulated genes in VECs, VSMCs, macrophages, and T cells within the atherosclerotic plaque region.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr3.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr3.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr3.webp",
+          "local_url": "generated/assets/PMC13589088/fig-03.webp",
+          "asset_path": "generated/assets/PMC13589088/fig-03.webp",
+          "asset_bytes": 308908,
+          "asset_sha256": "2939d12b72f812f6c4d79b6b7fce04dc2b148e7177bdddbeda51f5d96dc030af",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 4",
+          "caption": "Functional analysis of narciclasine targets. (A) Regulatory network of narciclasine targets. The colored circles represent signaling pathways or biological processes, and the associated signaling pathways or biological processes share the same color. The lines connected to circles of the same color represent the differentially expressed genes of that signaling pathway. (B) MCODE clustering analysis of narciclasine drug targets on the basis of network topology.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr4.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr4.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr4.webp",
+          "local_url": "generated/assets/PMC13589088/fig-04.webp",
+          "asset_path": "generated/assets/PMC13589088/fig-04.webp",
+          "asset_bytes": 395398,
+          "asset_sha256": "f6cc77d36c01dd855afc70e6b2ac6736c0ecf5a2db9ec6f8f803beda569fcc47",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 5",
+          "caption": "Network pharmacology analysis of the key anti-AS targets of narciclasine. (A) Venn diagram of AS-related targets collected from the DrugBank, DisGeNET, GeneCards, OMIM, and TTD databases. (B) Overlapping genes among narciclasine targets, AS targets, and genes upregulated in AS plaques. (C) Network pharmacology map showing interactions among genes and signaling pathways. The purple rectangles represent signaling pathways; the green octagons represent common genes across all three categories; the blue ellipses indicate overlapping genes between narciclasine targets and highly expressed genes in AS plaque regions; and the light khaki quadrilaterals represent overlapping genes between narciclasine targets and AS targets.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr5.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr5.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr5.webp",
+          "local_url": "generated/assets/PMC13589088/fig-05.webp",
+          "asset_path": "generated/assets/PMC13589088/fig-05.webp",
+          "asset_bytes": 197170,
+          "asset_sha256": "e2710094e213d832bf03585b0e56195a7026a3cc6ff34802b850b648baa162a8",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 6",
+          "caption": "Molecular docking, MDS, and SPR confirmed VCAM-1 and ICAM-1 as targets of narciclasine. (A) Molecular docking models of narciclasine binding to the VCAM-1 protein. (B) Molecular docking models of narciclasine binding to the ICAM-1 protein. (C) RMSD analysis assessing the conformational stability of the ICAM-1–narciclasine and VCAM-1-narciclasine complexes. (D) Rg analysis evaluating overall structural changes and protein compactness. (E) SASA analysis of the interactions between target proteins and narciclasine. (F) Hydrogen bond network analysis of both the ICAM-1-narciclasine and VCAM-1-narciclasine complexes. (G,H) RMSF analysis of amino acid residue flexibility in the ICAM-1-narciclasine and VCAM-1-narciclasine complexes. (I) Schematic diagram illustrating the SPR setup. (J,K) Sensograms of VCAM-1 and ICAM-1 expression in response to narciclasine (0.15–10 μM) at 25 °C. (L) Equilibrium binding analysis of ICAM-1-narciclasine and VCAM-1-narciclasine interactions.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr6.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr6.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr6.webp",
+          "local_url": "generated/assets/PMC13589088/fig-06.webp",
+          "asset_path": "generated/assets/PMC13589088/fig-06.webp",
+          "asset_bytes": 186270,
+          "asset_sha256": "abb61f24b7dd31b86f4b376cbcca6da2bda514a2448997de002606a8f86234d3",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 7",
+          "caption": "Narciclasine alleviated vascular injury by inhibiting VCAM-1/ICAM-1 in vitro. (A) Phase contrast images showing HUVEC tube formation in the control, ox-LDL-treated, and narciclasine-treated ox-LDL groups. (B) Semiquantification analysis of capillary length in the three groups (ANOVA test, n = 5, ∗∗∗p = 5.42 × 10 −8. Mean ± SD, control: 63.96 ± 5.06, ox-LDL: 12.52 ± 1.85; ox-LDL + narciclasine: 57.90 ± 4.84). (C) Relative gene expression levels of ICAM-1(ANOVA test, n = 4, ∗∗∗ p = 3.5 × 10 −10. Mean ± SD, control: 1 ± 0.04, ox-LDL: 2.58 ± 0.15; ox-LDL + narciclasine: 0.63 ± 0.02) and VCAM-1 (ANOVA test, n = 4, ∗∗∗ p = 2.55 × 10 −9. Mean ± SD, control: 1 ± 0.04, ox-LDL: 2.28 ± 0.14; ox-LDL + narciclasine: 0.73 ± 0.04) in HUVECs in the three groups. (D) Immunofluorescence costaining images of ICAM-1 and VCAM-1. (E,F) Semiquantification analysis of the immunofluorescence intensity of ICAM-1 (ANOVA test, n = 6, ∗∗∗p = 0.0036. Mean ± SD, control: 11.14 ± 0.55, ox-LDL: 55.89 ± 2.01; ox-LDL + narciclasine: 13.59 ± 0.74) and VCAM-1 (ANOVA test, n = 6, ∗∗∗ p = 0.0024. Mean ± SD, control: 4.61 ± 0.27, ox-LDL: 34.56 ± 2.63; ox-LDL + narciclasine: 5.78 ± 0.15).",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr7.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr7.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr7.webp",
+          "local_url": "generated/assets/PMC13589088/fig-07.webp",
+          "asset_path": "generated/assets/PMC13589088/fig-07.webp",
+          "asset_bytes": 135920,
+          "asset_sha256": "29004c7b24e95bdc2fcfcfe04137f470838e145e0a242b9f1298acdfed42900e",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 8",
+          "caption": "Narciclasine alleviated AS progression by targeting VCAM-1/ICAM-1 in vivo. (A) Oil Red O stained images of whole aortas from control, PBS-treated, and narciclasine-treated ApoE −/− mice. (B) Semi-quantification analysis of the atherosclerotic plaque areas (ANOVA test, n = 4, ∗∗ p = 0.0004. Mean ± SD, control: 3.2 ± 0.54, PBS: 12.27 ± 1.02; narciclasine: 5.16 ± 0.66). (C) HE images of aortic root sections from control, PBS-treated, and narciclasine-treated mice. (D) Oil red O images of aortic root sections from control, PBS-treated, and narciclasine-treated mice. (E) Semiquantification of the necrotic core areas (ANOVA test, n = 4, ∗∗∗ p = 0.0002. Mean ± SD, control: 0.0049 ± 0.0004, PBS: 0.52 ± 0.015; narciclasine: 0.033 ± 0.0036). (F) Semiquantification of the oil red O area of lipid-rich areas in aortic root sections (ANOVA test, n = 4, ∗∗ p = 0.0015. Mean ± SD, control: 0.64 ± 0.114, PBS: 2.74 ± 0.108; narciclasine: 1.84 ± 0.103). (G) Relative gene expression levels of VCAM-1 (ANOVA test, n = 4, ∗∗∗ p = 0.001. Mean ± SD, control: 1 ± 0.05, PBS: 3.42 ± 0.17; narciclasine: 1.25 ± 0.03) and ICAM-1 across the three groups (ANOVA test, n = 4, ∗∗∗ p = 0.001. Mean ± SD, control: 1 ± 0.04, PBS: 2.84 ± 0.16; narciclasine: 1.18 ± 0.03). (H,I) Immunohistochemistry images of VCAM-1 and ICAM-1 in the aortic roots. (J,K) Semiquantification of VCAM-1 (ANOVA test, n = 5, ∗∗ p = 0.001. Mean ± SD, control: 4.47 ± 0.075, PBS: 4.56 ± 0.074; narciclasine: 2.72 ± 0.087) and ICAM-1 (ANOVA test, n = 4, ∗∗ p = 0.0066. Mean ± SD, control: 3.79 ± 0.173, PBS: 3.73 ± 0.11; narciclasine: 2.54 ± 0.108) protein expression in the aortic root.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr8.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr8.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr8.webp",
+          "local_url": "generated/assets/PMC13589088/fig-08.webp",
+          "asset_path": "generated/assets/PMC13589088/fig-08.webp",
+          "asset_bytes": 369822,
+          "asset_sha256": "ffff58f60b36cb123d8ed23a01b8a887736cd1c7b643c8fc8ef7f8b2aeb64cf2",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary file 1",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13589088/bin/mmc1.doc",
+          "description": "Multimedia component 1"
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "14.6",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-25T11:08:28Z"
+      },
+      "journal_display": "Genes & diseases（IF 14.6；JCR SCI Q1）",
+      "updated_at": "2026-10-28T06:57:51Z",
+      "ai_status": "success_retried_gate_repair",
+      "ai_error": "",
+      "publishable": false,
+      "gate_reasons": [
+        "第 4 张图的结果解读过短"
+      ],
+      "status": "manual_review"
+    },
+    {
+      "id": "doi:10.1080/19490976.2026.2728329",
+      "title": "Gut microbiota dysbiosis shapes brain T-cell immunity in accelerated aging.",
+      "authors": [
+        "Peschke L",
+        "Nguyen TT",
+        "Leite JA",
+        "Falony G",
+        "Nguyen VTT",
+        "Kattimani Y",
+        "Ramphal N",
+        "Jasser R",
+        "Bos NN",
+        "Regen T",
+        "Tüscher O",
+        "Waisman A",
+        "Vieira-Silva S",
+        "Endres K"
+      ],
+      "journal": "Gut microbes",
+      "year": "2026",
+      "doi": "10.1080/19490976.2026.2728329",
+      "pmcid": "PMC13596893",
+      "pmid": "42750596",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1080/19490976.2026.2728329",
+        "https://europepmc.org/articles/PMC13596893",
+        "https://europepmc.org/articles/PMC13596893?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 10,
+      "relevance_evidence": [
+        "aging: aging, senescence, age-related",
+        "multiomics: transcriptom"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1.",
+          "caption": "Phenotypic characterization of accelerated aging in SAMP8 mice compared with SAMR1 mice. A, Grip strength of SAMP8 and age-matched SAMR1 mice at 3, 5, 7, and 10 months of age. Grip strength was measured using a Newton meter and normalized to body weight (gramforce/weight). Data are presented as mean ± SEM. Statistical analyses were performed using Brown–Forsythe and Welch ANOVA followed by Dunnett's T3 multiple-comparisons test ( N = 336; n = 36–52, male and female for SAMR1 and SAMP8). B, Spatial working memory assessed by the T-maze test in 10-month-old SAMP8 and SAMR1 mice. Data are presented as the percentage of right choice (mean ± SEM). Statistical analyses were performed using an unpaired two-tailed Mann‒Whitney U test ( N = 17; n = 8 [3 males, 5 females] for SAMR1; n = 9 [4 males, 5 females] for SAMP8). C, Representative transcriptomic analysis of prefrontal cortex genes in male 3- and 10-month-old SAMP8 mice, presented as fold change relative to age-matched SAMR1 mice ( n = 4 animals per age, genotype). Differentially expressed genes were identified using the DESeq2 package and a BH-adjusted P value < 0.01. Exact P values and sample sizes are provided in Supplementary Table S01. *, P < 0.05; **, P < 0.01; ***, P < 0.001. Abbreviation: mo, months.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0001_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0001_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0001_C.webp",
+          "local_url": "generated/assets/PMC13596893/fig-01.webp",
+          "asset_path": "generated/assets/PMC13596893/fig-01.webp",
+          "asset_bytes": 73048,
+          "asset_sha256": "d86dbe2651f8587f433abbc7102f3b4c0c29d1a0ef329b54fcba89cc1fc122fd",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 2.",
+          "caption": "Culture-based view of fecal microbiota composition in SAMR1 and SAMP8 mice at different ages. Fecal pellets were collected at 3, 5, 7, and 10 months of age ( N = 335; n = 27–52, male and female for SAMR1 and SAMP8), plated on selective media, and quantified as colony-forming units (CFUs) per mg of feces. CFUs grown on selective agar for Lactobacillaceae (A), on Schaedler agar (B), and on agar selective for Enterobacteriaceae (C). Statistical analysis was performed by Kruskal–Wallis test followed by Dunn's multiple comparisons test (Supplementary Table S02); *, P < 0.05; **, P < 0.01; ***, P < 0.001). Abbreviations: mo, months.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0002_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0002_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0002_C.webp",
+          "local_url": "generated/assets/PMC13596893/fig-02.webp",
+          "asset_path": "generated/assets/PMC13596893/fig-02.webp",
+          "asset_bytes": 52366,
+          "asset_sha256": "43dea912987033f02041439723b20a9776968e5c80777025c0aa7b422cf34142",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 3.",
+          "caption": "Age- and strain-related differences in gut microbiota diversity and composition as revealed by 16S rRNA sequencing. A, Principal coordinates analysis of inter-individual differences (genus-level Bray–Curtis dissimilarity) in the microbiota profiles of SAMP8 and SAMR1 mice ( n = 4 per sex, per genotype, per age). Ellipses represent 95% confidence intervals around the group centroids. B, Explanatory power of variables on variation in microbial composition in SAMP8 and SAMR1 mice (dbRDA, genus-level Bray‒Curtis dissimilarity), either independently (single effect sizes in black, statistical significance indicated by asterisks) or in a multivariable model (cumulative effect sizes in gray; Supplementary Table S04). The cutoff for nonsignificant redundant contribution to the multivariable model is represented by the red dashed line. C, Strain-dependent differences in microbial diversity ( n = 8 per genotype, per age; Kruskal‒Wallis, χ 2 = 11.37, P adj = 0.0099; Supplementary Table S05). D, Strain- and age-dependent differences in relative abundances (square root transformed) at genus level are shown only for genera that showed significant differences between SAMP8 and age-matched SAMR1 for at least one age stage ( n = 8 per genotype, per age; Kruskal‒Wallis ( α = 0.1), post hoc Dunn's test, statistical significance was derived from two-sided testing and adjusted for multiple testing ( P adj, BH method); Supplementary Table S05). Trends observed for most taxa were consistent in both sexes (Supplementary Figure S01; Supplementary Table S06). *, P < 0.05; **, P < 0.01; ***, P < 0.001.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0003_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0003_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0003_C.webp",
+          "local_url": "generated/assets/PMC13596893/fig-03.webp",
+          "asset_path": "generated/assets/PMC13596893/fig-03.webp",
+          "asset_bytes": 144752,
+          "asset_sha256": "fb0e2ea3eda19b933eed77b3463450fc1535318e98e3efc10d3feb3ce0430a8f",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 4.",
+          "caption": "Differences in brain T-cell composition in accelerated aging. A, Principal component analysis (PCA) of interindividual differences in brain T-cell composition in SAMR1 and SAMP8 mice ( N = 31; n = 8 young SAMR1, n = 8 aged SAMR1, n = 8 young SAMP8, n = 7 aged SAMP8; one sample was removed during FACS analysis). PCA was performed on scaled immune cell frequencies. B, Explanatory power of variables on variation in brain T-cell composition in SAMP8 and SAMR1 mice ( N = 31; RDA, scaled immune cell frequencies, Euclidian distance; Supplementary Table S07), either independently (single effect sizes in black, statistical significance indicated by asterisks) or in a multivariable model (cumulative effect sizes in gray). The cutoff for nonsignificant redundant contribution to the multivariable model is represented by the red dashed line. C-F, Strain- and age-dependent differences in immune cell frequencies and ratios in the brain including CD4⁺ and CD8⁺ T cells and ratio (C), pro-inflammatory cytokine-producing T-cell subsets (D,E), and Tregs (F). Ratios are presented on a log10 scale for visualization. Statistical analyses were performed on non-transformed data ( N = 31; Kruskal‒Wallis, post hoc Dunn's test; statistical significance was derived from two-sided testing and adjusted for multiple testing (P adj, BH method); Supplementary Table S08). Representative FACS plots are provided in Supplementary Figure S02. *, P < 0.05; **, P < 0.01; ***, P < 0.001.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0004_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0004_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0004_C.webp",
+          "local_url": "generated/assets/PMC13596893/fig-04.webp",
+          "asset_path": "generated/assets/PMC13596893/fig-04.webp",
+          "asset_bytes": 139190,
+          "asset_sha256": "db835aa28a3978159a23149774dd8eee53a1d93843e0fa883271fe334299bb5d",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 5.",
+          "caption": "Microbial features are linked to immune signals. A, Explanatory power of variables on variation in microbial composition in SAMP8 and SAMR1 mice ( N = 31; n = 8 young SAMR1, n = 8 aged SAMR1, n = 8 young SAMP8, n = 7 aged SAMP8; dbRDA, genus-level Bray‒Curtis dissimilarity; Supplementary Table S11), either independently (single effect sizes in black, statistical significance indicated by asterisks) or in a multivariable model (cumulative effect sizes in gray). The cutoff for nonsignificant redundant contribution to the multivariable model is represented by the red dashed line. B, Correlations between immune cell frequencies and microbiota features. Spearman correlations were computed between all immune cell frequencies and ratios and microbiota features that were identified in preceding analysis. The figure shows a selected subset of immune cell populations highlighted in the results, whereas significant correlations involving all immune cells are shown in Supplementary Figure S05. Features are ordered by hierarchical clustering ( N = 31; Spearman correlations; Supplementary Table S12). C, Intestinimonas positively correlates with the CD4⁺/CD8⁺ ratio in the brain ( N = 31; Spearman correlation, ρ = 0.77, P adj < 0.001) but negatively correlates with the CD4⁺/CD8⁺ ratio in the spleen ( ρ = −0.66, P adj = 0.006). Values shown in the plots are square-root transformed for visualization only. Statistical significance for Spearman correlations was derived from two-sided tests using untransformed data and adjusted for multiple testing ( P adj, BH method). *, P < 0.05; **, P < 0.01; ***, P < 0.001.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0005_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0005_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0005_C.webp",
+          "local_url": "generated/assets/PMC13596893/fig-05.webp",
+          "asset_path": "generated/assets/PMC13596893/fig-05.webp",
+          "asset_bytes": 104218,
+          "asset_sha256": "76b408ad9c4d17a4645a8642c65b0a4ea6530a7fd19d1767770095af6afc9ad2",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary file 1",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13596893/bin/KGMI_A_2728329_SM7170.docx",
+          "description": "Supplementary_Material_V4.docx Supplementary_Material_V4.docx"
+        },
+        {
+          "label": "Supplementary file 2",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13596893/bin/KGMI_A_2728329_SM7169.xlsx",
+          "description": "SupplementaryTables_V3.xlsx SupplementaryTables_V3.xlsx"
+        },
+        {
+          "label": "Supplementary file 3",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13596893/bin/KGMI_A_2728329_SM7170.docx",
+          "description": "Supplementary_Material_V4.docx Supplementary_Material_V4.docx"
+        },
+        {
+          "label": "Supplementary file 4",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13596893/bin/KGMI_A_2728329_SM7169.xlsx",
+          "description": "SupplementaryTables_V3.xlsx SupplementaryTables_V3.xlsx"
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "15.3",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-28T06:55:09Z"
+      },
+      "journal_display": "Gut microbes（IF 15.3；JCR SCI Q1）",
+      "updated_at": "2026-10-28T07:01:50Z",
+      "ai_status": "success_retried",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    },
     {
       "id": "doi:10.1016/j.gendis.2026.102382",
       "title": "Glis1 regulates metabolic programming by promoting H3K18 lactylation to alleviate neuronal senescence following spinal cord injury.",
@@ -205,7 +812,7 @@
         "retrieved_at": "2026-10-25T11:08:28Z"
       },
       "journal_display": "Genes & diseases（IF 14.6；JCR SCI Q1）",
-      "updated_at": "2026-10-27T06:24:08Z",
+      "updated_at": "2026-10-28T07:03:15Z",
       "ai_status": "llm_schema_incomplete:title_zh,lead,background,research_question,study_design,methods,results,limitations,takeaways,figure_notes",
       "ai_error": "llm_schema_incomplete:title_zh,lead,background,research_question,study_design,methods,results,limitations,takeaways,figure_notes",
       "publishable": false,

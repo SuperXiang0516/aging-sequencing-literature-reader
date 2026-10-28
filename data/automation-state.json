@@ -1,6 +1,1391 @@
 {
   "schema_version": 1,
-  "records": {},
+  "records": {
+    "doi:10.1080/0886022x.2026.2704989": {
+      "id": "doi:10.1080/0886022x.2026.2704989",
+      "title": "Integrative transcriptomic and single-cell analysis identifies anoikis-related molecular signatures in vascular calcification.",
+      "authors": [
+        "Chen D",
+        "Dai T",
+        "Yu W",
+        "Xie X",
+        "Li R",
+        "Wang Y"
+      ],
+      "journal": "Renal failure",
+      "year": "2026",
+      "doi": "10.1080/0886022x.2026.2704989",
+      "pmcid": "PMC13508498",
+      "pmid": "42634887",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1080/0886022X.2026.2704989",
+        "https://europepmc.org/articles/PMC13508498",
+        "https://europepmc.org/articles/PMC13508498?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 16,
+      "relevance_evidence": [
+        "sequencing: single-cell",
+        "multiomics: transcriptom",
+        "disease_bridge: cardiovascular, kidney disease"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1.",
+          "caption": "Identification of DEGs and DEARGs. (A–B) PCA of GSE146638 (rat CKD-VC) and GSE37558 (human VSMC). (C) Volcano plot of GSE146638 (voom; FDR < 0.05, |log 2 FC| > 1; 153 DEGs). (D) Volcano plot of GSE37558 (690 DEGs). In C–D, the y-axis is − log10(P.Value) for visualization, whereas Up/Down coloring denotes significance defined on FDR (FDR < 0.05 and |log2FC| > 1); vertical dashed lines mark |log2FC| = 1. (E) Venn diagram of human-mapped DEGs intersected with the 529-gene ARG set: 2 DEARGs from GSE146638 and 46 from GSE37558, union = 48, with no common cross-species gene.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0001_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0001_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0001_C.webp",
+          "local_url": "generated/assets/PMC13508498/fig-01.webp",
+          "asset_path": "generated/assets/PMC13508498/fig-01.webp",
+          "asset_bytes": 113552,
+          "asset_sha256": "8ca19f7ce9bfed43933083b12bf99134e7b89e1c4b3a0541a8dc6ce0a9c56cd3",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 2.",
+          "caption": "Functional enrichment of the 48 union DEARGs. (A) GO:BP dot plot (top terms: regulation of smooth muscle cell proliferation, wound healing, apoptotic signaling). (B–C) GO MF/CC dot plots. (D) KEGG dot plot. (E–F) GSEA GO:BP and KEGG dot plots from the full GSE37558 transcriptome (441 GO and 39 KEGG terms significant).",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0002_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0002_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0002_C.webp",
+          "local_url": "generated/assets/PMC13508498/fig-02.webp",
+          "asset_path": "generated/assets/PMC13508498/fig-02.webp",
+          "asset_bytes": 101788,
+          "asset_sha256": "18d1d750b1d32e1947cfb41d54d9bf9592ebab64921b6a2c9593bb1acd13279a",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 3.",
+          "caption": "Pathway analysis in GSE37558. (A) GSVA heatmap of the 15 prioritized KEGG pathways (rows in Title case, KEGG_ prefix removed; columns ordered and annotated by group). Cell Adhesion Molecules (CAMs) was the only pathway significant after FDR correction (adjusted p = 0.002) and is marked with an asterisk (*); all other pathways showed nominal trends only (adjusted p ≥ 0.20). The ssGSEA immune-related gene-programme analysis, for which no signature survived FDR correction, is now presented separately in Supplementary Figure S5.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0003_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0003_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0003_C.webp",
+          "local_url": "generated/assets/PMC13508498/fig-03.webp",
+          "asset_path": "generated/assets/PMC13508498/fig-03.webp",
+          "asset_bytes": 54592,
+          "asset_sha256": "98d3cf8b96580faa261867a1d1e6543e22002ab1fa7be51d731505a164c1b863",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 4.",
+          "caption": "Symmetric machine-learning hub-gene selection. (A) LASSO coefficient path. (B) LASSO cross-validation; λ1se. (C) Random forest importance (MDA). (D) Consensus of LASSO, random forest, and SVM-RFE top-10 candidates; seven genes (BDNF, CRYAB, CYP1B1, DAPK1, HAS2, PDGFRB, PLAU) were selected by ≥ 2 of 3 algorithms. The full SVM-RFE ranking is in Supplementary Table S4.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0004_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0004_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0004_C.webp",
+          "local_url": "generated/assets/PMC13508498/fig-04.webp",
+          "asset_path": "generated/assets/PMC13508498/fig-04.webp",
+          "asset_bytes": 66116,
+          "asset_sha256": "b8132d1efacc2a0c5190bd1e1acb43363d89dedda7d1b88d9c082ea8df7a36a3",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 5.",
+          "caption": "Diagnostic model performance. (A) Training ROC ( GSE37558; apparent AUC = 1.000, not interpreted as performance). (B) External validation ROC ( GSE43292; AUC = 0.811, DeLong 95% CI 0.706–0.915). (C) Single-gene validation ROC curves. (D) Hub-gene expression boxplots.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0005_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0005_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0005_C.webp",
+          "local_url": "generated/assets/PMC13508498/fig-05.webp",
+          "asset_path": "generated/assets/PMC13508498/fig-05.webp",
+          "asset_bytes": 67548,
+          "asset_sha256": "ad89c530ff3c791bf9ae7919d38f6bb679a0ae3f90677bffb1524ea8457aa3f9",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 6.",
+          "caption": "Hub gene–immune-related gene-programme correlation heatmap (Spearman; GSE37558 ). Non-significant correlations ( p ≥ 0.05) are masked in grey; significant cells are annotated with asterisks (* p < 0.05, ** p < 0.01).",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0006_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0006_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0006_C.webp",
+          "local_url": "generated/assets/PMC13508498/fig-06.webp",
+          "asset_path": "generated/assets/PMC13508498/fig-06.webp",
+          "asset_bytes": 37566,
+          "asset_sha256": "1c739b40d1f71cc6c5b56ee4c18244116acbc15710aab2d8d893504f0a972db7",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 7.",
+          "caption": "Protein–protein interaction (PPI) network of the 48 union DEARGs (STRING v12.0, confidence ≥ 0.400). Nodes are labeled with gene symbols; the seven consensus hub genes (BDNF, CRYAB, CYP1B1, DAPK1, HAS2, PDGFRB, PLAU) are highlighted in red and enlarged, while the remaining DEARGs are shaded grey by connectivity (node size scales with degree). The network comprises 46 nodes and 224 edges; the two isolated nodes CRYAB and LMO3, which had no medium-confidence interactions, were excluded from the displayed network. PDGFRB connects to FN1 and ITGAV within the network.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0007_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0007_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0007_C.webp",
+          "local_url": "generated/assets/PMC13508498/fig-07.webp",
+          "asset_path": "generated/assets/PMC13508498/fig-07.webp",
+          "asset_bytes": 77928,
+          "asset_sha256": "76a07e726569b6ff537bb8b5f719655b3bb3b5b471d102601d784d9aa5408ce0",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 8.",
+          "caption": "Single-cell contextualization in GSE159677. (A) UMAP of 47,861 cells annotated into 18 cell types (labels placed with repelled boxes). (B–E) FeaturePlots of representative hub genes (CRYAB, PDGFRB, PLAU, CYP1B1). (F) DotPlot of all seven hub genes across cell types; PDGFRB highest in VSMCs/fibroblasts and lost in modulated VSMCs and osteoblast-like cells. (G) Violin plots of the anoikis module score by cell type. (H) Mean anoikis module score per cell type; highest in osteoblast-like, fibroblast, mesothelial and macrophage populations, with comparatively low scores in modulated VSMCs.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0008_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0008_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13508498.1/IRNF_A_2704989_F0008_C.webp",
+          "local_url": "generated/assets/PMC13508498/fig-08.webp",
+          "asset_path": "generated/assets/PMC13508498/fig-08.webp",
+          "asset_bytes": 142814,
+          "asset_sha256": "9938c419794a51fbf81473883ef8afa691f6c157c2db6d0bca844a0e123da56a",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "3.8",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-28T06:55:08Z"
+      },
+      "journal_display": "Renal failure（IF 3.8；JCR SCI Q1）",
+      "updated_at": "2026-10-28T06:55:11Z",
+      "article": {
+        "title_zh": "整合转录组与单细胞分析揭示血管钙化中的失巢凋亡相关分子特征",
+        "lead": "本研究整合人源体外血管平滑肌细胞钙化模型与大鼠慢性肾脏病血管钙化模型，筛选失巢凋亡相关差异基因，并通过三种机器学习算法与外部队列验证构建诊断模型。作者报告48个差异表达的失巢凋亡相关基因、7个核心基因，以及独立验证队列中0.811的曲线下面积。单细胞数据进一步提示核心基因与失巢凋亡模块评分具有细胞类型特异性。",
+        "background": "血管钙化（vascular calcification，VC）是慢性肾脏病（chronic kidney disease，CKD）的严重并发症，其核心环节是血管平滑肌细胞（vascular smooth muscle cell，VSMC）向成骨样表型转分化。失巢凋亡（anoikis）是一种依赖细胞黏附的凋亡形式，参与心血管重塑，但其在CKD相关血管钙化中的调控作用尚不清楚。作者据此提出，失巢凋亡相关基因程序可能在钙化过程中发生系统性改变，并可能提供候选分子标志。",
+        "research_question": "研究要回答的问题是：在人源VSMC钙化模型和大鼠CKD-VC模型中，哪些失巢凋亡相关基因存在差异表达，这些基因涉及哪些通路，能否据此构建具有外部验证价值的诊断模型，并在单细胞层面呈现何种细胞类型分布。作者同时关注此前报道的跨物种保守性是否能在严格的计数分析与一对一同源映射下重现。",
+        "study_design": "这是一项基于公共数据的整合转录组与单细胞分析研究。人源体外VSMC微阵列数据集GSE37558（VSMC d0=4，CVC=12）作为训练集，用于差异表达、机器学习与免疫相关基因程序分析；大鼠体内CKD-VC RNA-seq数据集GSE146638（Control=5，Disease=9）作为独立的体内交叉核对而非平行训练队列；人颈动脉斑块配对数据集GSE43292（n=64）用于外部验证；人颈动脉斑块单细胞数据集GSE159677（质控后47,861个细胞）用于单细胞背景化。所有数据均为公开数据，作者声明无需伦理批准。",
+        "methods": "差异表达分析对GSE146638的基因水平计数先用filterByExpr过滤（保留12,819个基因），经TMM归一化后用limma-voom与经验贝叶斯调节分析；GSE37558的log2表达值用limma分析；两个数据集统一采用Benjamini–Hochberg校正p<0.05且|log2FC|>1的阈值，分别得到153个和690个差异表达基因（differentially expressed gene，DEG），并用DESeq2作一致性核查。失巢凋亡相关基因（anoikis-related gene，ARG）集由MSigDB的4个GO:BP失巢凋亡条目（36个核心基因）与GeneCards关键词“anoikis”且相关性评分>1.0的基因合并去重而成，共529个基因；将各数据集映射到人后的DEG与ARG集取交集得到差异表达失巢凋亡相关基因（differentially expressed anoikis-related gene，DEARG），并记录跨物种共同集。功能富集使用clusterProfiler进行GO与KEGG过表达分析（校正p<0.05），GSEA基于GSE37558全转录组以调节t统计量排序（校正p<0.05），GSVA评估15条预设KEGG通路并用limma比较，ssGSEA评估18类免疫细胞标志基因程序（Welch t检验加Benjamini–Hochberg校正）。机器学习在GSE37558（n=16）上采用预设的对称规则：LASSO（λ1se，按|系数|）、随机森林（Mean Decrease Accuracy）与SVM-RFE（RFE排名）各取前10个候选，被≥2/3算法选中者定义为核心基因，随机种子为42。诊断模型为以核心基因为预测变量的逻辑回归，各数据集内先作z分数标准化再迁移系数，用AUC及DeLong 95%置信区间评价，并以重复5折交叉验证和1,000次bootstrap评估内部乐观度。数据可得性方面，GSE146638的原始单端reads自SRA（SRP252073，30个run对应14个样本）下载，经fastp修剪后用salmon比对Ensembl release-110大鼠转录组，tximport汇总为29,910个基因，再经biomaRt映射为一对一同源基因（同源置信度=1，与NCBI HomoloGene一致率99.0%）。",
+        "results": "在统一阈值下，GSE146638得到153个DEG（voom结果与DESeq2一致率88%），GSE37558得到690个DEG；主成分分析显示两个数据集的疾病组与对照组均可分离（图1A、B），火山图展示相应表达格局（图1C、D）。将153个大鼠DEG映射为人同源基因（115个高置信度一对一，75%）后与529个ARG取交集，GSE146638得到2个DEARG，GSE37558得到46个，并集为48个，跨物种共同集为空（图1E）；超几何检验显示大鼠数据集未富集ARG（观察2个 vs 期望3.2个，p=0.84），而人源数据集显著富集（46 vs 18.3，p=9.5×10⁻⁹），提示失巢凋亡信号主要来自人源磷酸盐驱动的VSMC模型。48个并集DEARG的GO富集得到619个显著BP条目，以平滑肌细胞增殖调控、伤口愈合、氧水平反应和凋亡信号调控居前，分子功能与细胞组分层面富集于整合素结合、胶原结合与细胞外基质结合，定位于含胶原的细胞外基质、黏着斑与细胞–基质连接；KEGG得到26条通路，以蛋白聚糖、ECM–受体相互作用、整合素信号、PI3K–Akt信号与黏着斑居前（图2A–D）。GSEA在全转录组层面得到441个显著GO:BP条目与39条显著KEGG通路，细胞周期与有丝分裂过程在激活条目中突出（图2E、F）。GSVA的15条通路中，细胞黏附分子（cell adhesion molecules，CAMs）是唯一经FDR校正后显著的通路（logFC=0.249，校正p=0.002），在疾病组活性升高；Notch与p53信号仅为名义趋势，校正后不显著（校正p=0.20）（图3A）。ssGSEA免疫相关基因程序仅见名义趋势（如Th2与pDC程序），无 signature 通过FDR校正，作者强调这是体外单培养体系中VSMC内部的基因程序改变而非免疫细胞浸润。机器学习在对称的≥2/3共识规则下，LASSO（λ1se）保留PLAU、CRYAB、PDGFRB与BUB1，随机森林与SVM-RFE的前10排名见补充表S4（SVM-RFE第1、2位为PLAU与CRYAB），最终7个基因被≥2/3算法选中：BDNF、CRYAB、CYP1B1、DAPK1、HAS2、PDGFRB与PLAU（图4A–D，表2）；BUB1仅被一种算法选中而未被保留，S100A4未达标，且7个核心基因均不属于36个经典GO失巢凋亡基因。诊断模型在GSE37558训练集的表观AUC为1.000，重复5折交叉验证AUC约1.000，bootstrap乐观度校正AUC亦约1.00，Hosmer–Lemeshow检验在完全分离下无信息量（p约1.0），作者明确这些内部指标存在乐观偏倚、不作性能解读；在独立外部队列GSE43292（n=64）中模型AUC为0.811（DeLong 95% CI 0.706–0.915）（图5A、B），单基因中CRYAB（AUC 0.835）、BDNF（0.819）、DAPK1（0.798）与PLAU（0.798）的独立判别能力最强（图5C、D）。",
+        "limitations": "作者明确指出，训练集GSE37558仅16个样本且核心基因正是在该队列中按差异表达筛选，因此表观AUC=1.000及由其衍生的重采样估计存在乐观偏倚，不能作为性能证据。大鼠数据集GSE146638被定位为体内交叉核对而非确证性队列，且其ARG富集未达显著，跨物种共同集为空，说明失巢凋亡信号主要来自人源体外模型，跨物种保守性未获重现。ssGSEA分析基于无免疫细胞的体外VSMC单培养，只能反映VSMC内部的免疫相关基因程序而非免疫浸润，且无程序通过FDR校正。外部验证使用的是颈动脉粥样硬化斑块而非CKD特异性队列，作者在结论中亦说明这些探索性发现仍需在CKD特异性队列中开展功能与临床验证。",
+        "takeaways": "研究在统一阈值与严格一对一同源映射下识别出48个DEARG，并说明该信号主要来源于人源VSMC钙化模型而非跨物种保守。细胞黏附分子通路是唯一经FDR校正显著的GSVA通路，与失巢凋亡依赖整合素介导的细胞–基质黏附这一机制相吻合。对称的机器学习共识得到BDNF、CRYAB、CYP1B1、DAPK1、HAS2、PDGFRB与PLAU七个核心基因，七基因模型在独立斑块队列中AUC为0.811。单细胞层面核心基因与失巢凋亡模块评分呈细胞类型特异性，成骨样细胞与巨噬细胞的模块评分最高，而PDGFRB在VSMC/成纤维细胞中最高并在调制型VSMC与成骨样细胞中丢失。",
+        "figure_notes": [
+          {
+            "label": "Figure 1",
+            "caption_zh": "差异表达基因与差异表达失巢凋亡相关基因的识别。",
+            "what_question": "两个发现数据集是否存在组间整体表达差异，差异基因规模如何，以及DEG与ARG集的交集大小与跨物种重叠情况。",
+            "how_to_read": "先看A、B的PCA判断组间分离，再看C、D火山图了解上下调格局，最后看E的Venn图理解DEARG来源与跨物种共同集。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "对大鼠CKD-VC数据集GSE146638作PCA。",
+                "comparison": "Control（蓝色）与Disease（红色）两组样本。",
+                "result": "两组样本沿PC1与PC2分离，PC1与PC2分别解释34.5%与16.7%的变异。",
+                "statistics": "正文未报告PCA的统计检验。"
+              },
+              {
+                "panel": "B",
+                "experiment": "对人源VSMC数据集GSE37558作PCA。",
+                "comparison": "Control与Disease两组样本。",
+                "result": "两组样本分离，PC1与PC2分别解释21.2%与9.4%的变异。",
+                "statistics": "正文未报告PCA的统计检验。"
+              },
+              {
+                "panel": "C",
+                "experiment": "GSE146638的火山图（voom）。",
+                "comparison": "下调（蓝）、不显著（灰）与上调（红）基因，阈值FDR<0.05且|log2FC|>1。",
+                "result": "共标注153个DEG，纵轴为−log10(P.Value)仅用于可视化，颜色按FDR定义的显著性着色。",
+                "statistics": "阈值FDR<0.05、|log2FC|>1，垂直虚线标出|log2FC|=1。"
+              },
+              {
+                "panel": "D",
+                "experiment": "GSE37558的火山图。",
+                "comparison": "下调、不显著与上调基因，阈值同上。",
+                "result": "共标注690个DEG。",
+                "statistics": "阈值FDR<0.05、|log2FC|>1。"
+              },
+              {
+                "panel": "E",
+                "experiment": "将人源映射后的DEG与529个ARG集取交集的Venn图。",
+                "comparison": "GSE146638来源与GSE37558来源的DEARG。",
+                "result": "GSE146638贡献2个DEARG，GSE37558贡献46个，并集48个，跨物种共同集为0个。",
+                "statistics": "超几何检验：大鼠数据集2个 vs 期望3.2个，p=0.84；人源数据集46个 vs 期望18.3个，p=9.5×10⁻⁹。"
+              }
+            ],
+            "interpretation": "两个数据集均存在组间整体表达差异，但失巢凋亡相关信号几乎全部来自人源体外VSMC模型，此前报道的跨物种保守性在计数分析与严格同源映射下未获重现。",
+            "evidence": "PCA的组间分离、火山图的DEG数量以及Venn图与超几何检验结果共同支持上述判断。",
+            "boundary": "大鼠数据集样本量小且仅作体内交叉核对，Venn图结果不能解读为失巢凋亡基因在物种间普遍保守。"
+          },
+          {
+            "label": "Figure 2",
+            "caption_zh": "48个并集DEARG的功能富集与全转录组GSEA。",
+            "what_question": "并集DEARG富集于哪些生物学过程、分子功能、细胞组分与通路，全转录组层面又有哪些通路被扰动。",
+            "how_to_read": "A–D为过表达分析的GO:BP、GO:MF、GO:CC与KEGG点图，关注基因比例、集合大小与显著性；E–F为GSEA点图，关注标准化富集分数（normalized enrichment score，NES）的方向与显著性。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "对48个并集DEARG作GO:BP过表达分析。",
+                "comparison": "各显著BP条目之间按基因比例与校正p值比较。",
+                "result": "得到619个显著BP条目，以平滑肌细胞增殖调控、伤口愈合、氧水平反应与凋亡信号调控居前。",
+                "statistics": "Benjamini–Hochberg校正p<0.05。"
+              },
+              {
+                "panel": "B",
+                "experiment": "GO:MF过表达分析。",
+                "comparison": "各显著MF条目之间比较。",
+                "result": "富集于整合素结合、胶原结合与细胞外基质结合。",
+                "statistics": "Benjamini–Hochberg校正p<0.05。"
+              },
+              {
+                "panel": "C",
+                "experiment": "GO:CC过表达分析。",
+                "comparison": "各显著CC条目之间比较。",
+                "result": "定位于含胶原的细胞外基质、黏着斑与细胞–基质连接。",
+                "statistics": "Benjamini–Hochberg校正p<0.05。"
+              },
+              {
+                "panel": "D",
+                "experiment": "KEGG过表达分析。",
+                "comparison": "各显著通路之间比较。",
+                "result": "得到26条富集通路，以蛋白聚糖、ECM–受体相互作用、整合素信号、PI3K–Akt信号与黏着斑居前。",
+                "statistics": "Benjamini–Hochberg校正p<0.05。"
+              },
+              {
+                "panel": "E",
+                "experiment": "基于GSE37558全转录组的GSEA GO:BP分析。",
+                "comparison": "按调节t统计量排序的基因集，关注NES方向。",
+                "result": "441个GO:BP条目显著，细胞周期与有丝分裂相关条目在激活条目中突出。",
+                "statistics": "校正p<0.05。"
+              },
+              {
+                "panel": "F",
+                "experiment": "基于GSE37558全转录组的GSEA KEGG分析。",
+                "comparison": "各显著KEGG通路之间按NES比较。",
+                "result": "39条KEGG通路显著。",
+                "statistics": "校正p<0.05。"
+              }
+            ],
+            "interpretation": "DEARG在凋亡、黏附与存活信号上汇聚，与失巢凋亡相关程序参与血管钙化的假设一致；全转录组GSEA提示钙化过程中存在增殖性重编程。",
+            "evidence": "GO与KEGG过表达结果中黏附与凋亡条目的集中出现，以及GSEA中细胞周期条目的激活方向。",
+            "boundary": "富集分析基于48个基因的小集合，条目间高度相关，不能据此推断因果或具体调控方向。"
+          },
+          {
+            "label": "Figure 3",
+            "caption_zh": "GSE37558中15条预设KEGG通路的GSVA热图。",
+            "what_question": "在预设的15条与CKD、钙化、凋亡和黏附相关的通路中，哪一条在钙化组发生最显著改变。",
+            "how_to_read": "按列的分组注释（Control蓝色、Disease红色）比较行方向通路评分的高低，颜色由红（评分2）到蓝（评分−2），并注意带星号的通路。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "对GSE37558的15条优先KEGG通路作GSVA，并用limma比较组间差异。",
+                "comparison": "Control组与Disease组的通路富集评分。",
+                "result": "细胞黏附分子（CAMs）是唯一经FDR校正后显著的通路，在疾病组活性升高（logFC=0.249，校正p=0.002），并以星号标注；其余通路仅名义趋势，校正p≥0.20。",
+                "statistics": "limma比较，Benjamini–Hochberg校正；CAMs校正p=0.002，其余校正p≥0.20。"
+              }
+            ],
+            "interpretation": "细胞黏附分子活性的改变最为突出，而整合素介导的细胞–ECM黏附正是失巢凋亡敏感性的主要决定因素，因此该结果与失巢凋亡机制直接相关。",
+            "evidence": "GSVA热图的组间格局与limma给出的校正p值。",
+            "boundary": "热图仅覆盖15条预设通路，其余通路未纳入比较；Notch与p53等仅为名义趋势，不能视为显著改变。"
+          },
+          {
+            "label": "Figure 4",
+            "caption_zh": "对称的机器学习核心基因筛选。",
+            "what_question": "在三种算法各取前10个候选的对称规则下，哪些基因被≥2/3算法共同选中。",
+            "how_to_read": "A、B为LASSO系数路径与交叉验证曲线，C为随机森林重要性，D为三算法共识的Venn图。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "LASSO系数路径图。",
+                "comparison": "不同惩罚参数下各基因系数随Log(λ)的变化。",
+                "result": "系数路径随惩罚增强而收缩，垂直虚线标出所选惩罚位置。",
+                "statistics": "正文未报告该面板的具体统计量。"
+              },
+              {
+                "panel": "B",
+                "experiment": "LASSO交叉验证。",
+                "comparison": "不同Log(λ)下的二项偏差。",
+                "result": "以λ1se为选择标准，LASSO保留PLAU、CRYAB、PDGFRB与BUB1。",
+                "statistics": "选择准则为λ1se，正文未报告具体偏差数值。"
+              },
+              {
+                "panel": "C",
+                "experiment": "随机森林重要性排序（Mean Decrease Accuracy，MDA）。",
+                "comparison": "展示48个DEARG中前15个基因的重要性，绿点为非核心基因、红点为核心基因。",
+                "result": "给出按MDA排序的前15个基因，完整前10排名见补充表S4。",
+                "statistics": "重要性指标为Mean Decrease Accuracy，正文未报告具体数值。"
+              },
+              {
+                "panel": "D",
+                "experiment": "LASSO、随机森林与SVM-RFE前10候选的共识Venn图。",
+                "comparison": "三种算法的候选集合交集。",
+                "result": "7个基因被≥2/3算法选中：BDNF、CRYAB、CYP1B1、DAPK1、HAS2、PDGFRB与PLAU；BUB1仅被一种算法选中而未被保留，S100A4未达标。",
+                "statistics": "共识规则为≥2/3算法，每种算法贡献前10个候选，随机种子42。"
+              }
+            ],
+            "interpretation": "采用对称规则后核心基因由原先的4个变为7个，说明核心基因集合对算法规则敏感，BUB1的退出提示原分析存在选择不对称。",
+            "evidence": "三算法候选集合的Venn交集与表2中逐基因的算法归属。",
+            "boundary": "核心基因是在同一小样本训练集中按差异表达筛选得到，且7个基因均不属于36个经典GO失巢凋亡基因，功能归属需实验验证。"
+          },
+          {
+            "label": "Figure 5",
+            "caption_zh": "七基因诊断模型的性能评价。",
+            "what_question": "七基因逻辑回归模型在训练集与独立外部队列中的判别能力如何，单基因的判别能力如何。",
+            "how_to_read": "A为训练集ROC，B为外部验证ROC并关注置信区间，C为单基因ROC曲线，D为核心基因表达箱线图。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "GSE37558训练集的ROC曲线。",
+                "comparison": "模型预测与真实分组。",
+                "result": "表观AUC=1.000，作者明确该值存在乐观偏倚、不作性能解读。",
+                "statistics": "表观AUC=1.000；重复5折交叉验证AUC约1.000；bootstrap乐观度校正AUC约1.00；Hosmer–Lemeshow检验p约1.0，在完全分离下无信息量。"
+              },
+              {
+                "panel": "B",
+                "experiment": "GSE43292外部验证队列（n=64）的ROC曲线。",
+                "comparison": "斑块组与完整组织组的模型预测。",
+                "result": "AUC=0.811。",
+                "statistics": "DeLong 95% CI 0.706–0.915。"
+              },
+              {
+                "panel": "C",
+                "experiment": "验证集中各核心基因的单基因ROC曲线。",
+                "comparison": "各单基因AUC之间比较。",
+                "result": "CRYAB（AUC 0.835）、BDNF（0.819）、DAPK1（0.798）与PLAU（0.798）的独立判别能力最强。",
+                "statistics": "各基因AUC值如上述，正文未报告单基因AUC的置信区间。"
+              },
+              {
+                "panel": "D",
+                "experiment": "核心基因在验证集中的表达箱线图。",
+                "comparison": "组间表达水平比较。",
+                "result": "展示各核心基因的组间表达分布。",
+                "statistics": "正文未报告该面板的具体统计检验。"
+              }
+            ],
+            "interpretation": "模型在独立斑块队列中具有中等判别能力，单基因中CRYAB与BDNF表现最强，但训练集指标因选择偏倚不可解读。",
+            "evidence": "外部验证AUC及其DeLong置信区间，以及单基因AUC排序。",
+            "boundary": "外部验证队列为颈动脉粥样硬化斑块而非CKD特异性队列，AUC不能直接外推至CKD血管钙化人群。"
+          },
+          {
+            "label": "Figure 6",
+            "caption_zh": "核心基因与免疫相关基因程序的Spearman相关热图（GSE37558）。",
+            "what_question": "七个核心基因的表达与免疫相关基因程序评分之间是否存在相关性。",
+            "how_to_read": "按行列对应核心基因与免疫相关基因程序，颜色表示Spearman相关系数，灰色为不显著单元格，星号标注显著性水平。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "在GSE37558中计算核心基因与免疫相关基因程序的Spearman相关。",
+                "comparison": "各基因–程序配对的相关方向与显著性。",
+                "result": "热图展示相关格局，不显著相关（p≥0.05）以灰色遮蔽，显著单元格标注*（p<0.05）与**（p<0.01）。",
+                "statistics": "Spearman相关，显著性阈值p<0.05，星号标注* p<0.05、** p<0.01。"
+              }
+            ],
+            "interpretation": "该图用于提示核心基因与VSMC内部免疫相关基因程序之间的关联格局，属于探索性描述。",
+            "evidence": "热图颜色所代表的相关系数及星号标注的显著性。",
+            "boundary": "数据来自无免疫细胞的体外单培养，相关反映的是VSMC内部基因程序而非免疫细胞浸润，且相关不等于因果。"
+          },
+          {
+            "label": "Figure 7",
+            "caption_zh": "48个并集DEARG的蛋白–蛋白相互作用网络。",
+            "what_question": "48个DEARG在STRING网络中如何连接，七个核心基因处于何种网络位置。",
+            "how_to_read": "节点标注基因符号，红色放大节点为七个共识核心基因，灰色节点按连接度着色且节点大小随度缩放，注意孤立节点被排除。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "用STRING v12.0构建48个并集DEARG的蛋白–蛋白相互作用网络。",
+                "comparison": "核心基因与非核心DEARG的连接度比较。",
+                "result": "网络包含46个节点与224条边，CRYAB与LMO3因无中等置信度互作而被排除在展示网络之外，PDGFRB在网络中连接FN1与ITGAV。",
+                "statistics": "互作置信度阈值≥0.400。"
+              }
+            ],
+            "interpretation": "核心基因嵌入以黏附与基质分子为枢纽的互作网络，PDGFRB与FN1、ITGAV的连接进一步支持黏附相关机制。",
+            "evidence": "网络的节点数、边数以及PDGFRB的具体连接伙伴。",
+            "boundary": "网络基于STRING数据库的置信度阈值推断，未经实验验证，且两个孤立节点被排除使网络并非全部48个基因的完整呈现。"
+          },
+          {
+            "label": "Figure 8",
+            "caption_zh": "GSE159677中的单细胞背景化分析。",
+            "what_question": "七个核心基因在颈动脉斑块各细胞类型中的表达分布如何，失巢凋亡模块评分在哪类细胞最高。",
+            "how_to_read": "先看A的UMAP细胞类型注释，再看B–E的FeaturePlot与F的DotPlot了解基因表达，最后看G、H的模块评分分布。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "对GSE159677的47,861个细胞作UMAP并注释。",
+                "comparison": "不同细胞类型在降维空间中的分布。",
+                "result": "细胞被注释为18种细胞类型，标签以repelled boxes放置。",
+                "statistics": "正文未报告该面板的统计量。"
+              },
+              {
+                "panel": "B",
+                "experiment": "CRYAB的FeaturePlot。",
+                "comparison": "CRYAB在不同细胞中的表达强度。",
+                "result": "展示CRYAB的细胞类型特异性表达格局。",
+                "statistics": "正文未报告该面板的统计量。"
+              },
+              {
+                "panel": "C",
+                "experiment": "PDGFRB的FeaturePlot。",
+                "comparison": "PDGFRB在不同细胞中的表达强度。",
+                "result": "展示PDGFRB的表达格局。",
+                "statistics": "正文未报告该面板的统计量。"
+              },
+              {
+                "panel": "D",
+                "experiment": "PLAU的FeaturePlot。",
+                "comparison": "PLAU在不同细胞中的表达强度。",
+                "result": "展示PLAU的表达格局。",
+                "statistics": "正文未报告该面板的统计量。"
+              },
+              {
+                "panel": "E",
+                "experiment": "CYP1B1的FeaturePlot。",
+                "comparison": "CYP1B1在不同细胞中的表达强度。",
+                "result": "展示CYP1B1的表达格局。",
+                "statistics": "正文未报告该面板的统计量。"
+              },
+              {
+                "panel": "F",
+                "experiment": "七个核心基因跨细胞类型的DotPlot。",
+                "comparison": "各细胞类型间核心基因的表达比例与强度。",
+                "result": "PDGFRB在VSMC/成纤维细胞中最高，并在调制型VSMC与成骨样细胞中丢失。",
+                "statistics": "正文未报告该面板的统计量。"
+              },
+              {
+                "panel": "G",
+                "experiment": "按细胞类型绘制失巢凋亡模块评分的小提琴图。",
+                "comparison": "各细胞类型间模块评分分布。",
+                "result": "展示失巢凋亡模块评分的细胞类型间差异。",
+                "statistics": "正文未报告该面板的统计量。"
+              },
+              {
+                "panel": "H",
+                "experiment": "计算各细胞类型的平均失巢凋亡模块评分。",
+                "comparison": "各细胞类型平均评分之间比较。",
+                "result": "成骨样细胞、成纤维细胞、间皮细胞与巨噬细胞的评分最高，调制型VSMC评分相对较低。",
+                "statistics": "正文未报告该面板的统计量。"
+              }
+            ],
+            "interpretation": "核心基因表达与失巢凋亡模块评分均呈细胞类型特异性，成骨样细胞与巨噬细胞评分最高，而PDGFRB在VSMC向成骨样表型转变过程中丢失，提示其与VSMC稳态维持相关。",
+            "evidence": "UMAP注释、FeaturePlot与DotPlot的基因表达格局，以及小提琴图与均值图展示的模块评分排序。",
+            "boundary": "单细胞数据来自人颈动脉粥样硬化斑块而非CKD血管钙化样本，模块评分为基因集打分的相对量度，不能直接等同于失巢凋亡活性。"
+          }
+        ]
+      },
+      "ai_status": "success_retried",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    },
+    "doi:10.1080/0886022x.2026.2707003": {
+      "id": "doi:10.1080/0886022x.2026.2707003",
+      "title": "Integrative multi-omics analysis identifies VCAN and ESM1 as candidate cell-type-associated biomarkers of NET-related glomerular injury in diabetic kidney disease.",
+      "authors": [
+        "Liang Y",
+        "Li C",
+        "Huang B",
+        "Wang A",
+        "Qiu M",
+        "Lu J",
+        "Wan J"
+      ],
+      "journal": "Renal failure",
+      "year": "2026",
+      "doi": "10.1080/0886022x.2026.2707003",
+      "pmcid": "PMC13455701",
+      "pmid": "42563361",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1080/0886022X.2026.2707003",
+        "https://europepmc.org/articles/PMC13455701",
+        "https://europepmc.org/articles/PMC13455701?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 16,
+      "relevance_evidence": [
+        "sequencing: rna sequencing, single-cell",
+        "multiomics: multi-omics, transcriptom",
+        "disease_bridge: diabetic, kidney disease"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1.",
+          "caption": "Integrated bioinformatics analysis identifies VCAN and ESM1 as core feature genes. (A) Volcano plot of 115 DEGs between DKD and controls. (B) GO enrichment analysis of the 115 DEGs. (C) KEGG pathway enrichment analysis. (D) WGCNA module-trait relationship heatmap. (E) Gene dendrogram with module assignments. (F) Venn diagram of DEGs and brown module genes. (G) LASSO regression coefficient profiles. (H) Random forest feature importance. (I) Venn diagram of LASSO and random forest outputs. (J) Venn diagram showing the overlap between the candidate genes identified in (I) and NET-related genes. DEGs: differentially expressed genes; GO: Gene Ontology; KEGG: Kyoto Encyclopedia of Genes and Genomes; WGCNA: weighted gene co-expression network analysis; LASSO: Least Absolute Shrinkage and Selection Operator.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0001_C.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0001_C.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0001_C.jpg",
+          "local_url": "generated/assets/PMC13455701/fig-01.jpg",
+          "asset_path": "generated/assets/PMC13455701/fig-01.jpg",
+          "asset_bytes": 96816,
+          "asset_sha256": "158c6c5891c1e2fb4eed628a0ab9c2efaeffd4cb51b266e162c03b3154bc4692",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 2.",
+          "caption": "Single-cell atlas reveals NETs activation and cell type-specific expression of VCAN and ESM1 in DKD. (A,B) UMAP visualization (A) and marker gene expression (B) of 11 renal cell clusters from control and early DKD samples ( n = 19,897 cells). (C) Dot plots showing the downregulation of ESM1 in endothelial cells (ENDO), and the upregulation of VCAN in mesangial cells (MES), but its downregulation in CFH-positive parietal epithelial cells (CFH + PECs) in DKD. (D) UMAP projection of NETs activity scores. (E,F) KEGG pathway analysis of upregulated genes in DKD endothelial cells (E) and CFH + PECs (F). (G,H) GSEA of NETs-related signatures in endothelial cells (G) versus CFH + PECs (H). (I,J) Feature plots validating the co-localization of VCAN with CFH (I) and ESM1 with EGFL7 (J). UMAP: Uniform Manifold Approximation and Projection; ENDO: endothelial cells; MES: mesangial cells; PECs: parietal epithelial cells; GSEA: Gene Set Enrichment Analysis.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0002_C.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0002_C.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0002_C.jpg",
+          "local_url": "generated/assets/PMC13455701/fig-02.jpg",
+          "asset_path": "generated/assets/PMC13455701/fig-02.jpg",
+          "asset_bytes": 118592,
+          "asset_sha256": "79985809f3b24bf7a4ff05968f50353455a87d8524c1b38b4808748d74d22b94",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 3.",
+          "caption": "Subcluster heterogeneity and pseudotime trajectory analysis of VCAN and ESM1. (A) UMAP plot of CFH+PEC subclusters. (B) Density plot showing VCAN expression in CFH+PEC cells. (C) Pseudotime trajectory of CFH+PEC cells colored by pseudotime. (D) Heatmap showing dynamic gene expression patterns along pseudotime with associated biological processes. (E) VCAN relative expression along pseudotime. (F) Pseudotime dynamics of fibrosis and inflammation signature scores in CFH+PEC cells. (G) UMAP plot of ENDO subclusters. (H) Density plot showing ESM1 expression in ENDO cells. (I) Pseudotime trajectory of ENDO cells colored by pseudotime. (J) Heatmap showing dynamic gene expression patterns along pseudotime with associated biological processes. (K) ESM1 relative expression along pseudotime. (L) Pseudotime dynamics of fibrosis and inflammation signature scores in ENDO cells.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0003_C.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0003_C.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0003_C.jpg",
+          "local_url": "generated/assets/PMC13455701/fig-03.jpg",
+          "asset_path": "generated/assets/PMC13455701/fig-03.jpg",
+          "asset_bytes": 79003,
+          "asset_sha256": "9b630f0791a9ccd7e462b3fb58c30cb0c14a15bd76850c09f39c327b3aa9a5bd",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 4.",
+          "caption": "Inferring intercellular communication networks in DKD glomeruli. (A) Circle plots showing the number and strength of inferred interactions among cell types in Control and DKD groups. (B) Scatter plot identifying key sender and receiver populations based on dominant incoming and outgoing signaling patterns. (C–D) Bubble plots showing the up-regulated (left) and down-regulated (right) signaling ligand-receptor pairs in DKD. The x-axis includes both Control and DKD samples to provide a direct visual comparison of the communication probabilities (indicated by dot color) for the same ligand-receptor pair (y-axis) between the two groups. (E) Network plots of the Collagen (COL) signaling pathway, highlighting mesangial cells and CFH + PECs as primary senders driving matrix remodeling. (F) Network plots of additional stress response pathways (e.g., APP).",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0004_C.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0004_C.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0004_C.jpg",
+          "local_url": "generated/assets/PMC13455701/fig-04.jpg",
+          "asset_path": "generated/assets/PMC13455701/fig-04.jpg",
+          "asset_bytes": 94433,
+          "asset_sha256": "f0cffe543c1a3415b3ac932f8c9196c206b8c19b1ac2cb01ce339fb22bed36fa",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 5.",
+          "caption": "Validation of ESM1 and VCAN expression, diagnostic value, and clinical correlations. (A–B) Differential expression (boxplots) and diagnostic performance (ROC curves) of ESM1 in the training cohort (merged GSE30528 and GSE96804 ) (A) and the independent external validation cohort ( GSE142025 ) (B). (C) Validation of ESM1 expression in the Nephroseq database and its correlation with eGFR. (D–E) Differential expression (boxplots) and ROC curves of VCAN in the training cohort (D) and the external validation cohort (E). (F) Validation of VCAN expression in the Nephroseq database and its correlation with eGFR. (G) Diagnostic performance (ROC curve) of the combined ESM1 and VCAN model. (H) Expression levels of ESM1 (left) and VCAN (right) in human glomerular endothelial cells co-cultured with podocytes under high glucose conditions for 48h and 96h ( GSE220227 ). (I) Expression levels of ESM1 (left) and VCAN (right) in podocytes from the high-glucose co-culture model for 48h and 96h ( GSE220228 ). (J) Correlation analysis between ESM1 expression and the relative abundance of 22 immune cell types. (K) Correlation analysis between VCAN expression and the relative abundance of 22 immune cell types. Data in (H) and (I) are presented as mean ± SD. * p < 0.05, ** p < 0.01, ns: not significant. ROC: receiver operating characteristic; AUC: area under the curve; eGFR: estimated glomerular filtration rate.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0005_C.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0005_C.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0005_C.jpg",
+          "local_url": "generated/assets/PMC13455701/fig-05.jpg",
+          "asset_path": "generated/assets/PMC13455701/fig-05.jpg",
+          "asset_bytes": 94906,
+          "asset_sha256": "4df0355a8c9a1b0f001de983dbb208cd901fcbc1c11e48c7d229d1e61bc5994a",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 6.",
+          "caption": "In vivo validation in db/db diabetic mice and molecular docking predictions. (A) qRT-PCR analysis of VCAN and ESM1 mRNA expression in kidney tissues from control (CTRL) and DKD mice. (B) Analysis of serum ESM1 protein levels (left) and the Pearson correlation analysis between serum ESM1 concentration and urinary albumin-to-creatinine ratio (ACR) (right). (C) Pearson correlation analysis between serum ESM1 concentration and NETs expression (mean OD450). (D) Representative immunohistochemistry (IHC) staining images and quantitative analysis of MPO, CitH3, VCAN, and ESM1 in kidney tissues from CTRL and DKD groups. Scale bar: 60 μm. (E) Molecular docking visualization showing the binding mode of ZINC005331 with the target protein, highlighting the 3D structure and key interacting residues (ARG-305, THR-324, TYR-326, HIS-153). (F) Molecular docking visualization showing the binding mode of ZINC171091 with the target protein, depicting hydrogen bond interactions with GLN-118 and SER-119. Data are presented as mean ± SEM. * p < 0.05, ** p < 0.01, *** p < 0.001, **** p < 0.0001. qRT-PCR: quantitative real-time polymerase chain reaction; ACR: albumin-to-creatinine ratio; MPO: myeloperoxidase; CitH3: citrullinated histone H3.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0006_C.jpg",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0006_C.jpg",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13455701.1/IRNF_A_2707003_F0006_C.jpg",
+          "local_url": "generated/assets/PMC13455701/fig-06.jpg",
+          "asset_path": "generated/assets/PMC13455701/fig-06.jpg",
+          "asset_bytes": 139085,
+          "asset_sha256": "824acd5df0e24e298d7d305777bcde8dd63c45d0b0809cf66f47a2f42fee10bd",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "3.8",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-28T06:55:08Z"
+      },
+      "journal_display": "Renal failure（IF 3.8；JCR SCI Q1）",
+      "updated_at": "2026-10-28T06:56:27Z",
+      "article": {
+        "title_zh": "整合多组学锁定VCAN与ESM1：糖尿病肾病NET相关肾小球损伤的细胞类型标志物",
+        "lead": "糖尿病肾病（diabetic kidney disease，DKD）中的炎症与微血管损伤机制复杂，但中性粒细胞胞外诱捕网（neutrophil extracellular traps，NETs）相关的细胞特异性分子特征仍不清楚。该研究整合批量肾小球转录组、单细胞RNA测序（single-cell RNA sequencing，scRNA-seq）、体外高糖共培养数据与db/db小鼠模型，提出VCAN与ESM1分别反映系膜细胞基质重塑与肾小球内皮细胞损伤的双轨模型。",
+        "background": "DKD是糖尿病主要微血管并发症之一，肾小球内皮细胞与系膜细胞在炎症、代谢应激和细胞外基质重塑中扮演不同角色。NETs作为中性粒细胞释放的DNA-蛋白复合物，可损伤内皮并放大炎症，但既往研究多停留在组织整体表达层面，缺乏细胞类型分辨。作者希望把NET相关基因信号放到肾小球细胞图谱中定位，从而找到能区分损伤细胞来源的候选生物标志物。",
+        "research_question": "研究要回答三个问题：DKD肾小球中是否存在真实的NET相关活动信号；哪些基因可作为NET相关肾小球损伤的候选标志物；这些标志物在何种细胞类型中表达改变，并能否在独立队列、体外模型和动物模型中得到验证。作者最终聚焦VCAN与ESM1，并检验二者是否分别对应系膜细胞与内皮细胞的不同损伤轨迹。",
+        "study_design": "研究采用发现—定位—验证的整合设计。发现阶段合并GSE30528与GSE96804两个芯片队列（50例DKD、33例对照），经差异表达、加权基因共表达网络分析（weighted gene co-expression network analysis，WGCNA）和LASSO与随机森林双机器学习筛选候选基因。定位阶段使用GSE131882单细胞图谱（3例早期DKD、3例对照）解析细胞类型表达与细胞间通讯。验证阶段使用独立队列GSE142025、体外高糖共培养数据集GSE220227与GSE220228、直接NET刺激数据集GSE189875，以及db/db小鼠，并做探索性分子对接。",
+        "methods": "批量数据取自基因表达综合数据库（Gene Expression Omnibus，GEO）的GSE30528与GSE96804，纳入标准为芯片平台、人肾小球组织、含DKD与健康对照；探针按平台注释映射到官方基因符号，多探针取均值，数据经log2转换、分位数归一化，并用ComBat校正批次效应。差异表达用limma结合经验贝叶斯方法，阈值设为校正p值<0.05且|log2倍数变化|>1.0；功能注释用clusterProfiler完成基因本体（Gene Ontology，GO）与京都基因与基因组百科全书（Kyoto Encyclopedia of Genes and Genomes，KEGG）分析，基因集富集分析（gene set enrichment analysis，GSEA）运行1000次置换。作者从三个来源整理214个NET相关基因（NRGs），并与DKD相关基因取交集得到89个DKD背景化NRGs，同时用10个经典NET基因计算NET CoreGene Score并以Wilcoxon秩和检验比较。WGCNA以无标度拓扑拟合指数R²>0.8选择软阈值，动态剪切参数为deepSplit=2、最小模块50个基因。机器学习先用glmnet做10折交叉验证LASSO，再用randomForest（ntree=100）按Gini指数平均下降排序，ROC评估诊断性能，ESM1与VCAN联合模型用二元逻辑回归构建并计算曲线下面积（area under the curve，AUC）。免疫浸润用CIBERSORT估算22种免疫细胞比例（1000次置换），并以Spearman秩相关分析基因表达与免疫细胞丰度的关联。单细胞数据用Seurat质控（每细胞>3个基因、>200个特征计数、<4000个特征、线粒体基因含量<2%），DoubletFinder v2.0.4去双细胞，decontX v1.2.0校正环境RNA，Harmony整合，最终保留19897个细胞核；AUCell v1.26.0计算NET活性评分。外部验证队列GSE142025含27例DKD（6例早期、21例晚期）与9例健康对照，处理方式与训练队列一致。动物实验使用C57BL/KsJ-db/db雄性小鼠（n=6）与同龄db/m对照（n=6），20周龄确认糖尿病表型后取材检测。",
+        "results": "批量分析中，合并队列的主成分分析显示DKD与对照明显分离，前两个主成分解释超过50%的总方差，共鉴定115个差异表达基因，包括VCAN、ESM1及多个炎症与代谢标志物。GO富集集中在代谢应激、免疫炎症激活和细胞外基质重塑三个维度，KEGG则富集于PI3K-Akt、IL-17与NET形成通路。作者特别指出，10个经典NET基因构成的CoreGene Score在DKD中显著升高（p<0.001），这是组织层面NET活动的首要证据；DKD背景化NRG集也呈富集（校正p=0.023），但因该集由与DKD基因取交集构建，只能视为确证性而非独立证据；三个标准化NET形成基因集（KEGG、GO、WikiPathways）均未达显著，作者解释肾小球是NET作用的靶组织而非来源，这一阴性结果在生物学上可预期。WGCNA中棕色模块（431个基因）与DKD表型相关性最强，与115个差异基因交集得到41个候选核心基因；LASSO与随机森林分别保留16个和20个特征基因，交集为8个共识基因，再与214个NET相关基因比对，最终锁定VCAN与ESM1。单细胞层面，19897个高质量转录组经无监督聚类得到11个主要细胞亚群；ESM1在DKD内皮细胞（endothelial cells，ENDO）中特异性下调，VCAN在系膜细胞（mesangial cells，MES）中显著上调、在补体因子H阳性壁层上皮细胞（CFH+ parietal epithelial cells，CFH+ PECs）中下调。NET活性评分在内皮区室显著富集，ENDO与足细胞（podocytes，PODO）总体评分最高，且ENDO在DKD组明显升高；但ESM1在足细胞中几乎检测不到，足细胞VCAN在共培养模型中下调，因此作者把内皮细胞而非足细胞作为模型的主要细胞焦点。通路分析显示DKD内皮上调基因涉及紧密连接、流体剪切应力和MAPK/TNF通路，CFH+ PECs也呈炎症激活，但GSEA显示内皮细胞NET基因集显著富集（p=0.0026），CFH+ PECs则未达显著（p=0.2479）。亚群分析中，VCAN在CFH+ PEC亚群C1（n=137个细胞）高表达，功能富集于应力纤维组装与肌动蛋白结构组织；ESM1主要见于ENDO亚群C4（n=31个细胞），与能量稳态和缺氧反应相关。拟时序分析显示CFH+ PEC中VCAN呈早中期一过性升高后下降，与DKD中该群整体下调一致，纤维化与炎症评分在轨迹晚期急剧上升；ENDO中ESM1呈先升后持续下降的双相模式，伴随迁移黏附通路与纤维化炎症评分的渐进改变。细胞通讯分析提示系膜细胞与CFH+ PECs是胶原信号的主要发送者，驱动基质重塑。验证方面，VCAN在批量队列中上调、ESM1下调，联合诊断性能较强；体外高糖共培养中ESM1在内皮细胞呈早期主导性下降；db/db小鼠肾脏VCAN与NET标志物升高，ESM1降低且与白蛋白尿严重程度相关；分子对接找到潜在靶向化合物。",
+        "limitations": "研究主要基于公共转录组数据的再分析，样本量与人群背景受原始数据集限制，单细胞图谱仅含3例早期DKD与3例对照，细胞亚群如ENDO C4仅31个细胞，统计稳健性有限。DKD背景化NRG集由与DKD基因取交集构建，其富集不能作为独立证据，而标准化NET形成基因集未达显著，说明NET信号强度依赖基因集定义。体外验证来自公共高糖共培养数据集，时间点仅48与96小时，直接NET刺激数据仅12小时，难以覆盖慢性病程。动物实验每组n=6，仅20周龄单一时间点，且仅雄性小鼠，性别与病程外推受限。分子对接属于计算机模拟的探索性筛选，未提供结合亲和力实验或功能干预验证。正文未报告联合模型的具体AUC数值、各验证队列的效应量以及db/db小鼠的具体检测数值，相关结论的定量强度需谨慎解读。",
+        "takeaways": "该研究把批量转录组的NET相关信号与单细胞图谱的细胞类型定位结合，提出VCAN与ESM1分别标记系膜细胞基质重塑与肾小球内皮细胞损伤的双轨模型。组织层面NET CoreGene Score升高支持DKD肾小球存在NET相关活动，但标准化NET形成基因集未富集，提示肾小球更可能是NET的靶组织。ESM1在内皮细胞下调并在体外高糖与动物模型中与白蛋白尿相关，VCAN在系膜细胞上调并与基质重塑和胶原通讯相关，二者作为候选标志物具有细胞类型分辨的优势。总体证据仍属关联性与探索性，诊断价值与靶向干预潜力需更大规模、多时间点及功能实验验证。",
+        "figure_notes": [
+          {
+            "label": "Figure 1",
+            "caption_zh": "整合生物信息学分析锁定VCAN与ESM1为核心特征基因，包含差异表达火山图、GO与KEGG富集、WGCNA模块-性状关系与基因树、Venn交集、LASSO系数曲线与随机森林特征重要性。",
+            "what_question": "在DKD与对照的批量肾小球转录组中，哪些基因差异表达、富集于哪些通路，并通过共表达网络与双机器学习收敛到NET相关的核心候选基因？",
+            "how_to_read": "先看A确认差异基因总体分布，再看B、C判断功能方向，随后沿D到F理解WGCNA如何缩小候选范围，最后沿G到J看两种机器学习与NET基因集的逐层交集。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "对合并队列50例DKD与33例对照做limma差异表达分析并绘制火山图。",
+                "comparison": "DKD与对照之间基因表达差异。",
+                "result": "共鉴定115个差异表达基因，VCAN、ESM1及多个炎症与代谢标志物在列。",
+                "statistics": "阈值校正p<0.05且|log2倍数变化|>1.0，具体基因数对应的统计量正文未报告。"
+              },
+              {
+                "panel": "B",
+                "experiment": "对115个差异基因做GO富集分析并以条形图展示。",
+                "comparison": "不同GO条目间的富集程度。",
+                "result": "富集集中于代谢应激、免疫炎症激活与细胞外基质重塑三个维度。",
+                "statistics": "正文未报告具体校正p值与基因计数。"
+              },
+              {
+                "panel": "C",
+                "experiment": "对115个差异基因做KEGG通路富集并以点图展示。",
+                "comparison": "不同KEGG通路间的基因比例与显著性。",
+                "result": "PI3K-Akt信号、IL-17信号与NET形成通路显著富集。",
+                "statistics": "正文未报告具体校正p值与基因比例。"
+              },
+              {
+                "panel": "D",
+                "experiment": "WGCNA模块-性状关系热图，评估各模块与DKD表型的相关性。",
+                "comparison": "各基因模块与DKD表型之间的相关系数。",
+                "result": "棕色模块与DKD表型相关性最强。",
+                "statistics": "正文未报告具体相关系数与p值。"
+              },
+              {
+                "panel": "E",
+                "experiment": "基因层次聚类树状图并标注模块归属。",
+                "comparison": "基因聚类分支与模块颜色划分。",
+                "result": "展示模块划分结果，棕色模块含431个基因。",
+                "statistics": "软阈值以满足无标度拓扑拟合指数R²>0.8选择，deepSplit=2、最小模块50个基因。"
+              },
+              {
+                "panel": "F",
+                "experiment": "将115个差异基因与棕色模块基因取交集并绘制Venn图。",
+                "comparison": "差异基因集与棕色模块基因集的重叠。",
+                "result": "交集得到41个候选核心基因。",
+                "statistics": "正文未报告重叠的显著性检验。"
+              },
+              {
+                "panel": "G",
+                "experiment": "LASSO回归系数曲线，采用10折交叉验证。",
+                "comparison": "不同正则化强度下特征系数的收缩情况。",
+                "result": "LASSO保留16个稳健特征基因。",
+                "statistics": "10折交叉验证，具体λ值正文未报告。"
+              },
+              {
+                "panel": "H",
+                "experiment": "随机森林特征重要性排序（ntree=100）。",
+                "comparison": "各基因按Gini指数平均下降的排序。",
+                "result": "随机森林保留20个稳健特征基因。",
+                "statistics": "ntree=100，具体重要性数值正文未报告。"
+              },
+              {
+                "panel": "I",
+                "experiment": "将LASSO与随机森林输出取交集并绘制Venn图。",
+                "comparison": "两种机器学习特征集的 overlap。",
+                "result": "交集得到8个共识基因。",
+                "statistics": "正文未报告交集显著性检验。"
+              },
+              {
+                "panel": "J",
+                "experiment": "将8个共识基因与214个NET相关基因取交集并绘制Venn图。",
+                "comparison": "共识基因集与NET相关基因集的重叠。",
+                "result": "最终锁定VCAN与ESM1为核心特征基因。",
+                "statistics": "正文未报告交集显著性检验。"
+              }
+            ],
+            "interpretation": "多层筛选把115个差异基因逐步收敛到VCAN与ESM1，说明二者同时具备DKD差异表达、共表达网络关联、机器学习稳健性和NET基因集相关性。",
+            "evidence": "差异表达、GO与KEGG富集、WGCNA棕色模块、LASSO与随机森林交集及NET基因集比对共同支持该结论。",
+            "boundary": "该图仅提供组织水平的关联与筛选证据，不能证明VCAN与ESM1的因果关系或细胞来源，且各面板具体统计量正文未报告。"
+          },
+          {
+            "label": "Figure 2",
+            "caption_zh": "单细胞图谱揭示DKD中NET激活及VCAN与ESM1的细胞类型特异性表达，包含UMAP聚类、标志基因表达、NET活性评分、内皮与CFH+ PEC的通路富集和GSEA，以及VCAN-CFH与ESM1-EGFL7共定位特征图。",
+            "what_question": "在早期DKD肾小球单细胞图谱中，NET相关活动主要发生在哪些细胞类型，VCAN与ESM1的表达改变分别定位于哪些细胞？",
+            "how_to_read": "先看A、B确认11个细胞亚群及标志基因，再看C比较ESM1与VCAN在各细胞类型中的变化，随后D看NET评分分布，E到H比较内皮与CFH+ PEC的通路与GSEA差异，最后I、J验证共定位。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "对3例早期DKD与3例对照共19897个细胞核做UMAP降维聚类。",
+                "comparison": "对照与DKD样本的细胞分布。",
+                "result": "鉴定出11个主要肾脏细胞亚群。",
+                "statistics": "质控标准为每细胞>3个基因、>200个特征计数、<4000个特征、线粒体基因含量<2%，Harmony整合。"
+              },
+              {
+                "panel": "B",
+                "experiment": "展示各细胞亚群的标志基因表达。",
+                "comparison": "不同亚群间标志基因的表达比例与平均表达水平。",
+                "result": "标志基因表达支持11个亚群的细胞类型注释。",
+                "statistics": "正文未报告具体表达比例数值。"
+              },
+              {
+                "panel": "C",
+                "experiment": "点图比较ESM1与VCAN在DKD与对照各细胞类型中的表达。",
+                "comparison": "DKD与对照之间同一细胞类型的表达差异。",
+                "result": "ESM1在内皮细胞下调，VCAN在系膜细胞上调、在CFH+ PECs下调。",
+                "statistics": "正文未报告具体表达比例与显著性统计量。"
+              },
+              {
+                "panel": "D",
+                "experiment": "用AUCell计算NET活性评分并投影到UMAP。",
+                "comparison": "不同细胞类型与分组的NET评分分布。",
+                "result": "NET活性评分在内皮区室显著富集，ENDO与足细胞总体评分最高，ENDO在DKD组明显升高。",
+                "statistics": "AUCell v1.26.0，具体评分统计量正文未报告。"
+              },
+              {
+                "panel": "E",
+                "experiment": "对DKD内皮细胞上调基因做KEGG通路分析。",
+                "comparison": "内皮细胞中富集的通路。",
+                "result": "富集于紧密连接、流体剪切应力与MAPK/TNF通路。",
+                "statistics": "正文未报告具体校正p值。"
+              },
+              {
+                "panel": "F",
+                "experiment": "对DKD中CFH+ PECs上调基因做KEGG通路分析。",
+                "comparison": "CFH+ PECs中富集的通路。",
+                "result": "CFH+ PECs同样显示炎症激活相关通路。",
+                "statistics": "正文未报告具体校正p值。"
+              },
+              {
+                "panel": "G",
+                "experiment": "对内皮细胞做NET相关基因集GSEA。",
+                "comparison": "内皮细胞中NET基因集相对随机分布的富集。",
+                "result": "内皮细胞NET基因集显著富集，p=0.0026。",
+                "statistics": "GSEA，p=0.0026。"
+              },
+              {
+                "panel": "H",
+                "experiment": "对CFH+ PECs做NET相关基因集GSEA。",
+                "comparison": "CFH+ PECs中NET基因集相对随机分布的富集。",
+                "result": "CFH+ PECs未达显著富集，p=0.2479。",
+                "statistics": "GSEA，p=0.2479。"
+              },
+              {
+                "panel": "I",
+                "experiment": "特征图展示VCAN与CFH的共定位。",
+                "comparison": "VCAN与CFH在UMAP空间中的表达密度。",
+                "result": "VCAN与CFH表达存在重叠。",
+                "statistics": "正文未报告共定位的定量统计量。"
+              },
+              {
+                "panel": "J",
+                "experiment": "特征图展示ESM1与EGFL7的共表达。",
+                "comparison": "ESM1与EGFL7在UMAP空间中的表达密度。",
+                "result": "ESM1与内皮限制性因子EGFL7共表达。",
+                "statistics": "正文未报告共表达的定量统计量。"
+              }
+            ],
+            "interpretation": "NET激活信号主要汇聚于肾小球内皮细胞，而VCAN在系膜细胞与CFH+ PECs中的改变可能不完全依赖直接NET基因集富集，支持细胞类型分工的假设。",
+            "evidence": "UMAP聚类、细胞类型差异表达、AUCell评分、内皮与CFH+ PEC的GSEA对比以及共定位特征图共同支持该解释。",
+            "boundary": "单细胞样本仅3例DKD与3例对照，细胞类型比例与评分差异的统计效能有限，且共定位为可视化证据，正文未报告定量共表达统计量。"
+          },
+          {
+            "label": "Figure 3",
+            "caption_zh": "CFH+ PEC与内皮细胞亚群的异质性及VCAN、ESM1的拟时序轨迹，包含亚群UMAP、表达密度图、拟时序轨迹、动态基因表达热图、基因沿拟时序的相对表达及纤维化与炎症评分动态。",
+            "what_question": "VCAN与ESM1在各自细胞亚群中如何随拟时序变化，其动态是否与纤维化和炎症评分相关？",
+            "how_to_read": "先看A、B与G、H确认VCAN和ESM1分别富集于哪个亚群，再看C、E与I、K沿拟时序读取基因表达变化，最后结合D、F与J、L理解伴随的通路与评分动态。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "对CFH+ PECs做亚群聚类并绘制UMAP。",
+                "comparison": "CFH+ PECs内部各亚群的分布。",
+                "result": "鉴定出CFH+ PEC的多个亚群，其中C1为VCAN高表达亚群。",
+                "statistics": "C1含137个细胞，正文未报告其他亚群细胞数。"
+              },
+              {
+                "panel": "B",
+                "experiment": "密度图展示VCAN在CFH+ PECs中的表达。",
+                "comparison": "VCAN在不同CFH+ PEC亚群中的表达密度。",
+                "result": "VCAN在C1亚群表达密度高。",
+                "statistics": "正文未报告定量统计量。"
+              },
+              {
+                "panel": "C",
+                "experiment": "CFH+ PECs拟时序轨迹按拟时序着色。",
+                "comparison": "细胞沿拟时序的分支分布。",
+                "result": "呈现分支状发育轨迹。",
+                "statistics": "正文未报告具体拟时序算法参数。"
+              },
+              {
+                "panel": "D",
+                "experiment": "沿拟时序的动态基因表达热图并标注生物学过程。",
+                "comparison": "不同拟时序阶段的基因表达模块。",
+                "result": "富集于肌肉组织发育与凋亡信号等通路。",
+                "statistics": "正文未报告具体富集统计量。"
+              },
+              {
+                "panel": "E",
+                "experiment": "VCAN相对表达沿拟时序的变化。",
+                "comparison": "不同拟时序点的VCAN表达水平。",
+                "result": "VCAN呈早中期一过性升高后下降。",
+                "statistics": "正文未报告具体统计量。"
+              },
+              {
+                "panel": "F",
+                "experiment": "CFH+ PECs中纤维化与炎症评分沿拟时序的动态。",
+                "comparison": "不同拟时序点的评分变化。",
+                "result": "两项评分在轨迹晚期急剧上升。",
+                "statistics": "正文未报告具体统计量。"
+              },
+              {
+                "panel": "G",
+                "experiment": "对内皮细胞做亚群聚类并绘制UMAP。",
+                "comparison": "内皮细胞内部各亚群的分布。",
+                "result": "鉴定出内皮亚群，其中C4为ESM1主要表达亚群。",
+                "statistics": "C4含31个细胞。"
+              },
+              {
+                "panel": "H",
+                "experiment": "密度图展示ESM1在内皮细胞中的表达。",
+                "comparison": "ESM1在不同内皮亚群中的表达密度。",
+                "result": "ESM1在C4亚群占主导。",
+                "statistics": "正文未报告定量统计量。"
+              },
+              {
+                "panel": "I",
+                "experiment": "内皮细胞拟时序轨迹按拟时序着色。",
+                "comparison": "细胞沿拟时序的分支分布。",
+                "result": "呈现复杂的分支轨迹。",
+                "statistics": "正文未报告具体拟时序算法参数。"
+              },
+              {
+                "panel": "J",
+                "experiment": "沿拟时序的动态基因表达热图并标注生物学过程。",
+                "comparison": "不同拟时序阶段的基因表达模块。",
+                "result": "富集于细胞迁移与黏附相关通路。",
+                "statistics": "正文未报告具体富集统计量。"
+              },
+              {
+                "panel": "K",
+                "experiment": "ESM1相对表达沿拟时序的变化。",
+                "comparison": "不同拟时序点的ESM1表达水平。",
+                "result": "ESM1呈先升后持续下降的双相模式。",
+                "statistics": "正文未报告具体统计量。"
+              },
+              {
+                "panel": "L",
+                "experiment": "内皮细胞中纤维化与炎症评分沿拟时序的动态。",
+                "comparison": "不同拟时序点的评分变化。",
+                "result": "两项评分随拟时序渐进改变。",
+                "statistics": "正文未报告具体统计量。"
+              }
+            ],
+            "interpretation": "VCAN在CFH+ PEC中呈一过性升高后下降，与DKD中该群整体下调一致；ESM1在内皮中先升后降，提示其下降与内皮功能障碍进展相关。",
+            "evidence": "亚群定位、表达密度、拟时序轨迹、动态基因模块及纤维化炎症评分共同支持该动态解释。",
+            "boundary": "亚群细胞数较少（C1为137个、C4为31个），拟时序为计算推断而非真实时间序列，正文未报告相关统计量，轨迹方向需谨慎解读。"
+          },
+          {
+            "label": "Figure 4",
+            "caption_zh": "DKD肾小球细胞间通讯网络推断，包含对照与DKD的相互作用圈图、关键发送与接收细胞散点图、上调和下调配体-受体对气泡图，以及胶原信号与APP等应激通路的网络图。",
+            "what_question": "DKD肾小球中哪些细胞类型是信号发送与接收的核心，哪些配体-受体互作发生改变，基质重塑信号由谁驱动？",
+            "how_to_read": "先看A比较对照与DKD的整体互作数量与强度，再看B定位关键发送与接收细胞，随后C、D比较同一配体-受体对在两组间的通讯概率，最后E、F看胶原与应激通路的网络结构。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "推断对照与DKD组各细胞类型间的相互作用并绘制圈图。",
+                "comparison": "对照与DKD组相互作用数量与强度。",
+                "result": "展示两组细胞类型间互作的数量与强度差异。",
+                "statistics": "正文未报告具体互作数量与强度数值。"
+              },
+              {
+                "panel": "B",
+                "experiment": "基于主导传入与传出信号绘制散点图。",
+                "comparison": "各细胞类型作为发送者与接收者的相对地位。",
+                "result": "识别出关键发送与接收细胞群体。",
+                "statistics": "正文未报告具体评分数值。"
+              },
+              {
+                "panel": "C",
+                "experiment": "气泡图展示DKD中上调的配体-受体对。",
+                "comparison": "同一配体-受体对在对照与DKD间的通讯概率。",
+                "result": "列出DKD中上调的信号配体-受体对。",
+                "statistics": "正文未报告具体通讯概率与p值。"
+              },
+              {
+                "panel": "D",
+                "experiment": "气泡图展示DKD中下调的配体-受体对。",
+                "comparison": "同一配体-受体对在对照与DKD间的通讯概率。",
+                "result": "列出DKD中下调的信号配体-受体对。",
+                "statistics": "正文未报告具体通讯概率与p值。"
+              },
+              {
+                "panel": "E",
+                "experiment": "胶原信号通路的网络图。",
+                "comparison": "各细胞类型在胶原信号中的发送与接收关系。",
+                "result": "系膜细胞与CFH+ PECs是胶原信号的主要发送者，驱动基质重塑。",
+                "statistics": "正文未报告具体通讯强度数值。"
+              },
+              {
+                "panel": "F",
+                "experiment": "APP等应激反应通路的网络图。",
+                "comparison": "各细胞类型在应激通路中的互作关系。",
+                "result": "展示额外应激反应通路的网络结构。",
+                "statistics": "正文未报告具体通讯强度数值。"
+              }
+            ],
+            "interpretation": "细胞通讯分析提示基质重塑信号主要由系膜细胞与CFH+ PECs发出，与VCAN在系膜细胞上调、在CFH+ PECs动态变化的观察相呼应。",
+            "evidence": "圈图、发送-接收散点图、配体-受体气泡图与胶原网络图共同支持该解释。",
+            "boundary": "通讯推断基于表达数据计算，未经蛋白互作或功能实验验证，正文未报告具体通讯概率与统计量。"
+          },
+          {
+            "label": "Figure 5",
+            "caption_zh": "ESM1与VCAN的表达、诊断价值及临床相关性验证，包含训练与外部队列的箱线图与ROC曲线、Nephroseq数据库表达与eGFR相关、联合模型ROC、高糖共培养内皮与足细胞表达，以及免疫细胞相关性分析。",
+            "what_question": "VCAN与ESM1在独立队列中是否保持表达差异与诊断价值，其表达是否与eGFR及免疫细胞浸润相关，体外高糖共培养中二者的细胞类型与时间动态如何？",
+            "how_to_read": "先看A、D的训练队列表达与ROC，再看B、E的外部验证，随后C、F看数据库表达与eGFR相关，G看联合模型，H、I比较内皮与足细胞的时间动态，最后J、K读取免疫细胞相关性。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "训练队列（合并GSE30528与GSE96804）中ESM1的差异表达箱线图与ROC曲线。",
+                "comparison": "DKD与对照的ESM1表达及诊断性能。",
+                "result": "ESM1在DKD中下调并具诊断表现。",
+                "statistics": "ROC的AUC数值正文未报告。"
+              },
+              {
+                "panel": "B",
+                "experiment": "独立外部验证队列GSE142025中ESM1的差异表达与ROC。",
+                "comparison": "DKD与对照的ESM1表达及诊断性能。",
+                "result": "ESM1在外部队列中保持差异表达与诊断表现。",
+                "statistics": "AUC数值正文未报告。"
+              },
+              {
+                "panel": "C",
+                "experiment": "Nephroseq数据库中验证ESM1表达并分析其与eGFR的相关性。",
+                "comparison": "ESM1表达水平与eGFR的关系。",
+                "result": "展示ESM1表达与eGFR的相关性。",
+                "statistics": "正文未报告相关系数与p值。"
+              },
+              {
+                "panel": "D",
+                "experiment": "训练队列中VCAN的差异表达箱线图与ROC曲线。",
+                "comparison": "DKD与对照的VCAN表达及诊断性能。",
+                "result": "VCAN在DKD中上调并具诊断表现。",
+                "statistics": "AUC数值正文未报告。"
+              },
+              {
+                "panel": "E",
+                "experiment": "外部验证队列中VCAN的差异表达与ROC。",
+                "comparison": "DKD与对照的VCAN表达及诊断性能。",
+                "result": "VCAN在外部队列中保持差异表达与诊断表现。",
+                "statistics": "AUC数值正文未报告。"
+              },
+              {
+                "panel": "F",
+                "experiment": "Nephroseq数据库中验证VCAN表达并分析其与eGFR的相关性。",
+                "comparison": "VCAN表达水平与eGFR的关系。",
+                "result": "展示VCAN表达与eGFR的相关性。",
+                "statistics": "正文未报告相关系数与p值。"
+              },
+              {
+                "panel": "G",
+                "experiment": "ESM1与VCAN联合逻辑回归模型的ROC曲线。",
+                "comparison": "联合模型与单一基因的诊断性能。",
+                "result": "联合模型显示较强的诊断性能。",
+                "statistics": "AUC数值正文未报告。"
+              },
+              {
+                "panel": "H",
+                "experiment": "人肾小球内皮细胞与足细胞高糖共培养48与96小时后检测ESM1与VCAN表达（GSE220227）。",
+                "comparison": "不同时间点与刺激条件间的表达差异。",
+                "result": "ESM1在内皮细胞呈早期主导性下降。",
+                "statistics": "以均值±标准差呈现，*p<0.05、**p<0.01、ns为不显著，具体数值正文未报告。"
+              },
+              {
+                "panel": "I",
+                "experiment": "同一高糖共培养模型中足细胞的ESM1与VCAN表达（GSE220228）。",
+                "comparison": "不同时间点与刺激条件间的表达差异。",
+                "result": "足细胞VCAN在共培养模型中下调，ESM1在足细胞中几乎检测不到。",
+                "statistics": "以均值±标准差呈现，*p<0.05、**p<0.01、ns为不显著，具体数值正文未报告。"
+              },
+              {
+                "panel": "J",
+                "experiment": "ESM1表达与22种免疫细胞相对丰度的相关性分析。",
+                "comparison": "ESM1表达与各免疫细胞丰度的Spearman相关。",
+                "result": "展示ESM1与多种免疫细胞丰度的相关模式。",
+                "statistics": "CIBERSORT 1000次置换，Spearman秩相关，具体系数正文未报告。"
+              },
+              {
+                "panel": "K",
+                "experiment": "VCAN表达与22种免疫细胞相对丰度的相关性分析。",
+                "comparison": "VCAN表达与各免疫细胞丰度的Spearman相关。",
+                "result": "展示VCAN与多种免疫细胞丰度的相关模式。",
+                "statistics": "CIBERSORT 1000次置换，Spearman秩相关，具体系数正文未报告。"
+              }
+            ],
+            "interpretation": "VCAN上调与ESM1下调在训练与外部队列中均可重复，联合模型表现较强，体外数据支持ESM1下降以内皮细胞为主且发生较早。",
+            "evidence": "训练与外部队列的箱线图与ROC、Nephroseq表达与eGFR相关、联合模型ROC、高糖共培养时间动态及免疫浸润相关分析共同支持该结论。",
+            "boundary": "正文未报告各ROC的AUC数值、相关系数与体外比较的具体统计量，诊断性能的定量强度与临床适用性仍需前瞻性队列验证。"
+          },
+          {
+            "label": "Figure 6",
+            "caption_zh": "db/db糖尿病小鼠体内验证与分子对接预测，包含VCAN与ESM1的qRT-PCR、血清ESM1蛋白水平及其与ACR和NETs的相关性、MPO/CitH3/VCAN/ESM1免疫组化与定量，以及两个化合物的分子对接可视化。",
+            "what_question": "db/db小鼠肾脏中VCAN、ESM1与NET标志物是否发生与患者一致的改变，血清ESM1是否与白蛋白尿和NETs相关，是否存在潜在靶向化合物？",
+            "how_to_read": "先看A确认肾脏mRNA变化，再看B、C读取血清ESM1与ACR及NETs的相关性，随后D看免疫组化蛋白定位与定量，最后E、F读取分子对接的结合模式与关键残基。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "qRT-PCR检测对照与DKD小鼠肾脏VCAN与ESM1 mRNA表达。",
+                "comparison": "CTRL与DKD小鼠的mRNA相对表达。",
+                "result": "展示两组间VCAN与ESM1的mRNA表达差异。",
+                "statistics": "正文未报告具体倍数变化与p值。"
+              },
+              {
+                "panel": "B",
+                "experiment": "检测血清ESM1蛋白水平并做其与尿白蛋白/肌酐比值（ACR）的Pearson相关分析。",
+                "comparison": "CTRL与DKD的血清ESM1水平及ESM1与ACR的相关性。",
+                "result": "血清ESM1水平降低并与ACR相关。",
+                "statistics": "Pearson相关，具体系数与p值正文未报告。"
+              },
+              {
+                "panel": "C",
+                "experiment": "血清ESM1浓度与NETs表达（平均OD450）的Pearson相关分析。",
+                "comparison": "血清ESM1与NETs水平的关系。",
+                "result": "展示血清ESM1与NETs表达的相关性。",
+                "statistics": "Pearson相关，具体系数与p值正文未报告。"
+              },
+              {
+                "panel": "D",
+                "experiment": "免疫组化检测肾脏MPO、CitH3、VCAN与ESM1并做定量分析，比例尺60 μm。",
+                "comparison": "CTRL与DKD组的染色强度与定量结果。",
+                "result": "DKD组VCAN与NET标志物升高，ESM1降低。",
+                "statistics": "以均值±标准误呈现，*p<0.05、p<0.01、*p<0.001、****p<0.0001，具体数值正文未报告。"
+              },
+              {
+                "panel": "E",
+                "experiment": "分子对接展示ZINC005331与靶蛋白的结合模式。",
+                "comparison": "化合物与靶蛋白三维结构及关键互作残基。",
+                "result": "展示与ARG-305、THR-324、TYR-326、HIS-153的相互作用。",
+                "statistics": "正文未报告对接打分与结合自由能。"
+              },
+              {
+                "panel": "F",
+                "experiment": "分子对接展示ZINC171091与靶蛋白的结合模式。",
+                "comparison": "化合物与靶蛋白的氢键相互作用。",
+                "result": "展示与GLN-118和SER-119的氢键作用。",
+                "statistics": "正文未报告对接打分与结合自由能。"
+              }
+            ],
+            "interpretation": "动物模型复现了VCAN与NET标志物升高、ESM1降低的模式，血清ESM1与白蛋白尿严重程度相关，分子对接提示存在潜在靶向化合物。",
+            "evidence": "qRT-PCR、血清ESM1检测与ACR及NETs相关分析、免疫组化定量及分子对接可视化共同支持该结论。",
+            "boundary": "小鼠每组n=6且仅20周龄单一时间点，分子对接为探索性计算机模拟，正文未报告具体统计量与结合亲和力，靶向化合物的有效性未经实验验证。"
+          }
+        ]
+      },
+      "ai_status": "success_retried",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    },
+    "doi:10.1080/19490976.2026.2728329": {
+      "id": "doi:10.1080/19490976.2026.2728329",
+      "title": "Gut microbiota dysbiosis shapes brain T-cell immunity in accelerated aging.",
+      "authors": [
+        "Peschke L",
+        "Nguyen TT",
+        "Leite JA",
+        "Falony G",
+        "Nguyen VTT",
+        "Kattimani Y",
+        "Ramphal N",
+        "Jasser R",
+        "Bos NN",
+        "Regen T",
+        "Tüscher O",
+        "Waisman A",
+        "Vieira-Silva S",
+        "Endres K"
+      ],
+      "journal": "Gut microbes",
+      "year": "2026",
+      "doi": "10.1080/19490976.2026.2728329",
+      "pmcid": "PMC13596893",
+      "pmid": "42750596",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1080/19490976.2026.2728329",
+        "https://europepmc.org/articles/PMC13596893",
+        "https://europepmc.org/articles/PMC13596893?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 10,
+      "relevance_evidence": [
+        "aging: aging, senescence, age-related",
+        "multiomics: transcriptom"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1.",
+          "caption": "Phenotypic characterization of accelerated aging in SAMP8 mice compared with SAMR1 mice. A, Grip strength of SAMP8 and age-matched SAMR1 mice at 3, 5, 7, and 10 months of age. Grip strength was measured using a Newton meter and normalized to body weight (gramforce/weight). Data are presented as mean ± SEM. Statistical analyses were performed using Brown–Forsythe and Welch ANOVA followed by Dunnett's T3 multiple-comparisons test ( N = 336; n = 36–52, male and female for SAMR1 and SAMP8). B, Spatial working memory assessed by the T-maze test in 10-month-old SAMP8 and SAMR1 mice. Data are presented as the percentage of right choice (mean ± SEM). Statistical analyses were performed using an unpaired two-tailed Mann‒Whitney U test ( N = 17; n = 8 [3 males, 5 females] for SAMR1; n = 9 [4 males, 5 females] for SAMP8). C, Representative transcriptomic analysis of prefrontal cortex genes in male 3- and 10-month-old SAMP8 mice, presented as fold change relative to age-matched SAMR1 mice ( n = 4 animals per age, genotype). Differentially expressed genes were identified using the DESeq2 package and a BH-adjusted P value < 0.01. Exact P values and sample sizes are provided in Supplementary Table S01. *, P < 0.05; **, P < 0.01; ***, P < 0.001. Abbreviation: mo, months.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0001_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0001_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0001_C.webp",
+          "local_url": "generated/assets/PMC13596893/fig-01.webp",
+          "asset_path": "generated/assets/PMC13596893/fig-01.webp",
+          "asset_bytes": 73048,
+          "asset_sha256": "d86dbe2651f8587f433abbc7102f3b4c0c29d1a0ef329b54fcba89cc1fc122fd",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 2.",
+          "caption": "Culture-based view of fecal microbiota composition in SAMR1 and SAMP8 mice at different ages. Fecal pellets were collected at 3, 5, 7, and 10 months of age ( N = 335; n = 27–52, male and female for SAMR1 and SAMP8), plated on selective media, and quantified as colony-forming units (CFUs) per mg of feces. CFUs grown on selective agar for Lactobacillaceae (A), on Schaedler agar (B), and on agar selective for Enterobacteriaceae (C). Statistical analysis was performed by Kruskal–Wallis test followed by Dunn's multiple comparisons test (Supplementary Table S02); *, P < 0.05; **, P < 0.01; ***, P < 0.001). Abbreviations: mo, months.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0002_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0002_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0002_C.webp",
+          "local_url": "generated/assets/PMC13596893/fig-02.webp",
+          "asset_path": "generated/assets/PMC13596893/fig-02.webp",
+          "asset_bytes": 52366,
+          "asset_sha256": "43dea912987033f02041439723b20a9776968e5c80777025c0aa7b422cf34142",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 3.",
+          "caption": "Age- and strain-related differences in gut microbiota diversity and composition as revealed by 16S rRNA sequencing. A, Principal coordinates analysis of inter-individual differences (genus-level Bray–Curtis dissimilarity) in the microbiota profiles of SAMP8 and SAMR1 mice ( n = 4 per sex, per genotype, per age). Ellipses represent 95% confidence intervals around the group centroids. B, Explanatory power of variables on variation in microbial composition in SAMP8 and SAMR1 mice (dbRDA, genus-level Bray‒Curtis dissimilarity), either independently (single effect sizes in black, statistical significance indicated by asterisks) or in a multivariable model (cumulative effect sizes in gray; Supplementary Table S04). The cutoff for nonsignificant redundant contribution to the multivariable model is represented by the red dashed line. C, Strain-dependent differences in microbial diversity ( n = 8 per genotype, per age; Kruskal‒Wallis, χ 2 = 11.37, P adj = 0.0099; Supplementary Table S05). D, Strain- and age-dependent differences in relative abundances (square root transformed) at genus level are shown only for genera that showed significant differences between SAMP8 and age-matched SAMR1 for at least one age stage ( n = 8 per genotype, per age; Kruskal‒Wallis ( α = 0.1), post hoc Dunn's test, statistical significance was derived from two-sided testing and adjusted for multiple testing ( P adj, BH method); Supplementary Table S05). Trends observed for most taxa were consistent in both sexes (Supplementary Figure S01; Supplementary Table S06). *, P < 0.05; **, P < 0.01; ***, P < 0.001.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0003_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0003_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0003_C.webp",
+          "local_url": "generated/assets/PMC13596893/fig-03.webp",
+          "asset_path": "generated/assets/PMC13596893/fig-03.webp",
+          "asset_bytes": 144752,
+          "asset_sha256": "fb0e2ea3eda19b933eed77b3463450fc1535318e98e3efc10d3feb3ce0430a8f",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 4.",
+          "caption": "Differences in brain T-cell composition in accelerated aging. A, Principal component analysis (PCA) of interindividual differences in brain T-cell composition in SAMR1 and SAMP8 mice ( N = 31; n = 8 young SAMR1, n = 8 aged SAMR1, n = 8 young SAMP8, n = 7 aged SAMP8; one sample was removed during FACS analysis). PCA was performed on scaled immune cell frequencies. B, Explanatory power of variables on variation in brain T-cell composition in SAMP8 and SAMR1 mice ( N = 31; RDA, scaled immune cell frequencies, Euclidian distance; Supplementary Table S07), either independently (single effect sizes in black, statistical significance indicated by asterisks) or in a multivariable model (cumulative effect sizes in gray). The cutoff for nonsignificant redundant contribution to the multivariable model is represented by the red dashed line. C-F, Strain- and age-dependent differences in immune cell frequencies and ratios in the brain including CD4⁺ and CD8⁺ T cells and ratio (C), pro-inflammatory cytokine-producing T-cell subsets (D,E), and Tregs (F). Ratios are presented on a log10 scale for visualization. Statistical analyses were performed on non-transformed data ( N = 31; Kruskal‒Wallis, post hoc Dunn's test; statistical significance was derived from two-sided testing and adjusted for multiple testing (P adj, BH method); Supplementary Table S08). Representative FACS plots are provided in Supplementary Figure S02. *, P < 0.05; **, P < 0.01; ***, P < 0.001.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0004_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0004_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0004_C.webp",
+          "local_url": "generated/assets/PMC13596893/fig-04.webp",
+          "asset_path": "generated/assets/PMC13596893/fig-04.webp",
+          "asset_bytes": 139190,
+          "asset_sha256": "db835aa28a3978159a23149774dd8eee53a1d93843e0fa883271fe334299bb5d",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 5.",
+          "caption": "Microbial features are linked to immune signals. A, Explanatory power of variables on variation in microbial composition in SAMP8 and SAMR1 mice ( N = 31; n = 8 young SAMR1, n = 8 aged SAMR1, n = 8 young SAMP8, n = 7 aged SAMP8; dbRDA, genus-level Bray‒Curtis dissimilarity; Supplementary Table S11), either independently (single effect sizes in black, statistical significance indicated by asterisks) or in a multivariable model (cumulative effect sizes in gray). The cutoff for nonsignificant redundant contribution to the multivariable model is represented by the red dashed line. B, Correlations between immune cell frequencies and microbiota features. Spearman correlations were computed between all immune cell frequencies and ratios and microbiota features that were identified in preceding analysis. The figure shows a selected subset of immune cell populations highlighted in the results, whereas significant correlations involving all immune cells are shown in Supplementary Figure S05. Features are ordered by hierarchical clustering ( N = 31; Spearman correlations; Supplementary Table S12). C, Intestinimonas positively correlates with the CD4⁺/CD8⁺ ratio in the brain ( N = 31; Spearman correlation, ρ = 0.77, P adj < 0.001) but negatively correlates with the CD4⁺/CD8⁺ ratio in the spleen ( ρ = −0.66, P adj = 0.006). Values shown in the plots are square-root transformed for visualization only. Statistical significance for Spearman correlations was derived from two-sided tests using untransformed data and adjusted for multiple testing ( P adj, BH method). *, P < 0.05; **, P < 0.01; ***, P < 0.001.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0005_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0005_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13596893.1/KGMI_A_2728329_F0005_C.webp",
+          "local_url": "generated/assets/PMC13596893/fig-05.webp",
+          "asset_path": "generated/assets/PMC13596893/fig-05.webp",
+          "asset_bytes": 104218,
+          "asset_sha256": "76b408ad9c4d17a4645a8642c65b0a4ea6530a7fd19d1767770095af6afc9ad2",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "15.3",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-28T06:55:09Z"
+      },
+      "journal_display": "Gut microbes（IF 15.3；JCR SCI Q1）",
+      "updated_at": "2026-10-28T07:01:50Z",
+      "article": {
+        "title_zh": "肠道菌群失调塑造加速衰老中的脑T细胞免疫",
+        "lead": "这项研究以衰老加速小鼠SAMP8与衰老抵抗对照SAMR1为模型，在青年与老年两个阶段同时刻画粪便菌群与脑、脾T细胞表型，试图把肠道菌群变化与脑内促炎性T细胞反应联系起来。作者报告SAMP8小鼠在青年期即出现菌群组成与多样性的差异，而脑内CD4⁺/CD8⁺比值升高、促炎细胞因子产生型CD4⁺ T细胞增多，脾脏则呈相反方向的比值变化。研究进一步发现部分菌属与免疫细胞频率相关，其中Intestinimonas与脑和脾的CD4⁺/CD8⁺比值呈方向相反的关联。需要强调的是，这是一项探索性、相关性为主的研究，不能据此推断因果。",
+        "background": "肠道菌群、免疫系统与中枢神经系统之间的双向交流被称为肠-脑轴，被认为在维持脑健康中起重要作用，其紊乱可能与神经炎症和认知下降相关。然而，肠道菌群与年龄相关脑免疫改变之间的具体关系仍不清楚。SAMP8小鼠是一种衰老加速模型，SAMR1为其衰老抵抗对照，二者为在同一设施内繁育的同期动物，便于在控制年龄与性别的前提下比较菌群与免疫表型。作者据此设计多队列研究，先确认SAMP8的加速衰老表型，再分别从培养法和16S rRNA基因测序两个层面描述菌群，并用流式细胞术刻画脑与脾的T细胞。",
+        "research_question": "研究要回答的核心问题是：在衰老加速的SAMP8小鼠中，肠道菌群组成是否与脑内T细胞免疫表型存在关联，且这种关联是否随年龄和性别而变化。具体而言，作者比较SAMP8与SAMR1在青年成年期和老年期的菌群多样性、属水平丰度，以及脑和脾中CD4⁺与CD8⁺ T细胞频率、比值、活化状态和促炎细胞因子表达。作者还检验菌群特征能在多大程度上解释免疫细胞频率的变异，并寻找与免疫指标相关的具体菌属。由于研究为探索性设计，问题定位在生成假设而非验证因果。",
+        "study_design": "研究使用四个独立的SAMP8与SAMR1小鼠队列，雌雄兼有，动物源自Envigo并在美因茨约翰内斯古腾堡大学设施内繁育。第一队列为纵向队列，在3、5、7、10月龄重复评估握力并进行基于培养的粪便活菌定量；另有一小队列在10月龄进行T迷宫测试。第二类为独立的横断面队列，依据培养法结果选取青年成年（14–19周）与老年（33–52周）阶段，用于粪便16S rRNA基因测序与脑、脾T细胞流式表征。第四队列为独立横断面队列，仅用雄性SAMP8与SAMR1在3和10月龄进行前额叶皮层转录组分析。作者明确说明未做事前功效分析，样本量依据实验目的确定，属探索性研究，并遵循3Rs原则尽量减少动物使用。",
+        "methods": "动物实验经莱茵兰-普法尔茨州调查局伦理委员会批准（方案号E3 G-19-1-025），免疫表型实验用CO₂吸入处死，转录组实验用异氟烷吸入后断头，组织立即采集。行为学方面，3、5、7、10月龄小鼠进行握力测试（总N = 336），10月龄小鼠进行T迷宫测试（N = 17；SAMR1 n = 8，SAMP8 n = 9），装置与流程沿用作者既往研究。转录组方面，雄性3和10月龄小鼠每年龄每基因型n = 4，取前额叶皮层，用RNeasy Mini kit提取RNA并经DNase处理，以1000 ng起始量、10个PCR循环建库（Illumina Stranded mRNA Prep Kit），Bioanalyzer与Qubit质控后在Illumina NextSeq2000 P1测序，bclfastq（v2.19）拆分，STAR（v2.7.10b）比对GRCm39与Ensembl release 109注释，featureCounts计数，DESeq2（v1.52.0）做差异表达，FDR（BH）<0.01且倍数变化阈值设为1。培养法方面，3、5、7、10月龄粪便（总N = 336）涂布选择性培养基，计数Lactobacillaceae、Schaedler菌群与Enterobacteriaceae的菌落形成单位。测序方面，取结肠粪便用QIAamp Fast DNA Stool Mini Kit提取DNA，以15 ng起始量扩增16S rRNA基因V4区（515F/806R引物，含接头与异质性间隔序列），15个循环PCR加入唯一双索引条形码，Bioanalyzer质控后测序。统计上，菌群组成变异用dbRDA（属水平Bray–Curtis距离）评估年龄、年龄类别、品系与性别的解释力，多样性与属丰度用Kruskal–Wallis检验加Dunn事后检验（属水平α = 0.1，BH校正），并用留一法敏感性分析验证；脑T细胞组成用RDA（标准化频率、欧氏距离）评估，免疫指标用Kruskal–Wallis加Dunn检验，菌群与免疫的关联用Spearman相关并做BH校正。数据可得性在提供的正文中未报告。",
+        "results": "作者首先用培养法在3、5、7、10月龄比较活菌负荷，发现品系差异主要集中在生命早期：3月龄SAMP8在Schaedler琼脂上的厌氧共生菌计数更高（P adj = 0.0405），Lactobacillaceae也更高（P adj = 0.0021）；5、7、10月龄总Schaedler计数两品系相当，提示可培养菌群随年龄趋于相似。但7月龄SAMP8的Enterobacteriaceae显著更高（P adj = 0.0007），10月龄SAMP8仍更高（P adj = 0.0294）而Lactobacillaceae更低（P adj = 0.0185）。这些结果用于指导后续测序队列的年龄选择。16S rRNA测序显示，品系是唯一显著的独立驱动因素，解释7%的组成变异（dbRDA，R² adj = 7%，P adj = 0.02），加入性别与年龄类别后多变量模型累计解释15.4%。菌群多样性存在不依赖年龄的品系差异（Kruskal–Wallis，χ² = 11.37，ε²R = 0.37，P = 0.0099），SAMP8在青年与老年均高于SAMR1。属水平上，青年SAMP8的Mannheimia更低（Dunn，r = −0.94，P = 0.0002），Parasutterella、CHKCI006、Erysipelatoclostridium、Ruminococcus B也更低，而Odoribacter、Oscillibacter、Intestinimonas更高；老年阶段多数差异消失，仅Intestinimonas仍更高、Erysipelatoclostridium仍更低，且老年SAMP8的Eubacterium F显著高于青年SAMP8与老年SAMR1（χ² = 17.06，ε²R = 0.55，P adj = 0.0261）。留一法敏感性分析中所有关联保持显著，多数趋势在两性间一致，Parasutterella与Eubacterium F呈性别特异模式。免疫方面，脑T细胞组成受品系显著影响，解释19.2%变异（RDA，R² adj = 19.2%，P adj = 0.004），加入年龄与年龄类别后模型累计解释39%，性别无额外贡献；正文指出青年与老年SAMP8脑内CD4⁺/CD8⁺比值更高、促炎细胞因子产生型CD4⁺ T细胞更多，而脾脏CD4⁺/CD8⁺比值更低，仅老年SAMP8脾脏显示效应/初始T细胞比值升高及促炎CD4⁺、CD8⁺ T细胞增多。相关性分析中，九个菌属与免疫细胞频率或比值相关，Intestinimonas与脑CD4⁺/CD8⁺比值正相关（ρ = 0.77，P adj < 0.001）、与脾该比值负相关（ρ = −0.66，P adj = 0.006），且CD8⁺ T细胞与菌群组成变异的关联强于品系、年龄与性别。",
+        "limitations": "研究为探索性设计，作者明确未做事前功效分析，样本量依据实验目的确定，因此结果应视为生成假设的初步证据。16S测序队列每个性别、基因型、年龄组合仅n = 4，作者因此未做完整的性别分层分析，仅事后检查性别特异性，并承认小样本下用留一法敏感性分析验证关联。研究以相关性分析连接菌群与免疫指标，未进行菌群移植、定植或清除等功能实验，无法确立因果方向。培养法只覆盖可在特定条件下生长的菌群部分，作者亦指出其局限性。此外，实验过程与数据收集未设盲，可能引入偏倚；正文未报告数据可得性信息。脑内T细胞变化究竟源于浸润还是局部扩增，材料未提供直接证据。",
+        "takeaways": "在SAMP8衰老加速小鼠中，青年期即出现菌群组成与多样性的品系差异，多数差异随年龄减弱，仅少数菌属（如Intestinimonas）持续存在。脑与脾呈现方向相反的T细胞改变：脑内CD4⁺/CD8⁺比值与促炎CD4⁺ T细胞升高，脾脏比值降低而老年期活化增强，提示年龄与组织特异的免疫重塑。部分菌属与免疫指标相关，Intestinimonas与脑、脾CD4⁺/CD8⁺比值呈相反关联，CD8⁺ T细胞与菌群变异关联较强。整体证据支持菌群失调可能与脑内促炎T细胞反应相关并参与加速脑衰老的假设，但因果性尚待功能实验验证。",
+        "figure_notes": [
+          {
+            "label": "Figure 1",
+            "caption_zh": "SAMP8与SAMR1小鼠加速衰老表型的表征：A为3、5、7、10月龄握力（按体重归一化，均值±SEM，Brown–Forsythe与Welch ANOVA后Dunnett T3检验，N = 336）；B为10月龄T迷宫空间工作记忆（右选择百分比，单侧双尾Mann–Whitney U检验，N = 17）；C为雄性3和10月龄SAMP8前额叶皮层转录组相对同龄SAMR1的倍数变化（每年龄每基因型n = 4，DESeq2，BH校正P < 0.01）。",
+            "what_question": "该图要确认SAMP8小鼠相对SAMR1确实表现出加速衰老表型，包括运动功能、空间工作记忆与脑转录组的改变，从而为后续菌群与免疫比较提供表型前提。",
+            "how_to_read": "先看A的握力随月龄的纵向变化，比较同月龄两品系的差异；再看B中10月龄T迷宫右选择比例的两组分布；最后看C中差异表达基因的倍数变化方向与幅度，注意其仅基于雄性且每年龄每基因型n = 4。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "3、5、7、10月龄SAMP8与同龄SAMR1小鼠握力测试，按体重归一化为gramforce/weight。",
+                "comparison": "同月龄SAMP8与SAMR1比较，并观察随月龄的变化。",
+                "result": "正文与图注未给出各月龄的具体数值与逐项P值，仅说明用于确认加速衰老表型；具体数值正文未报告。",
+                "statistics": "均值±SEM，Brown–Forsythe与Welch ANOVA后Dunnett T3多重比较，N = 336，每组n = 36–52。"
+              },
+              {
+                "panel": "B",
+                "experiment": "10月龄SAMP8与SAMR1小鼠T迷宫测试，评估空间工作记忆。",
+                "comparison": "SAMP8与SAMR1的右选择百分比比较。",
+                "result": "正文未报告具体百分比与P值，仅将T迷宫作为加速衰老表型确认的一部分。",
+                "statistics": "非配对双尾Mann–Whitney U检验，N = 17；SAMR1 n = 8（3雄5雌），SAMP8 n = 9（4雄5雌）。"
+              },
+              {
+                "panel": "C",
+                "experiment": "雄性3和10月龄SAMP8与同龄SAMR1前额叶皮层转录组测序，展示差异表达基因倍数变化。",
+                "comparison": "SAMP8相对同龄SAMR1的基因表达倍数变化，并比较3月龄与10月龄。",
+                "result": "正文未列出具体差异基因数目或名称，仅说明转录组改变支持加速衰老表型；具体数值正文未报告。",
+                "statistics": "DESeq2，BH校正P < 0.01，倍数变化阈值设为1；每年龄每基因型n = 4。"
+              }
+            ],
+            "interpretation": "该图提供SAMP8加速衰老的行为与分子证据，是后续将菌群与免疫差异归因于加速衰老表型的前提；但各面板的具体效应量在正文中未完整报告。",
+            "evidence": "图注给出握力N = 336、T迷宫N = 17与转录组n = 4的设计与统计方法，正文说明加速衰老表型由行为表现下降与脑转录组改变共同确认。",
+            "boundary": "转录组仅含雄性且样本量小，行为学未设盲，图注未给出逐项P值与效应量，因此不能据此量化衰老加速的程度。"
+          },
+          {
+            "label": "Figure 2",
+            "caption_zh": "基于培养法的SAMR1与SAMP8不同月龄粪便菌群组成：3、5、7、10月龄粪便（N = 335，每组n = 27–52，雌雄兼有）涂布选择性培养基，以每毫克粪便菌落形成单位计数；A为Lactobacillaceae，B为Schaedler琼脂，C为Enterobacteriaceae选择性琼脂；Kruskal–Wallis后Dunn多重比较。",
+            "what_question": "该图要回答在体可培养的粪便菌群负荷是否随月龄和品系变化，以及品系差异主要出现在生命早期还是晚期，从而指导后续测序队列的年龄选择。",
+            "how_to_read": "每个面板含四个年龄段的SAMR1与SAMP8箱线对，先比较同月龄两品系，再沿月龄观察趋势；注意A、B的量级为10⁵ CFU/mg，C为10² CFU/mg，纵轴尺度不同。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "Lactobacillaceae选择性琼脂培养计数，单位CFU/mg粪便。",
+                "comparison": "同月龄SAMP8与SAMR1比较。",
+                "result": "3月龄SAMP8高于SAMR1（P adj = 0.0021），10月龄SAMP8低于SAMR1（P adj = 0.0185）；5、7月龄差异正文未报告。",
+                "statistics": "Kruskal–Wallis后Dunn多重比较，N = 335，每组n = 27–52。"
+              },
+              {
+                "panel": "B",
+                "experiment": "Schaedler琼脂培养计数总厌氧共生菌，单位CFU/mg粪便。",
+                "comparison": "同月龄SAMP8与SAMR1比较。",
+                "result": "3月龄SAMP8高于SAMR1（P adj = 0.0405），5、7、10月龄两品系相当。",
+                "statistics": "Kruskal–Wallis后Dunn多重比较，N = 335。"
+              },
+              {
+                "panel": "C",
+                "experiment": "Enterobacteriaceae选择性琼脂培养计数，单位CFU/mg粪便。",
+                "comparison": "同月龄SAMP8与SAMR1比较。",
+                "result": "7月龄SAMP8高于SAMR1（P adj = 0.0007），10月龄SAMP8仍高于SAMR1（P adj = 0.0294）；3、5月龄差异正文未报告。",
+                "statistics": "Kruskal–Wallis后Dunn多重比较，N = 335。"
+              }
+            ],
+            "interpretation": "培养法提示品系差异在早期最明显、总体可培养菌群随年龄趋同，但Enterobacteriaceae在老年SAMP8持续升高、Lactobacillaceae在老年降低，构成后续测序与免疫分析的切入点。",
+            "evidence": "正文报告了3月龄Schaedler与Lactobacillaceae升高、7与10月龄Enterobacteriaceae升高、10月龄Lactobacillaceae降低的具体校正P值。",
+            "boundary": "培养法只捕获在特定条件下可生长的菌群部分，作者亦明确指出这一局限，因此不能代表整体菌群组成。"
+          },
+          {
+            "label": "Figure 3",
+            "caption_zh": "16S rRNA测序揭示的菌群多样性与组成的年龄与品系差异：A为属水平Bray–Curtis距离的PCoA（每性别、基因型、年龄n = 4，椭圆为95%置信区间）；B为dbRDA中各变量单独与多变量累计解释力；C为青年与老年两品系的Shannon多样性（每基因型每年龄n = 8，Kruskal–Wallis，χ² = 11.37，P adj = 0.0099）；D为至少在一年龄阶段存在品系差异的九个属的相对丰度（平方根转换，Kruskal–Wallis α = 0.1，Dunn事后检验，BH校正）。",
+            "what_question": "该图要回答菌群整体组成与多样性由品系、年龄还是性别驱动，以及哪些属在青年和老年阶段区分SAMP8与SAMR1。",
+            "how_to_read": "先看A中各组样本在PC1（44.4%）与PC2（13.6%）上的分布与重叠，再看B中黑色单变量与灰色累计效应量及红色虚线阈值，随后看C的多样性箱线图，最后在D中按属逐一比较青年与老年、SAMP8与SAMR1。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "属水平Bray–Curtis距离的PCoA，展示个体间菌群差异。",
+                "comparison": "SAMP8与SAMR1各年龄、性别组的样本分布。",
+                "result": "PC1解释44.4%、PC2解释13.6%的变异，组间存在部分重叠；具体分组坐标正文未报告。",
+                "statistics": "PCoA基于属水平Bray–Curtis距离，每性别、基因型、年龄n = 4。"
+              },
+              {
+                "panel": "B",
+                "experiment": "dbRDA评估年龄（周）、年龄类别、品系与性别对菌群组成变异的解释力。",
+                "comparison": "各变量单独效应（黑色）与多变量模型累计效应（灰色）比较。",
+                "result": "品系是唯一显著的独立驱动因素，解释7%（R² adj = 7%，P adj = 0.02）；加入性别与年龄类别后累计解释15.4%，年龄（周）达到非显著冗余贡献的红色虚线阈值。",
+                "statistics": "dbRDA，属水平Bray–Curtis距离，每性别、基因型、年龄n = 4。"
+              },
+              {
+                "panel": "C",
+                "experiment": "青年与老年SAMR1、SAMP8的Shannon多样性比较。",
+                "comparison": "品系间比较及品系内年龄间比较。",
+                "result": "SAMP8在青年与老年均显著高于SAMR1，两品系内青年与老年之间无显著差异。",
+                "statistics": "Kruskal–Wallis，χ² = 11.37，ε²R = 0.37，P = 0.0099；每基因型每年龄n = 8。"
+              },
+              {
+                "panel": "D",
+                "experiment": "九个属的平方根转换相对丰度箱线图，每属四个箱线对应青年与老年的两品系。",
+                "comparison": "同年龄SAMP8与SAMR1比较，以及SAMP8青年与老年比较。",
+                "result": "青年SAMP8的Odoribacter、Oscillibacter、Intestinimonas更高，Parasutterella、CHKCI006、Erysipelatoclostridium、Ruminococcus B、Mannheimia更低；老年仅Intestinimonas与Eubacterium F更高、Erysipelatoclostridium更低，Eubacterium F在老年SAMP8显著高于青年SAMP8与老年SAMR1（χ² = 17.06，ε²R = 0.55，P adj = 0.0261）。",
+                "statistics": "Kruskal–Wallis（α = 0.1）后Dunn检验，双尾并做BH校正；每基因型每年龄n = 8；青年Mannheimia r = −0.94，P = 0.0002。"
+              }
+            ],
+            "interpretation": "菌群差异以品系为主要驱动且在青年期最丰富，随年龄部分趋同，仅少数属持续或新出现差异，提示加速衰老基因型在生命早期即塑造了菌群。",
+            "evidence": "正文报告了品系解释7%变异、多样性χ² = 11.37与P = 0.0099、Eubacterium F的χ² = 17.06与P adj = 0.0261，以及各属的r与P值；留一法敏感性分析中关联均保持显著。",
+            "boundary": "每性别、基因型、年龄仅n = 4，未做完整性别分层分析；属水平α = 0.1较宽松，部分属差异仅为提示性；测序数据可得性正文未报告。"
+          },
+          {
+            "label": "Figure 4",
+            "caption_zh": "加速衰老中脑T细胞组成的差异：A为脑T细胞组成的主成分分析（N = 31；青年SAMR1 n = 8、老年SAMR1 n = 8、青年SAMP8 n = 8、老年SAMP8 n = 7，一例在FACS分析中剔除）；B为RDA中各变量单独与多变量累计解释力；C–F为脑内CD4⁺与CD8⁺ T细胞频率及比值、促炎细胞因子产生型T细胞亚群与Treg的频率（比值以log10展示，统计基于未转换数据，Kruskal–Wallis后Dunn检验，BH校正）。",
+            "what_question": "该图要回答加速衰老是否伴随脑内T细胞组成、CD4⁺/CD8⁺比值、促炎细胞因子表达与Treg比例的品系和年龄差异。",
+            "how_to_read": "先看A中样本在主成分空间的分布与重叠，再看B中品系、年龄与性别的解释力，随后在C–F中按细胞类型比较青年与老年的SAMP8与SAMR1，注意比值以log10展示而统计基于原始数据。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "对标准化免疫细胞频率做主成分分析，展示脑T细胞组成的个体间差异。",
+                "comparison": "青年与老年的SAMP8与SAMR1样本分布。",
+                "result": "正文未报告各主成分解释比例与分组坐标，仅说明品系显著影响脑T细胞组成。",
+                "statistics": "PCA基于标准化免疫细胞频率，N = 31。"
+              },
+              {
+                "panel": "B",
+                "experiment": "RDA评估品系、年龄、年龄类别与性别对脑T细胞组成变异的解释力。",
+                "comparison": "各变量单独效应（黑色）与多变量累计效应（灰色）比较。",
+                "result": "品系解释19.2%变异（R² adj = 19.2%，P adj = 0.004），加入年龄与年龄类别后累计解释39%，性别无额外贡献。",
+                "statistics": "RDA，标准化免疫细胞频率，欧氏距离，N = 31。"
+              },
+              {
+                "panel": "C",
+                "experiment": "脑内CD4⁺与CD8⁺ T细胞频率及CD4⁺/CD8⁺比值。",
+                "comparison": "青年与老年的SAMP8与SAMR1比较。",
+                "result": "青年与老年SAMP8脑内CD4⁺/CD8⁺比值均高于SAMR1；具体频率数值与逐项P值正文未报告。",
+                "statistics": "Kruskal–Wallis后Dunn检验，双尾并BH校正，N = 31。"
+              },
+              {
+                "panel": "D",
+                "experiment": "脑内产生促炎细胞因子的T细胞亚群（以IL-17A与IFNγ为标志）。",
+                "comparison": "青年与老年的SAMP8与SAMR1比较。",
+                "result": "SAMP8脑内促炎细胞因子产生型CD4⁺ T细胞水平高于SAMR1；具体数值与P值正文未报告。",
+                "statistics": "Kruskal–Wallis后Dunn检验，BH校正，N = 31。"
+              },
+              {
+                "panel": "E",
+                "experiment": "脑内促炎细胞因子产生型T细胞亚群的进一步刻画。",
+                "comparison": "青年与老年的SAMP8与SAMR1比较。",
+                "result": "正文未单独报告该面板的具体结果与统计量。",
+                "statistics": "Kruskal–Wallis后Dunn检验，BH校正，N = 31；具体统计量正文未报告。"
+              },
+              {
+                "panel": "F",
+                "experiment": "脑内Treg频率。",
+                "comparison": "青年与老年的SAMP8与SAMR1比较。",
+                "result": "正文未报告该面板的具体结果与统计量。",
+                "statistics": "Kruskal–Wallis后Dunn检验，BH校正，N = 31；具体统计量正文未报告。"
+              }
+            ],
+            "interpretation": "脑内T细胞组成受品系强烈影响并随年龄进一步分化，SAMP8呈现更高的CD4⁺/CD8⁺比值与更多促炎CD4⁺ T细胞，符合加速衰老伴随脑内促炎免疫环境的假设。",
+            "evidence": "正文报告品系解释19.2%变异（P adj = 0.004）、多变量模型累计39%，以及SAMP8脑内CD4⁺/CD8⁺比值与促炎CD4⁺ T细胞升高。",
+            "boundary": "样本量小且一例在FACS分析中被剔除；C–F中多个面板的具体数值与P值正文未报告；脑内T细胞变化是浸润还是局部扩增无法从本图判断。"
+          },
+          {
+            "label": "Figure 5",
+            "caption_zh": "菌群特征与免疫信号的关联：A为dbRDA中各变量对菌群组成变异的解释力（N = 31；青年SAMR1 n = 8、老年SAMR1 n = 8、青年SAMP8 n = 8、老年SAMP8 n = 7，属水平Bray–Curtis距离）；B为免疫细胞频率与菌群特征间的Spearman相关矩阵（按层次聚类排序，仅展示结果中强调的免疫细胞子集）；C为Intestinimonas与脑及脾CD4⁺/CD8⁺比值的相关（图中数值仅为可视化做平方根转换，统计基于未转换数据，BH校正）。",
+            "what_question": "该图要回答哪些变量能解释菌群组成变异、菌群特征与免疫细胞频率之间存在哪些相关，以及Intestinimonas与脑和脾CD4⁺/CD8⁺比值的关系方向是否一致。",
+            "how_to_read": "先看A中品系、年龄、性别与免疫指标的解释力排序，再在B的相关矩阵中按聚类顺序寻找菌群特征与免疫细胞频率的显著相关块，最后看C中两个散点图的斜率方向与ρ值。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "dbRDA评估各变量对菌群组成变异的解释力。",
+                "comparison": "各变量单独效应（黑色）与多变量累计效应（灰色）比较。",
+                "result": "正文指出CD8⁺ T细胞与菌群组成变异的关联强于品系、年龄与性别；具体解释比例正文未报告。",
+                "statistics": "dbRDA，属水平Bray–Curtis距离，N = 31。"
+              },
+              {
+                "panel": "B",
+                "experiment": "免疫细胞频率与比值和菌群特征之间的Spearman相关矩阵。",
+                "comparison": "各免疫指标与各菌群特征的相关方向与强度，按层次聚类排序。",
+                "result": "正文报告九个菌属与免疫细胞频率或比值相关，图中仅展示结果强调的免疫细胞子集，全部显著相关见补充图；具体ρ值正文未逐一报告。",
+                "statistics": "Spearman相关，双尾检验，BH校正，N = 31。"
+              },
+              {
+                "panel": "C",
+                "experiment": "Intestinimonas丰度与脑、脾CD4⁺/CD8⁺比值的相关散点图。",
+                "comparison": "脑与脾两个组织的相关方向比较。",
+                "result": "Intestinimonas与脑CD4⁺/CD8⁺比值正相关（ρ = 0.77，P adj < 0.001），与脾CD4⁺/CD8⁺比值负相关（ρ = −0.66，P adj = 0.006）。",
+                "statistics": "Spearman相关，双尾检验，BH校正，N = 31；图中数值仅为可视化做平方根转换。"
+              }
+            ],
+            "interpretation": "菌群特征与免疫指标存在多个相关，其中Intestinimonas在脑与脾呈方向相反的关联，提示同一菌属可能在不同组织对应不同的免疫重塑，CD8⁺ T细胞与菌群变异的关联尤为突出。",
+            "evidence": "正文报告Intestinimonas与脑比值ρ = 0.77（P adj < 0.001）、与脾比值ρ = −0.66（P adj = 0.006），以及九个菌属与免疫指标相关。",
+            "boundary": "相关分析不能确立因果，样本量小且未做性别分层；A中免疫指标的具体解释比例与B中逐项ρ值正文未完整报告。"
+          }
+        ]
+      },
+      "ai_status": "success_retried",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    }
+  },
   "attempted": {
     "doi:10.1038/nature05414": {
       "status": "discarded",
@@ -263,7 +1648,7 @@
     "doi:10.1016/j.gendis.2026.102382": {
       "status": "manual_review",
       "attempts": 4,
-      "updated_at": "2026-10-27T06:24:08Z",
+      "updated_at": "2026-10-28T07:03:15Z",
       "gate_reasons": [
         "AI 字段缺失：title_zh",
         "AI 字段缺失：lead",
@@ -285,6 +1670,32 @@
         "AI 内容过短：takeaways",
         "AI 图组解读不是数组"
       ]
+    },
+    "doi:10.1080/0886022x.2026.2704989": {
+      "status": "published",
+      "attempts": 1,
+      "updated_at": "2026-10-28T06:55:11Z",
+      "gate_reasons": []
+    },
+    "doi:10.1080/0886022x.2026.2707003": {
+      "status": "published",
+      "attempts": 1,
+      "updated_at": "2026-10-28T06:56:27Z",
+      "gate_reasons": []
+    },
+    "doi:10.1016/j.gendis.2026.102167": {
+      "status": "manual_review",
+      "attempts": 1,
+      "updated_at": "2026-10-28T06:57:51Z",
+      "gate_reasons": [
+        "第 4 张图的结果解读过短"
+      ]
+    },
+    "doi:10.1080/19490976.2026.2728329": {
+      "status": "published",
+      "attempts": 1,
+      "updated_at": "2026-10-28T07:01:50Z",
+      "gate_reasons": []
     }
   },
   "metrics_cache": {
@@ -517,23 +1928,50 @@
       "status": "matched",
       "source": "EasyScholar",
       "retrieved_at": "2026-10-25T11:08:28Z"
+    },
+    "ibro neuroscience reports": {
+      "impact_factor": "2.9",
+      "jcr": "",
+      "jcr_quartile": "",
+      "jcr_q1": false,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-28T06:55:06Z"
+    },
+    "renal failure": {
+      "impact_factor": "3.8",
+      "jcr": "SCI Q1",
+      "jcr_quartile": "Q1",
+      "jcr_q1": true,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-28T06:55:08Z"
+    },
+    "gut microbes": {
+      "impact_factor": "15.3",
+      "jcr": "SCI Q1",
+      "jcr_quartile": "Q1",
+      "jcr_q1": true,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-10-28T06:55:09Z"
     }
   },
-  "updated_at": "2026-10-27T06:26:19Z",
+  "updated_at": "2026-10-28T07:05:19Z",
   "last_run": {
-    "status": "success",
-    "selected": 1,
-    "published": 0,
-    "candidates": 1,
-    "raw_candidates": 38,
-    "score_rejected": 1,
-    "scope_rejected": 36,
-    "recovery_used": false,
-    "q1_rejected": 1,
+    "status": "fallback_ncbi",
+    "selected": 5,
+    "published": 3,
+    "candidates": 5,
+    "raw_candidates": 79,
+    "score_rejected": 3,
+    "scope_rejected": 72,
+    "recovery_used": true,
+    "q1_rejected": 2,
     "skipped_without_pmcid": 0,
-    "search_error": "",
-    "preserved_articles": 0,
+    "search_error": "Europe PMC HTTP 503: HTTP Error 503:",
+    "preserved_articles": 3,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-10-27T06:26:19Z"
+    "finished_at": "2026-10-28T07:05:19Z"
   }
 }
