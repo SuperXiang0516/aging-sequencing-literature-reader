@@ -1,184 +1,22 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T07:46:59Z",
+  "generated_at": "2026-11-03T07:58:54Z",
   "last_run": {
     "status": "success",
-    "selected": 1,
-    "published": 1,
-    "candidates": 1,
-    "raw_candidates": 71,
+    "selected": 0,
+    "published": 0,
+    "candidates": 0,
+    "raw_candidates": 70,
     "score_rejected": 1,
     "scope_rejected": 69,
     "recovery_used": true,
     "q1_rejected": 1,
     "skipped_without_pmcid": 0,
     "search_error": "",
-    "preserved_articles": 3,
+    "preserved_articles": 2,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-11-02T07:46:59Z"
+    "finished_at": "2026-11-03T07:58:54Z"
   },
-  "processed": [
-    {
-      "id": "doi:10.1016/j.gendis.2026.102167",
-      "title": "Single-cell sequencing-guided discovery of narciclasine as a dual VCAM-1/ICAM-1 inhibitor for atherosclerosis management.",
-      "authors": [
-        "Wang Y",
-        "Cao Z",
-        "Lan H",
-        "Li B",
-        "Wang G",
-        "Chen Q"
-      ],
-      "journal": "Genes & diseases",
-      "year": "2027",
-      "doi": "10.1016/j.gendis.2026.102167",
-      "pmcid": "PMC13589088",
-      "pmid": "42763524",
-      "citation_count": 0,
-      "fulltext_urls": [
-        "https://doi.org/10.1016/j.gendis.2026.102167",
-        "https://europepmc.org/articles/PMC13589088",
-        "https://europepmc.org/articles/PMC13589088?pdf=render"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 12,
-      "relevance_evidence": [
-        "sequencing: rna sequencing, single-cell",
-        "disease_bridge: cardiovascular"
-      ],
-      "figures": [
-        {
-          "label": "Figure 1",
-          "caption": "Cell subpopulations in human carotid artery AS plaques and adjacent regions via scRNA-seq. (A) t-SNE plot showing 21 distinct cell clusters. (B) t-SNE plot depicting cell types enriched with specific marker genes. (C) Heatmap displaying the top 10 genes for each of the 21 cell clusters. (D) Bubble plot showing the expression of characteristic genes within each cell cluster.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr1.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr1.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr1.webp",
-          "local_url": "generated/assets/PMC13589088/fig-01.webp",
-          "asset_path": "generated/assets/PMC13589088/fig-01.webp",
-          "asset_bytes": 243242,
-          "asset_sha256": "4fb4387cb900b2d8cd612b22baa21ea5a0ed5c77a97ec6550ac8ed5fe3a3c3c8",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "Figure 2",
-          "caption": "Cellular communication in adjacent and AS plaque regions. (A) Total number and intensity of interactions among different cell types in AS plaques and adjacent regions. (B) Network diagram illustrating changes in cell interactions between the AS plaque and adjacent regions. Red indicates an increase in the number or intensity of interactions, whereas blue indicates a decrease. (C) Heatmap of alterations in cell interactions between AS plaques and adjacent regions. (D) Enrichment analysis of ligand–receptor interactions at the signaling pathway level among various cell types in AS plaques and adjacent regions. (E) Overview of ligand–receptor interactions between macrophages and other cells in atherosclerotic plaque regions. ∗∗p < 0.01.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr2.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr2.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr2.webp",
-          "local_url": "generated/assets/PMC13589088/fig-02.webp",
-          "asset_path": "generated/assets/PMC13589088/fig-02.webp",
-          "asset_bytes": 257384,
-          "asset_sha256": "011c420a7b73b3bc00e67f8e6fad7dfa5395c26d86f61485bf25e853e8b10375",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "Figure 3",
-          "caption": "DEGs in VSMCs, VECs, T cells, and macrophages in atherosclerotic plaque regions compared with adjacent regions. (A) GO molecular function and KEGG signaling pathway enrichment of upregulated genes in VECs in the atherosclerotic plaque region. (B) GO molecular function and KEGG signaling pathway enrichment of upregulated genes in VSMCs in the atherosclerotic plaque region. (C) GO molecular function and KEGG signaling pathway enrichment of upregulated genes in macrophages in the atherosclerotic plaque region. (D) GO molecular function and KEGG signaling pathway enrichment of upregulated genes in T cells in the atherosclerotic plaque region. (E) Venn diagram of upregulated genes in VECs, VSMCs, macrophages, and T cells within the atherosclerotic plaque region. (F) PPI analysis of coupregulated genes in VECs, VSMCs, macrophages, and T cells within the atherosclerotic plaque region.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr3.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr3.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr3.webp",
-          "local_url": "generated/assets/PMC13589088/fig-03.webp",
-          "asset_path": "generated/assets/PMC13589088/fig-03.webp",
-          "asset_bytes": 308908,
-          "asset_sha256": "2939d12b72f812f6c4d79b6b7fce04dc2b148e7177bdddbeda51f5d96dc030af",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "Figure 4",
-          "caption": "Functional analysis of narciclasine targets. (A) Regulatory network of narciclasine targets. The colored circles represent signaling pathways or biological processes, and the associated signaling pathways or biological processes share the same color. The lines connected to circles of the same color represent the differentially expressed genes of that signaling pathway. (B) MCODE clustering analysis of narciclasine drug targets on the basis of network topology.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr4.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr4.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr4.webp",
-          "local_url": "generated/assets/PMC13589088/fig-04.webp",
-          "asset_path": "generated/assets/PMC13589088/fig-04.webp",
-          "asset_bytes": 395398,
-          "asset_sha256": "f6cc77d36c01dd855afc70e6b2ac6736c0ecf5a2db9ec6f8f803beda569fcc47",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "Figure 5",
-          "caption": "Network pharmacology analysis of the key anti-AS targets of narciclasine. (A) Venn diagram of AS-related targets collected from the DrugBank, DisGeNET, GeneCards, OMIM, and TTD databases. (B) Overlapping genes among narciclasine targets, AS targets, and genes upregulated in AS plaques. (C) Network pharmacology map showing interactions among genes and signaling pathways. The purple rectangles represent signaling pathways; the green octagons represent common genes across all three categories; the blue ellipses indicate overlapping genes between narciclasine targets and highly expressed genes in AS plaque regions; and the light khaki quadrilaterals represent overlapping genes between narciclasine targets and AS targets.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr5.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr5.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr5.webp",
-          "local_url": "generated/assets/PMC13589088/fig-05.webp",
-          "asset_path": "generated/assets/PMC13589088/fig-05.webp",
-          "asset_bytes": 197170,
-          "asset_sha256": "e2710094e213d832bf03585b0e56195a7026a3cc6ff34802b850b648baa162a8",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "Figure 6",
-          "caption": "Molecular docking, MDS, and SPR confirmed VCAM-1 and ICAM-1 as targets of narciclasine. (A) Molecular docking models of narciclasine binding to the VCAM-1 protein. (B) Molecular docking models of narciclasine binding to the ICAM-1 protein. (C) RMSD analysis assessing the conformational stability of the ICAM-1–narciclasine and VCAM-1-narciclasine complexes. (D) Rg analysis evaluating overall structural changes and protein compactness. (E) SASA analysis of the interactions between target proteins and narciclasine. (F) Hydrogen bond network analysis of both the ICAM-1-narciclasine and VCAM-1-narciclasine complexes. (G,H) RMSF analysis of amino acid residue flexibility in the ICAM-1-narciclasine and VCAM-1-narciclasine complexes. (I) Schematic diagram illustrating the SPR setup. (J,K) Sensograms of VCAM-1 and ICAM-1 expression in response to narciclasine (0.15–10 μM) at 25 °C. (L) Equilibrium binding analysis of ICAM-1-narciclasine and VCAM-1-narciclasine interactions.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr6.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr6.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr6.webp",
-          "local_url": "generated/assets/PMC13589088/fig-06.webp",
-          "asset_path": "generated/assets/PMC13589088/fig-06.webp",
-          "asset_bytes": 186270,
-          "asset_sha256": "abb61f24b7dd31b86f4b376cbcca6da2bda514a2448997de002606a8f86234d3",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "Figure 7",
-          "caption": "Narciclasine alleviated vascular injury by inhibiting VCAM-1/ICAM-1 in vitro. (A) Phase contrast images showing HUVEC tube formation in the control, ox-LDL-treated, and narciclasine-treated ox-LDL groups. (B) Semiquantification analysis of capillary length in the three groups (ANOVA test, n = 5, ∗∗∗p = 5.42 × 10 −8. Mean ± SD, control: 63.96 ± 5.06, ox-LDL: 12.52 ± 1.85; ox-LDL + narciclasine: 57.90 ± 4.84). (C) Relative gene expression levels of ICAM-1(ANOVA test, n = 4, ∗∗∗ p = 3.5 × 10 −10. Mean ± SD, control: 1 ± 0.04, ox-LDL: 2.58 ± 0.15; ox-LDL + narciclasine: 0.63 ± 0.02) and VCAM-1 (ANOVA test, n = 4, ∗∗∗ p = 2.55 × 10 −9. Mean ± SD, control: 1 ± 0.04, ox-LDL: 2.28 ± 0.14; ox-LDL + narciclasine: 0.73 ± 0.04) in HUVECs in the three groups. (D) Immunofluorescence costaining images of ICAM-1 and VCAM-1. (E,F) Semiquantification analysis of the immunofluorescence intensity of ICAM-1 (ANOVA test, n = 6, ∗∗∗p = 0.0036. Mean ± SD, control: 11.14 ± 0.55, ox-LDL: 55.89 ± 2.01; ox-LDL + narciclasine: 13.59 ± 0.74) and VCAM-1 (ANOVA test, n = 6, ∗∗∗ p = 0.0024. Mean ± SD, control: 4.61 ± 0.27, ox-LDL: 34.56 ± 2.63; ox-LDL + narciclasine: 5.78 ± 0.15).",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr7.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr7.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr7.webp",
-          "local_url": "generated/assets/PMC13589088/fig-07.webp",
-          "asset_path": "generated/assets/PMC13589088/fig-07.webp",
-          "asset_bytes": 135920,
-          "asset_sha256": "29004c7b24e95bdc2fcfcfe04137f470838e145e0a242b9f1298acdfed42900e",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "Figure 8",
-          "caption": "Narciclasine alleviated AS progression by targeting VCAM-1/ICAM-1 in vivo. (A) Oil Red O stained images of whole aortas from control, PBS-treated, and narciclasine-treated ApoE −/− mice. (B) Semi-quantification analysis of the atherosclerotic plaque areas (ANOVA test, n = 4, ∗∗ p = 0.0004. Mean ± SD, control: 3.2 ± 0.54, PBS: 12.27 ± 1.02; narciclasine: 5.16 ± 0.66). (C) HE images of aortic root sections from control, PBS-treated, and narciclasine-treated mice. (D) Oil red O images of aortic root sections from control, PBS-treated, and narciclasine-treated mice. (E) Semiquantification of the necrotic core areas (ANOVA test, n = 4, ∗∗∗ p = 0.0002. Mean ± SD, control: 0.0049 ± 0.0004, PBS: 0.52 ± 0.015; narciclasine: 0.033 ± 0.0036). (F) Semiquantification of the oil red O area of lipid-rich areas in aortic root sections (ANOVA test, n = 4, ∗∗ p = 0.0015. Mean ± SD, control: 0.64 ± 0.114, PBS: 2.74 ± 0.108; narciclasine: 1.84 ± 0.103). (G) Relative gene expression levels of VCAM-1 (ANOVA test, n = 4, ∗∗∗ p = 0.001. Mean ± SD, control: 1 ± 0.05, PBS: 3.42 ± 0.17; narciclasine: 1.25 ± 0.03) and ICAM-1 across the three groups (ANOVA test, n = 4, ∗∗∗ p = 0.001. Mean ± SD, control: 1 ± 0.04, PBS: 2.84 ± 0.16; narciclasine: 1.18 ± 0.03). (H,I) Immunohistochemistry images of VCAM-1 and ICAM-1 in the aortic roots. (J,K) Semiquantification of VCAM-1 (ANOVA test, n = 5, ∗∗ p = 0.001. Mean ± SD, control: 4.47 ± 0.075, PBS: 4.56 ± 0.074; narciclasine: 2.72 ± 0.087) and ICAM-1 (ANOVA test, n = 4, ∗∗ p = 0.0066. Mean ± SD, control: 3.79 ± 0.173, PBS: 3.73 ± 0.11; narciclasine: 2.54 ± 0.108) protein expression in the aortic root.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr8.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr8.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13589088.1/gr8.webp",
-          "local_url": "generated/assets/PMC13589088/fig-08.webp",
-          "asset_path": "generated/assets/PMC13589088/fig-08.webp",
-          "asset_bytes": 369822,
-          "asset_sha256": "ffff58f60b36cb123d8ed23a01b8a887736cd1c7b643c8fc8ef7f8b2aeb64cf2",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        }
-      ],
-      "supplements": [
-        {
-          "label": "Supplementary file 1",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13589088/bin/mmc1.doc",
-          "description": "Multimedia component 1"
-        }
-      ],
-      "fulltext_ok": true,
-      "asset_errors": [],
-      "assets_required": true,
-      "metrics": {
-        "impact_factor": "14.6",
-        "jcr": "SCI Q1",
-        "jcr_quartile": "Q1",
-        "jcr_q1": true,
-        "status": "matched",
-        "source": "EasyScholar",
-        "retrieved_at": "2026-10-25T11:08:28Z"
-      },
-      "journal_display": "Genes & diseases（IF 14.6；JCR SCI Q1）",
-      "updated_at": "2026-11-02T07:45:35Z",
-      "ai_status": "success_retried",
-      "ai_error": "",
-      "publishable": true,
-      "gate_reasons": [],
-      "status": "published"
-    }
-  ],
+  "processed": [],
   "pending_candidates": []
 }
