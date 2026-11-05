@@ -2209,13 +2209,13 @@
       "retrieved_at": "2026-11-04T07:33:39Z"
     }
   },
-  "updated_at": "2026-11-04T07:35:55Z",
+  "updated_at": "2026-11-05T07:57:14Z",
   "last_run": {
     "status": "success",
-    "selected": 2,
-    "published": 2,
-    "candidates": 2,
-    "raw_candidates": 71,
+    "selected": 0,
+    "published": 0,
+    "candidates": 0,
+    "raw_candidates": 69,
     "score_rejected": 1,
     "scope_rejected": 68,
     "recovery_used": true,
@@ -2224,6 +2224,6 @@
     "search_error": "",
     "preserved_articles": 4,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-11-04T07:35:55Z"
+    "finished_at": "2026-11-05T07:57:14Z"
   }
 }
