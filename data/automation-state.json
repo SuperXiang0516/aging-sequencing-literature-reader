@@ -2209,7 +2209,7 @@
       "retrieved_at": "2026-11-04T07:33:39Z"
     }
   },
-  "updated_at": "2026-11-06T07:59:11Z",
+  "updated_at": "2026-11-07T07:16:20Z",
   "last_run": {
     "status": "success",
     "selected": 0,
@@ -2224,6 +2224,6 @@
     "search_error": "",
     "preserved_articles": 4,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-11-06T07:59:11Z"
+    "finished_at": "2026-11-07T07:16:20Z"
   }
 }
