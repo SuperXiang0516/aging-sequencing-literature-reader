@@ -1626,6 +1626,454 @@
       "publishable": true,
       "gate_reasons": [],
       "status": "published"
+    },
+    "doi:10.1111/dom.71173": {
+      "id": "doi:10.1111/dom.71173",
+      "title": "Multimodal Exploratory Analysis of Persistent Diabetic Macular Edema: Integrating Aqueous Humour Metabolomics, Clinical and OCT Features.",
+      "authors": [
+        "Tao Y",
+        "Yu H",
+        "Ma Y",
+        "Yuan M",
+        "Chen G",
+        "Liu J",
+        "Chen X",
+        "Sun X"
+      ],
+      "journal": "Diabetes, obesity & metabolism",
+      "year": "2026",
+      "doi": "10.1111/dom.71173",
+      "pmcid": "PMC13730987",
+      "pmid": "42764398",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1111/dom.71173",
+        "https://europepmc.org/articles/PMC13730987",
+        "https://europepmc.org/articles/PMC13730987?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 15,
+      "relevance_evidence": [
+        "aging: aging",
+        "multiomics: metabolom",
+        "disease_bridge: diabetic"
+      ],
+      "figures": [
+        {
+          "label": "FIGURE 1",
+          "caption": "Representative OCT images of non‐persistent and persistent DME patients. (A) OCT scanning mode and quantification of central subfield thickness (CST). (B) Representative OCT images of non‐persistent DME patients with CST reduction > 25%. (C) Representative OCT images of persistent DME patients with CST reduction < 10%.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g002.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g002.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g002.webp",
+          "local_url": "generated/assets/PMC13730987/fig-01.webp",
+          "asset_path": "generated/assets/PMC13730987/fig-01.webp",
+          "asset_bytes": 71968,
+          "asset_sha256": "96261e522bb56925bd18aa56b4cab7860a42570bbde94e3f5b34ad7d9589bbbb",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "FIGURE 2",
+          "caption": "Workflow of DME cohort enrolment and analysis.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g004.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g004.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g004.webp",
+          "local_url": "generated/assets/PMC13730987/fig-02.webp",
+          "asset_path": "generated/assets/PMC13730987/fig-02.webp",
+          "asset_bytes": 62706,
+          "asset_sha256": "ba62245be11630351f4787ceccac9197107682fe03044744d32f3e4bcd0cea25",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "FIGURE 3",
+          "caption": "Metabolomic analysis of aqueous humour in patients with persistent versus non‐persistent DME. (A) Principal component analysis (PCA) score plot showing partial separation between the persistent DME group (orange) and the non‐persistent DME group (blue). (B) Orthogonal partial least squares–discriminant analysis (OPLS‐DA) model revealing distinct metabolic signatures between the two groups. (C) Permutation test plot (200 permutations) for the OPLS‐DA model. The results (R 2 Y = 0.903, Q 2 Y = −0.426) indicate that the model is robust and not overfitted. (D) Volcano plot illustrating the differential metabolites between the persistent and non‐persistent DME groups. Red dots represent upregulated metabolites ( n = 225) and blue dots represent downregulated metabolites ( n = 180) in the persistent DME group. The criteria for selection were VIP > 0.8, Q ‐value < 0.1, and fold‐change > 1.2 or < 0.83. (E) Hierarchical clustering heatmap of the differential metabolites, showing clear separation between the two groups based on their expression profiles. (F) ChemRICH enrichment plot, showing that the differential metabolites were grouped into 26 structural categories, with fatty acyls, carboxylic acids, and their derivatives, and organic oxygen compounds being the most predominant.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g001.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g001.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g001.webp",
+          "local_url": "generated/assets/PMC13730987/fig-03.webp",
+          "asset_path": "generated/assets/PMC13730987/fig-03.webp",
+          "asset_bytes": 52046,
+          "asset_sha256": "887abd434a50b4fcfa37e6d450a4f289750911af0e4cddd980782abbc1c1340f",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "FIGURE 4",
+          "caption": "Pathway Enrichment Analysis and Multimodal Exploration of Potential Biomarkers of persistent DME. (A) Bubble plot of pathway enrichment analysis based on the KEGG database, showing purine metabolism as the most significantly enriched pathway ( Q = 0.024). (B) Bubble plot of pathway enrichment analysis based on the Reactome database, identifying DNA repair as the most enriched pathway ( Q = 0.013). (C,D) Comparison of the ‘purine score’ and ‘DNA repair score’ between the persistent and non‐persistent DME groups. Both scores were significantly higher in the persistent DME group. (E) LOOCV ROC analysis of pDME.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g003.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g003.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g003.webp",
+          "local_url": "generated/assets/PMC13730987/fig-04.webp",
+          "asset_path": "generated/assets/PMC13730987/fig-04.webp",
+          "asset_bytes": 54386,
+          "asset_sha256": "f6e795089dd10ac3dab9edd0e252900be58ac3918c408a5243413c2a0566a410",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "6.1",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-11-10T08:29:35Z"
+      },
+      "journal_display": "Diabetes, obesity & metabolism（IF 6.1；JCR SCI Q1）",
+      "updated_at": "2026-11-10T08:29:42Z",
+      "article": {
+        "title_zh": "房水代谢组+临床+OCT多模态探索：持续性糖尿病性黄斑水肿的嘌呤代谢—DNA修复轴初现",
+        "lead": "这项发表于 Diabetes, Obesity and Metabolism 的前瞻性队列嵌套病例对照研究，把持续性糖尿病性黄斑水肿（persistent diabetic macular edema, pDME）患者的房水非靶向代谢组学数据，与基线临床指标和OCT形态学特征放在同一框架下分析。研究最终纳入103例患者共146只眼，其中34只眼在连续3个月每月抗血管内皮生长因子（anti-vascular endothelial growth factor, anti-VEGF）治疗后仍判为pDME。作者报告pDME组体重指数（body mass index, BMI）与甘油三酯更高、视网膜内层结构紊乱（disorganization of retinal inner layers, DRIL）与玻璃体视网膜界面异常更常见、视网膜下液（subretinal fluid, SRF）更少见；房水代谢组中嘌呤代谢与DNA修复通路显著富集，基于通路构建的“嘌呤评分”在留一交叉验证中区分pDME的AUC达0.963，明显高于临床模型（0.716）与OCT模型（0.505）。需要强调的是，这是一项探索性、小样本、单中心研究，代谢组亚组仅39只眼，所有关联均属假设生成性质，作者提出的“嘌呤代谢—DNA修复轴”尚待独立验证。",
+        "background": "糖尿病性黄斑水肿（diabetic macular edema, DME）是糖尿病视网膜病变致视力下降的主要原因，抗VEGF治疗是目前的一线方案。但临床上有一部分患者即使接受规范、足量的anti-VEGF治疗，黄斑水肿仍持续不退或视力改善有限，这类情况被称为持续性DME（pDME）。pDME的识别目前主要依赖治疗后的解剖与功能反应，属于“事后判断”，缺乏治疗前即可提示高风险的客观标志物。既往研究多从全身代谢指标（如血脂、血糖控制）或OCT形态学（如DRIL、SRF、高反射灶）单一维度寻找线索，但单一维度的区分能力有限。房水与视网膜、玻璃体直接相邻，能在一定程度上反映眼内微环境的代谢状态，将房水代谢组学与临床、影像特征整合，可能为理解pDME的生物学机制和寻找候选标志物提供新视角。",
+        "research_question": "在因DME接受连续3个月每月anti-VEGF治疗的患者中：（1）基线临床指标与OCT形态学特征在pDME与非pDME之间是否存在差异；（2）房水非靶向代谢组在两组之间是否存在可区分的代谢特征，并富集到哪些通路；（3）由富集通路构建的通路评分，与临床、OCT特征相比，对pDME的区分能力如何；（4）这些通路评分与基线OCT结构改变之间是否存在关联。作者明确将研究定位为探索性分析，目标是提出候选标志物与机制假设，而非确证因果或建立可直接用于临床的预测模型。",
+        "study_design": "单中心前瞻性队列研究，并在队列内开展嵌套病例对照的代谢组学比较。研究在华中科技大学同济医学院附属同济医院眼科开展，伦理批件号TJ-IRB20230334，所有受试者在纳入及任何有创操作前签署知情同意。入组标准为：确诊2型糖尿病；OCT显示中心子区域厚度（central subfield thickness, CST）≥250 μm并伴囊样水肿或硬性渗出征象；由视网膜专科医师根据病史与OCT判断有anti-VEGF治疗指征。排除标准包括：合并其他眼病（如青光眼、年龄相关性黄斑变性、视网膜静脉阻塞所致黄斑水肿）；正在治疗的恶性肿瘤或全身感染；OCT图像质量差；3个月内接受过anti-VEGF、眼内手术或视网膜激光；既往使用过眼内或眼周激素。所有患者接受3次每月一次的标准anti-VEGF治疗（雷珠单抗、阿柏西普或康柏西普），第3次注射后1个月复查最佳矫正视力（best-corrected visual acuity, BCVA）与CST，据此分为pDME组与非pDME组。随后在代谢组学亚组中按pDME 19只眼、非pDME 20只眼进行嵌套病例对照比较。",
+        "methods": "基线资料通过电子病历与补充问卷采集，包括年龄、性别、糖尿病病程、视网膜激光光凝（retinal laser photocoagulation, RLP）史、平坦部玻璃体切除术（pars plana vitrectomy, PPV）史、收缩压、舒张压、BMI、空腹血糖、糖化血红蛋白A1c（glycated haemoglobin A1c, HbA1c）、总胆固醇、甘油三酯（triglyceride, TG）、高密度脂蛋白胆固醇、低密度脂蛋白胆固醇、尿白蛋白-肌酐比值、估算肾小球滤过率、血肌酐、血尿素、血尿酸。眼科检查包括眼压、裂隙灯、眼轴、超广角眼底照相，以及采用早期治疗糖尿病视网膜病变研究（Early Treatment Diabetic Retinopathy Study, ETDRS）视力表测定的BCVA。OCT使用扫频源OCT（VG200，视微，洛阳），按ESASO分类评估；cube扫描以黄斑中心凹为中心，软件自动识别ETDRS网格并计算CST。形态学参数基于中心凹B扫描评估：视网膜内囊腔（intraretinal cyst, IRC）大小、中心凹椭圆体带（ellipsoid zone, EZ）与外界膜（external limiting membrane, ELM）完整性、DRIL、SRF、高反射灶（hyperreflective foci, HF）的有无与数量、玻璃体视网膜界面状态。由两名有经验的阅片者独立评估，分歧由资深视网膜专科医师裁定。pDME定义为满足以下任一条件：CST下降幅度不足（基线CST≤400 μm时<10%；401–500 μm时<15%；501–600 μm时<20%；>600 μm时<25%），或治疗后BCVA提高<5个ETDRS字母；不满足者归为非pDME。房水于首次注射前采集50–100 μL，−80°C保存。代谢组学采用超高效液相色谱-高分辨质谱（ultra-high performance liquid chromatography–high resolution mass spectrometry, UHPLC-HRMS）：Waters ACQUITY UPLC系统串联Thermo Q Exactive HF质谱仪，ACQUITY UPLC HSS T3色谱柱（100×2.1 mm，1.8 μm），柱温45°C，进样量5 μL，流速0.35 mL/min，正负离子模式采集；试剂、仪器参数与样品前处理细节见补充表S1。原始数据用XCMS（v4.5.1）进行峰检测、对齐与归一化，质控（quality-control, QC）样本中相对标准偏差>30%的特征被剔除；代谢物鉴定基于保留时间、精确质量、MS/MS谱与同位素模式，比对HMDB、LipidMaps、METLIN及自建库。数据质量通过QC重现性（主成分分析（principal component analysis, PCA）与基峰色谱图）评估；组间分离用正交偏最小二乘判别分析（orthogonal partial least squares–discriminant analysis, OPLS-DA）评估，并做置换检验以排查过拟合。差异代谢物定义为变量投影重要性（variable importance in projection, VIP）>0.8、校正p值（Q）<0.1、且倍数变化>1.2或<0.83，以火山图与层次聚类热图展示。通路富集基于京都基因与基因组百科全书（Kyoto Encyclopedia of Genes and Genomes, KEGG）与Reactome数据库，显著性阈值设为p与Q均<0.05。对每个富集通路，计算该通路内所有代谢物的Z分数并取均值，形成通路评分（如嘌呤评分、DNA修复评分）。为初步探索多模态特征与pDME的关联，在代谢组亚组（19例pDME、20例非pDME）中构建分域及整合的logistic回归模型：临床变量选TG，OCT变量选SRF，代谢组变量选嘌呤评分与DNA修复评分；由于嘌呤评分与DNA修复评分高度相关、可能反映嘌呤—DNA修复轴内的重叠信息，整合模型由TG、SRF与嘌呤评分构成，分别代表临床、OCT与代谢组三个域，另以纳入DNA修复评分的模型作为敏感性分析。模型性能用表观AUC、留一交叉验证（leave-one-out cross-validation, LOOCV）AUC与bootstrap乐观度校正AUC（内部验证）评估。统计使用SPSS 27.0与R 4.x；连续变量以Shapiro–Wilk检验判断正态性，正态分布以均值±标准差表示并用独立样本t检验比较，非正态以中位数（四分位距）表示并用Mann–Whitney U检验比较；分类变量用Fisher精确检验；双侧p<0.05为差异有统计学意义。数据可得性方面，正文未报告原始代谢组数据的具体公共数据库登录号或共享声明，仅以补充表形式提供部分结果。",
+        "results": "研究流程见图2：DME队列最初入组142例患者（204只眼），经3+PRN治疗与随访后，最终103例患者（146只眼）纳入分析，并按治疗后结局分为pDME组（34只眼）与非pDME组（112只眼）。基线特征见表1：pDME组BMI显著高于非pDME组（25.20±4.10 vs. 23.27±3.11，p=0.004），TG亦显著更高（1.80（1.26）vs. 1.50（0.93），p=0.003）；年龄、性别、血压、空腹血糖、HbA1c、总胆固醇、高密度与低密度脂蛋白胆固醇、肾功能指标以及基线眼科参数（眼轴、RLP史、PPV史）在两组间均无显著差异（p>0.05）。OCT参数（表2）显示，pDME组DRIL比例更高（52.9% vs. 31.3%，p=0.026），SRF比例更低（29.4% vs. 52.7%，p=0.019），玻璃体视网膜界面状态分布差异有统计学意义（p=0.009）：pDME组67.6%为无粘连（V0）、23.5%为不完全玻璃体黄斑脱离（V1）、8.8%为视网膜前膜（V4），非pDME组相应为89.3%、7.1%、3.6%；视网膜增厚、囊腔、EZ/ELM状态与HF在两组间无显著差异。代谢组学亚组共39例患者39只眼，其基线特征与未纳入代谢组分析者可比（补充表S2）；亚组内pDME 19只眼与非pDME 20只眼基线临床与OCT特征总体相近，但pDME组TG更高（1.83（1.64–2.90）vs. 1.59（1.33–1.71），p=0.011），SRF更少（3/19（15.8%）vs. 12/20（60.0%），p=0.008）（补充表S3、S4）。房水样本共检测到2446种代谢物。PCA显示两组仅部分分离（图3A），OPLS-DA显示两组代谢特征明显不同（图3B），200次置换检验给出R²Y=0.903、Q²Y=−0.426（图3C）。按VIP>0.8、Q<0.1、倍数变化>1.2或<0.83的标准，共鉴定出405种显著改变的代谢物（补充表S5），其中相对非pDME组，pDME组上调225种、下调180种（图3D）；层次聚类显示两组在表达谱层面清晰分开（图3E）；ChemRICH富集将其归为26个结构类别，以脂肪酰基、羧酸及其衍生物、有机氧化合物为主（图3F）。通路富集分析显示，KEGG数据库中嘌呤代谢是最显著富集的通路（p=0.001，Q=0.024），涉及5种代谢物：2-oxo-4-hydroxy-4-carboxy-5-ureidoimidazole、5′-phosphoribosyl-N-formylglycinamide、adenosine phosphosulphate、二氧化碳与次黄嘌呤（图4A）；Reactome数据库中DNA修复是最富集的通路（p<0.001，Q=0.013），关键代谢物包括8-氧代鸟嘌呤、二氧化碳、次黄嘌呤与烟酰胺（图4B）；其他显著富集的Reactome通路包括碱基切除修复、嘌呤分解代谢缺陷与脱嘌呤（p≤0.001，Q=0.014–0.034），其涉及代谢物与DNA修复通路重叠（补充表S6）。将嘌呤代谢簇与DNA修复簇分别做Z分数归一化并取均值，得到“嘌呤评分”与“DNA修复评分”，两者在pDME组均显著高于非pDME组（p<0.001，图4C、D）。在区分能力方面（图4E），仅含TG的临床模型LOOCV AUC为0.716，仅含SRF的OCT模型为0.505，仅含嘌呤评分的代谢组模型最高，为0.963；整合TG、SRF与嘌呤评分的模型LOOCV AUC为0.887，其表观AUC为0.992，bootstrap乐观度校正AUC为0.971；相比之下，仅嘌呤评分模型的表观AUC与LOOCV AUC分别为0.974与0.963，较为一致。包含DNA修复评分或其他整合组合的完整模型比较见补充表S7。在通路评分与OCT结构的关联分析中（表3），以通路评分为自变量、基线OCT的TCED-HFV参数为因变量构建logistic回归：嘌呤评分仅在未校正模型（Model 1）中与玻璃体视网膜界面异常相关（OR=5.820，95% CI：1.136–29.811），校正后关联减弱（p>0.05）；DNA修复评分与DRIL相关（Model 3：OR=0.214，95% CI：0.046–0.990），并与玻璃体视网膜界面异常在Model 1（OR=3.790，95% CI：1.096–13.109）与Model 3（OR=4.727，95% CI：1.060–21.091）中相关。Model 1为未校正，Model 2校正年龄、性别与BMI，Model 3进一步校正TG。",
+        "limitations": "第一，样本量有限，代谢组学亚组仅39只眼（pDME 19只眼、非pDME 20只眼），通路评分与OCT参数的logistic回归置信区间很宽，部分关联在校正后不再显著，结果稳定性不足。第二，研究为单中心、探索性设计，所有AUC均来自同一数据集的内部验证（LOOCV与bootstrap），未设独立外部验证集，0.963的AUC很可能存在乐观偏倚，不能直接外推为临床诊断效能。第三，pDME的定义基于治疗后CST下降幅度与BCVA改善的复合阈值，不同基线CST采用不同阈值，虽参照了既往标准，但分组本身带有一定操作性。第四，代谢组学为半定量非靶向分析，代谢物鉴定依赖数据库匹配，部分代谢物（如二氧化碳）作为通路成员的生物学特异性有限；通路评分由通路内代谢物Z分数均值构成，其构建方式对结果有影响。第五，通路评分与OCT结构的关联分析为横断面、多模型比较，未做多重比较校正，阳性结果应视为假设而非确证。第六，作者提出的“嘌呤代谢—DNA修复轴”是机制假设，本研究没有功能实验或纵向代谢组数据支持因果关系。第七，正文未报告代谢组原始数据的公共数据库登录号，数据共享程度有限。",
+        "takeaways": "（1）在这项前瞻性队列的146只眼中，pDME与更高的BMI和血清TG、更高的DRIL与玻璃体视网膜界面异常比例、更低的SRF比例相关，提示pDME患者具有特定的全身代谢与视网膜结构表型。（2）房水非靶向代谢组在pDME与非pDME之间可区分，405种差异代谢物富集到嘌呤代谢（KEGG）与DNA修复（Reactome）两条通路，基于通路的嘌呤评分与DNA修复评分在pDME组均显著升高。（3）在代谢组亚组中，嘌呤评分的LOOCV AUC为0.963，高于TG临床模型（0.716）与SRF的OCT模型（0.505），但这一比较基于39只眼、缺乏外部验证，只能视为候选标志物的初步信号。（4）DNA修复评分与DRIL、玻璃体视网膜界面异常存在关联，嘌呤评分与玻璃体视网膜界面异常的关联在校正后减弱，说明代谢—结构关联仍需更大样本验证。（5）作者据此提出“嘌呤代谢—DNA修复轴”作为pDME的新机制假设，需在独立队列与功能研究中进一步验证。",
+        "figure_notes": [
+          {
+            "label": "FIGURE 1",
+            "caption_zh": "非持续性DME与持续性DME患者的代表性OCT图像。（A）OCT扫描模式与中心子区域厚度（CST）的定量；（B）CST下降>25%的非持续性DME患者代表性OCT图像；（C）CST下降<10%的持续性DME患者代表性OCT图像。",
+            "what_question": "本研究如何用OCT定义和量化黄斑水肿，以及pDME与非pDME在治疗前后CST变化上的典型影像表现有何不同。",
+            "how_to_read": "先看A了解扫描与测量方式：cube扫描以黄斑中心凹为中心，软件自动识别ETDRS网格并计算CST，这是后续分组所依据的定量指标。再看B与C，对照同一患者治疗前后的B扫描，观察CST下降幅度的差异：B代表下降>25%的非pDME，C代表下降<10%的pDME。阅读时注意图注只给出代表性病例的CST变化幅度，未给出具体厚度数值。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "扫频源OCT（VG200）cube扫描，以黄斑中心凹为中心，内置软件自动识别ETDRS网格并计算CST。",
+                "comparison": "展示扫描模式与CST定量方法，不涉及组间比较。",
+                "result": "图示OCT扫描模式及CST的定量方式，为后续pDME判定提供测量基础。",
+                "statistics": "正文未报告该面板的统计量。"
+              },
+              {
+                "panel": "B",
+                "experiment": "非持续性DME患者的代表性OCT图像。",
+                "comparison": "治疗前后CST变化，图注界定为CST下降>25%。",
+                "result": "展示CST下降>25%的典型非pDME病例。",
+                "statistics": "正文未报告该代表性病例的具体CST数值与统计检验。"
+              },
+              {
+                "panel": "C",
+                "experiment": "持续性DME患者的代表性OCT图像。",
+                "comparison": "治疗前后CST变化，图注界定为CST下降<10%。",
+                "result": "展示CST下降<10%的典型pDME病例。",
+                "statistics": "正文未报告该代表性病例的具体CST数值与统计检验。"
+              }
+            ],
+            "interpretation": "该图的作用是建立pDME判定的影像学基础：CST是分组的关键定量指标，而B与C直观展示了“治疗反应好”与“治疗反应差”两类患者在黄斑厚度变化上的差异。它帮助读者理解后文pDME定义中按基线CST分层设定下降阈值的合理性，也提示pDME并非单一厚度问题，而是治疗反应性的综合判断。",
+            "evidence": "依据为正文方法2.2中OCT扫描与CST计算流程，以及方法2.3中pDME的CST下降阈值定义；图注给出B、C两组的CST下降幅度界定。",
+            "boundary": "图中仅为代表性病例，不能代表组内全部患者的分布；图注与正文均未报告这些病例的具体CST数值、随访时间点细节或组间统计比较，因此不能据此推断两组CST变化的效应量。"
+          },
+          {
+            "label": "FIGURE 2",
+            "caption_zh": "DME队列入组与分析流程图。",
+            "what_question": "研究从初始DME队列到最终分析人群经历了怎样的筛选与分组过程，各阶段样本量如何变化。",
+            "how_to_read": "按箭头方向自上而下阅读：先看初始入组规模，再看治疗与随访后的排除/脱落，最后看最终纳入分析的人数与眼数，以及按治疗后结局划分的pDME与非pDME两组。注意区分“患者数”和“眼数”两个计数单位。",
+            "panel_reading": [
+              {
+                "panel": "流程图（单一面板）",
+                "experiment": "前瞻性DME队列的入组、3+PRN治疗与随访、最终分组。",
+                "comparison": "初始入组队列与最终分析人群之间，以及pDME组（34只眼）与非pDME组（112只眼）之间。",
+                "result": "初始142例患者（204只眼）入组，最终103例患者（146只眼）纳入分析，分为pDME 34只眼与非pDME 112只眼。",
+                "statistics": "正文未报告该流程各环节的统计检验；样本量为计数资料。"
+              }
+            ],
+            "interpretation": "流程图说明最终分析人群来自一个更大的初始队列，且分组依据是治疗后的解剖与功能反应。它提示读者：pDME组样本量（34只眼）明显小于非pDME组（112只眼），两组样本量不均衡，后续组间比较与模型构建需考虑这一点；代谢组学亚组（39只眼）又是从这一人群中进一步嵌套抽取的。",
+            "evidence": "依据为正文结果3.1开头的队列描述与表1、表2中的分组样本量（pDME n=34，非pDME n=112）。",
+            "boundary": "流程图展示的是入组与分组框架，正文未逐一报告各排除环节的具体原因与人数，也未报告失访情况，因此不能据此评估选择偏倚的具体来源。"
+          },
+          {
+            "label": "FIGURE 3",
+            "caption_zh": "持续性与非持续性DME患者房水的代谢组学分析。（A）PCA得分图显示持续性DME组（橙色）与非持续性DME组（蓝色）部分分离；（B）OPLS-DA模型显示两组代谢特征不同；（C）OPLS-DA模型的200次置换检验图，R²Y=0.903、Q²Y=−0.426；（D）火山图展示差异代谢物，红点为持续性DME组上调代谢物（n=225），蓝点为下调代谢物（n=180），筛选标准为VIP>0.8、Q<0.1、倍数变化>1.2或<0.83；（E）差异代谢物层次聚类热图；（F）ChemRICH富集图，差异代谢物归为26个结构类别，以脂肪酰基、羧酸及其衍生物、有机氧化合物为主。",
+            "what_question": "pDME与非pDME患者的房水代谢谱是否存在整体差异，哪些代谢物发生了改变，这些改变集中在哪些化学结构类别。",
+            "how_to_read": "建议按“整体→个体→归类”的顺序读图：先看A的PCA判断两组是否有分离趋势（部分分离），再看B的OPLS-DA判断有监督模型下的区分度，然后用C的置换检验判断模型是否过拟合；接着看D的火山图，横轴为倍数变化、纵轴为显著性，红蓝分别代表上调和下调；E的热图用于观察样本聚类是否与分组一致；F的ChemRICH图用于看差异代谢物在化学类别层面的分布。注意C中Q²Y为负值这一细节。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "对房水代谢组数据进行PCA，比较pDME组（橙色）与非pDME组（蓝色）。",
+                "comparison": "pDME组 vs. 非pDME组。",
+                "result": "两组呈部分分离。",
+                "statistics": "正文未报告PCA的具体解释方差比例或组间检验统计量。"
+              },
+              {
+                "panel": "B",
+                "experiment": "OPLS-DA建模，比较两组代谢特征。",
+                "comparison": "pDME组 vs. 非pDME组。",
+                "result": "模型显示两组代谢特征明显不同。",
+                "statistics": "正文未报告该面板单独的R²X、R²Y或Q²数值。"
+              },
+              {
+                "panel": "C",
+                "experiment": "对OPLS-DA模型进行200次置换检验。",
+                "comparison": "真实模型与置换后模型的R²Y、Q²Y分布。",
+                "result": "R²Y=0.903，Q²Y=−0.426；图注称结果表明模型稳健、未过拟合。",
+                "statistics": "200次置换；R²Y=0.903，Q²Y=−0.426。需注意Q²Y为负值，与“稳健、未过拟合”的表述之间存在解释张力。"
+              },
+              {
+                "panel": "D",
+                "experiment": "火山图展示差异代谢物，筛选标准为VIP>0.8、Q<0.1、倍数变化>1.2或<0.83。",
+                "comparison": "pDME组相对非pDME组的上调与下调代谢物。",
+                "result": "共225种上调、180种下调，合计405种差异代谢物。",
+                "statistics": "筛选阈值VIP>0.8、Q<0.1、倍数变化>1.2或<0.83；正文未报告各代谢物的具体p值或倍数变化数值。"
+              },
+              {
+                "panel": "E",
+                "experiment": "对405种差异代谢物做层次聚类热图。",
+                "comparison": "样本按代谢物表达谱聚类，与分组标签对照。",
+                "result": "两组在表达谱层面清晰分开。",
+                "statistics": "正文未报告聚类距离算法、聚类稳定性指标或置换检验结果。"
+              },
+              {
+                "panel": "F",
+                "experiment": "ChemRICH富集分析，将差异代谢物归入化学结构类别。",
+                "comparison": "各结构类别之间的代谢物分布。",
+                "result": "归为26个结构类别，以脂肪酰基、羧酸及其衍生物、有机氧化合物为主。",
+                "statistics": "正文未报告各类别的富集显著性统计量。"
+              }
+            ],
+            "interpretation": "该图提供了“房水代谢谱在pDME与非pDME之间存在差异”的整体证据链：PCA的部分分离提示无监督层面差异有限，OPLS-DA显示有监督模型下区分明显，火山图与热图进一步定位到405种差异代谢物，ChemRICH则从化学类别角度提示脂质与有机酸类代谢改变突出。这为后续通路富集（图4）提供了代谢物层面的输入。",
+            "evidence": "依据为正文结果3.2中报告的2446种检测代谢物、405种差异代谢物（225上调、180下调）、PCA与OPLS-DA结果及200次置换检验参数，以及图注中的筛选标准与ChemRICH类别描述。",
+            "boundary": "PCA仅为部分分离，说明组间差异并非全局性的；OPLS-DA为有监督方法，其区分度可能被高估；置换检验中Q²Y为负值，提示模型预测性能的稳健性证据并不充分，图注“稳健、未过拟合”的结论应谨慎看待。此外，代谢组亚组仅39只眼，差异代谢物列表的稳定性未经独立样本验证。"
+          },
+          {
+            "label": "FIGURE 4",
+            "caption_zh": "通路富集分析与持续性DME潜在标志物的多模态探索。（A）基于KEGG数据库的通路富集气泡图，嘌呤代谢为最显著富集通路（Q=0.024）；（B）基于Reactome数据库的通路富集气泡图，DNA修复为最富集通路（Q=0.013）；（C、D）持续性与非持续性DME组间“嘌呤评分”与“DNA修复评分”的比较，两评分在持续性DME组均显著升高；（E）pDME的LOOCV ROC分析。",
+            "what_question": "405种差异代谢物富集到哪些生物学通路，由通路构建的评分能否区分pDME，其区分能力与临床、OCT特征相比如何。",
+            "how_to_read": "先读A与B的气泡图：纵轴为通路，横轴通常为富集显著性，气泡大小/颜色反映通路内代谢物数量或显著性，重点看排名最靠前的嘌呤代谢（KEGG）与DNA修复（Reactome）。再读C与D，比较两组通路评分的分布及显著性。最后读E的ROC曲线，对照临床模型（TG）、OCT模型（SRF）、代谢组模型（嘌呤评分）与整合模型的LOOCV AUC，注意区分表观AUC与交叉验证AUC。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "基于KEGG数据库对405种差异代谢物做通路富集分析。",
+                "comparison": "各富集通路之间的显著性排序。",
+                "result": "嘌呤代谢为最显著富集的KEGG通路（p=0.001，Q=0.024），涉及2-oxo-4-hydroxy-4-carboxy-5-ureidoimidazole、5′-phosphoribosyl-N-formylglycinamide、adenosine phosphosulphate、二氧化碳与次黄嘌呤5种代谢物。",
+                "statistics": "p=0.001，Q=0.024；正文未报告该通路的富集倍数或气泡图具体坐标数值。"
+              },
+              {
+                "panel": "B",
+                "experiment": "基于Reactome数据库对405种差异代谢物做通路富集分析。",
+                "comparison": "各富集通路之间的显著性排序。",
+                "result": "DNA修复为最富集的Reactome通路（p<0.001，Q=0.013），关键代谢物包括8-氧代鸟嘌呤、二氧化碳、次黄嘌呤与烟酰胺；其他显著通路包括碱基切除修复、嘌呤分解代谢缺陷与脱嘌呤（p≤0.001，Q=0.014–0.034）。",
+                "statistics": "p<0.001，Q=0.013；其他通路Q=0.014–0.034。"
+              },
+              {
+                "panel": "C",
+                "experiment": "将嘌呤代谢簇内代谢物Z分数归一化后取均值，构建“嘌呤评分”，比较两组。",
+                "comparison": "pDME组 vs. 非pDME组。",
+                "result": "嘌呤评分在pDME组显著更高。",
+                "statistics": "p<0.001；正文未报告两组评分的中位数/均值或具体检验方法细节。"
+              },
+              {
+                "panel": "D",
+                "experiment": "将DNA修复簇内代谢物Z分数归一化后取均值，构建“DNA修复评分”，比较两组。",
+                "comparison": "pDME组 vs. 非pDME组。",
+                "result": "DNA修复评分在pDME组显著更高。",
+                "statistics": "p<0.001；正文未报告两组评分的具体数值。"
+              },
+              {
+                "panel": "E",
+                "experiment": "对临床（TG）、OCT（SRF）、代谢组（嘌呤评分）及整合模型进行LOOCV ROC分析。",
+                "comparison": "各模型之间以及表观AUC与LOOCV AUC之间。",
+                "result": "TG临床模型LOOCV AUC=0.716；SRF的OCT模型LOOCV AUC=0.505；嘌呤评分模型LOOCV AUC=0.963（表观AUC=0.974）；整合TG+SRF+嘌呤评分模型LOOCV AUC=0.887（表观AUC=0.992，bootstrap乐观度校正AUC=0.971）。",
+                "statistics": "LOOCV AUC、表观AUC与bootstrap乐观度校正AUC；样本为19例pDME与20例非pDME；正文未报告AUC的置信区间或DeLong检验结果。"
+              }
+            ],
+            "interpretation": "该图构成研究的多模态核心证据：通路层面，嘌呤代谢与DNA修复是差异代谢物最显著富集的两条通路；评分层面，两条通路评分在pDME组均升高；区分能力层面，嘌呤评分的交叉验证AUC远高于临床与OCT单一特征，整合模型反而低于单独嘌呤评分模型。这提示房水代谢信息在本数据集中可能携带比常规临床/OCT特征更强的分组信号，但整合模型未带来增益这一现象也说明各域信息存在重叠，且小样本下的AUC比较本身不稳定。",
+            "evidence": "依据为正文结果3.3与3.4中报告的富集p值与Q值、通路评分组间比较（p<0.001）、各模型LOOCV AUC（0.716、0.505、0.963、0.887）、表观AUC（0.992、0.974）与bootstrap乐观度校正AUC（0.971），以及图注对A、B、C、D、E的描述。",
+            "boundary": "所有AUC均来自同一39只眼数据集的内部验证，无外部验证集，0.963的AUC很可能偏乐观；整合模型AUC低于单一嘌呤评分模型，说明多模态整合在本样本中未显示优势；通路评分由通路内代谢物Z分数均值构成，其数值受代谢物选择与归一化方式影响；正文未报告AUC置信区间与模型间正式统计比较，因此不能断言嘌呤评分显著优于临床或OCT特征。"
+          }
+        ]
+      },
+      "ai_status": "success",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    },
+    "doi:10.1212/nxg.0000000000200449": {
+      "id": "doi:10.1212/nxg.0000000000200449",
+      "title": "Sickle Cell Trait and Incident Ischemic Stroke Risk: A Whole-Genome Sequencing Study in the All of Us Research Program.",
+      "authors": [
+        "Gul S",
+        "Ong BA",
+        "Kharal GA"
+      ],
+      "journal": "Neurology. Genetics",
+      "year": "2026",
+      "doi": "10.1212/nxg.0000000000200449",
+      "pmcid": "PMC13738806",
+      "pmid": "42991740",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1212/NXG.0000000000200449",
+        "https://europepmc.org/articles/PMC13738806",
+        "https://europepmc.org/articles/PMC13738806?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 8,
+      "relevance_evidence": [
+        "tools: pipeline",
+        "disease_bridge: diabetes, kidney disease"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1",
+          "caption": "Kaplan-Meier Cumulative Incidence Curves for Ischemic Stroke by HBB Genotype (A) Full incident cohort (n = 275,530). (B) African genetic ancestry stratum only (n = 61,437; 9 additional participants carry MID, SAS, or unclassified ancestry not shown individually in Table 1 ). Shaded regions represent 95% CIs. Adjusted hazard ratios from the primary Cox model are annotated. The near-complete overlap of HbAA and HbAS curves in both panels contrasts with the marked separation of the HbSS curve. HbAA = homozygous reference genotype; HbAS = heterozygous sickle cell trait; HbSS = homozygous variant sickle cell disease.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f1.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f1.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f1.webp",
+          "local_url": "generated/assets/PMC13738806/fig-01.webp",
+          "asset_path": "generated/assets/PMC13738806/fig-01.webp",
+          "asset_bytes": 53996,
+          "asset_sha256": "919b18275bc413faa391ba81cae3cce4bded75d4bcfc14a913002acdc3ba25bf",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 2",
+          "caption": "Forest Plot of HbAS vs HbAA Hazard Ratios for Incident Ischemic Stroke Across 12 Prespecified Subgroups All confidence intervals cross the null line at HR = 1.0. Point estimates range from 0.94 to 1.15. The overall estimate (red diamond) is HR = 1.06 (0.89–1.25). Hazard ratios are plotted on a log scale. EUR ancestry was not estimable because no HbAS stroke events were observed in that stratum and is therefore not shown. AFR = African genetic ancestry; AMR = Latino/Admixed American genetic ancestry; HbAA = homozygous reference genotype; HbAS = heterozygous sickle cell trait.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f2.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f2.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f2.webp",
+          "local_url": "generated/assets/PMC13738806/fig-02.webp",
+          "asset_path": "generated/assets/PMC13738806/fig-02.webp",
+          "asset_bytes": 70124,
+          "asset_sha256": "dd71e3203206408088678e4f81789433daff6dc66220a173f6735f83f3cd0114",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 3",
+          "caption": "Assessment of the Proportional Hazards Assumption for the Primary Cox Model (A) Log-log survival plot. Approximately parallel lines for HbAA and HbAS support the proportional hazards assumption. (B) HbAS hazard ratio stability across sequential time splits. Blue circles represent HRs estimated before each time split; orange squares represent HRs after each split. The HR remains close to 1.0 throughout follow-up (range 0.91–1.15), supporting proportional hazards for the primary comparison. HbAA = homozygous reference genotype; HbAS = heterozygous sickle cell trait; HR = hazard ratio.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f3.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f3.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f3.webp",
+          "local_url": "generated/assets/PMC13738806/fig-03.webp",
+          "asset_path": "generated/assets/PMC13738806/fig-03.webp",
+          "asset_bytes": 41092,
+          "asset_sha256": "4a4beea2ba61650ecb375fd3f8491d1b7307b9776e1653701bd235a2a412820f",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "4.9",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-11-10T08:29:38Z"
+      },
+      "journal_display": "Neurology. Genetics（IF 4.9；JCR SCI Q1）",
+      "updated_at": "2026-11-10T08:30:42Z",
+      "article": {
+        "title_zh": "镰状细胞特质与缺血性卒中：All of Us 全基因组测序队列的再检验",
+        "lead": "镰状细胞特质（sickle cell trait, SCT）是否独立增加缺血性卒中风险，长期存在争议。这项基于美国 NIH All of Us（AoU）研究计划全基因组测序（whole-genome sequencing, WGS）数据的回顾性队列研究，在 275,530 名无既往卒中的参与者中，以 rs334 基因型确认 SCT，并在校正遗传祖先主成分与血管危险因素后，发现 SCT 与缺血性卒中发病无显著独立关联（HR = 1.06，95% CI 0.89–1.25）。粗发生率比 1.70 在祖先校正后大幅衰减，提示既往报道的关联可能部分源于祖先相关混杂。",
+        "background": "镰状细胞特质是血红蛋白 β 链基因（hemoglobin subunit beta, HBB）第 6 位密码子谷氨酸到缬氨酸的杂合变异，即 HbAS 基因型，全球约影响 3 亿人，在美国黑人/非裔美国人中约占 8%–10%。既往关于 SCT 与缺血性卒中的研究结论不一致，效应估计从无效到风险增加 2 倍以上不等。作者认为，这些研究的解释力受限于样本量偏小、祖先多样性不足以及遗传祖先校正不充分。AoU 队列具备大规模 WGS 数据、纵向电子健康记录（electronic health record, EHR）和预计算的遗传祖先信息，为在统一框架下重新检验这一问题提供了条件。",
+        "research_question": "在 AoU 队列中，经 WGS 确认的 SCT 是否在校正遗传祖先和血管危险因素后，仍独立与缺血性卒中发病相关？同时，既往观察到的粗关联在多大程度上可由遗传祖先构成差异解释？",
+        "study_design": "回顾性队列研究。数据来源为 NIH AoU 研究计划 Controlled Tier 数据集 Curated Data Repository 第 8 版（CDR v8，数据发布 C2024Q3R9），通过 AoU Researcher Workbench 访问。研究以 WGS 确认的 HBB rs334 基因型定义暴露，以入组后首次住院 ICD-10 I63.x 编码定义缺血性卒中发病，采用多变量 Cox 比例风险模型进行主分析，并配套竞争风险模型、患病横断面分析、5 项敏感性分析和 12 项预设亚组分析。",
+        "methods": "研究在 AoU CDR v8 中进行，该队列为注册式前瞻性美国队列，纳入超过 804,000 名参与者，具备纵向 EHR 链接、WGS、体格测量和问卷数据，其中基因组数据参与者超过 50% 来自历史上代表性不足的群体。研究在 AoU 数据使用行为准则与数据使用协议框架下、于安全的研究者工作台内完成。\n\n基因分型：从 AoU 短读长 WGS 调用集（目标深度至少 30×，样本级与变异级质控已由 AoU 标准化流程完成）中，以 Hail MatrixTable 提取 rs334（HBB NM_000518.5:c.20A>T [p.Glu7Val]；GRCh38 chr11:5,227,002）和 rs33930165（HBB NM_000518.5:c.19G>A [p.Glu7Lys]；GRCh38 chr11:5,227,003）的个体基因型。个体调用水平上，基因型质量（genotype quality, GQ）<30、读深<20，或杂合调用等位基因平衡不在 0.35–0.65 之间者被排除。参与者被分为纯合参考 HbAA、杂合 HbAS（即 SCT）、纯合变异 HbSS（镰状细胞病，sickle cell disease, SCD）和杂合 HbAC（血红蛋白 C 特质）。HbAC 仅用于完整分类、避免将其并入 HbAA 参照组，因例数与事件数少，结果仅作描述。该分类针对 HbS 与 HbC 位点，未系统识别 β 地中海贫血变异或 HbS/β 地中海贫血复合杂合基因型。\n\n队列构建：入组时间定义为参与者最早记录的 EHR 观察期开始日期。纳入 18–75 岁、有 EHR 数据、纵向随访至少 12 个月（最早与最晚 EHR 观察期日期之间的间隔）的 WGS 参与者；排除入组前已有缺血性卒中（I63.x）、出血性卒中（I60.x–I61.x）或短暂性脑缺血发作（transient ischemic attack, TIA；G45.x）记录者。\n\n结局：主要结局为入组后首次于住院就诊（visit_concept_id 9,201、262 或 8,717）记录的 ICD-10 I63.x 编码，限定住院场景以提高特异性。出血性卒中（I60.x–I61.x）作为预设的阴性对照脑血管结局；TIA（G45.x）、新发心房颤动（I48.x，限基线无房颤者）和新发肾脏并发症（N17.x–N19.x）为次要结局，其中肾脏并发症作为阳性对照以验证分析有效性，但因其为异质性复合结局，解释需谨慎。患病卒中分析以 EHR 中曾记录的任何卒中或 TIA 编码为结局，在包含既往脑血管病的全队列中进行。\n\n协变量：年龄（连续）、出生时性别（按 AoU 表型数据记录，未用性染色体变异重新判定）、高血压（I10.x）、糖尿病（E10.x、E11.x、E13.x）、心房颤动（I48.x）、慢性肾脏病（chronic kidney disease, CKD；N18.x）、体重指数（body mass index, BMI；取所有可用测量的均值）和曾经吸烟（来自 AoU Basics 问卷 Smoking_100CigsLifetime）。主分析中协变量采用实用主义定义，即病例取事件日期前、对照取末次 EHR 日期前任何时间出现的诊断，以最大化协变量捕获；作者预先选择该策略，理由是纵向 EHR 中基线合并症常记录不全，仅限入组时点可能因基线疾病负担低估而增加残余混杂，但该策略可能纳入入组后发生的疾病，带来基线后协变量调整与过度调整的风险。为此预设了将所有协变量限制在入组当日或之前的敏感性分析。BMI 缺失 13,391 人（4.9%），主分析填补为队列中位数，另以链式方程多重填补（10 个填补数据集，Rubin 规则合并）和完整病例分析评估稳健性。遗传祖先主成分 1–10 与分类祖先标签来自 AoU 预计算的 WGS 祖先流程（aux/ancestry/ 目录下 ancestry_preds.tsv），基于人类基因组多样性计划（Human Genome Diversity Project, HGDP）与千人基因组计划参考样本构建主成分空间并训练分类器，将每名参与者投影后归入最可能的单一遗传祖先类别（非洲 AFR、拉丁裔/混合美洲 AMR、东亚 EAS、欧洲 EUR、中东、南亚 SAS），归类不要求单一祖先，无优势祖先归属者归为其他或未分类，不纳入祖先特异性分层。主 Cox 模型校正前 10 个连续遗传主成分而非分类祖先标签；分类标签用于 Table 1 的描述性分层及预设的非洲遗传祖先亚组与敏感性分析。\n\n统计分析：主分析为多变量 Cox 比例风险模型，以入组后时间为时间尺度，缺血性卒中发病为事件，HBB 基因型为暴露，HbAA 为参照；主要比较为 HbAS 与 HbAA，HbSS 作为生物学上预期的阳性对照，HbAC 因样本与事件数少不作推断重点。参与者于死亡或末次 EHR 日期删失。模型加入岭惩罚项（λ = 0.01）以改善数值稳定性。比例风险假设通过 log-log 生存曲线和序贯时间分割下的风险比稳定性评估。预设次要分析包括：逐步校正的嵌套 Cox 模型（评估遗传祖先校正的影响）、以死亡为竞争事件的病因特异性竞争风险模型、全队列患病脑血管病的多变量 logistic 回归，以及各次要发病结局的 Cox 模型。亚组分析覆盖按年龄、性别、合并症状态和遗传祖先定义的 12 个预设分层，并预设 SCT × CKD 交互分析。敏感性分析包括：（1）要求至少 2 次住院编码的更严格缺血性卒中定义；（2）排除基线 CKD；（3）排除基线心房颤动；（4）限制于非洲遗传祖先参与者（因 HbAS 与遗传祖先强相关，用于检验主估计对多祖先全队列与全局祖先校正的敏感性）；（5）协变量限制于入组当日或之前。另采用计数过程 Cox 框架进行时变协变量分析，将新发心房颤动与 CKD 作为时更新协变量（首次诊断日期由 0 转为 1），高血压与糖尿病因 EHR 中缺乏可靠发病日期而保留为基线协变量。发生率以每 1,000 人年事件数及精确 Poisson 置信区间计算。分析在 AoU Researcher Workbench 内使用 Python 3.10、lifelines 0.30.0 和 statsmodels 0.14.4 完成，所有主要比较采用双侧 α = 0.05；次要、亚组和交互分析视为探索性，未作多重比较校正。报告遵循 STROBE、STREGA 和 RECORD 指南。研究经 Cleveland Clinic 机构审查委员会批准，因属 AoU 工作台内去标识数据的回顾性分析，知情同意要求被豁免。数据经 NIH AoU Researcher Workbench 向符合访问条件的注册研究者开放，作者不能直接在平台外共享个体数据；分析代码、表型定义和补充方法细节可依 AoU 数据访问政策向通讯作者合理索取。",
+        "results": "研究人群与基因型分布：AoU CDR v8 共 633,547 名参与者，其中 414,830 名有 WGS 数据。应用年龄 18–75 岁、有 EHR 数据、随访至少 12 个月等条件后，275,621 人构成分析基础队列；再排除 91 名入组前有缺血性卒中、出血性卒中或 TIA 者，缺血性卒中发病队列为 275,530 人。该队列中 HbAA 269,404 人、HbAS 5,876 人、HbSS 144 人、HbAC 106 人。与 HbAA 相比，HbAS 者非洲遗传祖先比例显著更高（88.1% vs 20.8%），HbSS 中 96.5% 为非洲遗传祖先；HbAS 者高血压（40.7% vs 34.9%）、糖尿病（23.3% vs 17.5%）和 CKD（10.9% vs 7.1%）患病率也更高。HbAS 与 HbAA 的平均随访时间相近（12.45 年 vs 12.25 年）。\n\n发生率与粗比较：3,374,790 人年随访中共观察到 2,323 例缺血性卒中发病。粗发生率在 HbAA 为 0.67/1,000 人年（95% CI 0.65–0.70），HbAS 为 1.15/1,000 人年（95% CI 0.92–1.42），HbSS 为 7.09/1,000 人年（95% CI 3.88–11.90）。HbAS 相对 HbAA 的粗发生率比为 1.70。\n\n主分析：校正年龄、性别、高血压、糖尿病、心房颤动、CKD、BMI、吸烟及遗传祖先主成分 1–10 后，HbAS 与缺血性卒中发病无显著关联（HR = 1.06，95% CI 0.89–1.25；p = 0.53）。嵌套模型中，校正年龄、性别和遗传祖先主成分后 HR 为 1.10（95% CI 0.92–1.30），再校正心血管危险因素后为 1.07（95% CI 0.90–1.27），全校正模型为 1.06（95% CI 0.89–1.25）。相比之下，HbSS 与缺血性卒中发病显著相关（HR = 5.12，95% CI 2.96–8.85；p < 0.001）。Kaplan-Meier 累积发生率曲线（Figure 1）显示 HbSS 曲线与 HbAA、HbAS 曲线明显分离，而 HbAA 与 HbAS 基本重叠。从粗发生率比 1.70 到祖先校正后 HR 的衰减，与 HbAS 组非洲遗传祖先比例远高于 HbAA 组（88.1% vs 20.8%）所致的显著混杂相一致。\n\n竞争风险与患病分析：病因特异性竞争风险分析中，HbAS 与缺血性卒中的 HR 为 1.06（p = 0.53），死亡的病因特异性 HR 为 1.00（p = 0.96）。全队列（n = 275,621）患病脑血管病的 logistic 回归中，HbAS 的比值比为 0.97（95% CI 0.78–1.20；p = 0.75）。\n\n次要与阳性对照结局：HbAS 与出血性卒中（HR = 1.01，95% CI 0.81–1.27；p = 0.91）、TIA（HR = 1.06，95% CI 0.84–1.33；p = 0.62）和新发心房颤动（HR = 0.94，95% CI 0.81–1.10；p = 0.47）均无关联。HbSS 者新发心房颤动的 HR 为 1.74（95% CI 0.97–3.11；p = 0.06），并与新发肾脏并发症相关（HR = 1.60，95% CI 1.22–2.10；p = 0.0006）。\n\n亚组分析：在 12 个预设亚组中，HbAS 均与缺血性卒中发病无关联（Figure 2），HR 范围为 0.94–1.15，所有置信区间均包含 1.0。年龄分层（<50 岁、50–64 岁、65 岁及以上，HR 范围 0.96–1.15）、两种性别、有无高血压（高血压者 HR = 1.00）以及非洲祖先分层（HR = 0.97，95% CI 0.81–1.16；n = 5,176 名 HbAS，76 例事件）结果一致。非洲祖先分层估计与限制于非洲遗传祖先参与者的敏感性分析（HR = 0.98，95% CI 0.82–1.17）相近。基线年龄在合格范围内分布较广，无明显聚集或双峰（均值 52.0 岁，中位 54 岁，SD 14.9，范围 18–75）。\n\n敏感性分析与交互检验：主 Cox 模型的 log-log 生存曲线近似平行，序贯时间分割下 HbAS 风险比稳定（Figure 3），支持比例风险假设。所有预设及附加敏感性分析结果均与主分析一致：要求至少 2 次住院编码的严格卒中定义 HR = 1.00（95% CI 0.83–1.21；p = 0.99）；排除基线 CKD 者 HR = 1.08（95% CI 0.88–1.32；p = 0.45）；排除基线心房颤动者 HR = 1.04（95% CI 0.88–1.24；p = 0.64）；限制于非洲遗传祖先者 HR = 0.98（95% CI 0.82–1.17；p = 0.82）；严格基线协变量定义 HR = 1.09（95% CI 0.92–1.29；p = 0.34），提示无效关联并非主要由主模型的宽泛协变量捕获策略驱动；BMI 多重填补（HR 1.06，95% CI 0.89–1.25；p = 0.53）与完整病例分析（HR 1.05，95% CI 0.89–1.25；p = 0.55）结果不变。时变协变量分析中，5,089 例新发心房颤动和 28,882 例新发 CKD 作为时更新协变量，二者均与更高的缺血性卒中风险相关（心房颤动 HR 2.50，95% CI 2.27–2.75；CKD HR 3.35，95% CI 3.10–3.62；均 p < 0.001），而 HbAS 关联仍为无效且基本不变（HR 1.06，95% CI 0.89–1.24；p = 0.53）。预设 SCT × CKD 交互分析的交互 HR 为 1.13（95% CI 0.79–1.60；p = 0.51）；分层事件率在合并 CKD 的 HbAA 中为 3.95%、合并 CKD 的 HbAS 中为 5.47%、无 CKD 的 HbAA 中为 0.58%、无 CKD 的 HbAS 中为 0.94%。",
+        "limitations": "第一，暴露分类仅针对 rs334 与 rs33930165 两个位点，未系统识别 β 地中海贫血变异或 HbS/β 地中海贫血复合杂合基因型，因此部分遗传学上相当于镰状细胞病的参与者可能被归入 HbAS 或其他类别，造成暴露错分。第二，结局依赖 ICD-10 住院编码，虽限定住院场景以提高特异性，仍可能存在漏诊与误分类，且未报告卒中 adjudication 或影像确认。第三，协变量在主分析中采用实用主义捕获（可纳入入组后诊断），存在基线后调整与过度调整风险；作者以严格基线协变量敏感性分析（HR = 1.09）回应，但该分析本身也可能因基线记录不全而残余混杂。第四，HbSS 与 HbAC 组样本量和事件数小（HbSS 14 例缺血性卒中事件，HbAC 1 例），相应估计精度有限，HbAC 仅作描述。第五，遗传祖先分类基于遗传相似性而非自我报告的种族/族裔，且 EUR 祖先层因无 HbAS 卒中事件而无法估计，部分小样本祖先类别未单独展示。第六，次要、亚组与交互分析为探索性，未作多重比较校正，阳性结果（如 HbSS 与肾脏并发症）需谨慎解读。第七，BMI 缺失 4.9% 并以中位数填补为主分析，虽经多重填补与完整病例分析验证，仍属对缺失的处理选择。第八，研究为观察性设计，即使校正大量混杂因素，仍不能排除未测量混杂，也不能直接推断因果关系。",
+        "takeaways": "在大规模、WGS 确认且校正遗传祖先的 AoU 队列中，镰状细胞特质（HbAS）与缺血性卒中发病无显著独立关联（HR = 1.06，95% CI 0.89–1.25），该结论在 12 个预设亚组、5 项敏感性分析、竞争风险模型、时变协变量分析及非洲祖先限制分析中均保持一致。粗发生率比 1.70 在校正遗传祖先构成差异（HbAS 88.1% vs HbAA 20.8% 为非洲遗传祖先）后大幅衰减，提示既往文献中的阳性关联可能部分源于祖先相关混杂与群体结构。与之形成对照，纯合 HbSS 镰状细胞病的缺血性卒中风险显著升高（HR = 5.12），支持分析框架的生物学有效性。临床与研究含义是：不应将 SCT 本身视为缺血性卒中的独立危险因素；未来遗传关联研究若不能充分处理祖先结构，可能重复历史上的假阳性。",
+        "figure_notes": [
+          {
+            "label": "Figure 1",
+            "caption_zh": "按 HBB 基因型分层的缺血性卒中 Kaplan-Meier 累积发生率曲线。（A）全部发病队列（n = 275,530）；（B）仅非洲遗传祖先层（n = 61,437；另有 9 名参与者携带中东、南亚或未分类祖先，未在 Table 1 中单独列出）。阴影区为 95% CI，图中标注主 Cox 模型校正后的风险比。两个面板中 HbAA 与 HbAS 曲线几乎完全重叠，与 HbSS 曲线的明显分离形成对比。",
+            "what_question": "不同 HBB 基因型（HbAA、HbAS、HbSS）在随访期间缺血性卒中的累积发生率如何随时间变化？SCT 曲线是否与参考基因型曲线分离？",
+            "how_to_read": "横轴为随访时间，纵轴为缺血性卒中的累积发生率，曲线越高表示累积事件越多；阴影为 95% CI，曲线分离越明显提示组间风险差异越大。先看 A 面板三组曲线的相对位置，再对照 B 面板在非洲遗传祖先层内是否重现同样格局，最后结合图中标注的校正后 HR 判断差异是否具有统计学意义。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "全部发病队列（n = 275,530）按 HBB 基因型绘制缺血性卒中累积发生率曲线",
+                "comparison": "HbAS 与 HbAA 比较，并以 HbSS 作为生物学阳性对照",
+                "result": "HbAA 与 HbAS 曲线几乎完全重叠，HbSS 曲线明显分离并位于上方；图中标注的校正后 HR 为 HbAS 1.06、HbSS 5.12",
+                "statistics": "阴影区为 95% CI；校正后 HR 及置信区间见正文与 Table 2，曲线间检验统计量正文未报告"
+              },
+              {
+                "panel": "B",
+                "experiment": "仅非洲遗传祖先层（n = 61,437）重复同一累积发生率分析",
+                "comparison": "该层内 HbAS 与 HbAA 比较，并与 HbSS 对照",
+                "result": "HbAA 与 HbAS 曲线仍近乎完全重叠，HbSS 曲线仍明显分离；正文报告该层 HbAS 亚组 HR = 0.97（95% CI 0.81–1.16）",
+                "statistics": "阴影区为 95% CI；亚组 HR 及置信区间见正文与 eTable 3，曲线间检验统计量正文未报告"
+              }
+            ],
+            "interpretation": "图形直观显示 SCT 携带者的卒中累积风险与参考基因型几乎无差别，而镰状细胞病患者风险显著升高；在非洲遗传祖先层内这一格局不变，说明主分析中的无效关联并非由祖先构成差异掩盖。",
+            "evidence": "曲线重叠与正文校正后 HR = 1.06（95% CI 0.89–1.25）一致；HbSS 曲线分离与 HR = 5.12（95% CI 2.96–8.85）一致；B 面板与非洲祖先亚组 HR = 0.97（95% CI 0.81–1.16）一致。",
+            "boundary": "Kaplan-Meier 曲线为未校正或部分校正的累积发生率展示，不能替代多变量校正估计；HbSS 组事件数少（14 例缺血性卒中），曲线尾部置信区间较宽；B 面板另有 9 名非非洲祖先参与者未单独展示；曲线间统计检验结果正文未报告。"
+          },
+          {
+            "label": "Figure 2",
+            "caption_zh": "HbAS 与 HbAA 比较的缺血性卒中风险比在 12 个预设亚组中的森林图。所有置信区间均跨越 HR = 1.0 的无效线，点估计范围为 0.94–1.15；总体估计（红色菱形）为 HR = 1.06（0.89–1.25）。风险比以对数尺度绘制。欧洲祖先层因该层未观察到 HbAS 卒中事件而无法估计，故未展示。",
+            "what_question": "SCT 与缺血性卒中的关联是否在年龄、性别、合并症和遗传祖先等预设亚组中保持一致，还是存在效应修饰？",
+            "how_to_read": "纵轴列出各亚组，横轴为对数尺度的 HR，垂直无效线位于 HR = 1.0；每个方块为点估计，横线为 95% CI，方块落在无效线右侧提示风险升高、左侧提示风险降低，横线跨越无效线表示无统计学意义。先看总体菱形，再逐行检查是否有亚组横线整体偏离无效线。",
+            "panel_reading": [
+              {
+                "panel": "森林图整体",
+                "experiment": "在 12 个预设亚组中分别拟合 HbAS vs HbAA 的缺血性卒中 Cox 模型",
+                "comparison": "各亚组内 HbAS 与 HbAA 比较，并与总体估计对照",
+                "result": "所有亚组置信区间均跨越 1.0，点估计范围 0.94–1.15；总体估计 HR = 1.06（0.89–1.25）",
+                "statistics": "HR 及 95% CI 以对数尺度绘制；各亚组样本量、HbAS 事件数与 HR 见 eTable 3，具体数值正文未逐一报告"
+              },
+              {
+                "panel": "非洲遗传祖先亚组",
+                "experiment": "在非洲遗传祖先层内估计 HbAS 与缺血性卒中的关联",
+                "comparison": "HbAS 与 HbAA 比较",
+                "result": "HR = 0.97（95% CI 0.81–1.16），n = 5,176 名 HbAS、76 例事件",
+                "statistics": "95% CI 跨越 1.0；与限制于非洲遗传祖先的敏感性分析 HR = 0.98（95% CI 0.82–1.17）相近"
+              },
+              {
+                "panel": "欧洲祖先层",
+                "experiment": "计划中的 EUR 祖先亚组分析",
+                "comparison": "HbAS 与 HbAA 比较",
+                "result": "该层未观察到 HbAS 卒中事件，HR 无法估计，故图中未展示",
+                "statistics": "正文未报告"
+              }
+            ],
+            "interpretation": "亚组间点估计高度一致且均无统计学意义，未发现明确的效应修饰信号，支持主分析无效关联在不同人群特征下稳定存在。",
+            "evidence": "12 个亚组 HR 范围 0.94–1.15、所有 CI 包含 1.0，与总体 HR = 1.06（0.89–1.25）一致；非洲祖先亚组与相应敏感性分析结果互相印证。",
+            "boundary": "亚组分析为探索性，未作多重比较校正，且部分亚组事件数少、置信区间宽；EUR 层无法估计说明亚组分析受事件数限制；亚组一致性不能排除未测量混杂，也不能证明各亚组效应真正相同。"
+          },
+          {
+            "label": "Figure 3",
+            "caption_zh": "主 Cox 模型比例风险假设的评估。（A）log-log 生存曲线：HbAA 与 HbAS 曲线近似平行，支持比例风险假设。（B）HbAS 风险比在序贯时间分割中的稳定性：蓝色圆点为各时间分割前的 HR 估计，橙色方块为分割后的 HR 估计；整个随访期间 HR 接近 1.0（范围 0.91–1.15），支持主要比较满足比例风险假设。",
+            "what_question": "主 Cox 模型的比例风险假设是否成立，即 HbAS 相对 HbAA 的风险比是否随随访时间保持恒定？",
+            "how_to_read": "A 面板中，若两条 log-log 生存曲线近似平行，则比例风险假设成立，曲线交叉或明显不平行提示违背。B 面板中，比较同一时间分割点前后（蓝圆与橙方）的 HR 是否接近，并观察 HR 随随访时间是否呈系统趋势；点估计围绕 1.0 波动且无方向性漂移，说明风险比稳定。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "绘制 HbAA 与 HbAS 的 log-log 生存曲线以检验比例风险假设",
+                "comparison": "HbAA 与 HbAS 两条曲线",
+                "result": "两条曲线近似平行，支持比例风险假设",
+                "statistics": "正文未报告曲线平行性的定量检验统计量"
+              },
+              {
+                "panel": "B",
+                "experiment": "在序贯时间分割中分别估计分割前后的 HbAS 风险比",
+                "comparison": "各分割点前的 HR（蓝色圆点）与分割后的 HR（橙色方块）",
+                "result": "HR 在整个随访期间接近 1.0，范围为 0.91–1.15，未见系统性时间趋势",
+                "statistics": "正文未报告各分割点 HR 的具体置信区间与检验统计量"
+              }
+            ],
+            "interpretation": "两项诊断均支持主模型的比例风险假设，说明以单一 HR 概括整个随访期的 SCT 效应是合理的，主分析结论不因风险比随时间变化而失真。",
+            "evidence": "log-log 曲线近似平行与 HR 在 0.91–1.15 范围内稳定，均与正文“比例风险假设得到支持”的表述一致。",
+            "boundary": "图形诊断属定性或半定量评估，正文未报告基于 Schoenfeld 残差等正式检验的统计量；时间分割的切点选择与各段事件数未详细报告，HR 稳定性范围本身也包含一定抽样波动。"
+          }
+        ]
+      },
+      "ai_status": "success",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
     }
   },
   "attempted": {
@@ -1939,6 +2387,18 @@
       "attempts": 1,
       "updated_at": "2026-11-04T07:35:12Z",
       "gate_reasons": []
+    },
+    "doi:10.1111/dom.71173": {
+      "status": "published",
+      "attempts": 1,
+      "updated_at": "2026-11-10T08:29:42Z",
+      "gate_reasons": []
+    },
+    "doi:10.1212/nxg.0000000000200449": {
+      "status": "published",
+      "attempts": 1,
+      "updated_at": "2026-11-10T08:30:42Z",
+      "gate_reasons": []
     }
   },
   "metrics_cache": {
@@ -2207,23 +2667,41 @@
       "status": "matched",
       "source": "EasyScholar",
       "retrieved_at": "2026-11-04T07:33:39Z"
+    },
+    "diabetes, obesity & metabolism": {
+      "impact_factor": "6.1",
+      "jcr": "SCI Q1",
+      "jcr_quartile": "Q1",
+      "jcr_q1": true,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-11-10T08:29:35Z"
+    },
+    "neurology. genetics": {
+      "impact_factor": "4.9",
+      "jcr": "SCI Q1",
+      "jcr_quartile": "Q1",
+      "jcr_q1": true,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-11-10T08:29:38Z"
     }
   },
-  "updated_at": "2026-11-09T08:04:44Z",
+  "updated_at": "2026-11-10T08:31:23Z",
   "last_run": {
     "status": "success",
-    "selected": 0,
-    "published": 0,
-    "candidates": 0,
+    "selected": 2,
+    "published": 2,
+    "candidates": 2,
     "raw_candidates": 69,
-    "score_rejected": 1,
-    "scope_rejected": 68,
+    "score_rejected": 2,
+    "scope_rejected": 66,
     "recovery_used": true,
     "q1_rejected": 1,
     "skipped_without_pmcid": 0,
     "search_error": "",
-    "preserved_articles": 4,
+    "preserved_articles": 6,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-11-09T08:04:44Z"
+    "finished_at": "2026-11-10T08:31:23Z"
   }
 }

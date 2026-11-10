@@ -1,22 +1,222 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T08:04:44Z",
+  "generated_at": "2026-11-10T08:31:23Z",
   "last_run": {
     "status": "success",
-    "selected": 0,
-    "published": 0,
-    "candidates": 0,
+    "selected": 2,
+    "published": 2,
+    "candidates": 2,
     "raw_candidates": 69,
-    "score_rejected": 1,
-    "scope_rejected": 68,
+    "score_rejected": 2,
+    "scope_rejected": 66,
     "recovery_used": true,
     "q1_rejected": 1,
     "skipped_without_pmcid": 0,
     "search_error": "",
-    "preserved_articles": 4,
+    "preserved_articles": 6,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-11-09T08:04:44Z"
+    "finished_at": "2026-11-10T08:31:23Z"
   },
-  "processed": [],
+  "processed": [
+    {
+      "id": "doi:10.1111/dom.71173",
+      "title": "Multimodal Exploratory Analysis of Persistent Diabetic Macular Edema: Integrating Aqueous Humour Metabolomics, Clinical and OCT Features.",
+      "authors": [
+        "Tao Y",
+        "Yu H",
+        "Ma Y",
+        "Yuan M",
+        "Chen G",
+        "Liu J",
+        "Chen X",
+        "Sun X"
+      ],
+      "journal": "Diabetes, obesity & metabolism",
+      "year": "2026",
+      "doi": "10.1111/dom.71173",
+      "pmcid": "PMC13730987",
+      "pmid": "42764398",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1111/dom.71173",
+        "https://europepmc.org/articles/PMC13730987",
+        "https://europepmc.org/articles/PMC13730987?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 15,
+      "relevance_evidence": [
+        "aging: aging",
+        "multiomics: metabolom",
+        "disease_bridge: diabetic"
+      ],
+      "figures": [
+        {
+          "label": "FIGURE 1",
+          "caption": "Representative OCT images of non‐persistent and persistent DME patients. (A) OCT scanning mode and quantification of central subfield thickness (CST). (B) Representative OCT images of non‐persistent DME patients with CST reduction > 25%. (C) Representative OCT images of persistent DME patients with CST reduction < 10%.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g002.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g002.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g002.webp",
+          "local_url": "generated/assets/PMC13730987/fig-01.webp",
+          "asset_path": "generated/assets/PMC13730987/fig-01.webp",
+          "asset_bytes": 71968,
+          "asset_sha256": "96261e522bb56925bd18aa56b4cab7860a42570bbde94e3f5b34ad7d9589bbbb",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "FIGURE 2",
+          "caption": "Workflow of DME cohort enrolment and analysis.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g004.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g004.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g004.webp",
+          "local_url": "generated/assets/PMC13730987/fig-02.webp",
+          "asset_path": "generated/assets/PMC13730987/fig-02.webp",
+          "asset_bytes": 62706,
+          "asset_sha256": "ba62245be11630351f4787ceccac9197107682fe03044744d32f3e4bcd0cea25",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "FIGURE 3",
+          "caption": "Metabolomic analysis of aqueous humour in patients with persistent versus non‐persistent DME. (A) Principal component analysis (PCA) score plot showing partial separation between the persistent DME group (orange) and the non‐persistent DME group (blue). (B) Orthogonal partial least squares–discriminant analysis (OPLS‐DA) model revealing distinct metabolic signatures between the two groups. (C) Permutation test plot (200 permutations) for the OPLS‐DA model. The results (R 2 Y = 0.903, Q 2 Y = −0.426) indicate that the model is robust and not overfitted. (D) Volcano plot illustrating the differential metabolites between the persistent and non‐persistent DME groups. Red dots represent upregulated metabolites ( n = 225) and blue dots represent downregulated metabolites ( n = 180) in the persistent DME group. The criteria for selection were VIP > 0.8, Q ‐value < 0.1, and fold‐change > 1.2 or < 0.83. (E) Hierarchical clustering heatmap of the differential metabolites, showing clear separation between the two groups based on their expression profiles. (F) ChemRICH enrichment plot, showing that the differential metabolites were grouped into 26 structural categories, with fatty acyls, carboxylic acids, and their derivatives, and organic oxygen compounds being the most predominant.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g001.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g001.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g001.webp",
+          "local_url": "generated/assets/PMC13730987/fig-03.webp",
+          "asset_path": "generated/assets/PMC13730987/fig-03.webp",
+          "asset_bytes": 52046,
+          "asset_sha256": "887abd434a50b4fcfa37e6d450a4f289750911af0e4cddd980782abbc1c1340f",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "FIGURE 4",
+          "caption": "Pathway Enrichment Analysis and Multimodal Exploration of Potential Biomarkers of persistent DME. (A) Bubble plot of pathway enrichment analysis based on the KEGG database, showing purine metabolism as the most significantly enriched pathway ( Q = 0.024). (B) Bubble plot of pathway enrichment analysis based on the Reactome database, identifying DNA repair as the most enriched pathway ( Q = 0.013). (C,D) Comparison of the ‘purine score’ and ‘DNA repair score’ between the persistent and non‐persistent DME groups. Both scores were significantly higher in the persistent DME group. (E) LOOCV ROC analysis of pDME.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g003.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g003.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13730987.1/DOM-28-11632-g003.webp",
+          "local_url": "generated/assets/PMC13730987/fig-04.webp",
+          "asset_path": "generated/assets/PMC13730987/fig-04.webp",
+          "asset_bytes": 54386,
+          "asset_sha256": "f6e795089dd10ac3dab9edd0e252900be58ac3918c408a5243413c2a0566a410",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary file 1",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13730987/bin/DOM-28-11632-s001.docx",
+          "description": "Table S1: Detailed parameters of metabolomics. Table S2: Baseline characteristics between patients with and without metabolomics data. Table S3: Baseline characteristics of pDME and npDME patients in the metabolomics cohort. Table S4: Baseline OCT parameters of pDME and npDME patients in the metabolomics cohort. Table S5: Differential metabolites ( n = 405) between persistent and non‐persistent DME. Table S6: Enriched pathways and metabolites. Table S7: Apparent, cross‐validated and internal‐validated AUC results of different models."
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "6.1",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-11-10T08:29:35Z"
+      },
+      "journal_display": "Diabetes, obesity & metabolism（IF 6.1；JCR SCI Q1）",
+      "updated_at": "2026-11-10T08:29:42Z",
+      "ai_status": "success",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    },
+    {
+      "id": "doi:10.1212/nxg.0000000000200449",
+      "title": "Sickle Cell Trait and Incident Ischemic Stroke Risk: A Whole-Genome Sequencing Study in the All of Us Research Program.",
+      "authors": [
+        "Gul S",
+        "Ong BA",
+        "Kharal GA"
+      ],
+      "journal": "Neurology. Genetics",
+      "year": "2026",
+      "doi": "10.1212/nxg.0000000000200449",
+      "pmcid": "PMC13738806",
+      "pmid": "42991740",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1212/NXG.0000000000200449",
+        "https://europepmc.org/articles/PMC13738806",
+        "https://europepmc.org/articles/PMC13738806?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 8,
+      "relevance_evidence": [
+        "tools: pipeline",
+        "disease_bridge: diabetes, kidney disease"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1",
+          "caption": "Kaplan-Meier Cumulative Incidence Curves for Ischemic Stroke by HBB Genotype (A) Full incident cohort (n = 275,530). (B) African genetic ancestry stratum only (n = 61,437; 9 additional participants carry MID, SAS, or unclassified ancestry not shown individually in Table 1 ). Shaded regions represent 95% CIs. Adjusted hazard ratios from the primary Cox model are annotated. The near-complete overlap of HbAA and HbAS curves in both panels contrasts with the marked separation of the HbSS curve. HbAA = homozygous reference genotype; HbAS = heterozygous sickle cell trait; HbSS = homozygous variant sickle cell disease.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f1.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f1.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f1.webp",
+          "local_url": "generated/assets/PMC13738806/fig-01.webp",
+          "asset_path": "generated/assets/PMC13738806/fig-01.webp",
+          "asset_bytes": 53996,
+          "asset_sha256": "919b18275bc413faa391ba81cae3cce4bded75d4bcfc14a913002acdc3ba25bf",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 2",
+          "caption": "Forest Plot of HbAS vs HbAA Hazard Ratios for Incident Ischemic Stroke Across 12 Prespecified Subgroups All confidence intervals cross the null line at HR = 1.0. Point estimates range from 0.94 to 1.15. The overall estimate (red diamond) is HR = 1.06 (0.89–1.25). Hazard ratios are plotted on a log scale. EUR ancestry was not estimable because no HbAS stroke events were observed in that stratum and is therefore not shown. AFR = African genetic ancestry; AMR = Latino/Admixed American genetic ancestry; HbAA = homozygous reference genotype; HbAS = heterozygous sickle cell trait.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f2.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f2.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f2.webp",
+          "local_url": "generated/assets/PMC13738806/fig-02.webp",
+          "asset_path": "generated/assets/PMC13738806/fig-02.webp",
+          "asset_bytes": 70124,
+          "asset_sha256": "dd71e3203206408088678e4f81789433daff6dc66220a173f6735f83f3cd0114",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 3",
+          "caption": "Assessment of the Proportional Hazards Assumption for the Primary Cox Model (A) Log-log survival plot. Approximately parallel lines for HbAA and HbAS support the proportional hazards assumption. (B) HbAS hazard ratio stability across sequential time splits. Blue circles represent HRs estimated before each time split; orange squares represent HRs after each split. The HR remains close to 1.0 throughout follow-up (range 0.91–1.15), supporting proportional hazards for the primary comparison. HbAA = homozygous reference genotype; HbAS = heterozygous sickle cell trait; HR = hazard ratio.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f3.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f3.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f3.webp",
+          "local_url": "generated/assets/PMC13738806/fig-03.webp",
+          "asset_path": "generated/assets/PMC13738806/fig-03.webp",
+          "asset_bytes": 41092,
+          "asset_sha256": "4a4beea2ba61650ecb375fd3f8491d1b7307b9776e1653701bd235a2a412820f",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "supplements": [],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "4.9",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-11-10T08:29:38Z"
+      },
+      "journal_display": "Neurology. Genetics（IF 4.9；JCR SCI Q1）",
+      "updated_at": "2026-11-10T08:30:42Z",
+      "ai_status": "success",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    }
+  ],
   "pending_candidates": []
 }
