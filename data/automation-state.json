@@ -1893,187 +1893,6 @@
       "publishable": true,
       "gate_reasons": [],
       "status": "published"
-    },
-    "doi:10.1212/nxg.0000000000200449": {
-      "id": "doi:10.1212/nxg.0000000000200449",
-      "title": "Sickle Cell Trait and Incident Ischemic Stroke Risk: A Whole-Genome Sequencing Study in the All of Us Research Program.",
-      "authors": [
-        "Gul S",
-        "Ong BA",
-        "Kharal GA"
-      ],
-      "journal": "Neurology. Genetics",
-      "year": "2026",
-      "doi": "10.1212/nxg.0000000000200449",
-      "pmcid": "PMC13738806",
-      "pmid": "42991740",
-      "citation_count": 0,
-      "fulltext_urls": [
-        "https://doi.org/10.1212/NXG.0000000000200449",
-        "https://europepmc.org/articles/PMC13738806",
-        "https://europepmc.org/articles/PMC13738806?pdf=render"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 8,
-      "relevance_evidence": [
-        "tools: pipeline",
-        "disease_bridge: diabetes, kidney disease"
-      ],
-      "figures": [
-        {
-          "label": "Figure 1",
-          "caption": "Kaplan-Meier Cumulative Incidence Curves for Ischemic Stroke by HBB Genotype (A) Full incident cohort (n = 275,530). (B) African genetic ancestry stratum only (n = 61,437; 9 additional participants carry MID, SAS, or unclassified ancestry not shown individually in Table 1 ). Shaded regions represent 95% CIs. Adjusted hazard ratios from the primary Cox model are annotated. The near-complete overlap of HbAA and HbAS curves in both panels contrasts with the marked separation of the HbSS curve. HbAA = homozygous reference genotype; HbAS = heterozygous sickle cell trait; HbSS = homozygous variant sickle cell disease.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f1.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f1.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f1.webp",
-          "local_url": "generated/assets/PMC13738806/fig-01.webp",
-          "asset_path": "generated/assets/PMC13738806/fig-01.webp",
-          "asset_bytes": 53996,
-          "asset_sha256": "919b18275bc413faa391ba81cae3cce4bded75d4bcfc14a913002acdc3ba25bf",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "Figure 2",
-          "caption": "Forest Plot of HbAS vs HbAA Hazard Ratios for Incident Ischemic Stroke Across 12 Prespecified Subgroups All confidence intervals cross the null line at HR = 1.0. Point estimates range from 0.94 to 1.15. The overall estimate (red diamond) is HR = 1.06 (0.89–1.25). Hazard ratios are plotted on a log scale. EUR ancestry was not estimable because no HbAS stroke events were observed in that stratum and is therefore not shown. AFR = African genetic ancestry; AMR = Latino/Admixed American genetic ancestry; HbAA = homozygous reference genotype; HbAS = heterozygous sickle cell trait.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f2.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f2.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f2.webp",
-          "local_url": "generated/assets/PMC13738806/fig-02.webp",
-          "asset_path": "generated/assets/PMC13738806/fig-02.webp",
-          "asset_bytes": 70124,
-          "asset_sha256": "dd71e3203206408088678e4f81789433daff6dc66220a173f6735f83f3cd0114",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "Figure 3",
-          "caption": "Assessment of the Proportional Hazards Assumption for the Primary Cox Model (A) Log-log survival plot. Approximately parallel lines for HbAA and HbAS support the proportional hazards assumption. (B) HbAS hazard ratio stability across sequential time splits. Blue circles represent HRs estimated before each time split; orange squares represent HRs after each split. The HR remains close to 1.0 throughout follow-up (range 0.91–1.15), supporting proportional hazards for the primary comparison. HbAA = homozygous reference genotype; HbAS = heterozygous sickle cell trait; HR = hazard ratio.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f3.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f3.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13738806.1/NXG-2026-300145f3.webp",
-          "local_url": "generated/assets/PMC13738806/fig-03.webp",
-          "asset_path": "generated/assets/PMC13738806/fig-03.webp",
-          "asset_bytes": 41092,
-          "asset_sha256": "4a4beea2ba61650ecb375fd3f8491d1b7307b9776e1653701bd235a2a412820f",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        }
-      ],
-      "fulltext_ok": true,
-      "asset_errors": [],
-      "assets_required": true,
-      "metrics": {
-        "impact_factor": "4.9",
-        "jcr": "SCI Q1",
-        "jcr_quartile": "Q1",
-        "jcr_q1": true,
-        "status": "matched",
-        "source": "EasyScholar",
-        "retrieved_at": "2026-11-10T08:29:38Z"
-      },
-      "journal_display": "Neurology. Genetics（IF 4.9；JCR SCI Q1）",
-      "updated_at": "2026-11-10T08:30:42Z",
-      "article": {
-        "title_zh": "镰状细胞特质与缺血性卒中：All of Us 全基因组测序队列的再检验",
-        "lead": "镰状细胞特质（sickle cell trait, SCT）是否独立增加缺血性卒中风险，长期存在争议。这项基于美国 NIH All of Us（AoU）研究计划全基因组测序（whole-genome sequencing, WGS）数据的回顾性队列研究，在 275,530 名无既往卒中的参与者中，以 rs334 基因型确认 SCT，并在校正遗传祖先主成分与血管危险因素后，发现 SCT 与缺血性卒中发病无显著独立关联（HR = 1.06，95% CI 0.89–1.25）。粗发生率比 1.70 在祖先校正后大幅衰减，提示既往报道的关联可能部分源于祖先相关混杂。",
-        "background": "镰状细胞特质是血红蛋白 β 链基因（hemoglobin subunit beta, HBB）第 6 位密码子谷氨酸到缬氨酸的杂合变异，即 HbAS 基因型，全球约影响 3 亿人，在美国黑人/非裔美国人中约占 8%–10%。既往关于 SCT 与缺血性卒中的研究结论不一致，效应估计从无效到风险增加 2 倍以上不等。作者认为，这些研究的解释力受限于样本量偏小、祖先多样性不足以及遗传祖先校正不充分。AoU 队列具备大规模 WGS 数据、纵向电子健康记录（electronic health record, EHR）和预计算的遗传祖先信息，为在统一框架下重新检验这一问题提供了条件。",
-        "research_question": "在 AoU 队列中，经 WGS 确认的 SCT 是否在校正遗传祖先和血管危险因素后，仍独立与缺血性卒中发病相关？同时，既往观察到的粗关联在多大程度上可由遗传祖先构成差异解释？",
-        "study_design": "回顾性队列研究。数据来源为 NIH AoU 研究计划 Controlled Tier 数据集 Curated Data Repository 第 8 版（CDR v8，数据发布 C2024Q3R9），通过 AoU Researcher Workbench 访问。研究以 WGS 确认的 HBB rs334 基因型定义暴露，以入组后首次住院 ICD-10 I63.x 编码定义缺血性卒中发病，采用多变量 Cox 比例风险模型进行主分析，并配套竞争风险模型、患病横断面分析、5 项敏感性分析和 12 项预设亚组分析。",
-        "methods": "研究在 AoU CDR v8 中进行，该队列为注册式前瞻性美国队列，纳入超过 804,000 名参与者，具备纵向 EHR 链接、WGS、体格测量和问卷数据，其中基因组数据参与者超过 50% 来自历史上代表性不足的群体。研究在 AoU 数据使用行为准则与数据使用协议框架下、于安全的研究者工作台内完成。\n\n基因分型：从 AoU 短读长 WGS 调用集（目标深度至少 30×，样本级与变异级质控已由 AoU 标准化流程完成）中，以 Hail MatrixTable 提取 rs334（HBB NM_000518.5:c.20A>T [p.Glu7Val]；GRCh38 chr11:5,227,002）和 rs33930165（HBB NM_000518.5:c.19G>A [p.Glu7Lys]；GRCh38 chr11:5,227,003）的个体基因型。个体调用水平上，基因型质量（genotype quality, GQ）<30、读深<20，或杂合调用等位基因平衡不在 0.35–0.65 之间者被排除。参与者被分为纯合参考 HbAA、杂合 HbAS（即 SCT）、纯合变异 HbSS（镰状细胞病，sickle cell disease, SCD）和杂合 HbAC（血红蛋白 C 特质）。HbAC 仅用于完整分类、避免将其并入 HbAA 参照组，因例数与事件数少，结果仅作描述。该分类针对 HbS 与 HbC 位点，未系统识别 β 地中海贫血变异或 HbS/β 地中海贫血复合杂合基因型。\n\n队列构建：入组时间定义为参与者最早记录的 EHR 观察期开始日期。纳入 18–75 岁、有 EHR 数据、纵向随访至少 12 个月（最早与最晚 EHR 观察期日期之间的间隔）的 WGS 参与者；排除入组前已有缺血性卒中（I63.x）、出血性卒中（I60.x–I61.x）或短暂性脑缺血发作（transient ischemic attack, TIA；G45.x）记录者。\n\n结局：主要结局为入组后首次于住院就诊（visit_concept_id 9,201、262 或 8,717）记录的 ICD-10 I63.x 编码，限定住院场景以提高特异性。出血性卒中（I60.x–I61.x）作为预设的阴性对照脑血管结局；TIA（G45.x）、新发心房颤动（I48.x，限基线无房颤者）和新发肾脏并发症（N17.x–N19.x）为次要结局，其中肾脏并发症作为阳性对照以验证分析有效性，但因其为异质性复合结局，解释需谨慎。患病卒中分析以 EHR 中曾记录的任何卒中或 TIA 编码为结局，在包含既往脑血管病的全队列中进行。\n\n协变量：年龄（连续）、出生时性别（按 AoU 表型数据记录，未用性染色体变异重新判定）、高血压（I10.x）、糖尿病（E10.x、E11.x、E13.x）、心房颤动（I48.x）、慢性肾脏病（chronic kidney disease, CKD；N18.x）、体重指数（body mass index, BMI；取所有可用测量的均值）和曾经吸烟（来自 AoU Basics 问卷 Smoking_100CigsLifetime）。主分析中协变量采用实用主义定义，即病例取事件日期前、对照取末次 EHR 日期前任何时间出现的诊断，以最大化协变量捕获；作者预先选择该策略，理由是纵向 EHR 中基线合并症常记录不全，仅限入组时点可能因基线疾病负担低估而增加残余混杂，但该策略可能纳入入组后发生的疾病，带来基线后协变量调整与过度调整的风险。为此预设了将所有协变量限制在入组当日或之前的敏感性分析。BMI 缺失 13,391 人（4.9%），主分析填补为队列中位数，另以链式方程多重填补（10 个填补数据集，Rubin 规则合并）和完整病例分析评估稳健性。遗传祖先主成分 1–10 与分类祖先标签来自 AoU 预计算的 WGS 祖先流程（aux/ancestry/ 目录下 ancestry_preds.tsv），基于人类基因组多样性计划（Human Genome Diversity Project, HGDP）与千人基因组计划参考样本构建主成分空间并训练分类器，将每名参与者投影后归入最可能的单一遗传祖先类别（非洲 AFR、拉丁裔/混合美洲 AMR、东亚 EAS、欧洲 EUR、中东、南亚 SAS），归类不要求单一祖先，无优势祖先归属者归为其他或未分类，不纳入祖先特异性分层。主 Cox 模型校正前 10 个连续遗传主成分而非分类祖先标签；分类标签用于 Table 1 的描述性分层及预设的非洲遗传祖先亚组与敏感性分析。\n\n统计分析：主分析为多变量 Cox 比例风险模型，以入组后时间为时间尺度，缺血性卒中发病为事件，HBB 基因型为暴露，HbAA 为参照；主要比较为 HbAS 与 HbAA，HbSS 作为生物学上预期的阳性对照，HbAC 因样本与事件数少不作推断重点。参与者于死亡或末次 EHR 日期删失。模型加入岭惩罚项（λ = 0.01）以改善数值稳定性。比例风险假设通过 log-log 生存曲线和序贯时间分割下的风险比稳定性评估。预设次要分析包括：逐步校正的嵌套 Cox 模型（评估遗传祖先校正的影响）、以死亡为竞争事件的病因特异性竞争风险模型、全队列患病脑血管病的多变量 logistic 回归，以及各次要发病结局的 Cox 模型。亚组分析覆盖按年龄、性别、合并症状态和遗传祖先定义的 12 个预设分层，并预设 SCT × CKD 交互分析。敏感性分析包括：（1）要求至少 2 次住院编码的更严格缺血性卒中定义；（2）排除基线 CKD；（3）排除基线心房颤动；（4）限制于非洲遗传祖先参与者（因 HbAS 与遗传祖先强相关，用于检验主估计对多祖先全队列与全局祖先校正的敏感性）；（5）协变量限制于入组当日或之前。另采用计数过程 Cox 框架进行时变协变量分析，将新发心房颤动与 CKD 作为时更新协变量（首次诊断日期由 0 转为 1），高血压与糖尿病因 EHR 中缺乏可靠发病日期而保留为基线协变量。发生率以每 1,000 人年事件数及精确 Poisson 置信区间计算。分析在 AoU Researcher Workbench 内使用 Python 3.10、lifelines 0.30.0 和 statsmodels 0.14.4 完成，所有主要比较采用双侧 α = 0.05；次要、亚组和交互分析视为探索性，未作多重比较校正。报告遵循 STROBE、STREGA 和 RECORD 指南。研究经 Cleveland Clinic 机构审查委员会批准，因属 AoU 工作台内去标识数据的回顾性分析，知情同意要求被豁免。数据经 NIH AoU Researcher Workbench 向符合访问条件的注册研究者开放，作者不能直接在平台外共享个体数据；分析代码、表型定义和补充方法细节可依 AoU 数据访问政策向通讯作者合理索取。",
-        "results": "研究人群与基因型分布：AoU CDR v8 共 633,547 名参与者，其中 414,830 名有 WGS 数据。应用年龄 18–75 岁、有 EHR 数据、随访至少 12 个月等条件后，275,621 人构成分析基础队列；再排除 91 名入组前有缺血性卒中、出血性卒中或 TIA 者，缺血性卒中发病队列为 275,530 人。该队列中 HbAA 269,404 人、HbAS 5,876 人、HbSS 144 人、HbAC 106 人。与 HbAA 相比，HbAS 者非洲遗传祖先比例显著更高（88.1% vs 20.8%），HbSS 中 96.5% 为非洲遗传祖先；HbAS 者高血压（40.7% vs 34.9%）、糖尿病（23.3% vs 17.5%）和 CKD（10.9% vs 7.1%）患病率也更高。HbAS 与 HbAA 的平均随访时间相近（12.45 年 vs 12.25 年）。\n\n发生率与粗比较：3,374,790 人年随访中共观察到 2,323 例缺血性卒中发病。粗发生率在 HbAA 为 0.67/1,000 人年（95% CI 0.65–0.70），HbAS 为 1.15/1,000 人年（95% CI 0.92–1.42），HbSS 为 7.09/1,000 人年（95% CI 3.88–11.90）。HbAS 相对 HbAA 的粗发生率比为 1.70。\n\n主分析：校正年龄、性别、高血压、糖尿病、心房颤动、CKD、BMI、吸烟及遗传祖先主成分 1–10 后，HbAS 与缺血性卒中发病无显著关联（HR = 1.06，95% CI 0.89–1.25；p = 0.53）。嵌套模型中，校正年龄、性别和遗传祖先主成分后 HR 为 1.10（95% CI 0.92–1.30），再校正心血管危险因素后为 1.07（95% CI 0.90–1.27），全校正模型为 1.06（95% CI 0.89–1.25）。相比之下，HbSS 与缺血性卒中发病显著相关（HR = 5.12，95% CI 2.96–8.85；p < 0.001）。Kaplan-Meier 累积发生率曲线（Figure 1）显示 HbSS 曲线与 HbAA、HbAS 曲线明显分离，而 HbAA 与 HbAS 基本重叠。从粗发生率比 1.70 到祖先校正后 HR 的衰减，与 HbAS 组非洲遗传祖先比例远高于 HbAA 组（88.1% vs 20.8%）所致的显著混杂相一致。\n\n竞争风险与患病分析：病因特异性竞争风险分析中，HbAS 与缺血性卒中的 HR 为 1.06（p = 0.53），死亡的病因特异性 HR 为 1.00（p = 0.96）。全队列（n = 275,621）患病脑血管病的 logistic 回归中，HbAS 的比值比为 0.97（95% CI 0.78–1.20；p = 0.75）。\n\n次要与阳性对照结局：HbAS 与出血性卒中（HR = 1.01，95% CI 0.81–1.27；p = 0.91）、TIA（HR = 1.06，95% CI 0.84–1.33；p = 0.62）和新发心房颤动（HR = 0.94，95% CI 0.81–1.10；p = 0.47）均无关联。HbSS 者新发心房颤动的 HR 为 1.74（95% CI 0.97–3.11；p = 0.06），并与新发肾脏并发症相关（HR = 1.60，95% CI 1.22–2.10；p = 0.0006）。\n\n亚组分析：在 12 个预设亚组中，HbAS 均与缺血性卒中发病无关联（Figure 2），HR 范围为 0.94–1.15，所有置信区间均包含 1.0。年龄分层（<50 岁、50–64 岁、65 岁及以上，HR 范围 0.96–1.15）、两种性别、有无高血压（高血压者 HR = 1.00）以及非洲祖先分层（HR = 0.97，95% CI 0.81–1.16；n = 5,176 名 HbAS，76 例事件）结果一致。非洲祖先分层估计与限制于非洲遗传祖先参与者的敏感性分析（HR = 0.98，95% CI 0.82–1.17）相近。基线年龄在合格范围内分布较广，无明显聚集或双峰（均值 52.0 岁，中位 54 岁，SD 14.9，范围 18–75）。\n\n敏感性分析与交互检验：主 Cox 模型的 log-log 生存曲线近似平行，序贯时间分割下 HbAS 风险比稳定（Figure 3），支持比例风险假设。所有预设及附加敏感性分析结果均与主分析一致：要求至少 2 次住院编码的严格卒中定义 HR = 1.00（95% CI 0.83–1.21；p = 0.99）；排除基线 CKD 者 HR = 1.08（95% CI 0.88–1.32；p = 0.45）；排除基线心房颤动者 HR = 1.04（95% CI 0.88–1.24；p = 0.64）；限制于非洲遗传祖先者 HR = 0.98（95% CI 0.82–1.17；p = 0.82）；严格基线协变量定义 HR = 1.09（95% CI 0.92–1.29；p = 0.34），提示无效关联并非主要由主模型的宽泛协变量捕获策略驱动；BMI 多重填补（HR 1.06，95% CI 0.89–1.25；p = 0.53）与完整病例分析（HR 1.05，95% CI 0.89–1.25；p = 0.55）结果不变。时变协变量分析中，5,089 例新发心房颤动和 28,882 例新发 CKD 作为时更新协变量，二者均与更高的缺血性卒中风险相关（心房颤动 HR 2.50，95% CI 2.27–2.75；CKD HR 3.35，95% CI 3.10–3.62；均 p < 0.001），而 HbAS 关联仍为无效且基本不变（HR 1.06，95% CI 0.89–1.24；p = 0.53）。预设 SCT × CKD 交互分析的交互 HR 为 1.13（95% CI 0.79–1.60；p = 0.51）；分层事件率在合并 CKD 的 HbAA 中为 3.95%、合并 CKD 的 HbAS 中为 5.47%、无 CKD 的 HbAA 中为 0.58%、无 CKD 的 HbAS 中为 0.94%。",
-        "limitations": "第一，暴露分类仅针对 rs334 与 rs33930165 两个位点，未系统识别 β 地中海贫血变异或 HbS/β 地中海贫血复合杂合基因型，因此部分遗传学上相当于镰状细胞病的参与者可能被归入 HbAS 或其他类别，造成暴露错分。第二，结局依赖 ICD-10 住院编码，虽限定住院场景以提高特异性，仍可能存在漏诊与误分类，且未报告卒中 adjudication 或影像确认。第三，协变量在主分析中采用实用主义捕获（可纳入入组后诊断），存在基线后调整与过度调整风险；作者以严格基线协变量敏感性分析（HR = 1.09）回应，但该分析本身也可能因基线记录不全而残余混杂。第四，HbSS 与 HbAC 组样本量和事件数小（HbSS 14 例缺血性卒中事件，HbAC 1 例），相应估计精度有限，HbAC 仅作描述。第五，遗传祖先分类基于遗传相似性而非自我报告的种族/族裔，且 EUR 祖先层因无 HbAS 卒中事件而无法估计，部分小样本祖先类别未单独展示。第六，次要、亚组与交互分析为探索性，未作多重比较校正，阳性结果（如 HbSS 与肾脏并发症）需谨慎解读。第七，BMI 缺失 4.9% 并以中位数填补为主分析，虽经多重填补与完整病例分析验证，仍属对缺失的处理选择。第八，研究为观察性设计，即使校正大量混杂因素，仍不能排除未测量混杂，也不能直接推断因果关系。",
-        "takeaways": "在大规模、WGS 确认且校正遗传祖先的 AoU 队列中，镰状细胞特质（HbAS）与缺血性卒中发病无显著独立关联（HR = 1.06，95% CI 0.89–1.25），该结论在 12 个预设亚组、5 项敏感性分析、竞争风险模型、时变协变量分析及非洲祖先限制分析中均保持一致。粗发生率比 1.70 在校正遗传祖先构成差异（HbAS 88.1% vs HbAA 20.8% 为非洲遗传祖先）后大幅衰减，提示既往文献中的阳性关联可能部分源于祖先相关混杂与群体结构。与之形成对照，纯合 HbSS 镰状细胞病的缺血性卒中风险显著升高（HR = 5.12），支持分析框架的生物学有效性。临床与研究含义是：不应将 SCT 本身视为缺血性卒中的独立危险因素；未来遗传关联研究若不能充分处理祖先结构，可能重复历史上的假阳性。",
-        "figure_notes": [
-          {
-            "label": "Figure 1",
-            "caption_zh": "按 HBB 基因型分层的缺血性卒中 Kaplan-Meier 累积发生率曲线。（A）全部发病队列（n = 275,530）；（B）仅非洲遗传祖先层（n = 61,437；另有 9 名参与者携带中东、南亚或未分类祖先，未在 Table 1 中单独列出）。阴影区为 95% CI，图中标注主 Cox 模型校正后的风险比。两个面板中 HbAA 与 HbAS 曲线几乎完全重叠，与 HbSS 曲线的明显分离形成对比。",
-            "what_question": "不同 HBB 基因型（HbAA、HbAS、HbSS）在随访期间缺血性卒中的累积发生率如何随时间变化？SCT 曲线是否与参考基因型曲线分离？",
-            "how_to_read": "横轴为随访时间，纵轴为缺血性卒中的累积发生率，曲线越高表示累积事件越多；阴影为 95% CI，曲线分离越明显提示组间风险差异越大。先看 A 面板三组曲线的相对位置，再对照 B 面板在非洲遗传祖先层内是否重现同样格局，最后结合图中标注的校正后 HR 判断差异是否具有统计学意义。",
-            "panel_reading": [
-              {
-                "panel": "A",
-                "experiment": "全部发病队列（n = 275,530）按 HBB 基因型绘制缺血性卒中累积发生率曲线",
-                "comparison": "HbAS 与 HbAA 比较，并以 HbSS 作为生物学阳性对照",
-                "result": "HbAA 与 HbAS 曲线几乎完全重叠，HbSS 曲线明显分离并位于上方；图中标注的校正后 HR 为 HbAS 1.06、HbSS 5.12",
-                "statistics": "阴影区为 95% CI；校正后 HR 及置信区间见正文与 Table 2，曲线间检验统计量正文未报告"
-              },
-              {
-                "panel": "B",
-                "experiment": "仅非洲遗传祖先层（n = 61,437）重复同一累积发生率分析",
-                "comparison": "该层内 HbAS 与 HbAA 比较，并与 HbSS 对照",
-                "result": "HbAA 与 HbAS 曲线仍近乎完全重叠，HbSS 曲线仍明显分离；正文报告该层 HbAS 亚组 HR = 0.97（95% CI 0.81–1.16）",
-                "statistics": "阴影区为 95% CI；亚组 HR 及置信区间见正文与 eTable 3，曲线间检验统计量正文未报告"
-              }
-            ],
-            "interpretation": "图形直观显示 SCT 携带者的卒中累积风险与参考基因型几乎无差别，而镰状细胞病患者风险显著升高；在非洲遗传祖先层内这一格局不变，说明主分析中的无效关联并非由祖先构成差异掩盖。",
-            "evidence": "曲线重叠与正文校正后 HR = 1.06（95% CI 0.89–1.25）一致；HbSS 曲线分离与 HR = 5.12（95% CI 2.96–8.85）一致；B 面板与非洲祖先亚组 HR = 0.97（95% CI 0.81–1.16）一致。",
-            "boundary": "Kaplan-Meier 曲线为未校正或部分校正的累积发生率展示，不能替代多变量校正估计；HbSS 组事件数少（14 例缺血性卒中），曲线尾部置信区间较宽；B 面板另有 9 名非非洲祖先参与者未单独展示；曲线间统计检验结果正文未报告。"
-          },
-          {
-            "label": "Figure 2",
-            "caption_zh": "HbAS 与 HbAA 比较的缺血性卒中风险比在 12 个预设亚组中的森林图。所有置信区间均跨越 HR = 1.0 的无效线，点估计范围为 0.94–1.15；总体估计（红色菱形）为 HR = 1.06（0.89–1.25）。风险比以对数尺度绘制。欧洲祖先层因该层未观察到 HbAS 卒中事件而无法估计，故未展示。",
-            "what_question": "SCT 与缺血性卒中的关联是否在年龄、性别、合并症和遗传祖先等预设亚组中保持一致，还是存在效应修饰？",
-            "how_to_read": "纵轴列出各亚组，横轴为对数尺度的 HR，垂直无效线位于 HR = 1.0；每个方块为点估计，横线为 95% CI，方块落在无效线右侧提示风险升高、左侧提示风险降低，横线跨越无效线表示无统计学意义。先看总体菱形，再逐行检查是否有亚组横线整体偏离无效线。",
-            "panel_reading": [
-              {
-                "panel": "森林图整体",
-                "experiment": "在 12 个预设亚组中分别拟合 HbAS vs HbAA 的缺血性卒中 Cox 模型",
-                "comparison": "各亚组内 HbAS 与 HbAA 比较，并与总体估计对照",
-                "result": "所有亚组置信区间均跨越 1.0，点估计范围 0.94–1.15；总体估计 HR = 1.06（0.89–1.25）",
-                "statistics": "HR 及 95% CI 以对数尺度绘制；各亚组样本量、HbAS 事件数与 HR 见 eTable 3，具体数值正文未逐一报告"
-              },
-              {
-                "panel": "非洲遗传祖先亚组",
-                "experiment": "在非洲遗传祖先层内估计 HbAS 与缺血性卒中的关联",
-                "comparison": "HbAS 与 HbAA 比较",
-                "result": "HR = 0.97（95% CI 0.81–1.16），n = 5,176 名 HbAS、76 例事件",
-                "statistics": "95% CI 跨越 1.0；与限制于非洲遗传祖先的敏感性分析 HR = 0.98（95% CI 0.82–1.17）相近"
-              },
-              {
-                "panel": "欧洲祖先层",
-                "experiment": "计划中的 EUR 祖先亚组分析",
-                "comparison": "HbAS 与 HbAA 比较",
-                "result": "该层未观察到 HbAS 卒中事件，HR 无法估计，故图中未展示",
-                "statistics": "正文未报告"
-              }
-            ],
-            "interpretation": "亚组间点估计高度一致且均无统计学意义，未发现明确的效应修饰信号，支持主分析无效关联在不同人群特征下稳定存在。",
-            "evidence": "12 个亚组 HR 范围 0.94–1.15、所有 CI 包含 1.0，与总体 HR = 1.06（0.89–1.25）一致；非洲祖先亚组与相应敏感性分析结果互相印证。",
-            "boundary": "亚组分析为探索性，未作多重比较校正，且部分亚组事件数少、置信区间宽；EUR 层无法估计说明亚组分析受事件数限制；亚组一致性不能排除未测量混杂，也不能证明各亚组效应真正相同。"
-          },
-          {
-            "label": "Figure 3",
-            "caption_zh": "主 Cox 模型比例风险假设的评估。（A）log-log 生存曲线：HbAA 与 HbAS 曲线近似平行，支持比例风险假设。（B）HbAS 风险比在序贯时间分割中的稳定性：蓝色圆点为各时间分割前的 HR 估计，橙色方块为分割后的 HR 估计；整个随访期间 HR 接近 1.0（范围 0.91–1.15），支持主要比较满足比例风险假设。",
-            "what_question": "主 Cox 模型的比例风险假设是否成立，即 HbAS 相对 HbAA 的风险比是否随随访时间保持恒定？",
-            "how_to_read": "A 面板中，若两条 log-log 生存曲线近似平行，则比例风险假设成立，曲线交叉或明显不平行提示违背。B 面板中，比较同一时间分割点前后（蓝圆与橙方）的 HR 是否接近，并观察 HR 随随访时间是否呈系统趋势；点估计围绕 1.0 波动且无方向性漂移，说明风险比稳定。",
-            "panel_reading": [
-              {
-                "panel": "A",
-                "experiment": "绘制 HbAA 与 HbAS 的 log-log 生存曲线以检验比例风险假设",
-                "comparison": "HbAA 与 HbAS 两条曲线",
-                "result": "两条曲线近似平行，支持比例风险假设",
-                "statistics": "正文未报告曲线平行性的定量检验统计量"
-              },
-              {
-                "panel": "B",
-                "experiment": "在序贯时间分割中分别估计分割前后的 HbAS 风险比",
-                "comparison": "各分割点前的 HR（蓝色圆点）与分割后的 HR（橙色方块）",
-                "result": "HR 在整个随访期间接近 1.0，范围为 0.91–1.15，未见系统性时间趋势",
-                "statistics": "正文未报告各分割点 HR 的具体置信区间与检验统计量"
-              }
-            ],
-            "interpretation": "两项诊断均支持主模型的比例风险假设，说明以单一 HR 概括整个随访期的 SCT 效应是合理的，主分析结论不因风险比随时间变化而失真。",
-            "evidence": "log-log 曲线近似平行与 HR 在 0.91–1.15 范围内稳定，均与正文“比例风险假设得到支持”的表述一致。",
-            "boundary": "图形诊断属定性或半定量评估，正文未报告基于 Schoenfeld 残差等正式检验的统计量；时间分割的切点选择与各段事件数未详细报告，HR 稳定性范围本身也包含一定抽样波动。"
-          }
-        ]
-      },
-      "ai_status": "success",
-      "ai_error": "",
-      "publishable": true,
-      "gate_reasons": [],
-      "status": "published"
     }
   },
   "attempted": {
@@ -2687,21 +2506,21 @@
       "retrieved_at": "2026-11-10T08:29:38Z"
     }
   },
-  "updated_at": "2026-11-10T08:31:23Z",
+  "updated_at": "2026-11-11T07:47:59Z",
   "last_run": {
     "status": "success",
-    "selected": 2,
-    "published": 2,
-    "candidates": 2,
-    "raw_candidates": 69,
-    "score_rejected": 2,
+    "selected": 0,
+    "published": 0,
+    "candidates": 0,
+    "raw_candidates": 67,
+    "score_rejected": 1,
     "scope_rejected": 66,
     "recovery_used": true,
     "q1_rejected": 1,
     "skipped_without_pmcid": 0,
     "search_error": "",
-    "preserved_articles": 6,
+    "preserved_articles": 5,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-11-10T08:31:23Z"
+    "finished_at": "2026-11-11T07:47:59Z"
   }
 }
