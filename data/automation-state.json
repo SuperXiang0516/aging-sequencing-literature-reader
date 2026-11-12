@@ -1893,6 +1893,273 @@
       "publishable": true,
       "gate_reasons": [],
       "status": "published"
+    },
+    "doi:10.1016/j.molmet.2026.102462": {
+      "id": "doi:10.1016/j.molmet.2026.102462",
+      "title": "BMI-anchored transcriptomics uncovers oxidative and inflammatory poles of obesity heterogeneity.",
+      "authors": [
+        "Yin-Yuan S",
+        "Linnaeus B",
+        "Yin-Cheng C",
+        "Erind G",
+        "Benedikt G",
+        "Sandy R",
+        "Mariami J",
+        "Sergio Eliseo PV",
+        "Anne H",
+        "Adhideb G",
+        "Christian W",
+        "Matthias B",
+        "Shahaf P",
+        "Antje G",
+        "Diana LD",
+        "Chen-Ching L"
+      ],
+      "journal": "Molecular metabolism",
+      "year": "2026",
+      "doi": "10.1016/j.molmet.2026.102462",
+      "pmcid": "PMC13744826",
+      "pmid": "42913790",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1016/j.molmet.2026.102462",
+        "https://europepmc.org/articles/PMC13744826",
+        "https://europepmc.org/articles/PMC13744826?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 9,
+      "relevance_evidence": [
+        "multiomics: transcriptom",
+        "disease_bridge: obesity"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1",
+          "caption": "Construction, stability, and functional characterization of the BMI-anchored transcriptomic model. (A) Schematic overview of the study workflow. A BMI-anchored transcriptomic model was developed from human VAT RNA-seq data and subsequently applied to perform cross-species projection in mouse adipose transcriptomes, characterize human obesity heterogeneity, and evaluate a separate insulin-sensitivity cohort. (B) Gene-level selection-frequency distributions using fixed α. For each gene, selection frequency was defined as the proportion of 500 iterations in which its LASSO coefficient was non-zero. Distributions are shown separately for the 458 primary model-selected genes and the remaining 15,584 candidate genes. Internal lines indicate the 25th, 50th, and 75th percentiles, and d denotes Cohen's d for the difference between the two distributions. Differences in selection-frequency distributions were assessed using two-sided Mann–Whitney U tests, with p-values adjusted across the six sampling fractions using the Holm method. Primary model-selected genes showed markedly higher selection frequencies at every sampling fraction (all Holm-adjusted p-values <1.1 × 10 −296 ). (C) Corresponding gene-level selection-frequency distributions after approximately matching model sparsity to the 458-gene primary model. Statistical comparisons were performed as in b, and primary model-selected genes again showed substantially higher selection frequencies than other candidate genes across all sampling fractions (all Holm-adjusted p-values <7.4 × 10 −277 ). (D) Gene-selection stability was evaluated across 81 LASSO regularization parameters yielding training Spearman's ρ values between 0.7 and 0.9. For each gene selected under at least one of these settings, selection frequency was defined as the proportion of α values at which the gene retained a non-zero coefficient, and genes were ranked accordingly. Genes selected in the primary model (α = 0.123; 458 genes, corresponding to Spearman's ρ ≈ 0.8) are outlined in red, whereas all other selected genes are shown in gray. Of the 458 primary-model genes, 281 were selected at every examined α value, compared with none of the 245 non-primary genes (two-sided Fisher's exact test, p-value = 2.25 × 10 −73; OR → ∞ because no non-primary gene had a selection frequency of 1). (E) Functional enrichment of genes selected by the BMI-anchored transcriptomic model. Enriched Gene Ontology biological processes were grouped into higher-order functional categories. The relative enrichment contribution of each category was calculated as the sum of NES values for all GO terms assigned to that category divided by the summed NES values across all terms, expressed as a percentage.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr1.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr1.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr1.webp",
+          "local_url": "generated/assets/PMC13744826/fig-01.webp",
+          "asset_path": "generated/assets/PMC13744826/fig-01.webp",
+          "asset_bytes": 283886,
+          "asset_sha256": "9e51d792440956c71e299409053baf634fcfe41c7db6fd990f4353be2fe8ee1e",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 2",
+          "caption": "Phenotypic and molecular divergence among DU mouse lines. (A) Boxplots showing the distribution of the condition factor (g/cm 3 ) and normalized white adipose tissue (WAT) weights, calculated as depot weight divided by total body weight, from the inguinal and epigonadal depots across the mouse lines DU6, FZTDU, and DU6P. Mouse lines are ordered as follows: DU6 (obesity-prone), FZTDU (control), and DU6P (bred for increased protein mass). Pairwise comparisons were performed using two-sided Wilcoxon rank-sum tests. P-values were adjusted separately within each phenotype for the three pairwise comparisons using the Holm–Bonferroni method; adjusted p-values are shown in the figure. (B) Cross-species projection of the BMI-anchored transcriptomic model. Each point represents an individual human VAT sample (BMI 30–60, n = 1,298) and adipose tissue from the mouse lines DU6, FZTDU, and DU6P, and the x-axis indicates the BMI-anchored transcriptomic score. Boxplots summarize group distributions, and effect sizes (Cohen's d ) are shown for pairwise comparisons. Pairwise comparisons were performed using two-sided Wilcoxon rank-sum tests, with p-values adjusted for the three pairwise comparisons using the Holm–Bonferroni method. Adjusted p-values are shown in the figure. The BMI-anchored transcriptomic score ranking (DU6 > FZTDU ≈ DU6P) mirrors adipose-tissue accumulation rather than body size, while aligning with the human visceral reference distribution.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr2.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr2.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr2.webp",
+          "local_url": "generated/assets/PMC13744826/fig-02.webp",
+          "asset_path": "generated/assets/PMC13744826/fig-02.webp",
+          "asset_bytes": 35442,
+          "asset_sha256": "3110ff9fa682d114831915c497ac7e9d1dd41121fae2bcfbbfa1b7d3a1a370bb",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 3",
+          "caption": "Comparative functional enrichment and mitochondrial pathway profiles in DU mouse lines. (A) Radar plot showing the relative enrichment contribution of functional categories between DU6 and DU6P lines. Categories include immune/inflammatory, cell cycle/division, other metabolism, development/signaling, energy production/consumption, lipid metabolism/catabolism, cytoskeleton/adhesion, autophagy/protein quality control, GH–IGF axis, obesity/adiposity, and miscellaneous. DU6 and DU6P exhibit distinct enrichment patterns, highlighting differential metabolic and signaling profiles. The relative enrichment contribution of each category was calculated from the proportional sum of NES values of functions within that category relative to the total NES. (B) Boxplots showing the read-count distributions of up-regulated differentially expressed genes (DEGs) assigned to representative mitochondrial and metabolic functional modules, including oxidative phosphorylation complexes (I–V), mitochondrial ribosomal proteins and translational activators, mitochondrial regulatory machinery, fatty-acid oxidation, and lipid synthesis and storage. Comparisons reveal a marked shift toward oxidative and catabolic pathways in DU6P, contrasting with the more anabolic and lipid-storage–oriented profile of DU6. (C) Scatter plots showing gene-level concordance between gene-expression correlation with the BMI-anchored transcriptomic score and differential expression across pairwise comparisons among DU6, DU6P, and FZTDU. The x axis indicates differential expression (log2 fold change, log2FC ), and the y axis shows the corresponding Spearman correlation coefficient with the BMI-anchored transcriptomic score. Genes with | log2FC | < 1 are shown in light grey. Genes with ∣ log2FC ∣≥1 are colored according to the mouse line in which they are up-regulated: DU6, red; DU6P, blue; and FZTDU, green. The vertical line indicates a log2FC of zero, and the horizontal line marks zero correlation.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr3.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr3.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr3.webp",
+          "local_url": "generated/assets/PMC13744826/fig-03.webp",
+          "asset_path": "generated/assets/PMC13744826/fig-03.webp",
+          "asset_bytes": 192652,
+          "asset_sha256": "93282f57ba52dfcef5dd5187c91cd22684a257f3087983d4df86804d0011ea7a",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 4",
+          "caption": "Molecular prediction of obesity subtypes and functional enrichment profiles. (A) Scatter plot comparing predicted versus measured BMI across individuals. Patients were stratified into MHO-like (blue) and MUO-like (red) groups based on a post-hoc LOWESS model, illustrating clear divergence between molecular and phenotypic obesity states. Grey points indicate intermediate individuals with decile-standardized discordance scores between −1 and 1. (B) Bar chart summarizing the relative enrichment contribution of functional categories for MHO-like and MUO-like subgroups. The MHO-like group is predominantly associated with energy production/consumption, whereas MUO-like shows higher contributions from other metabolism and autophagy/protein quality control pathways, highlighting distinct molecular mechanisms underlying obesity heterogeneity. Herein, the miscellaneous category was excluded and the remaining category contributions were renormalized to 100%; the complete distributions including miscellaneous terms are shown in Figs. S8 and S9. (C) For the clinical and biochemical comparison, three outliers were excluded: vis-2520, the MUO-like individual with the highest gGT; vis-2504, the MHO-like individual with the highest gGT; and vis-2149, the MUO-like individual with the highest triglyceride level. Seventy-seven clinical and biochemical parameters were screened, and variables passing the significance criteria are shown. Binary variables were analyzed using Fisher's exact test, and continuous variables were assessed using the Mann–Whitney U test. Effect sizes are reported as odds ratios (ORs) for binary variables, indicating the relative likelihood of a clinical feature in MUO-like compared with MHO-like, and as Cohen's d for continuous variables, calculated as MUO-like minus MHO-like; negative values therefore indicate higher levels in MHO-like. Nominal p-values and effect sizes are shown in each panel, whereas significance was determined using FDR-adjusted q < 0.05, with continuous variables additionally requiring |Cohen's d | > 0.4. Numbers in parentheses indicate the effective number of individuals available for each variable. (D) Projection of the separate, non-overlapping LOBB validation cohort onto the primary-cohort–derived PCA reference space. Individual samples classified as insulin sensitive or insulin resistant are projected onto the first two principal components, PC1 and PC2, which explain 10.65% and 8.49% of the variance, respectively. Larger points denote the subtype centroids, and dotted lines connect each individual to its assigned centroid, visualizing within-subtype dispersion and the separation between insulin-sensitive and insulin-resistant molecular states.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr4.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr4.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr4.webp",
+          "local_url": "generated/assets/PMC13744826/fig-04.webp",
+          "asset_path": "generated/assets/PMC13744826/fig-04.webp",
+          "asset_bytes": 119572,
+          "asset_sha256": "99059dd1fe37830099c2ddb54e6ca0f6be3c96565fce7599980ac1a1cd4f219d",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "6.3",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-11-12T08:25:15Z"
+      },
+      "journal_display": "Molecular metabolism（IF 6.3；JCR SCI Q1）",
+      "updated_at": "2026-11-12T08:25:22Z",
+      "article": {
+        "title_zh": "以BMI为锚的转录组学揭示肥胖异质性的氧化与炎症两极",
+        "lead": "这项研究把体重指数（body mass index，BMI）当作表型锚点，用人类内脏脂肪转录组训练出一个可预测BMI的LASSO模型，再把同一模型投射到肥胖表型分化的小鼠选育系和独立人类队列中。作者报告，模型选出的基因汇聚于免疫、代谢、线粒体、生长、结构重塑与蛋白稳态等程序，并在小鼠中区分出以脂质合成与炎症为特征的DU6和以氧化分解代谢为特征的DU6P。在人类中，实测BMI与转录组预测BMI的方向性不一致被用来定义转录组层面的类代谢健康肥胖（metabolically healthy obesity-like，MHO-like）与类代谢不健康肥胖（metabolically unhealthy obesity-like，MUO-like）状态。需要强调，本文为横断面观察性设计，所有亚型划分与跨物种对应均为关联性证据，不能直接推断因果。",
+        "background": "BMI仍是肥胖最主要的临床指标，但同一BMI区间的个体在脂肪组织分子程序上可能截然不同，一部分人表现为代谢韧性，另一部分人表现为代谢易损。摘要指出，BMI本身无法分辨这些区分代谢健康与代谢风险的内脏脂肪分子程序。因此，作者试图在BMI这一临床锚点之上叠加转录组信息，把“表型肥胖”与“分子肥胖”分开刻画。这一思路的前提是：内脏脂肪转录组中应当存在与BMI相关、但又能携带超出BMI的病理生理信息的稳定基因程序。",
+        "research_question": "核心问题是：能否以BMI为锚，从人类内脏脂肪转录组中构建一个稳定的转录组评分，并用它刻画超出实测BMI的肥胖异质性？具体包括三个层次：该评分能否跨物种投射到肥胖表型分化的小鼠系，并对应脂肪组织含量而非单纯体型；评分在基因层面是否优先追踪与肥胖易损状态相关的表达变化；在人类中，实测与预测BMI的方向性不一致能否划分出MHO-like与MUO-like两类状态，并在独立队列中保留与胰岛素抵抗相关的信号。",
+        "study_design": "研究为横断面观察性设计，包含一个主建模队列、一个小鼠跨物种验证部分和一个独立非重叠人类验证队列。主建模队列来自Leipzig Obesity BioBank（LOBB）的1,479份人网膜内脏脂肪RNA-seq谱，其中BMI 30–60的1,298份样本进入主建模。小鼠部分使用长期选育的DU6（高体重）、DU6P（高蛋白量）与未选育对照FZTDU，每系6个生物学重复。人类验证队列为77例有高胰岛素-正葡萄糖钳夹数据的肥胖个体，按葡萄糖输注率阈值分为胰岛素敏感（insulin-sensitive，IS，n=32）与胰岛素抵抗（insulin-resistant，IR，n=45），且均未进入主建模训练集。",
+        "methods": "人类数据来自LOBB临床环境收集的1,479份网膜内脏脂肪组织样本，队列含432名男性（BMI 49.12 ± 9.1 kg/m²；年龄48.02 ± 11.8岁；50.2%患2型糖尿病（type 2 diabetes，T2D）；96.5% BMI ≥30 kg/m²）和1,047名女性（BMI 48.47 ± 8.8 kg/m²；年龄46.74 ± 11.8岁；37.1%患T2D；98.5% BMI ≥30 kg/m²）。排除标准包括年龄小于18岁、慢性药物或酒精滥用史、术前一年内吸烟、急性炎症状态、晚期恶性肿瘤、未控制的甲状腺功能异常或库欣综合征。脂肪样本取自计划性腹腔镜腹部手术。验证队列为有钳夹数据的LOBB参与者，IS组（n=32；71.8%女性；年龄38.75 ± 10.98岁；BMI 46.00 ± 6.82 kg/m²；空腹血糖（fasting plasma glucose，FPG）5.22 ± 0.19 mmol/L；空腹胰岛素（fasting plasma insulin，FPI）28.74 ± 14.17 pmol/L）与IR组（n=45；71.1%女性；年龄47.09 ± 7.49岁；BMI 46.89 ± 8.12 kg/m²；FPG 5.67 ± 0.34 mmol/L；FPI 107.96 ± 30.32 pmol/L）按钳夹来源的葡萄糖输注率（glucose infusion rate，GIR）阈值划分。人RNA按SMART-seq方案提取总RNA，在苏黎世功能基因组中心用NovaSeq 6000单端测序建库；Fastp（v0.20.0）去接头与低质量碱基并做质量修剪，Kallisto（v0.46）比对人类参考基因组GRCh38.p13与GENCODE release 32注释进行基因水平定量。小鼠来自FBN长期选育实验，DU6已维持180代、DU6P 152代，并设未选育对照FZTDU；饲养于无特定病原体（specific pathogen-free，SPF）环境，温度22.5 ± 0.2 °C、湿度至少40%、12:12小时明暗周期，自由摄食含12%脂肪、27%蛋白、61%碳水化合物的饲料；雄性小鼠8–9周龄处死，取腹股沟与附睾旁白色脂肪组织冻存或4%多聚甲醛固定。小鼠每系6个重复，按Illumina RNA建库试剂盒建库，用nf-core/rnaseq流程处理，FastQC评估质量、cutadapt修剪、STAR比对GRCm39、HTSeq定量。预处理阶段提取人GRCh38.p13与小鼠GRCm39的蛋白编码基因，去除种内全样本零计数基因后得19,884个人类基因与19,087个小鼠基因；对1,479份人内脏脂肪样本和18份小鼠附睾旁脂肪样本（DU6、DU6P、FZTDU各6份）分别做分位数归一化，再在种内做逐特征Z分数标准化；从Ensembl Compara获取高置信度人鼠直系同源基因对，最终保留16,042对作为BMI模型特征。以BMI为表型锚拟合LASSO回归得到转录组预测BMI，并将实测与预测BMI的方向性不一致用于定义MHO-like与MUO-like。统计方面，小鼠系间比较用双侧Wilcoxon秩和检验，并在每个表型内对三次两两比较用Holm–Bonferroni校正；差异表达基因（differentially expressed genes，DEGs）由DESeq2定义，阈值为准许调整后p值<0.05且log2倍数变化>0；功能层面用基因集富集分析（gene set enrichment analysis，GSEA）与上调DEG富集分析（报告比值比（odds ratio，OR）与p值）；临床变量二分类用Fisher精确检验、连续变量用Mann–Whitney U检验，显著性以错误发现率（false discovery rate，FDR）校正后q<0.05为准，连续变量另需|Cohen's d|>0.4。数据可得性方面，LOBB的bulk RNA-seq因知情同意与当地数据保护法规限制不能存入公共数据库，需联系Matthias Blüher或Anne Hoffmann并经LOBB指导委员会审批，仅限研究用途、不得商业化。",
+        "results": "作者首先报告模型构建与稳定性：在固定α下，458个主模型入选基因在每一个抽样比例下的入选频率都显著高于其余15,584个候选基因（所有Holm校正p值<1.1 × 10⁻²⁹⁶）；在把模型稀疏度匹配到458基因后结论一致（所有Holm校正p值<7.4 × 10⁻²⁷⁷）。在81个LASSO正则化参数（训练Spearman's ρ介于0.7与0.9）下，458个主模型基因中有281个在全部α值下均被选中，而245个非主模型基因中无一如此（双侧Fisher精确检验p=2.25 × 10⁻⁷³）。功能富集显示入选基因汇聚于免疫、代谢、线粒体、生长、结构重塑与蛋白稳态等程序。跨物种部分，条件因子（condition factor，CF，体重(g)/体长(cm)³）排序为DU6 ≈ DU6P > FZTDU，而相对白色脂肪组织含量排序为DU6 > DU6P ≈ FZTDU，二者出现分离；BMI锚定转录组评分排序为DU6 > DU6P ≈ FZTDU，更贴近脂肪组织含量而非体型。功能层面，相对DU6P，DU6富集免疫/炎症通路（细胞因子调控、白细胞迁移、肥大细胞脱颗粒）与细胞周期/分裂过程；DU6P则富集能量产生/消耗与发育/信号过程，并额外富集脂质代谢/分解代谢。上调DEG富集分析给出更清晰的模块：DU6富集脂质合成与储存（OR ≈ 76.5，p=3.8 × 10⁻¹¹）；DU6P富集氧化磷酸化各复合体（复合体I OR ≈ 28.4，p=3.75 × 10⁻¹²；复合体II OR ≈ 27.1，p=0.05；复合体III OR ≈ 69.0，p=1.13 × 10⁻⁷；复合体IV结构组分OR ≈ 31.8，p=2.0 × 10⁻⁶，组装因子OR ≈ 10.9，p=0.02；复合体V/ATP合酶OR ≈ 27.7，p=3.5 × 10⁻⁷），以及线粒体核糖体蛋白（OR ≈ 5.57，p=2.8 × 10⁻³）、线粒体翻译激活因子（OR ≈ 30.7，p=2.8 × 10⁻⁴）、线粒体调控机器（OR ≈ 15.3，p=2.1 × 10⁻⁷）和扩展的脂肪酸氧化能力（OR ≈ 20.3，p=2.9 × 10⁻⁸）。生长激素（growth hormone，GH）严格核心集在两系间无显著差异，但纳入下游代谢效应因子的扩展GH轴在DU6P显著富集（OR ≈ 13.7，p=3.5 × 10⁻⁴），在DU6不显著（OR ≈ 11.2，p=0.09）。基因层面，差异表达效应量与基因对BMI锚定转录组评分的相关性在涉及DU6的对比中呈正相关（DU6 vs DU6P：Pearson r=0.406，Spearman's ρ=0.552；DU6 vs FZTDU：Pearson r=0.385，Spearman's ρ=0.602），而DU6P vs FZTDU仅微弱相关（Pearson r=0.066，Spearman's ρ=0.087）。人类部分，按实测与预测BMI的方向性不一致划分后，MHO-like个体显示增强的线粒体能量产生程序与更有利的血糖和血脂谱，MUO-like个体显示应激适应性代谢重塑与更多心血管代谢药物使用。在独立非重叠验证队列中，投射到主队列主成分分析（principal component analysis，PCA）空间后仍保留与胰岛素抵抗相关的信号，校正性别后基本不变。",
+        "limitations": "首先，人类主队列与验证队列均来自LOBB，为横断面临床样本，无法确立转录组状态与代谢结局之间的时间顺序或因果关系。其次，MHO-like与MUO-like的划分依赖实测与预测BMI的方向性不一致，并以事后LOWESS模型分层，属于数据驱动的定义，其阈值与可迁移性需外部独立队列检验。第三，跨物种部分小鼠每系仅6个生物学重复，且仅分析附睾旁脂肪组织，DU6与DU6P的对照结论不能直接等同于人类肥胖亚型。第四，临床与生化比较中排除了3例离群个体，且77个参数的多重检验依赖FDR校正，部分模块（如复合体II p=0.05、组装因子p=0.02）统计强度有限。第五，LOBB的bulk RNA-seq受知情同意与数据保护法规限制不能公开 deposited，复现需经指导委员会审批。最后，正文未报告模型在独立人类队列中的具体效应量与置信区间，相关数值需查阅原文补充材料。",
+        "takeaways": "该研究提出并验证了一个以BMI为锚的内脏脂肪转录组评分，其入选基因在多种抽样与正则化设置下高度稳定，并汇聚于免疫、代谢、线粒体、生长、结构重塑与蛋白稳态程序。跨物种投射显示该评分更贴近脂肪组织含量而非体型，并把肥胖易感的DU6（脂质合成与炎症）与代谢韧性的DU6P（氧化分解代谢）置于同一轴的两极。在人类中，转录组与实测BMI的方向性不一致可划分出MHO-like与MUO-like状态，前者线粒体能量产生增强、血糖血脂更有利，后者呈应激适应性重塑并更多使用心血管代谢药物。作者据此提出一条保守的脂肪转录组轴：氧化代谢韧性对应更健康的肥胖，脂质-炎症重塑对应代谢易损；但上述均为关联性证据，临床转化仍需前瞻性验证。",
+        "figure_notes": [
+          {
+            "label": "Figure 1",
+            "caption_zh": "BMI锚定转录组模型的构建、稳定性与功能刻画。",
+            "what_question": "该图回答：以BMI为锚的转录组模型如何构建，其入选基因是否稳定，以及这些基因承载哪些生物学功能。",
+            "how_to_read": "先看A的工作流示意理解整体设计，再依次读B、C的入选频率分布、D的跨正则化参数稳定性与E的功能富集类别贡献；B、C、D均以入选频率为核心指标，E以归一化富集分数（normalized enrichment score，NES）占比呈现。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "研究流程示意：从人类内脏脂肪RNA-seq构建BMI锚定转录组模型，再投射到小鼠脂肪转录组、刻画人类肥胖异质性并评估独立胰岛素敏感性队列。",
+                "comparison": "该面板为流程示意，不涉及组间统计比较。",
+                "result": "展示了建模、跨物种投射、人类异质性刻画与独立队列评估四个环节的先后关系。",
+                "statistics": "正文未报告。"
+              },
+              {
+                "panel": "B",
+                "experiment": "在固定α下，对458个主模型入选基因与其余15,584个候选基因计算基因水平入选频率（500次迭代中LASSO系数非零的比例）。",
+                "comparison": "主模型入选基因与其余候选基因的入选频率分布比较。",
+                "result": "主模型入选基因在每一个抽样比例下入选频率都明显更高。",
+                "statistics": "双侧Mann–Whitney U检验，六个抽样比例经Holm校正，所有校正后p值<1.1 × 10⁻²⁹⁶；图中标注Cohen's d。"
+              },
+              {
+                "panel": "C",
+                "experiment": "在把模型稀疏度近似匹配到458基因主模型后，重新计算基因水平入选频率分布。",
+                "comparison": "与B相同的两组基因比较。",
+                "result": "主模型入选基因在所有抽样比例下仍显著高于其他候选基因。",
+                "statistics": "统计方法同B，所有Holm校正后p值<7.4 × 10⁻²⁷⁷。"
+              },
+              {
+                "panel": "D",
+                "experiment": "在81个LASSO正则化参数（训练Spearman's ρ介于0.7与0.9）下评估基因入选稳定性，并按入选频率排序。",
+                "comparison": "主模型基因（α=0.123，458个基因，对应Spearman's ρ≈0.8，红色轮廓）与其他被选基因（灰色）比较。",
+                "result": "458个主模型基因中281个在全部α值下均被选中，而245个非主模型基因中无一如此。",
+                "statistics": "双侧Fisher精确检验，p=2.25 × 10⁻⁷³；OR趋于无穷，因为没有非主模型基因的入选频率为1。"
+              },
+              {
+                "panel": "E",
+                "experiment": "对BMI锚定转录组模型入选基因做Gene Ontology生物学过程富集，并归并为更高阶功能类别。",
+                "comparison": "各类别之间按相对富集贡献比较，贡献为该类别所有GO条目NES之和除以全部条目NES之和的百分比。",
+                "result": "入选基因的功能富集覆盖免疫、代谢、线粒体、生长、结构重塑与蛋白稳态等类别。",
+                "statistics": "正文未报告。"
+              }
+            ],
+            "interpretation": "该图说明模型并非依赖少数不稳定基因，而是在多种抽样与正则化设置下反复选中同一批基因，且这些基因在功能上对应肥胖相关的免疫与代谢程序，为后续跨物种与人类亚型分析提供方法学基础。",
+            "evidence": "支持证据为B、C中入选频率的显著分离，D中281/458个主模型基因在全部α下稳定入选，以及E的功能类别富集。",
+            "boundary": "稳定性分析基于同一LOBB主队列的内部重采样，不能替代外部独立队列的验证；E的功能富集为关联性描述，未证明这些程序对BMI的因果作用。"
+          },
+          {
+            "label": "Figure 2",
+            "caption_zh": "DU小鼠系之间的表型与分子分化。",
+            "what_question": "该图回答：BMI锚定转录组评分在小鼠中更贴近体型还是脂肪组织含量，以及三个选育系的表型差异如何。",
+            "how_to_read": "先读A比较条件因子与归一化白色脂肪组织重量两种表型排序，再读B看BMI锚定转录组评分在三系中的分布及其与人类内脏脂肪参考分布的关系；注意两面板的排序是否一致。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "展示DU6、FZTDU、DU6P三系的箱线图，指标为条件因子（g/cm³）与归一化白色脂肪组织重量（脂肪库重量除以总体重，含腹股沟与附睾旁脂肪库）。",
+                "comparison": "三系之间两两比较，小鼠系按DU6（肥胖易感）、FZTDU（对照）、DU6P（高蛋白量选育）排序。",
+                "result": "条件因子排序为DU6 ≈ DU6P > FZTDU，而归一化白色脂肪组织重量排序为DU6 > DU6P ≈ FZTDU，显示总体表型与脂肪组织构成之间存在分离。",
+                "statistics": "双侧Wilcoxon秩和检验，每个表型内对三次两两比较用Holm–Bonferroni校正，校正后p值标于图中。"
+              },
+              {
+                "panel": "B",
+                "experiment": "BMI锚定转录组模型的跨物种投射，每个点代表一例人类内脏脂肪样本（BMI 30–60，n=1,298）或一个小鼠系脂肪组织样本，横轴为BMI锚定转录组评分。",
+                "comparison": "三系之间两两比较，并以人类内脏脂肪参考分布作为背景。",
+                "result": "评分排序为DU6 > FZTDU ≈ DU6P，与附睾旁白色脂肪含量排序更一致，而非与条件因子排序一致，并与人类内脏脂肪参考分布对齐。",
+                "statistics": "双侧Wilcoxon秩和检验，三次两两比较用Holm–Bonferroni校正，校正后p值标于图中；图中给出两两比较的Cohen's d效应量。"
+              }
+            ],
+            "interpretation": "该图提示BMI锚定转录组评分捕捉的是脂肪组织积累相关的分子状态，而不是单纯的体型大小，从而支持将其用于跨物种比较肥胖相关脂肪程序。",
+            "evidence": "A中条件因子与脂肪重量排序的分离，以及B中评分排序与脂肪含量排序一致、与条件因子排序不一致。",
+            "boundary": "小鼠每系仅6个生物学重复，且仅分析附睾旁脂肪组织；排序一致性为描述性证据，正文未报告评分与脂肪含量之间的定量相关分析。"
+          },
+          {
+            "label": "Figure 3",
+            "caption_zh": "DU小鼠系的比较功能富集与线粒体通路谱。",
+            "what_question": "该图回答：DU6与DU6P在功能层面呈现何种对立程序，以及BMI锚定转录组轴在基因层面优先追踪哪一系的表达变化。",
+            "how_to_read": "先读A的雷达图把握两系功能类别的相对贡献差异，再读B看线粒体与代谢模块中上调DEG的读数分布，最后读C的散点图判断差异表达效应量与评分相关性的对应关系，注意颜色对应上调所在的小鼠系。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "雷达图展示DU6与DU6P之间各功能类别的相对富集贡献，类别包括免疫/炎症、细胞周期/分裂、其他代谢、发育/信号、能量产生/消耗、脂质代谢/分解代谢、细胞骨架/黏附、自噬/蛋白质量控制、GH–IGF轴、肥胖/脂肪度与杂项。",
+                "comparison": "DU6与DU6P两系之间的功能类别贡献比较。",
+                "result": "两系呈现不同的富集模式：DU6偏向免疫/炎症与细胞周期/分裂，DU6P偏向能量产生/消耗与发育/信号等。",
+                "statistics": "相对富集贡献按该类别内各功能NES之和占全部NES总和的比例计算；正文未报告该面板的显著性检验。"
+              },
+              {
+                "panel": "B",
+                "experiment": "箱线图展示归属于代表性线粒体与代谢功能模块的上调DEG读数分布，模块包括氧化磷酸化复合体I–V、线粒体核糖体蛋白与翻译激活因子、线粒体调控机器、脂肪酸氧化以及脂质合成与储存。",
+                "comparison": "DU6与DU6P之间各模块上调DEG的分布比较。",
+                "result": "DU6P明显偏向氧化与分解代谢通路，DU6则更偏向合成代谢与脂质储存。",
+                "statistics": "上调DEG由DESeq2定义，调整后p值<0.05且log2倍数变化>0；正文报告各模块OR与p值，如DU6脂质合成与储存OR ≈ 76.5、p=3.8 × 10⁻¹¹，DU6P复合体I OR ≈ 28.4、p=3.75 × 10⁻¹²。"
+              },
+              {
+                "panel": "C",
+                "experiment": "散点图展示基因表达与BMI锚定转录组评分的Spearman相关系数（纵轴）与三系两两比较的差异表达log2倍数变化（横轴）之间的一致性。",
+                "comparison": "DU6 vs DU6P、DU6 vs FZTDU、DU6P vs FZTDU三组对比；|log2FC|<1的基因以浅灰显示，|log2FC|≥1的基因按上调所在系着色（DU6红、DU6P蓝、FZTDU绿）。",
+                "result": "涉及DU6的对比呈强正相关，而DU6P vs FZTDU仅微弱相关，说明该轴优先追踪DU6相关状态。",
+                "statistics": "DU6 vs DU6P：Pearson r=0.406，Spearman's ρ=0.552；DU6 vs FZTDU：Pearson r=0.385，Spearman's ρ=0.602；DU6P vs FZTDU：Pearson r=0.066，Spearman's ρ=0.087。"
+              }
+            ],
+            "interpretation": "该图把DU6刻画为脂质合成、炎症与增殖重塑偏向的肥胖易损极，把DU6P刻画为以氧化磷酸化、脂肪酸氧化与线粒体翻译为核心的氧化分解代谢极，并显示BMI锚定转录组轴在基因层面与DU6状态更紧密对应。",
+            "evidence": "A的功能类别分离、B中各线粒体与代谢模块的OR与p值，以及C中涉及DU6对比的正相关。",
+            "boundary": "GSEA与DEG富集均为基于表达关联的功能推断，未做功能实验验证；复合体II（p=0.05）与组装因子（p=0.02）等模块统计强度有限；小鼠数据仅来自附睾旁脂肪组织。"
+          },
+          {
+            "label": "Figure 4",
+            "caption_zh": "肥胖亚型的分子预测与功能富集谱。",
+            "what_question": "该图回答：实测与预测BMI的方向性不一致能否划分MHO-like与MUO-like，两类状态在功能与临床指标上有何差异，以及独立验证队列是否保留胰岛素抵抗相关信号。",
+            "how_to_read": "先读A看预测与实测BMI的散点及亚型分层，再读B比较两类状态的功能类别贡献，然后读C的临床与生化指标效应量，最后读D的独立队列PCA投射。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "散点图比较个体预测BMI与实测BMI，并基于事后LOWESS模型把个体分为MHO-like（蓝色）与MUO-like（红色）。",
+                "comparison": "MHO-like与MUO-like两类状态之间，以及它们与中间个体（十分位标准化不一致分数介于−1与1的灰色点）之间。",
+                "result": "分子与表型肥胖状态之间出现明显分离，据此完成亚型分层。",
+                "statistics": "正文未报告该面板的具体统计量。"
+              },
+              {
+                "panel": "B",
+                "experiment": "条形图总结MHO-like与MUO-like亚组各功能类别的相对富集贡献。",
+                "comparison": "MHO-like与MUO-like两组之间比较。",
+                "result": "MHO-like主要与能量产生/消耗相关，MUO-like则更多贡献于其他代谢与自噬/蛋白质量控制通路。",
+                "statistics": "图中排除杂项类别后把其余类别贡献重新归一化到100%；含杂项的完整分布见补充图S8与S9；正文未报告该面板的显著性检验。"
+              },
+              {
+                "panel": "C",
+                "experiment": "对77个临床与生化参数进行筛选，展示通过显著性标准的变量；分析前排除了3例离群个体（vis-2520、vis-2504、vis-2149）。",
+                "comparison": "MUO-like与MHO-like比较；二分类变量报告OR（MUO-like相对MHO-like出现某临床特征的可能性），连续变量报告Cohen's d（MUO-like减MHO-like，负值表示MHO-like更高）。",
+                "result": "MUO-like个体显示应激适应性代谢重塑与更多心血管代谢药物使用，MHO-like个体血糖与血脂谱更有利。",
+                "statistics": "二分类变量用Fisher精确检验，连续变量用Mann–Whitney U检验；显著性以FDR校正后q<0.05为准，连续变量另需|Cohen's d|>0.4；图中给出名义p值与效应量，括号内为各变量可用个体数。"
+              },
+              {
+                "panel": "D",
+                "experiment": "把独立的非重叠LOBB验证队列投射到主队列衍生的PCA参考空间，样本按胰岛素敏感或胰岛素抵抗分类。",
+                "comparison": "胰岛素敏感（IS）与胰岛素抵抗（IR）个体在PC1与PC2上的分布比较，大点表示亚型质心，虚线连接个体与其所属质心。",
+                "result": "两类分子状态在PCA空间中呈现分离，投射后保留与胰岛素抵抗相关的信号，校正性别后基本不变。",
+                "statistics": "PC1与PC2分别解释10.65%与8.49%的方差；正文未报告该面板的显著性检验统计量。"
+              }
+            ],
+            "interpretation": "该图显示转录组与实测BMI的方向性不一致可把肥胖分为功能与临床特征不同的两类状态，且该信号在独立队列的PCA投射中仍与胰岛素抵抗相关，支持BMI锚定转录组轴在人类中的病理生理意义。",
+            "evidence": "A的亚型分层、B的功能类别差异、C中经FDR校正的临床与生化指标效应量，以及D中独立队列的PCA分离。",
+            "boundary": "亚型划分基于事后LOWESS模型与数据驱动阈值，属横断面关联；C排除了3例离群个体且部分变量可用样本数有限；D为投射到主队列空间的验证，正文未报告效应量与置信区间，不能据此推断因果或预测结局。"
+          }
+        ]
+      },
+      "ai_status": "success_retried",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
     }
   },
   "attempted": {
@@ -2218,6 +2485,12 @@
       "attempts": 1,
       "updated_at": "2026-11-10T08:30:42Z",
       "gate_reasons": []
+    },
+    "doi:10.1016/j.molmet.2026.102462": {
+      "status": "published",
+      "attempts": 1,
+      "updated_at": "2026-11-12T08:25:22Z",
+      "gate_reasons": []
     }
   },
   "metrics_cache": {
@@ -2504,23 +2777,32 @@
       "status": "matched",
       "source": "EasyScholar",
       "retrieved_at": "2026-11-10T08:29:38Z"
+    },
+    "molecular metabolism": {
+      "impact_factor": "6.3",
+      "jcr": "SCI Q1",
+      "jcr_quartile": "Q1",
+      "jcr_q1": true,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-11-12T08:25:15Z"
     }
   },
-  "updated_at": "2026-11-11T07:47:59Z",
+  "updated_at": "2026-11-12T08:26:45Z",
   "last_run": {
     "status": "success",
-    "selected": 0,
-    "published": 0,
-    "candidates": 0,
+    "selected": 1,
+    "published": 1,
+    "candidates": 1,
     "raw_candidates": 67,
-    "score_rejected": 1,
-    "scope_rejected": 66,
+    "score_rejected": 2,
+    "scope_rejected": 65,
     "recovery_used": true,
     "q1_rejected": 1,
     "skipped_without_pmcid": 0,
     "search_error": "",
-    "preserved_articles": 5,
+    "preserved_articles": 6,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-11-11T07:47:59Z"
+    "finished_at": "2026-11-12T08:26:45Z"
   }
 }

@@ -1,22 +1,147 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-11T07:47:59Z",
+  "generated_at": "2026-11-12T08:26:45Z",
   "last_run": {
     "status": "success",
-    "selected": 0,
-    "published": 0,
-    "candidates": 0,
+    "selected": 1,
+    "published": 1,
+    "candidates": 1,
     "raw_candidates": 67,
-    "score_rejected": 1,
-    "scope_rejected": 66,
+    "score_rejected": 2,
+    "scope_rejected": 65,
     "recovery_used": true,
     "q1_rejected": 1,
     "skipped_without_pmcid": 0,
     "search_error": "",
-    "preserved_articles": 5,
+    "preserved_articles": 6,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-11-11T07:47:59Z"
+    "finished_at": "2026-11-12T08:26:45Z"
   },
-  "processed": [],
+  "processed": [
+    {
+      "id": "doi:10.1016/j.molmet.2026.102462",
+      "title": "BMI-anchored transcriptomics uncovers oxidative and inflammatory poles of obesity heterogeneity.",
+      "authors": [
+        "Yin-Yuan S",
+        "Linnaeus B",
+        "Yin-Cheng C",
+        "Erind G",
+        "Benedikt G",
+        "Sandy R",
+        "Mariami J",
+        "Sergio Eliseo PV",
+        "Anne H",
+        "Adhideb G",
+        "Christian W",
+        "Matthias B",
+        "Shahaf P",
+        "Antje G",
+        "Diana LD",
+        "Chen-Ching L"
+      ],
+      "journal": "Molecular metabolism",
+      "year": "2026",
+      "doi": "10.1016/j.molmet.2026.102462",
+      "pmcid": "PMC13744826",
+      "pmid": "42913790",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1016/j.molmet.2026.102462",
+        "https://europepmc.org/articles/PMC13744826",
+        "https://europepmc.org/articles/PMC13744826?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 9,
+      "relevance_evidence": [
+        "multiomics: transcriptom",
+        "disease_bridge: obesity"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1",
+          "caption": "Construction, stability, and functional characterization of the BMI-anchored transcriptomic model. (A) Schematic overview of the study workflow. A BMI-anchored transcriptomic model was developed from human VAT RNA-seq data and subsequently applied to perform cross-species projection in mouse adipose transcriptomes, characterize human obesity heterogeneity, and evaluate a separate insulin-sensitivity cohort. (B) Gene-level selection-frequency distributions using fixed α. For each gene, selection frequency was defined as the proportion of 500 iterations in which its LASSO coefficient was non-zero. Distributions are shown separately for the 458 primary model-selected genes and the remaining 15,584 candidate genes. Internal lines indicate the 25th, 50th, and 75th percentiles, and d denotes Cohen's d for the difference between the two distributions. Differences in selection-frequency distributions were assessed using two-sided Mann–Whitney U tests, with p-values adjusted across the six sampling fractions using the Holm method. Primary model-selected genes showed markedly higher selection frequencies at every sampling fraction (all Holm-adjusted p-values <1.1 × 10 −296 ). (C) Corresponding gene-level selection-frequency distributions after approximately matching model sparsity to the 458-gene primary model. Statistical comparisons were performed as in b, and primary model-selected genes again showed substantially higher selection frequencies than other candidate genes across all sampling fractions (all Holm-adjusted p-values <7.4 × 10 −277 ). (D) Gene-selection stability was evaluated across 81 LASSO regularization parameters yielding training Spearman's ρ values between 0.7 and 0.9. For each gene selected under at least one of these settings, selection frequency was defined as the proportion of α values at which the gene retained a non-zero coefficient, and genes were ranked accordingly. Genes selected in the primary model (α = 0.123; 458 genes, corresponding to Spearman's ρ ≈ 0.8) are outlined in red, whereas all other selected genes are shown in gray. Of the 458 primary-model genes, 281 were selected at every examined α value, compared with none of the 245 non-primary genes (two-sided Fisher's exact test, p-value = 2.25 × 10 −73; OR → ∞ because no non-primary gene had a selection frequency of 1). (E) Functional enrichment of genes selected by the BMI-anchored transcriptomic model. Enriched Gene Ontology biological processes were grouped into higher-order functional categories. The relative enrichment contribution of each category was calculated as the sum of NES values for all GO terms assigned to that category divided by the summed NES values across all terms, expressed as a percentage.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr1.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr1.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr1.webp",
+          "local_url": "generated/assets/PMC13744826/fig-01.webp",
+          "asset_path": "generated/assets/PMC13744826/fig-01.webp",
+          "asset_bytes": 283886,
+          "asset_sha256": "9e51d792440956c71e299409053baf634fcfe41c7db6fd990f4353be2fe8ee1e",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 2",
+          "caption": "Phenotypic and molecular divergence among DU mouse lines. (A) Boxplots showing the distribution of the condition factor (g/cm 3 ) and normalized white adipose tissue (WAT) weights, calculated as depot weight divided by total body weight, from the inguinal and epigonadal depots across the mouse lines DU6, FZTDU, and DU6P. Mouse lines are ordered as follows: DU6 (obesity-prone), FZTDU (control), and DU6P (bred for increased protein mass). Pairwise comparisons were performed using two-sided Wilcoxon rank-sum tests. P-values were adjusted separately within each phenotype for the three pairwise comparisons using the Holm–Bonferroni method; adjusted p-values are shown in the figure. (B) Cross-species projection of the BMI-anchored transcriptomic model. Each point represents an individual human VAT sample (BMI 30–60, n = 1,298) and adipose tissue from the mouse lines DU6, FZTDU, and DU6P, and the x-axis indicates the BMI-anchored transcriptomic score. Boxplots summarize group distributions, and effect sizes (Cohen's d ) are shown for pairwise comparisons. Pairwise comparisons were performed using two-sided Wilcoxon rank-sum tests, with p-values adjusted for the three pairwise comparisons using the Holm–Bonferroni method. Adjusted p-values are shown in the figure. The BMI-anchored transcriptomic score ranking (DU6 > FZTDU ≈ DU6P) mirrors adipose-tissue accumulation rather than body size, while aligning with the human visceral reference distribution.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr2.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr2.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr2.webp",
+          "local_url": "generated/assets/PMC13744826/fig-02.webp",
+          "asset_path": "generated/assets/PMC13744826/fig-02.webp",
+          "asset_bytes": 35442,
+          "asset_sha256": "3110ff9fa682d114831915c497ac7e9d1dd41121fae2bcfbbfa1b7d3a1a370bb",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 3",
+          "caption": "Comparative functional enrichment and mitochondrial pathway profiles in DU mouse lines. (A) Radar plot showing the relative enrichment contribution of functional categories between DU6 and DU6P lines. Categories include immune/inflammatory, cell cycle/division, other metabolism, development/signaling, energy production/consumption, lipid metabolism/catabolism, cytoskeleton/adhesion, autophagy/protein quality control, GH–IGF axis, obesity/adiposity, and miscellaneous. DU6 and DU6P exhibit distinct enrichment patterns, highlighting differential metabolic and signaling profiles. The relative enrichment contribution of each category was calculated from the proportional sum of NES values of functions within that category relative to the total NES. (B) Boxplots showing the read-count distributions of up-regulated differentially expressed genes (DEGs) assigned to representative mitochondrial and metabolic functional modules, including oxidative phosphorylation complexes (I–V), mitochondrial ribosomal proteins and translational activators, mitochondrial regulatory machinery, fatty-acid oxidation, and lipid synthesis and storage. Comparisons reveal a marked shift toward oxidative and catabolic pathways in DU6P, contrasting with the more anabolic and lipid-storage–oriented profile of DU6. (C) Scatter plots showing gene-level concordance between gene-expression correlation with the BMI-anchored transcriptomic score and differential expression across pairwise comparisons among DU6, DU6P, and FZTDU. The x axis indicates differential expression (log2 fold change, log2FC ), and the y axis shows the corresponding Spearman correlation coefficient with the BMI-anchored transcriptomic score. Genes with | log2FC | < 1 are shown in light grey. Genes with ∣ log2FC ∣≥1 are colored according to the mouse line in which they are up-regulated: DU6, red; DU6P, blue; and FZTDU, green. The vertical line indicates a log2FC of zero, and the horizontal line marks zero correlation.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr3.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr3.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr3.webp",
+          "local_url": "generated/assets/PMC13744826/fig-03.webp",
+          "asset_path": "generated/assets/PMC13744826/fig-03.webp",
+          "asset_bytes": 192652,
+          "asset_sha256": "93282f57ba52dfcef5dd5187c91cd22684a257f3087983d4df86804d0011ea7a",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 4",
+          "caption": "Molecular prediction of obesity subtypes and functional enrichment profiles. (A) Scatter plot comparing predicted versus measured BMI across individuals. Patients were stratified into MHO-like (blue) and MUO-like (red) groups based on a post-hoc LOWESS model, illustrating clear divergence between molecular and phenotypic obesity states. Grey points indicate intermediate individuals with decile-standardized discordance scores between −1 and 1. (B) Bar chart summarizing the relative enrichment contribution of functional categories for MHO-like and MUO-like subgroups. The MHO-like group is predominantly associated with energy production/consumption, whereas MUO-like shows higher contributions from other metabolism and autophagy/protein quality control pathways, highlighting distinct molecular mechanisms underlying obesity heterogeneity. Herein, the miscellaneous category was excluded and the remaining category contributions were renormalized to 100%; the complete distributions including miscellaneous terms are shown in Figs. S8 and S9. (C) For the clinical and biochemical comparison, three outliers were excluded: vis-2520, the MUO-like individual with the highest gGT; vis-2504, the MHO-like individual with the highest gGT; and vis-2149, the MUO-like individual with the highest triglyceride level. Seventy-seven clinical and biochemical parameters were screened, and variables passing the significance criteria are shown. Binary variables were analyzed using Fisher's exact test, and continuous variables were assessed using the Mann–Whitney U test. Effect sizes are reported as odds ratios (ORs) for binary variables, indicating the relative likelihood of a clinical feature in MUO-like compared with MHO-like, and as Cohen's d for continuous variables, calculated as MUO-like minus MHO-like; negative values therefore indicate higher levels in MHO-like. Nominal p-values and effect sizes are shown in each panel, whereas significance was determined using FDR-adjusted q < 0.05, with continuous variables additionally requiring |Cohen's d | > 0.4. Numbers in parentheses indicate the effective number of individuals available for each variable. (D) Projection of the separate, non-overlapping LOBB validation cohort onto the primary-cohort–derived PCA reference space. Individual samples classified as insulin sensitive or insulin resistant are projected onto the first two principal components, PC1 and PC2, which explain 10.65% and 8.49% of the variance, respectively. Larger points denote the subtype centroids, and dotted lines connect each individual to its assigned centroid, visualizing within-subtype dispersion and the separation between insulin-sensitive and insulin-resistant molecular states.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr4.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr4.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13744826.1/gr4.webp",
+          "local_url": "generated/assets/PMC13744826/fig-04.webp",
+          "asset_path": "generated/assets/PMC13744826/fig-04.webp",
+          "asset_bytes": 119572,
+          "asset_sha256": "99059dd1fe37830099c2ddb54e6ca0f6be3c96565fce7599980ac1a1cd4f219d",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary file 1",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13744826/bin/mmc1.pdf",
+          "description": "Multimedia component 1"
+        },
+        {
+          "label": "Supplementary file 2",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13744826/bin/mmc1.pdf",
+          "description": "Multimedia component 1"
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "6.3",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-11-12T08:25:15Z"
+      },
+      "journal_display": "Molecular metabolism（IF 6.3；JCR SCI Q1）",
+      "updated_at": "2026-11-12T08:25:22Z",
+      "ai_status": "success_retried",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    }
+  ],
   "pending_candidates": []
 }
