@@ -1,184 +1,22 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T08:07:47Z",
+  "generated_at": "2026-11-14T07:39:08Z",
   "last_run": {
     "status": "success",
-    "selected": 1,
-    "published": 1,
-    "candidates": 1,
-    "raw_candidates": 67,
-    "score_rejected": 2,
+    "selected": 0,
+    "published": 0,
+    "candidates": 0,
+    "raw_candidates": 66,
+    "score_rejected": 1,
     "scope_rejected": 65,
     "recovery_used": true,
     "q1_rejected": 1,
     "skipped_without_pmcid": 0,
     "search_error": "",
-    "preserved_articles": 7,
+    "preserved_articles": 6,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-11-13T08:07:47Z"
+    "finished_at": "2026-11-14T07:39:08Z"
   },
-  "processed": [
-    {
-      "id": "doi:10.1002/jcsm.70426",
-      "title": "Deuterium-Oxide Labelling Proteomics Illustrates the Importance of Sample Timing and the Limitations of Serial Biopsies.",
-      "authors": [
-        "O'Reilly CL",
-        "Taylor ME",
-        "Kobak KA",
-        "Chiao YA",
-        "Sadygov RG",
-        "Kinter MT",
-        "Miller BF"
-      ],
-      "journal": "Journal of cachexia, sarcopenia and muscle",
-      "year": "2026",
-      "doi": "10.1002/jcsm.70426",
-      "pmcid": "PMC13749624",
-      "pmid": "43006760",
-      "citation_count": 0,
-      "fulltext_urls": [
-        "https://doi.org/10.1002/jcsm.70426",
-        "https://europepmc.org/articles/PMC13749624",
-        "https://europepmc.org/articles/PMC13749624?pdf=render"
-      ],
-      "source": "Europe PMC",
-      "relevance_score": 10,
-      "relevance_evidence": [
-        "aging: ageing",
-        "multiomics: proteom"
-      ],
-      "figures": [
-        {
-          "label": "FIGURE 1",
-          "caption": "Experimental design and data processing workflow. Mice were provided with deuterium‐enriched water, leading to deuterium incorporation into newly synthesized proteins. Gastrocnemius muscles were collected and analysed by LC–MS/MS proteomics. From the mass spectrometry data, deuterium incorporation was quantified for each detected protein to estimate the protein synthesis rate constant (k) and labelling asymptote (A). Proteins were then classified into ‘fast’, ‘average’ and ‘slow’ kinetic groups. The contribution of each group to the overall synthesis signal was evaluated across multiple labelling windows, and the implications for biological interpretation were assessed.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g002.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g002.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g002.webp",
-          "local_url": "generated/assets/PMC13749624/fig-01.webp",
-          "asset_path": "generated/assets/PMC13749624/fig-01.webp",
-          "asset_bytes": 59180,
-          "asset_sha256": "41d669bd00f3aee365d1477d3170ea4dd4f3d81571c46225e922566c03b0ea53",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "FIGURE 2",
-          "caption": "The effect of the labelling time period on observed FSR. The grey bar represents the FSR observed from Day 0 to Day 4, calculated by dividing the proteome fraction new at Day 4 by four. The white bars show the FSR that would be calculated over a series of longer labelling periods, while the purple bars show the FSR that would be calculated if the labelling from Day 0 to Day 4 was subtracted from the labelling observed at the end of the labelling period, as would be done in a serial pre–post study design.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g006.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g006.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g006.webp",
-          "local_url": "generated/assets/PMC13749624/fig-02.webp",
-          "asset_path": "generated/assets/PMC13749624/fig-02.webp",
-          "asset_bytes": 20022,
-          "asset_sha256": "d4609b683f6ea5c94bb43fe1c6dfeba638b6ad8b11b6b5f9409a84a9f0bdff68",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "FIGURE 3",
-          "caption": "Labelling period changes the relative contribution of proteins to ‘bulk’ fraction new. (A) Measured FSR stacked by kinetic group for cumulative labelling windows. (B) The relative contribution of each synthesis group at each labelling timepoint. Dashed lines indicate the values at 4 days of labelling.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g001.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g001.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g001.webp",
-          "local_url": "generated/assets/PMC13749624/fig-03.webp",
-          "asset_path": "generated/assets/PMC13749624/fig-03.webp",
-          "asset_bytes": 21552,
-          "asset_sha256": "eb68fdecc0077b5fa571e543d46d7dc9ebbbbac3f35c7a32d9069eba9601603c",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "FIGURE 4",
-          "caption": "The heterogeneity of muscle proteome synthesis, stratified by synthesis rate. (A) The fraction new traces of each individual protein over the labelling period. The black line indicates the average synthesis rate and plateau value. We observed heterogeneity in both the synthesis rate and the plateau value. (B) The fraction new of each protein over the labelling period shown as a heatmap. Each row represents a single protein, with the colour of the row designating the synthesis group. Protein rows get darker as the fraction new increases. (C) The fraction new traces of each synthesis group—fast, average and slow. The ‘fast’ proteins quickly rise to plateau, while the slow proteins are still approximately linear at the end of the labelling period. The black line indicates the average trace for the group.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g004.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g004.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g004.webp",
-          "local_url": "generated/assets/PMC13749624/fig-04.webp",
-          "asset_path": "generated/assets/PMC13749624/fig-04.webp",
-          "asset_bytes": 77476,
-          "asset_sha256": "48ef127c22c611750d154dbb18255a71bfb638c21c2b04d553cf8d5b9585937e",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "FIGURE 5",
-          "caption": "Measured label accumulation is initially dominated by fast proteins, while slower proteins drive further labelling accumulation. (A) The fraction of proteins in each synthesis group that are not yet 50% renewed. Note the rapid dropout of the fast proteins. (B) The unweighted kinetic composition of label accumulation throughout the labelling period, computed by normalizing each protein's labelling rate to the summed rate across all proteins at each time point (values sum to 100% at every time). Inset: Proteins were binned into deciles based on their integrated synthesis signal from 0 to 15 days. Each colour block represents 10% of total label accumulation from 0 to 15 days. The total labelling contribution of the same protein deciles was then calculated from 15 to 45 days, showing how their share of the integrated synthesis signal shifts across time intervals. The area of each decile represents its contribution to total label accumulation during the designated labelling period.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g005.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g005.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g005.webp",
-          "local_url": "generated/assets/PMC13749624/fig-05.webp",
-          "asset_path": "generated/assets/PMC13749624/fig-05.webp",
-          "asset_bytes": 32628,
-          "asset_sha256": "b084edd659d1c48a470b7af4098fe308d44861f31012530910d2abc31be3ff67",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        },
-        {
-          "label": "FIGURE 6",
-          "caption": "Heterogeneity of the cellular component/function of the proteome and by synthesis rate. (A) Gene Ontology (cellular component) enrichment analysis of the detected proteome, weighted by protein abundance. Proteins (and their abundances) may contribute to multiple GO categories. Pie‐slice areas are proportional to each category's abundance‐weighted contribution, computed as the product of the total GO membership count and the summed abundances of proteins assigned to that category. (B) The fraction of total abundance within each synthesis group that contributes to each cellular component category.",
-          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g003.webp",
-          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g003.webp",
-          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-g003.webp",
-          "local_url": "generated/assets/PMC13749624/fig-06.webp",
-          "asset_path": "generated/assets/PMC13749624/fig-06.webp",
-          "asset_bytes": 31352,
-          "asset_sha256": "d18c193821d337c16706315cfcfb389b8cec578474b9b9bcfb2613fc6e933969",
-          "asset_status": "downloaded",
-          "asset_error": ""
-        }
-      ],
-      "supplements": [
-        {
-          "label": "Supplementary file 1",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13749624/bin/JCSM-17-e70426-s001.csv",
-          "description": "Table S1: Proteins identified in a myofibrillar protein fraction using the fractionation procedure used in our previous publications for Supplementary Figure S1. Proteins that were matched to the proteome‐wide data set and used to calculate the myofibrillar FSR are indicated."
-        },
-        {
-          "label": "Supplementary file 2",
-          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-s002.png",
-          "description": "Figure S1: Influence of the different time‐periods of measurement on apparent FSRs of the myofibrillar (Myo) protein fraction and bulk protein fraction."
-        },
-        {
-          "label": "Supplementary file 3",
-          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-s006.png",
-          "description": "Figure S2: (A) Distribution of protein synthesis rates (half‐life) by slow (blue), average (green) and fast (red). (B) Distribution of protein asymptotes (plateau) by synthesis group."
-        },
-        {
-          "label": "Supplementary file 4",
-          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-s004.png",
-          "description": "Figure S3: (A) Protein abundance (log‐scaled) vs. protein rate constant (k, log scale). Colours indicate synthesis groups (B) Protein rate constant (k, log scale) vs. plateau fraction new value."
-        },
-        {
-          "label": "Supplementary file 5",
-          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13749624.1/JCSM-17-e70426-s003.png",
-          "description": "Figure S4: (A) Protein count per synthesis group. Colours indicate synthesis groups (B). The proportion of the total proteome mass that each synthesis group comprises."
-        },
-        {
-          "label": "Supplementary file 6",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13749624/bin/JCSM-17-e70426-s005.docx",
-          "description": "Data S1: Supplementary material."
-        }
-      ],
-      "fulltext_ok": true,
-      "asset_errors": [],
-      "assets_required": true,
-      "metrics": {
-        "impact_factor": "9.9",
-        "jcr": "SCI Q1",
-        "jcr_quartile": "Q1",
-        "jcr_q1": true,
-        "status": "matched",
-        "source": "EasyScholar",
-        "retrieved_at": "2026-10-24T12:44:20Z"
-      },
-      "journal_display": "Journal of cachexia, sarcopenia and muscle（IF 9.9；JCR SCI Q1）",
-      "updated_at": "2026-11-13T08:07:18Z",
-      "ai_status": "success",
-      "ai_error": "",
-      "publishable": true,
-      "gate_reasons": [],
-      "status": "published"
-    }
-  ],
+  "processed": [],
   "pending_candidates": []
 }
