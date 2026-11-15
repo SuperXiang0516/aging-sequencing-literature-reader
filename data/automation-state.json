@@ -2794,7 +2794,7 @@
       "retrieved_at": "2026-11-12T08:25:15Z"
     }
   },
-  "updated_at": "2026-11-14T07:39:08Z",
+  "updated_at": "2026-11-15T07:55:45Z",
   "last_run": {
     "status": "success",
     "selected": 0,
@@ -2809,6 +2809,6 @@
     "search_error": "",
     "preserved_articles": 6,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-11-14T07:39:08Z"
+    "finished_at": "2026-11-15T07:55:45Z"
   }
 }
