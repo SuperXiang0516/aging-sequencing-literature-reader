@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-15T07:55:45Z",
+  "generated_at": "2026-11-16T08:03:11Z",
   "last_run": {
     "status": "success",
     "selected": 0,
@@ -15,7 +15,7 @@
     "search_error": "",
     "preserved_articles": 6,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-11-15T07:55:45Z"
+    "finished_at": "2026-11-16T08:03:11Z"
   },
   "processed": [],
   "pending_candidates": []
