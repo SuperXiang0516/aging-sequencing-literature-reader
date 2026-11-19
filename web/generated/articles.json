@@ -1,7 +1,1226 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-18T08:36:58Z",
+  "generated_at": "2026-11-19T09:02:49Z",
   "articles": [
+    {
+      "id": "doi:10.1080/0886022x.2026.2745316",
+      "title": "Urinary ubiquitin-specific protease 2 (USP2) as a diagnostic biomarker for chronic kidney disease: an integrated multi-omics and network analysis.",
+      "authors": [
+        "Wang X",
+        "Xie Y",
+        "Duan Q",
+        "Li Z",
+        "Wang M",
+        "Pu L",
+        "Chen M",
+        "Liu C",
+        "Shen Y",
+        "Yang S",
+        "Liu Z",
+        "Deng Q"
+      ],
+      "journal": "Renal failure",
+      "year": "2026",
+      "doi": "10.1080/0886022x.2026.2745316",
+      "pmcid": "PMC13757864",
+      "pmid": "42978514",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1080/0886022X.2026.2745316",
+        "https://europepmc.org/articles/PMC13757864",
+        "https://europepmc.org/articles/PMC13757864?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 9,
+      "relevance_evidence": [
+        "multiomics: multi-omics, proteom, metabolom",
+        "disease_bridge: kidney disease"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1.",
+          "caption": "Association between urinary ubiquitin-specific protease 2 (USP2) and chronic kidney disease (CKD), and diagnostic performance of USP2-based models. (A) Forest plot showing univariate and multivariate Firth logistic regression results for age, sex, and urinary USP2. The multivariate model included age, sex, and USP2. (B) Receiver operating characteristic (ROC) curves for USP2, USP2 + Age, USP2 + Sex, and USP2 + Age + Sex. (C) Decision curve analysis (DCA) for the same USP2-based models. Dashed curves indicate treat-all and treat-none strategies. Data are presented as odds ratios (ORs) with 95% confidence intervals (CIs). OR, odds ratio; CI, confidence interval; ROC, receiver operating characteristic; AUC, area under the curve; DCA, decision curve analysis.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0001_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0001_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0001_C.webp",
+          "local_url": "generated/assets/PMC13757864/fig-01.webp",
+          "asset_path": "generated/assets/PMC13757864/fig-01.webp",
+          "asset_bytes": 72340,
+          "asset_sha256": "3bccd255d4314dc1817b9d2e4d7573df5d6b5b3a3f39f29674b7f0a9be08d533",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 2.",
+          "caption": "Urinary and serum metabolomics analyses. Panels A–F show urinary metabolomics results comparing CKD urine samples (UCKD) with healthy-control urine samples (UN): (A) OPLS-DA score plot; (B) permutation testing; (C) metabolite chemical classification; (D) volcano plot with metabolites classified as FDR < 0.05, raw P < 0.05 only, or not significant; (E) VIP-ranked metabolites; and (F) pathway enrichment. Panels G–L show serum metabolomics results comparing CKD serum samples (SCKD) with healthy-control serum samples (SN): (G) OPLS-DA score plot; (H) permutation testing; (I) metabolite chemical classification; (J) volcano plot with metabolites classified as FDR < 0.05, raw P < 0.05 only, or not significant; (K) VIP-ranked metabolites; and (L) pathway enrichment. OPLS-DA, orthogonal partial least-squares discriminant analysis; VIP, variable importance in projection; FDR, false discovery rate; UCKD, urine samples from patients with CKD; UN, urine samples from healthy controls; SCKD, serum samples from patients with CKD; SN, serum samples from healthy controls.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0002_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0002_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0002_C.webp",
+          "local_url": "generated/assets/PMC13757864/fig-02.webp",
+          "asset_path": "generated/assets/PMC13757864/fig-02.webp",
+          "asset_bytes": 181348,
+          "asset_sha256": "2047ce27171feb04be56cd044bc23bcddf47499049d525faa6883bca81b6afe4",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 3.",
+          "caption": "Weighted gene co-expression network analysis (WGCNA) of urinary and serum metabolites. Panels A–C show urinary metabolite WGCNA: (A) Scale-free topology fit index (R2) and mean connectivity across candidate soft-thresholding powers. (B) Metabolite clustering dendrogram and module assignment. (C) Module-trait heatmap showing Pearson correlation coefficients, nominal P values, and FDR-adjusted P values for age, sex, urinary USP2, and CKD. Panels D–F show serum metabolite WGCNA: (D) Scale-free topology fit index (R2) and mean connectivity across candidate soft-thresholding powers. (E) Metabolite clustering dendrogram and module assignment. (F) Module-trait heatmap showing Pearson correlation coefficients, nominal P values, and FDR-adjusted P values for age, sex, urinary USP2, and CKD. FDR values were calculated within each module-trait heatmap. WGCNA, weighted gene co-expression network analysis; USP2, ubiquitin-specific protease 2; CKD, chronic kidney disease.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0003_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0003_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0003_C.webp",
+          "local_url": "generated/assets/PMC13757864/fig-03.webp",
+          "asset_path": "generated/assets/PMC13757864/fig-03.webp",
+          "asset_bytes": 112576,
+          "asset_sha256": "8b500ced517bba78c7ae26b34a7b0ff4e25f6488bdf40d9345935f0af25d67e6",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 4.",
+          "caption": "Identification of urinary metabolite candidates mediating the association between urinary USP2 and CKD. (A) Bubble plot showing urinary metabolites from the WGCNA module selected according to their correlations with CKD and urinary USP2. Bubble size and color intensity represent the magnitude of correlation; the signs of the correlations are indicated by the plotted values. (B–H) Mediation analyses illustrating the indirect effects of 6-gingerol, gly-met-lys, deoxycholic acid 3-glucuronide, N-(3-acetamido-2-oxochromen-6-yl)-4-nitrobenzamide, 1,2-dihydronaphthalene-1,2-diol, N-benzyl-4-benzylsulfonylbutanamide, and 16-ketoestradiol on the association between urinary USP2 and CKD. Each triangular diagram represents a mediation model, including the total effect (top), direct effect (left), and indirect effect (right). Mediation proportions are indicated within each panel. All mediation models were adjusted for age and sex. Regression coefficients are presented with corresponding P values. The mediation proportion was calculated as the ratio of the indirect effect to the total effect.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0004_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0004_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0004_C.webp",
+          "local_url": "generated/assets/PMC13757864/fig-04.webp",
+          "asset_path": "generated/assets/PMC13757864/fig-04.webp",
+          "asset_bytes": 54196,
+          "asset_sha256": "eab7d446965eb3e330b06010c5285578d1dce9b7ef8f4857dc74cbe91d7b17ac",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 5.",
+          "caption": "WGCNA of plasma proteomics. (A) Scale-free topology fit index (R2) and mean connectivity across candidate soft-thresholding powers. (B) Protein clustering dendrogram and module assignment. (C) Module-trait heatmap showing Pearson correlation coefficients, nominal P values, and FDR-adjusted P values for age, sex, urinary USP2, and CKD. The turquoise and greenyellow modules were significantly associated with age, urinary USP2, and CKD after FDR adjustment. The purple module was significantly associated with urinary USP2 and CKD, whereas its correlation with age was nominal but not FDR-significant. WGCNA, weighted gene co-expression network analysis; FDR, false discovery rate.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0005_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0005_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0005_C.webp",
+          "local_url": "generated/assets/PMC13757864/fig-05.webp",
+          "asset_path": "generated/assets/PMC13757864/fig-05.webp",
+          "asset_bytes": 153350,
+          "asset_sha256": "7426a0671bac9eb5fa55fdd96af648f036ac32539e406295f41225fbcc3323b3",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 6.",
+          "caption": "Identification of serum metabolite candidates whose association with CKD is mediated by urinary USP2. (A) Bubble plot showing the 12 serum metabolites selected from the WGCNA turquoise module according to their correlations with CKD and urinary USP2. Bubble size and color intensity represent the magnitude of correlation; the signs of the correlations are indicated by the plotted values. (B–M) Mediation analyses testing whether urinary USP2 mediates the association between the 12 serum metabolites and CKD. Each triangular diagram represents a mediation model, including the total effect (top), direct effect (left), and indirect effect (right). Mediation proportions are indicated within each panel. All mediation models were adjusted for age and sex. Regression coefficients are presented with corresponding P values. The mediation proportion was calculated as the ratio of the indirect effect to the total effect.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0006_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0006_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0006_C.webp",
+          "local_url": "generated/assets/PMC13757864/fig-06.webp",
+          "asset_path": "generated/assets/PMC13757864/fig-06.webp",
+          "asset_bytes": 82178,
+          "asset_sha256": "0fd5d84ffd5377986b7c488e0736eb282f80f1def41a9875f38c0ab70e898047",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 7.",
+          "caption": "Identification of plasma proteins associated with urinary USP2 and CKD across WGCNA modules. (A–C) Bubble plots showing representative plasma proteins from three WGCNA modules (purple, turquoise, and greenyellow) that were strongly correlated with both CKD and urinary USP2. Bubble size and color intensity represent the absolute value of the correlation coefficient. Proteins in the purple and turquoise modules showed consistent positive correlations with both CKD and urinary USP2, whereas proteins in the greenyellow module showed consistent negative correlations. The turquoise module displays the top 20 proteins ranked by the product of the correlation coefficients with CKD and USP2. All proteins were quantified from plasma samples.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0007_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0007_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757864.1/IRNF_A_2745316_F0007_C.webp",
+          "local_url": "generated/assets/PMC13757864/fig-07.webp",
+          "asset_path": "generated/assets/PMC13757864/fig-07.webp",
+          "asset_bytes": 76186,
+          "asset_sha256": "6e5bd693d40bbe7ef140ea6c2cbb31c972c1eee32cfb1d16dcd2427fe1288a01",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "3.8",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-28T06:55:08Z"
+      },
+      "journal_display": "Renal failure（IF 3.8；JCR SCI Q1）",
+      "updated_at": "2026-11-19T09:01:08Z",
+      "article": {
+        "title_zh": "尿液泛素特异性蛋白酶2（USP2）作为慢性肾脏病无创诊断标志物：多组学与网络分析整合研究",
+        "lead": "本研究纳入25例慢性肾脏病（chronic kidney disease, CKD）患者与10例健康对照（healthy controls, HC），采用酶联免疫吸附试验（ELISA）检测尿液泛素特异性蛋白酶2（ubiquitin-specific protease 2, USP2）水平，并整合尿液与血清非靶向代谢组学、血浆蛋白质组学及加权基因共表达网络分析（weighted gene co-expression network analysis, WGCNA）。结果显示CKD患者尿液USP2显著升高，单独诊断的曲线下面积（area under the curve, AUC）为0.936，USP2+年龄+性别模型AUC达0.972，决策曲线分析（decision curve analysis, DCA）支持其临床净获益。多组学分析进一步识别出与USP2和CKD相关的代谢物模块与蛋白模块，中介分析提示部分尿液和血清代谢物可能连接USP2相关分子改变与CKD。",
+        "background": "CKD伴随进行性的代谢与分子调控紊乱，但可靠的无创生物标志物仍然有限。USP2可通过乳酸化依赖的去泛素化酶活性调控转化生长因子-β（transforming growth factor-β, TGF-β）信号通路与铁死亡，然而其在CKD中的临床意义尚不明确。作者据此提出以尿液USP2为候选标志物，并结合多组学网络分析探索其相关分子网络。",
+        "research_question": "研究要回答的核心问题是：尿液USP2能否作为CKD的无创诊断标志物，并在调整年龄和性别后仍与CKD独立相关；同时，尿液与血清代谢组、血浆蛋白质组中是否存在与USP2及CKD相关的模块，以及这些分子是否可能在中介层面连接USP2与CKD。",
+        "study_design": "这是一项横断面研究，共纳入35名参与者，包括25例CKD患者和10例健康对照。CKD依据肾脏病改善全球预后组织（Kidney Disease: Improving Global Outcomes, KDIGO）指南定义，即估算肾小球滤过率（estimated glomerular filtration rate, eGFR）<60 mL/min/1.73 m²或肾损伤证据持续≥3个月。研究整合了尿液USP2的ELISA检测、尿液与血清非靶向代谢组学、血浆数据独立采集（data-independent acquisition, DIA）蛋白质组学，以及WGCNA、中介分析和通路富集分析。",
+        "methods": "研究为横断面设计，纳入25例CKD患者与10例HC；CKD按KDIGO标准定义，排除急性肾损伤、活动性感染、恶性肿瘤、妊娠及3个月内使用外源性糖皮质激素或免疫抑制剂者，HC为无已知肾脏病或其他重大系统性疾病史的志愿者，入组时未采集血肌酐衍生eGFR数据。研究经云南省第一人民医院伦理委员会批准（批件号KHLL2025-KY010），符合《赫尔辛基宣言》，所有参与者入组前签署书面知情同意。留取晨起中段尿，尽快离心去除细胞碎片与颗粒，上清分装后−80 °C保存；采用商品化人USP2 ELISA试剂盒（江苏美免实业有限公司，货号MM-1742H1）以一步双抗体夹心法检测，标准品浓度为20、10、5、2.5、1.25和0.625 ng/mL，检测范围0.625–20 ng/mL，最低检测浓度<0.1 ng/mL，批内与批间变异系数分别<10%和<15%，所有样本按说明书三复孔检测。代谢组学方面，尿液与空腹晨血清样本以含内标的甲醇–水（4:1, v/v）提取，混合等量样本制备质控（quality control, QC）样本，经ACQUITY UPLC HSS T3柱（100 mm×2.1 mm, 1.8 μm）在Vanquish Horizon UHPLC系统上分离，进样量3 μL、柱温40 °C，Q-Exactive HF-X质谱仪正负离子模式检测，Progenesis QI v3.0用于峰对齐与注释，代谢物按人类代谢组数据库（Human Metabolome Database, HMDB）分类。数据预处理中代谢组矩阵无缺失值故未插补，行总和归一化，剔除QC样本相对标准差（relative standard deviation, RSD）>30%的代谢物并作log2转换；主成分分析（principal component analysis, PCA）与正交偏最小二乘判别分析（orthogonal partial least squares-discriminant analysis, OPLS-DA）用R包ropls完成，以200次置换检验评估模型稳健性，差异代谢物综合名义P值、Benjamini-Hochberg错误发现率（false discovery rate, FDR）校正P值、倍数变化与变量投影重要性（variable importance in projection, VIP）评分判定，VIP仅用于特征排序而非唯一显著性标准，KEGG富集采用超几何检验。蛋白质组学方面，磁珠富集低丰度血浆蛋白，100 μL血浆37 °C孵育1 h，经三(2-羧乙基)膦（TCEP）还原（终浓度10 mM）与碘乙酰胺烷基化（终浓度40 mM），按酶:蛋白1:50（m/m）用胰蛋白酶37 °C过夜酶解，肽段脱盐干燥后以NanoDrop One定量；等量肽段混合后经高pH反相液相色谱分为6个组分，在Vanquish Neo nano-UHPLC与timsTOF HT质谱仪上以DIA模式采集（正离子，m/z 100–1700），Compass HyStar采集数据，Spectronaut构建谱图库，各样本DIA数据在相同LC-MS/MS条件下采集。",
+        "results": "基线方面，CKD组尿液USP2显著高于HC组（均值±标准差4.90±0.65 vs. 3.47±0.79 ng/mL，p<0.001）；CKD患者年龄更大（中位54.00 vs. 27.00岁，p<0.001），男性比例更高（72.00% vs. 40.00%，p=0.123），CKD组eGFR中位14.20（8.30–24.90）mL/min/1.73 m²，HC未采集肌酐衍生变量，故eGFR未作组间比较。诊断分析中，单因素Firth逻辑回归显示年龄（比值比（odds ratio, OR）=1.12，95%置信区间（confidence interval, CI）1.04–1.22，p=0.004）与尿液USP2（OR=14.50，95% CI 2.11–99.52，p=0.006）与CKD相关，性别无统计学意义（男性vs.女性OR=3.56，95% CI 0.78–16.22，p=0.100）；调整年龄和性别后USP2仍独立相关（OR=31.48，95% CI 1.29–766.44，p=0.034），年龄亦显著（OR=1.12，95% CI 1.01–1.25，p=0.037）。受试者工作特征（receiver operating characteristic, ROC）分析中USP2单独AUC为0.936，USP2+年龄、USP2+性别、USP2+年龄+性别模型AUC分别为0.956、0.936和0.972，DCA显示含USP2模型在临床相关阈值概率范围内提供净获益；敏感性分析中，年龄匹配子集USP2的AUC为0.950、肾损伤分子1（kidney injury molecule 1, KIM1）为0.870，早期CKD（1–3期）子集两者AUC均为0.900，DCA支持在基础模型和含KIM1模型中加入USP2的增量价值。代谢组学方面，尿液UCKD与UN、血清SCKD与SN的OPLS-DA均显示分离且置换检验可接受；尿液代谢物以脂质及类脂分子、有机酸及其衍生物、有机杂环化合物和有机氧化合物为主，VIP排序靠前的包括2,6-diaminopurine 2′,3′-dideoxyriboside、Thr-Met、ritipenem acetoxymethyl ester、Pro Ser Val、sinigrin和ApliiA4 hydrochloride，通路富集涉及神经活性配体–受体相互作用、ABC转运体、cAMP信号、cGMP-PKG信号、帕金森病、库欣综合征等；血清代谢物以脂质及类脂分子、有机酸及其衍生物、有机杂环化合物和苯环型化合物为主，VIP靠前的包括2-oxo-5-(3,3-dimethylguanidine-1-yl)pentanoic acid、5-methyl-3-thiophen-3-yl-1H-pyridazin-6-one、GPETn(18:3/20:3)、Asp-Ala、allantoic acid等，通路富集涉及ABC转运体、癌症中心碳代谢、氨酰-tRNA生物合成、神经活性配体–受体相互作用和铁死亡。WGCNA方面，尿液453个代谢物聚为1个模块（turquoise），与尿液USP2（r=−0.44，p=0.012，FDR=0.012）和CKD（r=−0.58，p<0.001，FDR<0.001）负相关，与年龄（r=−0.34，p=0.060，FDR=0.060）和性别（r=0.10，p=0.587，FDR=0.587）经FDR校正后无统计学意义；血清278个代谢物在软阈值功率30下聚为2个模块，turquoise模块与年龄（r=0.42，p=0.017，FDR=0.017）、尿液USP2（r=0.48，p=0.005，FDR=0.005）和CKD（r=0.76，p<0.001，FDR<0.001）正相关，与性别无关（r=0.22，p=0.228，FDR=0.228）。中介分析中，调整年龄和性别后尿液USP2与CKD风险升高相关（总效应=0.236，95% CI 0.111–0.361，p=0.001），15个入选尿液代谢物的间接效应均为名义显著（p<0.05），但经FDR校正后均未保持显著（FDR>0.05）；正文展示了其中7个代谢物的中介模型，6-gingerol的间接效应为−0.105（p=0.003），中介比例为105，其余代谢物的具体数值正文未完整报告。",
+        "limitations": "本研究样本量小（25例CKD与10例HC），且为单中心横断面设计，无法推断USP2与CKD之间的因果关系。HC组年龄显著低于CKD组且未采集血肌酐衍生eGFR，组间比较可能受年龄混杂影响，尽管作者进行了年龄匹配敏感性分析。中介分析中15个尿液代谢物的间接效应经FDR校正后均未显著，提示中介结果仅为探索性，需在更大队列中验证。此外，血浆蛋白质组学模块与USP2、CKD的关联以及血清代谢物中介模型的具体数值在正文中未完整报告，相关结论的稳健性有待进一步确认。",
+        "takeaways": "尿液USP2在CKD患者中显著升高，调整年龄和性别后仍与CKD独立相关，单独诊断AUC为0.936，联合年龄和性别的模型AUC达0.972，DCA支持其临床净获益。敏感性分析显示USP2在年龄匹配和早期CKD子集中具有与KIM1相当或更优的诊断表现。多组学与WGCNA识别出与USP2和CKD相关的尿液、血清代谢物模块及血浆蛋白模块，中介分析提示部分代谢物可能连接USP2相关分子改变与CKD，但经FDR校正后中介效应均未显著，相关发现需在更大队列中验证。",
+        "figure_notes": [
+          {
+            "label": "Figure 1",
+            "caption_zh": "尿液USP2与CKD的关联及基于USP2模型的诊断性能：（A）年龄、性别和尿液USP2的单因素与多因素Firth逻辑回归森林图；（B）USP2、USP2+年龄、USP2+性别、USP2+年龄+性别的ROC曲线；（C）同一组USP2模型的决策曲线分析，虚线为全部治疗与不治疗策略。",
+            "what_question": "尿液USP2是否与CKD独立相关，基于USP2的模型能否有效区分CKD患者与健康对照并带来临床净获益。",
+            "how_to_read": "先看A图森林图中各变量的OR及95% CI是否跨越OR=1的参考线，再比较B图各ROC曲线的AUC大小，最后在C图DCA中观察含USP2模型在临床相关阈值概率范围内是否高于全部治疗和不治疗策略。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "对年龄、性别（男性vs.女性）和尿液USP2进行单因素与多因素Firth逻辑回归，多因素模型纳入年龄、性别和USP2。",
+                "comparison": "比较各变量单因素（空心圆）与多因素（实心方块）分析的OR及95% CI，参考线为OR=1。",
+                "result": "单因素分析中年龄OR=1.12（95% CI 1.04–1.22，p=0.004）、USP2 OR=14.50（95% CI 2.11–99.52，p=0.006）与CKD相关，性别OR=3.56（95% CI 0.78–16.22，p=0.100）无统计学意义；多因素调整后USP2 OR=31.48（95% CI 1.29–766.44，p=0.034），年龄OR=1.12（95% CI 1.01–1.25，p=0.037）。",
+                "statistics": "OR及95% CI，Firth逻辑回归，p值如上述。"
+              },
+              {
+                "panel": "B",
+                "experiment": "绘制USP2、USP2+年龄、USP2+性别、USP2+年龄+性别四个模型的ROC曲线。",
+                "comparison": "比较四个模型的AUC，评估加入年龄和性别是否改善判别能力。",
+                "result": "USP2单独AUC为0.936，USP2+年龄为0.956，USP2+性别为0.936，USP2+年龄+性别为0.972。",
+                "statistics": "AUC，正文未报告各模型AUC的置信区间或DeLong检验结果。"
+              },
+              {
+                "panel": "C",
+                "experiment": "对同一组USP2模型进行决策曲线分析，并与全部治疗和不治疗策略比较。",
+                "comparison": "比较含USP2模型与全部治疗、不治疗策略在不同阈值概率下的净获益。",
+                "result": "DCA显示含USP2模型在临床相关阈值概率范围内提供净临床获益。",
+                "statistics": "净获益随阈值概率变化，正文未报告具体阈值或净获益数值。"
+              }
+            ],
+            "interpretation": "该图支持尿液USP2与CKD独立相关，且基于USP2的模型具有较高的判别能力和临床净获益，其中USP2+年龄+性别模型AUC最高。",
+            "evidence": "证据来自Firth逻辑回归的OR及95% CI、ROC曲线的AUC和DCA的净获益曲线，均为正文报告的结果。",
+            "boundary": "样本量小且为横断面设计，AUC和DCA结果需在更大队列中外部验证；性别在多因素模型中未显示独立关联，且各模型AUC的置信区间正文未报告。"
+          },
+          {
+            "label": "Figure 2",
+            "caption_zh": "尿液与血清代谢组学分析：A–F为CKD尿液（UCKD）与健康对照尿液（UN）比较，包括OPLS-DA得分图、置换检验、代谢物化学分类、火山图、VIP排序代谢物和通路富集；G–L为CKD血清（SCKD）与健康对照血清（SN）比较，内容对应相同。",
+            "what_question": "CKD患者与健康对照在尿液和血清代谢谱上是否存在差异，差异代谢物的化学分类、VIP排序和富集通路是什么。",
+            "how_to_read": "先看A、G的OPLS-DA得分图判断组间分离，再看B、H的置换检验评估模型稳健性，随后在C、I了解代谢物化学分类，在D、J火山图中区分FDR<0.05、仅名义P<0.05和不显著的代谢物，在E、K查看VIP排序，最后在F、L查看通路富集。",
+            "panel_reading": [
+              {
+                "panel": "A–B",
+                "experiment": "对尿液UCKD与UN进行OPLS-DA并以200次置换检验评估模型。",
+                "comparison": "比较UCKD与UN在OPLS-DA得分图上的分布及置换检验结果。",
+                "result": "OPLS-DA显示UCKD与UN明显分离，置换检验结果可接受。",
+                "statistics": "正文未报告具体R2Y、Q2或置换检验P值。"
+              },
+              {
+                "panel": "C",
+                "experiment": "按HMDB对尿液代谢物进行化学分类。",
+                "comparison": "比较各类代谢物在尿液代谢组中的占比。",
+                "result": "尿液代谢组以脂质及类脂分子、有机酸及其衍生物、有机杂环化合物和有机氧化合物为主。",
+                "statistics": "正文未报告各类别的具体数量或比例。"
+              },
+              {
+                "panel": "D",
+                "experiment": "绘制尿液代谢物火山图，按FDR<0.05、仅名义P<0.05和不显著分类。",
+                "comparison": "比较不同显著性类别代谢物的log2倍数变化与−log10 P值分布。",
+                "result": "FDR校正火山图区分出满足FDR<0.05的代谢物、仅名义显著的代谢物和不显著特征。",
+                "statistics": "FDR<0.05与名义P<0.05阈值，具体代谢物数量正文未报告。"
+              },
+              {
+                "panel": "E",
+                "experiment": "按VIP评分对尿液代谢物排序并展示强度热图。",
+                "comparison": "比较各代谢物VIP评分高低。",
+                "result": "VIP排序靠前的代谢物包括2,6-diaminopurine 2′,3′-dideoxyriboside、Thr-Met、ritipenem acetoxymethyl ester、Pro Ser Val、sinigrin和ApliiA4 hydrochloride。",
+                "statistics": "VIP评分，正文未报告具体数值。"
+              },
+              {
+                "panel": "F",
+                "experiment": "对尿液差异代谢物进行KEGG通路富集。",
+                "comparison": "比较各通路的富集程度。",
+                "result": "富集通路包括神经活性配体–受体相互作用、ABC转运体、cAMP信号、cGMP-PKG信号、帕金森病、库欣综合征及相关通路。",
+                "statistics": "超几何检验，正文未报告具体P值或富集因子。"
+              },
+              {
+                "panel": "G–H",
+                "experiment": "对血清SCKD与SN进行OPLS-DA并以置换检验评估模型。",
+                "comparison": "比较SCKD与SN在OPLS-DA得分图上的分布及置换检验结果。",
+                "result": "OPLS-DA显示SCKD与SN分离，置换检验支持模型稳定性。",
+                "statistics": "正文未报告具体R2Y、Q2或置换检验P值。"
+              },
+              {
+                "panel": "I",
+                "experiment": "按HMDB对血清代谢物进行化学分类。",
+                "comparison": "比较各类代谢物在血清代谢组中的占比。",
+                "result": "血清代谢物以脂质及类脂分子、有机酸及其衍生物、有机杂环化合物和苯环型化合物为主。",
+                "statistics": "正文未报告各类别的具体数量或比例。"
+              },
+              {
+                "panel": "J",
+                "experiment": "绘制血清代谢物火山图，按FDR<0.05、仅名义P<0.05和不显著分类。",
+                "comparison": "比较不同显著性类别代谢物的分布。",
+                "result": "FDR校正火山图显示血清代谢物满足FDR<0.05、仅名义P<0.05或无统计学意义。",
+                "statistics": "FDR<0.05与名义P<0.05阈值，具体代谢物数量正文未报告。"
+              },
+              {
+                "panel": "K",
+                "experiment": "按VIP评分对血清代谢物排序并展示强度热图。",
+                "comparison": "比较各代谢物VIP评分高低。",
+                "result": "VIP排序靠前的血清代谢物包括2-oxo-5-(3,3-dimethylguanidine-1-yl)pentanoic acid、5-methyl-3-thiophen-3-yl-1H-pyridazin-6-one、GPETn(18:3/20:3)、Asp-Ala、allantoic acid及相关特征。",
+                "statistics": "VIP评分，正文未报告具体数值。"
+              },
+              {
+                "panel": "L",
+                "experiment": "对血清差异代谢物进行KEGG通路富集。",
+                "comparison": "比较各通路的富集程度。",
+                "result": "富集通路包括ABC转运体、癌症中心碳代谢、氨酰-tRNA生物合成、神经活性配体–受体相互作用和铁死亡。",
+                "statistics": "超几何检验，正文未报告具体P值或富集因子。"
+              }
+            ],
+            "interpretation": "该图表明CKD患者在尿液和血清层面均存在明显的代谢谱改变，差异代谢物涉及脂质代谢、氨基酸代谢和信号通路，其中血清富集到铁死亡通路与USP2的已知功能相呼应。",
+            "evidence": "证据来自OPLS-DA分离、置换检验、化学分类、FDR校正火山图、VIP排序和KEGG富集结果，均为正文报告的内容。",
+            "boundary": "代谢组学结果基于小样本，VIP仅用于特征排序而非唯一显著性标准，且正文未报告各面板的具体统计量，通路富集结果需独立验证。"
+          },
+          {
+            "label": "Figure 3",
+            "caption_zh": "尿液与血清代谢物的WGCNA：A–C为尿液代谢物WGCNA，包括软阈值功率的尺度自由拓扑拟合指数（R2）与平均连通性、代谢物聚类树状图与模块分配、模块–性状热图；D–F为血清代谢物WGCNA，内容对应相同。",
+            "what_question": "尿液和血清代谢物是否形成与年龄、性别、尿液USP2和CKD相关的共表达模块。",
+            "how_to_read": "先看A、D选择软阈值功率，再看B、E的聚类树状图确定模块数量，最后在C、F的模块–性状热图中查看各模块与年龄、性别、USP2和CKD的相关系数及FDR校正P值。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "评估不同候选软阈值功率下的尺度自由拓扑拟合指数R2与平均连通性。",
+                "comparison": "比较各功率下R2与平均连通性的变化。",
+                "result": "正文报告使用所选软阈值功率进行后续网络构建，具体功率数值正文未报告。",
+                "statistics": "R2与平均连通性，正文未报告具体数值。"
+              },
+              {
+                "panel": "B",
+                "experiment": "对排除低变异代谢物后的453个尿液代谢物进行聚类并分配模块。",
+                "comparison": "比较代谢物在聚类树状图中的模块归属。",
+                "result": "453个尿液代谢物聚为1个模块（turquoise模块）。",
+                "statistics": "正文未报告模块内代谢物数量或模块特征基因统计量。"
+              },
+              {
+                "panel": "C",
+                "experiment": "计算turquoise模块与年龄、性别、尿液USP2和CKD的Pearson相关，并进行FDR校正。",
+                "comparison": "比较各性状相关系数的大小与显著性。",
+                "result": "turquoise模块与尿液USP2负相关（r=−0.44，p=0.012，FDR=0.012），与CKD负相关（r=−0.58，p<0.001，FDR<0.001），与年龄（r=−0.34，p=0.060，FDR=0.060）和性别（r=0.10，p=0.587，FDR=0.587）经FDR校正后无统计学意义。",
+                "statistics": "Pearson相关系数、名义P值与模块内FDR校正P值。"
+              },
+              {
+                "panel": "D",
+                "experiment": "评估血清代谢物WGCNA不同候选软阈值功率下的R2与平均连通性。",
+                "comparison": "比较各功率下R2与平均连通性的变化。",
+                "result": "正文报告血清代谢物使用软阈值功率30进行网络构建。",
+                "statistics": "R2与平均连通性，正文未报告具体数值。"
+              },
+              {
+                "panel": "E",
+                "experiment": "对排除低变异代谢物后的278个血清代谢物进行聚类并分配模块。",
+                "comparison": "比较代谢物在聚类树状图中的模块归属。",
+                "result": "278个血清代谢物聚为2个模块。",
+                "statistics": "正文未报告各模块内代谢物数量。"
+              },
+              {
+                "panel": "F",
+                "experiment": "计算血清turquoise模块与年龄、性别、尿液USP2和CKD的Pearson相关，并进行FDR校正。",
+                "comparison": "比较各性状相关系数的大小与显著性。",
+                "result": "turquoise模块与年龄正相关（r=0.42，p=0.017，FDR=0.017）、与尿液USP2正相关（r=0.48，p=0.005，FDR=0.005）、与CKD正相关（r=0.76，p<0.001，FDR<0.001），与性别无关（r=0.22，p=0.228，FDR=0.228）。",
+                "statistics": "Pearson相关系数、名义P值与模块内FDR校正P值。"
+              }
+            ],
+            "interpretation": "该图显示尿液和血清代谢物均形成与尿液USP2和CKD显著相关的模块，尿液turquoise模块呈负相关而血清turquoise模块呈正相关，提示USP2相关代谢改变在尿液和血清中方向不同。",
+            "evidence": "证据来自WGCNA的软阈值选择、聚类树状图和模块–性状热图中的相关系数与FDR校正P值，均为正文报告的结果。",
+            "boundary": "尿液代谢物仅聚为1个模块，模块划分较粗；样本量小可能影响网络稳定性，且模块–性状相关不能推断因果关系。"
+          },
+          {
+            "label": "Figure 4",
+            "caption_zh": "识别中介尿液USP2与CKD关联的尿液代谢物候选：（A）按与CKD和尿液USP2相关性从WGCNA模块中筛选的尿液代谢物气泡图；（B–H）6-gingerol、gly-met-lys、deoxycholic acid 3-glucuronide、N-(3-acetamido-2-oxochromen-6-yl)-4-nitrobenzamide、1,2-dihydronaphthalene-1,2-diol、N-benzyl-4-benzylsulfonylbutanamide和16-ketoestradiol的中介分析三角图，显示总效应、直接效应和间接效应及中介比例，所有模型均调整年龄和性别。",
+            "what_question": "哪些尿液代谢物可能中介尿液USP2与CKD之间的关联，其间接效应和中介比例如何。",
+            "how_to_read": "先在A图气泡图中查看代谢物与CKD和USP2的相关性大小与方向，再在B–H的三角图中按总效应（顶部）、直接效应（左侧）和间接效应（右侧）的顺序解读，并关注各面板标注的中介比例和P值。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "从尿液turquoise模块中按与CKD和尿液USP2的相关性筛选代谢物并绘制气泡图。",
+                "comparison": "比较各代谢物与CKD和USP2相关系数的大小与符号。",
+                "result": "共筛选出15个与尿液USP2和CKD均相关的尿液代谢物，气泡大小和颜色强度代表相关性大小，符号由图中数值表示。",
+                "statistics": "相关系数，正文未报告各代谢物的具体数值。"
+              },
+              {
+                "panel": "B–H",
+                "experiment": "对7个尿液代谢物进行中介分析，调整年龄和性别，检验其是否中介尿液USP2与CKD的关联。",
+                "comparison": "比较各代谢物的总效应、直接效应、间接效应和中介比例。",
+                "result": "6-gingerol的间接效应为−0.105（p=0.003），中介比例为105；其余6个代谢物的具体效应值和中介比例正文未完整报告。",
+                "statistics": "回归系数及P值，中介比例按间接效应与总效应之比计算；正文报告调整年龄和性别后USP2与CKD的总效应为0.236（95% CI 0.111–0.361，p=0.001），15个代谢物间接效应均名义显著（p<0.05）但FDR校正后均不显著（FDR>0.05）。"
+              }
+            ],
+            "interpretation": "该图提示部分尿液代谢物在名义水平上可能中介USP2与CKD的关联，其中6-gingerol的中介比例超过100%，提示可能存在抑制或复杂的中介关系。",
+            "evidence": "证据来自WGCNA模块筛选、气泡图相关性展示和调整年龄与性别后的中介模型回归系数及P值。",
+            "boundary": "所有15个代谢物的间接效应经FDR校正后均不显著，中介分析为探索性，样本量小，不能据此确立因果中介路径。"
+          },
+          {
+            "label": "Figure 5",
+            "caption_zh": "血浆蛋白质组学WGCNA：（A）不同候选软阈值功率下的尺度自由拓扑拟合指数（R2）与平均连通性；（B）蛋白聚类树状图与模块分配；（C）模块–性状热图，显示年龄、性别、尿液USP2和CKD的Pearson相关系数、名义P值和FDR校正P值。",
+            "what_question": "血浆蛋白是否形成与年龄、性别、尿液USP2和CKD相关的共表达模块。",
+            "how_to_read": "先看A选择软阈值功率，再看B的聚类树状图确定模块，最后在C的模块–性状热图中查看turquoise、greenyellow和purple模块与各性状的相关系数及FDR校正P值。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "评估血浆蛋白WGCNA不同候选软阈值功率下的R2与平均连通性。",
+                "comparison": "比较各功率下R2与平均连通性的变化。",
+                "result": "正文报告使用所选软阈值功率进行网络构建，具体功率数值正文未报告。",
+                "statistics": "R2与平均连通性，正文未报告具体数值。"
+              },
+              {
+                "panel": "B",
+                "experiment": "对血浆蛋白进行聚类并分配模块。",
+                "comparison": "比较蛋白在聚类树状图中的模块归属。",
+                "result": "血浆蛋白被分配到包括turquoise、greenyellow和purple在内的多个模块，具体模块数和各模块蛋白数正文未报告。",
+                "statistics": "正文未报告模块内蛋白数量或模块特征基因统计量。"
+              },
+              {
+                "panel": "C",
+                "experiment": "计算各模块与年龄、性别、尿液USP2和CKD的Pearson相关，并进行FDR校正。",
+                "comparison": "比较各模块与各性状相关系数的大小与显著性。",
+                "result": "turquoise和greenyellow模块经FDR校正后与年龄、尿液USP2和CKD显著相关；purple模块与尿液USP2和CKD显著相关，与年龄的相关为名义显著但未通过FDR校正。",
+                "statistics": "Pearson相关系数、名义P值与模块内FDR校正P值，具体数值正文未报告。"
+              }
+            ],
+            "interpretation": "该图表明血浆蛋白质组中存在与尿液USP2和CKD相关的模块，提示USP2相关改变在血浆蛋白层面亦有体现。",
+            "evidence": "证据来自WGCNA软阈值选择、聚类树状图和模块–性状热图的相关系数与FDR校正结果，均为正文报告的内容。",
+            "boundary": "正文未报告各模块的具体相关系数和蛋白数量，模块–性状关联不能推断因果，且样本量小可能影响网络稳健性。"
+          },
+          {
+            "label": "Figure 6",
+            "caption_zh": "识别其与CKD关联由尿液USP2中介的血清代谢物候选：（A）按与CKD和尿液USP2相关性从WGCNA turquoise模块中筛选的12个血清代谢物气泡图；（B–M）检验尿液USP2是否中介12个血清代谢物与CKD关联的中介分析三角图，显示总效应、直接效应和间接效应及中介比例，所有模型均调整年龄和性别。",
+            "what_question": "哪些血清代谢物与CKD的关联可能由尿液USP2中介，其间接效应和中介比例如何。",
+            "how_to_read": "先在A图气泡图中查看12个血清代谢物与CKD和USP2的相关性大小与方向，再在B–M的三角图中按总效应（顶部）、直接效应（左侧）和间接效应（右侧）解读，并关注各面板标注的中介比例和P值。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "从血清turquoise模块中按与CKD和尿液USP2的相关性筛选12个血清代谢物并绘制气泡图。",
+                "comparison": "比较各代谢物与CKD和USP2相关系数的大小与符号。",
+                "result": "共筛选出12个与CKD和尿液USP2相关的血清代谢物，气泡大小和颜色强度代表相关性大小，符号由图中数值表示。",
+                "statistics": "相关系数，正文未报告各代谢物的具体数值。"
+              },
+              {
+                "panel": "B–M",
+                "experiment": "对12个血清代谢物进行中介分析，调整年龄和性别，检验尿液USP2是否中介其与CKD的关联。",
+                "comparison": "比较各代谢物的总效应、直接效应、间接效应和中介比例。",
+                "result": "正文未报告12个血清代谢物中介模型的具体效应值、P值或中介比例。",
+                "statistics": "回归系数及P值，中介比例按间接效应与总效应之比计算；正文未报告具体数值。"
+              }
+            ],
+            "interpretation": "该图旨在展示血清代谢物与CKD的关联是否经由尿液USP2中介，但正文未给出具体中介结果，无法据此判断中介效应的方向和大小。",
+            "evidence": "证据来自WGCNA turquoise模块筛选和调整年龄与性别后的中介模型框架，具体数值正文未报告。",
+            "boundary": "正文未报告12个中介模型的具体结果，且中介分析为探索性、样本量小，不能据此确立因果中介路径。"
+          },
+          {
+            "label": "Figure 7",
+            "caption_zh": "跨WGCNA模块识别与尿液USP2和CKD相关的血浆蛋白：（A–C）分别展示purple、turquoise和greenyellow三个WGCNA模块中与CKD和尿液USP2均强相关的代表性血浆蛋白气泡图，气泡大小和颜色强度代表相关系数绝对值；purple和turquoise模块蛋白与CKD和USP2呈一致正相关，greenyellow模块蛋白呈一致负相关；turquoise模块展示按与CKD和USP2相关系数乘积排序的前20个蛋白。",
+            "what_question": "哪些血浆蛋白在purple、turquoise和greenyellow模块中与CKD和尿液USP2均强相关，其相关方向如何。",
+            "how_to_read": "分别查看A、B、C三个气泡图，比较各蛋白与CKD和USP2相关系数的绝对值大小与符号，注意purple和turquoise模块为一致正相关、greenyellow模块为一致负相关，并在turquoise模块中关注按相关系数乘积排序的前20个蛋白。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "展示purple模块中与CKD和尿液USP2均强相关的代表性血浆蛋白。",
+                "comparison": "比较各蛋白与CKD和USP2相关系数的绝对值与符号。",
+                "result": "purple模块蛋白与CKD和尿液USP2呈一致正相关。",
+                "statistics": "相关系数，正文未报告具体数值。"
+              },
+              {
+                "panel": "B",
+                "experiment": "展示turquoise模块中与CKD和尿液USP2均强相关的代表性血浆蛋白，并按相关系数乘积排序前20个蛋白。",
+                "comparison": "比较各蛋白与CKD和USP2相关系数的绝对值与符号。",
+                "result": "turquoise模块蛋白与CKD和尿液USP2呈一致正相关，图中展示按相关系数乘积排序的前20个蛋白。",
+                "statistics": "相关系数，正文未报告具体数值。"
+              },
+              {
+                "panel": "C",
+                "experiment": "展示greenyellow模块中与CKD和尿液USP2均强相关的代表性血浆蛋白。",
+                "comparison": "比较各蛋白与CKD和USP2相关系数的绝对值与符号。",
+                "result": "greenyellow模块蛋白与CKD和尿液USP2呈一致负相关。",
+                "statistics": "相关系数，正文未报告具体数值。"
+              }
+            ],
+            "interpretation": "该图提示三个血浆蛋白模块中的代表性蛋白与尿液USP2和CKD存在方向一致的相关，其中turquoise模块前20个蛋白可作为后续验证的候选。",
+            "evidence": "证据来自WGCNA模块–性状关联结果和气泡图中相关系数的大小与符号，均为正文报告的内容。",
+            "boundary": "正文未报告具体蛋白名称和相关系数数值，相关关系不能推断因果，且样本量小，候选蛋白需在更大队列中验证。"
+          }
+        ]
+      },
+      "ai_status": "success_retried",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    },
+    {
+      "id": "doi:10.1080/19490976.2026.2755119",
+      "title": "Integrated multi-omics analysis reveals distinct metabolic signatures and gut microbiome alterations across the pediatric obesity spectrum.",
+      "authors": [
+        "Arredondo-Hernandez R",
+        "Orduña P",
+        "Schcolnik-Cabrera A",
+        "Castillo-Rojas G",
+        "López-Filloy M",
+        "Morales-Nava P",
+        "Mejía Estrada A",
+        "Barrios-Plata BG",
+        "Ponce-de-León-Rosales S",
+        "Gutierrez-Castrellon P",
+        "Li L",
+        "López-Vidal Y"
+      ],
+      "journal": "Gut microbes",
+      "year": "2026",
+      "doi": "10.1080/19490976.2026.2755119",
+      "pmcid": "PMC13757627",
+      "pmid": "42968401",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1080/19490976.2026.2755119",
+        "https://europepmc.org/articles/PMC13757627",
+        "https://europepmc.org/articles/PMC13757627?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 16,
+      "relevance_evidence": [
+        "sequencing: rna sequencing",
+        "multiomics: multi-omics, metabolom",
+        "disease_bridge: obesity"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1.",
+          "caption": "Liver enzyme profiles in serum across pediatric weight categories. (A) Alanine aminotransferase (ALT); (B) aspartate aminotransferase (AST); (C) gamma-glutamyl transferase (GGT). Scatter plots showing serum enzyme concentrations (U/L) in normal weight (NW, n = 16, yellow‒green circles), overweight (Ow, n = 12, dark blue circles), and obese (Ob, n = 20, pink circles) children and adolescents. Individual data points are presented with horizontal bars representing mean ± standard deviation. Statistical comparisons using ANOVA with post-hoc testing revealed a significant overall difference between normal weight and obese groups, indicated by one asterisk (* p < 0.05) or three asterisks (*** p < 0.001).",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0001_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0001_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0001_C.webp",
+          "local_url": "generated/assets/PMC13757627/fig-01.webp",
+          "asset_path": "generated/assets/PMC13757627/fig-01.webp",
+          "asset_bytes": 32996,
+          "asset_sha256": "4b34907ccf45e16ddf855f0e8572c6e7af54586991b61ea34210ebdbfd6fd5bd",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 2.",
+          "caption": "Alterations in fecal and serum metabolite profiles across the pediatric obesity spectrum. (A) Venn diagram showing distribution of significantly altered fecal metabolites in three pairwise comparisons: obese versus normal weight (Ob vs NW; pink circle, 126 unique metabolites, 35.9%), obese versus overweight (Ob vs Ow; blue circle, 143 unique metabolites, 40.7%) and overweight versus normal weight (Ow vs NW; purple circle, 12 unique metabolites, 3.4%). (B) Three-circle Venn diagram for serum metabolites across all three pairwise comparisons: Ob vs NW (top left, pink/red, 11 unique, 11.6%), Ob vs Ow (top right, blue, 52 unique, 54.7%), and overweight versus normal weight (Ow vs NW; bottom, purple, 15 unique, 15.8%). Intersection sizes are drawn proportionally. (C) Bubble dot plot displaying the top 20 significantly altered fecal metabolites for each comparison (panels: Ob vs NW, Ob vs Ow, Ow vs NW). The x-axis indicates direction of regulation (left = downregulated, right = upregulated). Each metabolite (y-axis) is shown as a circle; color represents adjusted p- value (yellow ≈ 0.03, orange ≈ 0.02, purple/dark ≤ 0.01), and circle size reflects absolute fold change (1- to 4-fold; larger circles = greater change). (D) Bubble dot plot for the top 20 significantly altered serum metabolites, arranged similarly. Bubble color follows a gradient from yellow ( p = 0.04) to dark purple/black ( p ≤ 0.01), with darker hues indicating higher significance. Bubble size corresponds to absolute fold change (scale: 2, 4, 6, 8). Together, these figures reveal progressive alterations in amino acid metabolism, redox homeostasis, and nucleotide biosynthesis pathways across the pediatric obesity spectrum.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0002_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0002_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0002_C.webp",
+          "local_url": "generated/assets/PMC13757627/fig-02.webp",
+          "asset_path": "generated/assets/PMC13757627/fig-02.webp",
+          "asset_bytes": 88432,
+          "asset_sha256": "729634f33b96360bc63969649eb5a768873a0e05e3fe885d6d3e3e790f1e306b",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 3.",
+          "caption": "Metabolic pathway enrichment analysis of fecal metabolites. (A) Obese versus normal weight children with focus on folate biosynthesis. (B) Obese versus overweight children with focus on pyrimidine metabolism. Left panel: pathway enrichment scatter plot displaying significantly altered metabolic pathways in fecal samples from obese (Ob) versus normal weight (NW) children. The x-axis represents pathway impact (0.0–1.0), calculated as the cumulative percentage of matched metabolites relative to total metabolites in each pathway. The y-axis shows statistical significance as −log₁₀( p-value). Each circle represents a distinct metabolic pathway, with circle size proportional to the number of significantly altered metabolites within that pathway and color intensity indicating statistical significance (red = highest significance, p < 0.01; orange = moderate significance, p < 0.05; yellow = lower significance, p < 0.10). Right panel: KEGG metabolic network diagram for the folate biosynthesis pathway, illustrating the biochemical relationships between significantly altered compounds. Rectangular nodes represent individual metabolites identified by KEGG compound identifiers (C-numbers), with node colors indicating differential abundance status: red = significantly downregulated in obesity ( p < 0.05, fold change > 1.5); yellow = moderately altered; light blue = not significantly altered.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0003_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0003_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0003_C.webp",
+          "local_url": "generated/assets/PMC13757627/fig-03.webp",
+          "asset_path": "generated/assets/PMC13757627/fig-03.webp",
+          "asset_bytes": 117000,
+          "asset_sha256": "3ced255f1a677fb95748fc2c8376812fc19dcdab0d37f7f31df9711e2bf80816",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 4.",
+          "caption": "Differentially abundant microbial taxa. Heatmap showing log2 fold changes of differentially abundant genera in three pairwise comparisons. Key depleted taxa in obesity include Faecalibacterium, Roseburia, Agathobacter, Bacteroides fragilis, and Akkermansia. Enriched taxa include Blautia, Dorea, Ruminococcus gnavus, Collinsella, and Escherichia-Shigella.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0004_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0004_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0004_C.webp",
+          "local_url": "generated/assets/PMC13757627/fig-04.webp",
+          "asset_path": "generated/assets/PMC13757627/fig-04.webp",
+          "asset_bytes": 57900,
+          "asset_sha256": "01963e2e06be314c535b4335c95198c2407ba667aaaef5ca56e4dba9050a7023",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 5.",
+          "caption": "Metabolic pathway enrichment analysis of serum metabolites. (A) Obese- versus normal-weight children with a focus on beta-alanine metabolism. (B) Overweight versus normal-weight children with a focus on aromatic amino acid biosynthesis. Left panel: pathway enrichment scatter plot displaying significantly altered metabolic pathways in fecal samples from obese (Ob) versus normal-weight (NW) children. The x-axis represents pathway impact (0.0–1.0), calculated as the cumulative percentage of matched metabolites relative to total metabolites in each pathway. The y-axis shows statistical significance as −log₁₀( p-value). Each circle represents a distinct metabolic pathway, with circle size proportional to the number of significantly altered metabolites within that pathway and color intensity indicating statistical significance (red = highest significance, p < 0.01; orange = moderate significance, p < 0.05; yellow = lower significance, p < 0.10). Right panel: KEGG metabolic network diagram for the folate biosynthesis pathway, illustrating the biochemical relationships between significantly altered compounds. Rectangular nodes represent individual metabolites identified by KEGG compound identifiers (C-numbers), with node colors indicating differential abundance status: red = significantly downregulated in obesity ( p < 0.05, fold change > 1.5); yellow = moderately altered; light blue = not significantly altered.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0005_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0005_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0005_C.webp",
+          "local_url": "generated/assets/PMC13757627/fig-05.webp",
+          "asset_path": "generated/assets/PMC13757627/fig-05.webp",
+          "asset_bytes": 115204,
+          "asset_sha256": "049a30e3873be735cc50f5071fbb904c04a07e44f9dcf16cb63c5b490fc7c9ef",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 6.",
+          "caption": "Microbiome‒metabolite correlation heatmap. Heatmap showing Spearman correlations between differentially abundant genera and key metabolites, separately for NW and Ob groups. Strong positive correlations between beneficial bacteria (Faecalibacterium, Roseburia, Bacteroides, Akkermansia) and their characteristic metabolites (butyrate, propionate, bile acids) are present in NW but lost in Ob. Novel correlations between opportunistic taxa and pro- inflammatory metabolites emerge in Ob.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0006_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0006_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0006_C.webp",
+          "local_url": "generated/assets/PMC13757627/fig-06.webp",
+          "asset_path": "generated/assets/PMC13757627/fig-06.webp",
+          "asset_bytes": 151514,
+          "asset_sha256": "e8c77f9b805902c197b86c6a641a25a23510bdde5af5e79b3c818e5f7c555137",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 7.",
+          "caption": "Diversity analysis of gut microbiota across BMI groups. (A) Box-and-whisker plot with individual data points overlaid, depicting alpha diversity of gut microbiota as measured by the Shannon diversity index across three weight status groups: normal weight (yellow-green, n = 12), overweight (dark blue, n = 6), and obese (pink, n = 38). The y-axis represents the Shannon diversity index (range: 3.5–5.5), a measure of both species richness and evenness within individual samples. The box spans the interquartile range (IQR; 25th–75th percentile), the horizontal line within each box denotes the median, and whiskers extend to 1.5 × the IQR. Individual sample values are overlaid as colored dots. Statistical comparisons between all group pairs were performed and annotated: normal weight vs. overweight (ns), overweight vs. obese (ns), and normal weight vs. obese (ns, spanning bracket). We found no significant differences in Shannon diversity across BMI groups. (B) Principal coordinate analysis (PCoA) ordination plot illustrating beta diversity dispersion of gut microbial communities across three weight status groups: normal weight (open black circles with black convex hulls), overweight (open green triangles with green convex hull), and obese (open red triangles with red convex hull). Distances between samples were calculated using Euclidean distance on centered log-ratio (CLR)-transformed abundance data. The x-axis (PCoA 1) and y-axis (PCoA 2) represent the first two principal coordinates capturing the major axes of variation in community composition. Convex hulls enclose the full range of each group's sample distribution, with gray lines connecting each sample to its group centroid label.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0007_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0007_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0007_C.webp",
+          "local_url": "generated/assets/PMC13757627/fig-07.webp",
+          "asset_path": "generated/assets/PMC13757627/fig-07.webp",
+          "asset_bytes": 27570,
+          "asset_sha256": "12396420f606e1f7fde1b24c62b7517d6eff9cf3e0ad4a66e839b212383713a5",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 8.",
+          "caption": "Differentially abundant microbial taxa in obese vs. overweight children (top 50 by p-value). Horizontal bar chart displaying the top 50 significantly differentially abundant microbial taxa (ranked by p-value) in the comparison of obese vs. overweight children. Microbial taxa are annotated following the hierarchical nomenclature of family–genus–species as provided by the sequencing core; in cases where complete taxonomic resolution was unavailable, partial annotations are shown. The x-axis represents the log₂ fold change (log₂FC), with positive values (rightward bars, light blue) indicating taxa upregulated in the Obese group relative to Overweight, and negative values (leftward bars, dark blue/purple) indicating downregulated taxa.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0008_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0008_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0008_C.webp",
+          "local_url": "generated/assets/PMC13757627/fig-08.webp",
+          "asset_path": "generated/assets/PMC13757627/fig-08.webp",
+          "asset_bytes": 111060,
+          "asset_sha256": "e87b017747d36fc163963016d453f965d0150369455664ba6727a406510697ff",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 9.",
+          "caption": "Relative abundance of differentially abundant microbes across BMI group comparisons. (A) Family level. Stacked bar chart depicting the relative abundance (%) of significantly differentially abundant microbial taxa at the family level across three pairwise BMI group comparisons: overweight vs. normal weight, obese vs. normal weight, and obese vs. overweight. Each bar represents the composite relative abundance of all differentially abundant families identified in that comparison, normalized to 100%. Individual families are color-coded according to the legend, which includes 30 distinct families spanning the major gut microbial phyla. (B) Genus level. Stacked bar chart illustrating the relative abundance (%) of significantly differentially abundant microbial taxa at the genus level across three pairwise BMI group comparisons: overweight vs. normal weight, obese vs. normal weight, and obese vs. overweight. Each bar represents the normalized composite relative abundance of all differentially abundant genera in that comparison, summing to 100%. Over 45 distinct genera are represented in the color-coded legend, encompassing major gut commensals and opportunistic taxa.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0009_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0009_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0009_C.webp",
+          "local_url": "generated/assets/PMC13757627/fig-09.webp",
+          "asset_path": "generated/assets/PMC13757627/fig-09.webp",
+          "asset_bytes": 146172,
+          "asset_sha256": "03eac4a8296d02237f2c041af2c78f1e2fffb4c0a453c8e6719358e9a4901eb9",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 10.",
+          "caption": "Genus–metabolite correlation heatmaps across weight status groups (overweight vs. normal weight and obesity vs. normal weight). (A) Spearman correlation heatmap for overweight vs. normal weight comparison showing 14 genera and 20 metabolites with |ρ| ≥ 0.60 (annotated values; * p < 0.05). Key positive associations include Alistipes with 1-aminocyclopropane-1-carboxylate ( ρ = 0.92), Lachnospiraceae_UCG-004 with acetate ( ρ = 0.90), and CAG-352 with L-pipecoline ( ρ = 0.92). Notable negative correlations include Lachnoclostridium with L-kynurenine ( ρ = −0.90) and GCA-900066575 with 1-aminocyclopropane-1-carboxylate ( ρ = −0.89). (B) Spearman genus–metabolite correlation heatmap for obesity vs. normal weight showing 18 genera and 22 metabolites prioritized by |ρ| ≥ 0.45. Elusimicrobium shows positive correlations with 3-hydroxy-3-methylglutarate ( ρ = 0.49) and propionate ( ρ = 0.49), while UCG_002 exhibits negative correlations with 3-hydroxy-3-methylglutarate ( ρ = −0.64) and propionate ( ρ = −0.64). Blue = negative correlation; red = positive correlation.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0010_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0010_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0010_C.webp",
+          "local_url": "generated/assets/PMC13757627/fig-10.webp",
+          "asset_path": "generated/assets/PMC13757627/fig-10.webp",
+          "asset_bytes": 220418,
+          "asset_sha256": "c77828df6e1326330dbd148198e5f00cf82d0ed1f5b0453cfa815c8b177bd024",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 11.",
+          "caption": "Genus–metabolite correlation heatmaps in the overweight subgroup and differential correlation analysis (overweight minus obesity). (A) Spearman correlation heatmap for overweight participants ( n = 5) showing 18 genera and 20 metabolites. Strong associations (|ρ| = 1.00) are observed between Catenibacterium and 1-methylhistidine ( ρ = −1.00), Fusicatenibacter and 6-aminonicotinic acid ( ρ = 1.00), and Rikenellaceae RC9 gut group with glycine and histidine ( ρ = 1.00). (B) Spearman correlation heatmap for obese participants ( n = 31) showing attenuated correlations relative to the overweight subgroup; Parabacteroides with N-acetylspermidine ( ρ = 0.71) and Bacteroides ( ρ = 0.64) are among the most prominent associations. (C) Differential correlation heatmap (Δρ = overweight minus obesity) highlighting the most divergent genus–metabolite relationships between weight categories. The largest positive differential is Catenibacterium–Salicinol (Δρ = 1.88) and the largest negative differential is Catenibacterium–1-methylhistidine (Δρ = −1.68), underscoring weight-status-specific microbiome–metabolome coupling. Blue = overweight < obesity; red = overweight > obesity.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0011_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0011_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757627.1/KGMI_A_2755119_F0011_C.webp",
+          "local_url": "generated/assets/PMC13757627/fig-11.webp",
+          "asset_path": "generated/assets/PMC13757627/fig-11.webp",
+          "asset_bytes": 155988,
+          "asset_sha256": "6b5d30f7142527fbfd4044bc0559bbb9e7bb213282ce5cf9ba20371714053a1f",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "15.3",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-28T06:55:09Z"
+      },
+      "journal_display": "Gut microbes（IF 15.3；JCR SCI Q1）",
+      "updated_at": "2026-11-19T08:57:00Z",
+      "article": {
+        "title_zh": "儿童肥胖谱系的整合多组学图谱：代谢签名与肠道菌群改变",
+        "lead": "这项横断面研究对57名墨西哥儿童按体重指数（body mass index, BMI）分层，整合肝功能酶学、非靶向粪便与血清代谢组、16S rRNA肠道菌群测序及抗菌药物耐药评估，刻画从正常体重到肥胖的连续代谢与菌群改变。研究提示γ-谷氨酰转移酶（gamma-glutamyl transferase, GGT）是与肥胖关联最强的早期肝脏应激指标，并在代谢物与菌群属水平之间发现高强度的相关性。",
+        "background": "儿童肥胖伴随肠道与全身多腔室的广泛代谢重塑，但覆盖完整肥胖谱系的整合多组学刻画仍不完整。既往研究多聚焦单一组学或单一肥胖类别，难以呈现随体重增加而逐步累积的代谢扰动。本研究试图在同一队列中同时观察肝脏酶学、粪便与血清代谢物以及肠道菌群组成的变化。",
+        "research_question": "在儿童肥胖谱系中，肝功能酶学、粪便与血清代谢组以及肠道菌群组成呈现怎样的差异与渐进模式，代谢物与菌群属之间是否存在可解释的相关结构？",
+        "study_design": "这是一项2020至2022年在墨西哥城开展的横断面研究，最初纳入101名6–18岁儿童青少年，最终以具备完整人口学、生化、代谢组和菌群资料的57人进入分析。按世界卫生组织（World Health Organization, WHO）生长标准以BMI百分位分为正常体重（normal weight, NW）、超重（overweight, Ow）及肥胖I–III级，主分析将三个肥胖等级合并为肥胖组（obese, Ob）。研究经墨西哥国立自治大学医学院伦理委员会批准（方案号FM/DI/091/2019），并获得家长或监护人书面知情同意及参与者本人同意。",
+        "methods": "研究在入组时采集年龄、性别与人体测量数据，取空腹静脉血以常规临床化学方法检测丙氨酸氨基转移酶（alanine aminotransferase, ALT）、天冬氨酸氨基转移酶（aspartate aminotransferase, AST）和GGT，粪便以无菌采集盒收集并保存于−80 °C。非靶向代谢组采用超高效液相色谱-高分辨质谱（ultra-performance liquid chromatography coupled with high-resolution mass spectrometry, UPLC-HRMS），极性代谢物用甲醇:水（80:20 v/v）提取、脂质用氯仿:甲醇（2:1 v/v）提取，正负离子模式采集，MS-DIAL用于峰检测、对齐并比对HMDB、KEGG与LipidMaps注释，统计采用Wilcoxon秩和检验并以错误发现率（false discovery rate, FDR）校正p<0.05，多变量分析用偏最小二乘判别分析（partial least squares discriminant analysis, PLS-DA），通路富集用MetaboAnalyst 5.0结合KEGG。菌群方面，粪便DNA用QIAamp PowerFecal DNA Kit提取，扩增16S rRNA基因V3-V4区（引物341F/805R），在Illumina MiSeq平台以2×300 bp双端测序，QIIME2（v2022.2）配合DADA2去噪并生成扩增子序列变体（amplicon sequence variant, ASV），以SILVA 138注释分类，计算Shannon指数与Bray‒Curtis、加权UniFrac的β多样性，差异丰度用DESeq2并以FDR校正（校正p<0.05，log2倍数变化>1）。共丰度网络在属水平聚合，剔除未分类及低流行度、低丰度类群，按比较采用对数或带伪计数的中心对数比（centered log-ratio, CLR）转换，属–代谢物关联用Spearman秩相关，超重亚组（5人）用精确置换检验、较大组用渐近推断，并以Benjamini–Hochberg法在完整搜索空间控制多重检验；代谢物网络取各比较中变异最大的前50个代谢物，|ρ|>0.6且p<0.01的显著相关用Cytoscape 3.9可视化，拓扑指标由NetworkAnalyzer插件计算；菌群网络过滤条件为流行度>20%且平均相对丰度>0.1%，通过边的有无与相关符号变化评估组间网络重连。探索性分类使用L2正则化、类别加权的逻辑回归，特征选择与标准化在各训练折内完成，以留一法或重复分层交叉验证评估并用自助法置信区间。人口学比较用Kruskal–Wallis H检验与卡方检验，事后两两比较用Dunn检验加Bonferroni校正，分析在R（v4.2.0）与Python（v3.9）中完成，显著性阈值除特别说明外为p<0.05。",
+        "results": "经质量控制后57名参与者进入分析，包括NW 15人（26.3%）、Ow 8人（14.0%）、肥胖I级18人（31.6%）、II级11人（19.3%）和III级5人（8.8%）。年龄在各体重组间无显著差异（Kruskal–Wallis H=2.571，df=4，p=0.632），各组均值从10.2±1.9岁（肥胖III级）到12.8±6.8岁（NW）；性别分布亦相当（χ²=3.12，p=0.54），总体女性占54%，提示年龄与性别不是后续代谢与菌群分析的重要混杂因素。肝酶分析显示GGT与肥胖严重度的关联最强且最具渐进性，由NW的15.0±3.0 U/L升至合并Ob组的25.5±6.0 U/L（p<0.001，效应量d=2.1），事后比较中Ob vs NW显著（p<0.001）、Ob vs Ow显著（p=0.008），而Ow vs NW不显著（p=0.18）；ALT在肥胖中中度升高（Ob 24.8±8.1 U/L vs NW 18.2±4.5 U/L，p=0.012），AST在各组间稳定（p=0.324）；GGT/ALT比值随肥胖严重度递增（NW 0.82、Ow 0.85、Ob I 0.90、Ob II 0.93、Ob III 0.92），被解释为 overt 转氨酶升高之前的早期肝脏氧化应激。粪便非靶向代谢组共检出3245个特征，其中1088个在成对比较中差异显著（FDR<0.05，倍数变化>1.5），Ob vs NW改变最多（n=687），其次为Ob vs Ow（n=412）与Ow vs NW（n=289）；PLS-DA显示Ob与NW清晰分离（R²=0.68，Q²=0.52，置换p<0.001），Ow处于中间位置。通路富集在FDR<0.05下涉及23条KEGG通路，最显著者包括芳香族氨基酸代谢（苯丙氨酸、酪氨酸、色氨酸代谢，p=1.2×10⁻⁸），其中犬尿氨酸在Ob vs NW显著升高（倍数变化=3.2，p=0.002），3-羟基犬尿氨酸（倍数变化=2.8，p=0.005）与喹啉酸（倍数变化=2.1，p=0.012）亦升高；一碳代谢（叶酸生物合成、甲硫氨酸循环，p=3.5×10⁻⁷）中多个叶酸中间体下调，包括5-甲基四氢叶酸（倍数变化=0.42，p=0.008）、5,10-亚甲基四氢叶酸（倍数变化=0.38，p=0.003）与四氢叶酸（倍数变化=0.45，p=0.006）；能量代谢（糖酵解、三羧酸循环、磷酸戊糖途径，p=8.2×10⁻⁶）中乳酸（倍数变化=2.4，p=0.001）、丙酮酸（倍数变化=2.1，p=0.004）与琥珀酸（倍数变化=1.9，p=0.008）升高。摘要进一步报告共1088个粪便与1041个血清差异代谢物，关键扰动包括犬尿氨酸与3-硝基酪氨酸上调、胆汁酸与嘌呤代谢物下调；16S rRNA测序在Ow vs NW、Ob vs Ow、Ob vs NW中分别发现78、95和28个差异丰度类群，肥胖组β多样性离散度升高；共丰度网络显示代谢物–代谢物与类群–类群互作被破坏，包括产短链脂肪酸（short-chain fatty acid, SCFA）有益菌群丧失、胆汁酸失调及氨基酸–菌群耦合改变；整合分析发现高强度属–代谢物相关，如Lachnospiraceae与乙酸（ρ=0.92）、Tyzzerella与vulpecholate（ρ=0.94）。",
+        "limitations": "本研究为横断面设计，只能提示关联而不能确立因果方向，代谢物与菌群的改变究竟先于还是继发于肥胖无法判定。最终分析样本为57人，超重亚组仅8人（相关分析中为5人），统计效能有限，部分阴性结果（如Ow vs NW的GGT比较）不宜解读为无差异。图1图注所列各组样本量（NW n=16、Ow n=12、Ob n=20）与正文表格及流程图所述人数不一致，提示图表与正文之间可能存在样本口径差异，需谨慎对待具体数值。此外，16S rRNA测序仅能提供属水平及以下的有限分类分辨率，非靶向代谢组的注释依赖数据库匹配，存在未注释特征与假阳性风险；探索性分类模型的性能评估方式在正文中未给出具体数值。",
+        "takeaways": "在墨西哥儿童队列中，GGT较ALT和AST更敏感地反映肥胖相关的早期肝脏应激，且随肥胖严重度呈渐进升高。粪便与血清代谢组均显示随肥胖加重的渐进性扰动，集中于芳香族氨基酸（犬尿氨酸通路）、一碳代谢、糖酵解/三羧酸循环与核苷酸合成。肠道菌群在肥胖中表现为β多样性离散度增加与差异丰度类群改变，共丰度网络提示产SCFA有益菌群丧失与胆汁酸失调。属–代谢物高强度相关（如Lachnospiraceae与乙酸、Tyzzerella与vulpecholate）为连接SCFA、胆汁酸、色氨酸-吲哚衍生物与芳香族氨基酸的机制假说提供了线索，但需纵向与干预研究验证。",
+        "figure_notes": [
+          {
+            "label": "Figure 1",
+            "caption_zh": "儿童各体重类别血清肝酶谱：(A) ALT；(B) AST；(C) GGT的散点图，展示正常体重（NW，n=16）、超重（Ow，n=12）与肥胖（Ob，n=20）儿童青少年的血清酶浓度（U/L），个体数据点配以均值±标准差的水平线，统计采用方差分析（ANOVA）及事后检验。",
+            "what_question": "三种常规肝酶中，哪一种在儿童肥胖中显示出与体重类别最明显的差异？",
+            "how_to_read": "先看每个面板的纵轴酶浓度与横轴三个体重组的分布，再对照图上标注的显著性符号：星号表示NW与Ob之间存在显著差异，ns表示该比较不显著；三个面板需横向比较差异幅度。",
+            "panel_reading": [
+              {
+                "panel": "A（ALT）",
+                "experiment": "比较NW、Ow、Ob三组血清ALT浓度",
+                "comparison": "NW vs Ow、NW vs Ob及Ow vs Ob",
+                "result": "NW均值约16 U/L、Ow约23 U/L、Ob约25 U/L，仅NW与Ob之间标注单星号显著，其余比较标注ns",
+                "statistics": "图注说明采用ANOVA及事后检验，*p<0.05；正文报告Ob 24.8±8.1 U/L vs NW 18.2±4.5 U/L，p=0.012"
+              },
+              {
+                "panel": "B（AST）",
+                "experiment": "比较三组血清AST浓度",
+                "comparison": "NW vs Ow、NW vs Ob及Ow vs Ob",
+                "result": "三组均值接近，NW约24 U/L、Ow约27 U/L、Ob约25 U/L，所有比较均标注ns",
+                "statistics": "图注说明采用ANOVA及事后检验；正文报告AST在各组间稳定，p=0.324"
+              },
+              {
+                "panel": "C（GGT）",
+                "experiment": "比较三组血清GGT浓度",
+                "comparison": "NW vs Ow、NW vs Ob及Ow vs Ob",
+                "result": "NW均值约16 U/L、Ow约20 U/L、Ob约25 U/L，NW与Ob之间标注三星号显著，其余比较标注ns",
+                "statistics": "图注说明***p<0.001；正文报告NW 15.0±3.0 U/L vs Ob 25.5±6.0 U/L，p<0.001，效应量d=2.1"
+              }
+            ],
+            "interpretation": "三个面板共同显示GGT是随体重类别变化最明显的肝酶，ALT呈中度升高，AST基本不变，支持GGT作为儿童肥胖早期肝脏应激的敏感指标。",
+            "evidence": "证据来自图1三个面板的散点分布与显著性标注，以及正文3.2节报告的均值、p值与效应量。",
+            "boundary": "图注所列样本量（NW 16、Ow 12、Ob 20）与正文表格及流程图人数不一致，具体数值解读需谨慎；横断面设计不能说明肝酶升高与肥胖的因果顺序。"
+          },
+          {
+            "label": "Figure 2",
+            "caption_zh": "儿童肥胖谱系中粪便与血清代谢物谱的改变：(A) 三个成对比较中显著改变粪便代谢物的Venn图；(B) 血清代谢物的三圆Venn图；(C) 各比较前20个显著改变粪便代谢物的气泡图；(D) 前20个显著改变血清代谢物的气泡图。",
+            "what_question": "粪便与血清代谢物的显著改变如何在三个体重比较之间分布，其方向与幅度如何？",
+            "how_to_read": "先读A、B两个Venn图，比较各比较独有的代谢物数目与占比以及交集大小，判断哪一组比较贡献了最多的改变；再读C、D气泡图，横轴区分下调（左）与上调（右），颜色深浅表示校正p值，圆点大小表示绝对倍数变化，从而判断改变的方向与强度。",
+            "panel_reading": [
+              {
+                "panel": "A（粪便Venn图）",
+                "experiment": "统计三个成对比较中显著改变的粪便代谢物",
+                "comparison": "Ob vs NW、Ob vs Ow、Ow vs NW",
+                "result": "Ob vs NW独有126个（35.9%），Ob vs Ow独有143个（40.7%），Ow vs NW独有12个（3.4%），交集分别为42（12.0%）、12（3.4%）、15（4.3%）与1（0.3%）",
+                "statistics": "正文报告差异筛选标准为FDR<0.05、倍数变化>1.5"
+              },
+              {
+                "panel": "B（血清Venn图）",
+                "experiment": "统计三个成对比较中显著改变的血清代谢物",
+                "comparison": "Ob vs NW、Ob vs Ow、Ow vs NW",
+                "result": "Ob vs NW独有11个（11.6%），Ob vs Ow独有52个（54.7%），Ow vs NW独有15个（15.8%），交集分别为8（8.4%）、4（4.2%）、5（5.3%）与0（0.0%）",
+                "statistics": "正文未报告血清代谢物筛选的具体阈值"
+              },
+              {
+                "panel": "C（粪便气泡图）",
+                "experiment": "展示各比较前20个显著改变的粪便代谢物",
+                "comparison": "Ob vs NW、Ob vs Ow、Ow vs NW",
+                "result": "气泡按比较分组排列，横轴显示上调与下调方向，颜色由黄（约0.03）到深紫（≤0.01）表示校正p值，圆点大小对应1至4倍绝对倍数变化",
+                "statistics": "颜色梯度对应校正p值约0.03至≤0.01，正文未逐一报告各代谢物数值"
+              },
+              {
+                "panel": "D（血清气泡图）",
+                "experiment": "展示各比较前20个显著改变的血清代谢物",
+                "comparison": "Ob vs NW、Ob vs Ow、Ow vs NW",
+                "result": "气泡颜色由黄（p=0.04）到深紫/黑（p≤0.01），圆点大小对应绝对倍数变化（标尺2、4、6、8）",
+                "statistics": "颜色梯度对应p值0.04至≤0.01，正文未逐一报告各代谢物数值"
+              }
+            ],
+            "interpretation": "Venn图显示粪便与血清代谢物的显著改变主要集中在涉及肥胖组的比较，Ow vs NW贡献最少，提示代谢扰动随肥胖严重度累积；气泡图进一步给出各比较中改变的方向与强度。",
+            "evidence": "证据来自图2四个面板的Venn计数与气泡编码，以及正文3.3.1节报告的1088个差异粪便代谢物与PLS-DA分离结果。",
+            "boundary": "Venn图仅反映显著代谢物的数目分布，不代表通路层面的生物学意义；气泡图的具体代谢物名称与逐项数值在正文中未完整报告，不能据此推断单个代谢物的效应量。"
+          },
+          {
+            "label": "Figure 3",
+            "caption_zh": "粪便代谢物的代谢通路富集分析：(A) 肥胖vs正常体重，聚焦叶酸生物合成；(B) 肥胖vs超重，聚焦嘧啶代谢；左侧为通路富集散点图，右侧为KEGG代谢网络图。",
+            "what_question": "肥胖相关粪便代谢改变富集于哪些KEGG通路，叶酸生物合成通路内部代谢物如何变化？",
+            "how_to_read": "先看左侧散点图的横轴通路影响值（0.0–1.0）与纵轴−log₁₀(p)，圆点大小表示该通路中显著改变代谢物的数目，颜色由黄到红表示显著性由低到高；再沿虚线看右侧KEGG网络图中矩形节点（C编号）的填色，红色表示在肥胖中显著下调（p<0.05，倍数变化>1.5），黄色为中度改变，浅蓝为不显著。",
+            "panel_reading": [
+              {
+                "panel": "A（Ob vs NW，叶酸生物合成）",
+                "experiment": "对Ob vs NW的差异粪便代谢物做KEGG通路富集并展示叶酸生物合成网络",
+                "comparison": "肥胖vs正常体重",
+                "result": "散点图中Biotin metabolism与Folate biosynthesis显著性最高而通路影响值较低，另见Pantothenate and CoA biosynthesis、One carbon pool by folate、Cysteine and methionine metabolism等通路；右侧网络图以C编号节点展示叶酸通路内代谢物间的生化关系",
+                "statistics": "图注说明颜色对应p<0.01（红）、p<0.05（橙）、p<0.10（黄）；正文报告一碳代谢通路p=3.5×10⁻⁷，5-甲基四氢叶酸倍数变化=0.42、p=0.008"
+              },
+              {
+                "panel": "B（Ob vs Ow，嘧啶代谢）",
+                "experiment": "对Ob vs Ow的差异粪便代谢物做KEGG通路富集",
+                "comparison": "肥胖vs超重",
+                "result": "散点图中Pyrimidine metabolism显著性最高而通路影响值较低，另见Glycolysis/Gluconeogenesis、Propanoate metabolism与Pyruvate metabolism等通路",
+                "statistics": "图注说明颜色对应p<0.01（红）、p<0.05（橙）、p<0.10（黄）；该比较的具体p值正文未报告"
+              }
+            ],
+            "interpretation": "粪便代谢改变在通路层面集中于叶酸/一碳代谢与嘧啶、糖酵解等能量和核苷酸相关通路，与正文报告的叶酸中间体下调及核苷酸合成扰动方向一致。",
+            "evidence": "证据来自图3两个面板的富集散点图与叶酸通路网络图，以及正文3.3.1节列出的23条显著KEGG通路及叶酸中间体倍数变化。",
+            "boundary": "通路影响值低说明匹配代谢物占该通路总代谢物的比例有限，富集结果不能等同于通路整体活性改变；图3仅展示粪便代谢物，血清通路由图5呈现。"
+          },
+          {
+            "label": "Figure 4",
+            "caption_zh": "差异丰度微生物类群：热图展示三个成对比较中差异丰度属的log2倍数变化，肥胖中耗竭的关键类群包括Faecalibacterium、Roseburia、Agathobacter、Bacteroides fragilis与Akkermansia，富集类群包括Blautia、Dorea、Ruminococcus gnavus、Collinsella与Escherichia-Shigella。",
+            "what_question": "哪些肠道菌群属在肥胖谱系的不同比较中发生方向一致的增减？",
+            "how_to_read": "按列读取三个成对比较、按行读取菌属，颜色反映log2倍数变化的方向与幅度，先定位在肥胖中一致下降的属，再定位一致上升的属，并注意同一属在不同比较间方向是否稳定。",
+            "panel_reading": [
+              {
+                "panel": "差异丰度属热图",
+                "experiment": "对三个成对比较的差异丰度属计算log2倍数变化并以热图展示",
+                "comparison": "Ow vs NW、Ob vs Ow、Ob vs NW",
+                "result": "肥胖中耗竭的类群包括Faecalibacterium、Roseburia、Agathobacter、Bacteroides fragilis与Akkermansia，富集的类群包括Blautia、Dorea、Ruminococcus gnavus、Collinsella与Escherichia-Shigella",
+                "statistics": "正文报告差异丰度检验采用DESeq2并以FDR校正（校正p<0.05，log2倍数变化>1）；热图中各属的具体log2倍数变化数值正文未报告"
+              }
+            ],
+            "interpretation": "热图提示肥胖伴随产丁酸或有益类群（如Faecalibacterium、Roseburia、Akkermansia）的减少与部分机会性类群（如Escherichia-Shigella）的增加，与正文所述产SCFA有益菌群丧失相符。",
+            "evidence": "证据来自图4热图的行列模式与图注列出的耗竭和富集类群，以及正文报告的78、95和28个差异丰度类群。",
+            "boundary": "热图仅展示差异丰度方向，未给出各属的具体效应量与置信区间；16S rRNA测序的分类分辨率有限，部分类群仅能注释到属或种的水平。"
+          },
+          {
+            "label": "Figure 5",
+            "caption_zh": "血清代谢物的代谢通路富集分析：(A) 肥胖vs正常体重，聚焦β-丙氨酸代谢；(B) 超重vs正常体重，聚焦芳香族氨基酸生物合成；左侧为通路富集散点图，右侧为KEGG代谢网络图。",
+            "what_question": "血清代谢改变在肥胖与超重相对正常体重时分别富集于哪些通路？",
+            "how_to_read": "先读左侧散点图的横轴通路影响值与纵轴−log₁₀(p)，依据圆点大小与颜色判断显著性与涉及代谢物数目；再读右侧KEGG网络图中矩形节点的填色，红色表示显著下调（p<0.05，倍数变化>1.5），黄色为中度改变，浅蓝为不显著。",
+            "panel_reading": [
+              {
+                "panel": "A（Ob vs NW，β-丙氨酸代谢）",
+                "experiment": "对Ob vs NW的差异血清代谢物做KEGG通路富集",
+                "comparison": "肥胖vs正常体重",
+                "result": "散点图突出β-丙氨酸代谢通路，右侧网络图以C编号节点展示该通路内代谢物关系",
+                "statistics": "图注说明颜色对应p<0.01（红）、p<0.05（橙）、p<0.10（黄）；该通路的具体p值正文未报告"
+              },
+              {
+                "panel": "B（Ow vs NW，芳香族氨基酸生物合成）",
+                "experiment": "对Ow vs NW的差异血清代谢物做KEGG通路富集",
+                "comparison": "超重vs正常体重",
+                "result": "散点图突出芳香族氨基酸生物合成通路，提示在超重阶段即出现该通路的改变",
+                "statistics": "图注说明颜色对应p<0.01（红）、p<0.05（橙）、p<0.10（黄）；该通路的具体p值正文未报告"
+              }
+            ],
+            "interpretation": "血清代谢改变在肥胖与正常体重之间涉及β-丙氨酸代谢，而在超重与正常体重之间已涉及芳香族氨基酸生物合成，提示部分通路改变可能早于肥胖确立。",
+            "evidence": "证据来自图5两个面板的富集散点图与网络图，以及正文报告的1041个差异血清代谢物与芳香族氨基酸代谢通路p=1.2×10⁻⁸。",
+            "boundary": "图5图注中右侧网络图被描述为叶酸生物合成通路，与面板标题所指通路不一致，读图时应以面板标题与散点图为准；血清通路的具体p值与倍数变化在正文中未完整报告。"
+          },
+          {
+            "label": "Figure 6",
+            "caption_zh": "微生物组–代谢物相关性热图：分别展示NW与Ob组中差异丰度属与关键代谢物之间的Spearman相关，NW组中有益菌（Faecalibacterium、Roseburia、Bacteroides、Akkermansia）与其特征代谢物（丁酸、丙酸、胆汁酸）呈强正相关，而该相关在Ob组中丧失，Ob组中出现机会性类群与促炎代谢物的新相关。",
+            "what_question": "菌属与代谢物之间的相关结构在正常体重与肥胖儿童之间是否发生重组？",
+            "how_to_read": "先按NW与Ob两个分块分别读取热图的行（菌属）与列（代谢物），以颜色判断相关的方向与强度，再对比同一菌–代谢物配对在两个分块中的颜色是否由强正相关转为弱相关或负相关，并留意Ob分块中新出现的配对。",
+            "panel_reading": [
+              {
+                "panel": "NW与Ob分块的Spearman相关热图",
+                "experiment": "在NW与Ob组内分别计算差异丰度属与关键代谢物的Spearman相关",
+                "comparison": "NW组 vs Ob组",
+                "result": "NW组中Faecalibacterium、Roseburia、Bacteroides、Akkermansia与丁酸、丙酸、胆汁酸呈强正相关，这些相关在Ob组中丧失，Ob组中出现机会性类群与促炎代谢物的新相关",
+                "statistics": "正文报告属–代谢物关联采用Spearman秩相关并以Benjamini–Hochberg法控制FDR，示例相关为Lachnospiraceae与乙酸ρ=0.92、Tyzzerella与vulpecholate ρ=0.94；热图中各配对的具体相关系数正文未逐一报告"
+              }
+            ],
+            "interpretation": "热图提示肥胖不仅改变菌群与代谢物的丰度，还改变了二者之间的耦合结构，有益菌–有益代谢物的关联丧失与机会性类群–促炎代谢物关联的出现可能共同参与肥胖相关代谢紊乱。",
+            "evidence": "证据来自图6热图的分块对比与图注描述，以及正文报告的共丰度网络破坏与高强度属–代谢物相关。",
+            "boundary": "相关分析不能确立因果方向，且相关可能受饮食、药物等未测量因素混杂；热图未逐一标注相关系数与显著性，具体数值需回到补充材料。"
+          },
+          {
+            "label": "Figure 7",
+            "caption_zh": "不同BMI组肠道菌群多样性分析：(A) 以Shannon指数衡量的α多样性箱线图叠加个体数据点，比较正常体重（n=12）、超重（n=6）与肥胖（n=38）三组；(B) 基于CLR转换丰度数据欧氏距离的主坐标分析（PCoA）图，展示三组β多样性离散度并以凸包标示各组分布范围。",
+            "what_question": "肠道菌群的α多样性与β多样性离散度是否随体重状态改变？",
+            "how_to_read": "先读A图三个箱体的中位数、四分位距与须的范围，并对照组间比较的显著性标注（ns表示不显著）；再读B图各样本在PCoA 1与PCoA 2上的分布，观察三组凸包的重叠程度与组内样本的分散程度。",
+            "panel_reading": [
+              {
+                "panel": "A（Shannon α多样性）",
+                "experiment": "计算并比较三组样本的Shannon多样性指数",
+                "comparison": "NW vs Ow、Ow vs Ob、NW vs Ob",
+                "result": "三组箱体分布相近，所有组间比较均标注ns，未发现Shannon多样性随BMI组显著改变",
+                "statistics": "图注说明三组比较均不显著；正文未报告具体检验统计量与p值"
+              },
+              {
+                "panel": "B（PCoA β多样性）",
+                "experiment": "基于CLR转换丰度数据的欧氏距离进行PCoA排序",
+                "comparison": "NW、Ow与Ob三组的样本分布与凸包范围",
+                "result": "三组凸包在排序空间中相互重叠，肥胖组样本分布范围较宽，提示组内离散度增加",
+                "statistics": "正文报告肥胖组β多样性离散度升高，具体统计量与p值正文未报告"
+              }
+            ],
+            "interpretation": "α多样性在各体重组间无显著差异，而β多样性排序显示肥胖组样本离散度增大，提示肥胖相关的菌群改变更多体现在组成结构而非丰富度上。",
+            "evidence": "证据来自图7两个面板的箱线图与PCoA凸包，以及正文关于β多样性离散度升高的描述。",
+            "boundary": "图注所列样本量（NW 12、Ow 6、Ob 38）与正文表格及流程图人数不一致，且α多样性仅用Shannon指数衡量，不能排除其他多样性指标存在差异。"
+          },
+          {
+            "label": "Figure 8",
+            "caption_zh": "肥胖vs超重儿童中的差异丰度微生物类群（按p值排序的前50个）：水平条形图展示按p值排序的前50个显著差异丰度类群，类群按测序核心实验室提供的科–属–种层级命名，无法完全解析时显示部分注释；横轴为log2倍数变化，正值（向右，浅蓝）表示在肥胖组相对超重上调，负值（向左，深蓝/紫）表示下调。",
+            "what_question": "在肥胖与超重的直接比较中，哪些菌群类群变化最显著且方向如何？",
+            "how_to_read": "自上而下按p值排序读取条形，先看横轴log2倍数变化的正负判断在肥胖中上调或下调，再看条形长度判断变化幅度，并注意类群注释的层级（科–属–种）是否完整。",
+            "panel_reading": [
+              {
+                "panel": "前50差异丰度类群条形图",
+                "experiment": "对Ob vs Ow比较的菌群类群做差异丰度检验并按p值排序取前50",
+                "comparison": "肥胖vs超重",
+                "result": "条形按p值自上而下排列，向右的浅蓝条表示在肥胖组上调，向左的深蓝/紫条表示下调，类群以科–属–种层级或部分注释标注",
+                "statistics": "正文报告差异丰度检验采用DESeq2并以FDR校正（校正p<0.05，log2倍数变化>1）；各条形对应的具体log2倍数变化与p值正文未逐一报告"
+              }
+            ],
+            "interpretation": "该图细化了肥胖与超重之间的菌群差异，显示在肥胖谱系的后段仍存在一批方向明确的类群改变，与正文报告的Ob vs Ow有95个差异丰度类群相呼应。",
+            "evidence": "证据来自图8条形图的正负方向与排序，以及正文报告的Ob vs Ow差异类群数目。",
+            "boundary": "图中仅展示按p值排序的前50个类群，未涵盖全部差异类群；部分类群注释不完整，难以直接对应到已知功能菌。"
+          },
+          {
+            "label": "Figure 9",
+            "caption_zh": "不同BMI组比较中差异丰度微生物的相对丰度：(A) 科水平堆叠条形图展示三个成对BMI组比较中显著差异丰度微生物类群在科水平的相对丰度百分比。",
+            "what_question": "差异丰度类群在科水平的相对丰度如何在三个成对比较中分布？",
+            "how_to_read": "按三个成对比较分组读取堆叠条形，先看每个条形中各颜色的占比以判断科水平类群的相对贡献，再横向比较同一科在不同比较中的占比变化，注意纵轴为相对丰度百分比而非绝对丰度。",
+            "panel_reading": [
+              {
+                "panel": "A（科水平相对丰度）",
+                "experiment": "统计三个成对比较中显著差异丰度类群在科水平的相对丰度",
+                "comparison": "超重vs正常体重、肥胖vs正常体重、肥胖vs超重",
+                "result": "堆叠条形按三个比较分组展示各科水平类群的相对丰度百分比，具体各科占比数值正文未报告",
+                "statistics": "正文未报告该图对应的具体统计量；差异类群筛选采用DESeq2并以FDR校正（校正p<0.05，log2倍数变化>1）"
+              }
+            ],
+            "interpretation": "该图从科水平呈现差异类群的相对贡献，补充了属水平热图与条形图的信息，有助于判断哪些菌科在肥胖谱系比较中占据主要份额。",
+            "evidence": "证据来自图9A堆叠条形图的组成结构，以及正文报告的三个比较中差异丰度类群数目。",
+            "boundary": "相对丰度数据具有组成性，某一类群占比升高可能伴随其他类群占比被动下降，不能直接解读为绝对丰度变化；图注在本次材料中被截断，面板细节可能不完整。"
+          },
+          {
+            "label": "Figure 10",
+            "caption_zh": "本次提供的材料中未包含第10张图的完整图注，正文结果亦未对该图作单独描述。",
+            "what_question": "第10张图试图回答的具体问题在所提供的材料中未明确说明。",
+            "how_to_read": "由于图注缺失，无法确定该图的面板构成、坐标轴含义与统计标注方式；阅读时应先回到原文核对图注与对应结果段落，再按面板逐一解读，避免仅凭图像外观推断结论。在材料补齐之前，本图不宜作为独立证据引用。",
+            "panel_reading": [
+              {
+                "panel": "未标明",
+                "experiment": "正文与图注未报告该图对应的实验内容",
+                "comparison": "正文未报告",
+                "result": "正文未报告",
+                "statistics": "正文未报告"
+              }
+            ],
+            "interpretation": "在缺乏图注与对应结果描述的情况下，无法对该图作出有依据的解读，只能将其视为待核实的补充信息。",
+            "evidence": "本次材料中该图无可用图注与结果文本，故无证据支持具体结论。",
+            "boundary": "图注缺失意味着面板含义、样本量与统计方法均无法确认，任何解读都可能超出材料范围。"
+          },
+          {
+            "label": "Figure 11",
+            "caption_zh": "本次提供的材料中未包含第11张图的完整图注，正文结果亦未对该图作单独描述。",
+            "what_question": "第11张图试图回答的具体问题在所提供的材料中未明确说明。",
+            "how_to_read": "由于图注缺失，无法确定该图的面板构成、坐标轴含义与统计标注方式；阅读时应先回到原文核对图注与对应结果段落，再按面板逐一解读，避免仅凭图像外观推断结论。在材料补齐之前，本图不宜作为独立证据引用。",
+            "panel_reading": [
+              {
+                "panel": "未标明",
+                "experiment": "正文与图注未报告该图对应的实验内容",
+                "comparison": "正文未报告",
+                "result": "正文未报告",
+                "statistics": "正文未报告"
+              }
+            ],
+            "interpretation": "在缺乏图注与对应结果描述的情况下，无法对该图作出有依据的解读，只能将其视为待核实的补充信息。",
+            "evidence": "本次材料中该图无可用图注与结果文本，故无证据支持具体结论。",
+            "boundary": "图注缺失意味着面板含义、样本量与统计方法均无法确认，任何解读都可能超出材料范围。"
+          }
+        ]
+      },
+      "ai_status": "success_retried_gate_repair",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    },
+    {
+      "id": "doi:10.1080/19490976.2026.2750588",
+      "title": "Human cognitive performance-associated gut microbiota influences learning and memory in mice through arginine and pterin metabolism.",
+      "authors": [
+        "Tracey H",
+        "Antolín A",
+        "Teichenne J",
+        "Jones OAH",
+        "Van TTH",
+        "Puig J",
+        "Ramos R",
+        "Garre-Olmo J",
+        "Fernández-Real JM",
+        "Mayneris-Perxachs J",
+        "Del Bas JM"
+      ],
+      "journal": "Gut microbes",
+      "year": "2026",
+      "doi": "10.1080/19490976.2026.2750588",
+      "pmcid": "PMC13757691",
+      "pmid": "43010179",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1080/19490976.2026.2750588",
+        "https://europepmc.org/articles/PMC13757691",
+        "https://europepmc.org/articles/PMC13757691?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 17,
+      "relevance_evidence": [
+        "aging: age-related, lifespan",
+        "sequencing: metagenom",
+        "multiomics: metabolom"
+      ],
+      "figures": [
+        {
+          "label": "Figure 1.",
+          "caption": "(a) Schematic of Imageomics cohort analysis. (b) Human imageomics cohort Volcano plots showing up and down-regulation associated with SDMT after correcting for donor age, BMI, and years of education. Over representation analysis. Plots showing which microbiota are enriched and downregulated in association to human SDMT score. (c) Volcano plots of differential microbial molecular functions associated with SDMT in the human Aging Imageomics cohort (Significant associated genes were identified using the ANCOM-BC from shotgun metagenomics data, controlling for age, sex, BMI, and years of education. The log2 fold change of the association with a unit change in the ANCOM-BC-transformed variable values and the log10 p-values adjusted for multiple comparisons using a sequential goodness-of-fit were plotted for each taxon. Significance was set at p adj < 0.05. Significantly different genes are colored in green (upregulated) or red (downregulated). (d) Bar plots of the over-representation KEGG pathway analyzes (q-value < 0.1) mapping the KEGG orthologues significantly associated with SDMT in the human Aging Imageomics cohort. (e) Corresponding C-net plot of the arginine and proline pathway and ABC transporters showing significantly altered KEGG orthologues (f) Schematic representation of microbial metabolic pathways associated with SDMT scores, including creatinine/sarcosine metabolism and corresponding KEGG orthologues. (g) Bar plots of the over-representation functional KEGG modules (q-value < 0.1) significantly associated with SDMT in the human Aging Imageomics cohort.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757691.1/KGMI_A_2750588_F0001_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757691.1/KGMI_A_2750588_F0001_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757691.1/KGMI_A_2750588_F0001_C.webp",
+          "local_url": "generated/assets/PMC13757691/fig-01.webp",
+          "asset_path": "generated/assets/PMC13757691/fig-01.webp",
+          "asset_bytes": 138202,
+          "asset_sha256": "c2f04f18e7ed3b60e9f1b8a7c7e3ca6143a48f46d3e4f59581758fe1e436e9d7",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 2.",
+          "caption": "(a) Schematic of the study design. Fecal microbiota transplantation (FMT) was performed in mice using stool from human donors with high and low SDMT cognitive scores. Following the FMT period, mice underwent behavioral testing and omics profiling. Morris Water maze (MWM) tests showing: Time to platform; Path efficiency; Corrected Integrated Path Length (CIPL). (b) Data analyzed by stratifying recipient mice into high and low SDMT cognition groups based on the median SDMT score of the human cohort, using a mixed linear model with the interaction between test day and donor SDMT scores. Lines show model-estimated means (shaded 95% confidence intervals). Pairwise post-hoc are annotated * p < 0.05. (c) Representative Nissl staining of the cortex and CA1 region of the hippocampus in recipient mice, showing the relationship between human donor SDMT scores and neuronal density in recipient mice. Each point represents one human donor, with neuronal density calculated as the mean across recipient mice receiving FMT from that donor. Scale bar represents 200 μm. Corresponding Spearman correlations are displayed.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757691.1/KGMI_A_2750588_F0002_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757691.1/KGMI_A_2750588_F0002_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757691.1/KGMI_A_2750588_F0002_C.webp",
+          "local_url": "generated/assets/PMC13757691/fig-02.webp",
+          "asset_path": "generated/assets/PMC13757691/fig-02.webp",
+          "asset_bytes": 179868,
+          "asset_sha256": "428f1354d135250ad9bbf67067aa239d70464cbe6aef5a0aaa6a8d61c32196cc",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 3.",
+          "caption": "Metagenomics analysis of the microbiota and metabolomics of the hippocampus showing data associated with SDMT in the mouse recipients receiving FMT from the selected 13 human donors. All analyzes were controlled for age, BMI, and years of education. (a) Volcano plots of differentially abundant microbial species identified using the ANCOM-BC from shotgun metagenomics. The log2 fold change of the association with a unit change in the ANCOM-BC-transformed variable values and the log10 p-values adjusted for multiple comparisons using a sequential goodness-of-fit were plotted for each taxon. Significance was set at P adj < 0.1. Significantly different phyla are colored accordingly. (b) Bar plots of the over-representation KEGG pathway analyzes (q value < 0.1) mapping the KEGG orthologues significantly associated with donor SDMT scores. (c) C-net plot of differential microbial genes of the arginine and proline metabolic pathway following over-representation KEGG pathway analyzes (q value < 0.1) mapping the KEGG orthologues to determine overexpressed metabolic pathways. (d) Volcano plots of differential hippocampal metabolites identified applying a linear model to the data using the R package “limma” on metabolites identified by CIL-LC-MS. Significance was set at p adj < 0.1. Significantly different metabolite classes are colored accordingly. (e) Over-representation analysis using the metabolites associated with donor SDMT scores, identified with limma. Dots are colored according to the q-value. (f) C-net plot of differential metabolic pathways of the arginine biosynthesis, arginine and proline, tyrosine and folate metabolic pathways (q value < 0.1). (g) Schematic representation of metagenomic and metabolic pathways centered around the co-factor BH4, neurotransmitter synthesis and metabolic pathways associated with SDMT scores. For recipient mice, upregulated metabolites are colored in blue, while downregulated metabolites are shown in red. Differentially abundant KEGG orthologues are colored in green for humans and purple for recipient mice.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757691.1/KGMI_A_2750588_F0003_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757691.1/KGMI_A_2750588_F0003_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757691.1/KGMI_A_2750588_F0003_C.webp",
+          "local_url": "generated/assets/PMC13757691/fig-03.webp",
+          "asset_path": "generated/assets/PMC13757691/fig-03.webp",
+          "asset_bytes": 254252,
+          "asset_sha256": "17d1f209290acc5ac7672ba76f0c2a47469d2dfb1f5286236d67ff3b0d0bda6e",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "Figure 4.",
+          "caption": "RNA-seq of the cortex in recipient mice controlled for age, BMI, and years of education. (a) Volcano plots of mPFC transcripts associated with donor SDMT following limma-voom analysis and correction for multiple comparisons. Genes of the dopaminergic synapse are labeled. (b) Bar plots of the over-representation RNA-seq pathway analyzes (q-value < 0.1) for genes significantly associated with donor SDMT. (c) Corresponding C-net plot of overexpressed pathways and genes corresponding to the Dopaminergic synapse and neuroactive ligand. (d) Schematic representation of gene alterations in the dopaminergic synapse where genes enriched are shown in blue and those downregulated are shown in red.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757691.1/KGMI_A_2750588_F0004_C.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757691.1/KGMI_A_2750588_F0004_C.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13757691.1/KGMI_A_2750588_F0004_C.webp",
+          "local_url": "generated/assets/PMC13757691/fig-04.webp",
+          "asset_path": "generated/assets/PMC13757691/fig-04.webp",
+          "asset_bytes": 114714,
+          "asset_sha256": "4c9a22c78292facbe0db5e3491f522c4d073d5e4ea6117d934de8496d119e1cb",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "15.3",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-10-28T06:55:09Z"
+      },
+      "journal_display": "Gut microbes（IF 15.3；JCR SCI Q1）",
+      "updated_at": "2026-11-19T08:54:18Z",
+      "article": {
+        "title_zh": "人类认知表现相关肠道菌群经精氨酸与蝶呤代谢影响小鼠学习记忆",
+        "lead": "这项研究把人群队列的认知评分与粪便宏基因组关联起来，再用粪菌移植（fecal microbiota transplantation，FMT）把高、低认知评分供体的菌群分别移植给小鼠，从行为、神经元密度、菌群、海马代谢物和皮层转录组多个层面寻找可重复的线索。作者报告，高符号数字模态测验（Symbol Digit Modalities Test，SDMT）供体的菌群可改善受体小鼠的水迷宫学习表现并提高神经元密度，人群与小鼠两端都指向精氨酸与脯氨酸代谢及蝶呤相关通路。需要强调的是，这是一项关联加移植模型的机制探索研究，不能据此推断人体因果或临床疗效。",
+        "background": "肠道微生物组随年龄变化，并被认为与年龄相关的认知下降有关。SDMT 测量信息加工速度，对轻度认知障碍较为敏感，因此适合作为老年人群认知表型的量化指标。作者希望把人群层面的菌群关联与可操作的动物实验结合起来，检验菌群差异是否足以影响学习记忆，并寻找可能的代谢中介。",
+        "research_question": "在老年人群中，肠道菌群的物种组成与功能谱是否与 SDMT 认知表现相关；把高、低 SDMT 供体的粪菌移植给小鼠后，能否复制认知差异，并伴随神经元密度、海马代谢与皮层基因表达的改变；这些改变是否共同指向精氨酸与脯氨酸代谢以及蝶呤相关通路。",
+        "study_design": "研究包含两部分：一是西班牙 Girona 地区 Aging Imageomics 观察性队列中 867 名参与者的 SDMT 评分与粪便鸟枪法宏基因组关联分析；二是以 13 名男性供体粪菌移植给雄性 C57BL/6 小鼠的动物实验，并设健康对照与抗生素对照。动物端进行 Morris 水迷宫（Morris water maze，MWM）行为测试、Nissl 染色神经元密度、盲肠宏基因组、海马代谢组和皮层 RNA 测序。人群关联控制年龄、性别、体质指数（body mass index，BMI）与受教育年限，动物分析同样控制供体年龄、BMI 与受教育年限。",
+        "methods": "Aging Imageomics 研究为观察性研究，参与者来自 MESGI50 与 MARK 两个队列，2017 年 11 月 14 日至 2019 年 6 月 19 日在 Dr Josep Trueta 大学医院采集数据，伦理批件为 CEIm Code 2017.146，样本再使用批件为 2023.239。纳入标准包括年龄≥50 岁、社区居住、近 15 天无感染史、无磁共振成像（magnetic resonance imaging，MRI）禁忌并同意获知偶发发现；受试者两次访视，第二次提交晨尿与粪便样本。SDMT 要求受试者按数字—符号对照表在 90 秒内尽可能多地写出对应数字，前 10 题给予指导，得分越高表示表现越好。粪便总 DNA 用 PowerSoil DNA Isolation Kit 提取，以 400–500 ng 输入 DNA 建库（Illumina DNA Prep Kit），TapeStation 与 Qubit 质控，等摩尔混池后在 Illumina NextSeq 2000 测序，产生双端 150 bp 读长。原始读长先用自编 Python 脚本保留质量值（quality value，QV）>30 的序列，再用 fastp 去接头与质控；用 Bowtie2 比对 GRCh38.p13 去除宿主序列，仅保留未比对读长。用 SqueezeMeta v1.3.1 共组装模式、MEGAHIT 组装、Bowtie2 回贴，Prodigal v2.6.3 预测开放阅读框，DIAMOND 比对 GenBank 非冗余库进行物种注释，HMMER 比对 2016 版 KEGG 数据库完成 KEGG 亚类与通路层面功能注释，注释精修、定量与丰度矩阵构建在 R v4.2.2 中完成。动物为 6 月龄雄性 C57BL/6 小鼠 66 只（Janvier Labs），实验经 EURECAT 动物伦理委员会与 Generalitat de Catalunya 批准（方案号 10886），遵循 EU Directive 2010/63/EU、实验室动物护理原则与 ARRIVE 指南；样本量依据既往文献与实验可行性确定，每笼 3 只，12:12 小时明暗周期，22 °C，自由饮水与标准饲料，每周记录体重与摄食，按体重随机分组，所有操作随机化并由对供体 SDMT 分组不知情的人员完成。FMT 供体为 13 名男性，SDMT 范围 13–77、均值 40，按中位数分为高、低 SDMT 组；粪便冰上氮气环境处理，0.9% NaCl 稀释、179 × g 4 °C 离心 5 分钟，上清调至 130 mg 粪便/mL（含 10% 甘油），0.6 mL 分装液氮速冻后 −80 °C 保存。每份供体样本移植给 3 只 7.5 月龄雄性受体小鼠，另设健康对照 10 只（假灌胃）与抗生素对照 10 只（抗生素加假灌胃）。移植前连续 9 天每日口服灌胃抗生素鸡尾酒（万古霉素 100 mg/kg，新霉素、庆大霉素、甲硝唑各 200 mg/kg，加 3% v/v 6 M 盐酸助溶），饮水中加氨苄西林 1 g/L，停药恢复 72 小时后移植。",
+        "results": "人群端，867 名参与者的 SDMT 与菌群关联分析在控制年龄、性别、BMI 与受教育年限后，发现 12 个物种与更高 SDMT 相关，包括 Muribaculum caecicola、Muribaculaceae bacterium Isolate-002 (NCI)、Duncaniella freteri、未分类 Muribaculaceae、Muribaculaceae bacterium、Muribaculaceae bacterium Isolate-013 (NCI)、Barnesiella sp. WM24 与 Ruminococcus sp. J1101004 170508 H5 等；与更低 SDMT 相关的包括 Eubacterium sp. AF22-8LB、未分类 Raoultella、Eubacterium sp. AM28-29 与 Holdemanella sp. MSK.7.32。功能层面用 ANCOM-BC 将读长映射到 KEGG orthologues，过表征分析显示精氨酸与脯氨酸代谢及 ABC 转运体等通路显著关联；精氨酸脱羧酶 K01583（精氨酸转胍丁胺）与 N-甲基乙内酰脲酶 K01474 与 SDMT 正相关，肌酸酰胺水解酶 K01470 与 SDMT 负相关，ABC 转运体中精氨酸转运系统通透酶 K09999 与 SDMT 负相关。KEGG 模块过表征分析还显示 L-苏式四氢生物蝶呤（L-threo-tetrahydrobiopterin，L-threo-BH4）生物合成模块显著富集，BH4 是芳香族氨基酸羟化酶及以 L-精氨酸为底物酶的重要辅因子。动物端，主成分分析显示 FMT 受体与对照小鼠菌群分离，受体与人类供体共享 753 个物种、重叠 81.8%，其中 84 个物种在对照小鼠中缺失，按供体配对后物种水平中位定植率为 53.7%（四分位距 50.4%–57.7%）。4 天 MWM 中，高 SDMT 供体菌群受体表现优于低 SDMT 供体受体；线性混合模型显示 SDMT 分组与时间交互作用在到达平台时间（p = 0.048）、路径效率（p = 0.007）与校正整合路径长度（corrected integrated path length，CIPL；p = 0.013）上显著，校正供体 BMI、教育与年龄后仍显著；第 4 天高分组路径效率高于低分组（均值±标准差 0.289 ± 0.096 对 0.201 ± 0.142，p = 0.038）。把 SDMT 作为连续变量时，到达平台时间（p = 0.027）、路径效率（p = 0.001）与 CIPL（p = 0.010）同样显著。Nissl 染色显示供体 SDMT 与受体小鼠皮层神经元密度正相关（Spearman ρ = 0.73，p = 0.019），与海马 CA1 区神经元密度正相关（ρ = 0.65，p = 0.032）。受体盲肠菌群中，在人类高 SDMT 粪便中更丰富的 M. caecicola 与 D. freteri 在高 SDMT 供体受体中也更丰富。",
+        "limitations": "首先，人群部分为横断面观察性关联，无法确立菌群与认知之间的因果方向，也可能存在残余混杂。其次，FMT 供体仅 13 名且均为男性，受体为雄性小鼠，结论向女性或人群整体的外推受限。第三，小鼠认知评估仅采用 MWM，行为学结论的稳健性需要更多范式验证。第四，动物端代谢组与转录组分析虽控制供体年龄、BMI 与受教育年限，但样本量小，组学层面的显著性阈值（如 q < 0.1）较宽松，需独立重复。第五，精氨酸与蝶呤通路目前只是关联与通路富集层面的证据，未提供直接的因果干预实验，机制模型仍属推测。",
+        "takeaways": "该研究在老年人群中发现菌群物种与功能谱同 SDMT 认知表现相关，并通过 FMT 在小鼠中复制出学习记忆与神经元密度的差异，提示菌群对认知表现具有可移植的影响。人群与小鼠两端共同指向精氨酸与脯氨酸代谢及 BH4 相关蝶呤通路，为后续机制研究提供了候选靶点。但现有证据属于关联加移植模型，不能据此推荐任何菌群干预或临床检测。",
+        "figure_notes": [
+          {
+            "label": "Figure 1",
+            "caption_zh": "Aging Imageomics 队列中菌群物种与功能同 SDMT 评分的关联分析，包括研究流程示意、物种火山图、KEGG orthologues 火山图、通路与模块过表征分析、基因—通路网络及代谢通路示意。",
+            "what_question": "在 867 名老年参与者中，哪些菌群物种和微生物功能与更高的 SDMT 认知表现相关，这些功能是否集中在特定代谢通路。",
+            "how_to_read": "先看 a 了解队列与测序流程，再按 b→c→d→e→f→g 的顺序阅读：b 看物种层面的正负关联，c 看 KEGG orthologues 的差异，d 与 g 看通路和模块富集，e 与 f 把关键基因放回精氨酸与脯氨酸代谢及 ABC 转运体的网络中理解。",
+            "panel_reading": [
+              {
+                "panel": "a",
+                "experiment": "Aging Imageomics 队列示意，展示 SDMT 认知评估、粪便采集、鸟枪法宏基因组测序及物种与功能谱分析流程。",
+                "comparison": "无组间比较，为研究设计示意。",
+                "result": "正文未报告该面板的数值结果。",
+                "statistics": "正文未报告。"
+              },
+              {
+                "panel": "b",
+                "experiment": "基于鸟枪法宏基因组数据，用 ANCOM-BC 鉴定与 SDMT 相关的差异物种，控制年龄、性别、BMI 与受教育年限。",
+                "comparison": "以 SDMT 单位变化对应的 log2 系数为横轴，以 −log10 校正后 p 值为纵轴，比较各物种关联方向。",
+                "result": "12 个物种与更高 SDMT 相关，包括 M. caecicola、D. freteri 及多个 Muribaculaceae 成员；Eubacterium sp. AF22-8LB、未分类 Raoultella、Eubacterium sp. AM28-29 与 Holdemanella sp. MSK.7.32 等与更低 SDMT 相关。",
+                "statistics": "显著性阈值 p adj < 0.05，多重比较采用 sequential goodness-of-fit 校正。"
+              },
+              {
+                "panel": "c",
+                "experiment": "将读长映射到 KEGG orthologues，用 ANCOM-BC 鉴定与 SDMT 相关的微生物分子功能。",
+                "comparison": "以 log2 倍数变化为横轴、−log10 校正后 p 值为纵轴，绿色为上调、红色为下调。",
+                "result": "精氨酸脱羧酶 K01583 与 N-甲基乙内酰脲酶 K01474 与 SDMT 正相关，肌酸酰胺水解酶 K01470 与精氨酸转运系统通透酶 K09999 与 SDMT 负相关。",
+                "statistics": "显著性阈值 p adj < 0.05，多重比较采用 sequential goodness-of-fit 校正。"
+              },
+              {
+                "panel": "d",
+                "experiment": "对与 SDMT 显著相关的 KEGG orthologues 做 KEGG 通路过表征分析。",
+                "comparison": "比较各通路的富集程度。",
+                "result": "精氨酸与脯氨酸代谢、ABC 转运体等通路显著富集。",
+                "statistics": "q 值 < 0.1。"
+              },
+              {
+                "panel": "e",
+                "experiment": "构建精氨酸与脯氨酸通路及 ABC 转运体的基因—通路 C-net 网络，展示显著改变的 KEGG orthologues。",
+                "comparison": "展示通路与基因之间的连接关系。",
+                "result": "网络中纳入 K01583、K01474、K01470 与 K09999 等显著改变的基因。",
+                "statistics": "正文未报告该面板单独的统计量。"
+              },
+              {
+                "panel": "f",
+                "experiment": "绘制与 SDMT 相关的微生物代谢反应示意，包括肌酸/肌氨酸代谢及对应 KEGG orthologues。",
+                "comparison": "无组间比较，为通路示意。",
+                "result": "示意图标出精氨酸相关反应及 K01583、K01474、K01470 等基因的位置。",
+                "statistics": "正文未报告。"
+              },
+              {
+                "panel": "g",
+                "experiment": "对与 SDMT 显著相关的 KEGG modules 做过表征分析。",
+                "comparison": "比较各模块的富集程度。",
+                "result": "L-苏式四氢生物蝶呤（L-threo-BH4）生物合成模块显著富集。",
+                "statistics": "q 值 < 0.1。"
+              }
+            ],
+            "interpretation": "人群数据把认知表现与特定菌群物种及精氨酸、脯氨酸和 BH4 相关功能联系起来，提示这些代谢通路可能是菌群影响认知的候选中介。",
+            "evidence": "物种与 KEGG orthologues 的 ANCOM-BC 关联、通路与模块过表征分析，以及代谢通路示意共同支持该解释。",
+            "boundary": "这是横断面关联分析，不能证明因果，也不能排除饮食、药物等混杂因素对菌群与认知关系的影响。"
+          },
+          {
+            "label": "Figure 2",
+            "caption_zh": "粪菌移植研究设计、受体小鼠 Morris 水迷宫学习曲线，以及供体 SDMT 与受体小鼠皮层和海马 CA1 区神经元密度的相关分析。",
+            "what_question": "来自高、低 SDMT 供体的粪菌移植是否会导致受体小鼠空间学习记忆表现和神经元密度出现差异。",
+            "how_to_read": "先看 a 了解 FMT 与行为测试流程，再看 b 的三条学习曲线比较高低 SDMT 组随测试天数的变化，最后看 c 的 Nissl 染色代表图与散点相关图，注意每个点代表一名供体。",
+            "panel_reading": [
+              {
+                "panel": "a",
+                "experiment": "研究设计示意：13 名供体按 SDMT 高低分组，每名供体粪菌移植给 3 只小鼠，随后进行 MWM 行为测试与组学分析。",
+                "comparison": "高 SDMT 供体组与低 SDMT 供体组。",
+                "result": "正文未报告该面板的数值结果。",
+                "statistics": "正文未报告。"
+              },
+              {
+                "panel": "b",
+                "experiment": "4 天 MWM 测试，记录到达平台时间、路径效率与 CIPL，用含测试天数与供体 SDMT 交互项的线性混合模型分析。",
+                "comparison": "按人类队列 SDMT 中位数分层的受体小鼠高、低 SDMT 组。",
+                "result": "高 SDMT 供体受体学习表现更好；第 4 天路径效率高分组为 0.289 ± 0.096，低分组为 0.201 ± 0.142。",
+                "statistics": "交互作用：到达平台时间 p = 0.048，路径效率 p = 0.007，CIPL p = 0.013；第 4 天路径效率组间 p = 0.038；连续变量分析 p 分别为 0.027、0.001、0.010。"
+              },
+              {
+                "panel": "c",
+                "experiment": "受体小鼠皮层与海马 CA1 区 Nissl 染色，计算神经元密度并与供体 SDMT 做 Spearman 相关，每个点代表一名供体、取其受体小鼠均值。",
+                "comparison": "低 SDMT 与高 SDMT 供体受体的代表图及供体 SDMT 与神经元密度的相关。",
+                "result": "供体 SDMT 与受体皮层神经元密度正相关（ρ = 0.73），与海马 CA1 区神经元密度正相关（ρ = 0.65）。",
+                "statistics": "皮层 ρ = 0.73，p = 0.019；CA1 区 ρ = 0.65，p = 0.032；比例尺 200 μm。"
+              }
+            ],
+            "interpretation": "行为学与组织学结果一致显示，高 SDMT 供体菌群可移植地改善受体小鼠空间学习并提高神经元密度，支持菌群对认知相关表型的作用。",
+            "evidence": "MWM 三项指标的交互作用与第 4 天组间差异，以及皮层和 CA1 区神经元密度与供体 SDMT 的正相关。",
+            "boundary": "供体仅 13 名且均为男性，受体为雄性小鼠，行为学仅用 MWM，样本量小，结论需独立重复并谨慎外推。"
+          },
+          {
+            "label": "Figure 3",
+            "caption_zh": "受体小鼠盲肠宏基因组与海马代谢组中与供体 SDMT 相关的差异物种、KEGG 通路、代谢物及以 BH4 为中心的代谢网络。",
+            "what_question": "高、低 SDMT 供体菌群移植后，受体小鼠的菌群功能与海马代谢物是否出现与人群一致的改变，是否同样指向精氨酸与蝶呤通路。",
+            "how_to_read": "先看 a 的物种火山图确认人群信号在鼠端的重现，再看 b 与 c 的微生物通路，随后看 d 与 e 的海马代谢物差异与富集，最后用 f 与 g 的网络和示意图整合微生物与代谢物证据。",
+            "panel_reading": [
+              {
+                "panel": "a",
+                "experiment": "对受体小鼠盲肠菌群做鸟枪法宏基因组，用 ANCOM-BC 鉴定与供体 SDMT 相关的差异物种。",
+                "comparison": "以 SDMT 单位变化对应的 log2 倍数变化为横轴、−log10 校正后 p 值为纵轴，按门水平着色。",
+                "result": "在人类高 SDMT 粪便中更丰富的 M. caecicola 与 D. freteri 在高 SDMT 供体受体盲肠中也更丰富。",
+                "statistics": "显著性阈值 p adj < 0.1，多重比较采用 sequential goodness-of-fit 校正。"
+              },
+              {
+                "panel": "b",
+                "experiment": "对与供体 SDMT 显著相关的 KEGG orthologues 做 KEGG 通路过表征分析。",
+                "comparison": "比较各通路的富集程度。",
+                "result": "正文未报告该面板的具体富集通路名称。",
+                "statistics": "q 值 < 0.1。"
+              },
+              {
+                "panel": "c",
+                "experiment": "构建精氨酸与脯氨酸代谢通路的差异微生物基因 C-net 网络。",
+                "comparison": "展示通路与基因之间的连接关系。",
+                "result": "正文未报告该面板的具体基因列表。",
+                "statistics": "q 值 < 0.1。"
+              },
+              {
+                "panel": "d",
+                "experiment": "用 CIL-LC-MS 检测海马代谢物，以 limma 线性模型鉴定与供体 SDMT 相关的差异代谢物。",
+                "comparison": "以 log2 倍数变化为横轴、−log10 校正后 p 值为纵轴，按代谢物类别着色。",
+                "result": "正文未报告该面板的具体差异代谢物名称。",
+                "statistics": "显著性阈值 p adj < 0.1。"
+              },
+              {
+                "panel": "e",
+                "experiment": "对与供体 SDMT 相关的海马代谢物做过表征分析。",
+                "comparison": "各代谢通路的富集程度，点按 q 值着色。",
+                "result": "正文未报告该面板的具体富集通路。",
+                "statistics": "正文未报告该面板单独的统计量。"
+              },
+              {
+                "panel": "f",
+                "experiment": "构建精氨酸生物合成、精氨酸与脯氨酸、酪氨酸及叶酸代谢通路的差异代谢 C-net 网络。",
+                "comparison": "展示通路与代谢物之间的连接关系。",
+                "result": "正文未报告该面板的具体代谢物列表。",
+                "statistics": "q 值 < 0.1。"
+              },
+              {
+                "panel": "g",
+                "experiment": "绘制以辅因子 BH4 为中心、整合宏基因组与代谢组数据的神经递质合成与代谢通路示意。",
+                "comparison": "受体小鼠上调代谢物标蓝、下调标红，差异 KEGG orthologues 人类标绿、受体小鼠标紫。",
+                "result": "示意图整合了与 SDMT 相关的 BH4 中心代谢与神经递质合成通路。",
+                "statistics": "正文未报告。"
+              }
+            ],
+            "interpretation": "鼠端菌群与海马代谢数据在精氨酸与脯氨酸代谢及 BH4 相关通路上与人群信号相互呼应，支持菌群相关代谢重塑影响认知表现的模型。",
+            "evidence": "受体盲肠中 M. caecicola 与 D. freteri 的丰度重现、KEGG 通路与代谢物富集分析，以及 BH4 中心网络示意。",
+            "boundary": "组学分析样本量小、阈值较宽松，代谢物与菌群功能之间为关联而非因果，具体中介分子仍需干预实验验证。"
+          },
+          {
+            "label": "Figure 4",
+            "caption_zh": "受体小鼠皮层 RNA 测序中与供体 SDMT 相关的转录本、通路富集、通路—基因网络及多巴胺能突触基因改变示意。",
+            "what_question": "高、低 SDMT 供体菌群移植后，受体小鼠皮层基因表达是否出现与认知相关的改变，是否涉及多巴胺能突触等神经通路。",
+            "how_to_read": "先看 a 的转录本火山图并关注标注的多巴胺能突触基因，再看 b 的通路富集与 c 的网络定位关键基因，最后用 d 的示意图理解多巴胺能突触中上调和下调基因的分布。",
+            "panel_reading": [
+              {
+                "panel": "a",
+                "experiment": "对受体小鼠皮层做 RNA 测序，用 limma-voom 分析并校正多重比较，鉴定与供体 SDMT 相关的内侧前额叶皮层转录本。",
+                "comparison": "以关联方向与显著性比较各转录本，多巴胺能突触相关基因被标注。",
+                "result": "正文未报告该面板的具体差异基因名称与统计量。",
+                "statistics": "正文未报告具体阈值数值。"
+              },
+              {
+                "panel": "b",
+                "experiment": "对与供体 SDMT 显著相关的基因做 RNA 测序通路过表征分析。",
+                "comparison": "比较各通路的富集程度。",
+                "result": "正文未报告该面板的具体富集通路名称。",
+                "statistics": "q 值 < 0.1。"
+              },
+              {
+                "panel": "c",
+                "experiment": "构建过表达通路与基因的 C-net 网络，对应多巴胺能突触与神经活性配体通路。",
+                "comparison": "展示通路与基因之间的连接关系。",
+                "result": "正文未报告该面板的具体基因列表。",
+                "statistics": "正文未报告该面板单独的统计量。"
+              },
+              {
+                "panel": "d",
+                "experiment": "绘制多巴胺能突触中基因改变示意，富集基因标蓝、下调基因标红。",
+                "comparison": "高 SDMT 供体受体相对低 SDMT 供体受体的基因表达方向。",
+                "result": "示意图展示多巴胺能突触相关基因的上调与下调分布。",
+                "statistics": "正文未报告。"
+              }
+            ],
+            "interpretation": "皮层转录组提示高 SDMT 供体菌群与多巴胺能突触相关基因表达改变有关，与摘要中多巴胺受体通路富集、多巴胺再摄取与儿茶酚胺生物合成降低的描述方向一致。",
+            "evidence": "皮层 RNA 测序的差异转录本、通路富集与网络分析，以及多巴胺能突触基因改变示意。",
+            "boundary": "转录组为关联性结果，样本量小，未提供蛋白或功能层面的直接验证，不能据此断定多巴胺系统是因果中介。"
+          }
+        ]
+      },
+      "ai_status": "success_retried_gate_repair",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    },
     {
       "id": "doi:10.1016/j.molmet.2026.102462",
       "title": "BMI-anchored transcriptomics uncovers oxidative and inflammatory poles of obesity heterogeneity.",
