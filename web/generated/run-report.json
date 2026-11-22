@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-21T08:21:15Z",
+  "generated_at": "2026-11-22T08:07:54Z",
   "last_run": {
     "status": "success",
     "selected": 0,
     "published": 0,
     "candidates": 0,
     "raw_candidates": 65,
-    "score_rejected": 1,
-    "scope_rejected": 63,
+    "score_rejected": 2,
+    "scope_rejected": 62,
     "recovery_used": true,
-    "q1_rejected": 2,
+    "q1_rejected": 3,
     "skipped_without_pmcid": 0,
     "search_error": "",
     "preserved_articles": 8,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-11-21T08:21:15Z"
+    "finished_at": "2026-11-22T08:07:54Z"
   },
   "processed": [],
   "pending_candidates": []
