@@ -3737,21 +3737,21 @@
       "retrieved_at": "2026-11-22T08:07:54Z"
     }
   },
-  "updated_at": "2026-11-23T09:15:43Z",
+  "updated_at": "2026-11-24T11:06:24Z",
   "last_run": {
-    "status": "fallback_ncbi",
+    "status": "success",
     "selected": 0,
     "published": 0,
     "candidates": 0,
-    "raw_candidates": 69,
+    "raw_candidates": 65,
     "score_rejected": 2,
-    "scope_rejected": 66,
+    "scope_rejected": 62,
     "recovery_used": true,
     "q1_rejected": 3,
     "skipped_without_pmcid": 0,
-    "search_error": "Europe PMC HTTP 503: HTTP Error 503:",
+    "search_error": "",
     "preserved_articles": 8,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-11-23T09:15:43Z"
+    "finished_at": "2026-11-24T11:06:24Z"
   }
 }
