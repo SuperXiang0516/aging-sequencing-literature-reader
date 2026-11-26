@@ -3737,21 +3737,21 @@
       "retrieved_at": "2026-11-22T08:07:54Z"
     }
   },
-  "updated_at": "2026-11-25T09:55:39Z",
+  "updated_at": "2026-11-26T09:39:42Z",
   "last_run": {
     "status": "success",
     "selected": 0,
     "published": 0,
     "candidates": 0,
-    "raw_candidates": 65,
+    "raw_candidates": 64,
     "score_rejected": 2,
-    "scope_rejected": 62,
+    "scope_rejected": 61,
     "recovery_used": true,
     "q1_rejected": 3,
     "skipped_without_pmcid": 0,
     "search_error": "",
     "preserved_articles": 8,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-11-25T09:55:39Z"
+    "finished_at": "2026-11-26T09:39:42Z"
   }
 }
