@@ -3067,6 +3067,464 @@
       "publishable": true,
       "gate_reasons": [],
       "status": "published"
+    },
+    "doi:10.1111/acel.70857": {
+      "id": "doi:10.1111/acel.70857",
+      "title": "Single-Nucleus Transcriptomic Profiling of Dorsal Root Ganglia Reveals Pain-Associated Alterations in Aged Mice With Musculoskeletal Degeneration.",
+      "authors": [
+        "Liu C",
+        "Tao R",
+        "Wong HY",
+        "Wang Q",
+        "Cao M",
+        "Zhang N",
+        "Tong W",
+        "Xu J",
+        "Cheung WH",
+        "Yang M",
+        "Qin L",
+        "Wong RMY"
+      ],
+      "journal": "Aging cell",
+      "year": "2026",
+      "doi": "10.1111/acel.70857",
+      "pmcid": "PMC13809974",
+      "pmid": "43094310",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1111/acel.70857",
+        "https://europepmc.org/articles/PMC13809974",
+        "https://europepmc.org/articles/PMC13809974?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 10,
+      "relevance_evidence": [
+        "aging: age-related",
+        "multiomics: transcriptom"
+      ],
+      "figures": [
+        {
+          "label": "FIGURE 1",
+          "caption": "Age‐related musculoskeletal degradation in mice. (A) Comparison of BMC and BMD between aged (O) and young (Y) mice ( n = 8). (B) Myosin heavy chain (MHC) and Oil Red O staining for type I, type IIa, and type IIb myofiber CSA (average of 60 myofibers CSA for a single type of each mouse), and intramuscular lipid analysis (average of 10 muscle areas for each mouse). n = 4 mice, scale bar = 100 μm. Two‐way ANOVA with Šídák's multiple comparisons test was performed for MHC analysis, and Student's t ‐test for lipid analysis. (C) Safranin O staining of the lumbar intervertebral disc, hip, knee, and shoulder joints. (D) IVD score and OARSI scores of joints (sum of both articular surfaces) between aged and young groups ( n = 4–6 mice, scale bar = 500 μm). Student's t ‐test was performed for all analyses. * p < 0.05, ** p < 0.01, *** p < 0.001, and **** p < 0.0001.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g001.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g001.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g001.webp",
+          "local_url": "generated/assets/PMC13809974/fig-01.webp",
+          "asset_path": "generated/assets/PMC13809974/fig-01.webp",
+          "asset_bytes": 230836,
+          "asset_sha256": "929702f4235a5408e3345bdd539e2b959a80b9bc9cfefcbd1490a76f30a4441c",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "FIGURE 2",
+          "caption": "Single‐nucleus transcriptomic sequencing and macrophage number of in DRGs compared between Y and O groups. (A) Clusters with cell type annotation of DRGs (total 33,738 nuclei). (B) Top 3 marker genes for DRG cluster classification. (C) Subclusters with cell type annotation of DRG neurons (total 13,066 neurons). (D) Top 3 marker genes for Neurons subcluster classification. (E,F) Proportion of DRG clusters in whole DRGs and Neurons subclusters in DRG Neurons between groups. Cluster and subcluster names with red color indicated an increment in aged mice, and blue color indicated a reduction in aged mice. (G) Immune cell subclusters with cell type annotation. (H) B cells, T and NK cells, and macrophage proportions in whole DRGs between Y and O groups. (I) F4/80 staining (green) for macrophages in DRGs (scale bar = 100 μm), and positive cell number per unit area ( n = 4 mice). (J) Percentage of Mrc1 + Lyve1 + cells in all macrophages between groups. Student's t ‐test was performed. * p < 0.05, **** p < 0.0001.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g002.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g002.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g002.webp",
+          "local_url": "generated/assets/PMC13809974/fig-02.webp",
+          "asset_path": "generated/assets/PMC13809974/fig-02.webp",
+          "asset_bytes": 117248,
+          "asset_sha256": "79971da83f3ebeb89b0853f021ada0d18276948114bfdd808f9ae5c328906163",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "FIGURE 3",
+          "caption": "Functional differences between fibroblast subclusters and neuron subclusters, and cell–cell communication, RNA velocity and pseudotime analysis of DRG clusters and neuron subclusters. (A,B) Top upregulated enriched functions among 4 fibroblast subclusters and 10 neuron subclusters via GO analysis. Genes with q < 0.05 were utilized for functional annotation. (C,D) Cell–cell communication of DRG clusters and neuron subclusters between groups. Relative values with red color indicated more interactions in aged mice, whilst blue color indicated more in young mice. (E) RNA velocity of SGCs, Schwann cells, and neuron subclusters between Y and O groups. Solid lines to dashed lines are represented by the strength of the differentiation relationship from strong to weak. (F) Pseudotime distribution of all neuron cells. Pseudotime with dark blue to yellow color represents the initial to terminal states. (G) Neuron subcluster annotation and distribution between Y and O groups. (H) Neuron has highly variable gene expression with pseudotime by gene clusters. Horizontal coordinate from left to right represented short to long time.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g004.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g004.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g004.webp",
+          "local_url": "generated/assets/PMC13809974/fig-03.webp",
+          "asset_path": "generated/assets/PMC13809974/fig-03.webp",
+          "asset_bytes": 127418,
+          "asset_sha256": "d6f3dd3718a8a2484fa5aafd5dbdb5992c3c9f19f3630555a35b3fe99082bb06",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "FIGURE 4",
+          "caption": "Differential function of DRG cells and neuron subclusters via GO analysis. (A) Top 5 enriched GO pathways of DRG cells between groups. (B) Top 5 enriched GO pathways of neuron subclusters between groups.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g007.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g007.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g007.webp",
+          "local_url": "generated/assets/PMC13809974/fig-04.webp",
+          "asset_path": "generated/assets/PMC13809974/fig-04.webp",
+          "asset_bytes": 114156,
+          "asset_sha256": "f6736f38b8d2e924c406fcad1f778da370919715380076af266035e13bca5727",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "FIGURE 5",
+          "caption": "Pain‐ and temperature‐related behavior tests, genes expression. of neurological function, inflammation, senescence‐associated secretory phenotype (SASP). (A) Von Frey, hotplate, acetone‐evoked behavior, and capsaicin‐evoked behavior tests between groups ( n = 8 mice). Student's t ‐test was performed. * p < 0.05, and **** p < 0.0001. (B) Average expression of pain‐ and temperature‐related genes of each sample. Gene names with red color indicated high expression in neurons, and blue color indicated lower expression in neurons of aged mice. (C) Expression level of pain‐ and temperature‐related genes in neuron subclusters between groups. (D) Average expression of other neurological function‐related genes in each sample. Red for higher expressed genes in neurons of aged mice and blue for lower expressed genes. (E) Expression level of other neurological function‐related genes in neuron subclusters between groups. (F) Clustered inflammation‐related gene expression in DRG neurons. Red for significantly higher expressed genes in neurons of aged mice, and blue for lower expressed genes. Statistical analysis was based on the single‐nucleus level by the Wilcoxon test, and differences with p < 0.05 were colored. (G) Distribution of Cd55 ‐expressing cells in neurons between groups. (H) Cdkn1a + cell proportion and distribution in DRGs of young and aged mice. (I) Cdkn2a + cell proportion and distribution in DRGs of young and aged mice. Student's t ‐test was performed. * p < 0.05.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g006.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g006.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g006.webp",
+          "local_url": "generated/assets/PMC13809974/fig-05.webp",
+          "asset_path": "generated/assets/PMC13809974/fig-05.webp",
+          "asset_bytes": 153702,
+          "asset_sha256": "4cbc0abc2480f06993ab2c3b1a9413a675963bc721a26ce915c7d3e5530d7e98",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "FIGURE 6",
+          "caption": "Expression of CGRP and Substance P in DRGs. (A) CGRP counterstained with IB4 and DAPI in young, aged, and OA mice. Average intensity of CGRP in IB4 + cells (average intensity of 15 IB4 + cells per mouse, n = 4 mice). CGRP high cell proportion between groups (average of 2 DRGs per mouse, n = 4 mice). (B) Substance P (SP) counterstained with IB4 and DAPI in young, aged, and OA mice. Average intensity of SP in IB4 + cells (average intensity of 15 IB4 + cells per mouse, n = 4 mice). SP high cell proportion between groups (average of 2 DRGs per mouse, n = 4 mice). White dotted line, IB4 + cells; white triangle, cells with high protein expression. One‐way ANOVA with Tukey's test. * p < 0.05, ** p < 0.01, *** p < 0.001.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g005.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g005.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g005.webp",
+          "local_url": "generated/assets/PMC13809974/fig-06.webp",
+          "asset_path": "generated/assets/PMC13809974/fig-06.webp",
+          "asset_bytes": 167202,
+          "asset_sha256": "67cabe34e0fc9419e5a906c51cf11b51ede3efb66b77b2cbb8884ed6b17b8b67",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "7.7",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-11-28T08:57:33Z"
+      },
+      "journal_display": "Aging cell（IF 7.7；JCR SCI Q1）",
+      "updated_at": "2026-11-28T08:58:45Z",
+      "article": {
+        "title_zh": "单核转录组揭示衰老伴骨骼肌肉退变小鼠背根神经节的疼痛相关改变",
+        "lead": "本文以年轻与老年C57BL/6J小鼠为对象，结合行为学、组织学与背根神经节（dorsal root ganglion, DRG）单核RNA测序（single-nucleus RNA sequencing, snRNA-seq），系统描绘了衰老伴随的骨骼肌肉退变及DRG细胞组成与功能改变。研究发现老年小鼠DRG中施万细胞、成纤维细胞、巨噬细胞及Aβ快速适应型低阈值机械感受器增多，而C类低阈值机械感受器减少，并伴炎症、离子通道功能异常与神经营养因子升高。作者提出CGRP与P物质（Substance P）在肽能与非肽能伤害感受器中的过表达可能参与痛反应延长，但相关机制仍属关联性推断。",
+        "background": "慢性疼痛在老年人群中高度流行，常被归因于年龄相关的骨骼肌肉退变，而DRG既是疼痛调控的关键节点，也与骨骼肌肉系统存在联系。既往研究多聚焦单一组织或单一细胞类型，缺乏对衰老DRG整体细胞图谱与疼痛相关分子改变的系统刻画。作者据此提出，衰老DRG的细胞组成与功能变化可能与骨骼肌肉退变协同影响疼痛表现。",
+        "research_question": "本研究要回答的核心问题是：在自然衰老并伴骨骼肌肉退变的小鼠中，DRG的细胞组成、亚群比例、功能通路与疼痛相关基因表达发生哪些改变，这些改变如何与行为学上的痛觉变化相对应。作者进一步关注CGRP与Substance P在肽能（peptidergic nociceptors, PEPs）与非肽能伤害感受器（non-peptidergic nociceptors, NPs）中的表达是否增强，并据此推测其与痛反应延长的关系。需要强调的是，研究设计为描述性与关联性分析，并未直接证明因果关系。",
+        "study_design": "研究采用年轻（4–6月龄）与老年（24–26月龄）雄性C57BL/6J小鼠的横断面比较设计，行为学测试与组织取材分批进行并设至少1周洗脱期。每组取9只小鼠的DRG用于snRNA-seq（每3只小鼠DRG合并为1个样本），另取关节、脊柱与肌肉评估退变程度。作者还建立3月龄雄性小鼠内侧半月板失稳（destabilization of the medial meniscus, DMM）诱导的骨关节炎（osteoarthritis, OA）模型，仅用于免疫荧光验证DRG中疼痛相关蛋白表达，术后8周取L3–L4 DRG。研究经香港中文大学动物实验伦理委员会批准（编号23/281/MIS）。",
+        "methods": "行为学方面，von Frey试验使用0.04–6 g纤维丝并以Up-Down法计算50%阈值，热板试验设定55°C并记录缩足或跳跃潜伏期，丙酮试验记录冷刺激诱发痛行为持续时间，足底注射2.5 μg辣椒素（溶于含0.25% DMSO、0.25%乙醇、0.125% Tween80的5 μL生理盐水）后记录痛行为时长。形态学方面，双能X线吸收法测定全身骨矿物含量（bone mineral content, BMC）与骨密度（bone mineral density, BMD），膝、髋、肩关节及腰椎行番红O/固绿染色并按OARSI评分，椎间盘按已发表标准评分，L3–L4椎旁肌行肌球蛋白重链与油红O染色分析I、IIa、IIb型肌纤维横截面积与肌内脂肪浸润。DRG形态学取L3–L4固定切片，使用抗CGRP（1:200）、IB4-Alexa Fluor 594（2 μg/mL）、抗Substance P（1:200）、抗F4/80（1:200）、抗TH（1:200）、抗MPZ（1:200）与抗Vimentin（1:200）抗体，ImageJ中将平均强度大于40定义为高表达细胞，比较图像均来自同批次同参数采集。snRNA-seq方面，DRG经冷PBSE洗涤后用GEXSCOPE核分离液提取核，40 μm滤网过滤，每样本取10^6个核悬于400 μL PBSE，台盼蓝排除破损核、DAPI标记排除碎片，以4×10^5核/mL上样至微流控芯片（GEXSCOPE Single Nucleus RNA-seq Kit, Singleron），按厂家说明建库，Agilent 5300 Fragment Analyzer评估质量，Illumina NovaSeq 6000平台150 bp双端测序。数据分析使用Python 3.10的Scanpy v1.9.3，过滤标准为基因数<200或处于前2%、UMI数处于前2%、线粒体比例>25%的细胞，以及表达于少于5个细胞的基因，最终保留33,869个高质量单细胞；经总计数归一化与log归一化后用Seurat算法（flavor='seurat_v3'）取前2000个高变基因，以harmonypy v0.0.5取前50个主成分校正批次，再以top 20个Harmony校正成分降维聚类，Louvain算法分辨率1.2，UMAP可视化，Seurat v3.1.2得到26个簇，细胞类型注释参考既往研究，功能注释采用q<0.05的基因。数据可得性在提供的正文中未报告。",
+        "results": "组织学结果显示老年小鼠BMC与BMD降低约27%–30%（p<0.01），提示骨质疏松模型建立成功；椎旁肌I型与IIa型肌纤维横截面积缩小26%–33%，IIb型肌纤维横截面积与肌内脂质含量升高23%–25%；椎间盘评分显著升高（p<0.001），并见软骨细胞减少与关节面不连续，以髋、膝关节为著，而肩关节因软骨较薄OARSI评分未见显著差异。snRNA-seq将DRG核注释为神经元、施万细胞、卫星胶质细胞、血管内皮细胞、血管平滑肌细胞、免疫细胞及4类成纤维细胞，神经元进一步分为10个亚群；老年小鼠施万细胞与成纤维细胞1、2比例显著升高（p<0.05），神经元中NF2增多而NP2与cLTMRs减少（p<0.05），巨噬细胞占总细胞比例升高（p<0.001），F4/80染色证实巨噬细胞增多，但Mrc1+Lyve1+组织驻留巨噬细胞比例组间无显著差异（p>0.05）。功能注释显示成纤维细胞各亚群富集于胶原细胞外基质与基质组织等通路，神经元各亚群分别富集于突触组织、门控通道活性、ATP代谢、线粒体呼吸体、阳离子通道复合物、肌动蛋白结合、GTP酶活性与磷脂结合等，PEPs还富集cAMP与MAPK信号通路。细胞通讯分析显示老年DRG中成纤维细胞1与施万细胞、卫星胶质细胞、神经元之间以及NF2与NF3之间相互作用增强，而神经元与免疫细胞之间、NP3与cLTMRs之间相互作用减少。RNA速度与拟时序分析提示两组NF2与NF3分化方向相反，NPs处于起始状态，多数cLTMRs、NF2、NF3与NF4处于终末状态，老年DRG中可见更多未成熟PEPs与Cold亚群。行为学与基因表达部分显示老年小鼠在von Frey、热板、丙酮与辣椒素试验中痛反应延长，疼痛与温度相关基因在神经元及亚群间存在差异表达，炎症相关基因在老年DRG神经元中显著升高，Cd55表达细胞分布、Cdkn1a+与Cdkn2a+细胞比例在组间存在差异。免疫荧光显示CGRP与Substance P在IB4+细胞中的平均强度及高表达细胞比例在年轻、老年与OA小鼠间存在差异。",
+        "limitations": "首先，snRNA-seq每组仅3个合并样本（每样本来自3只小鼠），样本量有限，细胞比例差异可能受个体与合并策略影响，组间统计的推断力有限。其次，研究以自然衰老小鼠的比较为主，DMM-OA模型仅用于免疫荧光验证疼痛相关蛋白表达，不能据此推断衰老与OA的因果或协同机制。第三，CGRP与Substance P过表达与痛反应延长之间为关联性证据，作者所述“协同作用”属于推测，未通过阻断或敲除实验验证。第四，行为学与测序取材分批进行，正文未报告行为学与snRNA-seq在同一批动物中的一一对应关系。第五，数据可得性在提供的正文中未报告，部分图（如Figure S系列与Figure 4、5、6的具体数值）在正文中未完整给出，相关数值应标注为正文未报告。",
+        "takeaways": "本研究提供了衰老伴骨骼肌肉退变小鼠DRG的单核转录组图谱，显示施万细胞、成纤维细胞、巨噬细胞与NF2亚群增多而NP2与cLTMRs减少，并伴炎症升高、离子通道功能异常与神经营养因子增加。CGRP与Substance P在PEPs与NPs中的过表达与痛反应延长在时间上相关，提示其可能作为老年慢性疼痛的候选机制与干预靶点。但研究为描述性与关联性设计，样本量有限，机制结论需功能实验进一步验证。",
+        "figure_notes": [
+          {
+            "label": "Figure 1",
+            "caption_zh": "图1展示老年与年轻小鼠骨骼肌肉系统的年龄相关退变，包括BMC与BMD比较、椎旁肌肌纤维横截面积与肌内脂质、腰椎椎间盘及髋膝肩关节番红O染色，以及IVD评分与OARSI评分。",
+            "what_question": "该图回答的问题是：老年小鼠是否出现骨、椎旁肌、椎间盘与关节的广泛退变，从而构成疼痛相关的外周病理基础。",
+            "how_to_read": "先看A的BMC与BMD判断骨质疏松表型，再看B的肌纤维分型与脂质浸润评估肌肉退变，随后结合C的番红O染色观察椎间盘与关节软骨形态，最后用D的IVD评分与OARSI评分量化组间差异。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "双能X线吸收法测定全身BMC与BMD",
+                "comparison": "老年（O）与年轻（Y）小鼠比较，n=8",
+                "result": "老年小鼠BMC与BMD降低约27%–30%",
+                "statistics": "p<0.01"
+              },
+              {
+                "panel": "B",
+                "experiment": "肌球蛋白重链与油红O染色分析I、IIa、IIb型肌纤维横截面积及肌内脂质",
+                "comparison": "老年与年轻小鼠比较，n=4，每只鼠每种肌纤维取60根平均、脂质取10个肌肉区域平均",
+                "result": "I型与IIa型肌纤维横截面积缩小26%–33%，IIb型横截面积与肌内脂质含量升高23%–25%",
+                "statistics": "MHC分析采用双因素方差分析加Šídák多重比较，脂质分析采用Student's t检验"
+              },
+              {
+                "panel": "C",
+                "experiment": "腰椎椎间盘、髋、膝、肩关节番红O染色",
+                "comparison": "老年与年轻小鼠形态学比较",
+                "result": "老年椎间盘见髓核细胞丢失与基质富集、纤维环板层结构受损、髓核与纤维环边界消失，髋与膝关节软骨细胞减少、表面不连续",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "D",
+                "experiment": "IVD评分与OARSI评分（每个关节两个关节面之和）",
+                "comparison": "老年与年轻小鼠比较，n=4–6",
+                "result": "老年小鼠IVD评分显著升高，髋与膝关节OARSI评分升高，肩关节因软骨较薄未见显著差异",
+                "statistics": "Student's t检验，p<0.001（IVD），显著性标记* p<0.05、** p<0.01、*** p<0.001、**** p<0.0001"
+              }
+            ],
+            "interpretation": "该图说明老年小鼠存在骨量下降、椎旁肌萎缩与脂质浸润、椎间盘退变及下肢关节软骨退变，这些改变是腰痛与关节痛的潜在外周来源。",
+            "evidence": "BMC/BMD、肌纤维横截面积、脂质含量、IVD评分与OARSI评分的组间差异均有统计检验支持。",
+            "boundary": "该图仅描述退变表型，未直接证明这些退变与DRG改变或疼痛行为的因果关系；肩关节OARSI评分未见显著差异，提示退变程度存在部位差异。"
+          },
+          {
+            "label": "Figure 2",
+            "caption_zh": "图2展示DRG单核转录组测序的细胞与亚群注释、组间细胞比例差异，以及巨噬细胞比例与F4/80染色验证。",
+            "what_question": "该图回答的问题是：老年小鼠DRG的细胞组成与神经元亚群比例发生哪些改变，巨噬细胞增多是否能在蛋白水平得到验证。",
+            "how_to_read": "先看A与B的全局聚类与标记基因确认细胞类型注释，再看C与D的神经元亚群注释，随后用E、F、H比较组间比例，最后结合I的F4/80染色与J的组织驻留巨噬细胞比例判断炎症相关改变。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "DRG单核转录组UMAP聚类与细胞类型注释",
+                "comparison": "共33,738个核（正文另处报告33,869个高质量单细胞）",
+                "result": "注释出神经元、施万细胞、卫星胶质细胞、血管内皮细胞、血管平滑肌细胞、免疫细胞及4类成纤维细胞",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "B",
+                "experiment": "各细胞类型前3个标记基因展示",
+                "comparison": "用于细胞类型分类",
+                "result": "列出各簇前3个标记基因",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "C",
+                "experiment": "神经元亚群UMAP聚类与注释",
+                "comparison": "共13,066个神经元",
+                "result": "鉴定出NF1、NF2、NF3、NF4、NP1、NP2、NP3、PEPs、Cold与cLTMRs共10个亚群",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "D",
+                "experiment": "神经元亚群前3个标记基因展示",
+                "comparison": "用于亚群分类",
+                "result": "列出各亚群前3个标记基因",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "E",
+                "experiment": "全DRG中各细胞类型比例比较",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "老年小鼠施万细胞与成纤维细胞1、2比例显著升高",
+                "statistics": "p<0.05"
+              },
+              {
+                "panel": "F",
+                "experiment": "神经元亚群比例比较",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "老年小鼠NF2增多，NP2与cLTMRs减少",
+                "statistics": "p<0.05"
+              },
+              {
+                "panel": "G",
+                "experiment": "免疫细胞亚群注释",
+                "comparison": "B细胞、T细胞与NK细胞、巨噬细胞",
+                "result": "鉴定出B细胞、T细胞与NK细胞及巨噬细胞亚群",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "H",
+                "experiment": "全DRG中B细胞、T/NK细胞与巨噬细胞比例比较",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "老年小鼠巨噬细胞占总细胞比例升高",
+                "statistics": "p<0.001"
+              },
+              {
+                "panel": "I",
+                "experiment": "F4/80免疫荧光染色计数巨噬细胞",
+                "comparison": "老年与年轻小鼠比较，n=4，比例尺100 μm",
+                "result": "老年小鼠DRG中巨噬细胞数量增多",
+                "statistics": "Student's t检验，显著性标记* p<0.05、**** p<0.0001"
+              },
+              {
+                "panel": "J",
+                "experiment": "Mrc1+Lyve1+细胞占全部巨噬细胞比例",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "组间无显著差异",
+                "statistics": "p>0.05"
+              }
+            ],
+            "interpretation": "该图提示衰老DRG以施万细胞、成纤维细胞与巨噬细胞增多及神经元亚群比例重塑为特征，巨噬细胞增多在蛋白水平得到验证，但M2样组织驻留巨噬细胞比例未变。",
+            "evidence": "细胞比例差异有统计检验支持，F4/80染色与测序结果方向一致。",
+            "boundary": "测序每组仅3个合并样本，比例差异的稳健性有限；F4/80染色仅反映数量，未直接证明其炎症活化状态。"
+          },
+          {
+            "label": "Figure 3",
+            "caption_zh": "图3展示成纤维细胞与神经元亚群的功能富集、细胞间通讯、RNA速度与拟时序分析。",
+            "what_question": "该图回答的问题是：各成纤维细胞与神经元亚群承担哪些功能，老年DRG中细胞通讯与分化轨迹如何改变。",
+            "how_to_read": "先看A与B的GO功能富集理解亚群功能，再看C与D的通讯热图比较组间互作数量与强度，最后结合E的RNA速度与F–H的拟时序判断分化方向与亚群分布。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "4类成纤维细胞亚群GO功能富集",
+                "comparison": "亚群间比较，q<0.05基因用于注释",
+                "result": "成纤维细胞1、2、3富集胶原细胞外基质与基质组织，成纤维细胞4富集细胞连接组装、肌动蛋白结合与突触组织，成纤维细胞1与细胞基质黏附及基底膜相关，成纤维细胞2与上皮细胞增殖相关，成纤维细胞3与核糖体调控相关",
+                "statistics": "p<0.05"
+              },
+              {
+                "panel": "B",
+                "experiment": "10个神经元亚群GO功能富集",
+                "comparison": "亚群间比较，q<0.05基因用于注释",
+                "result": "cLTMRs与突触组织和膜调控相关，Cold与门控通道活性相关，NF1与ATP代谢及转运体复合物相关，NF2与线粒体呼吸体相关，NF3与突触后致密物及阳离子通道复合物相关，NF4与神经元突触及细胞连接组装相关，NP1与肌动蛋白结合及膜微区相关，NP2与GTP酶活性相关，NP3与磷脂结合相关，PEPs与突触功能及囊泡生成运输相关",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "C",
+                "experiment": "全DRG细胞类型间细胞通讯比较",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "老年DRG中成纤维细胞1与卫星胶质细胞之间、NF2与NP1之间互作数量增多，神经元与免疫细胞之间、NP3与cLTMRs之间互作减少",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "D",
+                "experiment": "神经元亚群间细胞通讯比较",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "成纤维细胞1与施万细胞、卫星胶质细胞、神经元之间以及NF2与NF3之间互作强度增强，神经元之间及PEPs与NP1之间减弱",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "E",
+                "experiment": "卫星胶质细胞、施万细胞与神经元亚群的RNA速度分析",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "两组NF2与NF3分化方向相反，卫星胶质细胞与施万细胞分化轨迹组间差异明显",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "F",
+                "experiment": "全部神经元的拟时序分布",
+                "comparison": "深蓝至黄色代表起始至终末状态",
+                "result": "NPs处于起始状态，多数cLTMRs、NF2、NF3与NF4处于终末状态，Cold、NF1与PEPs处于中间状态",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "G",
+                "experiment": "神经元亚群注释与组间分布",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "老年DRG中可见更多未成熟PEPs与Cold亚群",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "H",
+                "experiment": "神经元高变基因随拟时序的表达聚类",
+                "comparison": "横坐标由短至长代表时间",
+                "result": "展示不同基因簇随拟时序的表达模式",
+                "statistics": "正文未报告"
+              }
+            ],
+            "interpretation": "该图提示老年DRG中成纤维细胞与胶质细胞、神经元之间的通讯增强，而神经元亚群间通讯减弱，并伴分化轨迹与亚群成熟状态的改变。",
+            "evidence": "GO富集、通讯分析与RNA速度、拟时序结果共同支持上述描述。",
+            "boundary": "通讯分析基于配体-受体推断，RNA速度与拟时序为计算预测，均需实验验证；正文未报告相关统计量。"
+          },
+          {
+            "label": "Figure 4",
+            "caption_zh": "图4展示组间DRG细胞与神经元亚群差异功能的GO富集分析。",
+            "what_question": "该图回答的问题是：老年与年轻小鼠DRG各细胞类型及神经元亚群之间，哪些GO通路存在差异富集。",
+            "how_to_read": "先看A的DRG各细胞类型前5条富集GO通路，再看B的神经元各亚群前5条富集GO通路，比较老年与年轻组的通路方向。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "组间DRG细胞类型差异GO富集（前5条通路）",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "正文未报告具体通路名称与数值",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "B",
+                "experiment": "组间神经元亚群差异GO富集（前5条通路）",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "正文未报告具体通路名称与数值",
+                "statistics": "正文未报告"
+              }
+            ],
+            "interpretation": "该图用于补充展示组间差异功能通路，但提供的正文结果未给出具体通路与统计量，无法进一步解读。",
+            "evidence": "图注说明为前5条富集GO通路，正文未报告具体内容。",
+            "boundary": "由于正文未报告具体通路与统计量，本图解读受限，不能据此推断具体机制。"
+          },
+          {
+            "label": "Figure 5",
+            "caption_zh": "图5展示疼痛与温度相关行为学、疼痛与温度相关基因、其他神经功能基因、炎症相关基因表达，以及Cd55、Cdkn1a与Cdkn2a阳性细胞分布。",
+            "what_question": "该图回答的问题是：老年小鼠是否表现痛反应延长，神经元中疼痛、温度、神经功能与炎症相关基因表达及衰老标志细胞比例是否改变。",
+            "how_to_read": "先看A的四种行为学试验判断痛觉表型，再看B与C的疼痛与温度相关基因、D与E的其他神经功能基因、F的炎症相关基因，最后结合G–I的Cd55、Cdkn1a与Cdkn2a细胞分布判断衰老与炎症状态。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "von Frey、热板、丙酮诱发与辣椒素诱发行为学试验",
+                "comparison": "老年与年轻小鼠比较，n=8",
+                "result": "老年小鼠痛反应延长",
+                "statistics": "Student's t检验，* p<0.05、**** p<0.0001"
+              },
+              {
+                "panel": "B",
+                "experiment": "各样本疼痛与温度相关基因平均表达",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "红色表示在老年神经元中高表达，蓝色表示低表达",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "C",
+                "experiment": "疼痛与温度相关基因在神经元亚群中的表达",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "正文未报告具体基因与数值",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "D",
+                "experiment": "各样本其他神经功能相关基因平均表达",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "红色表示老年神经元中高表达，蓝色表示低表达",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "E",
+                "experiment": "其他神经功能相关基因在神经元亚群中的表达",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "正文未报告具体基因与数值",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "F",
+                "experiment": "DRG神经元炎症相关基因表达聚类",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "红色表示老年神经元中显著高表达，蓝色表示低表达",
+                "statistics": "基于单核水平的Wilcoxon检验，p<0.05着色"
+              },
+              {
+                "panel": "G",
+                "experiment": "Cd55表达细胞在神经元中的组间分布",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "正文未报告具体数值",
+                "statistics": "正文未报告"
+              },
+              {
+                "panel": "H",
+                "experiment": "Cdkn1a+细胞比例与分布",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "正文未报告具体数值",
+                "statistics": "Student's t检验，* p<0.05"
+              },
+              {
+                "panel": "I",
+                "experiment": "Cdkn2a+细胞比例与分布",
+                "comparison": "老年与年轻小鼠比较",
+                "result": "正文未报告具体数值",
+                "statistics": "Student's t检验，* p<0.05"
+              }
+            ],
+            "interpretation": "该图将行为学痛反应延长与神经元炎症相关基因升高及衰老标志细胞比例改变联系起来，支持衰老DRG存在炎症与衰老相关改变。",
+            "evidence": "行为学差异有统计检验支持，炎症基因差异基于单核水平Wilcoxon检验，Cdkn1a与Cdkn2a比例差异有t检验支持。",
+            "boundary": "行为学与基因表达为关联性证据，正文未报告多数基因的具体数值与效应量，不能据此确定因果机制。"
+          },
+          {
+            "label": "Figure 6",
+            "caption_zh": "图6展示年轻、老年与OA小鼠DRG中CGRP与Substance P的免疫荧光表达，包括IB4+细胞平均强度与高表达细胞比例。",
+            "what_question": "该图回答的问题是：CGRP与Substance P在老年与OA小鼠DRG的IB4+细胞中是否表达增强。",
+            "how_to_read": "先看A的CGRP与IB4、DAPI共染及IB4+细胞平均强度与高表达细胞比例，再看B的Substance P对应结果，比较年轻、老年与OA三组。",
+            "panel_reading": [
+              {
+                "panel": "A",
+                "experiment": "CGRP与IB4、DAPI共染，统计IB4+细胞平均强度（每鼠15个IB4+细胞，n=4）与CGRP高表达细胞比例（每鼠2个DRG，n=4）",
+                "comparison": "年轻、老年与OA小鼠三组比较",
+                "result": "正文未报告具体数值，图注显示组间存在差异",
+                "statistics": "单因素方差分析加Tukey检验，* p<0.05、** p<0.01、*** p<0.001"
+              },
+              {
+                "panel": "B",
+                "experiment": "Substance P与IB4、DAPI共染，统计IB4+细胞平均强度（每鼠15个IB4+细胞，n=4）与SP高表达细胞比例（每鼠2个DRG，n=4）",
+                "comparison": "年轻、老年与OA小鼠三组比较",
+                "result": "正文未报告具体数值，图注显示组间存在差异",
+                "statistics": "单因素方差分析加Tukey检验，* p<0.05、** p<0.01、*** p<0.001"
+              }
+            ],
+            "interpretation": "该图提示CGRP与Substance P在老年与OA小鼠DRG的IB4+细胞中表达增强，与痛反应延长的表型相呼应。",
+            "evidence": "免疫荧光平均强度与高表达细胞比例的组间差异有单因素方差分析支持。",
+            "boundary": "该图仅显示蛋白表达差异，未进行功能阻断实验，且正文未报告具体数值，不能据此证明CGRP与Substance P是痛反应延长的直接原因。"
+          }
+        ]
+      },
+      "ai_status": "success_retried",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
     }
   },
   "attempted": {
@@ -3422,6 +3880,12 @@
       "attempts": 1,
       "updated_at": "2026-11-19T09:01:08Z",
       "gate_reasons": []
+    },
+    "doi:10.1111/acel.70857": {
+      "status": "published",
+      "attempts": 1,
+      "updated_at": "2026-11-28T08:58:45Z",
+      "gate_reasons": []
     }
   },
   "metrics_cache": {
@@ -3744,23 +4208,32 @@
       "status": "matched",
       "source": "EasyScholar",
       "retrieved_at": "2026-11-27T09:45:31Z"
+    },
+    "aging cell": {
+      "impact_factor": "7.7",
+      "jcr": "SCI Q1",
+      "jcr_quartile": "Q1",
+      "jcr_q1": true,
+      "status": "matched",
+      "source": "EasyScholar",
+      "retrieved_at": "2026-11-28T08:57:33Z"
     }
   },
-  "updated_at": "2026-11-27T09:45:31Z",
+  "updated_at": "2026-11-28T08:59:52Z",
   "last_run": {
     "status": "success",
-    "selected": 0,
-    "published": 0,
-    "candidates": 0,
-    "raw_candidates": 64,
-    "score_rejected": 3,
+    "selected": 1,
+    "published": 1,
+    "candidates": 1,
+    "raw_candidates": 65,
+    "score_rejected": 4,
     "scope_rejected": 60,
     "recovery_used": true,
     "q1_rejected": 4,
     "skipped_without_pmcid": 0,
     "search_error": "",
-    "preserved_articles": 8,
+    "preserved_articles": 9,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-11-27T09:45:31Z"
+    "finished_at": "2026-11-28T08:59:52Z"
   }
 }

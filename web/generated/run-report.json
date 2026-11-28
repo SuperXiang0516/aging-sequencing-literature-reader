@@ -1,22 +1,169 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T09:45:31Z",
+  "generated_at": "2026-11-28T08:59:52Z",
   "last_run": {
     "status": "success",
-    "selected": 0,
-    "published": 0,
-    "candidates": 0,
-    "raw_candidates": 64,
-    "score_rejected": 3,
+    "selected": 1,
+    "published": 1,
+    "candidates": 1,
+    "raw_candidates": 65,
+    "score_rejected": 4,
     "scope_rejected": 60,
     "recovery_used": true,
     "q1_rejected": 4,
     "skipped_without_pmcid": 0,
     "search_error": "",
-    "preserved_articles": 8,
+    "preserved_articles": 9,
     "asset_dir": "web/generated/assets",
-    "finished_at": "2026-11-27T09:45:31Z"
+    "finished_at": "2026-11-28T08:59:52Z"
   },
-  "processed": [],
+  "processed": [
+    {
+      "id": "doi:10.1111/acel.70857",
+      "title": "Single-Nucleus Transcriptomic Profiling of Dorsal Root Ganglia Reveals Pain-Associated Alterations in Aged Mice With Musculoskeletal Degeneration.",
+      "authors": [
+        "Liu C",
+        "Tao R",
+        "Wong HY",
+        "Wang Q",
+        "Cao M",
+        "Zhang N",
+        "Tong W",
+        "Xu J",
+        "Cheung WH",
+        "Yang M",
+        "Qin L",
+        "Wong RMY"
+      ],
+      "journal": "Aging cell",
+      "year": "2026",
+      "doi": "10.1111/acel.70857",
+      "pmcid": "PMC13809974",
+      "pmid": "43094310",
+      "citation_count": 0,
+      "fulltext_urls": [
+        "https://doi.org/10.1111/acel.70857",
+        "https://europepmc.org/articles/PMC13809974",
+        "https://europepmc.org/articles/PMC13809974?pdf=render"
+      ],
+      "source": "Europe PMC",
+      "relevance_score": 10,
+      "relevance_evidence": [
+        "aging: age-related",
+        "multiomics: transcriptom"
+      ],
+      "figures": [
+        {
+          "label": "FIGURE 1",
+          "caption": "Age‐related musculoskeletal degradation in mice. (A) Comparison of BMC and BMD between aged (O) and young (Y) mice ( n = 8). (B) Myosin heavy chain (MHC) and Oil Red O staining for type I, type IIa, and type IIb myofiber CSA (average of 60 myofibers CSA for a single type of each mouse), and intramuscular lipid analysis (average of 10 muscle areas for each mouse). n = 4 mice, scale bar = 100 μm. Two‐way ANOVA with Šídák's multiple comparisons test was performed for MHC analysis, and Student's t ‐test for lipid analysis. (C) Safranin O staining of the lumbar intervertebral disc, hip, knee, and shoulder joints. (D) IVD score and OARSI scores of joints (sum of both articular surfaces) between aged and young groups ( n = 4–6 mice, scale bar = 500 μm). Student's t ‐test was performed for all analyses. * p < 0.05, ** p < 0.01, *** p < 0.001, and **** p < 0.0001.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g001.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g001.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g001.webp",
+          "local_url": "generated/assets/PMC13809974/fig-01.webp",
+          "asset_path": "generated/assets/PMC13809974/fig-01.webp",
+          "asset_bytes": 230836,
+          "asset_sha256": "929702f4235a5408e3345bdd539e2b959a80b9bc9cfefcbd1490a76f30a4441c",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "FIGURE 2",
+          "caption": "Single‐nucleus transcriptomic sequencing and macrophage number of in DRGs compared between Y and O groups. (A) Clusters with cell type annotation of DRGs (total 33,738 nuclei). (B) Top 3 marker genes for DRG cluster classification. (C) Subclusters with cell type annotation of DRG neurons (total 13,066 neurons). (D) Top 3 marker genes for Neurons subcluster classification. (E,F) Proportion of DRG clusters in whole DRGs and Neurons subclusters in DRG Neurons between groups. Cluster and subcluster names with red color indicated an increment in aged mice, and blue color indicated a reduction in aged mice. (G) Immune cell subclusters with cell type annotation. (H) B cells, T and NK cells, and macrophage proportions in whole DRGs between Y and O groups. (I) F4/80 staining (green) for macrophages in DRGs (scale bar = 100 μm), and positive cell number per unit area ( n = 4 mice). (J) Percentage of Mrc1 + Lyve1 + cells in all macrophages between groups. Student's t ‐test was performed. * p < 0.05, **** p < 0.0001.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g002.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g002.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g002.webp",
+          "local_url": "generated/assets/PMC13809974/fig-02.webp",
+          "asset_path": "generated/assets/PMC13809974/fig-02.webp",
+          "asset_bytes": 117248,
+          "asset_sha256": "79971da83f3ebeb89b0853f021ada0d18276948114bfdd808f9ae5c328906163",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "FIGURE 3",
+          "caption": "Functional differences between fibroblast subclusters and neuron subclusters, and cell–cell communication, RNA velocity and pseudotime analysis of DRG clusters and neuron subclusters. (A,B) Top upregulated enriched functions among 4 fibroblast subclusters and 10 neuron subclusters via GO analysis. Genes with q < 0.05 were utilized for functional annotation. (C,D) Cell–cell communication of DRG clusters and neuron subclusters between groups. Relative values with red color indicated more interactions in aged mice, whilst blue color indicated more in young mice. (E) RNA velocity of SGCs, Schwann cells, and neuron subclusters between Y and O groups. Solid lines to dashed lines are represented by the strength of the differentiation relationship from strong to weak. (F) Pseudotime distribution of all neuron cells. Pseudotime with dark blue to yellow color represents the initial to terminal states. (G) Neuron subcluster annotation and distribution between Y and O groups. (H) Neuron has highly variable gene expression with pseudotime by gene clusters. Horizontal coordinate from left to right represented short to long time.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g004.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g004.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g004.webp",
+          "local_url": "generated/assets/PMC13809974/fig-03.webp",
+          "asset_path": "generated/assets/PMC13809974/fig-03.webp",
+          "asset_bytes": 127418,
+          "asset_sha256": "d6f3dd3718a8a2484fa5aafd5dbdb5992c3c9f19f3630555a35b3fe99082bb06",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "FIGURE 4",
+          "caption": "Differential function of DRG cells and neuron subclusters via GO analysis. (A) Top 5 enriched GO pathways of DRG cells between groups. (B) Top 5 enriched GO pathways of neuron subclusters between groups.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g007.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g007.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g007.webp",
+          "local_url": "generated/assets/PMC13809974/fig-04.webp",
+          "asset_path": "generated/assets/PMC13809974/fig-04.webp",
+          "asset_bytes": 114156,
+          "asset_sha256": "f6736f38b8d2e924c406fcad1f778da370919715380076af266035e13bca5727",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "FIGURE 5",
+          "caption": "Pain‐ and temperature‐related behavior tests, genes expression. of neurological function, inflammation, senescence‐associated secretory phenotype (SASP). (A) Von Frey, hotplate, acetone‐evoked behavior, and capsaicin‐evoked behavior tests between groups ( n = 8 mice). Student's t ‐test was performed. * p < 0.05, and **** p < 0.0001. (B) Average expression of pain‐ and temperature‐related genes of each sample. Gene names with red color indicated high expression in neurons, and blue color indicated lower expression in neurons of aged mice. (C) Expression level of pain‐ and temperature‐related genes in neuron subclusters between groups. (D) Average expression of other neurological function‐related genes in each sample. Red for higher expressed genes in neurons of aged mice and blue for lower expressed genes. (E) Expression level of other neurological function‐related genes in neuron subclusters between groups. (F) Clustered inflammation‐related gene expression in DRG neurons. Red for significantly higher expressed genes in neurons of aged mice, and blue for lower expressed genes. Statistical analysis was based on the single‐nucleus level by the Wilcoxon test, and differences with p < 0.05 were colored. (G) Distribution of Cd55 ‐expressing cells in neurons between groups. (H) Cdkn1a + cell proportion and distribution in DRGs of young and aged mice. (I) Cdkn2a + cell proportion and distribution in DRGs of young and aged mice. Student's t ‐test was performed. * p < 0.05.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g006.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g006.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g006.webp",
+          "local_url": "generated/assets/PMC13809974/fig-05.webp",
+          "asset_path": "generated/assets/PMC13809974/fig-05.webp",
+          "asset_bytes": 153702,
+          "asset_sha256": "4cbc0abc2480f06993ab2c3b1a9413a675963bc721a26ce915c7d3e5530d7e98",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        },
+        {
+          "label": "FIGURE 6",
+          "caption": "Expression of CGRP and Substance P in DRGs. (A) CGRP counterstained with IB4 and DAPI in young, aged, and OA mice. Average intensity of CGRP in IB4 + cells (average intensity of 15 IB4 + cells per mouse, n = 4 mice). CGRP high cell proportion between groups (average of 2 DRGs per mouse, n = 4 mice). (B) Substance P (SP) counterstained with IB4 and DAPI in young, aged, and OA mice. Average intensity of SP in IB4 + cells (average intensity of 15 IB4 + cells per mouse, n = 4 mice). SP high cell proportion between groups (average of 2 DRGs per mouse, n = 4 mice). White dotted line, IB4 + cells; white triangle, cells with high protein expression. One‐way ANOVA with Tukey's test. * p < 0.05, ** p < 0.01, *** p < 0.001.",
+          "image_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g005.webp",
+          "original_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g005.webp",
+          "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13809974.1/ACEL-25-e70857-g005.webp",
+          "local_url": "generated/assets/PMC13809974/fig-06.webp",
+          "asset_path": "generated/assets/PMC13809974/fig-06.webp",
+          "asset_bytes": 167202,
+          "asset_sha256": "67cabe34e0fc9419e5a906c51cf11b51ede3efb66b77b2cbb8884ed6b17b8b67",
+          "asset_status": "downloaded",
+          "asset_error": ""
+        }
+      ],
+      "supplements": [
+        {
+          "label": "Supplementary file 1",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13809974/bin/ACEL-25-e70857-s001.docx",
+          "description": "Table S1: Reagent or resource list. Table S2: Abbreviation list. Table S3: Top 20 differentially expressed genes (DEGs) in DRG microenvironmental cells (old vs. young). Table S4: Top 20 DEGs in DRG neuron cells (old vs. young). Table S5: Significantly changed functional genes in DRG neuron cells (old vs. young). Table S6: Significantly changed functional genes in the whole DRG and DRG microenvironmental cells (old vs. young). Figure S1: Characteristics of extracted cells after quality control. Figure S2: Validation of cell proportion and marker genes of immune cell subclusters. Figure S3: Subclusters of two cLTMRs. Figure S4: Functional annotation of fibroblast and neuron subclusters. Figure S5: Functional annotation of neuron subclusters. Figure S6: Functional annotation of immune cell subclusters. Figure S7: Ligand and receptor pairs between Neurons and other cells. Figure S8: The inferred incoming and outgoing communication patterns of all DRG cells. Figure S9: Pseudotime analysis of neurons and fibroblast subclusters. Figure S10: Differential function of DRG cells and neuron subclusters via KEGG. Figure S11: Average expression of pain‐ and temperature‐related genes, other neurological functional genes in neuron subclusters, and Atf3 , Calca , and Tac1 expression between young and aged groups."
+        },
+        {
+          "label": "Supplementary file 2",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13809974/bin/ACEL-25-e70857-s001.docx",
+          "description": "Table S1: Reagent or resource list. Table S2: Abbreviation list. Table S3: Top 20 differentially expressed genes (DEGs) in DRG microenvironmental cells (old vs. young). Table S4: Top 20 DEGs in DRG neuron cells (old vs. young). Table S5: Significantly changed functional genes in DRG neuron cells (old vs. young). Table S6: Significantly changed functional genes in the whole DRG and DRG microenvironmental cells (old vs. young). Figure S1: Characteristics of extracted cells after quality control. Figure S2: Validation of cell proportion and marker genes of immune cell subclusters. Figure S3: Subclusters of two cLTMRs. Figure S4: Functional annotation of fibroblast and neuron subclusters. Figure S5: Functional annotation of neuron subclusters. Figure S6: Functional annotation of immune cell subclusters. Figure S7: Ligand and receptor pairs between Neurons and other cells. Figure S8: The inferred incoming and outgoing communication patterns of all DRG cells. Figure S9: Pseudotime analysis of neurons and fibroblast subclusters. Figure S10: Differential function of DRG cells and neuron subclusters via KEGG. Figure S11: Average expression of pain‐ and temperature‐related genes, other neurological functional genes in neuron subclusters, and Atf3 , Calca , and Tac1 expression between young and aged groups."
+        }
+      ],
+      "fulltext_ok": true,
+      "asset_errors": [],
+      "assets_required": true,
+      "metrics": {
+        "impact_factor": "7.7",
+        "jcr": "SCI Q1",
+        "jcr_quartile": "Q1",
+        "jcr_q1": true,
+        "status": "matched",
+        "source": "EasyScholar",
+        "retrieved_at": "2026-11-28T08:57:33Z"
+      },
+      "journal_display": "Aging cell（IF 7.7；JCR SCI Q1）",
+      "updated_at": "2026-11-28T08:58:45Z",
+      "ai_status": "success_retried",
+      "ai_error": "",
+      "publishable": true,
+      "gate_reasons": [],
+      "status": "published"
+    }
+  ],
   "pending_candidates": []
 }
